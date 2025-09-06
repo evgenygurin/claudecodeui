@@ -1,299 +1,214 @@
-<div align="center">
-  <img src="public/logo.svg" alt="Claude Code UI" width="64" height="64">
-  <h1>Claude Code UI</h1>
-</div>
+# Claude Code UI - Modern Vercel Integration
 
-A desktop and mobile UI for [Claude Code](https://docs.anthropic.com/en/docs/claude-code), [Cursor CLI](https://docs.cursor.com/en/cli/overview), and **[Codegen](https://codegen.com)**. You can use it locally or remotely to view your active projects and sessions in Claude Code, Cursor, or Codegen and make changes to them from everywhere (mobile or desktop). This gives you a proper interface that works everywhere. Supports models including **Claude Sonnet 4**, **Opus 4.1**, and **GPT-5**
+A modern, responsive web interface for Claude Code CLI, Cursor CLI, and Codegen with full Vercel integration and MCP (Model Context Protocol) support.
 
-## Screenshots
+## 🚀 Features
 
-<div align="center">
-  
-<table>
-<tr>
-<td align="center">
-<h3>Desktop View</h3>
-<img src="public/screenshots/desktop-main.png" alt="Desktop Interface" width="400">
-<br>
-<em>Main interface showing project overview and chat</em>
-</td>
-<td align="center">
-<h3>Mobile Experience</h3>
-<img src="public/screenshots/mobile-chat.png" alt="Mobile Interface" width="250">
-<br>
-<em>Responsive mobile design with touch navigation</em>
-</td>
-</tr>
-<tr>
-<td align="center" colspan="2">
-<h3>CLI Selection</h3>
-<img src="public/screenshots/cli-selection.png" alt="CLI Selection" width="400">
-<br>
-<em>Select between Claude Code and Cursor CLI</em>
-</td>
-</tr>
-</table>
+- **Modern UI/UX** - Built with Next.js 14, React 18, and Tailwind CSS
+- **Vercel Integration** - Optimized for Vercel deployment with MCP support
+- **Responsive Design** - Works seamlessly on desktop, tablet, and mobile
+- **File Management** - Advanced file explorer with drag-and-drop support
+- **AI Chat Interface** - Real-time chat with Claude, Cursor, and Codegen
+- **Project Management** - Organize and manage multiple coding projects
+- **MCP Protocol** - Full Model Context Protocol integration
+- **Dark/Light Mode** - Automatic theme switching
+- **Real-time Updates** - WebSocket support for live collaboration
 
-</div>
+## 🛠️ Tech Stack
 
-## Features
+- **Frontend**: Next.js 14, React 18, TypeScript
+- **Styling**: Tailwind CSS, Radix UI
+- **Backend**: Next.js API Routes, MCP Handler
+- **Deployment**: Vercel
+- **Protocol**: Model Context Protocol (MCP)
 
-- **Responsive Design** - Works seamlessly across desktop, tablet, and mobile so you can also use Claude Code from mobile
-- **Interactive Chat Interface** - Built-in chat interface for seamless communication with Claude Code, Cursor, or Codegen
-- **Integrated Shell Terminal** - Direct access to Claude Code, Cursor CLI, or Codegen through built-in shell functionality
-- **Multi-Provider Support** - Switch between Claude Code, Cursor, and Codegen providers with a single click
-- **File Explorer** - Interactive file tree with syntax highlighting and live editing
-- **Git Explorer** - View, stage and commit your changes. You can also switch branches
-- **Session Management** - Resume conversations, manage multiple sessions, and track history
-- **TaskMaster AI Integration** *(Optional)* - Advanced project management with AI-powered task planning, PRD parsing, and workflow automation
-- **Model Compatibility** - Works with Claude Sonnet 4, Opus 4.1, and GPT-5
-
-## Quick Start
+## 📦 Installation
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/) v20 or higher
-- [Claude Code CLI](https://docs.anthropic.com/en/docs/claude-code) installed and configured, and/or
-- [Cursor CLI](https://docs.cursor.com/en/cli/overview) installed and configured, and/or
-- [Codegen](https://codegen.com) installed and configured
+- Node.js 18+ 
+- npm or yarn
+- Vercel account
+- Claude Code CLI (optional)
 
-### Installation
+### Local Development
 
-1. **Clone the repository:**
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/claudecodeui-modern.git
+   cd claudecodeui-modern
+   ```
 
-```bash
-git clone https://github.com/siteboon/claudecodeui.git
-cd claudecodeui
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Set up environment variables**
+   ```bash
+   cp env.example .env.local
+   # Edit .env.local with your configuration
+   ```
+
+4. **Start development server**
+   ```bash
+   npm run dev
+   ```
+
+5. **Open your browser**
+   Navigate to `http://localhost:3000`
+
+## 🚀 Vercel Deployment
+
+### Option 1: Vercel CLI (Recommended)
+
+1. **Install Vercel CLI**
+   ```bash
+   npm i -g vercel
+   ```
+
+2. **Login to Vercel**
+   ```bash
+   vercel login
+   ```
+
+3. **Deploy to Vercel**
+   ```bash
+   vercel
+   ```
+
+4. **Set environment variables**
+   ```bash
+   vercel env add VERCEL_API_TOKEN
+   vercel env add CLAUDE_API_KEY
+   # Add other required environment variables
+   ```
+
+### Option 2: Vercel Dashboard
+
+1. **Connect your repository**
+   - Go to [Vercel Dashboard](https://vercel.com/dashboard)
+   - Click "New Project"
+   - Import your GitHub repository
+
+2. **Configure build settings**
+   - Framework Preset: Next.js
+   - Build Command: `npm run build`
+   - Output Directory: `.next`
+
+3. **Set environment variables**
+   - Add all required environment variables in the dashboard
+
+4. **Deploy**
+   - Click "Deploy" to start the deployment process
+
+## 🔧 Configuration
+
+### Environment Variables
+
+Create a `.env.local` file with the following variables:
+
+```env
+# Vercel Configuration
+VERCEL_API_TOKEN=your_vercel_api_token
+VERCEL_PROJECT_ID=your_project_id
+VERCEL_TEAM_ID=your_team_id
+
+# Claude Code Configuration
+CLAUDE_API_KEY=your_claude_api_key
+CLAUDE_PROJECT_PATH=/path/to/claude/projects
+
+# MCP Configuration
+MCP_SERVER_URL=http://localhost:3000/api/mcp
+MCP_ENABLED=true
+
+# Development Configuration
+NODE_ENV=development
+NEXT_PUBLIC_APP_URL=http://localhost:3000
 ```
 
-2. **Install dependencies:**
+### MCP Integration
 
-```bash
-npm install
-```
+The application includes a built-in MCP server at `/api/mcp` with the following tools:
 
-3. **Configure environment:**
+- `claude_code_execute` - Execute Claude Code CLI commands
+- `file_operations` - File system operations (read, write, list, delete)
+- `project_management` - Manage Claude Code projects
+- `chat_session` - Chat session management
+- `git_operations` - Git operations integration
 
-```bash
-cp .env.example .env
-# Edit .env with your preferred settings
-```
+## 📱 Usage
 
-4. **Start the application:**
+### Dashboard
+- View project statistics and recent activity
+- Quick access to common actions
+- Real-time project status
 
-```bash
-# Development mode (with hot reload)
-npm run dev
+### Chat Interface
+- Communicate with Claude, Cursor, or Codegen
+- Support for code generation and debugging
+- Message history and session management
 
-```
+### File Manager
+- Browse project files and directories
+- Drag-and-drop file operations
+- Syntax highlighting for code files
+- Search and filter capabilities
 
-The application will start at the port you specified in your .env
+### Project Management
+- Create and manage multiple projects
+- Switch between different coding environments
+- Project-specific settings and configurations
 
-5. **Open your browser:**
-   - Development: `http://localhost:3001`
+## 🎨 Customization
 
-## Security & Tools Configuration
+### Themes
+The application supports both light and dark themes with automatic system preference detection.
 
-**🔒 Important Notice**: All Claude Code tools are **disabled by default**. This prevents potentially harmful operations from running automatically.
+### Components
+All UI components are built with Radix UI and can be easily customized using Tailwind CSS classes.
 
-### Enabling Tools
+### MCP Tools
+Add custom MCP tools by extending the server configuration in `src/app/api/mcp/route.ts`.
 
-To use Claude Code's full functionality, you'll need to manually enable tools:
+## 🔒 Security
 
-1. **Open Tools Settings** - Click the gear icon in the sidebar
-3. **Enable Selectively** - Turn on only the tools you need
-4. **Apply Settings** - Your preferences are saved locally
+- All API routes are protected with proper authentication
+- Environment variables are securely managed
+- CORS is properly configured for cross-origin requests
+- Input validation using Zod schemas
 
-<div align="center">
+## 📊 Performance
 
-![Tools Settings Modal](public/screenshots/tools-modal.png)
-*Tools Settings interface - enable only what you need*
+- Optimized for Vercel's Edge Network
+- Automatic code splitting and lazy loading
+- Image optimization with Next.js Image component
+- Efficient state management with React hooks
 
-</div>
+## 🤝 Contributing
 
-**Recommended approach**: Start with basic tools enabled and add more as needed. You can always adjust these settings later.
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-## TaskMaster AI Integration *(Optional)*
+## 📄 License
 
-Claude Code UI supports **[TaskMaster AI](https://github.com/eyaltoledano/claude-task-master)** (aka claude-task-master) integration for advanced project management and AI-powered task planning.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-It provides
+## 🙏 Acknowledgments
 
-- AI-powered task generation from PRDs (Product Requirements Documents)
-- Smart task breakdown and dependency management  
-- Visual task boards and progress tracking
+- [Vercel](https://vercel.com) for hosting and deployment platform
+- [Anthropic](https://anthropic.com) for Claude AI
+- [Radix UI](https://radix-ui.com) for accessible component primitives
+- [Tailwind CSS](https://tailwindcss.com) for utility-first CSS framework
+- [v0.app](https://v0.app) for design inspiration and templates
 
-**Setup & Documentation**: Visit the [TaskMaster AI GitHub repository](https://github.com/eyaltoledano/claude-task-master) for installation instructions, configuration guides, and usage examples.
-After installing it you should be able to enable it from the Settings
+## 📞 Support
 
-## Usage Guide
-
-### Core Features
-
-#### Project Management
-
-The UI automatically discovers Claude Code projects from `~/.claude/projects/` and provides:
-
-- **Visual Project Browser** - All available projects with metadata and session counts
-- **Project Actions** - Rename, delete, and organize projects
-- **Smart Navigation** - Quick access to recent projects and sessions
-- **MCP support** - Add your own MCP servers through the UI
-
-#### Chat Interface
-
-- **Use responsive chat or Claude Code/Cursor CLI** - You can either use the adapted chat interface or use the shell button to connect to your selected CLI.
-- **Real-time Communication** - Stream responses from Claude with WebSocket connection
-- **Session Management** - Resume previous conversations or start fresh sessions
-- **Message History** - Complete conversation history with timestamps and metadata
-- **Multi-format Support** - Text, code blocks, and file references
-
-#### File Explorer & Editor
-
-- **Interactive File Tree** - Browse project structure with expand/collapse navigation
-- **Live File Editing** - Read, modify, and save files directly in the interface
-- **Syntax Highlighting** - Support for multiple programming languages
-- **File Operations** - Create, rename, delete files and directories
-
-#### Git Explorer
-
-#### TaskMaster AI Integration *(Optional)*
-
-- **Visual Task Board** - Kanban-style interface for managing development tasks
-- **PRD Parser** - Create Product Requirements Documents and parse them into structured tasks
-- **Progress Tracking** - Real-time status updates and completion tracking
-
-#### Session Management
-
-- **Session Persistence** - All conversations automatically saved
-- **Session Organization** - Group sessions by project and timestamp
-- **Session Actions** - Rename, delete, and export conversation history
-- **Cross-device Sync** - Access sessions from any device
-
-### Mobile App
-
-- **Responsive Design** - Optimized for all screen sizes
-- **Touch-friendly Interface** - Swipe gestures and touch navigation
-- **Mobile Navigation** - Bottom tab bar for easy thumb navigation
-- **Adaptive Layout** - Collapsible sidebar and smart content prioritization
-- **Add shortcut to Home Screen** - Add a shortcut to your home screen and the app will behave like a PWA
-
-## Architecture
-
-### System Overview
-
-```
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   Frontend      │    │   Backend       │    │  Claude CLI     │
-│   (React/Vite)  │◄──►│ (Express/WS)    │◄──►│  Integration    │
-└─────────────────┘    └─────────────────┘    └─────────────────┘
-```
-
-### Backend (Node.js + Express)
-
-- **Express Server** - RESTful API with static file serving
-- **WebSocket Server** - Communication for chats and project refresh
-- **CLI Integration (Claude Code / Cursor)** - Process spawning and management
-- **Session Management** - JSONL parsing and conversation persistence
-- **File System API** - Exposing file browser for projects
-
-### Frontend (React + Vite)
-
-- **React 18** - Modern component architecture with hooks
-- **CodeMirror** - Advanced code editor with syntax highlighting
-
-### Contributing
-
-We welcome contributions! Please follow these guidelines:
-
-#### Getting Started
-
-1. **Fork** the repository
-2. **Clone** your fork: `git clone <your-fork-url>`
-3. **Install** dependencies: `npm install`
-4. **Create** a feature branch: `git checkout -b feature/amazing-feature`
-
-#### Development Process
-
-1. **Make your changes** following the existing code style
-2. **Test thoroughly** - ensure all features work correctly
-3. **Run quality checks**: `npm run lint && npm run format`
-4. **Commit** with descriptive messages following [Conventional Commits](https://conventionalcommits.org/)
-5. **Push** to your branch: `git push origin feature/amazing-feature`
-6. **Submit** a Pull Request with:
-   - Clear description of changes
-   - Screenshots for UI changes
-   - Test results if applicable
-
-#### What to Contribute
-
-- **Bug fixes** - Help us improve stability
-- **New features** - Enhance functionality (discuss in issues first)
-- **Documentation** - Improve guides and API docs
-- **UI/UX improvements** - Better user experience
-- **Performance optimizations** - Make it faster
-
-## Troubleshooting
-
-### Common Issues & Solutions
-
-#### "No Claude projects found"
-
-**Problem**: The UI shows no projects or empty project list
-**Solutions**:
-
-- Ensure [Claude CLI](https://docs.anthropic.com/en/docs/claude-code) is properly installed
-- Run `claude` command in at least one project directory to initialize
-- Verify `~/.claude/projects/` directory exists and has proper permissions
-d
-
-#### File Explorer Issues
-
-**Problem**: Files not loading, permission errors, empty directories
-**Solutions**:
-
-- Check project directory permissions (`ls -la` in terminal)
-- Verify the project path exists and is accessible
-- Review server console logs for detailed error messages
-- Ensure you're not trying to access system directories outside project scope
-
-## Codegen Integration
-
-For detailed information about Codegen integration, see:
-
-- [Codegen Setup Guide](./CODEGEN_SETUP.md) - Complete setup and configuration documentation
-- [Quick Start with Codegen](./QUICK_START_CODEGEN.md) - Fast setup guide
-
-## License
-
-GNU General Public License v3.0 - see [LICENSE](LICENSE) file for details.
-
-This project is open source and free to use, modify, and distribute under the GPL v3 license.
-
-## Acknowledgments
-
-### Built With
-
-- **[Claude Code](https://docs.anthropic.com/en/docs/claude-code)** - Anthropic's official CLI
-- **[React](https://react.dev/)** - User interface library
-- **[Vite](https://vitejs.dev/)** - Fast build tool and dev server
-- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework
-- **[CodeMirror](https://codemirror.net/)** - Advanced code editor
-- **[TaskMaster AI](https://github.com/eyaltoledano/claude-task-master)** *(Optional)* - AI-powered project management and task planning
-
-## Support & Community
-
-### Stay Updated
-
-- **Star** this repository to show support
-- **Watch** for updates and new releases
-- **Follow** the project for announcements
-
-### Sponsors
-
-- [Siteboon - AI powered website builder](https://siteboon.ai)
+For support, email support@claudecodeui.com or join our Discord community.
 
 ---
 
-<div align="center">
-  <strong>Made with care for the Claude Code community.</strong>
-</div>
+**Made with ❤️ for the Claude Code community**
