@@ -32,7 +32,7 @@ import cors from 'cors';
 import { promises as fsPromises } from 'fs';
 import { spawn } from 'child_process';
 import os from 'os';
-import pty from 'node-pty';
+// import pty from 'node-pty'; // Temporarily disabled due to build issues
 import fetch from 'node-fetch';
 import mime from 'mime-types';
 
@@ -47,7 +47,9 @@ import cursorRoutes from './routes/cursor.js';
 import codegenRoutes from './routes/codegen.js';
 import taskmasterRoutes from './routes/taskmaster.js';
 import mcpUtilsRoutes from './routes/mcp-utils.js';
+import supabaseCodegenRoutes from './routes/supabase-codegen.js';
 import { initializeDatabase } from './database/db.js';
+import supabaseDB from './database/supabase.js';
 import { validateApiKey, authenticateToken, authenticateWebSocket } from './middleware/auth.js';
 
 // File system watcher for projects folder
@@ -195,6 +197,7 @@ app.use('/api/taskmaster', authenticateToken, taskmasterRoutes);
 
 // MCP utilities
 app.use('/api/mcp-utils', authenticateToken, mcpUtilsRoutes);
+app.use('/api/supabase-codegen', supabaseCodegenRoutes);
 
 // Static files served after API routes
 app.use(express.static(path.join(__dirname, '../dist')));
@@ -600,18 +603,18 @@ function handleShellConnection(ws) {
                             shellCommand = `cd "${projectPath}" && ${initialCommand}`;
                         }
                     } else if (provider === 'cursor') {
-                        // Use cursor-agent command
+                        // Use cursor command
                         if (os.platform() === 'win32') {
                             if (hasSession && sessionId) {
-                                shellCommand = `Set-Location -Path "${projectPath}"; cursor-agent --resume="${sessionId}"`;
+                                shellCommand = `Set-Location -Path "${projectPath}"; cursor --resume="${sessionId}"`;
                             } else {
-                                shellCommand = `Set-Location -Path "${projectPath}"; cursor-agent`;
+                                shellCommand = `Set-Location -Path "${projectPath}"; cursor`;
                             }
                         } else {
                             if (hasSession && sessionId) {
-                                shellCommand = `cd "${projectPath}" && cursor-agent --resume="${sessionId}"`;
+                                shellCommand = `cd "${projectPath}" && cursor --resume="${sessionId}"`;
                             } else {
-                                shellCommand = `cd "${projectPath}" && cursor-agent`;
+                                shellCommand = `cd "${projectPath}" && cursor`;
                             }
                         }
                     } else {
@@ -639,10 +642,8 @@ function handleShellConnection(ws) {
                     const shell = os.platform() === 'win32' ? 'powershell.exe' : 'bash';
                     const shellArgs = os.platform() === 'win32' ? ['-Command', shellCommand] : ['-c', shellCommand];
 
-                    shellProcess = pty.spawn(shell, shellArgs, {
-                        name: 'xterm-256color',
-                        cols: 80,
-                        rows: 24,
+                    // Use regular spawn instead of pty.spawn (temporarily)
+                    shellProcess = spawn(shell, shellArgs, {
                         cwd: process.env.HOME || (os.platform() === 'win32' ? process.env.USERPROFILE : '/'),
                         env: {
                             ...process.env,
@@ -654,10 +655,10 @@ function handleShellConnection(ws) {
                         }
                     });
 
-                    console.log('🟢 Shell process started with PTY, PID:', shellProcess.pid);
+                    console.log('🟢 Shell process started, PID:', shellProcess.pid);
 
-                    // Handle data output
-                    shellProcess.onData((data) => {
+                    // Handle data output (using stdout instead of onData for regular spawn)
+                    shellProcess.stdout.on('data', (data) => {
                         if (ws.readyState === ws.OPEN) {
                             let outputData = data;
 
@@ -702,13 +703,23 @@ function handleShellConnection(ws) {
                         }
                     });
 
-                    // Handle process exit
-                    shellProcess.onExit((exitCode) => {
-                        console.log('🔚 Shell process exited with code:', exitCode.exitCode, 'signal:', exitCode.signal);
+                    // Handle stderr output
+                    shellProcess.stderr.on('data', (data) => {
                         if (ws.readyState === ws.OPEN) {
                             ws.send(JSON.stringify({
                                 type: 'output',
-                                data: `\r\n\x1b[33mProcess exited with code ${exitCode.exitCode}${exitCode.signal ? ` (${exitCode.signal})` : ''}\x1b[0m\r\n`
+                                data: data.toString()
+                            }));
+                        }
+                    });
+
+                    // Handle process exit
+                    shellProcess.on('exit', (exitCode, signal) => {
+                        console.log('🔚 Shell process exited with code:', exitCode, 'signal:', signal);
+                        if (ws.readyState === ws.OPEN) {
+                            ws.send(JSON.stringify({
+                                type: 'output',
+                                data: `\r\n\x1b[33mProcess exited with code ${exitCode}${signal ? ` (${signal})` : ''}\x1b[0m\r\n`
                             }));
                         }
                         shellProcess = null;

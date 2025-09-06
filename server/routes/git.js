@@ -96,10 +96,13 @@ router.get('/status', async (req, res) => {
       untracked
     });
   } catch (error) {
-    console.error('Git status error:', error);
+    // Only log unexpected errors, not "not a git repository" errors
+    if (!error.message.includes('not a git repository') && !error.message.includes('Project directory is not a git repository')) {
+      console.error('Git status error:', error);
+    }
     res.json({ 
       error: error.message.includes('not a git repository') || error.message.includes('Project directory is not a git repository') 
-        ? error.message 
+        ? 'This project is not a Git repository. Initialize Git with "git init" to use source control features.'
         : 'Git operation failed',
       details: error.message.includes('not a git repository') || error.message.includes('Project directory is not a git repository')
         ? error.message
@@ -221,7 +224,10 @@ router.get('/branches', async (req, res) => {
     
     res.json({ branches });
   } catch (error) {
-    console.error('Git branches error:', error);
+    // Only log unexpected errors, not "not a git repository" errors
+    if (!error.message.includes('not a git repository') && !error.message.includes('Project directory is not a git repository')) {
+      console.error('Git branches error:', error);
+    }
     res.json({ error: error.message });
   }
 });
@@ -487,7 +493,10 @@ router.get('/remote-status', async (req, res) => {
       isUpToDate: ahead === 0 && behind === 0
     });
   } catch (error) {
-    console.error('Git remote status error:', error);
+    // Only log unexpected errors, not "not a git repository" errors
+    if (!error.message.includes('not a git repository') && !error.message.includes('Project directory is not a git repository')) {
+      console.error('Git remote status error:', error);
+    }
     res.json({ error: error.message });
   }
 });

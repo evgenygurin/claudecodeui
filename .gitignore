@@ -125,6 +125,9 @@ dev-debug.log
 *.sw?
 # OS specific
 
+.gemini/
+gha-creds-*.json
+
 # Task files
 # tasks.json
 # tasks/ 
