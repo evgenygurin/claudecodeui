@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Code UI - Figma Prototypes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-500: #3B82F6;
+            --primary-600: #2563EB;
+            --primary-100: #DBEAFE;
+            --success-500: #10B981;
+            --warning-500: #F59E0B;
+            --error-500: #EF4444;
+            --white: #FFFFFF;
+            --gray-50: #F9FAFB;
+            --gray-100: #F3F4F6;
+            --gray-200: #E5E7EB;
+            --gray-300: #D1D5DB;
+            --gray-500: #6B7280;
+            --gray-600: #4B5563;
+            --gray-700: #374151;
+            --gray-900: #111827;
+            --space-4: 16px;
+            --space-6: 24px;
+            --space-8: 32px;
+            --shadow-medium: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--gray-50);
+            color: var(--gray-900);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--space-8);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: var(--space-8);
+        }
+        
+        .title {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: var(--space-4);
+        }
+        
+        .subtitle {
+            font-size: 18px;
+            color: var(--gray-600);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .prototypes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--space-6);
+            margin-bottom: var(--space-8);
+        }
+        
+        .prototype-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: var(--space-6);
+            box-shadow: var(--shadow-medium);
+            transition: all 0.3s ease;
+            border: 1px solid var(--gray-200);
+        }
+        
+        .prototype-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .prototype-header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-4);
+            margin-bottom: var(--space-4);
+        }
+        
+        .prototype-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: var(--white);
+        }
+        
+        .prototype-icon.desktop { background: var(--primary-500); }
+        .prototype-icon.chat { background: var(--success-500); }
+        .prototype-icon.mobile { background: var(--warning-500); }
+        
+        .prototype-info h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: var(--space-1);
+        }
+        
+        .prototype-info p {
+            font-size: 14px;
+            color: var(--gray-600);
+        }
+        
+        .prototype-description {
+            color: var(--gray-700);
+            margin-bottom: var(--space-4);
+            line-height: 1.5;
+        }
+        
+        .prototype-features {
+            list-style: none;
+            margin-bottom: var(--space-6);
+        }
+        
+        .prototype-features li {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+            margin-bottom: var(--space-2);
+            font-size: 14px;
+            color: var(--gray-700);
+        }
+        
+        .prototype-features li::before {
+            content: "✓";
+            color: var(--success-500);
+            font-weight: 600;
+        }
+        
+        .prototype-actions {
+            display: flex;
+            gap: var(--space-3);
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+        }
+        
+        .btn-primary {
+            background: var(--primary-500);
+            color: var(--white);
+        }
+        
+        .btn-primary:hover {
+            background: var(--primary-600);
+            transform: translateY(-1px);
+        }
+        
+        .btn-secondary {
+            background: var(--gray-100);
+            color: var(--gray-700);
+            border: 1px solid var(--gray-300);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--gray-200);
+        }
+        
+        .specs-section {
+            background: var(--white);
+            border-radius: 12px;
+            padding: var(--space-6);
+            box-shadow: var(--shadow-medium);
+            margin-bottom: var(--space-8);
+        }
+        
+        .specs-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: var(--space-4);
+        }
+        
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-4);
+        }
+        
+        .spec-item {
+            padding: var(--space-4);
+            background: var(--gray-50);
+            border-radius: 8px;
+        }
+        
+        .spec-item h4 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-bottom: var(--space-2);
+        }
+        
+        .spec-item p {
+            font-size: 14px;
+            color: var(--gray-600);
+        }
+        
+        .footer {
+            text-align: center;
+            padding: var(--space-6);
+            color: var(--gray-500);
+            font-size: 14px;
+        }
+        
+        .footer a {
+            color: var(--primary-500);
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: var(--space-4);
+            }
+            
+            .prototypes-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .prototype-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">🎨 Claude Code UI - Figma Prototypes</h1>
+            <p class="subtitle">
+                Интерактивные HTML/CSS прототипы, созданные на основе детального Figma Implementation Guide. 
+                Полностью соответствуют дизайн-системе с цветовой палитрой, типографикой и компонентами.
+            </p>
+        </header>
+        
+        <div class="prototypes-grid">
+            <!-- Desktop Dashboard -->
+            <div class="prototype-card">
+                <div class="prototype-header">
+                    <div class="prototype-icon desktop">🖥️</div>
+                    <div class="prototype-info">
+                        <h3>Desktop Dashboard</h3>
+                        <p>1440x900px • Полнофункциональный</p>
+                    </div>
+                </div>
+                <div class="prototype-description">
+                    Главная страница с sidebar навигацией, статистическими карточками, быстрыми действиями и лентой активности. Реализована полная дизайн-система с hover эффектами.
+                </div>
+                <ul class="prototype-features">
+                    <li>Responsive sidebar с иконками</li>
+                    <li>Статистические карточки с трендами</li>
+                    <li>Быстрые действия (2x2 grid)</li>
+                    <li>Лента активности с аватарами</li>
+                    <li>Поиск в header</li>
+                    <li>Hover анимации</li>
+                </ul>
+                <div class="prototype-actions">
+                    <a href="dashboard.html" class="btn btn-primary" target="_blank">
+                        🚀 Открыть прототип
+                    </a>
+                    <button class="btn btn-secondary" onclick="copyLink('dashboard.html')">
+                        📋 Копировать ссылку
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Chat Interface -->
+            <div class="prototype-card">
+                <div class="prototype-header">
+                    <div class="prototype-icon chat">💬</div>
+                    <div class="prototype-info">
+                        <h3>Chat Interface</h3>
+                        <p>Полноэкранный • Интерактивный</p>
+                    </div>
+                </div>
+                <div class="prototype-description">
+                    Современный чат интерфейс с пузырьками сообщений, блоками кода, файловыми вложениями, индикатором печати и автоматически расширяющимся полем ввода.
+                </div>
+                <ul class="prototype-features">
+                    <li>Пузырьки сообщений (user/assistant)</li>
+                    <li>Блоки кода с подсветкой</li>
+                    <li>Файловые вложения</li>
+                    <li>Индикатор печати (анимация)</li>
+                    <li>Auto-resize textarea</li>
+                    <li>Копирование кода</li>
+                </ul>
+                <div class="prototype-actions">
+                    <a href="chat.html" class="btn btn-primary" target="_blank">
+                        💬 Открыть чат
+                    </a>
+                    <button class="btn btn-secondary" onclick="copyLink('chat.html')">
+                        📋 Копировать ссылку
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile App -->
+            <div class="prototype-card">
+                <div class="prototype-header">
+                    <div class="prototype-icon mobile">📱</div>
+                    <div class="prototype-info">
+                        <h3>Mobile App</h3>
+                        <p>375x812px • Touch-оптимизированный</p>
+                    </div>
+                </div>
+                <div class="prototype-description">
+                    Полнофункциональное мобильное приложение с bottom navigation, pull-to-refresh, FAB кнопкой и адаптивными компонентами для всех основных функций.
+                </div>
+                <ul class="prototype-features">
+                    <li>Bottom tab navigation (5 вкладок)</li>
+                    <li>Pull-to-refresh механика</li>
+                    <li>Floating Action Button</li>
+                    <li>Touch-оптимизированные карточки</li>
+                    <li>Safe area support</li>
+                    <li>Мобильный терминал</li>
+                </ul>
+                <div class="prototype-actions">
+                    <a href="mobile.html" class="btn btn-primary" target="_blank">
+                        📱 Открыть мобильную версию
+                    </a>
+                    <button class="btn btn-secondary" onclick="copyLink('mobile.html')">
+                        📋 Копировать ссылку
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Design System Specs -->
+        <section class="specs-section">
+            <h2 class="specs-title">🎨 Спецификации дизайн-системы</h2>
+            <div class="specs-grid">
+                <div class="spec-item">
+                    <h4>Цветовая палитра</h4>
+                    <p>Primary: #3B82F6, Success: #10B981, Warning: #F59E0B, Error: #EF4444. Полная шкала от 50 до 900.</p>
+                </div>
+                <div class="spec-item">
+                    <h4>Типографика</h4>
+                    <p>Inter для UI (400-700), JetBrains Mono для кода. 6 уровней заголовков, 3 размера body текста.</p>
+                </div>
+                <div class="spec-item">
+                    <h4>Spacing System</h4>
+                    <p>4px базовая единица. Шкала от 4px до 96px. Консистентные отступы и промежутки.</p>
+                </div>
+                <div class="spec-item">
+                    <h4>Компоненты</h4>
+                    <p>4 типа кнопок, 5 состояний input'ов, 3 варианта карточек. Все с hover состояниями.</p>
+                </div>
+                <div class="spec-item">
+                    <h4>Shadows & Radius</h4>
+                    <p>3 уровня теней, border-radius от 4px до 24px. Современный и чистый вид.</p>
+                </div>
+                <div class="spec-item">
+                    <h4>Responsive Design</h4>
+                    <p>Mobile-first подход. Breakpoints: 375px, 768px, 1024px, 1440px.</p>
+                </div>
+            </div>
+        </section>
+        
+        <footer class="footer">
+            <p>
+                Создано на основе 
+                <a href="../figma-implementation-guide.md" target="_blank">Figma Implementation Guide</a>
+                • 
+                <a href="../README.md" target="_blank">Документация по рефакторингу</a>
+                • 
+                <a href="https://github.com/evgenygurin/claudecodeui" target="_blank">GitHub Repository</a>
+            </p>
+        </footer>
+    </div>
+    
+    <script>
+        function copyLink(filename) {
+            const url = window.location.origin + window.location.pathname.replace('index.html', '') + filename;
+            navigator.clipboard.writeText(url).then(() => {
+                // Show temporary feedback
+                const button = event.target;
+                const originalText = button.textContent;
+                button.textContent = '✅ Скопировано!';
+                button.style.background = 'var(--success-500)';
+                button.style.color = 'var(--white)';
+                
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.style.background = '';
+                    button.style.color = '';
+                }, 2000);
+            });
+        }
+        
+        // Add some interactive effects
+        document.querySelectorAll('.prototype-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.borderColor = 'var(--primary-200)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.borderColor = 'var(--gray-200)';
+            });
+        });
+    </script>
+</body>
+</html>
+
