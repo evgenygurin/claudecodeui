@@ -1,0 +1,2109 @@
+{
+  "timestamp": "2025-09-06T16:31:07.712Z",
+  "summary": {
+    "totalComponents": 43,
+    "totalEstimatedHours": 68,
+    "phases": 5,
+    "categories": 4
+  },
+  "complexityAnalysis": {
+    "low": [
+      {
+        "id": "integrations-page-7HOUCTcoR5n",
+        "name": "Integrations Page 7HOUCTcoR5n",
+        "category": "misc",
+        "url": "https://v0.app/community/integrations-page-7HOUCTcoR5n",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.335Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "low"
+      },
+      {
+        "id": "action-search-bar-S3nMPSmpQzk",
+        "name": "Action Search Bar S3nMPSmpQzk",
+        "category": "misc",
+        "url": "https://v0.app/community/action-search-bar-S3nMPSmpQzk",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.335Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "low"
+      },
+      {
+        "id": "image-to-ascii-0UE1nczWzbu",
+        "name": "Image To Ascii 0UE1nczWzbu",
+        "category": "specialized",
+        "url": "https://v0.app/community/image-to-ascii-0UE1nczWzbu",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.336Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "low"
+      },
+      {
+        "id": "light-dark-image-transition-0WSCfiIps92",
+        "name": "Light Dark Image Transition 0WSCfiIps92",
+        "category": "misc",
+        "url": "https://v0.app/community/light-dark-image-transition-0WSCfiIps92",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.336Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "low"
+      },
+      {
+        "id": "dynamic-table-hJCDzsfPzdV",
+        "name": "Dynamic Table HJCDzsfPzdV",
+        "category": "specialized",
+        "url": "https://v0.app/community/dynamic-table-hJCDzsfPzdV",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.336Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "low"
+      },
+      {
+        "id": "login-03-LtQ7cIPj9o5",
+        "name": "Login 03 LtQ7cIPj9o5",
+        "category": "auth",
+        "url": "https://v0.app/community/login-03-LtQ7cIPj9o5",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.336Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [
+          "ui",
+          "security",
+          "validation"
+        ],
+        "tags": [],
+        "analyzedComplexity": "low"
+      },
+      {
+        "id": "login-02-lgh5A223SiR",
+        "name": "Login 02 Lgh5A223SiR",
+        "category": "auth",
+        "url": "https://v0.app/community/login-02-lgh5A223SiR",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.336Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [
+          "ui",
+          "security",
+          "validation"
+        ],
+        "tags": [],
+        "analyzedComplexity": "low"
+      },
+      {
+        "id": "modern-library-design-YzJGL4XM0VM",
+        "name": "Modern Library Design YzJGL4XM0VM",
+        "category": "misc",
+        "url": "https://v0.app/community/modern-library-design-YzJGL4XM0VM",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.337Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "low"
+      },
+      {
+        "id": "background-paths-s2R42ut7CxT",
+        "name": "Background Paths S2R42ut7CxT",
+        "category": "misc",
+        "url": "https://v0.app/community/background-paths-s2R42ut7CxT",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.337Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "low"
+      },
+      {
+        "id": "shopify-product-page-design-NxSj0IgX4vu",
+        "name": "Shopify Product Page Design NxSj0IgX4vu",
+        "category": "misc",
+        "url": "https://v0.app/community/shopify-product-page-design-NxSj0IgX4vu",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.337Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "low"
+      },
+      {
+        "id": "ai-elements-with-ai-sdk-5-ksSTzATPzMq",
+        "name": "Ai Elements With Ai Sdk 5 KsSTzATPzMq",
+        "category": "misc",
+        "url": "https://v0.app/community/ai-elements-with-ai-sdk-5-ksSTzATPzMq",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.337Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "low"
+      },
+      {
+        "id": "origin-e-commerce-ui-w98dsZBVaaU",
+        "name": "Origin E Commerce Ui W98dsZBVaaU",
+        "category": "misc",
+        "url": "https://v0.app/community/origin-e-commerce-ui-w98dsZBVaaU",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.337Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "low"
+      }
+    ],
+    "medium": [
+      {
+        "id": "ai-card-generation-Tpxvlz16QiJ",
+        "name": "Ai Card Generation Tpxvlz16QiJ",
+        "category": "misc",
+        "url": "https://v0.app/community/ai-card-generation-Tpxvlz16QiJ",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.335Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "medium"
+      },
+      {
+        "id": "vercel-tabs-BT27p0aGPsa",
+        "name": "Vercel Tabs BT27p0aGPsa",
+        "category": "ui",
+        "url": "https://v0.app/community/vercel-tabs-BT27p0aGPsa",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.336Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "medium"
+      },
+      {
+        "id": "animated-beam-voQije6wyja",
+        "name": "Animated Beam VoQije6wyja",
+        "category": "ui",
+        "url": "https://v0.app/community/animated-beam-voQije6wyja",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.336Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "medium"
+      },
+      {
+        "id": "glow-menu-component-XqrIezRilBR",
+        "name": "Glow Menu Component XqrIezRilBR",
+        "category": "misc",
+        "url": "https://v0.app/community/glow-menu-component-XqrIezRilBR",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.336Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "medium"
+      },
+      {
+        "id": "fluid-dropdown-zWgCGYGZIcx",
+        "name": "Fluid Dropdown ZWgCGYGZIcx",
+        "category": "ui",
+        "url": "https://v0.app/community/fluid-dropdown-zWgCGYGZIcx",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.336Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "medium"
+      },
+      {
+        "id": "toast-fLjYRXrijvp",
+        "name": "Toast FLjYRXrijvp",
+        "category": "ui",
+        "url": "https://v0.app/community/toast-fLjYRXrijvp",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.336Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "medium"
+      },
+      {
+        "id": "bento-grid-8QW53cSzCxp",
+        "name": "Bento Grid 8QW53cSzCxp",
+        "category": "ui",
+        "url": "https://v0.app/community/bento-grid-8QW53cSzCxp",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.336Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "medium"
+      }
+    ],
+    "high": [
+      {
+        "id": "file-manager-wukORjs2J9p",
+        "name": "File Manager WukORjs2J9p",
+        "category": "file-manager",
+        "url": "https://v0.app/chat/file-manager-wukORjs2J9p",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.330Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [
+          "ui",
+          "file-system"
+        ],
+        "tags": [],
+        "analyzedComplexity": "high"
+      },
+      {
+        "id": "file-manager-hN0nNvAchzi",
+        "name": "File Manager HN0nNvAchzi",
+        "category": "file-manager",
+        "url": "https://v0.app/community/file-manager-hN0nNvAchzi",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.334Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [
+          "ui",
+          "file-system"
+        ],
+        "tags": [],
+        "analyzedComplexity": "high"
+      },
+      {
+        "id": "ai-chat-interface-6VLiqkGu5vw",
+        "name": "Ai Chat Interface 6VLiqkGu5vw",
+        "category": "chat",
+        "url": "https://v0.app/community/ai-chat-interface-6VLiqkGu5vw",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.334Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [
+          "ui",
+          "api"
+        ],
+        "tags": [],
+        "analyzedComplexity": "high"
+      },
+      {
+        "id": "chat-ui-with-vibration-xf3RmrkKlxc",
+        "name": "Chat Ui With Vibration Xf3RmrkKlxc",
+        "category": "chat",
+        "url": "https://v0.app/community/chat-ui-with-vibration-xf3RmrkKlxc",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.335Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [
+          "ui",
+          "api"
+        ],
+        "tags": [],
+        "analyzedComplexity": "high"
+      },
+      {
+        "id": "chat-ui-h4Ga3LeTpbl",
+        "name": "Chat Ui H4Ga3LeTpbl",
+        "category": "chat",
+        "url": "https://v0.app/community/chat-ui-h4Ga3LeTpbl",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.335Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [
+          "ui",
+          "api"
+        ],
+        "tags": [],
+        "analyzedComplexity": "high"
+      },
+      {
+        "id": "modern-ai-chatbot-interface-template-GzHBHQAiS2F",
+        "name": "Modern Ai Chatbot Interface Template GzHBHQAiS2F",
+        "category": "chat",
+        "url": "https://v0.app/community/modern-ai-chatbot-interface-template-GzHBHQAiS2F",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.335Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [
+          "ui",
+          "api"
+        ],
+        "tags": [],
+        "analyzedComplexity": "high"
+      },
+      {
+        "id": "sidebar-layout-ybLyeN1sesS",
+        "name": "Sidebar Layout YbLyeN1sesS",
+        "category": "layout",
+        "url": "https://v0.app/community/sidebar-layout-ybLyeN1sesS",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.335Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [
+          "layout",
+          "navigation"
+        ],
+        "tags": [],
+        "analyzedComplexity": "high"
+      },
+      {
+        "id": "sidebar-in-dialog-WzUz8z8OdKf",
+        "name": "Sidebar In Dialog WzUz8z8OdKf",
+        "category": "layout",
+        "url": "https://v0.app/community/sidebar-in-dialog-WzUz8z8OdKf",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.335Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [
+          "layout",
+          "navigation"
+        ],
+        "tags": [],
+        "analyzedComplexity": "high"
+      },
+      {
+        "id": "file-tree-sidebar-NBfcFIKai4T",
+        "name": "File Tree Sidebar NBfcFIKai4T",
+        "category": "layout",
+        "url": "https://v0.app/community/file-tree-sidebar-NBfcFIKai4T",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.335Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [
+          "ui",
+          "file-system",
+          "layout",
+          "navigation"
+        ],
+        "tags": [],
+        "analyzedComplexity": "high"
+      },
+      {
+        "id": "documentation-starter-ov3ApgfOdx5",
+        "name": "Documentation Starter Ov3ApgfOdx5",
+        "category": "specialized",
+        "url": "https://v0.app/community/documentation-starter-ov3ApgfOdx5",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.336Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "high"
+      },
+      {
+        "id": "team-member-invites-BtbvdBJqRve",
+        "name": "Team Member Invites BtbvdBJqRve",
+        "category": "team",
+        "url": "https://v0.app/community/team-member-invites-BtbvdBJqRve",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.336Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "high"
+      },
+      {
+        "id": "creative-xYqdqPAJD3j",
+        "name": "Creative XYqdqPAJD3j",
+        "category": "design",
+        "url": "https://v0.app/community/creative-xYqdqPAJD3j",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.337Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "high"
+      },
+      {
+        "id": "creative-agency-portfolio-hJnIgxCCUr5",
+        "name": "Creative Agency Portfolio HJnIgxCCUr5",
+        "category": "design",
+        "url": "https://v0.app/community/creative-agency-portfolio-hJnIgxCCUr5",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.337Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "high"
+      },
+      {
+        "id": "next-js-doc-like-file-tree-BNbIj6SOUTQ",
+        "name": "Next Js Doc Like File Tree BNbIj6SOUTQ",
+        "category": "chat",
+        "url": "https://v0.app/chat/next-js-doc-like-file-tree-BNbIj6SOUTQ",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.337Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [
+          "ui",
+          "file-system"
+        ],
+        "tags": [],
+        "analyzedComplexity": "high"
+      },
+      {
+        "id": "cuisine-selector-chips-b1LMjSX49FY",
+        "name": "Cuisine Selector Chips B1LMjSX49FY",
+        "category": "chat",
+        "url": "https://v0.app/chat/cuisine-selector-chips-b1LMjSX49FY",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.337Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "high"
+      },
+      {
+        "id": "general-greeting-oaN8bYkHdWq",
+        "name": "General Greeting OaN8bYkHdWq",
+        "category": "chat",
+        "url": "https://v0.app/chat/general-greeting-oaN8bYkHdWq",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.337Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "high"
+      }
+    ],
+    "veryHigh": [
+      {
+        "id": "admin-dashboard-yBomF3O9Yu3",
+        "name": "Admin Dashboard YBomF3O9Yu3",
+        "category": "design",
+        "url": "https://v0.app/community/admin-dashboard-yBomF3O9Yu3",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.336Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [
+          "ui",
+          "data",
+          "charts"
+        ],
+        "tags": [],
+        "analyzedComplexity": "veryHigh"
+      },
+      {
+        "id": "drageasy-drag-and-drop-dashboard-mLIx6xWQwmP",
+        "name": "Drageasy Drag And Drop Dashboard MLIx6xWQwmP",
+        "category": "design",
+        "url": "https://v0.app/community/drageasy-drag-and-drop-dashboard-mLIx6xWQwmP",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.336Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [
+          "ui",
+          "data",
+          "charts"
+        ],
+        "tags": [],
+        "analyzedComplexity": "veryHigh"
+      },
+      {
+        "id": "eleven-labs-conversational-ai-starter-5TN93pl3bRS",
+        "name": "Eleven Labs Conversational Ai Starter 5TN93pl3bRS",
+        "category": "eleven-labs",
+        "url": "https://v0.app/community/eleven-labs-conversational-ai-starter-5TN93pl3bRS",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.336Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "veryHigh"
+      },
+      {
+        "id": "eleven-labs-music-starter-xuCjYtmbQri",
+        "name": "Eleven Labs Music Starter XuCjYtmbQri",
+        "category": "eleven-labs",
+        "url": "https://v0.app/community/eleven-labs-music-starter-xuCjYtmbQri",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.337Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "veryHigh"
+      },
+      {
+        "id": "eleven-labs-agents-starter-5TN93pl3bRS",
+        "name": "Eleven Labs Agents Starter 5TN93pl3bRS",
+        "category": "eleven-labs",
+        "url": "https://v0.app/community/eleven-labs-agents-starter-5TN93pl3bRS",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.337Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "veryHigh"
+      },
+      {
+        "id": "eleven-labs-v3-podcast-generator-9zvVUBtxy6i",
+        "name": "Eleven Labs V3 Podcast Generator 9zvVUBtxy6i",
+        "category": "eleven-labs",
+        "url": "https://v0.app/community/eleven-labs-v3-podcast-generator-9zvVUBtxy6i",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.337Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "veryHigh"
+      },
+      {
+        "id": "marketplace-b3DN1aOd6mQ",
+        "name": "Marketplace B3DN1aOd6mQ",
+        "category": "design",
+        "url": "https://v0.app/community/marketplace-b3DN1aOd6mQ",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.337Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "veryHigh"
+      },
+      {
+        "id": "financial-dashboard-functional-jUBqSBJsNrz",
+        "name": "Financial Dashboard Functional JUBqSBJsNrz",
+        "category": "design",
+        "url": "https://v0.app/community/financial-dashboard-functional-jUBqSBJsNrz",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.337Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [
+          "ui",
+          "data",
+          "charts"
+        ],
+        "tags": [],
+        "analyzedComplexity": "veryHigh"
+      }
+    ]
+  },
+  "dependencies": {
+    "ui-components": [
+      {
+        "id": "file-manager-wukORjs2J9p",
+        "name": "File Manager WukORjs2J9p",
+        "category": "file-manager",
+        "url": "https://v0.app/chat/file-manager-wukORjs2J9p",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.330Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [
+          "ui",
+          "file-system"
+        ],
+        "tags": [],
+        "analyzedComplexity": "high"
+      },
+      {
+        "id": "file-manager-hN0nNvAchzi",
+        "name": "File Manager HN0nNvAchzi",
+        "category": "file-manager",
+        "url": "https://v0.app/community/file-manager-hN0nNvAchzi",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.334Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [
+          "ui",
+          "file-system"
+        ],
+        "tags": [],
+        "analyzedComplexity": "high"
+      },
+      {
+        "id": "ai-chat-interface-6VLiqkGu5vw",
+        "name": "Ai Chat Interface 6VLiqkGu5vw",
+        "category": "chat",
+        "url": "https://v0.app/community/ai-chat-interface-6VLiqkGu5vw",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.334Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [
+          "ui",
+          "api"
+        ],
+        "tags": [],
+        "analyzedComplexity": "high"
+      },
+      {
+        "id": "chat-ui-with-vibration-xf3RmrkKlxc",
+        "name": "Chat Ui With Vibration Xf3RmrkKlxc",
+        "category": "chat",
+        "url": "https://v0.app/community/chat-ui-with-vibration-xf3RmrkKlxc",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.335Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [
+          "ui",
+          "api"
+        ],
+        "tags": [],
+        "analyzedComplexity": "high"
+      },
+      {
+        "id": "chat-ui-h4Ga3LeTpbl",
+        "name": "Chat Ui H4Ga3LeTpbl",
+        "category": "chat",
+        "url": "https://v0.app/community/chat-ui-h4Ga3LeTpbl",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.335Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [
+          "ui",
+          "api"
+        ],
+        "tags": [],
+        "analyzedComplexity": "high"
+      },
+      {
+        "id": "modern-ai-chatbot-interface-template-GzHBHQAiS2F",
+        "name": "Modern Ai Chatbot Interface Template GzHBHQAiS2F",
+        "category": "chat",
+        "url": "https://v0.app/community/modern-ai-chatbot-interface-template-GzHBHQAiS2F",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.335Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [
+          "ui",
+          "api"
+        ],
+        "tags": [],
+        "analyzedComplexity": "high"
+      },
+      {
+        "id": "file-tree-sidebar-NBfcFIKai4T",
+        "name": "File Tree Sidebar NBfcFIKai4T",
+        "category": "layout",
+        "url": "https://v0.app/community/file-tree-sidebar-NBfcFIKai4T",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.335Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [
+          "ui",
+          "file-system",
+          "layout",
+          "navigation"
+        ],
+        "tags": [],
+        "analyzedComplexity": "high"
+      },
+      {
+        "id": "admin-dashboard-yBomF3O9Yu3",
+        "name": "Admin Dashboard YBomF3O9Yu3",
+        "category": "design",
+        "url": "https://v0.app/community/admin-dashboard-yBomF3O9Yu3",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.336Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [
+          "ui",
+          "data",
+          "charts"
+        ],
+        "tags": [],
+        "analyzedComplexity": "veryHigh"
+      },
+      {
+        "id": "drageasy-drag-and-drop-dashboard-mLIx6xWQwmP",
+        "name": "Drageasy Drag And Drop Dashboard MLIx6xWQwmP",
+        "category": "design",
+        "url": "https://v0.app/community/drageasy-drag-and-drop-dashboard-mLIx6xWQwmP",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.336Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [
+          "ui",
+          "data",
+          "charts"
+        ],
+        "tags": [],
+        "analyzedComplexity": "veryHigh"
+      },
+      {
+        "id": "login-03-LtQ7cIPj9o5",
+        "name": "Login 03 LtQ7cIPj9o5",
+        "category": "auth",
+        "url": "https://v0.app/community/login-03-LtQ7cIPj9o5",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.336Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [
+          "ui",
+          "security",
+          "validation"
+        ],
+        "tags": [],
+        "analyzedComplexity": "low"
+      },
+      {
+        "id": "login-02-lgh5A223SiR",
+        "name": "Login 02 Lgh5A223SiR",
+        "category": "auth",
+        "url": "https://v0.app/community/login-02-lgh5A223SiR",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.336Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [
+          "ui",
+          "security",
+          "validation"
+        ],
+        "tags": [],
+        "analyzedComplexity": "low"
+      },
+      {
+        "id": "financial-dashboard-functional-jUBqSBJsNrz",
+        "name": "Financial Dashboard Functional JUBqSBJsNrz",
+        "category": "design",
+        "url": "https://v0.app/community/financial-dashboard-functional-jUBqSBJsNrz",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.337Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [
+          "ui",
+          "data",
+          "charts"
+        ],
+        "tags": [],
+        "analyzedComplexity": "veryHigh"
+      },
+      {
+        "id": "next-js-doc-like-file-tree-BNbIj6SOUTQ",
+        "name": "Next Js Doc Like File Tree BNbIj6SOUTQ",
+        "category": "chat",
+        "url": "https://v0.app/chat/next-js-doc-like-file-tree-BNbIj6SOUTQ",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.337Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [
+          "ui",
+          "file-system"
+        ],
+        "tags": [],
+        "analyzedComplexity": "high"
+      }
+    ],
+    "layout-components": [
+      {
+        "id": "sidebar-layout-ybLyeN1sesS",
+        "name": "Sidebar Layout YbLyeN1sesS",
+        "category": "layout",
+        "url": "https://v0.app/community/sidebar-layout-ybLyeN1sesS",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.335Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [
+          "layout",
+          "navigation"
+        ],
+        "tags": [],
+        "analyzedComplexity": "high"
+      },
+      {
+        "id": "sidebar-in-dialog-WzUz8z8OdKf",
+        "name": "Sidebar In Dialog WzUz8z8OdKf",
+        "category": "layout",
+        "url": "https://v0.app/community/sidebar-in-dialog-WzUz8z8OdKf",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.335Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [
+          "layout",
+          "navigation"
+        ],
+        "tags": [],
+        "analyzedComplexity": "high"
+      }
+    ],
+    "feature-components": [
+      {
+        "id": "integrations-page-7HOUCTcoR5n",
+        "name": "Integrations Page 7HOUCTcoR5n",
+        "category": "misc",
+        "url": "https://v0.app/community/integrations-page-7HOUCTcoR5n",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.335Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "low"
+      },
+      {
+        "id": "action-search-bar-S3nMPSmpQzk",
+        "name": "Action Search Bar S3nMPSmpQzk",
+        "category": "misc",
+        "url": "https://v0.app/community/action-search-bar-S3nMPSmpQzk",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.335Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "low"
+      },
+      {
+        "id": "ai-card-generation-Tpxvlz16QiJ",
+        "name": "Ai Card Generation Tpxvlz16QiJ",
+        "category": "misc",
+        "url": "https://v0.app/community/ai-card-generation-Tpxvlz16QiJ",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.335Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "medium"
+      },
+      {
+        "id": "vercel-tabs-BT27p0aGPsa",
+        "name": "Vercel Tabs BT27p0aGPsa",
+        "category": "ui",
+        "url": "https://v0.app/community/vercel-tabs-BT27p0aGPsa",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.336Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "medium"
+      },
+      {
+        "id": "animated-beam-voQije6wyja",
+        "name": "Animated Beam VoQije6wyja",
+        "category": "ui",
+        "url": "https://v0.app/community/animated-beam-voQije6wyja",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.336Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "medium"
+      },
+      {
+        "id": "glow-menu-component-XqrIezRilBR",
+        "name": "Glow Menu Component XqrIezRilBR",
+        "category": "misc",
+        "url": "https://v0.app/community/glow-menu-component-XqrIezRilBR",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.336Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "medium"
+      },
+      {
+        "id": "fluid-dropdown-zWgCGYGZIcx",
+        "name": "Fluid Dropdown ZWgCGYGZIcx",
+        "category": "ui",
+        "url": "https://v0.app/community/fluid-dropdown-zWgCGYGZIcx",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.336Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "medium"
+      },
+      {
+        "id": "toast-fLjYRXrijvp",
+        "name": "Toast FLjYRXrijvp",
+        "category": "ui",
+        "url": "https://v0.app/community/toast-fLjYRXrijvp",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.336Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "medium"
+      },
+      {
+        "id": "bento-grid-8QW53cSzCxp",
+        "name": "Bento Grid 8QW53cSzCxp",
+        "category": "ui",
+        "url": "https://v0.app/community/bento-grid-8QW53cSzCxp",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.336Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "medium"
+      },
+      {
+        "id": "image-to-ascii-0UE1nczWzbu",
+        "name": "Image To Ascii 0UE1nczWzbu",
+        "category": "specialized",
+        "url": "https://v0.app/community/image-to-ascii-0UE1nczWzbu",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.336Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "low"
+      },
+      {
+        "id": "documentation-starter-ov3ApgfOdx5",
+        "name": "Documentation Starter Ov3ApgfOdx5",
+        "category": "specialized",
+        "url": "https://v0.app/community/documentation-starter-ov3ApgfOdx5",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.336Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "high"
+      },
+      {
+        "id": "light-dark-image-transition-0WSCfiIps92",
+        "name": "Light Dark Image Transition 0WSCfiIps92",
+        "category": "misc",
+        "url": "https://v0.app/community/light-dark-image-transition-0WSCfiIps92",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.336Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "low"
+      },
+      {
+        "id": "dynamic-table-hJCDzsfPzdV",
+        "name": "Dynamic Table HJCDzsfPzdV",
+        "category": "specialized",
+        "url": "https://v0.app/community/dynamic-table-hJCDzsfPzdV",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.336Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "low"
+      },
+      {
+        "id": "team-member-invites-BtbvdBJqRve",
+        "name": "Team Member Invites BtbvdBJqRve",
+        "category": "team",
+        "url": "https://v0.app/community/team-member-invites-BtbvdBJqRve",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.336Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "high"
+      },
+      {
+        "id": "eleven-labs-conversational-ai-starter-5TN93pl3bRS",
+        "name": "Eleven Labs Conversational Ai Starter 5TN93pl3bRS",
+        "category": "eleven-labs",
+        "url": "https://v0.app/community/eleven-labs-conversational-ai-starter-5TN93pl3bRS",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.336Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "veryHigh"
+      },
+      {
+        "id": "eleven-labs-music-starter-xuCjYtmbQri",
+        "name": "Eleven Labs Music Starter XuCjYtmbQri",
+        "category": "eleven-labs",
+        "url": "https://v0.app/community/eleven-labs-music-starter-xuCjYtmbQri",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.337Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "veryHigh"
+      },
+      {
+        "id": "eleven-labs-agents-starter-5TN93pl3bRS",
+        "name": "Eleven Labs Agents Starter 5TN93pl3bRS",
+        "category": "eleven-labs",
+        "url": "https://v0.app/community/eleven-labs-agents-starter-5TN93pl3bRS",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.337Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "veryHigh"
+      },
+      {
+        "id": "eleven-labs-v3-podcast-generator-9zvVUBtxy6i",
+        "name": "Eleven Labs V3 Podcast Generator 9zvVUBtxy6i",
+        "category": "eleven-labs",
+        "url": "https://v0.app/community/eleven-labs-v3-podcast-generator-9zvVUBtxy6i",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.337Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "veryHigh"
+      },
+      {
+        "id": "modern-library-design-YzJGL4XM0VM",
+        "name": "Modern Library Design YzJGL4XM0VM",
+        "category": "misc",
+        "url": "https://v0.app/community/modern-library-design-YzJGL4XM0VM",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.337Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "low"
+      },
+      {
+        "id": "marketplace-b3DN1aOd6mQ",
+        "name": "Marketplace B3DN1aOd6mQ",
+        "category": "design",
+        "url": "https://v0.app/community/marketplace-b3DN1aOd6mQ",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.337Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "veryHigh"
+      },
+      {
+        "id": "background-paths-s2R42ut7CxT",
+        "name": "Background Paths S2R42ut7CxT",
+        "category": "misc",
+        "url": "https://v0.app/community/background-paths-s2R42ut7CxT",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.337Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "low"
+      },
+      {
+        "id": "creative-xYqdqPAJD3j",
+        "name": "Creative XYqdqPAJD3j",
+        "category": "design",
+        "url": "https://v0.app/community/creative-xYqdqPAJD3j",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.337Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "high"
+      },
+      {
+        "id": "shopify-product-page-design-NxSj0IgX4vu",
+        "name": "Shopify Product Page Design NxSj0IgX4vu",
+        "category": "misc",
+        "url": "https://v0.app/community/shopify-product-page-design-NxSj0IgX4vu",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.337Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "low"
+      },
+      {
+        "id": "creative-agency-portfolio-hJnIgxCCUr5",
+        "name": "Creative Agency Portfolio HJnIgxCCUr5",
+        "category": "design",
+        "url": "https://v0.app/community/creative-agency-portfolio-hJnIgxCCUr5",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.337Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "high"
+      },
+      {
+        "id": "ai-elements-with-ai-sdk-5-ksSTzATPzMq",
+        "name": "Ai Elements With Ai Sdk 5 KsSTzATPzMq",
+        "category": "misc",
+        "url": "https://v0.app/community/ai-elements-with-ai-sdk-5-ksSTzATPzMq",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.337Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "low"
+      },
+      {
+        "id": "origin-e-commerce-ui-w98dsZBVaaU",
+        "name": "Origin E Commerce Ui W98dsZBVaaU",
+        "category": "misc",
+        "url": "https://v0.app/community/origin-e-commerce-ui-w98dsZBVaaU",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.337Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "low"
+      },
+      {
+        "id": "cuisine-selector-chips-b1LMjSX49FY",
+        "name": "Cuisine Selector Chips B1LMjSX49FY",
+        "category": "chat",
+        "url": "https://v0.app/chat/cuisine-selector-chips-b1LMjSX49FY",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.337Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "high"
+      },
+      {
+        "id": "general-greeting-oaN8bYkHdWq",
+        "name": "General Greeting OaN8bYkHdWq",
+        "category": "chat",
+        "url": "https://v0.app/chat/general-greeting-oaN8bYkHdWq",
+        "source": "v0.app",
+        "collectedAt": "2025-09-06T16:15:17.337Z",
+        "status": "pending",
+        "complexity": "medium",
+        "dependencies": [],
+        "tags": [],
+        "analyzedComplexity": "high"
+      }
+    ],
+    "integration-components": []
+  },
+  "integrationPlan": {
+    "phases": [
+      {
+        "phase": 1,
+        "name": "Базовая инфраструктура",
+        "description": "Создание базовых UI компонентов",
+        "components": [
+          {
+            "id": "integrations-page-7HOUCTcoR5n",
+            "name": "Integrations Page 7HOUCTcoR5n",
+            "category": "misc",
+            "url": "https://v0.app/community/integrations-page-7HOUCTcoR5n",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.335Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [],
+            "tags": [],
+            "analyzedComplexity": "low"
+          },
+          {
+            "id": "action-search-bar-S3nMPSmpQzk",
+            "name": "Action Search Bar S3nMPSmpQzk",
+            "category": "misc",
+            "url": "https://v0.app/community/action-search-bar-S3nMPSmpQzk",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.335Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [],
+            "tags": [],
+            "analyzedComplexity": "low"
+          },
+          {
+            "id": "image-to-ascii-0UE1nczWzbu",
+            "name": "Image To Ascii 0UE1nczWzbu",
+            "category": "specialized",
+            "url": "https://v0.app/community/image-to-ascii-0UE1nczWzbu",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.336Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [],
+            "tags": [],
+            "analyzedComplexity": "low"
+          },
+          {
+            "id": "light-dark-image-transition-0WSCfiIps92",
+            "name": "Light Dark Image Transition 0WSCfiIps92",
+            "category": "misc",
+            "url": "https://v0.app/community/light-dark-image-transition-0WSCfiIps92",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.336Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [],
+            "tags": [],
+            "analyzedComplexity": "low"
+          },
+          {
+            "id": "dynamic-table-hJCDzsfPzdV",
+            "name": "Dynamic Table HJCDzsfPzdV",
+            "category": "specialized",
+            "url": "https://v0.app/community/dynamic-table-hJCDzsfPzdV",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.336Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [],
+            "tags": [],
+            "analyzedComplexity": "low"
+          },
+          {
+            "id": "login-03-LtQ7cIPj9o5",
+            "name": "Login 03 LtQ7cIPj9o5",
+            "category": "auth",
+            "url": "https://v0.app/community/login-03-LtQ7cIPj9o5",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.336Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [
+              "ui",
+              "security",
+              "validation"
+            ],
+            "tags": [],
+            "analyzedComplexity": "low"
+          },
+          {
+            "id": "login-02-lgh5A223SiR",
+            "name": "Login 02 Lgh5A223SiR",
+            "category": "auth",
+            "url": "https://v0.app/community/login-02-lgh5A223SiR",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.336Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [
+              "ui",
+              "security",
+              "validation"
+            ],
+            "tags": [],
+            "analyzedComplexity": "low"
+          },
+          {
+            "id": "modern-library-design-YzJGL4XM0VM",
+            "name": "Modern Library Design YzJGL4XM0VM",
+            "category": "misc",
+            "url": "https://v0.app/community/modern-library-design-YzJGL4XM0VM",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.337Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [],
+            "tags": [],
+            "analyzedComplexity": "low"
+          },
+          {
+            "id": "background-paths-s2R42ut7CxT",
+            "name": "Background Paths S2R42ut7CxT",
+            "category": "misc",
+            "url": "https://v0.app/community/background-paths-s2R42ut7CxT",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.337Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [],
+            "tags": [],
+            "analyzedComplexity": "low"
+          },
+          {
+            "id": "shopify-product-page-design-NxSj0IgX4vu",
+            "name": "Shopify Product Page Design NxSj0IgX4vu",
+            "category": "misc",
+            "url": "https://v0.app/community/shopify-product-page-design-NxSj0IgX4vu",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.337Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [],
+            "tags": [],
+            "analyzedComplexity": "low"
+          },
+          {
+            "id": "ai-elements-with-ai-sdk-5-ksSTzATPzMq",
+            "name": "Ai Elements With Ai Sdk 5 KsSTzATPzMq",
+            "category": "misc",
+            "url": "https://v0.app/community/ai-elements-with-ai-sdk-5-ksSTzATPzMq",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.337Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [],
+            "tags": [],
+            "analyzedComplexity": "low"
+          },
+          {
+            "id": "origin-e-commerce-ui-w98dsZBVaaU",
+            "name": "Origin E Commerce Ui W98dsZBVaaU",
+            "category": "misc",
+            "url": "https://v0.app/community/origin-e-commerce-ui-w98dsZBVaaU",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.337Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [],
+            "tags": [],
+            "analyzedComplexity": "low"
+          }
+        ],
+        "estimatedHours": 8,
+        "priority": "critical"
+      },
+      {
+        "phase": 2,
+        "name": "Layout и Navigation",
+        "description": "Интеграция компонентов макета",
+        "components": [
+          {
+            "id": "sidebar-layout-ybLyeN1sesS",
+            "name": "Sidebar Layout YbLyeN1sesS",
+            "category": "layout",
+            "url": "https://v0.app/community/sidebar-layout-ybLyeN1sesS",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.335Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [
+              "layout",
+              "navigation"
+            ],
+            "tags": [],
+            "analyzedComplexity": "high"
+          },
+          {
+            "id": "sidebar-in-dialog-WzUz8z8OdKf",
+            "name": "Sidebar In Dialog WzUz8z8OdKf",
+            "category": "layout",
+            "url": "https://v0.app/community/sidebar-in-dialog-WzUz8z8OdKf",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.335Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [
+              "layout",
+              "navigation"
+            ],
+            "tags": [],
+            "analyzedComplexity": "high"
+          },
+          {
+            "id": "file-tree-sidebar-NBfcFIKai4T",
+            "name": "File Tree Sidebar NBfcFIKai4T",
+            "category": "layout",
+            "url": "https://v0.app/community/file-tree-sidebar-NBfcFIKai4T",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.335Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [
+              "ui",
+              "file-system",
+              "layout",
+              "navigation"
+            ],
+            "tags": [],
+            "analyzedComplexity": "high"
+          }
+        ],
+        "estimatedHours": 12,
+        "priority": "high"
+      },
+      {
+        "phase": 3,
+        "name": "Feature Components",
+        "description": "Интеграция функциональных компонентов",
+        "components": [
+          {
+            "id": "file-manager-wukORjs2J9p",
+            "name": "File Manager WukORjs2J9p",
+            "category": "file-manager",
+            "url": "https://v0.app/chat/file-manager-wukORjs2J9p",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.330Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [
+              "ui",
+              "file-system"
+            ],
+            "tags": [],
+            "analyzedComplexity": "high"
+          },
+          {
+            "id": "file-manager-hN0nNvAchzi",
+            "name": "File Manager HN0nNvAchzi",
+            "category": "file-manager",
+            "url": "https://v0.app/community/file-manager-hN0nNvAchzi",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.334Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [
+              "ui",
+              "file-system"
+            ],
+            "tags": [],
+            "analyzedComplexity": "high"
+          },
+          {
+            "id": "ai-chat-interface-6VLiqkGu5vw",
+            "name": "Ai Chat Interface 6VLiqkGu5vw",
+            "category": "chat",
+            "url": "https://v0.app/community/ai-chat-interface-6VLiqkGu5vw",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.334Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [
+              "ui",
+              "api"
+            ],
+            "tags": [],
+            "analyzedComplexity": "high"
+          },
+          {
+            "id": "chat-ui-with-vibration-xf3RmrkKlxc",
+            "name": "Chat Ui With Vibration Xf3RmrkKlxc",
+            "category": "chat",
+            "url": "https://v0.app/community/chat-ui-with-vibration-xf3RmrkKlxc",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.335Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [
+              "ui",
+              "api"
+            ],
+            "tags": [],
+            "analyzedComplexity": "high"
+          },
+          {
+            "id": "chat-ui-h4Ga3LeTpbl",
+            "name": "Chat Ui H4Ga3LeTpbl",
+            "category": "chat",
+            "url": "https://v0.app/community/chat-ui-h4Ga3LeTpbl",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.335Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [
+              "ui",
+              "api"
+            ],
+            "tags": [],
+            "analyzedComplexity": "high"
+          },
+          {
+            "id": "modern-ai-chatbot-interface-template-GzHBHQAiS2F",
+            "name": "Modern Ai Chatbot Interface Template GzHBHQAiS2F",
+            "category": "chat",
+            "url": "https://v0.app/community/modern-ai-chatbot-interface-template-GzHBHQAiS2F",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.335Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [
+              "ui",
+              "api"
+            ],
+            "tags": [],
+            "analyzedComplexity": "high"
+          },
+          {
+            "id": "next-js-doc-like-file-tree-BNbIj6SOUTQ",
+            "name": "Next Js Doc Like File Tree BNbIj6SOUTQ",
+            "category": "chat",
+            "url": "https://v0.app/chat/next-js-doc-like-file-tree-BNbIj6SOUTQ",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.337Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [
+              "ui",
+              "file-system"
+            ],
+            "tags": [],
+            "analyzedComplexity": "high"
+          },
+          {
+            "id": "cuisine-selector-chips-b1LMjSX49FY",
+            "name": "Cuisine Selector Chips B1LMjSX49FY",
+            "category": "chat",
+            "url": "https://v0.app/chat/cuisine-selector-chips-b1LMjSX49FY",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.337Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [],
+            "tags": [],
+            "analyzedComplexity": "high"
+          },
+          {
+            "id": "general-greeting-oaN8bYkHdWq",
+            "name": "General Greeting OaN8bYkHdWq",
+            "category": "chat",
+            "url": "https://v0.app/chat/general-greeting-oaN8bYkHdWq",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.337Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [],
+            "tags": [],
+            "analyzedComplexity": "high"
+          }
+        ],
+        "estimatedHours": 16,
+        "priority": "high"
+      },
+      {
+        "phase": 4,
+        "name": "Advanced Components",
+        "description": "Интеграция сложных компонентов",
+        "components": [
+          {
+            "id": "file-manager-wukORjs2J9p",
+            "name": "File Manager WukORjs2J9p",
+            "category": "file-manager",
+            "url": "https://v0.app/chat/file-manager-wukORjs2J9p",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.330Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [
+              "ui",
+              "file-system"
+            ],
+            "tags": [],
+            "analyzedComplexity": "high"
+          },
+          {
+            "id": "file-manager-hN0nNvAchzi",
+            "name": "File Manager HN0nNvAchzi",
+            "category": "file-manager",
+            "url": "https://v0.app/community/file-manager-hN0nNvAchzi",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.334Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [
+              "ui",
+              "file-system"
+            ],
+            "tags": [],
+            "analyzedComplexity": "high"
+          },
+          {
+            "id": "ai-chat-interface-6VLiqkGu5vw",
+            "name": "Ai Chat Interface 6VLiqkGu5vw",
+            "category": "chat",
+            "url": "https://v0.app/community/ai-chat-interface-6VLiqkGu5vw",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.334Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [
+              "ui",
+              "api"
+            ],
+            "tags": [],
+            "analyzedComplexity": "high"
+          },
+          {
+            "id": "chat-ui-with-vibration-xf3RmrkKlxc",
+            "name": "Chat Ui With Vibration Xf3RmrkKlxc",
+            "category": "chat",
+            "url": "https://v0.app/community/chat-ui-with-vibration-xf3RmrkKlxc",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.335Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [
+              "ui",
+              "api"
+            ],
+            "tags": [],
+            "analyzedComplexity": "high"
+          },
+          {
+            "id": "chat-ui-h4Ga3LeTpbl",
+            "name": "Chat Ui H4Ga3LeTpbl",
+            "category": "chat",
+            "url": "https://v0.app/community/chat-ui-h4Ga3LeTpbl",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.335Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [
+              "ui",
+              "api"
+            ],
+            "tags": [],
+            "analyzedComplexity": "high"
+          },
+          {
+            "id": "modern-ai-chatbot-interface-template-GzHBHQAiS2F",
+            "name": "Modern Ai Chatbot Interface Template GzHBHQAiS2F",
+            "category": "chat",
+            "url": "https://v0.app/community/modern-ai-chatbot-interface-template-GzHBHQAiS2F",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.335Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [
+              "ui",
+              "api"
+            ],
+            "tags": [],
+            "analyzedComplexity": "high"
+          },
+          {
+            "id": "sidebar-layout-ybLyeN1sesS",
+            "name": "Sidebar Layout YbLyeN1sesS",
+            "category": "layout",
+            "url": "https://v0.app/community/sidebar-layout-ybLyeN1sesS",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.335Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [
+              "layout",
+              "navigation"
+            ],
+            "tags": [],
+            "analyzedComplexity": "high"
+          },
+          {
+            "id": "sidebar-in-dialog-WzUz8z8OdKf",
+            "name": "Sidebar In Dialog WzUz8z8OdKf",
+            "category": "layout",
+            "url": "https://v0.app/community/sidebar-in-dialog-WzUz8z8OdKf",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.335Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [
+              "layout",
+              "navigation"
+            ],
+            "tags": [],
+            "analyzedComplexity": "high"
+          },
+          {
+            "id": "file-tree-sidebar-NBfcFIKai4T",
+            "name": "File Tree Sidebar NBfcFIKai4T",
+            "category": "layout",
+            "url": "https://v0.app/community/file-tree-sidebar-NBfcFIKai4T",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.335Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [
+              "ui",
+              "file-system",
+              "layout",
+              "navigation"
+            ],
+            "tags": [],
+            "analyzedComplexity": "high"
+          },
+          {
+            "id": "documentation-starter-ov3ApgfOdx5",
+            "name": "Documentation Starter Ov3ApgfOdx5",
+            "category": "specialized",
+            "url": "https://v0.app/community/documentation-starter-ov3ApgfOdx5",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.336Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [],
+            "tags": [],
+            "analyzedComplexity": "high"
+          },
+          {
+            "id": "admin-dashboard-yBomF3O9Yu3",
+            "name": "Admin Dashboard YBomF3O9Yu3",
+            "category": "design",
+            "url": "https://v0.app/community/admin-dashboard-yBomF3O9Yu3",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.336Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [
+              "ui",
+              "data",
+              "charts"
+            ],
+            "tags": [],
+            "analyzedComplexity": "veryHigh"
+          },
+          {
+            "id": "drageasy-drag-and-drop-dashboard-mLIx6xWQwmP",
+            "name": "Drageasy Drag And Drop Dashboard MLIx6xWQwmP",
+            "category": "design",
+            "url": "https://v0.app/community/drageasy-drag-and-drop-dashboard-mLIx6xWQwmP",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.336Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [
+              "ui",
+              "data",
+              "charts"
+            ],
+            "tags": [],
+            "analyzedComplexity": "veryHigh"
+          },
+          {
+            "id": "team-member-invites-BtbvdBJqRve",
+            "name": "Team Member Invites BtbvdBJqRve",
+            "category": "team",
+            "url": "https://v0.app/community/team-member-invites-BtbvdBJqRve",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.336Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [],
+            "tags": [],
+            "analyzedComplexity": "high"
+          },
+          {
+            "id": "eleven-labs-conversational-ai-starter-5TN93pl3bRS",
+            "name": "Eleven Labs Conversational Ai Starter 5TN93pl3bRS",
+            "category": "eleven-labs",
+            "url": "https://v0.app/community/eleven-labs-conversational-ai-starter-5TN93pl3bRS",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.336Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [],
+            "tags": [],
+            "analyzedComplexity": "veryHigh"
+          },
+          {
+            "id": "eleven-labs-music-starter-xuCjYtmbQri",
+            "name": "Eleven Labs Music Starter XuCjYtmbQri",
+            "category": "eleven-labs",
+            "url": "https://v0.app/community/eleven-labs-music-starter-xuCjYtmbQri",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.337Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [],
+            "tags": [],
+            "analyzedComplexity": "veryHigh"
+          },
+          {
+            "id": "eleven-labs-agents-starter-5TN93pl3bRS",
+            "name": "Eleven Labs Agents Starter 5TN93pl3bRS",
+            "category": "eleven-labs",
+            "url": "https://v0.app/community/eleven-labs-agents-starter-5TN93pl3bRS",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.337Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [],
+            "tags": [],
+            "analyzedComplexity": "veryHigh"
+          },
+          {
+            "id": "eleven-labs-v3-podcast-generator-9zvVUBtxy6i",
+            "name": "Eleven Labs V3 Podcast Generator 9zvVUBtxy6i",
+            "category": "eleven-labs",
+            "url": "https://v0.app/community/eleven-labs-v3-podcast-generator-9zvVUBtxy6i",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.337Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [],
+            "tags": [],
+            "analyzedComplexity": "veryHigh"
+          },
+          {
+            "id": "marketplace-b3DN1aOd6mQ",
+            "name": "Marketplace B3DN1aOd6mQ",
+            "category": "design",
+            "url": "https://v0.app/community/marketplace-b3DN1aOd6mQ",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.337Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [],
+            "tags": [],
+            "analyzedComplexity": "veryHigh"
+          },
+          {
+            "id": "creative-xYqdqPAJD3j",
+            "name": "Creative XYqdqPAJD3j",
+            "category": "design",
+            "url": "https://v0.app/community/creative-xYqdqPAJD3j",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.337Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [],
+            "tags": [],
+            "analyzedComplexity": "high"
+          },
+          {
+            "id": "creative-agency-portfolio-hJnIgxCCUr5",
+            "name": "Creative Agency Portfolio HJnIgxCCUr5",
+            "category": "design",
+            "url": "https://v0.app/community/creative-agency-portfolio-hJnIgxCCUr5",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.337Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [],
+            "tags": [],
+            "analyzedComplexity": "high"
+          },
+          {
+            "id": "financial-dashboard-functional-jUBqSBJsNrz",
+            "name": "Financial Dashboard Functional JUBqSBJsNrz",
+            "category": "design",
+            "url": "https://v0.app/community/financial-dashboard-functional-jUBqSBJsNrz",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.337Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [
+              "ui",
+              "data",
+              "charts"
+            ],
+            "tags": [],
+            "analyzedComplexity": "veryHigh"
+          },
+          {
+            "id": "next-js-doc-like-file-tree-BNbIj6SOUTQ",
+            "name": "Next Js Doc Like File Tree BNbIj6SOUTQ",
+            "category": "chat",
+            "url": "https://v0.app/chat/next-js-doc-like-file-tree-BNbIj6SOUTQ",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.337Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [
+              "ui",
+              "file-system"
+            ],
+            "tags": [],
+            "analyzedComplexity": "high"
+          },
+          {
+            "id": "cuisine-selector-chips-b1LMjSX49FY",
+            "name": "Cuisine Selector Chips B1LMjSX49FY",
+            "category": "chat",
+            "url": "https://v0.app/chat/cuisine-selector-chips-b1LMjSX49FY",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.337Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [],
+            "tags": [],
+            "analyzedComplexity": "high"
+          },
+          {
+            "id": "general-greeting-oaN8bYkHdWq",
+            "name": "General Greeting OaN8bYkHdWq",
+            "category": "chat",
+            "url": "https://v0.app/chat/general-greeting-oaN8bYkHdWq",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.337Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [],
+            "tags": [],
+            "analyzedComplexity": "high"
+          }
+        ],
+        "estimatedHours": 20,
+        "priority": "medium"
+      },
+      {
+        "phase": 5,
+        "name": "Integration Components",
+        "description": "Интеграция внешних сервисов",
+        "components": [
+          {
+            "id": "eleven-labs-conversational-ai-starter-5TN93pl3bRS",
+            "name": "Eleven Labs Conversational Ai Starter 5TN93pl3bRS",
+            "category": "eleven-labs",
+            "url": "https://v0.app/community/eleven-labs-conversational-ai-starter-5TN93pl3bRS",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.336Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [],
+            "tags": [],
+            "analyzedComplexity": "veryHigh"
+          },
+          {
+            "id": "eleven-labs-music-starter-xuCjYtmbQri",
+            "name": "Eleven Labs Music Starter XuCjYtmbQri",
+            "category": "eleven-labs",
+            "url": "https://v0.app/community/eleven-labs-music-starter-xuCjYtmbQri",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.337Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [],
+            "tags": [],
+            "analyzedComplexity": "veryHigh"
+          },
+          {
+            "id": "eleven-labs-agents-starter-5TN93pl3bRS",
+            "name": "Eleven Labs Agents Starter 5TN93pl3bRS",
+            "category": "eleven-labs",
+            "url": "https://v0.app/community/eleven-labs-agents-starter-5TN93pl3bRS",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.337Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [],
+            "tags": [],
+            "analyzedComplexity": "veryHigh"
+          },
+          {
+            "id": "eleven-labs-v3-podcast-generator-9zvVUBtxy6i",
+            "name": "Eleven Labs V3 Podcast Generator 9zvVUBtxy6i",
+            "category": "eleven-labs",
+            "url": "https://v0.app/community/eleven-labs-v3-podcast-generator-9zvVUBtxy6i",
+            "source": "v0.app",
+            "collectedAt": "2025-09-06T16:15:17.337Z",
+            "status": "pending",
+            "complexity": "medium",
+            "dependencies": [],
+            "tags": [],
+            "analyzedComplexity": "veryHigh"
+          }
+        ],
+        "estimatedHours": 12,
+        "priority": "low"
+      }
+    ],
+    "totalEstimatedHours": 68,
+    "totalComponents": 43
+  },
+  "metrics": {
+    "integration-progress": {
+      "name": "Прогресс интеграции",
+      "formula": "(integrated_components / total_components) * 100",
+      "target": 100,
+      "current": 0
+    },
+    "phase-completion": {
+      "name": "Завершение фаз",
+      "formula": "(completed_phases / total_phases) * 100",
+      "target": 100,
+      "current": 0
+    },
+    "code-quality": {
+      "name": "Качество кода",
+      "formula": "(components_without_issues / total_components) * 100",
+      "target": 95,
+      "current": 0
+    },
+    "test-coverage": {
+      "name": "Покрытие тестами",
+      "formula": "(tested_components / total_components) * 100",
+      "target": 80,
+      "current": 0
+    }
+  },
+  "structure": {
+    "src/components/integrated": {
+      "ui": "Базовые UI компоненты",
+      "layout": "Компоненты макета",
+      "features": "Функциональные компоненты",
+      "integrations": "Интеграции с внешними сервисами",
+      "advanced": "Сложные компоненты"
+    },
+    "src/types": {
+      "integrated-components.ts": "Типы для интегрированных компонентов"
+    },
+    "src/utils": {
+      "component-utils.ts": "Утилиты для работы с компонентами"
+    }
+  },
+  "recommendations": [
+    "Начните с Фазы 1 - базовые UI компоненты",
+    "Используйте TypeScript для типизации всех компонентов",
+    "Создавайте тесты для каждого интегрированного компонента",
+    "Документируйте процесс интеграции",
+    "Регулярно обновляйте метрики прогресса"
+  ]
+}
