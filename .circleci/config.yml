@@ -67,14 +67,20 @@ jobs:
       - run:
           name: Build application for E2E tests
           command: npm run build
-      - cypress/run:
-          start: npm start
-          wait-on: 'http://localhost:3000'
-          wait-on-timeout: 120
-          browser: chrome
-          record: true
-          parallel: true
-          group: 'E2E Tests'
+      - run:
+          name: Start application for E2E tests
+          command: npm start
+          background: true
+      - run:
+          name: Install wait-on and wait for application to start
+          command: |
+            npm install -g wait-on
+            wait-on http://localhost:3000 --timeout 120000
+      - run:
+          name: Run Cypress E2E tests
+          command: npm run test:e2e
+          environment:
+            CYPRESS_baseUrl: http://localhost:3000
       - store_test_results:
           path: cypress/results
       - store_artifacts:
