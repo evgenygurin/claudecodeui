@@ -4,6 +4,7 @@ import { getErrorMessage } from '@/utils/error-handler';
  * Comprehensive form validation with error handling
  */
 
+import React from 'react';
 import { z } from 'zod';
 import { logger } from '@/utils/logger';
 
@@ -263,6 +264,16 @@ export function useFormValidation<T extends Record<string, any>>(
     try {
       const result = validator.validate(data);
       setErrors(result.errors);
+      
+      // Mark all fields with errors as touched so they display
+      if (result.errors.length > 0) {
+        setTouched(prev => {
+          const newTouched = new Set(prev);
+          result.errors.forEach(error => newTouched.add(error.field));
+          return newTouched;
+        });
+      }
+      
       return result;
     } finally {
       setIsValidating(false);
@@ -292,9 +303,19 @@ export function useFormValidation<T extends Record<string, any>>(
   const setFieldTouched = React.useCallback(
     (field: string) => {
       setTouched(prev => new Set(prev).add(field));
-      validateField(field);
+      // Ensure field exists in data and validate after state update
+      setData(prev => {
+        const newData = { ...prev, [field]: prev[field] ?? '' };
+        // Validate field after data is updated
+        setTimeout(() => {
+          const result = validator.validate(newData);
+          const fieldErrors = result.errors.filter(error => error.field === field);
+          setErrors(prevErrors => prevErrors.filter(error => error.field !== field).concat(fieldErrors));
+        }, 0);
+        return newData;
+      });
     },
-    [validateField]
+    [validator]
   );
 
   const reset = React.useCallback(() => {
@@ -339,6 +360,3 @@ export function useFormValidation<T extends Record<string, any>>(
     isValid: errors.length === 0,
   };
 }
-
-// Import React for hooks
-import React from 'react';

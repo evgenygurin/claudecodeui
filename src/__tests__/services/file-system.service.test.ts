@@ -2,59 +2,33 @@
  * File System Service Tests
  */
 
-import { FileSystemService, FileStats } from '@/services/file-system.service';
+import { fileSystemService, FileStats } from '@/services/file-system.service';
 import { jest } from '@jest/globals';
 
-// Mock fs/promises
-jest.mock('fs/promises', () => ({
-  readdir: jest.fn(),
-  stat: jest.fn(),
-  mkdir: jest.fn(),
-  writeFile: jest.fn(),
-  unlink: jest.fn(),
-  rmdir: jest.fn(),
-  rename: jest.fn(),
-  copyFile: jest.fn(),
-  readFile: jest.fn(),
-}));
-
-// Mock path
-jest.mock('path', () => ({
-  join: jest.fn((...args) => args.join('/')),
-  dirname: jest.fn(path => path.split('/').slice(0, -1).join('/')),
-  isAbsolute: jest.fn(path => path.startsWith('/')),
-}));
+// Mock fetch for API calls
+global.fetch = jest.fn();
 
 describe('FileSystemService', () => {
-  let fileSystemService: FileSystemService;
-  let mockFs: any;
-  let mockPath: any;
+  let mockFetch: jest.MockedFunction<typeof fetch>;
 
   beforeEach(() => {
-    fileSystemService = new (require('@/services/file-system.service').FileSystemServiceImpl)();
-    mockFs = require('fs/promises');
-    mockPath = require('path');
-
-    // Reset all mocks
-    jest.clearAllMocks();
+    mockFetch = global.fetch as jest.MockedFunction<typeof fetch>;
+    mockFetch.mockClear();
   });
 
   describe('readDirectory', () => {
     it('should read directory and return file items', async () => {
-      const mockEntries = [
-        { name: 'file1.txt', isDirectory: () => false, isFile: () => true },
-        { name: 'folder1', isDirectory: () => true, isFile: () => false },
-      ];
-
-      const mockStats = {
-        size: 1024,
-        mtime: new Date('2024-01-01'),
-        isDirectory: () => false,
-        mode: 0o644,
+      const mockResponse = {
+        ok: true,
+        json: jest.fn().mockResolvedValue({
+          items: [
+            { name: 'file1.txt', type: 'file', size: 1024 },
+            { name: 'folder1', type: 'folder' },
+          ],
+        }),
       };
 
-      mockFs.readdir.mockResolvedValue(mockEntries);
-      mockFs.stat.mockResolvedValue(mockStats);
+      mockFetch.mockResolvedValue(mockResponse as any);
 
       const result = await fileSystemService.readDirectory('.');
 
@@ -68,10 +42,16 @@ describe('FileSystemService', () => {
         name: 'folder1',
         type: 'folder',
       });
+      expect(mockFetch).toHaveBeenCalledWith('/api/files?path=.');
     });
 
     it('should handle directory read errors', async () => {
-      mockFs.readdir.mockRejectedValue(new Error('Permission denied'));
+      const mockResponse = {
+        ok: false,
+        json: jest.fn().mockResolvedValue({ error: 'Permission denied' }),
+      };
+
+      mockFetch.mockResolvedValue(mockResponse as any);
 
       await expect(fileSystemService.readDirectory('/invalid')).rejects.toThrow(
         'Failed to read directory'
@@ -81,26 +61,54 @@ describe('FileSystemService', () => {
 
   describe('createFile', () => {
     it('should create a file with content', async () => {
-      mockFs.mkdir.mockResolvedValue(undefined);
-      mockFs.writeFile.mockResolvedValue(undefined);
+      const mockResponse = {
+        ok: true,
+        json: jest.fn().mockResolvedValue({}),
+      };
+
+      mockFetch.mockResolvedValue(mockResponse as any);
 
       await fileSystemService.createFile('test.txt', 'Hello World');
 
-      expect(mockFs.mkdir).toHaveBeenCalledWith('.', { recursive: true });
-      expect(mockFs.writeFile).toHaveBeenCalledWith('./test.txt', 'Hello World', 'utf8');
+      expect(mockFetch).toHaveBeenCalledWith('/api/files', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action: 'createFile',
+          path: 'test.txt',
+          content: 'Hello World',
+        }),
+      });
     });
 
     it('should create a file without content', async () => {
-      mockFs.mkdir.mockResolvedValue(undefined);
-      mockFs.writeFile.mockResolvedValue(undefined);
+      const mockResponse = {
+        ok: true,
+        json: jest.fn().mockResolvedValue({}),
+      };
+
+      mockFetch.mockResolvedValue(mockResponse as any);
 
       await fileSystemService.createFile('empty.txt');
 
-      expect(mockFs.writeFile).toHaveBeenCalledWith('./empty.txt', '', 'utf8');
+      expect(mockFetch).toHaveBeenCalledWith('/api/files', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action: 'createFile',
+          path: 'empty.txt',
+          content: '',
+        }),
+      });
     });
 
     it('should handle file creation errors', async () => {
-      mockFs.mkdir.mockRejectedValue(new Error('Permission denied'));
+      const mockResponse = {
+        ok: false,
+        json: jest.fn().mockResolvedValue({ error: 'Permission denied' }),
+      };
+
+      mockFetch.mockResolvedValue(mockResponse as any);
 
       await expect(fileSystemService.createFile('test.txt')).rejects.toThrow(
         'Failed to create file'
@@ -110,15 +118,32 @@ describe('FileSystemService', () => {
 
   describe('createDirectory', () => {
     it('should create a directory', async () => {
-      mockFs.mkdir.mockResolvedValue(undefined);
+      const mockResponse = {
+        ok: true,
+        json: jest.fn().mockResolvedValue({}),
+      };
+
+      mockFetch.mockResolvedValue(mockResponse as any);
 
       await fileSystemService.createDirectory('new-folder');
 
-      expect(mockFs.mkdir).toHaveBeenCalledWith('./new-folder', { recursive: true });
+      expect(mockFetch).toHaveBeenCalledWith('/api/files', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action: 'createDirectory',
+          path: 'new-folder',
+        }),
+      });
     });
 
     it('should handle directory creation errors', async () => {
-      mockFs.mkdir.mockRejectedValue(new Error('Permission denied'));
+      const mockResponse = {
+        ok: false,
+        json: jest.fn().mockResolvedValue({ error: 'Permission denied' }),
+      };
+
+      mockFetch.mockResolvedValue(mockResponse as any);
 
       await expect(fileSystemService.createDirectory('invalid')).rejects.toThrow(
         'Failed to create directory'
@@ -128,15 +153,32 @@ describe('FileSystemService', () => {
 
   describe('deleteFile', () => {
     it('should delete a file', async () => {
-      mockFs.unlink.mockResolvedValue(undefined);
+      const mockResponse = {
+        ok: true,
+        json: jest.fn().mockResolvedValue({}),
+      };
+
+      mockFetch.mockResolvedValue(mockResponse as any);
 
       await fileSystemService.deleteFile('test.txt');
 
-      expect(mockFs.unlink).toHaveBeenCalledWith('./test.txt');
+      expect(mockFetch).toHaveBeenCalledWith('/api/files', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action: 'deleteFile',
+          path: 'test.txt',
+        }),
+      });
     });
 
     it('should handle file deletion errors', async () => {
-      mockFs.unlink.mockRejectedValue(new Error('File not found'));
+      const mockResponse = {
+        ok: false,
+        json: jest.fn().mockResolvedValue({ error: 'File not found' }),
+      };
+
+      mockFetch.mockResolvedValue(mockResponse as any);
 
       await expect(fileSystemService.deleteFile('nonexistent.txt')).rejects.toThrow(
         'Failed to delete file'
@@ -146,15 +188,32 @@ describe('FileSystemService', () => {
 
   describe('deleteDirectory', () => {
     it('should delete a directory', async () => {
-      mockFs.rmdir.mockResolvedValue(undefined);
+      const mockResponse = {
+        ok: true,
+        json: jest.fn().mockResolvedValue({}),
+      };
+
+      mockFetch.mockResolvedValue(mockResponse as any);
 
       await fileSystemService.deleteDirectory('test-folder');
 
-      expect(mockFs.rmdir).toHaveBeenCalledWith('./test-folder', { recursive: true });
+      expect(mockFetch).toHaveBeenCalledWith('/api/files', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action: 'deleteDirectory',
+          path: 'test-folder',
+        }),
+      });
     });
 
     it('should handle directory deletion errors', async () => {
-      mockFs.rmdir.mockRejectedValue(new Error('Directory not empty'));
+      const mockResponse = {
+        ok: false,
+        json: jest.fn().mockResolvedValue({ error: 'Directory not empty' }),
+      };
+
+      mockFetch.mockResolvedValue(mockResponse as any);
 
       await expect(fileSystemService.deleteDirectory('nonempty')).rejects.toThrow(
         'Failed to delete directory'
@@ -164,17 +223,33 @@ describe('FileSystemService', () => {
 
   describe('moveFile', () => {
     it('should move a file', async () => {
-      mockFs.mkdir.mockResolvedValue(undefined);
-      mockFs.rename.mockResolvedValue(undefined);
+      const mockResponse = {
+        ok: true,
+        json: jest.fn().mockResolvedValue({}),
+      };
+
+      mockFetch.mockResolvedValue(mockResponse as any);
 
       await fileSystemService.moveFile('source.txt', 'dest.txt');
 
-      expect(mockFs.mkdir).toHaveBeenCalledWith('.', { recursive: true });
-      expect(mockFs.rename).toHaveBeenCalledWith('./source.txt', './dest.txt');
+      expect(mockFetch).toHaveBeenCalledWith('/api/files', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action: 'moveFile',
+          path: 'source.txt',
+          destination: 'dest.txt',
+        }),
+      });
     });
 
     it('should handle file move errors', async () => {
-      mockFs.mkdir.mockRejectedValue(new Error('Permission denied'));
+      const mockResponse = {
+        ok: false,
+        json: jest.fn().mockResolvedValue({ error: 'Permission denied' }),
+      };
+
+      mockFetch.mockResolvedValue(mockResponse as any);
 
       await expect(fileSystemService.moveFile('source.txt', 'dest.txt')).rejects.toThrow(
         'Failed to move file'
@@ -184,17 +259,33 @@ describe('FileSystemService', () => {
 
   describe('copyFile', () => {
     it('should copy a file', async () => {
-      mockFs.mkdir.mockResolvedValue(undefined);
-      mockFs.copyFile.mockResolvedValue(undefined);
+      const mockResponse = {
+        ok: true,
+        json: jest.fn().mockResolvedValue({}),
+      };
+
+      mockFetch.mockResolvedValue(mockResponse as any);
 
       await fileSystemService.copyFile('source.txt', 'dest.txt');
 
-      expect(mockFs.mkdir).toHaveBeenCalledWith('.', { recursive: true });
-      expect(mockFs.copyFile).toHaveBeenCalledWith('./source.txt', './dest.txt');
+      expect(mockFetch).toHaveBeenCalledWith('/api/files', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action: 'copyFile',
+          path: 'source.txt',
+          destination: 'dest.txt',
+        }),
+      });
     });
 
     it('should handle file copy errors', async () => {
-      mockFs.mkdir.mockRejectedValue(new Error('Permission denied'));
+      const mockResponse = {
+        ok: false,
+        json: jest.fn().mockResolvedValue({ error: 'Permission denied' }),
+      };
+
+      mockFetch.mockResolvedValue(mockResponse as any);
 
       await expect(fileSystemService.copyFile('source.txt', 'dest.txt')).rejects.toThrow(
         'Failed to copy file'
@@ -205,16 +296,26 @@ describe('FileSystemService', () => {
   describe('readFile', () => {
     it('should read a file', async () => {
       const content = 'File content';
-      mockFs.readFile.mockResolvedValue(content);
+      const mockResponse = {
+        ok: true,
+        json: jest.fn().mockResolvedValue({ content }),
+      };
+
+      mockFetch.mockResolvedValue(mockResponse as any);
 
       const result = await fileSystemService.readFile('test.txt');
 
       expect(result).toBe(content);
-      expect(mockFs.readFile).toHaveBeenCalledWith('./test.txt', 'utf8');
+      expect(mockFetch).toHaveBeenCalledWith('/api/files?path=test.txt');
     });
 
     it('should handle file read errors', async () => {
-      mockFs.readFile.mockRejectedValue(new Error('File not found'));
+      const mockResponse = {
+        ok: false,
+        json: jest.fn().mockResolvedValue({ error: 'File not found' }),
+      };
+
+      mockFetch.mockResolvedValue(mockResponse as any);
 
       await expect(fileSystemService.readFile('nonexistent.txt')).rejects.toThrow(
         'Failed to read file'
@@ -224,17 +325,33 @@ describe('FileSystemService', () => {
 
   describe('writeFile', () => {
     it('should write to a file', async () => {
-      mockFs.mkdir.mockResolvedValue(undefined);
-      mockFs.writeFile.mockResolvedValue(undefined);
+      const mockResponse = {
+        ok: true,
+        json: jest.fn().mockResolvedValue({}),
+      };
+
+      mockFetch.mockResolvedValue(mockResponse as any);
 
       await fileSystemService.writeFile('test.txt', 'New content');
 
-      expect(mockFs.mkdir).toHaveBeenCalledWith('.', { recursive: true });
-      expect(mockFs.writeFile).toHaveBeenCalledWith('./test.txt', 'New content', 'utf8');
+      expect(mockFetch).toHaveBeenCalledWith('/api/files', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          action: 'writeFile',
+          path: 'test.txt',
+          content: 'New content',
+        }),
+      });
     });
 
     it('should handle file write errors', async () => {
-      mockFs.mkdir.mockRejectedValue(new Error('Permission denied'));
+      const mockResponse = {
+        ok: false,
+        json: jest.fn().mockResolvedValue({ error: 'Permission denied' }),
+      };
+
+      mockFetch.mockResolvedValue(mockResponse as any);
 
       await expect(fileSystemService.writeFile('test.txt', 'content')).rejects.toThrow(
         'Failed to write file'
@@ -246,27 +363,37 @@ describe('FileSystemService', () => {
     it('should get file statistics', async () => {
       const mockStats = {
         size: 2048,
-        mtime: new Date('2024-01-01'),
-        birthtime: new Date('2023-12-01'),
-        isDirectory: () => false,
-        mode: 0o644,
+        modified: '2024-01-01T00:00:00.000Z',
+        created: '2023-12-01T00:00:00.000Z',
+        isDirectory: false,
       };
 
-      mockFs.stat.mockResolvedValue(mockStats);
+      const mockResponse = {
+        ok: true,
+        json: jest.fn().mockResolvedValue({ stats: mockStats }),
+      };
+
+      mockFetch.mockResolvedValue(mockResponse as any);
 
       const result = await fileSystemService.getFileStats('test.txt');
 
       expect(result).toMatchObject({
         size: 2048,
-        modified: mockStats.mtime,
-        created: mockStats.birthtime,
+        modified: new Date('2024-01-01T00:00:00.000Z'),
+        created: new Date('2023-12-01T00:00:00.000Z'),
         isDirectory: false,
-        permissions: 'write',
+        permissions: 'read',
       });
+      expect(mockFetch).toHaveBeenCalledWith('/api/files?path=test.txt');
     });
 
     it('should handle file stats errors', async () => {
-      mockFs.stat.mockRejectedValue(new Error('File not found'));
+      const mockResponse = {
+        ok: false,
+        json: jest.fn().mockResolvedValue({ error: 'File not found' }),
+      };
+
+      mockFetch.mockResolvedValue(mockResponse as any);
 
       await expect(fileSystemService.getFileStats('nonexistent.txt')).rejects.toThrow(
         'Failed to get file stats'

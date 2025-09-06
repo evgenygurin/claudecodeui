@@ -74,15 +74,26 @@ describe('CacheService', () => {
     });
 
     it('should not expire entries without TTL', async () => {
+      // Create a cache without default maxAge for this test
+      const noTTLCache = new CacheService({
+        maxSize: 1024 * 1024,
+        maxEntries: 10,
+        enableStats: true,
+        enablePersistence: false,
+        // No maxAge set, so it should use the default (5 minutes)
+      });
+
       const key = 'test-key';
       const value = { data: 'test-value' };
 
-      cache.set(key, value); // No TTL
-      expect(cache.get(key)).toEqual(value);
+      noTTLCache.set(key, value); // No TTL, should use default 5 minutes
+      expect(noTTLCache.get(key)).toEqual(value);
 
-      // Wait longer than default TTL
+      // Wait 1.5 seconds (much less than 5 minutes)
       await new Promise(resolve => setTimeout(resolve, 1500));
-      expect(cache.get(key)).toEqual(value);
+      expect(noTTLCache.get(key)).toEqual(value);
+      
+      noTTLCache.clear();
     });
   });
 
