@@ -155,7 +155,7 @@ export default function HomePage() {
                         <CardTitle>Quick Actions</CardTitle>
                       </CardHeader>
                       <CardContent>
-                        <div className="grid grid-cols-2 gap-4">
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                           <Button
                             variant="outline"
                             className="h-20 flex flex-col items-center justify-center"
@@ -187,6 +187,22 @@ export default function HomePage() {
                           >
                             <Database className="h-6 w-6 mb-2" />
                             Database
+                          </Button>
+                          <Button
+                            variant="outline"
+                            className="h-20 flex flex-col items-center justify-center"
+                            onClick={() => window.open('/components-demo', '_blank')}
+                          >
+                            <Sparkles className="h-6 w-6 mb-2" />
+                            Components Demo
+                          </Button>
+                          <Button
+                            variant="outline"
+                            className="h-20 flex flex-col items-center justify-center"
+                            onClick={() => setActiveTab('ai-tools')}
+                          >
+                            <Wand2 className="h-6 w-6 mb-2" />
+                            AI Tools
                           </Button>
                         </div>
                       </CardContent>
