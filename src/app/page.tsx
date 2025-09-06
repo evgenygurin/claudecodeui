@@ -67,7 +67,16 @@ export default function HomePage() {
               <p className="text-muted-foreground">Modern interface for AI-powered development</p>
             </div>
             <div className="flex items-center gap-2">
-              <ActionSearchBar className="w-64" />
+              <ActionSearchBar 
+                className="w-64" 
+                onActionSelect={(action) => {
+                  if (action.id === 'new-chat') setActiveTab('chat');
+                  else if (action.id === 'open-files') setActiveTab('files');
+                  else if (action.id === 'deploy-project') setActiveTab('deploy');
+                  else if (action.id === 'project-settings') setActiveTab('projects');
+                  else if (action.id === 'ai-assistant') setActiveTab('ai-tools');
+                }}
+              />
               <Button variant="outline" size="sm">
                 <Settings className="h-4 w-4 mr-2" />
                 Settings
@@ -143,6 +152,7 @@ export default function HomePage() {
                           <Button
                             variant="outline"
                             className="h-20 flex flex-col items-center justify-center"
+                            onClick={() => setActiveTab('deploy')}
                           >
                             <FolderOpen className="h-6 w-6 mb-2" />
                             New Project
@@ -150,6 +160,7 @@ export default function HomePage() {
                           <Button
                             variant="outline"
                             className="h-20 flex flex-col items-center justify-center"
+                            onClick={() => setActiveTab('chat')}
                           >
                             <MessageSquare className="h-6 w-6 mb-2" />
                             New Chat
@@ -157,13 +168,15 @@ export default function HomePage() {
                           <Button
                             variant="outline"
                             className="h-20 flex flex-col items-center justify-center"
+                            onClick={() => setActiveTab('files')}
                           >
                             <Code className="h-6 w-6 mb-2" />
-                            Open Editor
+                            New File
                           </Button>
                           <Button
                             variant="outline"
                             className="h-20 flex flex-col items-center justify-center"
+                            onClick={() => setActiveTab('projects')}
                           >
                             <Database className="h-6 w-6 mb-2" />
                             Database
