@@ -28,27 +28,29 @@ interface SidebarProps {
   className?: string;
   isCollapsed?: boolean;
   onToggle?: () => void;
+  onTabChange?: (tab: string) => void;
+  activeTab?: string;
 }
 
 const navigationItems = [
-  { icon: Home, label: 'Dashboard', href: '/', active: true },
-  { icon: MessageSquare, label: 'Chat', href: '/chat' },
-  { icon: FolderOpen, label: 'Projects', href: '/projects' },
-  { icon: FileText, label: 'Files', href: '/files' },
-  { icon: Code, label: 'Code Editor', href: '/editor' },
-  { icon: Database, label: 'Database', href: '/database' },
-  { icon: Zap, label: 'Integrations', href: '/integrations' },
-  { icon: Users, label: 'Team', href: '/team' },
-  { icon: BarChart3, label: 'Analytics', href: '/analytics' },
+  { icon: Home, label: 'Dashboard', tab: 'dashboard' },
+  { icon: MessageSquare, label: 'Chat', tab: 'chat' },
+  { icon: FolderOpen, label: 'Projects', tab: 'projects' },
+  { icon: FileText, label: 'Files', tab: 'files' },
+  { icon: Code, label: 'Code Editor', tab: 'ai-tools' },
+  { icon: Database, label: 'Database', tab: 'projects' },
+  { icon: Zap, label: 'Integrations', tab: 'integrations' },
+  { icon: Users, label: 'Team', tab: 'projects' },
+  { icon: BarChart3, label: 'Analytics', tab: 'projects' },
 ];
 
 const quickActions = [
-  { icon: Plus, label: 'New Project', action: 'new-project' },
-  { icon: FileText, label: 'New File', action: 'new-file' },
-  { icon: MessageSquare, label: 'New Chat', action: 'new-chat' },
+  { icon: Plus, label: 'New Project', tab: 'deploy' },
+  { icon: FileText, label: 'New File', tab: 'files' },
+  { icon: MessageSquare, label: 'New Chat', tab: 'chat' },
 ];
 
-export function Sidebar({ className, isCollapsed = false, onToggle }: SidebarProps) {
+export function Sidebar({ className, isCollapsed = false, onToggle, onTabChange, activeTab }: SidebarProps) {
   return (
     <div
       className={cn(
@@ -87,8 +89,9 @@ export function Sidebar({ className, isCollapsed = false, onToggle }: SidebarPro
         {navigationItems.map(item => (
           <Button
             key={item.label}
-            variant={item.active ? 'secondary' : 'ghost'}
+            variant={activeTab === item.tab ? 'secondary' : 'ghost'}
             className={cn('w-full justify-start', isCollapsed && 'px-2')}
+            onClick={() => onTabChange?.(item.tab)}
           >
             <item.icon className={cn('h-4 w-4', !isCollapsed && 'mr-3')} />
             {!isCollapsed && item.label}
@@ -110,6 +113,7 @@ export function Sidebar({ className, isCollapsed = false, onToggle }: SidebarPro
                   variant="outline"
                   size="sm"
                   className="w-full justify-start"
+                  onClick={() => onTabChange?.(action.tab)}
                 >
                   <action.icon className="h-4 w-4 mr-2" />
                   {action.label}

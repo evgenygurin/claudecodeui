@@ -55,7 +55,12 @@ export default function HomePage() {
   return (
     <div className="flex h-screen bg-background">
       {/* Sidebar */}
-      <Sidebar isCollapsed={sidebarCollapsed} onToggle={toggleSidebar} />
+      <Sidebar 
+        isCollapsed={sidebarCollapsed} 
+        onToggle={toggleSidebar}
+        onTabChange={setActiveTab}
+        activeTab={activeTab}
+      />
 
       {/* Main Content */}
       <div className="flex-1 flex flex-col overflow-hidden">
