@@ -162,11 +162,11 @@
   .sidebar {
     @apply w-full;
   }
-  
+
   .chat-message.user {
     @apply ml-4;
   }
-  
+
   .chat-message.assistant {
     @apply mr-4;
   }

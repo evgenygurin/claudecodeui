@@ -2,6 +2,8 @@
 
 A modern, responsive web interface for Claude Code CLI, Cursor CLI, and Codegen with full Vercel integration and MCP (Model Context Protocol) support.
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/evgenygurin/claudecodeui&project-name=claude-code-ui&repository-name=claudecodeui)
+
 ## 🚀 Features
 
 - **Modern UI/UX** - Built with Next.js 14, React 18, and Tailwind CSS
@@ -60,7 +62,13 @@ A modern, responsive web interface for Claude Code CLI, Cursor CLI, and Codegen 
 
 ## 🚀 Vercel Deployment
 
-### Option 1: Vercel CLI (Recommended)
+### Option 1: One-Click Deploy (Fastest)
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/evgenygurin/claudecodeui&project-name=claude-code-ui&repository-name=claudecodeui)
+
+**Just click the button above and deploy in seconds!**
+
+### Option 2: Vercel CLI (Recommended)
 
 1. **Install Vercel CLI**
    ```bash

@@ -1,0 +1,53 @@
+# Ripgrep configuration
+
+# Smart case sensitivity
+--smart-case
+
+# Follow symlinks
+--follow
+
+# Include hidden files
+--hidden
+
+# Exclude common directories
+--glob=!.git/
+--glob=!node_modules/
+--glob=!.next/
+--glob=!dist/
+--glob=!build/
+--glob=!coverage/
+--glob=!.nyc_output/
+--glob=!*.min.js
+--glob=!*.min.css
+--glob=!package-lock.json
+--glob=!yarn.lock
+--glob=!pnpm-lock.yaml
+
+# Exclude common file types
+--glob=!*.log
+--glob=!*.tmp
+--glob=!*.temp
+--glob=!*.cache
+--glob=!*.pid
+--glob=!*.seed
+--glob=!*.pid.lock
+
+# Context lines
+--context=2
+
+# Line numbers
+--line-number
+
+# Column numbers
+--column
+
+# Use colors
+--color=always
+
+# Show filename
+--with-filename
+
+# Show file type
+--type-add=web:*.{html,css,js,ts,tsx,jsx,vue,svelte}
+--type-add=config:*.{json,yaml,yml,toml,ini,conf,config}
+--type-add=docs:*.{md,mdx,rst,txt}

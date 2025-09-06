@@ -1,11 +1,11 @@
-"use client"
+'use client';
 
-import * as React from "react"
-import { useState } from "react"
-import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import * as React from 'react';
+import { useState } from 'react';
+import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import {
   Search,
   Folder,
@@ -29,20 +29,20 @@ import {
   Edit,
   Copy,
   Move,
-} from "lucide-react"
+} from 'lucide-react';
 
 interface FileItem {
-  id: string
-  name: string
-  type: 'file' | 'folder'
-  size?: number
-  modified: string
-  icon?: string
-  children?: FileItem[]
+  id: string;
+  name: string;
+  type: 'file' | 'folder';
+  size?: number;
+  modified: string;
+  icon?: string;
+  children?: FileItem[];
 }
 
 interface FileManagerProps {
-  className?: string
+  className?: string;
 }
 
 const mockFiles: FileItem[] = [
@@ -64,7 +64,7 @@ const mockFiles: FileItem[] = [
             type: 'file',
             size: 2048,
             modified: '2024-01-15',
-            icon: 'code'
+            icon: 'code',
           },
           {
             id: '4',
@@ -72,9 +72,9 @@ const mockFiles: FileItem[] = [
             type: 'file',
             size: 1536,
             modified: '2024-01-15',
-            icon: 'code'
-          }
-        ]
+            icon: 'code',
+          },
+        ],
       },
       {
         id: '5',
@@ -82,9 +82,9 @@ const mockFiles: FileItem[] = [
         type: 'file',
         size: 4096,
         modified: '2024-01-15',
-        icon: 'code'
-      }
-    ]
+        icon: 'code',
+      },
+    ],
   },
   {
     id: '6',
@@ -98,9 +98,9 @@ const mockFiles: FileItem[] = [
         type: 'file',
         size: 1024,
         modified: '2024-01-15',
-        icon: 'image'
-      }
-    ]
+        icon: 'image',
+      },
+    ],
   },
   {
     id: '8',
@@ -108,7 +108,7 @@ const mockFiles: FileItem[] = [
     type: 'file',
     size: 512,
     modified: '2024-01-15',
-    icon: 'file'
+    icon: 'file',
   },
   {
     id: '9',
@@ -116,85 +116,85 @@ const mockFiles: FileItem[] = [
     type: 'file',
     size: 256,
     modified: '2024-01-15',
-    icon: 'file'
-  }
-]
+    icon: 'file',
+  },
+];
 
 const getFileIcon = (type: string, fileType: 'file' | 'folder') => {
-  if (fileType === 'folder') return Folder
-  
+  if (fileType === 'folder') return Folder;
+
   switch (type) {
     case 'code':
-      return Code
+      return Code;
     case 'image':
-      return Image
+      return Image;
     case 'video':
-      return Video
+      return Video;
     case 'music':
-      return Music
+      return Music;
     case 'archive':
-      return Archive
+      return Archive;
     case 'database':
-      return Database
+      return Database;
     default:
-      return FileText
+      return FileText;
   }
-}
+};
 
 const formatFileSize = (bytes: number) => {
-  if (bytes === 0) return '0 B'
-  const k = 1024
-  const sizes = ['B', 'KB', 'MB', 'GB']
-  const i = Math.floor(Math.log(bytes) / Math.log(k))
-  return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i]
-}
+  if (bytes === 0) return '0 B';
+  const k = 1024;
+  const sizes = ['B', 'KB', 'MB', 'GB'];
+  const i = Math.floor(Math.log(bytes) / Math.log(k));
+  return `${parseFloat((bytes / Math.pow(k, i)).toFixed(1))} ${sizes[i]}`;
+};
 
 export function FileManager({ className }: FileManagerProps) {
-  const [files, setFiles] = useState<FileItem[]>(mockFiles)
-  const [expandedFolders, setExpandedFolders] = useState<Set<string>>(new Set(['1', '2', '6']))
-  const [selectedFiles, setSelectedFiles] = useState<Set<string>>(new Set())
-  const [searchQuery, setSearchQuery] = useState('')
-  const [viewMode, setViewMode] = useState<'list' | 'grid'>('list')
+  const [files, setFiles] = useState<FileItem[]>(mockFiles);
+  const [expandedFolders, setExpandedFolders] = useState<Set<string>>(new Set(['1', '2', '6']));
+  const [selectedFiles, setSelectedFiles] = useState<Set<string>>(new Set());
+  const [searchQuery, setSearchQuery] = useState('');
+  const [viewMode, setViewMode] = useState<'list' | 'grid'>('list');
 
   const toggleFolder = (folderId: string) => {
-    const newExpanded = new Set(expandedFolders)
+    const newExpanded = new Set(expandedFolders);
     if (newExpanded.has(folderId)) {
-      newExpanded.delete(folderId)
+      newExpanded.delete(folderId);
     } else {
-      newExpanded.add(folderId)
+      newExpanded.add(folderId);
     }
-    setExpandedFolders(newExpanded)
-  }
+    setExpandedFolders(newExpanded);
+  };
 
   const toggleFileSelection = (fileId: string) => {
-    const newSelected = new Set(selectedFiles)
+    const newSelected = new Set(selectedFiles);
     if (newSelected.has(fileId)) {
-      newSelected.delete(fileId)
+      newSelected.delete(fileId);
     } else {
-      newSelected.add(fileId)
+      newSelected.add(fileId);
     }
-    setSelectedFiles(newSelected)
-  }
+    setSelectedFiles(newSelected);
+  };
 
   const renderFileItem = (item: FileItem, depth = 0) => {
-    const Icon = getFileIcon(item.icon || '', item.type)
-    const isExpanded = expandedFolders.has(item.id)
-    const isSelected = selectedFiles.has(item.id)
+    const Icon = getFileIcon(item.icon || '', item.type);
+    const isExpanded = expandedFolders.has(item.id);
+    const isSelected = selectedFiles.has(item.id);
 
     return (
       <div key={item.id}>
         <div
           className={cn(
-            "flex items-center gap-2 px-2 py-1.5 rounded-md cursor-pointer hover:bg-accent transition-colors",
-            isSelected && "bg-accent",
-            depth > 0 && "ml-4"
+            'flex items-center gap-2 px-2 py-1.5 rounded-md cursor-pointer hover:bg-accent transition-colors',
+            isSelected && 'bg-accent',
+            depth > 0 && 'ml-4'
           )}
           style={{ paddingLeft: `${depth * 16 + 8}px` }}
           onClick={() => {
             if (item.type === 'folder') {
-              toggleFolder(item.id)
+              toggleFolder(item.id);
             } else {
-              toggleFileSelection(item.id)
+              toggleFileSelection(item.id);
             }
           }}
         >
@@ -203,9 +203,9 @@ export function FileManager({ className }: FileManagerProps) {
               variant="ghost"
               size="icon"
               className="h-4 w-4 p-0"
-              onClick={(e) => {
-                e.stopPropagation()
-                toggleFolder(item.id)
+              onClick={e => {
+                e.stopPropagation();
+                toggleFolder(item.id);
               }}
             >
               {isExpanded ? (
@@ -218,38 +218,32 @@ export function FileManager({ className }: FileManagerProps) {
           <Icon className="h-4 w-4 text-muted-foreground" />
           <span className="flex-1 text-sm truncate">{item.name}</span>
           {item.type === 'file' && item.size && (
-            <span className="text-xs text-muted-foreground">
-              {formatFileSize(item.size)}
-            </span>
+            <span className="text-xs text-muted-foreground">{formatFileSize(item.size)}</span>
           )}
           <Button
             variant="ghost"
             size="icon"
             className="h-6 w-6 opacity-0 group-hover:opacity-100"
-            onClick={(e) => e.stopPropagation()}
+            onClick={e => e.stopPropagation()}
           >
             <MoreHorizontal className="h-3 w-3" />
           </Button>
         </div>
-        
+
         {item.type === 'folder' && isExpanded && item.children && (
-          <div>
-            {item.children.map((child) => renderFileItem(child, depth + 1))}
-          </div>
+          <div>{item.children.map(child => renderFileItem(child, depth + 1))}</div>
         )}
       </div>
-    )
-  }
+    );
+  };
 
   return (
-    <div className={cn("flex flex-col h-full", className)}>
+    <div className={cn('flex flex-col h-full', className)}>
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-border">
         <div className="flex items-center gap-2">
           <h2 className="text-lg font-semibold">File Manager</h2>
-          <span className="text-sm text-muted-foreground">
-            {files.length} items
-          </span>
+          <span className="text-sm text-muted-foreground">{files.length} items</span>
         </div>
         <div className="flex items-center gap-2">
           <Button variant="outline" size="sm">
@@ -271,7 +265,7 @@ export function FileManager({ className }: FileManagerProps) {
             <Input
               placeholder="Search files..."
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              onChange={e => setSearchQuery(e.target.value)}
               className="pl-10"
             />
           </div>
@@ -294,18 +288,14 @@ export function FileManager({ className }: FileManagerProps) {
 
       {/* File Tree */}
       <div className="flex-1 overflow-y-auto p-4">
-        <div className="space-y-1">
-          {files.map((item) => renderFileItem(item))}
-        </div>
+        <div className="space-y-1">{files.map(item => renderFileItem(item))}</div>
       </div>
 
       {/* Actions */}
       {selectedFiles.size > 0 && (
         <div className="p-4 border-t border-border bg-accent/50">
           <div className="flex items-center gap-2">
-            <span className="text-sm text-muted-foreground">
-              {selectedFiles.size} selected
-            </span>
+            <span className="text-sm text-muted-foreground">{selectedFiles.size} selected</span>
             <div className="flex items-center gap-1 ml-auto">
               <Button variant="outline" size="sm">
                 <Copy className="h-4 w-4" />
@@ -324,5 +314,5 @@ export function FileManager({ className }: FileManagerProps) {
         </div>
       )}
     </div>
-  )
+  );
 }
