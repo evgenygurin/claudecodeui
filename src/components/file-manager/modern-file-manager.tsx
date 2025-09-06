@@ -401,11 +401,39 @@ export function ModernFileManager({ className }: FileManagerProps) {
 
         <div className="flex items-center justify-between mt-4 pt-4 border-t">
           <div className="flex items-center gap-2">
-            <Button variant="outline" size="sm">
+            <Button 
+              variant="outline" 
+              size="sm"
+              onClick={() => {
+                const input = document.createElement('input');
+                input.type = 'file';
+                input.multiple = true;
+                input.onchange = (e) => {
+                  const files = (e.target as HTMLInputElement).files;
+                  if (files && files.length > 0) {
+                    logger.info('Files selected for upload', { count: files.length });
+                    // TODO: Implement actual file upload logic
+                  }
+                };
+                input.click();
+              }}
+            >
               <Upload className="h-4 w-4 mr-2" />
               Upload
             </Button>
-            <Button variant="outline" size="sm">
+            <Button 
+              variant="outline" 
+              size="sm"
+              onClick={() => {
+                const folderName = prompt('Enter folder name:');
+                if (folderName && folderName.trim()) {
+                  logger.info('Creating new folder', { name: folderName });
+                  // TODO: Implement actual folder creation logic
+                  // For now, just show success message
+                  alert(`Folder "${folderName}" would be created!`);
+                }
+              }}
+            >
               <Plus className="h-4 w-4 mr-2" />
               New Folder
             </Button>

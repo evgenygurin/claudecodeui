@@ -88,7 +88,25 @@ const mockMessages: Message[] = [
 ];
 
 export function ModernChatInterface({ className }: ChatInterfaceProps) {
-  const [messages, setMessages] = useState<Message[]>(mockMessages);
+  // Load messages from localStorage or use mock data
+  const [messages, setMessages] = useState<Message[]>(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('claude-chat-messages');
+      if (saved) {
+        try {
+          const parsed = JSON.parse(saved);
+          return parsed.map((msg: any) => ({
+            ...msg,
+            timestamp: new Date(msg.timestamp)
+          }));
+        } catch (e) {
+          console.error('Error loading saved messages:', e);
+        }
+      }
+    }
+    return mockMessages;
+  });
+  
   const [inputValue, setInputValue] = useState('');
   const [isRecording, setIsRecording] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -96,6 +114,23 @@ export function ModernChatInterface({ className }: ChatInterfaceProps) {
   const [attachments, setAttachments] = useState<File[]>([]);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+
+  // Save messages to localStorage whenever messages change
+  const saveMessagesToStorage = useCallback((newMessages: Message[]) => {
+    if (typeof window !== 'undefined') {
+      try {
+        localStorage.setItem('claude-chat-messages', JSON.stringify(newMessages));
+        console.log('Messages saved to localStorage:', newMessages.length);
+      } catch (e) {
+        console.error('Error saving messages to localStorage:', e);
+      }
+    }
+  }, []);
+
+  // Update localStorage whenever messages change
+  useEffect(() => {
+    saveMessagesToStorage(messages);
+  }, [messages, saveMessagesToStorage]);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -255,6 +290,19 @@ export function ModernChatInterface({ className }: ChatInterfaceProps) {
             </div>
           </div>
           <div className="flex items-center gap-2">
+            <Button 
+              variant="outline" 
+              size="sm"
+              onClick={() => {
+                if (confirm('Start a new chat? Current messages will be saved.')) {
+                  setMessages([]);
+                  console.log('Started new chat');
+                }
+              }}
+            >
+              <MessageSquare className="h-4 w-4 mr-2" />
+              New Chat
+            </Button>
             <Button variant="ghost" size="sm" onClick={() => setIsMuted(!isMuted)}>
               {isMuted ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4" />}
             </Button>

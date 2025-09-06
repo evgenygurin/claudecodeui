@@ -13,6 +13,7 @@ import { ActionSearchBar } from '@/components/ui/action-search-bar';
 import { AICardGeneration } from '@/components/ai';
 import { VercelTabs } from '@/components/ui/vercel-tabs';
 import { ImageToASCII } from '@/components/ui/image-to-ascii';
+import { ProjectsManager } from '@/components/projects';
 import {
   MessageSquare,
   FolderOpen,
@@ -207,16 +208,7 @@ export default function HomePage() {
 
               <TabsContent value="projects" className="h-full m-0 p-6">
                 <div className="h-full overflow-y-auto">
-                  <Card>
-                    <CardHeader>
-                      <CardTitle>Projects</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground">
-                        Project management interface will be implemented here.
-                      </p>
-                    </CardContent>
-                  </Card>
+                  <ProjectsManager />
                 </div>
               </TabsContent>
 

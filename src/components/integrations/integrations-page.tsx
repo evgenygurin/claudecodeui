@@ -368,7 +368,13 @@ export function IntegrationsPage() {
                 className="pl-10"
               />
             </div>
-            <Button>
+            <Button
+              onClick={() => {
+                console.log('Adding new integration');
+                alert('Opening integration marketplace...');
+                // TODO: Implement actual add integration logic
+              }}
+            >
               <Plus className="h-4 w-4 mr-2" />
               Add Integration
             </Button>
@@ -488,7 +494,15 @@ export function IntegrationsPage() {
                   </div>
 
                   <div className="flex space-x-2 pt-2">
-                    <Button size="sm" className="flex-1">
+                    <Button 
+                      size="sm" 
+                      className="flex-1"
+                      onClick={() => {
+                        console.log('Configuring integration:', integration.name);
+                        alert(`Opening configuration for ${integration.name}...`);
+                        // TODO: Implement actual configuration logic
+                      }}
+                    >
                       <Settings className="h-4 w-4 mr-2" />
                       Configure
                     </Button>
