@@ -172,18 +172,28 @@ workflows:
   # Quick workflow for feature branches (faster feedback)
   quick-checks:
     jobs:
-      - install-deps
+      - install-deps:
+          filters:
+            branches:
+              ignore:
+                - main
+                - develop
       - lint-and-typecheck:
           requires:
             - install-deps
+          filters:
+            branches:
+              ignore:
+                - main
+                - develop
       - test:
           requires:
             - install-deps
-    filters:
-      branches:
-        ignore:
-          - main
-          - develop
+          filters:
+            branches:
+              ignore:
+                - main
+                - develop
 
 # Environment variables (set these in CircleCI project settings)
 # VERCEL_TOKEN: Your Vercel deployment token
