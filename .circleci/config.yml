@@ -3,7 +3,6 @@ version: 2.1
 # Define reusable orbs
 orbs:
   node: circleci/node@5.1.0
-  cypress: cypress-io/cypress@3.0.0
 
 # Define jobs
 jobs:
