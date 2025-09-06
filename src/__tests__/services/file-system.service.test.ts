@@ -21,8 +21,8 @@ jest.mock('fs/promises', () => ({
 // Mock path
 jest.mock('path', () => ({
   join: jest.fn((...args) => args.join('/')),
-  dirname: jest.fn((path) => path.split('/').slice(0, -1).join('/')),
-  isAbsolute: jest.fn((path) => path.startsWith('/')),
+  dirname: jest.fn(path => path.split('/').slice(0, -1).join('/')),
+  isAbsolute: jest.fn(path => path.startsWith('/')),
 }));
 
 describe('FileSystemService', () => {
@@ -34,7 +34,7 @@ describe('FileSystemService', () => {
     fileSystemService = new (require('@/services/file-system.service').FileSystemServiceImpl)();
     mockFs = require('fs/promises');
     mockPath = require('path');
-    
+
     // Reset all mocks
     jest.clearAllMocks();
   });
@@ -73,7 +73,9 @@ describe('FileSystemService', () => {
     it('should handle directory read errors', async () => {
       mockFs.readdir.mockRejectedValue(new Error('Permission denied'));
 
-      await expect(fileSystemService.readDirectory('/invalid')).rejects.toThrow('Failed to read directory');
+      await expect(fileSystemService.readDirectory('/invalid')).rejects.toThrow(
+        'Failed to read directory'
+      );
     });
   });
 
@@ -100,7 +102,9 @@ describe('FileSystemService', () => {
     it('should handle file creation errors', async () => {
       mockFs.mkdir.mockRejectedValue(new Error('Permission denied'));
 
-      await expect(fileSystemService.createFile('test.txt')).rejects.toThrow('Failed to create file');
+      await expect(fileSystemService.createFile('test.txt')).rejects.toThrow(
+        'Failed to create file'
+      );
     });
   });
 
@@ -116,7 +120,9 @@ describe('FileSystemService', () => {
     it('should handle directory creation errors', async () => {
       mockFs.mkdir.mockRejectedValue(new Error('Permission denied'));
 
-      await expect(fileSystemService.createDirectory('invalid')).rejects.toThrow('Failed to create directory');
+      await expect(fileSystemService.createDirectory('invalid')).rejects.toThrow(
+        'Failed to create directory'
+      );
     });
   });
 
@@ -132,7 +138,9 @@ describe('FileSystemService', () => {
     it('should handle file deletion errors', async () => {
       mockFs.unlink.mockRejectedValue(new Error('File not found'));
 
-      await expect(fileSystemService.deleteFile('nonexistent.txt')).rejects.toThrow('Failed to delete file');
+      await expect(fileSystemService.deleteFile('nonexistent.txt')).rejects.toThrow(
+        'Failed to delete file'
+      );
     });
   });
 
@@ -148,7 +156,9 @@ describe('FileSystemService', () => {
     it('should handle directory deletion errors', async () => {
       mockFs.rmdir.mockRejectedValue(new Error('Directory not empty'));
 
-      await expect(fileSystemService.deleteDirectory('nonempty')).rejects.toThrow('Failed to delete directory');
+      await expect(fileSystemService.deleteDirectory('nonempty')).rejects.toThrow(
+        'Failed to delete directory'
+      );
     });
   });
 
@@ -166,7 +176,9 @@ describe('FileSystemService', () => {
     it('should handle file move errors', async () => {
       mockFs.mkdir.mockRejectedValue(new Error('Permission denied'));
 
-      await expect(fileSystemService.moveFile('source.txt', 'dest.txt')).rejects.toThrow('Failed to move file');
+      await expect(fileSystemService.moveFile('source.txt', 'dest.txt')).rejects.toThrow(
+        'Failed to move file'
+      );
     });
   });
 
@@ -184,7 +196,9 @@ describe('FileSystemService', () => {
     it('should handle file copy errors', async () => {
       mockFs.mkdir.mockRejectedValue(new Error('Permission denied'));
 
-      await expect(fileSystemService.copyFile('source.txt', 'dest.txt')).rejects.toThrow('Failed to copy file');
+      await expect(fileSystemService.copyFile('source.txt', 'dest.txt')).rejects.toThrow(
+        'Failed to copy file'
+      );
     });
   });
 
@@ -202,7 +216,9 @@ describe('FileSystemService', () => {
     it('should handle file read errors', async () => {
       mockFs.readFile.mockRejectedValue(new Error('File not found'));
 
-      await expect(fileSystemService.readFile('nonexistent.txt')).rejects.toThrow('Failed to read file');
+      await expect(fileSystemService.readFile('nonexistent.txt')).rejects.toThrow(
+        'Failed to read file'
+      );
     });
   });
 
@@ -220,7 +236,9 @@ describe('FileSystemService', () => {
     it('should handle file write errors', async () => {
       mockFs.mkdir.mockRejectedValue(new Error('Permission denied'));
 
-      await expect(fileSystemService.writeFile('test.txt', 'content')).rejects.toThrow('Failed to write file');
+      await expect(fileSystemService.writeFile('test.txt', 'content')).rejects.toThrow(
+        'Failed to write file'
+      );
     });
   });
 
@@ -250,7 +268,9 @@ describe('FileSystemService', () => {
     it('should handle file stats errors', async () => {
       mockFs.stat.mockRejectedValue(new Error('File not found'));
 
-      await expect(fileSystemService.getFileStats('nonexistent.txt')).rejects.toThrow('Failed to get file stats');
+      await expect(fileSystemService.getFileStats('nonexistent.txt')).rejects.toThrow(
+        'Failed to get file stats'
+      );
     });
   });
 });

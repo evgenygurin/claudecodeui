@@ -60,9 +60,9 @@ export class EventBus {
 
     // Check max listeners limit
     if (eventListeners.length >= this.maxListeners) {
-      logger.warn(`Event '${event}' has reached the maximum number of listeners`, { 
-        event, 
-        maxListeners: this.maxListeners 
+      logger.warn(`Event '${event}' has reached the maximum number of listeners`, {
+        event,
+        maxListeners: this.maxListeners,
       });
       return { unsubscribe: () => {}, event, listenerId: '' };
     }
@@ -185,7 +185,10 @@ export class EventBus {
           listenersToRemove.push(listener);
         }
       } catch (error) {
-        logger.error(`Error in event listener for '${event}'`, { error: getErrorMessage(error), event });
+        logger.error(`Error in event listener for '${event}'`, {
+          error: getErrorMessage(error),
+          event,
+        });
       }
     }
 
@@ -221,7 +224,10 @@ export class EventBus {
           listenersToRemove.push(listener);
         }
       } catch (error) {
-        logger.error(`Error in event listener for '${event}'`, { error: getErrorMessage(error), event });
+        logger.error(`Error in event listener for '${event}'`, {
+          error: getErrorMessage(error),
+          event,
+        });
       }
     }
 

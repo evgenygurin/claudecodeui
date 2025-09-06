@@ -202,17 +202,17 @@ export function ModernFileManager({ className }: FileManagerProps) {
     try {
       setIsUploading(true);
       setUploadProgress(0);
-      
+
       for (let i = 0; i < files.length; i++) {
         const file = files[i];
         logger.info('Uploading file', { name: file.name, size: file.size });
-        
+
         // Simulate upload progress
         for (let progress = 0; progress <= 100; progress += 10) {
-          setUploadProgress(Math.round(((i * 100) + progress) / files.length));
+          setUploadProgress(Math.round((i * 100 + progress) / files.length));
           await new Promise(resolve => setTimeout(resolve, 50));
         }
-        
+
         // Create new file item
         const newFile: FileItem = {
           id: `file-${Date.now()}-${i}`,
@@ -222,10 +222,10 @@ export function ModernFileManager({ className }: FileManagerProps) {
           size: file.size,
           lastModified: new Date(),
         };
-        
+
         setFiles(prev => [...prev, newFile]);
       }
-      
+
       logger.info('Files uploaded successfully', { count: files.length });
     } catch (error) {
       logger.error('File upload failed', { error });
@@ -246,7 +246,7 @@ export function ModernFileManager({ className }: FileManagerProps) {
         lastModified: new Date(),
         children: [],
       };
-      
+
       setFiles(prev => [...prev, newFolder]);
       logger.info('New folder created', { name: folderName });
     }
@@ -356,8 +356,8 @@ export function ModernFileManager({ className }: FileManagerProps) {
               <span className="text-xs text-muted-foreground">{formatFileSize(item.size)}</span>
             )}
             <span className="text-xs text-muted-foreground">
-              {item.lastModified instanceof Date 
-                ? item.lastModified.toLocaleDateString() 
+              {item.lastModified instanceof Date
+                ? item.lastModified.toLocaleDateString()
                 : new Date(item.lastModified).toLocaleDateString()}
             </span>
           </div>
@@ -454,19 +454,11 @@ export function ModernFileManager({ className }: FileManagerProps) {
 
         <div className="flex items-center justify-between mt-4 pt-4 border-t">
           <div className="flex items-center gap-2">
-            <Button 
-              variant="outline" 
-              size="sm"
-              onClick={handleUploadClick}
-            >
+            <Button variant="outline" size="sm" onClick={handleUploadClick}>
               <Upload className="h-4 w-4 mr-2" />
               Upload
             </Button>
-            <Button 
-              variant="outline" 
-              size="sm"
-              onClick={handleNewFolderClick}
-            >
+            <Button variant="outline" size="sm" onClick={handleNewFolderClick}>
               <Plus className="h-4 w-4 mr-2" />
               New Folder
             </Button>
@@ -511,9 +503,9 @@ export function ModernFileManager({ className }: FileManagerProps) {
             <div className="text-center">
               <p className="text-red-500 mb-2">Error loading files</p>
               <p className="text-sm text-muted-foreground">{error}</p>
-              <Button 
-                variant="outline" 
-                size="sm" 
+              <Button
+                variant="outline"
+                size="sm"
                 className="mt-2"
                 onClick={() => window.location.reload()}
               >

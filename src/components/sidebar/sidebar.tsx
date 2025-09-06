@@ -50,7 +50,13 @@ const quickActions = [
   { icon: MessageSquare, label: 'New Chat', tab: 'chat' },
 ];
 
-export function Sidebar({ className, isCollapsed = false, onToggle, onTabChange, activeTab }: SidebarProps) {
+export function Sidebar({
+  className,
+  isCollapsed = false,
+  onToggle,
+  onTabChange,
+  activeTab,
+}: SidebarProps) {
   return (
     <div
       className={cn(

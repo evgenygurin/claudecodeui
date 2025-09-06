@@ -42,11 +42,11 @@ export class ClaudeCLIService extends EventEmitter {
   }
 
   private setupEventHandlers() {
-    this.on('error', (error) => {
+    this.on('error', error => {
       logger.error('Claude CLI service error', { error: getErrorMessage(error) });
     });
 
-    this.on('data', (data) => {
+    this.on('data', data => {
       logger.debug('Claude CLI data received', { data: data.toString() });
     });
   }
@@ -69,10 +69,10 @@ export class ClaudeCLIService extends EventEmitter {
 
       this.currentSession = session;
       await this.startClaudeProcess(projectPath);
-      
+
       logger.info('Claude CLI session started', { sessionId, projectPath });
       this.emit('sessionStarted', session);
-      
+
       return session;
     } catch (error) {
       logger.error('Failed to start Claude CLI session', { error: getErrorMessage(error) });
@@ -88,12 +88,12 @@ export class ClaudeCLIService extends EventEmitter {
     try {
       this.process.kill('SIGTERM');
       await this.waitForProcessExit();
-      
+
       this.isRunning = false;
       this.process = null;
       this.currentSession = null;
       this.messageBuffer = '';
-      
+
       logger.info('Claude CLI session stopped');
       this.emit('sessionStopped');
     } catch (error) {
@@ -119,10 +119,10 @@ export class ClaudeCLIService extends EventEmitter {
 
       // Send message to Claude CLI process
       this.process.stdin?.write(`${content}\n`);
-      
-      logger.info('Message sent to Claude CLI', { 
-        sessionId: this.currentSession.id, 
-        contentLength: content.length 
+
+      logger.info('Message sent to Claude CLI', {
+        sessionId: this.currentSession.id,
+        contentLength: content.length,
       });
 
       // Wait for response
@@ -133,12 +133,12 @@ export class ClaudeCLIService extends EventEmitter {
 
         const onData = (data: Buffer) => {
           this.messageBuffer += data.toString();
-          
+
           // Check if response is complete (look for end markers)
           if (this.isResponseComplete(this.messageBuffer)) {
             clearTimeout(timeout);
             this.process?.removeListener('data', onData);
-            
+
             const response = this.parseResponse(this.messageBuffer);
             this.messageBuffer = '';
 
@@ -188,7 +188,10 @@ export class ClaudeCLIService extends EventEmitter {
       }
       return null;
     } catch (error) {
-      logger.error('Error getting Claude CLI session', { error: getErrorMessage(error), sessionId });
+      logger.error('Error getting Claude CLI session', {
+        error: getErrorMessage(error),
+        sessionId,
+      });
       throw createError(`Failed to get session: ${getErrorMessage(error)}`);
     }
   }
@@ -204,7 +207,7 @@ export class ClaudeCLIService extends EventEmitter {
     return new Promise((resolve, reject) => {
       try {
         const args = ['claude'];
-        
+
         if (projectPath) {
           args.push('--project', projectPath);
         }
@@ -220,7 +223,7 @@ export class ClaudeCLIService extends EventEmitter {
           resolve();
         });
 
-        this.process.on('error', (error) => {
+        this.process.on('error', error => {
           logger.error('Claude CLI process error', { error: getErrorMessage(error) });
           this.isRunning = false;
           reject(error);
@@ -232,11 +235,11 @@ export class ClaudeCLIService extends EventEmitter {
           this.emit('processExit', { code, signal });
         });
 
-        this.process.stdout?.on('data', (data) => {
+        this.process.stdout?.on('data', data => {
           this.emit('data', data);
         });
 
-        this.process.stderr?.on('data', (data) => {
+        this.process.stderr?.on('data', data => {
           const errorMessage = data.toString();
           logger.warn('Claude CLI stderr', { error: errorMessage });
           this.emit('error', new Error(errorMessage));
@@ -244,7 +247,6 @@ export class ClaudeCLIService extends EventEmitter {
 
         // Set up stdin
         this.process.stdin?.setDefaultEncoding('utf8');
-        
       } catch (error) {
         logger.error('Failed to spawn Claude CLI process', { error: getErrorMessage(error) });
         reject(error);
@@ -253,7 +255,7 @@ export class ClaudeCLIService extends EventEmitter {
   }
 
   private async waitForProcessExit(): Promise<void> {
-    return new Promise((resolve) => {
+    return new Promise(resolve => {
       if (!this.process) {
         resolve();
         return;
@@ -279,12 +281,7 @@ export class ClaudeCLIService extends EventEmitter {
 
   private isResponseComplete(buffer: string): boolean {
     // Look for common end markers in Claude CLI responses
-    const endMarkers = [
-      '\n\n---\n',
-      '\n\n[END]\n',
-      '\n\n[DONE]\n',
-      '\n\n---END---\n',
-    ];
+    const endMarkers = ['\n\n---\n', '\n\n[END]\n', '\n\n[DONE]\n', '\n\n---END---\n'];
 
     return endMarkers.some(marker => buffer.includes(marker));
   }

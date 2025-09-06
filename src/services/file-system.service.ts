@@ -38,12 +38,12 @@ class FileSystemServiceImpl implements FileSystemService {
   async readDirectory(path: string): Promise<FileItem[]> {
     try {
       const response = await fetch(`${this.apiBaseUrl}?path=${encodeURIComponent(path)}`);
-      
+
       if (!response.ok) {
         const errorData = await response.json();
         throw new Error(errorData.error || 'Failed to read directory');
       }
-      
+
       const data = await response.json();
       return data.items || [];
     } catch (error) {
@@ -65,12 +65,12 @@ class FileSystemServiceImpl implements FileSystemService {
           content,
         }),
       });
-      
+
       if (!response.ok) {
         const errorData = await response.json();
         throw new Error(errorData.error || 'Failed to create file');
       }
-      
+
       logger.info('File created', { path });
     } catch (error) {
       logger.error('Error creating file', { error: getErrorMessage(error), path });
@@ -90,12 +90,12 @@ class FileSystemServiceImpl implements FileSystemService {
           path,
         }),
       });
-      
+
       if (!response.ok) {
         const errorData = await response.json();
         throw new Error(errorData.error || 'Failed to create directory');
       }
-      
+
       logger.info('Directory created', { path });
     } catch (error) {
       logger.error('Error creating directory', { error: getErrorMessage(error), path });
@@ -115,12 +115,12 @@ class FileSystemServiceImpl implements FileSystemService {
           path,
         }),
       });
-      
+
       if (!response.ok) {
         const errorData = await response.json();
         throw new Error(errorData.error || 'Failed to delete file');
       }
-      
+
       logger.info('File deleted', { path });
     } catch (error) {
       logger.error('Error deleting file', { error: getErrorMessage(error), path });
@@ -140,12 +140,12 @@ class FileSystemServiceImpl implements FileSystemService {
           path,
         }),
       });
-      
+
       if (!response.ok) {
         const errorData = await response.json();
         throw new Error(errorData.error || 'Failed to delete directory');
       }
-      
+
       logger.info('Directory deleted', { path });
     } catch (error) {
       logger.error('Error deleting directory', { error: getErrorMessage(error), path });
@@ -166,12 +166,12 @@ class FileSystemServiceImpl implements FileSystemService {
           destination: to,
         }),
       });
-      
+
       if (!response.ok) {
         const errorData = await response.json();
         throw new Error(errorData.error || 'Failed to move file');
       }
-      
+
       logger.info('File moved', { from, to });
     } catch (error) {
       logger.error('Error moving file', { error: getErrorMessage(error), from, to });
@@ -192,12 +192,12 @@ class FileSystemServiceImpl implements FileSystemService {
           destination: to,
         }),
       });
-      
+
       if (!response.ok) {
         const errorData = await response.json();
         throw new Error(errorData.error || 'Failed to copy file');
       }
-      
+
       logger.info('File copied', { from, to });
     } catch (error) {
       logger.error('Error copying file', { error: getErrorMessage(error), from, to });
@@ -208,12 +208,12 @@ class FileSystemServiceImpl implements FileSystemService {
   async readFile(path: string): Promise<string> {
     try {
       const response = await fetch(`${this.apiBaseUrl}?path=${encodeURIComponent(path)}`);
-      
+
       if (!response.ok) {
         const errorData = await response.json();
         throw new Error(errorData.error || 'Failed to read file');
       }
-      
+
       const data = await response.json();
       logger.info('File read', { path, size: data.content?.length || 0 });
       return data.content || '';
@@ -236,12 +236,12 @@ class FileSystemServiceImpl implements FileSystemService {
           content,
         }),
       });
-      
+
       if (!response.ok) {
         const errorData = await response.json();
         throw new Error(errorData.error || 'Failed to write file');
       }
-      
+
       logger.info('File written', { path, size: content.length });
     } catch (error) {
       logger.error('Error writing file', { error: getErrorMessage(error), path });
@@ -252,12 +252,12 @@ class FileSystemServiceImpl implements FileSystemService {
   async getFileStats(path: string): Promise<FileStats> {
     try {
       const response = await fetch(`${this.apiBaseUrl}?path=${encodeURIComponent(path)}`);
-      
+
       if (!response.ok) {
         const errorData = await response.json();
         throw new Error(errorData.error || 'Failed to get file stats');
       }
-      
+
       const data = await response.json();
       return {
         size: data.stats.size,
@@ -271,7 +271,6 @@ class FileSystemServiceImpl implements FileSystemService {
       throw createError(`Failed to get file stats: ${getErrorMessage(error)}`);
     }
   }
-
 }
 
 // Export singleton instance

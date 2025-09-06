@@ -143,11 +143,11 @@ describe('CacheService', () => {
 
     it('should calculate hit rate correctly', () => {
       cache.set('test', 'value');
-      
+
       // 1 hit, 1 miss
       cache.get('test'); // hit
       cache.get('non-existent'); // miss
-      
+
       const stats = cache.getStats();
       expect(stats.hitRate).toBe(0.5);
       expect(stats.missRate).toBe(0.5);
@@ -155,7 +155,7 @@ describe('CacheService', () => {
 
     it('should track cache size', () => {
       expect(cache.getSize()).toBe(0);
-      
+
       cache.set('test', 'value');
       expect(cache.getSize()).toBeGreaterThan(0);
     });
@@ -187,7 +187,7 @@ describe('CacheService', () => {
     it('should handle null and undefined values', () => {
       cache.set('null', null);
       cache.set('undefined', undefined);
-      
+
       expect(cache.get('null')).toBeNull();
       expect(cache.get('undefined')).toBeUndefined();
     });
@@ -195,7 +195,7 @@ describe('CacheService', () => {
     it('should handle large values', () => {
       const largeValue = 'x'.repeat(10000);
       cache.set('large', largeValue);
-      
+
       expect(cache.get('large')).toBe(largeValue);
     });
   });

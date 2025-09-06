@@ -79,8 +79,9 @@ export function ProjectsManager() {
   const [filterStatus, setFilterStatus] = useState<'all' | 'active' | 'archived' | 'draft'>('all');
 
   const filteredProjects = projects.filter(project => {
-    const matchesSearch = project.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         project.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesSearch =
+      project.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      project.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesFilter = filterStatus === 'all' || project.status === filterStatus;
     return matchesSearch && matchesFilter;
   });
@@ -104,11 +105,11 @@ export function ProjectsManager() {
   };
 
   const toggleStar = (projectId: string) => {
-    setProjects(prev => prev.map(project => 
-      project.id === projectId 
-        ? { ...project, isStarred: !project.isStarred }
-        : project
-    ));
+    setProjects(prev =>
+      prev.map(project =>
+        project.id === projectId ? { ...project, isStarred: !project.isStarred } : project
+      )
+    );
   };
 
   const deleteProject = (projectId: string) => {
@@ -120,10 +121,14 @@ export function ProjectsManager() {
 
   const getStatusColor = (status: Project['status']) => {
     switch (status) {
-      case 'active': return 'bg-green-100 text-green-800';
-      case 'archived': return 'bg-gray-100 text-gray-800';
-      case 'draft': return 'bg-yellow-100 text-yellow-800';
-      default: return 'bg-gray-100 text-gray-800';
+      case 'active':
+        return 'bg-green-100 text-green-800';
+      case 'archived':
+        return 'bg-gray-100 text-gray-800';
+      case 'draft':
+        return 'bg-yellow-100 text-yellow-800';
+      default:
+        return 'bg-gray-100 text-gray-800';
     }
   };
 
@@ -193,11 +198,11 @@ export function ProjectsManager() {
                     <div className="flex-1">
                       <CardTitle className="text-lg flex items-center gap-2">
                         {project.name}
-                        {project.isStarred && <Star className="h-4 w-4 text-yellow-500 fill-current" />}
+                        {project.isStarred && (
+                          <Star className="h-4 w-4 text-yellow-500 fill-current" />
+                        )}
                       </CardTitle>
-                      <p className="text-sm text-muted-foreground mt-1">
-                        {project.description}
-                      </p>
+                      <p className="text-sm text-muted-foreground mt-1">{project.description}</p>
                     </div>
                     <Button
                       variant="ghost"
@@ -212,9 +217,7 @@ export function ProjectsManager() {
                 <CardContent className="pt-0">
                   <div className="space-y-3">
                     <div className="flex items-center gap-2">
-                      <Badge className={getStatusColor(project.status)}>
-                        {project.status}
-                      </Badge>
+                      <Badge className={getStatusColor(project.status)}>{project.status}</Badge>
                       {project.repository && (
                         <Badge variant="outline" className="flex items-center gap-1">
                           <GitBranch className="h-3 w-3" />
@@ -250,11 +253,7 @@ export function ProjectsManager() {
                       <Button variant="outline" size="sm">
                         <Settings className="h-4 w-4" />
                       </Button>
-                      <Button 
-                        variant="outline" 
-                        size="sm"
-                        onClick={() => deleteProject(project.id)}
-                      >
+                      <Button variant="outline" size="sm" onClick={() => deleteProject(project.id)}>
                         <Trash2 className="h-4 w-4" />
                       </Button>
                     </div>
@@ -275,16 +274,16 @@ export function ProjectsManager() {
                         <div>
                           <h3 className="font-medium flex items-center gap-2">
                             {project.name}
-                            {project.isStarred && <Star className="h-4 w-4 text-yellow-500 fill-current" />}
+                            {project.isStarred && (
+                              <Star className="h-4 w-4 text-yellow-500 fill-current" />
+                            )}
                           </h3>
                           <p className="text-sm text-muted-foreground">{project.description}</p>
                         </div>
                       </div>
 
                       <div className="flex items-center gap-2">
-                        <Badge className={getStatusColor(project.status)}>
-                          {project.status}
-                        </Badge>
+                        <Badge className={getStatusColor(project.status)}>{project.status}</Badge>
                         {project.repository && (
                           <Badge variant="outline" className="flex items-center gap-1">
                             <GitBranch className="h-3 w-3" />
@@ -313,11 +312,7 @@ export function ProjectsManager() {
                       <Button variant="outline" size="sm">
                         <Settings className="h-4 w-4" />
                       </Button>
-                      <Button 
-                        variant="outline" 
-                        size="sm"
-                        onClick={() => deleteProject(project.id)}
-                      >
+                      <Button variant="outline" size="sm" onClick={() => deleteProject(project.id)}>
                         <Trash2 className="h-4 w-4" />
                       </Button>
                     </div>

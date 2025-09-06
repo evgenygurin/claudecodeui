@@ -10,21 +10,22 @@ interface DeployButtonProps {
   size?: 'default' | 'sm' | 'lg' | 'icon';
 }
 
-export function DeployButton({ 
-  className, 
+export function DeployButton({
+  className,
   variant = 'default',
-  size = 'default' 
+  size = 'default',
 }: DeployButtonProps) {
   const [isDeploying, setIsDeploying] = useState(false);
 
   const handleDeploy = async () => {
     setIsDeploying(true);
-    
+
     try {
       // Открываем Vercel в новой вкладке с правильным URL
-      const deployUrl = 'https://vercel.com/new/clone?repository-url=https://github.com/evgenygurin/claudecodeui&project-name=claude-code-ui&repository-name=claudecodeui';
+      const deployUrl =
+        'https://vercel.com/new/clone?repository-url=https://github.com/evgenygurin/claudecodeui&project-name=claude-code-ui&repository-name=claudecodeui';
       window.open(deployUrl, '_blank', 'noopener,noreferrer');
-      
+
       // Сбрасываем состояние через 2 секунды
       setTimeout(() => {
         setIsDeploying(false);

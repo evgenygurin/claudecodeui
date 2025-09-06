@@ -213,7 +213,11 @@ export class ProjectService {
       const result = await response.json();
       return result.data;
     } catch (error) {
-      logger.error('Error updating project', { error: getErrorMessage(error), projectId: id, projectData });
+      logger.error('Error updating project', {
+        error: getErrorMessage(error),
+        projectId: id,
+        projectData,
+      });
       throw createError(
         `Failed to update project: ${error instanceof Error ? getErrorMessage(error) : 'Unknown error'}`
       );
