@@ -13,7 +13,7 @@ import { ActionSearchBar } from '@/components/ui/action-search-bar';
 import { AICardGeneration } from '@/components/ai';
 import { VercelTabs } from '@/components/ui/vercel-tabs';
 import { ImageToASCII } from '@/components/ui/image-to-ascii';
-import { DocumentationStarter } from '@/components/docs';
+import { DocumentationStarter } from '@/components/docs/documentation-starter';
 import {
   MessageSquare,
   FolderOpen,
