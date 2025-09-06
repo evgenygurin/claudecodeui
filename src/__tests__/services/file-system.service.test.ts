@@ -31,7 +31,7 @@ describe('FileSystemService', () => {
   let mockPath: any;
 
   beforeEach(() => {
-    fileSystemService = new (require('@/services/file-system.service').FileSystemServiceImpl)();
+    fileSystemService = require('@/services/file-system.service').fileSystemService;
     mockFs = require('fs/promises');
     mockPath = require('path');
     

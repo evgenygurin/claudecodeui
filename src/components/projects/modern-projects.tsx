@@ -241,7 +241,7 @@ export function ModernProjects({ className }: ModernProjectsProps) {
                 <Textarea
                   placeholder="Enter project description"
                   value={newProject.description}
-                  onChange={(e) =>
+                  onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
                     setNewProject(prev => ({ ...prev, description: e.target.value }))
                   }
                 />
