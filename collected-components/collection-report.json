@@ -1,0 +1,18 @@
+{
+  "totalUrls": 43,
+  "successful": 43,
+  "errors": 0,
+  "categories": {
+    "file-manager": 2,
+    "chat": 7,
+    "misc": 10,
+    "layout": 3,
+    "ui": 5,
+    "specialized": 3,
+    "design": 6,
+    "auth": 2,
+    "team": 1,
+    "eleven-labs": 4
+  },
+  "timestamp": "2025-09-06T16:15:17.337Z"
+}

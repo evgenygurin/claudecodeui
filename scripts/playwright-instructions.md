@@ -1,0 +1,641 @@
+
+# Инструкции для сбора компонентов с v0.app
+
+## Шаг 1: Подготовка
+1. Убедитесь, что у вас есть доступ к MCP Playwright
+2. Откройте браузер через MCP Playwright
+
+## Шаг 2: Выполнение скрипта
+Выполните следующий скрипт в MCP Playwright:
+
+```javascript
+
+// MCP Playwright Script для сбора компонентов с v0.app
+// Этот скрипт должен быть выполнен через MCP Playwright
+
+const components = [
+  {
+    "id": "file-manager-wukORjs2J9p",
+    "name": "File Manager WukORjs2J9p",
+    "category": "file-manager",
+    "url": "https://v0.app/chat/file-manager-wukORjs2J9p",
+    "source": "v0.app",
+    "collectedAt": "2025-09-06T16:15:17.330Z",
+    "status": "pending",
+    "complexity": "medium",
+    "dependencies": [],
+    "tags": []
+  },
+  {
+    "id": "file-manager-hN0nNvAchzi",
+    "name": "File Manager HN0nNvAchzi",
+    "category": "file-manager",
+    "url": "https://v0.app/community/file-manager-hN0nNvAchzi",
+    "source": "v0.app",
+    "collectedAt": "2025-09-06T16:15:17.334Z",
+    "status": "pending",
+    "complexity": "medium",
+    "dependencies": [],
+    "tags": []
+  },
+  {
+    "id": "ai-chat-interface-6VLiqkGu5vw",
+    "name": "Ai Chat Interface 6VLiqkGu5vw",
+    "category": "chat",
+    "url": "https://v0.app/community/ai-chat-interface-6VLiqkGu5vw",
+    "source": "v0.app",
+    "collectedAt": "2025-09-06T16:15:17.334Z",
+    "status": "pending",
+    "complexity": "medium",
+    "dependencies": [],
+    "tags": []
+  },
+  {
+    "id": "chat-ui-with-vibration-xf3RmrkKlxc",
+    "name": "Chat Ui With Vibration Xf3RmrkKlxc",
+    "category": "chat",
+    "url": "https://v0.app/community/chat-ui-with-vibration-xf3RmrkKlxc",
+    "source": "v0.app",
+    "collectedAt": "2025-09-06T16:15:17.335Z",
+    "status": "pending",
+    "complexity": "medium",
+    "dependencies": [],
+    "tags": []
+  },
+  {
+    "id": "chat-ui-h4Ga3LeTpbl",
+    "name": "Chat Ui H4Ga3LeTpbl",
+    "category": "chat",
+    "url": "https://v0.app/community/chat-ui-h4Ga3LeTpbl",
+    "source": "v0.app",
+    "collectedAt": "2025-09-06T16:15:17.335Z",
+    "status": "pending",
+    "complexity": "medium",
+    "dependencies": [],
+    "tags": []
+  },
+  {
+    "id": "modern-ai-chatbot-interface-template-GzHBHQAiS2F",
+    "name": "Modern Ai Chatbot Interface Template GzHBHQAiS2F",
+    "category": "chat",
+    "url": "https://v0.app/community/modern-ai-chatbot-interface-template-GzHBHQAiS2F",
+    "source": "v0.app",
+    "collectedAt": "2025-09-06T16:15:17.335Z",
+    "status": "pending",
+    "complexity": "medium",
+    "dependencies": [],
+    "tags": []
+  },
+  {
+    "id": "integrations-page-7HOUCTcoR5n",
+    "name": "Integrations Page 7HOUCTcoR5n",
+    "category": "misc",
+    "url": "https://v0.app/community/integrations-page-7HOUCTcoR5n",
+    "source": "v0.app",
+    "collectedAt": "2025-09-06T16:15:17.335Z",
+    "status": "pending",
+    "complexity": "medium",
+    "dependencies": [],
+    "tags": []
+  },
+  {
+    "id": "sidebar-layout-ybLyeN1sesS",
+    "name": "Sidebar Layout YbLyeN1sesS",
+    "category": "layout",
+    "url": "https://v0.app/community/sidebar-layout-ybLyeN1sesS",
+    "source": "v0.app",
+    "collectedAt": "2025-09-06T16:15:17.335Z",
+    "status": "pending",
+    "complexity": "medium",
+    "dependencies": [],
+    "tags": []
+  },
+  {
+    "id": "sidebar-in-dialog-WzUz8z8OdKf",
+    "name": "Sidebar In Dialog WzUz8z8OdKf",
+    "category": "layout",
+    "url": "https://v0.app/community/sidebar-in-dialog-WzUz8z8OdKf",
+    "source": "v0.app",
+    "collectedAt": "2025-09-06T16:15:17.335Z",
+    "status": "pending",
+    "complexity": "medium",
+    "dependencies": [],
+    "tags": []
+  },
+  {
+    "id": "file-tree-sidebar-NBfcFIKai4T",
+    "name": "File Tree Sidebar NBfcFIKai4T",
+    "category": "layout",
+    "url": "https://v0.app/community/file-tree-sidebar-NBfcFIKai4T",
+    "source": "v0.app",
+    "collectedAt": "2025-09-06T16:15:17.335Z",
+    "status": "pending",
+    "complexity": "medium",
+    "dependencies": [],
+    "tags": []
+  },
+  {
+    "id": "action-search-bar-S3nMPSmpQzk",
+    "name": "Action Search Bar S3nMPSmpQzk",
+    "category": "misc",
+    "url": "https://v0.app/community/action-search-bar-S3nMPSmpQzk",
+    "source": "v0.app",
+    "collectedAt": "2025-09-06T16:15:17.335Z",
+    "status": "pending",
+    "complexity": "medium",
+    "dependencies": [],
+    "tags": []
+  },
+  {
+    "id": "ai-card-generation-Tpxvlz16QiJ",
+    "name": "Ai Card Generation Tpxvlz16QiJ",
+    "category": "misc",
+    "url": "https://v0.app/community/ai-card-generation-Tpxvlz16QiJ",
+    "source": "v0.app",
+    "collectedAt": "2025-09-06T16:15:17.335Z",
+    "status": "pending",
+    "complexity": "medium",
+    "dependencies": [],
+    "tags": []
+  },
+  {
+    "id": "vercel-tabs-BT27p0aGPsa",
+    "name": "Vercel Tabs BT27p0aGPsa",
+    "category": "ui",
+    "url": "https://v0.app/community/vercel-tabs-BT27p0aGPsa",
+    "source": "v0.app",
+    "collectedAt": "2025-09-06T16:15:17.336Z",
+    "status": "pending",
+    "complexity": "medium",
+    "dependencies": [],
+    "tags": []
+  },
+  {
+    "id": "animated-beam-voQije6wyja",
+    "name": "Animated Beam VoQije6wyja",
+    "category": "ui",
+    "url": "https://v0.app/community/animated-beam-voQije6wyja",
+    "source": "v0.app",
+    "collectedAt": "2025-09-06T16:15:17.336Z",
+    "status": "pending",
+    "complexity": "medium",
+    "dependencies": [],
+    "tags": []
+  },
+  {
+    "id": "glow-menu-component-XqrIezRilBR",
+    "name": "Glow Menu Component XqrIezRilBR",
+    "category": "misc",
+    "url": "https://v0.app/community/glow-menu-component-XqrIezRilBR",
+    "source": "v0.app",
+    "collectedAt": "2025-09-06T16:15:17.336Z",
+    "status": "pending",
+    "complexity": "medium",
+    "dependencies": [],
+    "tags": []
+  },
+  {
+    "id": "fluid-dropdown-zWgCGYGZIcx",
+    "name": "Fluid Dropdown ZWgCGYGZIcx",
+    "category": "ui",
+    "url": "https://v0.app/community/fluid-dropdown-zWgCGYGZIcx",
+    "source": "v0.app",
+    "collectedAt": "2025-09-06T16:15:17.336Z",
+    "status": "pending",
+    "complexity": "medium",
+    "dependencies": [],
+    "tags": []
+  },
+  {
+    "id": "toast-fLjYRXrijvp",
+    "name": "Toast FLjYRXrijvp",
+    "category": "ui",
+    "url": "https://v0.app/community/toast-fLjYRXrijvp",
+    "source": "v0.app",
+    "collectedAt": "2025-09-06T16:15:17.336Z",
+    "status": "pending",
+    "complexity": "medium",
+    "dependencies": [],
+    "tags": []
+  },
+  {
+    "id": "bento-grid-8QW53cSzCxp",
+    "name": "Bento Grid 8QW53cSzCxp",
+    "category": "ui",
+    "url": "https://v0.app/community/bento-grid-8QW53cSzCxp",
+    "source": "v0.app",
+    "collectedAt": "2025-09-06T16:15:17.336Z",
+    "status": "pending",
+    "complexity": "medium",
+    "dependencies": [],
+    "tags": []
+  },
+  {
+    "id": "image-to-ascii-0UE1nczWzbu",
+    "name": "Image To Ascii 0UE1nczWzbu",
+    "category": "specialized",
+    "url": "https://v0.app/community/image-to-ascii-0UE1nczWzbu",
+    "source": "v0.app",
+    "collectedAt": "2025-09-06T16:15:17.336Z",
+    "status": "pending",
+    "complexity": "medium",
+    "dependencies": [],
+    "tags": []
+  },
+  {
+    "id": "documentation-starter-ov3ApgfOdx5",
+    "name": "Documentation Starter Ov3ApgfOdx5",
+    "category": "specialized",
+    "url": "https://v0.app/community/documentation-starter-ov3ApgfOdx5",
+    "source": "v0.app",
+    "collectedAt": "2025-09-06T16:15:17.336Z",
+    "status": "pending",
+    "complexity": "medium",
+    "dependencies": [],
+    "tags": []
+  },
+  {
+    "id": "admin-dashboard-yBomF3O9Yu3",
+    "name": "Admin Dashboard YBomF3O9Yu3",
+    "category": "design",
+    "url": "https://v0.app/community/admin-dashboard-yBomF3O9Yu3",
+    "source": "v0.app",
+    "collectedAt": "2025-09-06T16:15:17.336Z",
+    "status": "pending",
+    "complexity": "medium",
+    "dependencies": [],
+    "tags": []
+  },
+  {
+    "id": "light-dark-image-transition-0WSCfiIps92",
+    "name": "Light Dark Image Transition 0WSCfiIps92",
+    "category": "misc",
+    "url": "https://v0.app/community/light-dark-image-transition-0WSCfiIps92",
+    "source": "v0.app",
+    "collectedAt": "2025-09-06T16:15:17.336Z",
+    "status": "pending",
+    "complexity": "medium",
+    "dependencies": [],
+    "tags": []
+  },
+  {
+    "id": "dynamic-table-hJCDzsfPzdV",
+    "name": "Dynamic Table HJCDzsfPzdV",
+    "category": "specialized",
+    "url": "https://v0.app/community/dynamic-table-hJCDzsfPzdV",
+    "source": "v0.app",
+    "collectedAt": "2025-09-06T16:15:17.336Z",
+    "status": "pending",
+    "complexity": "medium",
+    "dependencies": [],
+    "tags": []
+  },
+  {
+    "id": "drageasy-drag-and-drop-dashboard-mLIx6xWQwmP",
+    "name": "Drageasy Drag And Drop Dashboard MLIx6xWQwmP",
+    "category": "design",
+    "url": "https://v0.app/community/drageasy-drag-and-drop-dashboard-mLIx6xWQwmP",
+    "source": "v0.app",
+    "collectedAt": "2025-09-06T16:15:17.336Z",
+    "status": "pending",
+    "complexity": "medium",
+    "dependencies": [],
+    "tags": []
+  },
+  {
+    "id": "login-03-LtQ7cIPj9o5",
+    "name": "Login 03 LtQ7cIPj9o5",
+    "category": "auth",
+    "url": "https://v0.app/community/login-03-LtQ7cIPj9o5",
+    "source": "v0.app",
+    "collectedAt": "2025-09-06T16:15:17.336Z",
+    "status": "pending",
+    "complexity": "medium",
+    "dependencies": [],
+    "tags": []
+  },
+  {
+    "id": "login-02-lgh5A223SiR",
+    "name": "Login 02 Lgh5A223SiR",
+    "category": "auth",
+    "url": "https://v0.app/community/login-02-lgh5A223SiR",
+    "source": "v0.app",
+    "collectedAt": "2025-09-06T16:15:17.336Z",
+    "status": "pending",
+    "complexity": "medium",
+    "dependencies": [],
+    "tags": []
+  },
+  {
+    "id": "team-member-invites-BtbvdBJqRve",
+    "name": "Team Member Invites BtbvdBJqRve",
+    "category": "team",
+    "url": "https://v0.app/community/team-member-invites-BtbvdBJqRve",
+    "source": "v0.app",
+    "collectedAt": "2025-09-06T16:15:17.336Z",
+    "status": "pending",
+    "complexity": "medium",
+    "dependencies": [],
+    "tags": []
+  },
+  {
+    "id": "eleven-labs-conversational-ai-starter-5TN93pl3bRS",
+    "name": "Eleven Labs Conversational Ai Starter 5TN93pl3bRS",
+    "category": "eleven-labs",
+    "url": "https://v0.app/community/eleven-labs-conversational-ai-starter-5TN93pl3bRS",
+    "source": "v0.app",
+    "collectedAt": "2025-09-06T16:15:17.336Z",
+    "status": "pending",
+    "complexity": "medium",
+    "dependencies": [],
+    "tags": []
+  },
+  {
+    "id": "eleven-labs-music-starter-xuCjYtmbQri",
+    "name": "Eleven Labs Music Starter XuCjYtmbQri",
+    "category": "eleven-labs",
+    "url": "https://v0.app/community/eleven-labs-music-starter-xuCjYtmbQri",
+    "source": "v0.app",
+    "collectedAt": "2025-09-06T16:15:17.337Z",
+    "status": "pending",
+    "complexity": "medium",
+    "dependencies": [],
+    "tags": []
+  },
+  {
+    "id": "eleven-labs-agents-starter-5TN93pl3bRS",
+    "name": "Eleven Labs Agents Starter 5TN93pl3bRS",
+    "category": "eleven-labs",
+    "url": "https://v0.app/community/eleven-labs-agents-starter-5TN93pl3bRS",
+    "source": "v0.app",
+    "collectedAt": "2025-09-06T16:15:17.337Z",
+    "status": "pending",
+    "complexity": "medium",
+    "dependencies": [],
+    "tags": []
+  },
+  {
+    "id": "eleven-labs-v3-podcast-generator-9zvVUBtxy6i",
+    "name": "Eleven Labs V3 Podcast Generator 9zvVUBtxy6i",
+    "category": "eleven-labs",
+    "url": "https://v0.app/community/eleven-labs-v3-podcast-generator-9zvVUBtxy6i",
+    "source": "v0.app",
+    "collectedAt": "2025-09-06T16:15:17.337Z",
+    "status": "pending",
+    "complexity": "medium",
+    "dependencies": [],
+    "tags": []
+  },
+  {
+    "id": "modern-library-design-YzJGL4XM0VM",
+    "name": "Modern Library Design YzJGL4XM0VM",
+    "category": "misc",
+    "url": "https://v0.app/community/modern-library-design-YzJGL4XM0VM",
+    "source": "v0.app",
+    "collectedAt": "2025-09-06T16:15:17.337Z",
+    "status": "pending",
+    "complexity": "medium",
+    "dependencies": [],
+    "tags": []
+  },
+  {
+    "id": "marketplace-b3DN1aOd6mQ",
+    "name": "Marketplace B3DN1aOd6mQ",
+    "category": "design",
+    "url": "https://v0.app/community/marketplace-b3DN1aOd6mQ",
+    "source": "v0.app",
+    "collectedAt": "2025-09-06T16:15:17.337Z",
+    "status": "pending",
+    "complexity": "medium",
+    "dependencies": [],
+    "tags": []
+  },
+  {
+    "id": "background-paths-s2R42ut7CxT",
+    "name": "Background Paths S2R42ut7CxT",
+    "category": "misc",
+    "url": "https://v0.app/community/background-paths-s2R42ut7CxT",
+    "source": "v0.app",
+    "collectedAt": "2025-09-06T16:15:17.337Z",
+    "status": "pending",
+    "complexity": "medium",
+    "dependencies": [],
+    "tags": []
+  },
+  {
+    "id": "creative-xYqdqPAJD3j",
+    "name": "Creative XYqdqPAJD3j",
+    "category": "design",
+    "url": "https://v0.app/community/creative-xYqdqPAJD3j",
+    "source": "v0.app",
+    "collectedAt": "2025-09-06T16:15:17.337Z",
+    "status": "pending",
+    "complexity": "medium",
+    "dependencies": [],
+    "tags": []
+  },
+  {
+    "id": "shopify-product-page-design-NxSj0IgX4vu",
+    "name": "Shopify Product Page Design NxSj0IgX4vu",
+    "category": "misc",
+    "url": "https://v0.app/community/shopify-product-page-design-NxSj0IgX4vu",
+    "source": "v0.app",
+    "collectedAt": "2025-09-06T16:15:17.337Z",
+    "status": "pending",
+    "complexity": "medium",
+    "dependencies": [],
+    "tags": []
+  },
+  {
+    "id": "creative-agency-portfolio-hJnIgxCCUr5",
+    "name": "Creative Agency Portfolio HJnIgxCCUr5",
+    "category": "design",
+    "url": "https://v0.app/community/creative-agency-portfolio-hJnIgxCCUr5",
+    "source": "v0.app",
+    "collectedAt": "2025-09-06T16:15:17.337Z",
+    "status": "pending",
+    "complexity": "medium",
+    "dependencies": [],
+    "tags": []
+  },
+  {
+    "id": "financial-dashboard-functional-jUBqSBJsNrz",
+    "name": "Financial Dashboard Functional JUBqSBJsNrz",
+    "category": "design",
+    "url": "https://v0.app/community/financial-dashboard-functional-jUBqSBJsNrz",
+    "source": "v0.app",
+    "collectedAt": "2025-09-06T16:15:17.337Z",
+    "status": "pending",
+    "complexity": "medium",
+    "dependencies": [],
+    "tags": []
+  },
+  {
+    "id": "ai-elements-with-ai-sdk-5-ksSTzATPzMq",
+    "name": "Ai Elements With Ai Sdk 5 KsSTzATPzMq",
+    "category": "misc",
+    "url": "https://v0.app/community/ai-elements-with-ai-sdk-5-ksSTzATPzMq",
+    "source": "v0.app",
+    "collectedAt": "2025-09-06T16:15:17.337Z",
+    "status": "pending",
+    "complexity": "medium",
+    "dependencies": [],
+    "tags": []
+  },
+  {
+    "id": "origin-e-commerce-ui-w98dsZBVaaU",
+    "name": "Origin E Commerce Ui W98dsZBVaaU",
+    "category": "misc",
+    "url": "https://v0.app/community/origin-e-commerce-ui-w98dsZBVaaU",
+    "source": "v0.app",
+    "collectedAt": "2025-09-06T16:15:17.337Z",
+    "status": "pending",
+    "complexity": "medium",
+    "dependencies": [],
+    "tags": []
+  },
+  {
+    "id": "next-js-doc-like-file-tree-BNbIj6SOUTQ",
+    "name": "Next Js Doc Like File Tree BNbIj6SOUTQ",
+    "category": "chat",
+    "url": "https://v0.app/chat/next-js-doc-like-file-tree-BNbIj6SOUTQ",
+    "source": "v0.app",
+    "collectedAt": "2025-09-06T16:15:17.337Z",
+    "status": "pending",
+    "complexity": "medium",
+    "dependencies": [],
+    "tags": []
+  },
+  {
+    "id": "cuisine-selector-chips-b1LMjSX49FY",
+    "name": "Cuisine Selector Chips B1LMjSX49FY",
+    "category": "chat",
+    "url": "https://v0.app/chat/cuisine-selector-chips-b1LMjSX49FY",
+    "source": "v0.app",
+    "collectedAt": "2025-09-06T16:15:17.337Z",
+    "status": "pending",
+    "complexity": "medium",
+    "dependencies": [],
+    "tags": []
+  },
+  {
+    "id": "general-greeting-oaN8bYkHdWq",
+    "name": "General Greeting OaN8bYkHdWq",
+    "category": "chat",
+    "url": "https://v0.app/chat/general-greeting-oaN8bYkHdWq",
+    "source": "v0.app",
+    "collectedAt": "2025-09-06T16:15:17.337Z",
+    "status": "pending",
+    "complexity": "medium",
+    "dependencies": [],
+    "tags": []
+  }
+];
+
+async function collectComponentCode(component) {
+  try {
+    console.log(`🔍 Собираем код для: ${component.name}`);
+    
+    // Навигация на страницу компонента
+    await page.goto(component.url, { waitUntil: 'networkidle' });
+    
+    // Ждем загрузки страницы
+    await page.waitForTimeout(2000);
+    
+    // Ищем кнопку "Open in" или "View Code"
+    const openButton = await page.$('button:has-text("Open in"), button:has-text("View Code"), [data-testid="open-in-button"]');
+    
+    if (openButton) {
+      await openButton.click();
+      await page.waitForTimeout(1000);
+      
+      // Ищем код компонента
+      const codeElement = await page.$('pre, code, [data-testid="code-block"]');
+      
+      if (codeElement) {
+        const code = await codeElement.textContent();
+        return {
+          ...component,
+          code: code.trim(),
+          status: 'collected',
+          collectedAt: new Date().toISOString()
+        };
+      }
+    }
+    
+    // Альтернативный способ - поиск в DOM
+    const codeBlocks = await page.$$('pre code, .code-block, [class*="code"]');
+    
+    for (const block of codeBlocks) {
+      const text = await block.textContent();
+      if (text && text.length > 100 && text.includes('export') || text.includes('function')) {
+        return {
+          ...component,
+          code: text.trim(),
+          status: 'collected',
+          collectedAt: new Date().toISOString()
+        };
+      }
+    }
+    
+    return {
+      ...component,
+      status: 'not_found',
+      error: 'Code not found on page'
+    };
+    
+  } catch (error) {
+    return {
+      ...component,
+      status: 'error',
+      error: error.message
+    };
+  }
+}
+
+// Основная функция сбора
+async function collectAllComponents() {
+  const results = [];
+  
+  for (const component of components) {
+    const result = await collectComponentCode(component);
+    results.push(result);
+    
+    // Небольшая пауза между запросами
+    await page.waitForTimeout(1000);
+  }
+  
+  return results;
+}
+
+// Запуск сбора
+collectAllComponents().then(results => {
+  console.log('Сбор завершен:', results);
+  return results;
+});
+
+```
+
+## Шаг 3: Обработка результатов
+После выполнения скрипта:
+1. Сохраните результаты в файл
+2. Запустите скрипт обработки результатов
+
+## Альтернативный подход - ручной сбор
+Если автоматический сбор не работает, можно собирать компоненты вручную:
+
+1. Откройте каждую страницу v0.app
+2. Найдите кнопку "Open in" или "View Code"
+3. Скопируйте код компонента
+4. Сохраните в соответствующий файл
+
+## Структура файлов
+Каждый компонент должен быть сохранен в файл:
+`collected-components/{category}/{component-id}.tsx`
+
+## Метаданные
+Дополните метаданные информацией о:
+- Сложности компонента
+- Зависимостях
+- Тегах
+- Описании

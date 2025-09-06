@@ -1,0 +1,48 @@
+{
+  "timestamp": "2025-09-06T16:22:04.701Z",
+  "system": {
+    "totalBranches": 5,
+    "totalTasks": 15,
+    "totalDependencies": 3,
+    "thinkingPatterns": 4,
+    "workflows": 2
+  },
+  "branches": [
+    {
+      "name": "master",
+      "taskCount": 8,
+      "status": "started"
+    },
+    {
+      "name": "core-infrastructure",
+      "taskCount": 2,
+      "priority": "critical",
+      "status": "not-started"
+    },
+    {
+      "name": "component-system",
+      "taskCount": 2,
+      "priority": "high",
+      "status": "not-started"
+    },
+    {
+      "name": "feature-development",
+      "taskCount": 2,
+      "priority": "medium",
+      "status": "not-started"
+    },
+    {
+      "name": "optimization",
+      "taskCount": 1,
+      "priority": "medium",
+      "status": "not-started"
+    }
+  ],
+  "recommendations": [
+    "Начните с ветки core-infrastructure для создания фундамента",
+    "Используйте систему последовательного мышления для сложных задач",
+    "Регулярно обновляйте метрики для отслеживания прогресса",
+    "Применяйте инструменты fd, rg, ast-grep для анализа кода",
+    "Создавайте промежуточные коммиты для каждой фазы workflow"
+  ]
+}
