@@ -1,19 +1,19 @@
 'use client';
 
 import { useState } from 'react';
-import { Sidebar } from '@/components/sidebar/sidebar';
-import { ModernFileManager } from '@/components/file-manager/modern-file-manager';
-import { ModernChatInterface } from '@/components/chat/modern-chat-interface';
-import { IntegrationsPage } from '@/components/integrations/integrations-page';
+import { Sidebar } from '@/components/sidebar';
+import { ModernFileManager } from '@/components/file-manager';
+import { ModernChatInterface } from '@/components/chat';
+import { IntegrationsPage } from '@/components/integrations';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { DeployButton } from '@/components/ui/deploy-button';
 import { ActionSearchBar } from '@/components/ui/action-search-bar';
-import { AICardGeneration } from '@/components/ai/ai-card-generation';
+import { AICardGeneration } from '@/components/ai';
 import { VercelTabs } from '@/components/ui/vercel-tabs';
 import { ImageToASCII } from '@/components/ui/image-to-ascii';
-import { DocumentationStarter } from '@/components/docs/documentation-starter';
+import { DocumentationStarter } from '@/components/docs';
 import {
   MessageSquare,
   FolderOpen,
