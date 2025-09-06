@@ -13,7 +13,6 @@ import { ActionSearchBar } from '@/components/ui/action-search-bar';
 import { AICardGeneration } from '@/components/ai';
 import { VercelTabs } from '@/components/ui/vercel-tabs';
 import { ImageToASCII } from '@/components/ui/image-to-ascii';
-import { DocumentationStarter } from '@/components/docs/documentation-starter';
 import {
   MessageSquare,
   FolderOpen,
@@ -214,7 +213,10 @@ export default function HomePage() {
 
               <TabsContent value="docs" className="h-full m-0 p-6">
                 <div className="h-full overflow-y-auto">
-                  <DocumentationStarter />
+                  {/* <DocumentationStarter /> */}
+                  <div className="text-center text-muted-foreground">
+                    Documentation component temporarily disabled for deployment
+                  </div>
                 </div>
               </TabsContent>
 
