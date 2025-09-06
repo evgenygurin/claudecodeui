@@ -274,5 +274,8 @@ class FileSystemServiceImpl implements FileSystemService {
 
 }
 
+// Export class for testing
+export { FileSystemServiceImpl };
+
 // Export singleton instance
 export const fileSystemService = new FileSystemServiceImpl();
