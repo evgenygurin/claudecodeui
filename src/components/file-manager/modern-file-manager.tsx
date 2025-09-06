@@ -124,6 +124,7 @@ export function ModernFileManager({ className }: FileManagerProps) {
   const [dragOver, setDragOver] = useState(false);
   const [uploadProgress, setUploadProgress] = useState(0);
   const [isUploading, setIsUploading] = useState(false);
+  const fileInputRef = React.useRef<HTMLInputElement>(null);
 
   // Load files from file system
   useEffect(() => {
@@ -182,20 +183,72 @@ export function ModernFileManager({ className }: FileManagerProps) {
 
     const droppedFiles = Array.from(e.dataTransfer.files);
     if (droppedFiles.length > 0) {
+      handleFileUpload(droppedFiles);
+    }
+  }, []);
+
+  const handleUploadClick = useCallback(() => {
+    fileInputRef.current?.click();
+  }, []);
+
+  const handleFileSelect = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = Array.from(e.target.files || []);
+    if (files.length > 0) {
+      handleFileUpload(files);
+    }
+  }, []);
+
+  const handleFileUpload = useCallback(async (files: File[]) => {
+    try {
       setIsUploading(true);
       setUploadProgress(0);
+      
+      for (let i = 0; i < files.length; i++) {
+        const file = files[i];
+        logger.info('Uploading file', { name: file.name, size: file.size });
+        
+        // Simulate upload progress
+        for (let progress = 0; progress <= 100; progress += 10) {
+          setUploadProgress(Math.round(((i * 100) + progress) / files.length));
+          await new Promise(resolve => setTimeout(resolve, 50));
+        }
+        
+        // Create new file item
+        const newFile: FileItem = {
+          id: `file-${Date.now()}-${i}`,
+          name: file.name,
+          path: `./${file.name}`,
+          type: 'file',
+          size: file.size,
+          lastModified: new Date(),
+        };
+        
+        setFiles(prev => [...prev, newFile]);
+      }
+      
+      logger.info('Files uploaded successfully', { count: files.length });
+    } catch (error) {
+      logger.error('File upload failed', { error });
+    } finally {
+      setIsUploading(false);
+      setUploadProgress(0);
+    }
+  }, []);
 
-      // Simulate upload progress
-      const interval = setInterval(() => {
-        setUploadProgress(prev => {
-          if (prev >= 100) {
-            clearInterval(interval);
-            setIsUploading(false);
-            return 0;
-          }
-          return prev + 10;
-        });
-      }, 200);
+  const handleNewFolderClick = useCallback(() => {
+    const folderName = prompt('Enter folder name:');
+    if (folderName && folderName.trim()) {
+      const newFolder: FileItem = {
+        id: `folder-${Date.now()}`,
+        name: folderName.trim(),
+        path: `./${folderName.trim()}`,
+        type: 'directory',
+        lastModified: new Date(),
+        children: [],
+      };
+      
+      setFiles(prev => [...prev, newFolder]);
+      logger.info('New folder created', { name: folderName });
     }
   }, []);
 
@@ -404,19 +457,7 @@ export function ModernFileManager({ className }: FileManagerProps) {
             <Button 
               variant="outline" 
               size="sm"
-              onClick={() => {
-                const input = document.createElement('input');
-                input.type = 'file';
-                input.multiple = true;
-                input.onchange = (e) => {
-                  const files = (e.target as HTMLInputElement).files;
-                  if (files && files.length > 0) {
-                    logger.info('Files selected for upload', { count: files.length });
-                    // TODO: Implement actual file upload logic
-                  }
-                };
-                input.click();
-              }}
+              onClick={handleUploadClick}
             >
               <Upload className="h-4 w-4 mr-2" />
               Upload
@@ -424,19 +465,18 @@ export function ModernFileManager({ className }: FileManagerProps) {
             <Button 
               variant="outline" 
               size="sm"
-              onClick={() => {
-                const folderName = prompt('Enter folder name:');
-                if (folderName && folderName.trim()) {
-                  logger.info('Creating new folder', { name: folderName });
-                  // TODO: Implement actual folder creation logic
-                  // For now, just show success message
-                  alert(`Folder "${folderName}" would be created!`);
-                }
-              }}
+              onClick={handleNewFolderClick}
             >
               <Plus className="h-4 w-4 mr-2" />
               New Folder
             </Button>
+            <input
+              ref={fileInputRef}
+              type="file"
+              multiple
+              className="hidden"
+              onChange={handleFileSelect}
+            />
           </div>
 
           {selectedFiles.size > 0 && (

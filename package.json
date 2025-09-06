@@ -23,6 +23,10 @@
     "postinstall": "next telemetry disable"
   },
   "dependencies": {
+    "@ai-sdk/anthropic": "^2.0.12",
+    "@ai-sdk/google": "^2.0.12",
+    "@ai-sdk/openai": "^2.0.24",
+    "@ai-sdk/vercel": "^1.0.15",
     "@modelcontextprotocol/sdk": "^0.4.0",
     "@radix-ui/react-avatar": "^1.0.0",
     "@radix-ui/react-dialog": "^1.0.0",
@@ -41,6 +45,9 @@
     "@types/react-dom": "^18.2.0",
     "@types/react-syntax-highlighter": "^15.5.0",
     "@types/ws": "^8.5.0",
+    "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0",
+    "ai": "^5.0.34",
     "autoprefixer": "^10.4.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
@@ -48,6 +55,7 @@
     "lucide-react": "^0.292.0",
     "next": "^14.0.0",
     "postcss": "^8.4.0",
+    "puppeteer": "^24.19.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-syntax-highlighter": "^15.5.0",
@@ -59,11 +67,11 @@
     "zod": "^3.22.0"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
     "@testing-library/jest-dom": "^6.0.0",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
     "cypress": "^13.0.0",
     "eslint": "^8.0.0",
     "eslint-config-next": "^14.0.0",

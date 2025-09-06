@@ -345,6 +345,23 @@ export function IntegrationsPage() {
     return users.toString();
   };
 
+  const handleConfigure = (integrationId: string) => {
+    const integration = integrations.find(i => i.id === integrationId);
+    if (integration) {
+      alert(`Configuring ${integration.name}...\n\nThis would open the configuration dialog for ${integration.name}.`);
+      console.log('Configure integration:', integration);
+    }
+  };
+
+  const handleViewDocs = (integrationId: string) => {
+    const integration = integrations.find(i => i.id === integrationId);
+    if (integration) {
+      const docsUrl = `https://docs.${integration.name.toLowerCase().replace(/\s+/g, '')}.com`;
+      window.open(docsUrl, '_blank');
+      console.log('View docs for:', integration.name);
+    }
+  };
+
   return (
     <div className="h-full overflow-y-auto p-6">
       <div className="max-w-7xl mx-auto">
@@ -497,16 +514,16 @@ export function IntegrationsPage() {
                     <Button 
                       size="sm" 
                       className="flex-1"
-                      onClick={() => {
-                        console.log('Configuring integration:', integration.name);
-                        alert(`Opening configuration for ${integration.name}...`);
-                        // TODO: Implement actual configuration logic
-                      }}
+                      onClick={() => handleConfigure(integration.id)}
                     >
                       <Settings className="h-4 w-4 mr-2" />
                       Configure
                     </Button>
-                    <Button variant="outline" size="sm">
+                    <Button 
+                      variant="outline" 
+                      size="sm"
+                      onClick={() => handleViewDocs(integration.id)}
+                    >
                       <ExternalLink className="h-4 w-4" />
                     </Button>
                   </div>

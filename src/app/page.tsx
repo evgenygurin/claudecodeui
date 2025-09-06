@@ -5,6 +5,7 @@ import { Sidebar } from '@/components/sidebar';
 import { ModernFileManager } from '@/components/file-manager';
 import { ModernChatInterface } from '@/components/chat';
 import { IntegrationsPage } from '@/components/integrations';
+import { ModernProjects } from '@/components/projects';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -13,7 +14,7 @@ import { ActionSearchBar } from '@/components/ui/action-search-bar';
 import { AICardGeneration } from '@/components/ai';
 import { VercelTabs } from '@/components/ui/vercel-tabs';
 import { ImageToASCII } from '@/components/ui/image-to-ascii';
-import { ProjectsManager } from '@/components/projects';
+
 import {
   MessageSquare,
   FolderOpen,
@@ -208,7 +209,7 @@ export default function HomePage() {
 
               <TabsContent value="projects" className="h-full m-0 p-6">
                 <div className="h-full overflow-y-auto">
-                  <ProjectsManager />
+                  <ModernProjects />
                 </div>
               </TabsContent>
 
