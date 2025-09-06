@@ -2,6 +2,7 @@
 
 import { getErrorMessage } from '@/utils/error-handler';
 import { logger } from '@/utils/logger';
+import { chatStorageService, type ChatSession, type ChatMessage } from '@/services/chat-storage.service';
 import * as React from 'react';
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { cn } from '@/lib/utils';
@@ -88,25 +89,9 @@ const mockMessages: Message[] = [
 ];
 
 export function ModernChatInterface({ className }: ChatInterfaceProps) {
-  // Load messages from localStorage or use mock data
-  const [messages, setMessages] = useState<Message[]>(() => {
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('claude-chat-messages');
-      if (saved) {
-        try {
-          const parsed = JSON.parse(saved);
-          return parsed.map((msg: any) => ({
-            ...msg,
-            timestamp: new Date(msg.timestamp)
-          }));
-        } catch (e) {
-          console.error('Error loading saved messages:', e);
-        }
-      }
-    }
-    return mockMessages;
-  });
-  
+  const [currentChat, setCurrentChat] = useState<ChatSession | null>(null);
+  const [allChats, setAllChats] = useState<ChatSession[]>([]);
+  const [messages, setMessages] = useState<Message[]>([]);
   const [inputValue, setInputValue] = useState('');
   const [isRecording, setIsRecording] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -115,23 +100,37 @@ export function ModernChatInterface({ className }: ChatInterfaceProps) {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  // Save messages to localStorage whenever messages change
-  const saveMessagesToStorage = useCallback((newMessages: Message[]) => {
-    if (typeof window !== 'undefined') {
-      try {
-        localStorage.setItem('claude-chat-messages', JSON.stringify(newMessages));
-        console.log('Messages saved to localStorage:', newMessages.length);
-      } catch (e) {
-        console.error('Error saving messages to localStorage:', e);
-      }
-    }
-  }, []);
-
-  // Update localStorage whenever messages change
+  // Load chats on component mount
   useEffect(() => {
-    saveMessagesToStorage(messages);
-  }, [messages, saveMessagesToStorage]);
+    const loadChats = () => {
+      try {
+        const chats = chatStorageService.getAllChats();
+        setAllChats(chats);
+        
+        if (chats.length > 0) {
+          // Load the most recent chat
+          const recentChat = chats[0];
+          setCurrentChat(recentChat);
+          setMessages(recentChat.messages.map(msg => ({
+            ...msg,
+            role: msg.role as 'user' | 'assistant' | 'system',
+          })));
+        } else {
+          // Create a new chat if none exist
+          const newChat = chatStorageService.createChat();
+          setCurrentChat(newChat);
+          setAllChats([newChat]);
+          setMessages([]);
+        }
+      } catch (error) {
+        logger.error('Failed to load chats', { error });
+        // Fallback to mock messages if storage fails
+        setMessages(mockMessages);
+      }
+    };
 
+    loadChats();
+  }, []);
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -141,20 +140,25 @@ export function ModernChatInterface({ className }: ChatInterfaceProps) {
   }, [messages]);
 
   const handleSendMessage = async () => {
-    if (!inputValue.trim() || isLoading) return;
+    if (!inputValue.trim() || isLoading || !currentChat) return;
 
-    const userMessage: Message = {
-      id: Date.now().toString(),
-      role: 'user',
-      content: inputValue,
-      timestamp: new Date(),
-      attachments: attachments.length > 0 ? [...attachments] : undefined,
-    };
+    try {
+      // Save user message to storage
+      const savedUserMessage = chatStorageService.addMessage(currentChat.id, 'user', inputValue);
+      
+      const userMessage: Message = {
+        id: savedUserMessage.id,
+        role: 'user',
+        content: inputValue,
+        timestamp: savedUserMessage.timestamp,
+        attachments: attachments.length > 0 ? [...attachments] : undefined,
+      };
 
-    setMessages(prev => [...prev, userMessage]);
-    setInputValue('');
-    setAttachments([]);
-    setIsLoading(true);
+      setMessages(prev => [...prev, userMessage]);
+      const messageContent = inputValue;
+      setInputValue('');
+      setAttachments([]);
+      setIsLoading(true);
 
     try {
       // Call MCP API for AI response
@@ -182,13 +186,17 @@ export function ModernChatInterface({ className }: ChatInterfaceProps) {
 
       const data = await response.json();
 
+      const assistantContent = data.content?.[0]?.text ||
+        `I received your message: "${messageContent}". This is a response from the MCP API.`;
+      
+      // Save assistant message to storage
+      const savedAssistantMessage = chatStorageService.addMessage(currentChat.id, 'assistant', assistantContent);
+
       const assistantMessage: Message = {
-        id: (Date.now() + 1).toString(),
+        id: savedAssistantMessage.id,
         role: 'assistant',
-        content:
-          data.content?.[0]?.text ||
-          `I received your message: "${inputValue}". This is a response from the MCP API.`,
-        timestamp: new Date(),
+        content: assistantContent,
+        timestamp: savedAssistantMessage.timestamp,
         reactions: { thumbsUp: 0, thumbsDown: 0 },
       };
 
@@ -196,16 +204,25 @@ export function ModernChatInterface({ className }: ChatInterfaceProps) {
     } catch (error) {
       logger.error('Error sending message:', error);
 
+      const errorContent = `Sorry, I encountered an error: ${error instanceof Error ? getErrorMessage(error) : 'Unknown error'}`;
+      
+      // Save error message to storage
+      const savedErrorMessage = chatStorageService.addMessage(currentChat.id, 'assistant', errorContent);
+
       const errorMessage: Message = {
-        id: (Date.now() + 1).toString(),
+        id: savedErrorMessage.id,
         role: 'assistant',
-        content: `Sorry, I encountered an error: ${error instanceof Error ? getErrorMessage(error) : 'Unknown error'}`,
-        timestamp: new Date(),
+        content: errorContent,
+        timestamp: savedErrorMessage.timestamp,
         reactions: { thumbsUp: 0, thumbsDown: 0 },
       };
 
       setMessages(prev => [...prev, errorMessage]);
     } finally {
+      setIsLoading(false);
+    }
+    } catch (error) {
+      logger.error('Error in handleSendMessage:', error);
       setIsLoading(false);
     }
   };
@@ -260,6 +277,57 @@ export function ModernChatInterface({ className }: ChatInterfaceProps) {
     );
   };
 
+  const createNewChat = () => {
+    try {
+      const newChat = chatStorageService.createChat();
+      setCurrentChat(newChat);
+      setAllChats(prev => [newChat, ...prev]);
+      setMessages([]);
+      logger.info('Created new chat', { chatId: newChat.id });
+    } catch (error) {
+      logger.error('Failed to create new chat', { error });
+    }
+  };
+
+  const switchToChat = (chatId: string) => {
+    try {
+      const chat = chatStorageService.getChat(chatId);
+      if (chat) {
+        setCurrentChat(chat);
+        setMessages(chat.messages.map(msg => ({
+          ...msg,
+          role: msg.role as 'user' | 'assistant' | 'system',
+        })));
+        logger.info('Switched to chat', { chatId });
+      }
+    } catch (error) {
+      logger.error('Failed to switch chat', { error, chatId });
+    }
+  };
+
+  const deleteChat = (chatId: string) => {
+    try {
+      const success = chatStorageService.deleteChat(chatId);
+      if (success) {
+        setAllChats(prev => prev.filter(chat => chat.id !== chatId));
+        
+        // If we deleted the current chat, switch to another one or create new
+        if (currentChat?.id === chatId) {
+          const remainingChats = allChats.filter(chat => chat.id !== chatId);
+          if (remainingChats.length > 0) {
+            switchToChat(remainingChats[0].id);
+          } else {
+            createNewChat();
+          }
+        }
+        
+        logger.info('Deleted chat', { chatId });
+      }
+    } catch (error) {
+      logger.error('Failed to delete chat', { error, chatId });
+    }
+  };
+
   const copyToClipboard = async (text: string) => {
     try {
       await navigator.clipboard.writeText(text);
@@ -290,18 +358,8 @@ export function ModernChatInterface({ className }: ChatInterfaceProps) {
             </div>
           </div>
           <div className="flex items-center gap-2">
-            <Button 
-              variant="outline" 
-              size="sm"
-              onClick={() => {
-                if (confirm('Start a new chat? Current messages will be saved.')) {
-                  setMessages([]);
-                  console.log('Started new chat');
-                }
-              }}
-            >
-              <MessageSquare className="h-4 w-4 mr-2" />
-              New Chat
+            <Button variant="ghost" size="sm" onClick={createNewChat}>
+              <MessageSquare className="h-4 w-4" />
             </Button>
             <Button variant="ghost" size="sm" onClick={() => setIsMuted(!isMuted)}>
               {isMuted ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4" />}
