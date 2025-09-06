@@ -348,7 +348,9 @@ export function IntegrationsPage() {
   const handleConfigure = (integrationId: string) => {
     const integration = integrations.find(i => i.id === integrationId);
     if (integration) {
-      alert(`Configuring ${integration.name}...\n\nThis would open the configuration dialog for ${integration.name}.`);
+      alert(
+        `Configuring ${integration.name}...\n\nThis would open the configuration dialog for ${integration.name}.`
+      );
       console.log('Configure integration:', integration);
     }
   };
@@ -511,16 +513,16 @@ export function IntegrationsPage() {
                   </div>
 
                   <div className="flex space-x-2 pt-2">
-                    <Button 
-                      size="sm" 
+                    <Button
+                      size="sm"
                       className="flex-1"
                       onClick={() => handleConfigure(integration.id)}
                     >
                       <Settings className="h-4 w-4 mr-2" />
                       Configure
                     </Button>
-                    <Button 
-                      variant="outline" 
+                    <Button
+                      variant="outline"
                       size="sm"
                       onClick={() => handleViewDocs(integration.id)}
                     >

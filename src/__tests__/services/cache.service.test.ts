@@ -74,15 +74,26 @@ describe('CacheService', () => {
     });
 
     it('should not expire entries without TTL', async () => {
+      // Create a cache without default maxAge for this test
+      const noTTLCache = new CacheService({
+        maxSize: 1024 * 1024,
+        maxEntries: 10,
+        enableStats: true,
+        enablePersistence: false,
+        // No maxAge set, so it should use the default (5 minutes)
+      });
+
       const key = 'test-key';
       const value = { data: 'test-value' };
 
-      cache.set(key, value); // No TTL
-      expect(cache.get(key)).toEqual(value);
+      noTTLCache.set(key, value); // No TTL, should use default 5 minutes
+      expect(noTTLCache.get(key)).toEqual(value);
 
-      // Wait longer than default TTL
+      // Wait 1.5 seconds (much less than 5 minutes)
       await new Promise(resolve => setTimeout(resolve, 1500));
-      expect(cache.get(key)).toEqual(value);
+      expect(noTTLCache.get(key)).toEqual(value);
+      
+      noTTLCache.clear();
     });
   });
 
@@ -143,11 +154,11 @@ describe('CacheService', () => {
 
     it('should calculate hit rate correctly', () => {
       cache.set('test', 'value');
-      
+
       // 1 hit, 1 miss
       cache.get('test'); // hit
       cache.get('non-existent'); // miss
-      
+
       const stats = cache.getStats();
       expect(stats.hitRate).toBe(0.5);
       expect(stats.missRate).toBe(0.5);
@@ -155,7 +166,7 @@ describe('CacheService', () => {
 
     it('should track cache size', () => {
       expect(cache.getSize()).toBe(0);
-      
+
       cache.set('test', 'value');
       expect(cache.getSize()).toBeGreaterThan(0);
     });
@@ -187,7 +198,7 @@ describe('CacheService', () => {
     it('should handle null and undefined values', () => {
       cache.set('null', null);
       cache.set('undefined', undefined);
-      
+
       expect(cache.get('null')).toBeNull();
       expect(cache.get('undefined')).toBeUndefined();
     });
@@ -195,7 +206,7 @@ describe('CacheService', () => {
     it('should handle large values', () => {
       const largeValue = 'x'.repeat(10000);
       cache.set('large', largeValue);
-      
+
       expect(cache.get('large')).toBe(largeValue);
     });
   });

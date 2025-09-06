@@ -4,13 +4,7 @@ import React, { createContext, useContext, useState, useCallback, useEffect } fr
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
-import { 
-  CheckCircle, 
-  AlertCircle, 
-  Info, 
-  X, 
-  AlertTriangle 
-} from 'lucide-react';
+import { CheckCircle, AlertCircle, Info, X, AlertTriangle } from 'lucide-react';
 
 export type ToastType = 'success' | 'error' | 'warning' | 'info';
 
@@ -57,9 +51,9 @@ export function ToastProvider({ children }: ToastProviderProps) {
       duration: 5000,
       ...toast,
     };
-    
+
     setToasts(prev => [...prev, newToast]);
-    
+
     // Auto remove after duration
     if (newToast.duration && newToast.duration > 0) {
       setTimeout(() => {
@@ -162,27 +156,15 @@ function ToastItem({ toast, onRemove }: ToastItemProps) {
           <div className="flex-1 min-w-0">
             <h4 className="font-semibold text-sm">{toast.title}</h4>
             {toast.description && (
-              <p className="text-sm text-muted-foreground mt-1">
-                {toast.description}
-              </p>
+              <p className="text-sm text-muted-foreground mt-1">{toast.description}</p>
             )}
             {toast.action && (
-              <Button
-                variant="outline"
-                size="sm"
-                className="mt-2"
-                onClick={toast.action.onClick}
-              >
+              <Button variant="outline" size="sm" className="mt-2" onClick={toast.action.onClick}>
                 {toast.action.label}
               </Button>
             )}
           </div>
-          <Button
-            variant="ghost"
-            size="sm"
-            className="h-6 w-6 p-0"
-            onClick={handleRemove}
-          >
+          <Button variant="ghost" size="sm" className="h-6 w-6 p-0" onClick={handleRemove}>
             <X className="h-4 w-4" />
           </Button>
         </div>
@@ -195,21 +177,33 @@ function ToastItem({ toast, onRemove }: ToastItemProps) {
 export function useToastHelpers() {
   const { addToast } = useToast();
 
-  const success = useCallback((title: string, description?: string) => {
-    addToast({ type: 'success', title, description });
-  }, [addToast]);
+  const success = useCallback(
+    (title: string, description?: string) => {
+      addToast({ type: 'success', title, description });
+    },
+    [addToast]
+  );
 
-  const error = useCallback((title: string, description?: string) => {
-    addToast({ type: 'error', title, description });
-  }, [addToast]);
+  const error = useCallback(
+    (title: string, description?: string) => {
+      addToast({ type: 'error', title, description });
+    },
+    [addToast]
+  );
 
-  const warning = useCallback((title: string, description?: string) => {
-    addToast({ type: 'warning', title, description });
-  }, [addToast]);
+  const warning = useCallback(
+    (title: string, description?: string) => {
+      addToast({ type: 'warning', title, description });
+    },
+    [addToast]
+  );
 
-  const info = useCallback((title: string, description?: string) => {
-    addToast({ type: 'info', title, description });
-  }, [addToast]);
+  const info = useCallback(
+    (title: string, description?: string) => {
+      addToast({ type: 'info', title, description });
+    },
+    [addToast]
+  );
 
   return { success, error, warning, info };
 }

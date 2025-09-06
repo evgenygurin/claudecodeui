@@ -60,14 +60,17 @@ export function ValidatedForm<T extends Record<string, any>>({
     isValid,
   } = useFormValidation(schema, initialData);
 
-  const handleSubmit = useCallback(async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    const result = await validate();
-    if (result.isValid && result.data) {
-      await onSubmit(result.data);
-    }
-  }, [validate, onSubmit]);
+  const handleSubmit = useCallback(
+    async (e: React.FormEvent) => {
+      e.preventDefault();
+
+      const result = await validate();
+      if (result.isValid && result.data) {
+        await onSubmit(result.data);
+      }
+    },
+    [validate, onSubmit]
+  );
 
   const contextValue: FormContextType = {
     getFieldError,
@@ -88,7 +91,8 @@ export function ValidatedForm<T extends Record<string, any>>({
   );
 }
 
-interface ValidatedInputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'onBlur'> {
+interface ValidatedInputProps
+  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'onChange' | 'onBlur'> {
   name: string;
   label?: string;
   helperText?: string;
@@ -103,8 +107,9 @@ export function ValidatedInput({
   className,
   ...props
 }: ValidatedInputProps) {
-  const { getFieldError, hasFieldError, isFieldTouched, setFieldValue, setFieldTouched } = useFormField();
-  
+  const { getFieldError, hasFieldError, isFieldTouched, setFieldValue, setFieldTouched } =
+    useFormField();
+
   const error = getFieldError(name);
   const hasError = hasFieldError(name);
   const isTouched = isFieldTouched(name);
@@ -137,9 +142,7 @@ export function ValidatedInput({
         )}
         {...props}
       />
-      {showFieldError && (
-        <p className="text-sm text-red-500">{error}</p>
-      )}
+      {showFieldError && <p className="text-sm text-red-500">{error}</p>}
       {helperText && !showFieldError && (
         <p className="text-sm text-muted-foreground">{helperText}</p>
       )}
@@ -147,7 +150,8 @@ export function ValidatedInput({
   );
 }
 
-interface ValidatedTextareaProps extends Omit<React.TextareaHTMLAttributes<HTMLTextAreaElement>, 'onChange' | 'onBlur'> {
+interface ValidatedTextareaProps
+  extends Omit<React.TextareaHTMLAttributes<HTMLTextAreaElement>, 'onChange' | 'onBlur'> {
   name: string;
   label?: string;
   helperText?: string;
@@ -162,8 +166,9 @@ export function ValidatedTextarea({
   className,
   ...props
 }: ValidatedTextareaProps) {
-  const { getFieldError, hasFieldError, isFieldTouched, setFieldValue, setFieldTouched } = useFormField();
-  
+  const { getFieldError, hasFieldError, isFieldTouched, setFieldValue, setFieldTouched } =
+    useFormField();
+
   const error = getFieldError(name);
   const hasError = hasFieldError(name);
   const isTouched = isFieldTouched(name);
@@ -196,9 +201,7 @@ export function ValidatedTextarea({
         )}
         {...props}
       />
-      {showFieldError && (
-        <p className="text-sm text-red-500">{error}</p>
-      )}
+      {showFieldError && <p className="text-sm text-red-500">{error}</p>}
       {helperText && !showFieldError && (
         <p className="text-sm text-muted-foreground">{helperText}</p>
       )}
@@ -206,7 +209,8 @@ export function ValidatedTextarea({
   );
 }
 
-interface ValidatedSelectProps extends Omit<React.SelectHTMLAttributes<HTMLSelectElement>, 'onChange' | 'onBlur'> {
+interface ValidatedSelectProps
+  extends Omit<React.SelectHTMLAttributes<HTMLSelectElement>, 'onChange' | 'onBlur'> {
   name: string;
   label?: string;
   helperText?: string;
@@ -223,8 +227,9 @@ export function ValidatedSelect({
   className,
   ...props
 }: ValidatedSelectProps) {
-  const { getFieldError, hasFieldError, isFieldTouched, setFieldValue, setFieldTouched } = useFormField();
-  
+  const { getFieldError, hasFieldError, isFieldTouched, setFieldValue, setFieldTouched } =
+    useFormField();
+
   const error = getFieldError(name);
   const hasError = hasFieldError(name);
   const isTouched = isFieldTouched(name);
@@ -257,15 +262,13 @@ export function ValidatedSelect({
         )}
         {...props}
       >
-        {options.map((option) => (
+        {options.map(option => (
           <option key={option.value} value={option.value}>
             {option.label}
           </option>
         ))}
       </select>
-      {showFieldError && (
-        <p className="text-sm text-red-500">{error}</p>
-      )}
+      {showFieldError && <p className="text-sm text-red-500">{error}</p>}
       {helperText && !showFieldError && (
         <p className="text-sm text-muted-foreground">{helperText}</p>
       )}
@@ -285,9 +288,7 @@ export function FormErrorSummary({ errors, className }: FormErrorSummaryProps) {
     <div className={cn('rounded-md bg-red-50 p-4', className)}>
       <div className="flex">
         <div className="ml-3">
-          <h3 className="text-sm font-medium text-red-800">
-            Please correct the following errors:
-          </h3>
+          <h3 className="text-sm font-medium text-red-800">Please correct the following errors:</h3>
           <div className="mt-2 text-sm text-red-700">
             <ul className="list-disc pl-5 space-y-1">
               {errors.map((error, index) => (

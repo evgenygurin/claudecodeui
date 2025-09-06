@@ -4,6 +4,7 @@ import { getErrorMessage } from '@/utils/error-handler';
  * Comprehensive form validation with error handling
  */
 
+import React from 'react';
 import { z } from 'zod';
 import { logger } from '@/utils/logger';
 
@@ -42,7 +43,7 @@ export class FormValidator {
     try {
       // Zod validation
       const zodResult = this.schema.safeParse(data);
-      
+
       if (!zodResult.success) {
         const errors: ValidationError[] = zodResult.error.errors.map(err => ({
           field: err.path.join('.'),
@@ -62,7 +63,7 @@ export class FormValidator {
 
       // Run custom validators on valid data
       const customErrors = this.runCustomValidators(zodResult.data);
-      
+
       if (customErrors.length > 0) {
         return {
           isValid: false,
@@ -79,11 +80,13 @@ export class FormValidator {
       logger.error('Form validation error', { error: getErrorMessage(error), data });
       return {
         isValid: false,
-        errors: [{
-          field: 'general',
-          message: 'Validation failed due to an unexpected error',
-          code: 'VALIDATION_ERROR',
-        }],
+        errors: [
+          {
+            field: 'general',
+            message: 'Validation failed due to an unexpected error',
+            code: 'VALIDATION_ERROR',
+          },
+        ],
       };
     }
   }
@@ -95,7 +98,7 @@ export class FormValidator {
       try {
         const fieldValue = this.getNestedValue(data, field);
         const errorMessage = validator(fieldValue);
-        
+
         if (errorMessage) {
           errors.push({
             field,
@@ -119,36 +122,43 @@ export class FormValidator {
 // Common validation schemas
 export const commonSchemas = {
   email: z.string().email('Invalid email address'),
-  password: z.string()
+  password: z
+    .string()
     .min(8, 'Password must be at least 8 characters')
     .regex(/[A-Z]/, 'Password must contain at least one uppercase letter')
     .regex(/[a-z]/, 'Password must contain at least one lowercase letter')
     .regex(/[0-9]/, 'Password must contain at least one number')
     .regex(/[^A-Za-z0-9]/, 'Password must contain at least one special character'),
-  
-  username: z.string()
+
+  username: z
+    .string()
     .min(3, 'Username must be at least 3 characters')
     .max(20, 'Username must be less than 20 characters')
     .regex(/^[a-zA-Z0-9_]+$/, 'Username can only contain letters, numbers, and underscores'),
-  
-  projectName: z.string()
+
+  projectName: z
+    .string()
     .min(1, 'Project name is required')
     .max(100, 'Project name must be less than 100 characters')
-    .regex(/^[a-zA-Z0-9\s\-_]+$/, 'Project name can only contain letters, numbers, spaces, hyphens, and underscores'),
-  
-  fileName: z.string()
+    .regex(
+      /^[a-zA-Z0-9\s\-_]+$/,
+      'Project name can only contain letters, numbers, spaces, hyphens, and underscores'
+    ),
+
+  fileName: z
+    .string()
     .min(1, 'File name is required')
     .max(255, 'File name must be less than 255 characters')
     .regex(/^[^<>:"/\\|?*]+$/, 'File name contains invalid characters'),
-  
+
   url: z.string().url('Invalid URL format'),
-  
+
   phone: z.string().regex(/^\+?[\d\s\-\(\)]+$/, 'Invalid phone number format'),
-  
-  date: z.string().refine((date) => !isNaN(Date.parse(date)), 'Invalid date format'),
-  
+
+  date: z.string().refine(date => !isNaN(Date.parse(date)), 'Invalid date format'),
+
   positiveNumber: z.number().positive('Must be a positive number'),
-  
+
   nonEmptyString: z.string().min(1, 'This field is required'),
 };
 
@@ -167,11 +177,16 @@ export const customValidators = {
   usernameAvailable: async (username: string): Promise<string | null> => {
     try {
       // In a real implementation, this would check against a database
-      const response = await fetch(`/api/users/check-username?username=${encodeURIComponent(username)}`);
+      const response = await fetch(
+        `/api/users/check-username?username=${encodeURIComponent(username)}`
+      );
       const result = await response.json();
       return result.available ? null : 'Username is already taken';
     } catch (error) {
-      logger.error('Username availability check failed', { error: getErrorMessage(error), username });
+      logger.error('Username availability check failed', {
+        error: getErrorMessage(error),
+        username,
+      });
       return 'Unable to verify username availability';
     }
   },
@@ -181,11 +196,16 @@ export const customValidators = {
    */
   projectNameUnique: async (projectName: string): Promise<string | null> => {
     try {
-      const response = await fetch(`/api/projects/check-name?name=${encodeURIComponent(projectName)}`);
+      const response = await fetch(
+        `/api/projects/check-name?name=${encodeURIComponent(projectName)}`
+      );
       const result = await response.json();
       return result.unique ? null : 'Project name already exists';
     } catch (error) {
-      logger.error('Project name uniqueness check failed', { error: getErrorMessage(error), projectName });
+      logger.error('Project name uniqueness check failed', {
+        error: getErrorMessage(error),
+        projectName,
+      });
       return 'Unable to verify project name uniqueness';
     }
   },
@@ -203,7 +223,11 @@ export const customValidators = {
       const result = await response.json();
       return result.valid ? null : result.error || 'Invalid file name';
     } catch (error) {
-      logger.error('File name validation failed', { error: getErrorMessage(error), fileName, directory });
+      logger.error('File name validation failed', {
+        error: getErrorMessage(error),
+        fileName,
+        directory,
+      });
       return 'Unable to validate file name';
     }
   },
@@ -240,30 +264,59 @@ export function useFormValidation<T extends Record<string, any>>(
     try {
       const result = validator.validate(data);
       setErrors(result.errors);
+      
+      // Mark all fields with errors as touched so they display
+      if (result.errors.length > 0) {
+        setTouched(prev => {
+          const newTouched = new Set(prev);
+          result.errors.forEach(error => newTouched.add(error.field));
+          return newTouched;
+        });
+      }
+      
       return result;
     } finally {
       setIsValidating(false);
     }
   }, [validator, data]);
 
-  const validateField = React.useCallback((field: string) => {
-    const result = validator.validate(data);
-    const fieldErrors = result.errors.filter(error => error.field === field);
-    setErrors(prev => prev.filter(error => error.field !== field).concat(fieldErrors));
-  }, [validator, data]);
+  const validateField = React.useCallback(
+    (field: string) => {
+      const result = validator.validate(data);
+      const fieldErrors = result.errors.filter(error => error.field === field);
+      setErrors(prev => prev.filter(error => error.field !== field).concat(fieldErrors));
+    },
+    [validator, data]
+  );
 
-  const setFieldValue = React.useCallback((field: string, value: any) => {
-    setData(prev => ({ ...prev, [field]: value }));
-    setTouched(prev => new Set(prev).add(field));
-    
-    // Validate field after a short delay
-    setTimeout(() => validateField(field), 300);
-  }, [validateField]);
+  const setFieldValue = React.useCallback(
+    (field: string, value: any) => {
+      setData(prev => ({ ...prev, [field]: value }));
+      setTouched(prev => new Set(prev).add(field));
 
-  const setFieldTouched = React.useCallback((field: string) => {
-    setTouched(prev => new Set(prev).add(field));
-    validateField(field);
-  }, [validateField]);
+      // Validate field after a short delay
+      setTimeout(() => validateField(field), 300);
+    },
+    [validateField]
+  );
+
+  const setFieldTouched = React.useCallback(
+    (field: string) => {
+      setTouched(prev => new Set(prev).add(field));
+      // Ensure field exists in data and validate after state update
+      setData(prev => {
+        const newData = { ...prev, [field]: prev[field] ?? '' };
+        // Validate field after data is updated
+        setTimeout(() => {
+          const result = validator.validate(newData);
+          const fieldErrors = result.errors.filter(error => error.field === field);
+          setErrors(prevErrors => prevErrors.filter(error => error.field !== field).concat(fieldErrors));
+        }, 0);
+        return newData;
+      });
+    },
+    [validator]
+  );
 
   const reset = React.useCallback(() => {
     setData(initialData);
@@ -271,17 +324,26 @@ export function useFormValidation<T extends Record<string, any>>(
     setTouched(new Set());
   }, [initialData]);
 
-  const getFieldError = React.useCallback((field: string): string | undefined => {
-    return errors.find(error => error.field === field)?.message;
-  }, [errors]);
+  const getFieldError = React.useCallback(
+    (field: string): string | undefined => {
+      return errors.find(error => error.field === field)?.message;
+    },
+    [errors]
+  );
 
-  const hasFieldError = React.useCallback((field: string): boolean => {
-    return errors.some(error => error.field === field);
-  }, [errors]);
+  const hasFieldError = React.useCallback(
+    (field: string): boolean => {
+      return errors.some(error => error.field === field);
+    },
+    [errors]
+  );
 
-  const isFieldTouched = React.useCallback((field: string): boolean => {
-    return touched.has(field);
-  }, [touched]);
+  const isFieldTouched = React.useCallback(
+    (field: string): boolean => {
+      return touched.has(field);
+    },
+    [touched]
+  );
 
   return {
     data,
@@ -298,6 +360,3 @@ export function useFormValidation<T extends Record<string, any>>(
     isValid: errors.length === 0,
   };
 }
-
-// Import React for hooks
-import React from 'react';

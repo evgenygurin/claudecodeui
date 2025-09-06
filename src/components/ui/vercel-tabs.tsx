@@ -5,17 +5,17 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './car
 import { Button } from './button';
 import { Badge } from './badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './tabs';
-import { 
-  Play, 
-  ExternalLink, 
-  CheckCircle, 
-  Clock, 
-  Zap, 
-  Globe, 
+import {
+  Play,
+  ExternalLink,
+  CheckCircle,
+  Clock,
+  Zap,
+  Globe,
   Code,
   Loader2,
   Copy,
-  Check
+  Check,
 } from 'lucide-react';
 
 export function VercelTabs() {
@@ -24,11 +24,12 @@ export function VercelTabs() {
 
   const handleDeploy = async () => {
     setIsDeploying(true);
-    
+
     try {
-      const deployUrl = 'https://vercel.com/new/clone?repository-url=https://github.com/evgenygurin/claudecodeui&project-name=claude-code-ui&repository-name=claudecodeui';
+      const deployUrl =
+        'https://vercel.com/new/clone?repository-url=https://github.com/evgenygurin/claudecodeui&project-name=claude-code-ui&repository-name=claudecodeui';
       window.open(deployUrl, '_blank', 'noopener,noreferrer');
-      
+
       setTimeout(() => {
         setIsDeploying(false);
       }, 2000);
@@ -53,18 +54,18 @@ export function VercelTabs() {
     {
       icon: Zap,
       title: 'Instant Deploy',
-      description: 'Deploy with zero configuration in seconds'
+      description: 'Deploy with zero configuration in seconds',
     },
     {
       icon: Globe,
       title: 'Global CDN',
-      description: 'Lightning-fast performance worldwide'
+      description: 'Lightning-fast performance worldwide',
     },
     {
       icon: Code,
       title: 'Git Integration',
-      description: 'Automatic deployments on every push'
-    }
+      description: 'Automatic deployments on every push',
+    },
   ];
 
   const steps = [
@@ -72,20 +73,20 @@ export function VercelTabs() {
       number: 1,
       title: 'Connect Repository',
       description: 'Link your GitHub repository to Vercel',
-      status: 'completed'
+      status: 'completed',
     },
     {
       number: 2,
       title: 'Configure Project',
       description: 'Set build settings and environment variables',
-      status: 'completed'
+      status: 'completed',
     },
     {
       number: 3,
       title: 'Deploy',
       description: 'Deploy your application to production',
-      status: 'pending'
-    }
+      status: 'pending',
+    },
   ];
 
   return (
@@ -99,8 +100,8 @@ export function VercelTabs() {
           <h1 className="text-3xl font-bold">Deploy to Vercel</h1>
         </div>
         <p className="text-muted-foreground max-w-2xl mx-auto">
-          Deploy Claude Code UI to Vercel in seconds with zero configuration. 
-          Get global CDN, automatic HTTPS, and instant deployments.
+          Deploy Claude Code UI to Vercel in seconds with zero configuration. Get global CDN,
+          automatic HTTPS, and instant deployments.
         </p>
       </div>
 
@@ -118,9 +119,7 @@ export function VercelTabs() {
                 <Play className="h-5 w-5" />
                 <span>One-Click Deploy</span>
               </CardTitle>
-              <CardDescription>
-                Deploy directly from GitHub with zero configuration
-              </CardDescription>
+              <CardDescription>Deploy directly from GitHub with zero configuration</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="flex items-center justify-center">
@@ -144,7 +143,7 @@ export function VercelTabs() {
                   )}
                 </Button>
               </div>
-              
+
               <div className="text-center text-sm text-muted-foreground">
                 This will open Vercel in a new tab where you can deploy the project
               </div>
@@ -155,19 +154,19 @@ export function VercelTabs() {
           <Card>
             <CardHeader>
               <CardTitle>Deployment Steps</CardTitle>
-              <CardDescription>
-                Follow these steps to deploy your application
-              </CardDescription>
+              <CardDescription>Follow these steps to deploy your application</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
-                {steps.map((step) => (
+                {steps.map(step => (
                   <div key={step.number} className="flex items-center space-x-4">
-                    <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
-                      step.status === 'completed' 
-                        ? 'bg-green-100 text-green-600' 
-                        : 'bg-gray-100 text-gray-600'
-                    }`}>
+                    <div
+                      className={`w-8 h-8 rounded-full flex items-center justify-center ${
+                        step.status === 'completed'
+                          ? 'bg-green-100 text-green-600'
+                          : 'bg-gray-100 text-gray-600'
+                      }`}
+                    >
                       {step.status === 'completed' ? (
                         <CheckCircle className="h-4 w-4" />
                       ) : (
@@ -178,12 +177,8 @@ export function VercelTabs() {
                       <h4 className="font-medium">{step.title}</h4>
                       <p className="text-sm text-muted-foreground">{step.description}</p>
                     </div>
-                    {step.status === 'completed' && (
-                      <Badge variant="secondary">Completed</Badge>
-                    )}
-                    {step.status === 'pending' && (
-                      <Badge variant="outline">Pending</Badge>
-                    )}
+                    {step.status === 'completed' && <Badge variant="secondary">Completed</Badge>}
+                    {step.status === 'pending' && <Badge variant="outline">Pending</Badge>}
                   </div>
                 ))}
               </div>
@@ -195,34 +190,22 @@ export function VercelTabs() {
           <Card>
             <CardHeader>
               <CardTitle>Deploy with Vercel CLI</CardTitle>
-              <CardDescription>
-                Deploy from your terminal using the Vercel CLI
-              </CardDescription>
+              <CardDescription>Deploy from your terminal using the Vercel CLI</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-2">
                 <h4 className="font-medium">Install Vercel CLI</h4>
-                <div className="bg-muted p-3 rounded-md font-mono text-sm">
-                  npm i -g vercel
-                </div>
+                <div className="bg-muted p-3 rounded-md font-mono text-sm">npm i -g vercel</div>
               </div>
-              
+
               <div className="space-y-2">
                 <h4 className="font-medium">Deploy to Production</h4>
                 <div className="flex items-center space-x-2">
                   <div className="bg-muted p-3 rounded-md font-mono text-sm flex-1">
                     npx vercel --prod
                   </div>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={copyCommand}
-                  >
-                    {copiedCommand ? (
-                      <Check className="h-4 w-4" />
-                    ) : (
-                      <Copy className="h-4 w-4" />
-                    )}
+                  <Button variant="outline" size="sm" onClick={copyCommand}>
+                    {copiedCommand ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
                   </Button>
                 </div>
               </div>

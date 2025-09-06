@@ -2,7 +2,11 @@
 
 import { getErrorMessage } from '@/utils/error-handler';
 import { logger } from '@/utils/logger';
-import { chatStorageService, type ChatSession, type ChatMessage } from '@/services/chat-storage.service';
+import {
+  chatStorageService,
+  type ChatSession,
+  type ChatMessage,
+} from '@/services/chat-storage.service';
 import * as React from 'react';
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { cn } from '@/lib/utils';
@@ -106,15 +110,17 @@ export function ModernChatInterface({ className }: ChatInterfaceProps) {
       try {
         const chats = chatStorageService.getAllChats();
         setAllChats(chats);
-        
+
         if (chats.length > 0) {
           // Load the most recent chat
           const recentChat = chats[0];
           setCurrentChat(recentChat);
-          setMessages(recentChat.messages.map(msg => ({
-            ...msg,
-            role: msg.role as 'user' | 'assistant' | 'system',
-          })));
+          setMessages(
+            recentChat.messages.map(msg => ({
+              ...msg,
+              role: msg.role as 'user' | 'assistant' | 'system',
+            }))
+          );
         } else {
           // Create a new chat if none exist
           const newChat = chatStorageService.createChat();
@@ -145,7 +151,7 @@ export function ModernChatInterface({ className }: ChatInterfaceProps) {
     try {
       // Save user message to storage
       const savedUserMessage = chatStorageService.addMessage(currentChat.id, 'user', inputValue);
-      
+
       const userMessage: Message = {
         id: savedUserMessage.id,
         role: 'user',
@@ -160,67 +166,76 @@ export function ModernChatInterface({ className }: ChatInterfaceProps) {
       setAttachments([]);
       setIsLoading(true);
 
-    try {
-      // Call MCP API for AI response
-      const response = await fetch('/api/mcp', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          method: 'tools/call',
-          params: {
-            name: 'claude_code_execute',
-            arguments: {
-              command: 'chat',
-              projectPath: '/current-project',
-              options: {
-                message: inputValue,
-                context: 'claude-code-ui',
-                attachments: attachments.map(f => ({ name: f.name, size: f.size, type: f.type })),
+      try {
+        // Call MCP API for AI response
+        const response = await fetch('/api/mcp', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            method: 'tools/call',
+            params: {
+              name: 'claude_code_execute',
+              arguments: {
+                command: 'chat',
+                projectPath: '/current-project',
+                options: {
+                  message: inputValue,
+                  context: 'claude-code-ui',
+                  attachments: attachments.map(f => ({ name: f.name, size: f.size, type: f.type })),
+                },
               },
             },
-          },
-        }),
-      });
+          }),
+        });
 
-      const data = await response.json();
+        const data = await response.json();
 
-      const assistantContent = data.content?.[0]?.text ||
-        `I received your message: "${messageContent}". This is a response from the MCP API.`;
-      
-      // Save assistant message to storage
-      const savedAssistantMessage = chatStorageService.addMessage(currentChat.id, 'assistant', assistantContent);
+        const assistantContent =
+          data.content?.[0]?.text ||
+          `I received your message: "${messageContent}". This is a response from the MCP API.`;
 
-      const assistantMessage: Message = {
-        id: savedAssistantMessage.id,
-        role: 'assistant',
-        content: assistantContent,
-        timestamp: savedAssistantMessage.timestamp,
-        reactions: { thumbsUp: 0, thumbsDown: 0 },
-      };
+        // Save assistant message to storage
+        const savedAssistantMessage = chatStorageService.addMessage(
+          currentChat.id,
+          'assistant',
+          assistantContent
+        );
 
-      setMessages(prev => [...prev, assistantMessage]);
-    } catch (error) {
-      logger.error('Error sending message:', error);
+        const assistantMessage: Message = {
+          id: savedAssistantMessage.id,
+          role: 'assistant',
+          content: assistantContent,
+          timestamp: savedAssistantMessage.timestamp,
+          reactions: { thumbsUp: 0, thumbsDown: 0 },
+        };
 
-      const errorContent = `Sorry, I encountered an error: ${error instanceof Error ? getErrorMessage(error) : 'Unknown error'}`;
-      
-      // Save error message to storage
-      const savedErrorMessage = chatStorageService.addMessage(currentChat.id, 'assistant', errorContent);
+        setMessages(prev => [...prev, assistantMessage]);
+      } catch (error) {
+        logger.error('Error sending message:', error);
 
-      const errorMessage: Message = {
-        id: savedErrorMessage.id,
-        role: 'assistant',
-        content: errorContent,
-        timestamp: savedErrorMessage.timestamp,
-        reactions: { thumbsUp: 0, thumbsDown: 0 },
-      };
+        const errorContent = `Sorry, I encountered an error: ${error instanceof Error ? getErrorMessage(error) : 'Unknown error'}`;
 
-      setMessages(prev => [...prev, errorMessage]);
-    } finally {
-      setIsLoading(false);
-    }
+        // Save error message to storage
+        const savedErrorMessage = chatStorageService.addMessage(
+          currentChat.id,
+          'assistant',
+          errorContent
+        );
+
+        const errorMessage: Message = {
+          id: savedErrorMessage.id,
+          role: 'assistant',
+          content: errorContent,
+          timestamp: savedErrorMessage.timestamp,
+          reactions: { thumbsUp: 0, thumbsDown: 0 },
+        };
+
+        setMessages(prev => [...prev, errorMessage]);
+      } finally {
+        setIsLoading(false);
+      }
     } catch (error) {
       logger.error('Error in handleSendMessage:', error);
       setIsLoading(false);
@@ -294,10 +309,12 @@ export function ModernChatInterface({ className }: ChatInterfaceProps) {
       const chat = chatStorageService.getChat(chatId);
       if (chat) {
         setCurrentChat(chat);
-        setMessages(chat.messages.map(msg => ({
-          ...msg,
-          role: msg.role as 'user' | 'assistant' | 'system',
-        })));
+        setMessages(
+          chat.messages.map(msg => ({
+            ...msg,
+            role: msg.role as 'user' | 'assistant' | 'system',
+          }))
+        );
         logger.info('Switched to chat', { chatId });
       }
     } catch (error) {
@@ -310,7 +327,7 @@ export function ModernChatInterface({ className }: ChatInterfaceProps) {
       const success = chatStorageService.deleteChat(chatId);
       if (success) {
         setAllChats(prev => prev.filter(chat => chat.id !== chatId));
-        
+
         // If we deleted the current chat, switch to another one or create new
         if (currentChat?.id === chatId) {
           const remainingChats = allChats.filter(chat => chat.id !== chatId);
@@ -320,7 +337,7 @@ export function ModernChatInterface({ className }: ChatInterfaceProps) {
             createNewChat();
           }
         }
-        
+
         logger.info('Deleted chat', { chatId });
       }
     } catch (error) {

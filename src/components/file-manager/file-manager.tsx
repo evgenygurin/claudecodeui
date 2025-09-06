@@ -246,14 +246,14 @@ export function FileManager({ className }: FileManagerProps) {
           <span className="text-sm text-muted-foreground">{files.length} items</span>
         </div>
         <div className="flex items-center gap-2">
-          <Button 
-            variant="outline" 
+          <Button
+            variant="outline"
             size="sm"
             onClick={() => {
               const input = document.createElement('input');
               input.type = 'file';
               input.multiple = true;
-              input.onchange = (e) => {
+              input.onchange = e => {
                 const files = (e.target as HTMLInputElement).files;
                 if (files && files.length > 0) {
                   console.log('Files selected for upload', files.length);
@@ -266,8 +266,8 @@ export function FileManager({ className }: FileManagerProps) {
             <Upload className="h-4 w-4 mr-2" />
             Upload
           </Button>
-          <Button 
-            variant="outline" 
+          <Button
+            variant="outline"
             size="sm"
             onClick={() => {
               const folderName = prompt('Enter folder name:');

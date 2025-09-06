@@ -33,12 +33,12 @@ export class LoadingErrorBoundary extends Component<
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    logger.error('Error boundary caught an error', { 
-      error: getErrorMessage(error), 
+    logger.error('Error boundary caught an error', {
+      error: getErrorMessage(error),
       stack: error.stack,
-      componentStack: errorInfo.componentStack 
+      componentStack: errorInfo.componentStack,
     });
-    
+
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
@@ -90,7 +90,7 @@ export function LoadingState({
   children,
   onRetry,
   loadingText = 'Loading...',
-  errorTitle = 'Error'
+  errorTitle = 'Error',
 }: LoadingStateProps) {
   if (loading) {
     return (
@@ -135,9 +135,7 @@ export function EmptyState({ icon, title, description, action }: EmptyStateProps
       <div className="text-center">
         {icon && <div className="mb-4">{icon}</div>}
         <h3 className="text-lg font-semibold mb-2">{title}</h3>
-        {description && (
-          <p className="text-muted-foreground mb-4">{description}</p>
-        )}
+        {description && <p className="text-muted-foreground mb-4">{description}</p>}
         {action && <div>{action}</div>}
       </div>
     </div>

@@ -418,16 +418,18 @@ export class AuthService {
       isAuthenticated,
       isTokenExpired,
       timeUntilExpiration,
-      user: user ? {
-        ...user,
-        preferences: {
-          theme: 'system' as const,
-          language: 'en',
-          fontSize: 14,
-          autoSave: true,
-          notifications: true,
-        }
-      } : null,
+      user: user
+        ? {
+            ...user,
+            preferences: {
+              theme: 'system' as const,
+              language: 'en',
+              fontSize: 14,
+              autoSave: true,
+              notifications: true,
+            },
+          }
+        : null,
     };
   }
 

@@ -324,7 +324,6 @@ export interface WebSocketErrorEvent {
   };
 }
 
-
 export interface TokenRefreshedEvent {
   type: 'auth.token_refreshed';
   data: {
