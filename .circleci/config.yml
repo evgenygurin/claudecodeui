@@ -12,13 +12,26 @@ jobs:
       - image: cimg/node:22.0
     steps:
       - checkout
-      - node/install-packages:
-          cache-version: v1
+      - restore_cache:
+          keys:
+            - node-modules-v2-{{ checksum "package.json" }}
+            - node-modules-v2-
+      - run:
+          name: Clean install dependencies
+          command: |
+            # Remove existing node_modules and package-lock.json to ensure clean install
+            rm -rf node_modules package-lock.json
+            # Install dependencies fresh
+            npm install
       - persist_to_workspace:
           root: ~/project
           paths:
             - node_modules
             - package-lock.json
+      - save_cache:
+          key: node-modules-v2-{{ checksum "package.json" }}
+          paths:
+            - node_modules
 
   # Run linting and type checking
   lint-and-typecheck:
