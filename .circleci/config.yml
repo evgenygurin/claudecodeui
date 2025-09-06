@@ -1,0 +1,186 @@
+version: 2.1
+
+# Define reusable orbs
+orbs:
+  node: circleci/node@5.1.0
+  cypress: cypress-io/cypress@3.0.0
+
+# Define jobs
+jobs:
+  # Install dependencies and cache them
+  install-deps:
+    docker:
+      - image: cimg/node:22.0
+    steps:
+      - checkout
+      - node/install-packages:
+          cache-version: v1
+      - persist_to_workspace:
+          root: ~/project
+          paths:
+            - node_modules
+            - package-lock.json
+
+  # Run linting and type checking
+  lint-and-typecheck:
+    docker:
+      - image: cimg/node:22.0
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/project
+      - run:
+          name: Run ESLint
+          command: npm run lint
+      - run:
+          name: Run TypeScript type check
+          command: npm run type-check
+      - run:
+          name: Check Prettier formatting
+          command: npm run format:check
+
+  # Run unit tests
+  test:
+    docker:
+      - image: cimg/node:22.0
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/project
+      - run:
+          name: Run unit tests
+          command: npm run test:ci
+      - store_test_results:
+          path: coverage
+      - store_artifacts:
+          path: coverage
+          destination: coverage
+
+  # Run E2E tests with Cypress
+  e2e-tests:
+    docker:
+      - image: cimg/node:22.0
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/project
+      - run:
+          name: Build application for E2E tests
+          command: npm run build
+      - cypress/run:
+          start: npm start
+          wait-on: 'http://localhost:3000'
+          wait-on-timeout: 120
+          browser: chrome
+          record: true
+          parallel: true
+          group: 'E2E Tests'
+      - store_test_results:
+          path: cypress/results
+      - store_artifacts:
+          path: cypress/screenshots
+          destination: screenshots
+      - store_artifacts:
+          path: cypress/videos
+          destination: videos
+
+  # Build the application
+  build:
+    docker:
+      - image: cimg/node:22.0
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/project
+      - run:
+          name: Build application
+          command: npm run build
+      - persist_to_workspace:
+          root: ~/project
+          paths:
+            - .next
+            - public
+
+  # Deploy to Vercel (if configured)
+  deploy:
+    docker:
+      - image: cimg/node:22.0
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/project
+      - run:
+          name: Install Vercel CLI
+          command: npm install -g vercel@latest
+      - run:
+          name: Deploy to Vercel
+          command: |
+            if [ -n "$VERCEL_TOKEN" ]; then
+              vercel --token $VERCEL_TOKEN --prod --yes
+            else
+              echo "Vercel token not configured, skipping deployment"
+            fi
+
+# Define workflows
+workflows:
+  # Main workflow for pull requests and main branch
+  test-and-deploy:
+    jobs:
+      # Always install dependencies first
+      - install-deps
+
+      # Run quality checks in parallel
+      - lint-and-typecheck:
+          requires:
+            - install-deps
+
+      # Run unit tests
+      - test:
+          requires:
+            - install-deps
+
+      # Build application
+      - build:
+          requires:
+            - install-deps
+
+      # Run E2E tests (only on main branch or when specifically requested)
+      - e2e-tests:
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - main
+                - develop
+
+      # Deploy to production (only on main branch)
+      - deploy:
+          requires:
+            - lint-and-typecheck
+            - test
+            - build
+          filters:
+            branches:
+              only: main
+
+  # Quick workflow for feature branches (faster feedback)
+  quick-checks:
+    jobs:
+      - install-deps
+      - lint-and-typecheck:
+          requires:
+            - install-deps
+      - test:
+          requires:
+            - install-deps
+    filters:
+      branches:
+        ignore:
+          - main
+          - develop
+
+# Environment variables (set these in CircleCI project settings)
+# VERCEL_TOKEN: Your Vercel deployment token
+# CYPRESS_RECORD_KEY: Your Cypress record key (optional, for parallel test runs)
+# GITHUB_TOKEN: GitHub token for accessing private repositories (if needed)
