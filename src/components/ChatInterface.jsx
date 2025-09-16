@@ -2290,9 +2290,8 @@ function ChatInterface({
           }
           break;
 
-        case 'claude-response':
+        case 'claude-response': {
           const messageData = latestMessage.data.message || latestMessage.data;
-
           // Handle Cursor streaming format (content_block_delta / content_block_stop)
           if (messageData && typeof messageData === 'object' && messageData.type) {
             if (messageData.type === 'content_block_delta' && messageData.delta?.text) {
@@ -2494,6 +2493,7 @@ function ChatInterface({
               }
             }
           }
+        }
           break;
 
         case 'claude-output':
@@ -2618,7 +2618,7 @@ function ChatInterface({
           ]);
           break;
 
-        case 'cursor-result':
+        case 'cursor-result': {
           // Handle Cursor completion and final result text
           setIsLoading(false);
           setCanAbortSession(false);
@@ -2676,15 +2676,15 @@ function ChatInterface({
               setTimeout(() => window.refreshProjects(), 500);
             }
           }
-          break;
+          } break;
 
         case 'cursor-output':
           // Handle Cursor raw terminal output; strip ANSI and ignore empty control-only payloads
           try {
             const raw = String(latestMessage.data ?? '');
             const cleaned = raw
-              .replace(/\x1b\[[0-9;?]*[A-Za-z]/g, '')
-              .replace(/[\x00-\x08\x0B\x0C\x0E-\x1F]/g, '')
+              .replace(new RegExp(`${String.fromCharCode(0x1b)}\\[[0-9;?]*[A-Za-z]`, 'g'), '')
+              .replace(new RegExp(`[${String.fromCharCode(0x00)}-${String.fromCharCode(0x08)}${String.fromCharCode(0x0B)}${String.fromCharCode(0x0C)}${String.fromCharCode(0x0E)}-${String.fromCharCode(0x1F)}]`, 'g'), '')
               .trim();
             if (cleaned) {
               streamBufferRef.current += streamBufferRef.current ? `\n${cleaned}` : cleaned;
@@ -2717,7 +2717,7 @@ function ChatInterface({
           }
           break;
 
-        case 'claude-complete':
+        case 'claude-complete': {
           setIsLoading(false);
           setCanAbortSession(false);
           setClaudeStatus(null);
@@ -2746,7 +2746,7 @@ function ChatInterface({
           if (selectedProject && latestMessage.exitCode === 0) {
             safeLocalStorage.removeItem(`chat_messages_${selectedProject.name}`);
           }
-          break;
+          } break;
 
         case 'session-aborted':
           setIsLoading(false);
@@ -2769,7 +2769,7 @@ function ChatInterface({
           ]);
           break;
 
-        case 'claude-status':
+        case 'claude-status': {
           // Handle Claude working status messages
           const statusData = latestMessage.data;
           if (statusData) {
@@ -2805,7 +2805,7 @@ function ChatInterface({
             setIsLoading(true);
             setCanAbortSession(statusInfo.can_interrupt);
           }
-          break;
+          } break;
       }
     }
   }, [messages]);

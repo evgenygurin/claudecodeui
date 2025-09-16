@@ -82,6 +82,7 @@ function Sidebar({
   const [showNewProject, setShowNewProject] = useState(false);
   const [editingName, setEditingName] = useState('');
   const [newProjectPath, setNewProjectPath] = useState('');
+  const [showSuggestions, setShowSuggestions] = useState(false);
   const [creatingProject, setCreatingProject] = useState(false);
   const [loadingSessions, setLoadingSessions] = useState({});
   const [additionalSessions, setAdditionalSessions] = useState({});
@@ -421,7 +422,13 @@ function Sidebar({
     setEditingName('');
   };
 
+
+  const updateSessionSummary = async (projectName, sessionId, newSummary) => {
+    // TODO: Implement session summary update
+    console.log("Updating session summary:", projectName, sessionId, newSummary);
+  };
   const saveProjectName = async projectName => {
+
     try {
       const response = await api.renameProject(projectName, editingName);
 

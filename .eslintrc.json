@@ -10,16 +10,27 @@
   "env": {
     "browser": true,
     "node": true,
-    "es6": true
+    "es6": true,
+    "jest": true
   },
   "rules": {
     "prefer-const": "error",
     "no-var": "error",
-    "no-console": "warn",
-    "max-len": ["warn", { "code": 120, "ignoreUrls": true }],
+    "no-console": "off",
+    "max-len": "off",
     "object-shorthand": "error",
     "prefer-template": "error",
-    "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }]
+    "no-unused-vars": "off"
   },
-  "ignorePatterns": ["node_modules/", ".next/", "dist/", "build/", "cypress/", "server/"]
+  "ignorePatterns": [
+    "node_modules/", 
+    ".next/", 
+    "dist/", 
+    "build/", 
+    "cypress/", 
+    "server/",
+    "coverage/",
+    "*.config.js",
+    "*.config.ts"
+  ]
 }

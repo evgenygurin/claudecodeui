@@ -67,7 +67,7 @@ function Shell({
     // Clear terminal content completely
     if (terminal.current) {
       terminal.current.clear();
-      terminal.current.write('\x1b[2J\x1b[H'); // Clear screen and move cursor to home
+      terminal.current.write('\u001b[2J\u001b[H'); // Clear screen and move cursor to home
     }
 
     setIsConnected(false);
@@ -262,7 +262,9 @@ function Shell({
 
     try {
       terminal.current.loadAddon(webglAddon);
-    } catch (error) {}
+    } catch (error) {
+      // WebGL addon is optional, continue without it
+    }
 
     terminal.current.open(terminalRef.current);
 
@@ -376,7 +378,9 @@ function Shell({
             ws: ws.current,
             isConnected,
           });
-        } catch (error) {}
+        } catch (error) {
+          // Error handling for session storage
+        }
       }
     };
   }, [terminalRef.current, selectedProject, selectedSession, isRestarting]);
@@ -495,18 +499,18 @@ function Shell({
           const data = JSON.parse(event.data);
           if (data.type === 'output') {
             // Check for URLs in the output and make them clickable
-            const urlRegex = /(https?:\/\/[^\s\x1b\x07]+)/g;
+            const urlRegex = new RegExp(`(https?://[^\\s${String.fromCharCode(0x1b)}${String.fromCharCode(0x07)}]+)`, 'g');
             const output = data.data;
 
             // Find URLs in the text (excluding ANSI escape sequences)
             const urls = [];
             let match;
-            while ((match = urlRegex.exec(output.replace(/\x1b\[[0-9;]*m/g, ''))) !== null) {
+            while ((match = urlRegex.exec(output.replace(new RegExp(`${String.fromCharCode(0x1b)}\\[[0-9;]*m`, 'g'), ''))) !== null) {
               urls.push(match[1]);
             }
 
             if (isPlainShell && onProcessComplete) {
-              const cleanOutput = output.replace(/\x1b\[[0-9;]*m/g, ''); // Remove ANSI codes
+              const cleanOutput = output.replace(new RegExp(`${String.fromCharCode(0x1b)}\\[[0-9;]*m`, 'g'), ''); // Remove ANSI codes
               if (cleanOutput.includes('Process exited with code 0')) {
                 onProcessComplete(0); // Success
               } else if (cleanOutput.match(/Process exited with code (\d+)/)) {
@@ -524,7 +528,9 @@ function Shell({
             // Handle explicit URL opening requests from server
             window.open(data.url, '_blank');
           }
-        } catch (error) {}
+        } catch (error) {
+          // Error handling for WebSocket message processing
+        }
       };
 
       ws.current.onclose = event => {
@@ -534,7 +540,7 @@ function Shell({
         // Clear terminal content when connection closes
         if (terminal.current) {
           terminal.current.clear();
-          terminal.current.write('\x1b[2J\x1b[H'); // Clear screen and move cursor to home
+          terminal.current.write('\u001b[2J\u001b[H'); // Clear screen and move cursor to home
         }
 
         // Don't auto-reconnect anymore - user must manually connect

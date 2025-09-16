@@ -103,7 +103,7 @@ const TaskList = ({
           aVal = a.title.toLowerCase();
           bVal = b.title.toLowerCase();
           break;
-        case 'status':
+        case 'status': {
           // Custom status ordering: pending, in-progress, done, blocked, deferred, cancelled
           const statusOrder = {
             pending: 1,
@@ -115,19 +115,19 @@ const TaskList = ({
           };
           aVal = statusOrder[a.status] || 99;
           bVal = statusOrder[b.status] || 99;
-          break;
-        case 'priority':
+          } break;
+        case 'priority': {
           // Custom priority ordering: high should be sorted first in descending
           const priorityOrder = { high: 3, medium: 2, low: 1 };
           aVal = priorityOrder[a.priority] || 0;
           bVal = priorityOrder[b.priority] || 0;
-          break;
+          } break;
         case 'updated':
           aVal = new Date(a.updatedAt || a.createdAt || 0);
           bVal = new Date(b.updatedAt || b.createdAt || 0);
           break;
         case 'id':
-        default:
+        default: {
           // Handle numeric and dotted IDs (1, 1.1, 1.2, 2, 2.1, etc.)
           const parseId = id => {
             const parts = id.toString().split('.');
@@ -147,7 +147,7 @@ const TaskList = ({
               break;
             }
           }
-          break;
+          } break;
       }
 
       if (sortBy === 'updated') {
