@@ -32,7 +32,14 @@ import cors from 'cors';
 import { promises as fsPromises } from 'fs';
 import { spawn } from 'child_process';
 import os from 'os';
-import pty from 'node-pty';
+// Use mock pty to avoid compilation issues
+let pty;
+try {
+    pty = await import('node-pty');
+} catch (err) {
+    console.log('node-pty not available, using mock implementation');
+    pty = await import('./pty-mock.js');
+}
 import fetch from 'node-fetch';
 import mime from 'mime-types';
 
