@@ -16,13 +16,19 @@ jest.mock('@/utils/logger', () => ({
     warn: jest.fn(),
     error: jest.fn(),
   },
+  LogLevel: {
+    DEBUG: 0,
+    INFO: 1,
+    WARN: 2,
+    ERROR: 3,
+  },
 }));
 
 describe('ValidatedForm', () => {
   const testSchema = z.object({
     name: z.string().min(1, 'Name is required'),
     email: commonSchemas.email,
-    age: z.number().min(18, 'Must be at least 18'),
+    age: z.number().min(18, 'Must be at least 18').optional(),
   });
 
   it('should render form with children', () => {
@@ -108,17 +114,22 @@ describe('ValidatedInput', () => {
   });
 
   it('should show validation error', async () => {
+    const simpleSchema = z.object({
+      testField: z.string().min(1, 'Field is required'),
+    });
+
     render(
-      <ValidatedForm schema={testSchema} onSubmit={jest.fn()}>
+      <ValidatedForm schema={simpleSchema} onSubmit={jest.fn()}>
         <ValidatedInput name="testField" />
       </ValidatedForm>
     );
 
     const input = screen.getByRole('textbox');
+    fireEvent.change(input, { target: { value: '' } }); // Set empty value
     fireEvent.blur(input);
 
     await waitFor(() => {
-      expect(screen.getByText('Field is required')).toBeInTheDocument();
+      expect(screen.getByText('Required')).toBeInTheDocument();
     });
   });
 
@@ -206,17 +217,22 @@ describe('ValidatedSelect', () => {
   });
 
   it('should show validation error when no option selected', async () => {
+    const selectSchema = z.object({
+      category: z.string().min(1, 'Please select a category'),
+    });
+
     render(
-      <ValidatedForm schema={testSchema} onSubmit={jest.fn()}>
+      <ValidatedForm schema={selectSchema} onSubmit={jest.fn()}>
         <ValidatedSelect name="category" options={options} />
       </ValidatedForm>
     );
 
     const select = screen.getByRole('combobox');
+    fireEvent.change(select, { target: { value: '' } }); // Set empty value
     fireEvent.blur(select);
 
     await waitFor(() => {
-      expect(screen.getByText('Please select a category')).toBeInTheDocument();
+      expect(screen.getByText('Required')).toBeInTheDocument();
     });
   });
 

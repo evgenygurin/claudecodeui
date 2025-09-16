@@ -119,7 +119,7 @@ export class CacheService<T = any> {
     try {
       const now = Date.now();
       const entrySize = this.calculateSize(value);
-      const entryTTL = ttl || this.options.maxAge;
+      const entryTTL = ttl !== undefined ? (ttl === 0 ? undefined : ttl) : this.options.maxAge;
 
       // Check if we need to evict entries
       this.ensureSpace(entrySize);
