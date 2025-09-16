@@ -71,10 +71,10 @@ class PtyMock extends EventEmitter {
     }
 }
 
-export function spawn(shell, args, options) {
+export function spawnPty(shell, args, options) {
     return new PtyMock(shell, args, options);
 }
 
 export default {
-    spawn
+    spawn: spawnPty
 };
