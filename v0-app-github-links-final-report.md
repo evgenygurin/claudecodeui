@@ -89,3 +89,4 @@ v0.app → Vercel Deployment → Source Code (встроенный)
 *Использованные инструменты: MCP Playwright Browser, Web Search, File Operations*
 
 
+
