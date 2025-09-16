@@ -77,7 +77,7 @@ describe('CacheService', () => {
       const key = 'test-key';
       const value = { data: 'test-value' };
 
-      cache.set(key, value); // No TTL
+      cache.set(key, value, 0); // No TTL (0 means no expiration)
       expect(cache.get(key)).toEqual(value);
 
       // Wait longer than default TTL

@@ -28,7 +28,7 @@ export interface FileStats {
   permissions: string;
 }
 
-class FileSystemServiceImpl implements FileSystemService {
+export class FileSystemServiceImpl implements FileSystemService {
   private readonly apiBaseUrl: string;
 
   constructor() {
