@@ -224,3 +224,5 @@ if (require.main === module) {
 }
 
 module.exports = { createGitHubLinksReport, createMarkdownReport, components, foundGitHubLinks };
+
+

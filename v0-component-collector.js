@@ -336,3 +336,5 @@ if (require.main === module) {
 }
 
 module.exports = { createCollectionPlan, createComponentStructure, createMainPage };
+
+

@@ -1,0 +1,4653 @@
+{
+  "metadata": {
+    "totalLinks": 45,
+    "analysisDate": "2025-09-06T16:46:28.152Z",
+    "description": "Анализ ссылок v0.app для поиска соответствующих репозиториев на GitHub"
+  },
+  "components": [
+    {
+      "originalUrl": "https://v0.app/chat/file-manager-wukORjs2J9p",
+      "componentName": "file-manager",
+      "searchVariants": [
+        "file-manager",
+        "v0-file-manager",
+        "nextjs-file-manager",
+        "react-file-manager",
+        "ui-file-manager",
+        "component-file-manager",
+        "file-manager-component",
+        "file-manager-ui",
+        "file-manager-template",
+        "file-manager-starter",
+        "file_manager",
+        "v0_file_manager",
+        "fileManager",
+        "v0FileManager",
+        "FileManager",
+        "V0FileManager"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "file-manager",
+          "query": "\"file-manager\" in:name",
+          "description": "Поиск репозитория с названием \"file-manager\""
+        },
+        {
+          "name": "v0-file-manager",
+          "query": "\"v0-file-manager\" in:name",
+          "description": "Поиск репозитория с названием \"v0-file-manager\""
+        },
+        {
+          "name": "nextjs-file-manager",
+          "query": "\"nextjs-file-manager\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-file-manager\""
+        },
+        {
+          "name": "react-file-manager",
+          "query": "\"react-file-manager\" in:name",
+          "description": "Поиск репозитория с названием \"react-file-manager\""
+        },
+        {
+          "name": "ui-file-manager",
+          "query": "\"ui-file-manager\" in:name",
+          "description": "Поиск репозитория с названием \"ui-file-manager\""
+        },
+        {
+          "name": "component-file-manager",
+          "query": "\"component-file-manager\" in:name",
+          "description": "Поиск репозитория с названием \"component-file-manager\""
+        },
+        {
+          "name": "file-manager-component",
+          "query": "\"file-manager-component\" in:name",
+          "description": "Поиск репозитория с названием \"file-manager-component\""
+        },
+        {
+          "name": "file-manager-ui",
+          "query": "\"file-manager-ui\" in:name",
+          "description": "Поиск репозитория с названием \"file-manager-ui\""
+        },
+        {
+          "name": "file-manager-template",
+          "query": "\"file-manager-template\" in:name",
+          "description": "Поиск репозитория с названием \"file-manager-template\""
+        },
+        {
+          "name": "file-manager-starter",
+          "query": "\"file-manager-starter\" in:name",
+          "description": "Поиск репозитория с названием \"file-manager-starter\""
+        },
+        {
+          "name": "file_manager",
+          "query": "\"file_manager\" in:name",
+          "description": "Поиск репозитория с названием \"file_manager\""
+        },
+        {
+          "name": "v0_file_manager",
+          "query": "\"v0_file_manager\" in:name",
+          "description": "Поиск репозитория с названием \"v0_file_manager\""
+        },
+        {
+          "name": "fileManager",
+          "query": "\"fileManager\" in:name",
+          "description": "Поиск репозитория с названием \"fileManager\""
+        },
+        {
+          "name": "v0FileManager",
+          "query": "\"v0FileManager\" in:name",
+          "description": "Поиск репозитория с названием \"v0FileManager\""
+        },
+        {
+          "name": "FileManager",
+          "query": "\"FileManager\" in:name",
+          "description": "Поиск репозитория с названием \"FileManager\""
+        },
+        {
+          "name": "V0FileManager",
+          "query": "\"V0FileManager\" in:name",
+          "description": "Поиск репозитория с названием \"V0FileManager\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/community/file-manager-hN0nNvAchzi",
+      "componentName": "file-manager",
+      "searchVariants": [
+        "file-manager",
+        "v0-file-manager",
+        "nextjs-file-manager",
+        "react-file-manager",
+        "ui-file-manager",
+        "component-file-manager",
+        "file-manager-component",
+        "file-manager-ui",
+        "file-manager-template",
+        "file-manager-starter",
+        "file_manager",
+        "v0_file_manager",
+        "fileManager",
+        "v0FileManager",
+        "FileManager",
+        "V0FileManager"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "file-manager",
+          "query": "\"file-manager\" in:name",
+          "description": "Поиск репозитория с названием \"file-manager\""
+        },
+        {
+          "name": "v0-file-manager",
+          "query": "\"v0-file-manager\" in:name",
+          "description": "Поиск репозитория с названием \"v0-file-manager\""
+        },
+        {
+          "name": "nextjs-file-manager",
+          "query": "\"nextjs-file-manager\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-file-manager\""
+        },
+        {
+          "name": "react-file-manager",
+          "query": "\"react-file-manager\" in:name",
+          "description": "Поиск репозитория с названием \"react-file-manager\""
+        },
+        {
+          "name": "ui-file-manager",
+          "query": "\"ui-file-manager\" in:name",
+          "description": "Поиск репозитория с названием \"ui-file-manager\""
+        },
+        {
+          "name": "component-file-manager",
+          "query": "\"component-file-manager\" in:name",
+          "description": "Поиск репозитория с названием \"component-file-manager\""
+        },
+        {
+          "name": "file-manager-component",
+          "query": "\"file-manager-component\" in:name",
+          "description": "Поиск репозитория с названием \"file-manager-component\""
+        },
+        {
+          "name": "file-manager-ui",
+          "query": "\"file-manager-ui\" in:name",
+          "description": "Поиск репозитория с названием \"file-manager-ui\""
+        },
+        {
+          "name": "file-manager-template",
+          "query": "\"file-manager-template\" in:name",
+          "description": "Поиск репозитория с названием \"file-manager-template\""
+        },
+        {
+          "name": "file-manager-starter",
+          "query": "\"file-manager-starter\" in:name",
+          "description": "Поиск репозитория с названием \"file-manager-starter\""
+        },
+        {
+          "name": "file_manager",
+          "query": "\"file_manager\" in:name",
+          "description": "Поиск репозитория с названием \"file_manager\""
+        },
+        {
+          "name": "v0_file_manager",
+          "query": "\"v0_file_manager\" in:name",
+          "description": "Поиск репозитория с названием \"v0_file_manager\""
+        },
+        {
+          "name": "fileManager",
+          "query": "\"fileManager\" in:name",
+          "description": "Поиск репозитория с названием \"fileManager\""
+        },
+        {
+          "name": "v0FileManager",
+          "query": "\"v0FileManager\" in:name",
+          "description": "Поиск репозитория с названием \"v0FileManager\""
+        },
+        {
+          "name": "FileManager",
+          "query": "\"FileManager\" in:name",
+          "description": "Поиск репозитория с названием \"FileManager\""
+        },
+        {
+          "name": "V0FileManager",
+          "query": "\"V0FileManager\" in:name",
+          "description": "Поиск репозитория с названием \"V0FileManager\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/community/ai-chat-interface-6VLiqkGu5vw",
+      "componentName": "ai-chat-interface",
+      "searchVariants": [
+        "ai-chat-interface",
+        "v0-ai-chat-interface",
+        "nextjs-ai-chat-interface",
+        "react-ai-chat-interface",
+        "ui-ai-chat-interface",
+        "component-ai-chat-interface",
+        "ai-chat-interface-component",
+        "ai-chat-interface-ui",
+        "ai-chat-interface-template",
+        "ai-chat-interface-starter",
+        "ai_chat_interface",
+        "v0_ai_chat_interface",
+        "aiChatInterface",
+        "v0AiChatInterface",
+        "AiChatInterface",
+        "V0AiChatInterface"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "ai-chat-interface",
+          "query": "\"ai-chat-interface\" in:name",
+          "description": "Поиск репозитория с названием \"ai-chat-interface\""
+        },
+        {
+          "name": "v0-ai-chat-interface",
+          "query": "\"v0-ai-chat-interface\" in:name",
+          "description": "Поиск репозитория с названием \"v0-ai-chat-interface\""
+        },
+        {
+          "name": "nextjs-ai-chat-interface",
+          "query": "\"nextjs-ai-chat-interface\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-ai-chat-interface\""
+        },
+        {
+          "name": "react-ai-chat-interface",
+          "query": "\"react-ai-chat-interface\" in:name",
+          "description": "Поиск репозитория с названием \"react-ai-chat-interface\""
+        },
+        {
+          "name": "ui-ai-chat-interface",
+          "query": "\"ui-ai-chat-interface\" in:name",
+          "description": "Поиск репозитория с названием \"ui-ai-chat-interface\""
+        },
+        {
+          "name": "component-ai-chat-interface",
+          "query": "\"component-ai-chat-interface\" in:name",
+          "description": "Поиск репозитория с названием \"component-ai-chat-interface\""
+        },
+        {
+          "name": "ai-chat-interface-component",
+          "query": "\"ai-chat-interface-component\" in:name",
+          "description": "Поиск репозитория с названием \"ai-chat-interface-component\""
+        },
+        {
+          "name": "ai-chat-interface-ui",
+          "query": "\"ai-chat-interface-ui\" in:name",
+          "description": "Поиск репозитория с названием \"ai-chat-interface-ui\""
+        },
+        {
+          "name": "ai-chat-interface-template",
+          "query": "\"ai-chat-interface-template\" in:name",
+          "description": "Поиск репозитория с названием \"ai-chat-interface-template\""
+        },
+        {
+          "name": "ai-chat-interface-starter",
+          "query": "\"ai-chat-interface-starter\" in:name",
+          "description": "Поиск репозитория с названием \"ai-chat-interface-starter\""
+        },
+        {
+          "name": "ai_chat_interface",
+          "query": "\"ai_chat_interface\" in:name",
+          "description": "Поиск репозитория с названием \"ai_chat_interface\""
+        },
+        {
+          "name": "v0_ai_chat_interface",
+          "query": "\"v0_ai_chat_interface\" in:name",
+          "description": "Поиск репозитория с названием \"v0_ai_chat_interface\""
+        },
+        {
+          "name": "aiChatInterface",
+          "query": "\"aiChatInterface\" in:name",
+          "description": "Поиск репозитория с названием \"aiChatInterface\""
+        },
+        {
+          "name": "v0AiChatInterface",
+          "query": "\"v0AiChatInterface\" in:name",
+          "description": "Поиск репозитория с названием \"v0AiChatInterface\""
+        },
+        {
+          "name": "AiChatInterface",
+          "query": "\"AiChatInterface\" in:name",
+          "description": "Поиск репозитория с названием \"AiChatInterface\""
+        },
+        {
+          "name": "V0AiChatInterface",
+          "query": "\"V0AiChatInterface\" in:name",
+          "description": "Поиск репозитория с названием \"V0AiChatInterface\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/community/integrations-page-7HOUCTcoR5n",
+      "componentName": "integrations-page",
+      "searchVariants": [
+        "integrations-page",
+        "v0-integrations-page",
+        "nextjs-integrations-page",
+        "react-integrations-page",
+        "ui-integrations-page",
+        "component-integrations-page",
+        "integrations-page-component",
+        "integrations-page-ui",
+        "integrations-page-template",
+        "integrations-page-starter",
+        "integrations_page",
+        "v0_integrations_page",
+        "integrationsPage",
+        "v0IntegrationsPage",
+        "IntegrationsPage",
+        "V0IntegrationsPage"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "integrations-page",
+          "query": "\"integrations-page\" in:name",
+          "description": "Поиск репозитория с названием \"integrations-page\""
+        },
+        {
+          "name": "v0-integrations-page",
+          "query": "\"v0-integrations-page\" in:name",
+          "description": "Поиск репозитория с названием \"v0-integrations-page\""
+        },
+        {
+          "name": "nextjs-integrations-page",
+          "query": "\"nextjs-integrations-page\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-integrations-page\""
+        },
+        {
+          "name": "react-integrations-page",
+          "query": "\"react-integrations-page\" in:name",
+          "description": "Поиск репозитория с названием \"react-integrations-page\""
+        },
+        {
+          "name": "ui-integrations-page",
+          "query": "\"ui-integrations-page\" in:name",
+          "description": "Поиск репозитория с названием \"ui-integrations-page\""
+        },
+        {
+          "name": "component-integrations-page",
+          "query": "\"component-integrations-page\" in:name",
+          "description": "Поиск репозитория с названием \"component-integrations-page\""
+        },
+        {
+          "name": "integrations-page-component",
+          "query": "\"integrations-page-component\" in:name",
+          "description": "Поиск репозитория с названием \"integrations-page-component\""
+        },
+        {
+          "name": "integrations-page-ui",
+          "query": "\"integrations-page-ui\" in:name",
+          "description": "Поиск репозитория с названием \"integrations-page-ui\""
+        },
+        {
+          "name": "integrations-page-template",
+          "query": "\"integrations-page-template\" in:name",
+          "description": "Поиск репозитория с названием \"integrations-page-template\""
+        },
+        {
+          "name": "integrations-page-starter",
+          "query": "\"integrations-page-starter\" in:name",
+          "description": "Поиск репозитория с названием \"integrations-page-starter\""
+        },
+        {
+          "name": "integrations_page",
+          "query": "\"integrations_page\" in:name",
+          "description": "Поиск репозитория с названием \"integrations_page\""
+        },
+        {
+          "name": "v0_integrations_page",
+          "query": "\"v0_integrations_page\" in:name",
+          "description": "Поиск репозитория с названием \"v0_integrations_page\""
+        },
+        {
+          "name": "integrationsPage",
+          "query": "\"integrationsPage\" in:name",
+          "description": "Поиск репозитория с названием \"integrationsPage\""
+        },
+        {
+          "name": "v0IntegrationsPage",
+          "query": "\"v0IntegrationsPage\" in:name",
+          "description": "Поиск репозитория с названием \"v0IntegrationsPage\""
+        },
+        {
+          "name": "IntegrationsPage",
+          "query": "\"IntegrationsPage\" in:name",
+          "description": "Поиск репозитория с названием \"IntegrationsPage\""
+        },
+        {
+          "name": "V0IntegrationsPage",
+          "query": "\"V0IntegrationsPage\" in:name",
+          "description": "Поиск репозитория с названием \"V0IntegrationsPage\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/community/sidebar-layout-ybLyeN1sesS",
+      "componentName": "sidebar-layout",
+      "searchVariants": [
+        "sidebar-layout",
+        "v0-sidebar-layout",
+        "nextjs-sidebar-layout",
+        "react-sidebar-layout",
+        "ui-sidebar-layout",
+        "component-sidebar-layout",
+        "sidebar-layout-component",
+        "sidebar-layout-ui",
+        "sidebar-layout-template",
+        "sidebar-layout-starter",
+        "sidebar_layout",
+        "v0_sidebar_layout",
+        "sidebarLayout",
+        "v0SidebarLayout",
+        "SidebarLayout",
+        "V0SidebarLayout"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "sidebar-layout",
+          "query": "\"sidebar-layout\" in:name",
+          "description": "Поиск репозитория с названием \"sidebar-layout\""
+        },
+        {
+          "name": "v0-sidebar-layout",
+          "query": "\"v0-sidebar-layout\" in:name",
+          "description": "Поиск репозитория с названием \"v0-sidebar-layout\""
+        },
+        {
+          "name": "nextjs-sidebar-layout",
+          "query": "\"nextjs-sidebar-layout\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-sidebar-layout\""
+        },
+        {
+          "name": "react-sidebar-layout",
+          "query": "\"react-sidebar-layout\" in:name",
+          "description": "Поиск репозитория с названием \"react-sidebar-layout\""
+        },
+        {
+          "name": "ui-sidebar-layout",
+          "query": "\"ui-sidebar-layout\" in:name",
+          "description": "Поиск репозитория с названием \"ui-sidebar-layout\""
+        },
+        {
+          "name": "component-sidebar-layout",
+          "query": "\"component-sidebar-layout\" in:name",
+          "description": "Поиск репозитория с названием \"component-sidebar-layout\""
+        },
+        {
+          "name": "sidebar-layout-component",
+          "query": "\"sidebar-layout-component\" in:name",
+          "description": "Поиск репозитория с названием \"sidebar-layout-component\""
+        },
+        {
+          "name": "sidebar-layout-ui",
+          "query": "\"sidebar-layout-ui\" in:name",
+          "description": "Поиск репозитория с названием \"sidebar-layout-ui\""
+        },
+        {
+          "name": "sidebar-layout-template",
+          "query": "\"sidebar-layout-template\" in:name",
+          "description": "Поиск репозитория с названием \"sidebar-layout-template\""
+        },
+        {
+          "name": "sidebar-layout-starter",
+          "query": "\"sidebar-layout-starter\" in:name",
+          "description": "Поиск репозитория с названием \"sidebar-layout-starter\""
+        },
+        {
+          "name": "sidebar_layout",
+          "query": "\"sidebar_layout\" in:name",
+          "description": "Поиск репозитория с названием \"sidebar_layout\""
+        },
+        {
+          "name": "v0_sidebar_layout",
+          "query": "\"v0_sidebar_layout\" in:name",
+          "description": "Поиск репозитория с названием \"v0_sidebar_layout\""
+        },
+        {
+          "name": "sidebarLayout",
+          "query": "\"sidebarLayout\" in:name",
+          "description": "Поиск репозитория с названием \"sidebarLayout\""
+        },
+        {
+          "name": "v0SidebarLayout",
+          "query": "\"v0SidebarLayout\" in:name",
+          "description": "Поиск репозитория с названием \"v0SidebarLayout\""
+        },
+        {
+          "name": "SidebarLayout",
+          "query": "\"SidebarLayout\" in:name",
+          "description": "Поиск репозитория с названием \"SidebarLayout\""
+        },
+        {
+          "name": "V0SidebarLayout",
+          "query": "\"V0SidebarLayout\" in:name",
+          "description": "Поиск репозитория с названием \"V0SidebarLayout\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/community/action-search-bar-S3nMPSmpQzk",
+      "componentName": "action-search-bar",
+      "searchVariants": [
+        "action-search-bar",
+        "v0-action-search-bar",
+        "nextjs-action-search-bar",
+        "react-action-search-bar",
+        "ui-action-search-bar",
+        "component-action-search-bar",
+        "action-search-bar-component",
+        "action-search-bar-ui",
+        "action-search-bar-template",
+        "action-search-bar-starter",
+        "action_search_bar",
+        "v0_action_search_bar",
+        "actionSearchBar",
+        "v0ActionSearchBar",
+        "ActionSearchBar",
+        "V0ActionSearchBar"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "action-search-bar",
+          "query": "\"action-search-bar\" in:name",
+          "description": "Поиск репозитория с названием \"action-search-bar\""
+        },
+        {
+          "name": "v0-action-search-bar",
+          "query": "\"v0-action-search-bar\" in:name",
+          "description": "Поиск репозитория с названием \"v0-action-search-bar\""
+        },
+        {
+          "name": "nextjs-action-search-bar",
+          "query": "\"nextjs-action-search-bar\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-action-search-bar\""
+        },
+        {
+          "name": "react-action-search-bar",
+          "query": "\"react-action-search-bar\" in:name",
+          "description": "Поиск репозитория с названием \"react-action-search-bar\""
+        },
+        {
+          "name": "ui-action-search-bar",
+          "query": "\"ui-action-search-bar\" in:name",
+          "description": "Поиск репозитория с названием \"ui-action-search-bar\""
+        },
+        {
+          "name": "component-action-search-bar",
+          "query": "\"component-action-search-bar\" in:name",
+          "description": "Поиск репозитория с названием \"component-action-search-bar\""
+        },
+        {
+          "name": "action-search-bar-component",
+          "query": "\"action-search-bar-component\" in:name",
+          "description": "Поиск репозитория с названием \"action-search-bar-component\""
+        },
+        {
+          "name": "action-search-bar-ui",
+          "query": "\"action-search-bar-ui\" in:name",
+          "description": "Поиск репозитория с названием \"action-search-bar-ui\""
+        },
+        {
+          "name": "action-search-bar-template",
+          "query": "\"action-search-bar-template\" in:name",
+          "description": "Поиск репозитория с названием \"action-search-bar-template\""
+        },
+        {
+          "name": "action-search-bar-starter",
+          "query": "\"action-search-bar-starter\" in:name",
+          "description": "Поиск репозитория с названием \"action-search-bar-starter\""
+        },
+        {
+          "name": "action_search_bar",
+          "query": "\"action_search_bar\" in:name",
+          "description": "Поиск репозитория с названием \"action_search_bar\""
+        },
+        {
+          "name": "v0_action_search_bar",
+          "query": "\"v0_action_search_bar\" in:name",
+          "description": "Поиск репозитория с названием \"v0_action_search_bar\""
+        },
+        {
+          "name": "actionSearchBar",
+          "query": "\"actionSearchBar\" in:name",
+          "description": "Поиск репозитория с названием \"actionSearchBar\""
+        },
+        {
+          "name": "v0ActionSearchBar",
+          "query": "\"v0ActionSearchBar\" in:name",
+          "description": "Поиск репозитория с названием \"v0ActionSearchBar\""
+        },
+        {
+          "name": "ActionSearchBar",
+          "query": "\"ActionSearchBar\" in:name",
+          "description": "Поиск репозитория с названием \"ActionSearchBar\""
+        },
+        {
+          "name": "V0ActionSearchBar",
+          "query": "\"V0ActionSearchBar\" in:name",
+          "description": "Поиск репозитория с названием \"V0ActionSearchBar\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/community/ai-card-generation-Tpxvlz16QiJ",
+      "componentName": "ai-card-generation",
+      "searchVariants": [
+        "ai-card-generation",
+        "v0-ai-card-generation",
+        "nextjs-ai-card-generation",
+        "react-ai-card-generation",
+        "ui-ai-card-generation",
+        "component-ai-card-generation",
+        "ai-card-generation-component",
+        "ai-card-generation-ui",
+        "ai-card-generation-template",
+        "ai-card-generation-starter",
+        "ai_card_generation",
+        "v0_ai_card_generation",
+        "aiCardGeneration",
+        "v0AiCardGeneration",
+        "AiCardGeneration",
+        "V0AiCardGeneration"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "ai-card-generation",
+          "query": "\"ai-card-generation\" in:name",
+          "description": "Поиск репозитория с названием \"ai-card-generation\""
+        },
+        {
+          "name": "v0-ai-card-generation",
+          "query": "\"v0-ai-card-generation\" in:name",
+          "description": "Поиск репозитория с названием \"v0-ai-card-generation\""
+        },
+        {
+          "name": "nextjs-ai-card-generation",
+          "query": "\"nextjs-ai-card-generation\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-ai-card-generation\""
+        },
+        {
+          "name": "react-ai-card-generation",
+          "query": "\"react-ai-card-generation\" in:name",
+          "description": "Поиск репозитория с названием \"react-ai-card-generation\""
+        },
+        {
+          "name": "ui-ai-card-generation",
+          "query": "\"ui-ai-card-generation\" in:name",
+          "description": "Поиск репозитория с названием \"ui-ai-card-generation\""
+        },
+        {
+          "name": "component-ai-card-generation",
+          "query": "\"component-ai-card-generation\" in:name",
+          "description": "Поиск репозитория с названием \"component-ai-card-generation\""
+        },
+        {
+          "name": "ai-card-generation-component",
+          "query": "\"ai-card-generation-component\" in:name",
+          "description": "Поиск репозитория с названием \"ai-card-generation-component\""
+        },
+        {
+          "name": "ai-card-generation-ui",
+          "query": "\"ai-card-generation-ui\" in:name",
+          "description": "Поиск репозитория с названием \"ai-card-generation-ui\""
+        },
+        {
+          "name": "ai-card-generation-template",
+          "query": "\"ai-card-generation-template\" in:name",
+          "description": "Поиск репозитория с названием \"ai-card-generation-template\""
+        },
+        {
+          "name": "ai-card-generation-starter",
+          "query": "\"ai-card-generation-starter\" in:name",
+          "description": "Поиск репозитория с названием \"ai-card-generation-starter\""
+        },
+        {
+          "name": "ai_card_generation",
+          "query": "\"ai_card_generation\" in:name",
+          "description": "Поиск репозитория с названием \"ai_card_generation\""
+        },
+        {
+          "name": "v0_ai_card_generation",
+          "query": "\"v0_ai_card_generation\" in:name",
+          "description": "Поиск репозитория с названием \"v0_ai_card_generation\""
+        },
+        {
+          "name": "aiCardGeneration",
+          "query": "\"aiCardGeneration\" in:name",
+          "description": "Поиск репозитория с названием \"aiCardGeneration\""
+        },
+        {
+          "name": "v0AiCardGeneration",
+          "query": "\"v0AiCardGeneration\" in:name",
+          "description": "Поиск репозитория с названием \"v0AiCardGeneration\""
+        },
+        {
+          "name": "AiCardGeneration",
+          "query": "\"AiCardGeneration\" in:name",
+          "description": "Поиск репозитория с названием \"AiCardGeneration\""
+        },
+        {
+          "name": "V0AiCardGeneration",
+          "query": "\"V0AiCardGeneration\" in:name",
+          "description": "Поиск репозитория с названием \"V0AiCardGeneration\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/community/vercel-tabs-BT27p0aGPsa",
+      "componentName": "vercel-tabs",
+      "searchVariants": [
+        "vercel-tabs",
+        "v0-vercel-tabs",
+        "nextjs-vercel-tabs",
+        "react-vercel-tabs",
+        "ui-vercel-tabs",
+        "component-vercel-tabs",
+        "vercel-tabs-component",
+        "vercel-tabs-ui",
+        "vercel-tabs-template",
+        "vercel-tabs-starter",
+        "vercel_tabs",
+        "v0_vercel_tabs",
+        "vercelTabs",
+        "v0VercelTabs",
+        "VercelTabs",
+        "V0VercelTabs"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "vercel-tabs",
+          "query": "\"vercel-tabs\" in:name",
+          "description": "Поиск репозитория с названием \"vercel-tabs\""
+        },
+        {
+          "name": "v0-vercel-tabs",
+          "query": "\"v0-vercel-tabs\" in:name",
+          "description": "Поиск репозитория с названием \"v0-vercel-tabs\""
+        },
+        {
+          "name": "nextjs-vercel-tabs",
+          "query": "\"nextjs-vercel-tabs\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-vercel-tabs\""
+        },
+        {
+          "name": "react-vercel-tabs",
+          "query": "\"react-vercel-tabs\" in:name",
+          "description": "Поиск репозитория с названием \"react-vercel-tabs\""
+        },
+        {
+          "name": "ui-vercel-tabs",
+          "query": "\"ui-vercel-tabs\" in:name",
+          "description": "Поиск репозитория с названием \"ui-vercel-tabs\""
+        },
+        {
+          "name": "component-vercel-tabs",
+          "query": "\"component-vercel-tabs\" in:name",
+          "description": "Поиск репозитория с названием \"component-vercel-tabs\""
+        },
+        {
+          "name": "vercel-tabs-component",
+          "query": "\"vercel-tabs-component\" in:name",
+          "description": "Поиск репозитория с названием \"vercel-tabs-component\""
+        },
+        {
+          "name": "vercel-tabs-ui",
+          "query": "\"vercel-tabs-ui\" in:name",
+          "description": "Поиск репозитория с названием \"vercel-tabs-ui\""
+        },
+        {
+          "name": "vercel-tabs-template",
+          "query": "\"vercel-tabs-template\" in:name",
+          "description": "Поиск репозитория с названием \"vercel-tabs-template\""
+        },
+        {
+          "name": "vercel-tabs-starter",
+          "query": "\"vercel-tabs-starter\" in:name",
+          "description": "Поиск репозитория с названием \"vercel-tabs-starter\""
+        },
+        {
+          "name": "vercel_tabs",
+          "query": "\"vercel_tabs\" in:name",
+          "description": "Поиск репозитория с названием \"vercel_tabs\""
+        },
+        {
+          "name": "v0_vercel_tabs",
+          "query": "\"v0_vercel_tabs\" in:name",
+          "description": "Поиск репозитория с названием \"v0_vercel_tabs\""
+        },
+        {
+          "name": "vercelTabs",
+          "query": "\"vercelTabs\" in:name",
+          "description": "Поиск репозитория с названием \"vercelTabs\""
+        },
+        {
+          "name": "v0VercelTabs",
+          "query": "\"v0VercelTabs\" in:name",
+          "description": "Поиск репозитория с названием \"v0VercelTabs\""
+        },
+        {
+          "name": "VercelTabs",
+          "query": "\"VercelTabs\" in:name",
+          "description": "Поиск репозитория с названием \"VercelTabs\""
+        },
+        {
+          "name": "V0VercelTabs",
+          "query": "\"V0VercelTabs\" in:name",
+          "description": "Поиск репозитория с названием \"V0VercelTabs\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/community/animated-beam-voQije6wyja",
+      "componentName": "animated-beam",
+      "searchVariants": [
+        "animated-beam",
+        "v0-animated-beam",
+        "nextjs-animated-beam",
+        "react-animated-beam",
+        "ui-animated-beam",
+        "component-animated-beam",
+        "animated-beam-component",
+        "animated-beam-ui",
+        "animated-beam-template",
+        "animated-beam-starter",
+        "animated_beam",
+        "v0_animated_beam",
+        "animatedBeam",
+        "v0AnimatedBeam",
+        "AnimatedBeam",
+        "V0AnimatedBeam"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "animated-beam",
+          "query": "\"animated-beam\" in:name",
+          "description": "Поиск репозитория с названием \"animated-beam\""
+        },
+        {
+          "name": "v0-animated-beam",
+          "query": "\"v0-animated-beam\" in:name",
+          "description": "Поиск репозитория с названием \"v0-animated-beam\""
+        },
+        {
+          "name": "nextjs-animated-beam",
+          "query": "\"nextjs-animated-beam\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-animated-beam\""
+        },
+        {
+          "name": "react-animated-beam",
+          "query": "\"react-animated-beam\" in:name",
+          "description": "Поиск репозитория с названием \"react-animated-beam\""
+        },
+        {
+          "name": "ui-animated-beam",
+          "query": "\"ui-animated-beam\" in:name",
+          "description": "Поиск репозитория с названием \"ui-animated-beam\""
+        },
+        {
+          "name": "component-animated-beam",
+          "query": "\"component-animated-beam\" in:name",
+          "description": "Поиск репозитория с названием \"component-animated-beam\""
+        },
+        {
+          "name": "animated-beam-component",
+          "query": "\"animated-beam-component\" in:name",
+          "description": "Поиск репозитория с названием \"animated-beam-component\""
+        },
+        {
+          "name": "animated-beam-ui",
+          "query": "\"animated-beam-ui\" in:name",
+          "description": "Поиск репозитория с названием \"animated-beam-ui\""
+        },
+        {
+          "name": "animated-beam-template",
+          "query": "\"animated-beam-template\" in:name",
+          "description": "Поиск репозитория с названием \"animated-beam-template\""
+        },
+        {
+          "name": "animated-beam-starter",
+          "query": "\"animated-beam-starter\" in:name",
+          "description": "Поиск репозитория с названием \"animated-beam-starter\""
+        },
+        {
+          "name": "animated_beam",
+          "query": "\"animated_beam\" in:name",
+          "description": "Поиск репозитория с названием \"animated_beam\""
+        },
+        {
+          "name": "v0_animated_beam",
+          "query": "\"v0_animated_beam\" in:name",
+          "description": "Поиск репозитория с названием \"v0_animated_beam\""
+        },
+        {
+          "name": "animatedBeam",
+          "query": "\"animatedBeam\" in:name",
+          "description": "Поиск репозитория с названием \"animatedBeam\""
+        },
+        {
+          "name": "v0AnimatedBeam",
+          "query": "\"v0AnimatedBeam\" in:name",
+          "description": "Поиск репозитория с названием \"v0AnimatedBeam\""
+        },
+        {
+          "name": "AnimatedBeam",
+          "query": "\"AnimatedBeam\" in:name",
+          "description": "Поиск репозитория с названием \"AnimatedBeam\""
+        },
+        {
+          "name": "V0AnimatedBeam",
+          "query": "\"V0AnimatedBeam\" in:name",
+          "description": "Поиск репозитория с названием \"V0AnimatedBeam\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/community/image-to-ascii-0UE1nczWzbu",
+      "componentName": "image-to-ascii",
+      "searchVariants": [
+        "image-to-ascii",
+        "v0-image-to-ascii",
+        "nextjs-image-to-ascii",
+        "react-image-to-ascii",
+        "ui-image-to-ascii",
+        "component-image-to-ascii",
+        "image-to-ascii-component",
+        "image-to-ascii-ui",
+        "image-to-ascii-template",
+        "image-to-ascii-starter",
+        "image_to_ascii",
+        "v0_image_to_ascii",
+        "imageToAscii",
+        "v0ImageToAscii",
+        "ImageToAscii",
+        "V0ImageToAscii"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "image-to-ascii",
+          "query": "\"image-to-ascii\" in:name",
+          "description": "Поиск репозитория с названием \"image-to-ascii\""
+        },
+        {
+          "name": "v0-image-to-ascii",
+          "query": "\"v0-image-to-ascii\" in:name",
+          "description": "Поиск репозитория с названием \"v0-image-to-ascii\""
+        },
+        {
+          "name": "nextjs-image-to-ascii",
+          "query": "\"nextjs-image-to-ascii\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-image-to-ascii\""
+        },
+        {
+          "name": "react-image-to-ascii",
+          "query": "\"react-image-to-ascii\" in:name",
+          "description": "Поиск репозитория с названием \"react-image-to-ascii\""
+        },
+        {
+          "name": "ui-image-to-ascii",
+          "query": "\"ui-image-to-ascii\" in:name",
+          "description": "Поиск репозитория с названием \"ui-image-to-ascii\""
+        },
+        {
+          "name": "component-image-to-ascii",
+          "query": "\"component-image-to-ascii\" in:name",
+          "description": "Поиск репозитория с названием \"component-image-to-ascii\""
+        },
+        {
+          "name": "image-to-ascii-component",
+          "query": "\"image-to-ascii-component\" in:name",
+          "description": "Поиск репозитория с названием \"image-to-ascii-component\""
+        },
+        {
+          "name": "image-to-ascii-ui",
+          "query": "\"image-to-ascii-ui\" in:name",
+          "description": "Поиск репозитория с названием \"image-to-ascii-ui\""
+        },
+        {
+          "name": "image-to-ascii-template",
+          "query": "\"image-to-ascii-template\" in:name",
+          "description": "Поиск репозитория с названием \"image-to-ascii-template\""
+        },
+        {
+          "name": "image-to-ascii-starter",
+          "query": "\"image-to-ascii-starter\" in:name",
+          "description": "Поиск репозитория с названием \"image-to-ascii-starter\""
+        },
+        {
+          "name": "image_to_ascii",
+          "query": "\"image_to_ascii\" in:name",
+          "description": "Поиск репозитория с названием \"image_to_ascii\""
+        },
+        {
+          "name": "v0_image_to_ascii",
+          "query": "\"v0_image_to_ascii\" in:name",
+          "description": "Поиск репозитория с названием \"v0_image_to_ascii\""
+        },
+        {
+          "name": "imageToAscii",
+          "query": "\"imageToAscii\" in:name",
+          "description": "Поиск репозитория с названием \"imageToAscii\""
+        },
+        {
+          "name": "v0ImageToAscii",
+          "query": "\"v0ImageToAscii\" in:name",
+          "description": "Поиск репозитория с названием \"v0ImageToAscii\""
+        },
+        {
+          "name": "ImageToAscii",
+          "query": "\"ImageToAscii\" in:name",
+          "description": "Поиск репозитория с названием \"ImageToAscii\""
+        },
+        {
+          "name": "V0ImageToAscii",
+          "query": "\"V0ImageToAscii\" in:name",
+          "description": "Поиск репозитория с названием \"V0ImageToAscii\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/community/documentation-starter-ov3ApgfOdx5",
+      "componentName": "documentation-starter",
+      "searchVariants": [
+        "documentation-starter",
+        "v0-documentation-starter",
+        "nextjs-documentation-starter",
+        "react-documentation-starter",
+        "ui-documentation-starter",
+        "component-documentation-starter",
+        "documentation-starter-component",
+        "documentation-starter-ui",
+        "documentation-starter-template",
+        "documentation-starter-starter",
+        "documentation_starter",
+        "v0_documentation_starter",
+        "documentationStarter",
+        "v0DocumentationStarter",
+        "DocumentationStarter",
+        "V0DocumentationStarter"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "documentation-starter",
+          "query": "\"documentation-starter\" in:name",
+          "description": "Поиск репозитория с названием \"documentation-starter\""
+        },
+        {
+          "name": "v0-documentation-starter",
+          "query": "\"v0-documentation-starter\" in:name",
+          "description": "Поиск репозитория с названием \"v0-documentation-starter\""
+        },
+        {
+          "name": "nextjs-documentation-starter",
+          "query": "\"nextjs-documentation-starter\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-documentation-starter\""
+        },
+        {
+          "name": "react-documentation-starter",
+          "query": "\"react-documentation-starter\" in:name",
+          "description": "Поиск репозитория с названием \"react-documentation-starter\""
+        },
+        {
+          "name": "ui-documentation-starter",
+          "query": "\"ui-documentation-starter\" in:name",
+          "description": "Поиск репозитория с названием \"ui-documentation-starter\""
+        },
+        {
+          "name": "component-documentation-starter",
+          "query": "\"component-documentation-starter\" in:name",
+          "description": "Поиск репозитория с названием \"component-documentation-starter\""
+        },
+        {
+          "name": "documentation-starter-component",
+          "query": "\"documentation-starter-component\" in:name",
+          "description": "Поиск репозитория с названием \"documentation-starter-component\""
+        },
+        {
+          "name": "documentation-starter-ui",
+          "query": "\"documentation-starter-ui\" in:name",
+          "description": "Поиск репозитория с названием \"documentation-starter-ui\""
+        },
+        {
+          "name": "documentation-starter-template",
+          "query": "\"documentation-starter-template\" in:name",
+          "description": "Поиск репозитория с названием \"documentation-starter-template\""
+        },
+        {
+          "name": "documentation-starter-starter",
+          "query": "\"documentation-starter-starter\" in:name",
+          "description": "Поиск репозитория с названием \"documentation-starter-starter\""
+        },
+        {
+          "name": "documentation_starter",
+          "query": "\"documentation_starter\" in:name",
+          "description": "Поиск репозитория с названием \"documentation_starter\""
+        },
+        {
+          "name": "v0_documentation_starter",
+          "query": "\"v0_documentation_starter\" in:name",
+          "description": "Поиск репозитория с названием \"v0_documentation_starter\""
+        },
+        {
+          "name": "documentationStarter",
+          "query": "\"documentationStarter\" in:name",
+          "description": "Поиск репозитория с названием \"documentationStarter\""
+        },
+        {
+          "name": "v0DocumentationStarter",
+          "query": "\"v0DocumentationStarter\" in:name",
+          "description": "Поиск репозитория с названием \"v0DocumentationStarter\""
+        },
+        {
+          "name": "DocumentationStarter",
+          "query": "\"DocumentationStarter\" in:name",
+          "description": "Поиск репозитория с названием \"DocumentationStarter\""
+        },
+        {
+          "name": "V0DocumentationStarter",
+          "query": "\"V0DocumentationStarter\" in:name",
+          "description": "Поиск репозитория с названием \"V0DocumentationStarter\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/community/admin-dashboard-yBomF3O9Yu3",
+      "componentName": "admin-dashboard",
+      "searchVariants": [
+        "admin-dashboard",
+        "v0-admin-dashboard",
+        "nextjs-admin-dashboard",
+        "react-admin-dashboard",
+        "ui-admin-dashboard",
+        "component-admin-dashboard",
+        "admin-dashboard-component",
+        "admin-dashboard-ui",
+        "admin-dashboard-template",
+        "admin-dashboard-starter",
+        "admin_dashboard",
+        "v0_admin_dashboard",
+        "adminDashboard",
+        "v0AdminDashboard",
+        "AdminDashboard",
+        "V0AdminDashboard"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "admin-dashboard",
+          "query": "\"admin-dashboard\" in:name",
+          "description": "Поиск репозитория с названием \"admin-dashboard\""
+        },
+        {
+          "name": "v0-admin-dashboard",
+          "query": "\"v0-admin-dashboard\" in:name",
+          "description": "Поиск репозитория с названием \"v0-admin-dashboard\""
+        },
+        {
+          "name": "nextjs-admin-dashboard",
+          "query": "\"nextjs-admin-dashboard\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-admin-dashboard\""
+        },
+        {
+          "name": "react-admin-dashboard",
+          "query": "\"react-admin-dashboard\" in:name",
+          "description": "Поиск репозитория с названием \"react-admin-dashboard\""
+        },
+        {
+          "name": "ui-admin-dashboard",
+          "query": "\"ui-admin-dashboard\" in:name",
+          "description": "Поиск репозитория с названием \"ui-admin-dashboard\""
+        },
+        {
+          "name": "component-admin-dashboard",
+          "query": "\"component-admin-dashboard\" in:name",
+          "description": "Поиск репозитория с названием \"component-admin-dashboard\""
+        },
+        {
+          "name": "admin-dashboard-component",
+          "query": "\"admin-dashboard-component\" in:name",
+          "description": "Поиск репозитория с названием \"admin-dashboard-component\""
+        },
+        {
+          "name": "admin-dashboard-ui",
+          "query": "\"admin-dashboard-ui\" in:name",
+          "description": "Поиск репозитория с названием \"admin-dashboard-ui\""
+        },
+        {
+          "name": "admin-dashboard-template",
+          "query": "\"admin-dashboard-template\" in:name",
+          "description": "Поиск репозитория с названием \"admin-dashboard-template\""
+        },
+        {
+          "name": "admin-dashboard-starter",
+          "query": "\"admin-dashboard-starter\" in:name",
+          "description": "Поиск репозитория с названием \"admin-dashboard-starter\""
+        },
+        {
+          "name": "admin_dashboard",
+          "query": "\"admin_dashboard\" in:name",
+          "description": "Поиск репозитория с названием \"admin_dashboard\""
+        },
+        {
+          "name": "v0_admin_dashboard",
+          "query": "\"v0_admin_dashboard\" in:name",
+          "description": "Поиск репозитория с названием \"v0_admin_dashboard\""
+        },
+        {
+          "name": "adminDashboard",
+          "query": "\"adminDashboard\" in:name",
+          "description": "Поиск репозитория с названием \"adminDashboard\""
+        },
+        {
+          "name": "v0AdminDashboard",
+          "query": "\"v0AdminDashboard\" in:name",
+          "description": "Поиск репозитория с названием \"v0AdminDashboard\""
+        },
+        {
+          "name": "AdminDashboard",
+          "query": "\"AdminDashboard\" in:name",
+          "description": "Поиск репозитория с названием \"AdminDashboard\""
+        },
+        {
+          "name": "V0AdminDashboard",
+          "query": "\"V0AdminDashboard\" in:name",
+          "description": "Поиск репозитория с названием \"V0AdminDashboard\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/community/chat-ui-with-vibration-xf3RmrkKlxc",
+      "componentName": "chat-ui-with-vibration",
+      "searchVariants": [
+        "chat-ui-with-vibration",
+        "v0-chat-ui-with-vibration",
+        "nextjs-chat-ui-with-vibration",
+        "react-chat-ui-with-vibration",
+        "ui-chat-ui-with-vibration",
+        "component-chat-ui-with-vibration",
+        "chat-ui-with-vibration-component",
+        "chat-ui-with-vibration-ui",
+        "chat-ui-with-vibration-template",
+        "chat-ui-with-vibration-starter",
+        "chat_ui_with_vibration",
+        "v0_chat_ui_with_vibration",
+        "chatUiWithVibration",
+        "v0ChatUiWithVibration",
+        "ChatUiWithVibration",
+        "V0ChatUiWithVibration"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "chat-ui-with-vibration",
+          "query": "\"chat-ui-with-vibration\" in:name",
+          "description": "Поиск репозитория с названием \"chat-ui-with-vibration\""
+        },
+        {
+          "name": "v0-chat-ui-with-vibration",
+          "query": "\"v0-chat-ui-with-vibration\" in:name",
+          "description": "Поиск репозитория с названием \"v0-chat-ui-with-vibration\""
+        },
+        {
+          "name": "nextjs-chat-ui-with-vibration",
+          "query": "\"nextjs-chat-ui-with-vibration\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-chat-ui-with-vibration\""
+        },
+        {
+          "name": "react-chat-ui-with-vibration",
+          "query": "\"react-chat-ui-with-vibration\" in:name",
+          "description": "Поиск репозитория с названием \"react-chat-ui-with-vibration\""
+        },
+        {
+          "name": "ui-chat-ui-with-vibration",
+          "query": "\"ui-chat-ui-with-vibration\" in:name",
+          "description": "Поиск репозитория с названием \"ui-chat-ui-with-vibration\""
+        },
+        {
+          "name": "component-chat-ui-with-vibration",
+          "query": "\"component-chat-ui-with-vibration\" in:name",
+          "description": "Поиск репозитория с названием \"component-chat-ui-with-vibration\""
+        },
+        {
+          "name": "chat-ui-with-vibration-component",
+          "query": "\"chat-ui-with-vibration-component\" in:name",
+          "description": "Поиск репозитория с названием \"chat-ui-with-vibration-component\""
+        },
+        {
+          "name": "chat-ui-with-vibration-ui",
+          "query": "\"chat-ui-with-vibration-ui\" in:name",
+          "description": "Поиск репозитория с названием \"chat-ui-with-vibration-ui\""
+        },
+        {
+          "name": "chat-ui-with-vibration-template",
+          "query": "\"chat-ui-with-vibration-template\" in:name",
+          "description": "Поиск репозитория с названием \"chat-ui-with-vibration-template\""
+        },
+        {
+          "name": "chat-ui-with-vibration-starter",
+          "query": "\"chat-ui-with-vibration-starter\" in:name",
+          "description": "Поиск репозитория с названием \"chat-ui-with-vibration-starter\""
+        },
+        {
+          "name": "chat_ui_with_vibration",
+          "query": "\"chat_ui_with_vibration\" in:name",
+          "description": "Поиск репозитория с названием \"chat_ui_with_vibration\""
+        },
+        {
+          "name": "v0_chat_ui_with_vibration",
+          "query": "\"v0_chat_ui_with_vibration\" in:name",
+          "description": "Поиск репозитория с названием \"v0_chat_ui_with_vibration\""
+        },
+        {
+          "name": "chatUiWithVibration",
+          "query": "\"chatUiWithVibration\" in:name",
+          "description": "Поиск репозитория с названием \"chatUiWithVibration\""
+        },
+        {
+          "name": "v0ChatUiWithVibration",
+          "query": "\"v0ChatUiWithVibration\" in:name",
+          "description": "Поиск репозитория с названием \"v0ChatUiWithVibration\""
+        },
+        {
+          "name": "ChatUiWithVibration",
+          "query": "\"ChatUiWithVibration\" in:name",
+          "description": "Поиск репозитория с названием \"ChatUiWithVibration\""
+        },
+        {
+          "name": "V0ChatUiWithVibration",
+          "query": "\"V0ChatUiWithVibration\" in:name",
+          "description": "Поиск репозитория с названием \"V0ChatUiWithVibration\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/community/chat-ui-h4Ga3LeTpbl",
+      "componentName": "chat-ui",
+      "searchVariants": [
+        "chat-ui",
+        "v0-chat-ui",
+        "nextjs-chat-ui",
+        "react-chat-ui",
+        "ui-chat-ui",
+        "component-chat-ui",
+        "chat-ui-component",
+        "chat-ui-ui",
+        "chat-ui-template",
+        "chat-ui-starter",
+        "chat_ui",
+        "v0_chat_ui",
+        "chatUi",
+        "v0ChatUi",
+        "ChatUi",
+        "V0ChatUi"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "chat-ui",
+          "query": "\"chat-ui\" in:name",
+          "description": "Поиск репозитория с названием \"chat-ui\""
+        },
+        {
+          "name": "v0-chat-ui",
+          "query": "\"v0-chat-ui\" in:name",
+          "description": "Поиск репозитория с названием \"v0-chat-ui\""
+        },
+        {
+          "name": "nextjs-chat-ui",
+          "query": "\"nextjs-chat-ui\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-chat-ui\""
+        },
+        {
+          "name": "react-chat-ui",
+          "query": "\"react-chat-ui\" in:name",
+          "description": "Поиск репозитория с названием \"react-chat-ui\""
+        },
+        {
+          "name": "ui-chat-ui",
+          "query": "\"ui-chat-ui\" in:name",
+          "description": "Поиск репозитория с названием \"ui-chat-ui\""
+        },
+        {
+          "name": "component-chat-ui",
+          "query": "\"component-chat-ui\" in:name",
+          "description": "Поиск репозитория с названием \"component-chat-ui\""
+        },
+        {
+          "name": "chat-ui-component",
+          "query": "\"chat-ui-component\" in:name",
+          "description": "Поиск репозитория с названием \"chat-ui-component\""
+        },
+        {
+          "name": "chat-ui-ui",
+          "query": "\"chat-ui-ui\" in:name",
+          "description": "Поиск репозитория с названием \"chat-ui-ui\""
+        },
+        {
+          "name": "chat-ui-template",
+          "query": "\"chat-ui-template\" in:name",
+          "description": "Поиск репозитория с названием \"chat-ui-template\""
+        },
+        {
+          "name": "chat-ui-starter",
+          "query": "\"chat-ui-starter\" in:name",
+          "description": "Поиск репозитория с названием \"chat-ui-starter\""
+        },
+        {
+          "name": "chat_ui",
+          "query": "\"chat_ui\" in:name",
+          "description": "Поиск репозитория с названием \"chat_ui\""
+        },
+        {
+          "name": "v0_chat_ui",
+          "query": "\"v0_chat_ui\" in:name",
+          "description": "Поиск репозитория с названием \"v0_chat_ui\""
+        },
+        {
+          "name": "chatUi",
+          "query": "\"chatUi\" in:name",
+          "description": "Поиск репозитория с названием \"chatUi\""
+        },
+        {
+          "name": "v0ChatUi",
+          "query": "\"v0ChatUi\" in:name",
+          "description": "Поиск репозитория с названием \"v0ChatUi\""
+        },
+        {
+          "name": "ChatUi",
+          "query": "\"ChatUi\" in:name",
+          "description": "Поиск репозитория с названием \"ChatUi\""
+        },
+        {
+          "name": "V0ChatUi",
+          "query": "\"V0ChatUi\" in:name",
+          "description": "Поиск репозитория с названием \"V0ChatUi\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/community/eleven-labs-conversational-ai-starter-5TN93pl3bRS",
+      "componentName": "eleven-labs-conversational-ai-starter",
+      "searchVariants": [
+        "eleven-labs-conversational-ai-starter",
+        "v0-eleven-labs-conversational-ai-starter",
+        "nextjs-eleven-labs-conversational-ai-starter",
+        "react-eleven-labs-conversational-ai-starter",
+        "ui-eleven-labs-conversational-ai-starter",
+        "component-eleven-labs-conversational-ai-starter",
+        "eleven-labs-conversational-ai-starter-component",
+        "eleven-labs-conversational-ai-starter-ui",
+        "eleven-labs-conversational-ai-starter-template",
+        "eleven-labs-conversational-ai-starter-starter",
+        "eleven_labs_conversational_ai_starter",
+        "v0_eleven_labs_conversational_ai_starter",
+        "elevenLabsConversationalAiStarter",
+        "v0ElevenLabsConversationalAiStarter",
+        "ElevenLabsConversationalAiStarter",
+        "V0ElevenLabsConversationalAiStarter"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "eleven-labs-conversational-ai-starter",
+          "query": "\"eleven-labs-conversational-ai-starter\" in:name",
+          "description": "Поиск репозитория с названием \"eleven-labs-conversational-ai-starter\""
+        },
+        {
+          "name": "v0-eleven-labs-conversational-ai-starter",
+          "query": "\"v0-eleven-labs-conversational-ai-starter\" in:name",
+          "description": "Поиск репозитория с названием \"v0-eleven-labs-conversational-ai-starter\""
+        },
+        {
+          "name": "nextjs-eleven-labs-conversational-ai-starter",
+          "query": "\"nextjs-eleven-labs-conversational-ai-starter\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-eleven-labs-conversational-ai-starter\""
+        },
+        {
+          "name": "react-eleven-labs-conversational-ai-starter",
+          "query": "\"react-eleven-labs-conversational-ai-starter\" in:name",
+          "description": "Поиск репозитория с названием \"react-eleven-labs-conversational-ai-starter\""
+        },
+        {
+          "name": "ui-eleven-labs-conversational-ai-starter",
+          "query": "\"ui-eleven-labs-conversational-ai-starter\" in:name",
+          "description": "Поиск репозитория с названием \"ui-eleven-labs-conversational-ai-starter\""
+        },
+        {
+          "name": "component-eleven-labs-conversational-ai-starter",
+          "query": "\"component-eleven-labs-conversational-ai-starter\" in:name",
+          "description": "Поиск репозитория с названием \"component-eleven-labs-conversational-ai-starter\""
+        },
+        {
+          "name": "eleven-labs-conversational-ai-starter-component",
+          "query": "\"eleven-labs-conversational-ai-starter-component\" in:name",
+          "description": "Поиск репозитория с названием \"eleven-labs-conversational-ai-starter-component\""
+        },
+        {
+          "name": "eleven-labs-conversational-ai-starter-ui",
+          "query": "\"eleven-labs-conversational-ai-starter-ui\" in:name",
+          "description": "Поиск репозитория с названием \"eleven-labs-conversational-ai-starter-ui\""
+        },
+        {
+          "name": "eleven-labs-conversational-ai-starter-template",
+          "query": "\"eleven-labs-conversational-ai-starter-template\" in:name",
+          "description": "Поиск репозитория с названием \"eleven-labs-conversational-ai-starter-template\""
+        },
+        {
+          "name": "eleven-labs-conversational-ai-starter-starter",
+          "query": "\"eleven-labs-conversational-ai-starter-starter\" in:name",
+          "description": "Поиск репозитория с названием \"eleven-labs-conversational-ai-starter-starter\""
+        },
+        {
+          "name": "eleven_labs_conversational_ai_starter",
+          "query": "\"eleven_labs_conversational_ai_starter\" in:name",
+          "description": "Поиск репозитория с названием \"eleven_labs_conversational_ai_starter\""
+        },
+        {
+          "name": "v0_eleven_labs_conversational_ai_starter",
+          "query": "\"v0_eleven_labs_conversational_ai_starter\" in:name",
+          "description": "Поиск репозитория с названием \"v0_eleven_labs_conversational_ai_starter\""
+        },
+        {
+          "name": "elevenLabsConversationalAiStarter",
+          "query": "\"elevenLabsConversationalAiStarter\" in:name",
+          "description": "Поиск репозитория с названием \"elevenLabsConversationalAiStarter\""
+        },
+        {
+          "name": "v0ElevenLabsConversationalAiStarter",
+          "query": "\"v0ElevenLabsConversationalAiStarter\" in:name",
+          "description": "Поиск репозитория с названием \"v0ElevenLabsConversationalAiStarter\""
+        },
+        {
+          "name": "ElevenLabsConversationalAiStarter",
+          "query": "\"ElevenLabsConversationalAiStarter\" in:name",
+          "description": "Поиск репозитория с названием \"ElevenLabsConversationalAiStarter\""
+        },
+        {
+          "name": "V0ElevenLabsConversationalAiStarter",
+          "query": "\"V0ElevenLabsConversationalAiStarter\" in:name",
+          "description": "Поиск репозитория с названием \"V0ElevenLabsConversationalAiStarter\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/community/light-dark-image-transition-0WSCfiIps92",
+      "componentName": "light-dark-image-transition",
+      "searchVariants": [
+        "light-dark-image-transition",
+        "v0-light-dark-image-transition",
+        "nextjs-light-dark-image-transition",
+        "react-light-dark-image-transition",
+        "ui-light-dark-image-transition",
+        "component-light-dark-image-transition",
+        "light-dark-image-transition-component",
+        "light-dark-image-transition-ui",
+        "light-dark-image-transition-template",
+        "light-dark-image-transition-starter",
+        "light_dark_image_transition",
+        "v0_light_dark_image_transition",
+        "lightDarkImageTransition",
+        "v0LightDarkImageTransition",
+        "LightDarkImageTransition",
+        "V0LightDarkImageTransition"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "light-dark-image-transition",
+          "query": "\"light-dark-image-transition\" in:name",
+          "description": "Поиск репозитория с названием \"light-dark-image-transition\""
+        },
+        {
+          "name": "v0-light-dark-image-transition",
+          "query": "\"v0-light-dark-image-transition\" in:name",
+          "description": "Поиск репозитория с названием \"v0-light-dark-image-transition\""
+        },
+        {
+          "name": "nextjs-light-dark-image-transition",
+          "query": "\"nextjs-light-dark-image-transition\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-light-dark-image-transition\""
+        },
+        {
+          "name": "react-light-dark-image-transition",
+          "query": "\"react-light-dark-image-transition\" in:name",
+          "description": "Поиск репозитория с названием \"react-light-dark-image-transition\""
+        },
+        {
+          "name": "ui-light-dark-image-transition",
+          "query": "\"ui-light-dark-image-transition\" in:name",
+          "description": "Поиск репозитория с названием \"ui-light-dark-image-transition\""
+        },
+        {
+          "name": "component-light-dark-image-transition",
+          "query": "\"component-light-dark-image-transition\" in:name",
+          "description": "Поиск репозитория с названием \"component-light-dark-image-transition\""
+        },
+        {
+          "name": "light-dark-image-transition-component",
+          "query": "\"light-dark-image-transition-component\" in:name",
+          "description": "Поиск репозитория с названием \"light-dark-image-transition-component\""
+        },
+        {
+          "name": "light-dark-image-transition-ui",
+          "query": "\"light-dark-image-transition-ui\" in:name",
+          "description": "Поиск репозитория с названием \"light-dark-image-transition-ui\""
+        },
+        {
+          "name": "light-dark-image-transition-template",
+          "query": "\"light-dark-image-transition-template\" in:name",
+          "description": "Поиск репозитория с названием \"light-dark-image-transition-template\""
+        },
+        {
+          "name": "light-dark-image-transition-starter",
+          "query": "\"light-dark-image-transition-starter\" in:name",
+          "description": "Поиск репозитория с названием \"light-dark-image-transition-starter\""
+        },
+        {
+          "name": "light_dark_image_transition",
+          "query": "\"light_dark_image_transition\" in:name",
+          "description": "Поиск репозитория с названием \"light_dark_image_transition\""
+        },
+        {
+          "name": "v0_light_dark_image_transition",
+          "query": "\"v0_light_dark_image_transition\" in:name",
+          "description": "Поиск репозитория с названием \"v0_light_dark_image_transition\""
+        },
+        {
+          "name": "lightDarkImageTransition",
+          "query": "\"lightDarkImageTransition\" in:name",
+          "description": "Поиск репозитория с названием \"lightDarkImageTransition\""
+        },
+        {
+          "name": "v0LightDarkImageTransition",
+          "query": "\"v0LightDarkImageTransition\" in:name",
+          "description": "Поиск репозитория с названием \"v0LightDarkImageTransition\""
+        },
+        {
+          "name": "LightDarkImageTransition",
+          "query": "\"LightDarkImageTransition\" in:name",
+          "description": "Поиск репозитория с названием \"LightDarkImageTransition\""
+        },
+        {
+          "name": "V0LightDarkImageTransition",
+          "query": "\"V0LightDarkImageTransition\" in:name",
+          "description": "Поиск репозитория с названием \"V0LightDarkImageTransition\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/community/dynamic-table-hJCDzsfPzdV",
+      "componentName": "dynamic-table",
+      "searchVariants": [
+        "dynamic-table",
+        "v0-dynamic-table",
+        "nextjs-dynamic-table",
+        "react-dynamic-table",
+        "ui-dynamic-table",
+        "component-dynamic-table",
+        "dynamic-table-component",
+        "dynamic-table-ui",
+        "dynamic-table-template",
+        "dynamic-table-starter",
+        "dynamic_table",
+        "v0_dynamic_table",
+        "dynamicTable",
+        "v0DynamicTable",
+        "DynamicTable",
+        "V0DynamicTable"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "dynamic-table",
+          "query": "\"dynamic-table\" in:name",
+          "description": "Поиск репозитория с названием \"dynamic-table\""
+        },
+        {
+          "name": "v0-dynamic-table",
+          "query": "\"v0-dynamic-table\" in:name",
+          "description": "Поиск репозитория с названием \"v0-dynamic-table\""
+        },
+        {
+          "name": "nextjs-dynamic-table",
+          "query": "\"nextjs-dynamic-table\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-dynamic-table\""
+        },
+        {
+          "name": "react-dynamic-table",
+          "query": "\"react-dynamic-table\" in:name",
+          "description": "Поиск репозитория с названием \"react-dynamic-table\""
+        },
+        {
+          "name": "ui-dynamic-table",
+          "query": "\"ui-dynamic-table\" in:name",
+          "description": "Поиск репозитория с названием \"ui-dynamic-table\""
+        },
+        {
+          "name": "component-dynamic-table",
+          "query": "\"component-dynamic-table\" in:name",
+          "description": "Поиск репозитория с названием \"component-dynamic-table\""
+        },
+        {
+          "name": "dynamic-table-component",
+          "query": "\"dynamic-table-component\" in:name",
+          "description": "Поиск репозитория с названием \"dynamic-table-component\""
+        },
+        {
+          "name": "dynamic-table-ui",
+          "query": "\"dynamic-table-ui\" in:name",
+          "description": "Поиск репозитория с названием \"dynamic-table-ui\""
+        },
+        {
+          "name": "dynamic-table-template",
+          "query": "\"dynamic-table-template\" in:name",
+          "description": "Поиск репозитория с названием \"dynamic-table-template\""
+        },
+        {
+          "name": "dynamic-table-starter",
+          "query": "\"dynamic-table-starter\" in:name",
+          "description": "Поиск репозитория с названием \"dynamic-table-starter\""
+        },
+        {
+          "name": "dynamic_table",
+          "query": "\"dynamic_table\" in:name",
+          "description": "Поиск репозитория с названием \"dynamic_table\""
+        },
+        {
+          "name": "v0_dynamic_table",
+          "query": "\"v0_dynamic_table\" in:name",
+          "description": "Поиск репозитория с названием \"v0_dynamic_table\""
+        },
+        {
+          "name": "dynamicTable",
+          "query": "\"dynamicTable\" in:name",
+          "description": "Поиск репозитория с названием \"dynamicTable\""
+        },
+        {
+          "name": "v0DynamicTable",
+          "query": "\"v0DynamicTable\" in:name",
+          "description": "Поиск репозитория с названием \"v0DynamicTable\""
+        },
+        {
+          "name": "DynamicTable",
+          "query": "\"DynamicTable\" in:name",
+          "description": "Поиск репозитория с названием \"DynamicTable\""
+        },
+        {
+          "name": "V0DynamicTable",
+          "query": "\"V0DynamicTable\" in:name",
+          "description": "Поиск репозитория с названием \"V0DynamicTable\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/community/drageasy-drag-and-drop-dashboard-mLIx6xWQwmP",
+      "componentName": "drageasy-drag-and-drop-dashboard",
+      "searchVariants": [
+        "drageasy-drag-and-drop-dashboard",
+        "v0-drageasy-drag-and-drop-dashboard",
+        "nextjs-drageasy-drag-and-drop-dashboard",
+        "react-drageasy-drag-and-drop-dashboard",
+        "ui-drageasy-drag-and-drop-dashboard",
+        "component-drageasy-drag-and-drop-dashboard",
+        "drageasy-drag-and-drop-dashboard-component",
+        "drageasy-drag-and-drop-dashboard-ui",
+        "drageasy-drag-and-drop-dashboard-template",
+        "drageasy-drag-and-drop-dashboard-starter",
+        "drageasy_drag_and_drop_dashboard",
+        "v0_drageasy_drag_and_drop_dashboard",
+        "drageasyDragAndDropDashboard",
+        "v0DrageasyDragAndDropDashboard",
+        "DrageasyDragAndDropDashboard",
+        "V0DrageasyDragAndDropDashboard"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "drageasy-drag-and-drop-dashboard",
+          "query": "\"drageasy-drag-and-drop-dashboard\" in:name",
+          "description": "Поиск репозитория с названием \"drageasy-drag-and-drop-dashboard\""
+        },
+        {
+          "name": "v0-drageasy-drag-and-drop-dashboard",
+          "query": "\"v0-drageasy-drag-and-drop-dashboard\" in:name",
+          "description": "Поиск репозитория с названием \"v0-drageasy-drag-and-drop-dashboard\""
+        },
+        {
+          "name": "nextjs-drageasy-drag-and-drop-dashboard",
+          "query": "\"nextjs-drageasy-drag-and-drop-dashboard\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-drageasy-drag-and-drop-dashboard\""
+        },
+        {
+          "name": "react-drageasy-drag-and-drop-dashboard",
+          "query": "\"react-drageasy-drag-and-drop-dashboard\" in:name",
+          "description": "Поиск репозитория с названием \"react-drageasy-drag-and-drop-dashboard\""
+        },
+        {
+          "name": "ui-drageasy-drag-and-drop-dashboard",
+          "query": "\"ui-drageasy-drag-and-drop-dashboard\" in:name",
+          "description": "Поиск репозитория с названием \"ui-drageasy-drag-and-drop-dashboard\""
+        },
+        {
+          "name": "component-drageasy-drag-and-drop-dashboard",
+          "query": "\"component-drageasy-drag-and-drop-dashboard\" in:name",
+          "description": "Поиск репозитория с названием \"component-drageasy-drag-and-drop-dashboard\""
+        },
+        {
+          "name": "drageasy-drag-and-drop-dashboard-component",
+          "query": "\"drageasy-drag-and-drop-dashboard-component\" in:name",
+          "description": "Поиск репозитория с названием \"drageasy-drag-and-drop-dashboard-component\""
+        },
+        {
+          "name": "drageasy-drag-and-drop-dashboard-ui",
+          "query": "\"drageasy-drag-and-drop-dashboard-ui\" in:name",
+          "description": "Поиск репозитория с названием \"drageasy-drag-and-drop-dashboard-ui\""
+        },
+        {
+          "name": "drageasy-drag-and-drop-dashboard-template",
+          "query": "\"drageasy-drag-and-drop-dashboard-template\" in:name",
+          "description": "Поиск репозитория с названием \"drageasy-drag-and-drop-dashboard-template\""
+        },
+        {
+          "name": "drageasy-drag-and-drop-dashboard-starter",
+          "query": "\"drageasy-drag-and-drop-dashboard-starter\" in:name",
+          "description": "Поиск репозитория с названием \"drageasy-drag-and-drop-dashboard-starter\""
+        },
+        {
+          "name": "drageasy_drag_and_drop_dashboard",
+          "query": "\"drageasy_drag_and_drop_dashboard\" in:name",
+          "description": "Поиск репозитория с названием \"drageasy_drag_and_drop_dashboard\""
+        },
+        {
+          "name": "v0_drageasy_drag_and_drop_dashboard",
+          "query": "\"v0_drageasy_drag_and_drop_dashboard\" in:name",
+          "description": "Поиск репозитория с названием \"v0_drageasy_drag_and_drop_dashboard\""
+        },
+        {
+          "name": "drageasyDragAndDropDashboard",
+          "query": "\"drageasyDragAndDropDashboard\" in:name",
+          "description": "Поиск репозитория с названием \"drageasyDragAndDropDashboard\""
+        },
+        {
+          "name": "v0DrageasyDragAndDropDashboard",
+          "query": "\"v0DrageasyDragAndDropDashboard\" in:name",
+          "description": "Поиск репозитория с названием \"v0DrageasyDragAndDropDashboard\""
+        },
+        {
+          "name": "DrageasyDragAndDropDashboard",
+          "query": "\"DrageasyDragAndDropDashboard\" in:name",
+          "description": "Поиск репозитория с названием \"DrageasyDragAndDropDashboard\""
+        },
+        {
+          "name": "V0DrageasyDragAndDropDashboard",
+          "query": "\"V0DrageasyDragAndDropDashboard\" in:name",
+          "description": "Поиск репозитория с названием \"V0DrageasyDragAndDropDashboard\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/community/login-03-LtQ7cIPj9o5",
+      "componentName": "login-03",
+      "searchVariants": [
+        "login-03",
+        "v0-login-03",
+        "nextjs-login-03",
+        "react-login-03",
+        "ui-login-03",
+        "component-login-03",
+        "login-03-component",
+        "login-03-ui",
+        "login-03-template",
+        "login-03-starter",
+        "login_03",
+        "v0_login_03",
+        "login03",
+        "v0Login03",
+        "Login03",
+        "V0Login03"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "login-03",
+          "query": "\"login-03\" in:name",
+          "description": "Поиск репозитория с названием \"login-03\""
+        },
+        {
+          "name": "v0-login-03",
+          "query": "\"v0-login-03\" in:name",
+          "description": "Поиск репозитория с названием \"v0-login-03\""
+        },
+        {
+          "name": "nextjs-login-03",
+          "query": "\"nextjs-login-03\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-login-03\""
+        },
+        {
+          "name": "react-login-03",
+          "query": "\"react-login-03\" in:name",
+          "description": "Поиск репозитория с названием \"react-login-03\""
+        },
+        {
+          "name": "ui-login-03",
+          "query": "\"ui-login-03\" in:name",
+          "description": "Поиск репозитория с названием \"ui-login-03\""
+        },
+        {
+          "name": "component-login-03",
+          "query": "\"component-login-03\" in:name",
+          "description": "Поиск репозитория с названием \"component-login-03\""
+        },
+        {
+          "name": "login-03-component",
+          "query": "\"login-03-component\" in:name",
+          "description": "Поиск репозитория с названием \"login-03-component\""
+        },
+        {
+          "name": "login-03-ui",
+          "query": "\"login-03-ui\" in:name",
+          "description": "Поиск репозитория с названием \"login-03-ui\""
+        },
+        {
+          "name": "login-03-template",
+          "query": "\"login-03-template\" in:name",
+          "description": "Поиск репозитория с названием \"login-03-template\""
+        },
+        {
+          "name": "login-03-starter",
+          "query": "\"login-03-starter\" in:name",
+          "description": "Поиск репозитория с названием \"login-03-starter\""
+        },
+        {
+          "name": "login_03",
+          "query": "\"login_03\" in:name",
+          "description": "Поиск репозитория с названием \"login_03\""
+        },
+        {
+          "name": "v0_login_03",
+          "query": "\"v0_login_03\" in:name",
+          "description": "Поиск репозитория с названием \"v0_login_03\""
+        },
+        {
+          "name": "login03",
+          "query": "\"login03\" in:name",
+          "description": "Поиск репозитория с названием \"login03\""
+        },
+        {
+          "name": "v0Login03",
+          "query": "\"v0Login03\" in:name",
+          "description": "Поиск репозитория с названием \"v0Login03\""
+        },
+        {
+          "name": "Login03",
+          "query": "\"Login03\" in:name",
+          "description": "Поиск репозитория с названием \"Login03\""
+        },
+        {
+          "name": "V0Login03",
+          "query": "\"V0Login03\" in:name",
+          "description": "Поиск репозитория с названием \"V0Login03\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/community/sidebar-in-dialog-WzUz8z8OdKf",
+      "componentName": "sidebar-in-dialog",
+      "searchVariants": [
+        "sidebar-in-dialog",
+        "v0-sidebar-in-dialog",
+        "nextjs-sidebar-in-dialog",
+        "react-sidebar-in-dialog",
+        "ui-sidebar-in-dialog",
+        "component-sidebar-in-dialog",
+        "sidebar-in-dialog-component",
+        "sidebar-in-dialog-ui",
+        "sidebar-in-dialog-template",
+        "sidebar-in-dialog-starter",
+        "sidebar_in_dialog",
+        "v0_sidebar_in_dialog",
+        "sidebarInDialog",
+        "v0SidebarInDialog",
+        "SidebarInDialog",
+        "V0SidebarInDialog"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "sidebar-in-dialog",
+          "query": "\"sidebar-in-dialog\" in:name",
+          "description": "Поиск репозитория с названием \"sidebar-in-dialog\""
+        },
+        {
+          "name": "v0-sidebar-in-dialog",
+          "query": "\"v0-sidebar-in-dialog\" in:name",
+          "description": "Поиск репозитория с названием \"v0-sidebar-in-dialog\""
+        },
+        {
+          "name": "nextjs-sidebar-in-dialog",
+          "query": "\"nextjs-sidebar-in-dialog\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-sidebar-in-dialog\""
+        },
+        {
+          "name": "react-sidebar-in-dialog",
+          "query": "\"react-sidebar-in-dialog\" in:name",
+          "description": "Поиск репозитория с названием \"react-sidebar-in-dialog\""
+        },
+        {
+          "name": "ui-sidebar-in-dialog",
+          "query": "\"ui-sidebar-in-dialog\" in:name",
+          "description": "Поиск репозитория с названием \"ui-sidebar-in-dialog\""
+        },
+        {
+          "name": "component-sidebar-in-dialog",
+          "query": "\"component-sidebar-in-dialog\" in:name",
+          "description": "Поиск репозитория с названием \"component-sidebar-in-dialog\""
+        },
+        {
+          "name": "sidebar-in-dialog-component",
+          "query": "\"sidebar-in-dialog-component\" in:name",
+          "description": "Поиск репозитория с названием \"sidebar-in-dialog-component\""
+        },
+        {
+          "name": "sidebar-in-dialog-ui",
+          "query": "\"sidebar-in-dialog-ui\" in:name",
+          "description": "Поиск репозитория с названием \"sidebar-in-dialog-ui\""
+        },
+        {
+          "name": "sidebar-in-dialog-template",
+          "query": "\"sidebar-in-dialog-template\" in:name",
+          "description": "Поиск репозитория с названием \"sidebar-in-dialog-template\""
+        },
+        {
+          "name": "sidebar-in-dialog-starter",
+          "query": "\"sidebar-in-dialog-starter\" in:name",
+          "description": "Поиск репозитория с названием \"sidebar-in-dialog-starter\""
+        },
+        {
+          "name": "sidebar_in_dialog",
+          "query": "\"sidebar_in_dialog\" in:name",
+          "description": "Поиск репозитория с названием \"sidebar_in_dialog\""
+        },
+        {
+          "name": "v0_sidebar_in_dialog",
+          "query": "\"v0_sidebar_in_dialog\" in:name",
+          "description": "Поиск репозитория с названием \"v0_sidebar_in_dialog\""
+        },
+        {
+          "name": "sidebarInDialog",
+          "query": "\"sidebarInDialog\" in:name",
+          "description": "Поиск репозитория с названием \"sidebarInDialog\""
+        },
+        {
+          "name": "v0SidebarInDialog",
+          "query": "\"v0SidebarInDialog\" in:name",
+          "description": "Поиск репозитория с названием \"v0SidebarInDialog\""
+        },
+        {
+          "name": "SidebarInDialog",
+          "query": "\"SidebarInDialog\" in:name",
+          "description": "Поиск репозитория с названием \"SidebarInDialog\""
+        },
+        {
+          "name": "V0SidebarInDialog",
+          "query": "\"V0SidebarInDialog\" in:name",
+          "description": "Поиск репозитория с названием \"V0SidebarInDialog\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/community/login-02-lgh5A223SiR",
+      "componentName": "login-02",
+      "searchVariants": [
+        "login-02",
+        "v0-login-02",
+        "nextjs-login-02",
+        "react-login-02",
+        "ui-login-02",
+        "component-login-02",
+        "login-02-component",
+        "login-02-ui",
+        "login-02-template",
+        "login-02-starter",
+        "login_02",
+        "v0_login_02",
+        "login02",
+        "v0Login02",
+        "Login02",
+        "V0Login02"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "login-02",
+          "query": "\"login-02\" in:name",
+          "description": "Поиск репозитория с названием \"login-02\""
+        },
+        {
+          "name": "v0-login-02",
+          "query": "\"v0-login-02\" in:name",
+          "description": "Поиск репозитория с названием \"v0-login-02\""
+        },
+        {
+          "name": "nextjs-login-02",
+          "query": "\"nextjs-login-02\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-login-02\""
+        },
+        {
+          "name": "react-login-02",
+          "query": "\"react-login-02\" in:name",
+          "description": "Поиск репозитория с названием \"react-login-02\""
+        },
+        {
+          "name": "ui-login-02",
+          "query": "\"ui-login-02\" in:name",
+          "description": "Поиск репозитория с названием \"ui-login-02\""
+        },
+        {
+          "name": "component-login-02",
+          "query": "\"component-login-02\" in:name",
+          "description": "Поиск репозитория с названием \"component-login-02\""
+        },
+        {
+          "name": "login-02-component",
+          "query": "\"login-02-component\" in:name",
+          "description": "Поиск репозитория с названием \"login-02-component\""
+        },
+        {
+          "name": "login-02-ui",
+          "query": "\"login-02-ui\" in:name",
+          "description": "Поиск репозитория с названием \"login-02-ui\""
+        },
+        {
+          "name": "login-02-template",
+          "query": "\"login-02-template\" in:name",
+          "description": "Поиск репозитория с названием \"login-02-template\""
+        },
+        {
+          "name": "login-02-starter",
+          "query": "\"login-02-starter\" in:name",
+          "description": "Поиск репозитория с названием \"login-02-starter\""
+        },
+        {
+          "name": "login_02",
+          "query": "\"login_02\" in:name",
+          "description": "Поиск репозитория с названием \"login_02\""
+        },
+        {
+          "name": "v0_login_02",
+          "query": "\"v0_login_02\" in:name",
+          "description": "Поиск репозитория с названием \"v0_login_02\""
+        },
+        {
+          "name": "login02",
+          "query": "\"login02\" in:name",
+          "description": "Поиск репозитория с названием \"login02\""
+        },
+        {
+          "name": "v0Login02",
+          "query": "\"v0Login02\" in:name",
+          "description": "Поиск репозитория с названием \"v0Login02\""
+        },
+        {
+          "name": "Login02",
+          "query": "\"Login02\" in:name",
+          "description": "Поиск репозитория с названием \"Login02\""
+        },
+        {
+          "name": "V0Login02",
+          "query": "\"V0Login02\" in:name",
+          "description": "Поиск репозитория с названием \"V0Login02\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/community/file-tree-sidebar-NBfcFIKai4T",
+      "componentName": "file-tree-sidebar",
+      "searchVariants": [
+        "file-tree-sidebar",
+        "v0-file-tree-sidebar",
+        "nextjs-file-tree-sidebar",
+        "react-file-tree-sidebar",
+        "ui-file-tree-sidebar",
+        "component-file-tree-sidebar",
+        "file-tree-sidebar-component",
+        "file-tree-sidebar-ui",
+        "file-tree-sidebar-template",
+        "file-tree-sidebar-starter",
+        "file_tree_sidebar",
+        "v0_file_tree_sidebar",
+        "fileTreeSidebar",
+        "v0FileTreeSidebar",
+        "FileTreeSidebar",
+        "V0FileTreeSidebar"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "file-tree-sidebar",
+          "query": "\"file-tree-sidebar\" in:name",
+          "description": "Поиск репозитория с названием \"file-tree-sidebar\""
+        },
+        {
+          "name": "v0-file-tree-sidebar",
+          "query": "\"v0-file-tree-sidebar\" in:name",
+          "description": "Поиск репозитория с названием \"v0-file-tree-sidebar\""
+        },
+        {
+          "name": "nextjs-file-tree-sidebar",
+          "query": "\"nextjs-file-tree-sidebar\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-file-tree-sidebar\""
+        },
+        {
+          "name": "react-file-tree-sidebar",
+          "query": "\"react-file-tree-sidebar\" in:name",
+          "description": "Поиск репозитория с названием \"react-file-tree-sidebar\""
+        },
+        {
+          "name": "ui-file-tree-sidebar",
+          "query": "\"ui-file-tree-sidebar\" in:name",
+          "description": "Поиск репозитория с названием \"ui-file-tree-sidebar\""
+        },
+        {
+          "name": "component-file-tree-sidebar",
+          "query": "\"component-file-tree-sidebar\" in:name",
+          "description": "Поиск репозитория с названием \"component-file-tree-sidebar\""
+        },
+        {
+          "name": "file-tree-sidebar-component",
+          "query": "\"file-tree-sidebar-component\" in:name",
+          "description": "Поиск репозитория с названием \"file-tree-sidebar-component\""
+        },
+        {
+          "name": "file-tree-sidebar-ui",
+          "query": "\"file-tree-sidebar-ui\" in:name",
+          "description": "Поиск репозитория с названием \"file-tree-sidebar-ui\""
+        },
+        {
+          "name": "file-tree-sidebar-template",
+          "query": "\"file-tree-sidebar-template\" in:name",
+          "description": "Поиск репозитория с названием \"file-tree-sidebar-template\""
+        },
+        {
+          "name": "file-tree-sidebar-starter",
+          "query": "\"file-tree-sidebar-starter\" in:name",
+          "description": "Поиск репозитория с названием \"file-tree-sidebar-starter\""
+        },
+        {
+          "name": "file_tree_sidebar",
+          "query": "\"file_tree_sidebar\" in:name",
+          "description": "Поиск репозитория с названием \"file_tree_sidebar\""
+        },
+        {
+          "name": "v0_file_tree_sidebar",
+          "query": "\"v0_file_tree_sidebar\" in:name",
+          "description": "Поиск репозитория с названием \"v0_file_tree_sidebar\""
+        },
+        {
+          "name": "fileTreeSidebar",
+          "query": "\"fileTreeSidebar\" in:name",
+          "description": "Поиск репозитория с названием \"fileTreeSidebar\""
+        },
+        {
+          "name": "v0FileTreeSidebar",
+          "query": "\"v0FileTreeSidebar\" in:name",
+          "description": "Поиск репозитория с названием \"v0FileTreeSidebar\""
+        },
+        {
+          "name": "FileTreeSidebar",
+          "query": "\"FileTreeSidebar\" in:name",
+          "description": "Поиск репозитория с названием \"FileTreeSidebar\""
+        },
+        {
+          "name": "V0FileTreeSidebar",
+          "query": "\"V0FileTreeSidebar\" in:name",
+          "description": "Поиск репозитория с названием \"V0FileTreeSidebar\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/community/team-member-invites-BtbvdBJqRve",
+      "componentName": "team-member-invites",
+      "searchVariants": [
+        "team-member-invites",
+        "v0-team-member-invites",
+        "nextjs-team-member-invites",
+        "react-team-member-invites",
+        "ui-team-member-invites",
+        "component-team-member-invites",
+        "team-member-invites-component",
+        "team-member-invites-ui",
+        "team-member-invites-template",
+        "team-member-invites-starter",
+        "team_member_invites",
+        "v0_team_member_invites",
+        "teamMemberInvites",
+        "v0TeamMemberInvites",
+        "TeamMemberInvites",
+        "V0TeamMemberInvites"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "team-member-invites",
+          "query": "\"team-member-invites\" in:name",
+          "description": "Поиск репозитория с названием \"team-member-invites\""
+        },
+        {
+          "name": "v0-team-member-invites",
+          "query": "\"v0-team-member-invites\" in:name",
+          "description": "Поиск репозитория с названием \"v0-team-member-invites\""
+        },
+        {
+          "name": "nextjs-team-member-invites",
+          "query": "\"nextjs-team-member-invites\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-team-member-invites\""
+        },
+        {
+          "name": "react-team-member-invites",
+          "query": "\"react-team-member-invites\" in:name",
+          "description": "Поиск репозитория с названием \"react-team-member-invites\""
+        },
+        {
+          "name": "ui-team-member-invites",
+          "query": "\"ui-team-member-invites\" in:name",
+          "description": "Поиск репозитория с названием \"ui-team-member-invites\""
+        },
+        {
+          "name": "component-team-member-invites",
+          "query": "\"component-team-member-invites\" in:name",
+          "description": "Поиск репозитория с названием \"component-team-member-invites\""
+        },
+        {
+          "name": "team-member-invites-component",
+          "query": "\"team-member-invites-component\" in:name",
+          "description": "Поиск репозитория с названием \"team-member-invites-component\""
+        },
+        {
+          "name": "team-member-invites-ui",
+          "query": "\"team-member-invites-ui\" in:name",
+          "description": "Поиск репозитория с названием \"team-member-invites-ui\""
+        },
+        {
+          "name": "team-member-invites-template",
+          "query": "\"team-member-invites-template\" in:name",
+          "description": "Поиск репозитория с названием \"team-member-invites-template\""
+        },
+        {
+          "name": "team-member-invites-starter",
+          "query": "\"team-member-invites-starter\" in:name",
+          "description": "Поиск репозитория с названием \"team-member-invites-starter\""
+        },
+        {
+          "name": "team_member_invites",
+          "query": "\"team_member_invites\" in:name",
+          "description": "Поиск репозитория с названием \"team_member_invites\""
+        },
+        {
+          "name": "v0_team_member_invites",
+          "query": "\"v0_team_member_invites\" in:name",
+          "description": "Поиск репозитория с названием \"v0_team_member_invites\""
+        },
+        {
+          "name": "teamMemberInvites",
+          "query": "\"teamMemberInvites\" in:name",
+          "description": "Поиск репозитория с названием \"teamMemberInvites\""
+        },
+        {
+          "name": "v0TeamMemberInvites",
+          "query": "\"v0TeamMemberInvites\" in:name",
+          "description": "Поиск репозитория с названием \"v0TeamMemberInvites\""
+        },
+        {
+          "name": "TeamMemberInvites",
+          "query": "\"TeamMemberInvites\" in:name",
+          "description": "Поиск репозитория с названием \"TeamMemberInvites\""
+        },
+        {
+          "name": "V0TeamMemberInvites",
+          "query": "\"V0TeamMemberInvites\" in:name",
+          "description": "Поиск репозитория с названием \"V0TeamMemberInvites\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/community/eleven-labs-music-starter-xuCjYtmbQri",
+      "componentName": "eleven-labs-music-starter",
+      "searchVariants": [
+        "eleven-labs-music-starter",
+        "v0-eleven-labs-music-starter",
+        "nextjs-eleven-labs-music-starter",
+        "react-eleven-labs-music-starter",
+        "ui-eleven-labs-music-starter",
+        "component-eleven-labs-music-starter",
+        "eleven-labs-music-starter-component",
+        "eleven-labs-music-starter-ui",
+        "eleven-labs-music-starter-template",
+        "eleven-labs-music-starter-starter",
+        "eleven_labs_music_starter",
+        "v0_eleven_labs_music_starter",
+        "elevenLabsMusicStarter",
+        "v0ElevenLabsMusicStarter",
+        "ElevenLabsMusicStarter",
+        "V0ElevenLabsMusicStarter"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "eleven-labs-music-starter",
+          "query": "\"eleven-labs-music-starter\" in:name",
+          "description": "Поиск репозитория с названием \"eleven-labs-music-starter\""
+        },
+        {
+          "name": "v0-eleven-labs-music-starter",
+          "query": "\"v0-eleven-labs-music-starter\" in:name",
+          "description": "Поиск репозитория с названием \"v0-eleven-labs-music-starter\""
+        },
+        {
+          "name": "nextjs-eleven-labs-music-starter",
+          "query": "\"nextjs-eleven-labs-music-starter\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-eleven-labs-music-starter\""
+        },
+        {
+          "name": "react-eleven-labs-music-starter",
+          "query": "\"react-eleven-labs-music-starter\" in:name",
+          "description": "Поиск репозитория с названием \"react-eleven-labs-music-starter\""
+        },
+        {
+          "name": "ui-eleven-labs-music-starter",
+          "query": "\"ui-eleven-labs-music-starter\" in:name",
+          "description": "Поиск репозитория с названием \"ui-eleven-labs-music-starter\""
+        },
+        {
+          "name": "component-eleven-labs-music-starter",
+          "query": "\"component-eleven-labs-music-starter\" in:name",
+          "description": "Поиск репозитория с названием \"component-eleven-labs-music-starter\""
+        },
+        {
+          "name": "eleven-labs-music-starter-component",
+          "query": "\"eleven-labs-music-starter-component\" in:name",
+          "description": "Поиск репозитория с названием \"eleven-labs-music-starter-component\""
+        },
+        {
+          "name": "eleven-labs-music-starter-ui",
+          "query": "\"eleven-labs-music-starter-ui\" in:name",
+          "description": "Поиск репозитория с названием \"eleven-labs-music-starter-ui\""
+        },
+        {
+          "name": "eleven-labs-music-starter-template",
+          "query": "\"eleven-labs-music-starter-template\" in:name",
+          "description": "Поиск репозитория с названием \"eleven-labs-music-starter-template\""
+        },
+        {
+          "name": "eleven-labs-music-starter-starter",
+          "query": "\"eleven-labs-music-starter-starter\" in:name",
+          "description": "Поиск репозитория с названием \"eleven-labs-music-starter-starter\""
+        },
+        {
+          "name": "eleven_labs_music_starter",
+          "query": "\"eleven_labs_music_starter\" in:name",
+          "description": "Поиск репозитория с названием \"eleven_labs_music_starter\""
+        },
+        {
+          "name": "v0_eleven_labs_music_starter",
+          "query": "\"v0_eleven_labs_music_starter\" in:name",
+          "description": "Поиск репозитория с названием \"v0_eleven_labs_music_starter\""
+        },
+        {
+          "name": "elevenLabsMusicStarter",
+          "query": "\"elevenLabsMusicStarter\" in:name",
+          "description": "Поиск репозитория с названием \"elevenLabsMusicStarter\""
+        },
+        {
+          "name": "v0ElevenLabsMusicStarter",
+          "query": "\"v0ElevenLabsMusicStarter\" in:name",
+          "description": "Поиск репозитория с названием \"v0ElevenLabsMusicStarter\""
+        },
+        {
+          "name": "ElevenLabsMusicStarter",
+          "query": "\"ElevenLabsMusicStarter\" in:name",
+          "description": "Поиск репозитория с названием \"ElevenLabsMusicStarter\""
+        },
+        {
+          "name": "V0ElevenLabsMusicStarter",
+          "query": "\"V0ElevenLabsMusicStarter\" in:name",
+          "description": "Поиск репозитория с названием \"V0ElevenLabsMusicStarter\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/community/eleven-labs-agents-starter-5TN93pl3bRS",
+      "componentName": "eleven-labs-agents-starter",
+      "searchVariants": [
+        "eleven-labs-agents-starter",
+        "v0-eleven-labs-agents-starter",
+        "nextjs-eleven-labs-agents-starter",
+        "react-eleven-labs-agents-starter",
+        "ui-eleven-labs-agents-starter",
+        "component-eleven-labs-agents-starter",
+        "eleven-labs-agents-starter-component",
+        "eleven-labs-agents-starter-ui",
+        "eleven-labs-agents-starter-template",
+        "eleven-labs-agents-starter-starter",
+        "eleven_labs_agents_starter",
+        "v0_eleven_labs_agents_starter",
+        "elevenLabsAgentsStarter",
+        "v0ElevenLabsAgentsStarter",
+        "ElevenLabsAgentsStarter",
+        "V0ElevenLabsAgentsStarter"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "eleven-labs-agents-starter",
+          "query": "\"eleven-labs-agents-starter\" in:name",
+          "description": "Поиск репозитория с названием \"eleven-labs-agents-starter\""
+        },
+        {
+          "name": "v0-eleven-labs-agents-starter",
+          "query": "\"v0-eleven-labs-agents-starter\" in:name",
+          "description": "Поиск репозитория с названием \"v0-eleven-labs-agents-starter\""
+        },
+        {
+          "name": "nextjs-eleven-labs-agents-starter",
+          "query": "\"nextjs-eleven-labs-agents-starter\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-eleven-labs-agents-starter\""
+        },
+        {
+          "name": "react-eleven-labs-agents-starter",
+          "query": "\"react-eleven-labs-agents-starter\" in:name",
+          "description": "Поиск репозитория с названием \"react-eleven-labs-agents-starter\""
+        },
+        {
+          "name": "ui-eleven-labs-agents-starter",
+          "query": "\"ui-eleven-labs-agents-starter\" in:name",
+          "description": "Поиск репозитория с названием \"ui-eleven-labs-agents-starter\""
+        },
+        {
+          "name": "component-eleven-labs-agents-starter",
+          "query": "\"component-eleven-labs-agents-starter\" in:name",
+          "description": "Поиск репозитория с названием \"component-eleven-labs-agents-starter\""
+        },
+        {
+          "name": "eleven-labs-agents-starter-component",
+          "query": "\"eleven-labs-agents-starter-component\" in:name",
+          "description": "Поиск репозитория с названием \"eleven-labs-agents-starter-component\""
+        },
+        {
+          "name": "eleven-labs-agents-starter-ui",
+          "query": "\"eleven-labs-agents-starter-ui\" in:name",
+          "description": "Поиск репозитория с названием \"eleven-labs-agents-starter-ui\""
+        },
+        {
+          "name": "eleven-labs-agents-starter-template",
+          "query": "\"eleven-labs-agents-starter-template\" in:name",
+          "description": "Поиск репозитория с названием \"eleven-labs-agents-starter-template\""
+        },
+        {
+          "name": "eleven-labs-agents-starter-starter",
+          "query": "\"eleven-labs-agents-starter-starter\" in:name",
+          "description": "Поиск репозитория с названием \"eleven-labs-agents-starter-starter\""
+        },
+        {
+          "name": "eleven_labs_agents_starter",
+          "query": "\"eleven_labs_agents_starter\" in:name",
+          "description": "Поиск репозитория с названием \"eleven_labs_agents_starter\""
+        },
+        {
+          "name": "v0_eleven_labs_agents_starter",
+          "query": "\"v0_eleven_labs_agents_starter\" in:name",
+          "description": "Поиск репозитория с названием \"v0_eleven_labs_agents_starter\""
+        },
+        {
+          "name": "elevenLabsAgentsStarter",
+          "query": "\"elevenLabsAgentsStarter\" in:name",
+          "description": "Поиск репозитория с названием \"elevenLabsAgentsStarter\""
+        },
+        {
+          "name": "v0ElevenLabsAgentsStarter",
+          "query": "\"v0ElevenLabsAgentsStarter\" in:name",
+          "description": "Поиск репозитория с названием \"v0ElevenLabsAgentsStarter\""
+        },
+        {
+          "name": "ElevenLabsAgentsStarter",
+          "query": "\"ElevenLabsAgentsStarter\" in:name",
+          "description": "Поиск репозитория с названием \"ElevenLabsAgentsStarter\""
+        },
+        {
+          "name": "V0ElevenLabsAgentsStarter",
+          "query": "\"V0ElevenLabsAgentsStarter\" in:name",
+          "description": "Поиск репозитория с названием \"V0ElevenLabsAgentsStarter\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/community/eleven-labs-v3-podcast-generator-9zvVUBtxy6i",
+      "componentName": "eleven-labs-v3-podcast-generator",
+      "searchVariants": [
+        "eleven-labs-v3-podcast-generator",
+        "v0-eleven-labs-v3-podcast-generator",
+        "nextjs-eleven-labs-v3-podcast-generator",
+        "react-eleven-labs-v3-podcast-generator",
+        "ui-eleven-labs-v3-podcast-generator",
+        "component-eleven-labs-v3-podcast-generator",
+        "eleven-labs-v3-podcast-generator-component",
+        "eleven-labs-v3-podcast-generator-ui",
+        "eleven-labs-v3-podcast-generator-template",
+        "eleven-labs-v3-podcast-generator-starter",
+        "eleven_labs_v3_podcast_generator",
+        "v0_eleven_labs_v3_podcast_generator",
+        "elevenLabsV3PodcastGenerator",
+        "v0ElevenLabsV3PodcastGenerator",
+        "ElevenLabsV3PodcastGenerator",
+        "V0ElevenLabsV3PodcastGenerator"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "eleven-labs-v3-podcast-generator",
+          "query": "\"eleven-labs-v3-podcast-generator\" in:name",
+          "description": "Поиск репозитория с названием \"eleven-labs-v3-podcast-generator\""
+        },
+        {
+          "name": "v0-eleven-labs-v3-podcast-generator",
+          "query": "\"v0-eleven-labs-v3-podcast-generator\" in:name",
+          "description": "Поиск репозитория с названием \"v0-eleven-labs-v3-podcast-generator\""
+        },
+        {
+          "name": "nextjs-eleven-labs-v3-podcast-generator",
+          "query": "\"nextjs-eleven-labs-v3-podcast-generator\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-eleven-labs-v3-podcast-generator\""
+        },
+        {
+          "name": "react-eleven-labs-v3-podcast-generator",
+          "query": "\"react-eleven-labs-v3-podcast-generator\" in:name",
+          "description": "Поиск репозитория с названием \"react-eleven-labs-v3-podcast-generator\""
+        },
+        {
+          "name": "ui-eleven-labs-v3-podcast-generator",
+          "query": "\"ui-eleven-labs-v3-podcast-generator\" in:name",
+          "description": "Поиск репозитория с названием \"ui-eleven-labs-v3-podcast-generator\""
+        },
+        {
+          "name": "component-eleven-labs-v3-podcast-generator",
+          "query": "\"component-eleven-labs-v3-podcast-generator\" in:name",
+          "description": "Поиск репозитория с названием \"component-eleven-labs-v3-podcast-generator\""
+        },
+        {
+          "name": "eleven-labs-v3-podcast-generator-component",
+          "query": "\"eleven-labs-v3-podcast-generator-component\" in:name",
+          "description": "Поиск репозитория с названием \"eleven-labs-v3-podcast-generator-component\""
+        },
+        {
+          "name": "eleven-labs-v3-podcast-generator-ui",
+          "query": "\"eleven-labs-v3-podcast-generator-ui\" in:name",
+          "description": "Поиск репозитория с названием \"eleven-labs-v3-podcast-generator-ui\""
+        },
+        {
+          "name": "eleven-labs-v3-podcast-generator-template",
+          "query": "\"eleven-labs-v3-podcast-generator-template\" in:name",
+          "description": "Поиск репозитория с названием \"eleven-labs-v3-podcast-generator-template\""
+        },
+        {
+          "name": "eleven-labs-v3-podcast-generator-starter",
+          "query": "\"eleven-labs-v3-podcast-generator-starter\" in:name",
+          "description": "Поиск репозитория с названием \"eleven-labs-v3-podcast-generator-starter\""
+        },
+        {
+          "name": "eleven_labs_v3_podcast_generator",
+          "query": "\"eleven_labs_v3_podcast_generator\" in:name",
+          "description": "Поиск репозитория с названием \"eleven_labs_v3_podcast_generator\""
+        },
+        {
+          "name": "v0_eleven_labs_v3_podcast_generator",
+          "query": "\"v0_eleven_labs_v3_podcast_generator\" in:name",
+          "description": "Поиск репозитория с названием \"v0_eleven_labs_v3_podcast_generator\""
+        },
+        {
+          "name": "elevenLabsV3PodcastGenerator",
+          "query": "\"elevenLabsV3PodcastGenerator\" in:name",
+          "description": "Поиск репозитория с названием \"elevenLabsV3PodcastGenerator\""
+        },
+        {
+          "name": "v0ElevenLabsV3PodcastGenerator",
+          "query": "\"v0ElevenLabsV3PodcastGenerator\" in:name",
+          "description": "Поиск репозитория с названием \"v0ElevenLabsV3PodcastGenerator\""
+        },
+        {
+          "name": "ElevenLabsV3PodcastGenerator",
+          "query": "\"ElevenLabsV3PodcastGenerator\" in:name",
+          "description": "Поиск репозитория с названием \"ElevenLabsV3PodcastGenerator\""
+        },
+        {
+          "name": "V0ElevenLabsV3PodcastGenerator",
+          "query": "\"V0ElevenLabsV3PodcastGenerator\" in:name",
+          "description": "Поиск репозитория с названием \"V0ElevenLabsV3PodcastGenerator\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/chat/next-js-doc-like-file-tree-BNbIj6SOUTQ",
+      "componentName": "next-js-doc-like-file-tree",
+      "searchVariants": [
+        "next-js-doc-like-file-tree",
+        "v0-next-js-doc-like-file-tree",
+        "nextjs-next-js-doc-like-file-tree",
+        "react-next-js-doc-like-file-tree",
+        "ui-next-js-doc-like-file-tree",
+        "component-next-js-doc-like-file-tree",
+        "next-js-doc-like-file-tree-component",
+        "next-js-doc-like-file-tree-ui",
+        "next-js-doc-like-file-tree-template",
+        "next-js-doc-like-file-tree-starter",
+        "next_js_doc_like_file_tree",
+        "v0_next_js_doc_like_file_tree",
+        "nextJsDocLikeFileTree",
+        "v0NextJsDocLikeFileTree",
+        "NextJsDocLikeFileTree",
+        "V0NextJsDocLikeFileTree"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "next-js-doc-like-file-tree",
+          "query": "\"next-js-doc-like-file-tree\" in:name",
+          "description": "Поиск репозитория с названием \"next-js-doc-like-file-tree\""
+        },
+        {
+          "name": "v0-next-js-doc-like-file-tree",
+          "query": "\"v0-next-js-doc-like-file-tree\" in:name",
+          "description": "Поиск репозитория с названием \"v0-next-js-doc-like-file-tree\""
+        },
+        {
+          "name": "nextjs-next-js-doc-like-file-tree",
+          "query": "\"nextjs-next-js-doc-like-file-tree\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-next-js-doc-like-file-tree\""
+        },
+        {
+          "name": "react-next-js-doc-like-file-tree",
+          "query": "\"react-next-js-doc-like-file-tree\" in:name",
+          "description": "Поиск репозитория с названием \"react-next-js-doc-like-file-tree\""
+        },
+        {
+          "name": "ui-next-js-doc-like-file-tree",
+          "query": "\"ui-next-js-doc-like-file-tree\" in:name",
+          "description": "Поиск репозитория с названием \"ui-next-js-doc-like-file-tree\""
+        },
+        {
+          "name": "component-next-js-doc-like-file-tree",
+          "query": "\"component-next-js-doc-like-file-tree\" in:name",
+          "description": "Поиск репозитория с названием \"component-next-js-doc-like-file-tree\""
+        },
+        {
+          "name": "next-js-doc-like-file-tree-component",
+          "query": "\"next-js-doc-like-file-tree-component\" in:name",
+          "description": "Поиск репозитория с названием \"next-js-doc-like-file-tree-component\""
+        },
+        {
+          "name": "next-js-doc-like-file-tree-ui",
+          "query": "\"next-js-doc-like-file-tree-ui\" in:name",
+          "description": "Поиск репозитория с названием \"next-js-doc-like-file-tree-ui\""
+        },
+        {
+          "name": "next-js-doc-like-file-tree-template",
+          "query": "\"next-js-doc-like-file-tree-template\" in:name",
+          "description": "Поиск репозитория с названием \"next-js-doc-like-file-tree-template\""
+        },
+        {
+          "name": "next-js-doc-like-file-tree-starter",
+          "query": "\"next-js-doc-like-file-tree-starter\" in:name",
+          "description": "Поиск репозитория с названием \"next-js-doc-like-file-tree-starter\""
+        },
+        {
+          "name": "next_js_doc_like_file_tree",
+          "query": "\"next_js_doc_like_file_tree\" in:name",
+          "description": "Поиск репозитория с названием \"next_js_doc_like_file_tree\""
+        },
+        {
+          "name": "v0_next_js_doc_like_file_tree",
+          "query": "\"v0_next_js_doc_like_file_tree\" in:name",
+          "description": "Поиск репозитория с названием \"v0_next_js_doc_like_file_tree\""
+        },
+        {
+          "name": "nextJsDocLikeFileTree",
+          "query": "\"nextJsDocLikeFileTree\" in:name",
+          "description": "Поиск репозитория с названием \"nextJsDocLikeFileTree\""
+        },
+        {
+          "name": "v0NextJsDocLikeFileTree",
+          "query": "\"v0NextJsDocLikeFileTree\" in:name",
+          "description": "Поиск репозитория с названием \"v0NextJsDocLikeFileTree\""
+        },
+        {
+          "name": "NextJsDocLikeFileTree",
+          "query": "\"NextJsDocLikeFileTree\" in:name",
+          "description": "Поиск репозитория с названием \"NextJsDocLikeFileTree\""
+        },
+        {
+          "name": "V0NextJsDocLikeFileTree",
+          "query": "\"V0NextJsDocLikeFileTree\" in:name",
+          "description": "Поиск репозитория с названием \"V0NextJsDocLikeFileTree\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/community/vercel-tabs-BT27p0aGPsa",
+      "componentName": "vercel-tabs",
+      "searchVariants": [
+        "vercel-tabs",
+        "v0-vercel-tabs",
+        "nextjs-vercel-tabs",
+        "react-vercel-tabs",
+        "ui-vercel-tabs",
+        "component-vercel-tabs",
+        "vercel-tabs-component",
+        "vercel-tabs-ui",
+        "vercel-tabs-template",
+        "vercel-tabs-starter",
+        "vercel_tabs",
+        "v0_vercel_tabs",
+        "vercelTabs",
+        "v0VercelTabs",
+        "VercelTabs",
+        "V0VercelTabs"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "vercel-tabs",
+          "query": "\"vercel-tabs\" in:name",
+          "description": "Поиск репозитория с названием \"vercel-tabs\""
+        },
+        {
+          "name": "v0-vercel-tabs",
+          "query": "\"v0-vercel-tabs\" in:name",
+          "description": "Поиск репозитория с названием \"v0-vercel-tabs\""
+        },
+        {
+          "name": "nextjs-vercel-tabs",
+          "query": "\"nextjs-vercel-tabs\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-vercel-tabs\""
+        },
+        {
+          "name": "react-vercel-tabs",
+          "query": "\"react-vercel-tabs\" in:name",
+          "description": "Поиск репозитория с названием \"react-vercel-tabs\""
+        },
+        {
+          "name": "ui-vercel-tabs",
+          "query": "\"ui-vercel-tabs\" in:name",
+          "description": "Поиск репозитория с названием \"ui-vercel-tabs\""
+        },
+        {
+          "name": "component-vercel-tabs",
+          "query": "\"component-vercel-tabs\" in:name",
+          "description": "Поиск репозитория с названием \"component-vercel-tabs\""
+        },
+        {
+          "name": "vercel-tabs-component",
+          "query": "\"vercel-tabs-component\" in:name",
+          "description": "Поиск репозитория с названием \"vercel-tabs-component\""
+        },
+        {
+          "name": "vercel-tabs-ui",
+          "query": "\"vercel-tabs-ui\" in:name",
+          "description": "Поиск репозитория с названием \"vercel-tabs-ui\""
+        },
+        {
+          "name": "vercel-tabs-template",
+          "query": "\"vercel-tabs-template\" in:name",
+          "description": "Поиск репозитория с названием \"vercel-tabs-template\""
+        },
+        {
+          "name": "vercel-tabs-starter",
+          "query": "\"vercel-tabs-starter\" in:name",
+          "description": "Поиск репозитория с названием \"vercel-tabs-starter\""
+        },
+        {
+          "name": "vercel_tabs",
+          "query": "\"vercel_tabs\" in:name",
+          "description": "Поиск репозитория с названием \"vercel_tabs\""
+        },
+        {
+          "name": "v0_vercel_tabs",
+          "query": "\"v0_vercel_tabs\" in:name",
+          "description": "Поиск репозитория с названием \"v0_vercel_tabs\""
+        },
+        {
+          "name": "vercelTabs",
+          "query": "\"vercelTabs\" in:name",
+          "description": "Поиск репозитория с названием \"vercelTabs\""
+        },
+        {
+          "name": "v0VercelTabs",
+          "query": "\"v0VercelTabs\" in:name",
+          "description": "Поиск репозитория с названием \"v0VercelTabs\""
+        },
+        {
+          "name": "VercelTabs",
+          "query": "\"VercelTabs\" in:name",
+          "description": "Поиск репозитория с названием \"VercelTabs\""
+        },
+        {
+          "name": "V0VercelTabs",
+          "query": "\"V0VercelTabs\" in:name",
+          "description": "Поиск репозитория с названием \"V0VercelTabs\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/community/glow-menu-component-XqrIezRilBR",
+      "componentName": "glow-menu-component",
+      "searchVariants": [
+        "glow-menu-component",
+        "v0-glow-menu-component",
+        "nextjs-glow-menu-component",
+        "react-glow-menu-component",
+        "ui-glow-menu-component",
+        "component-glow-menu-component",
+        "glow-menu-component-component",
+        "glow-menu-component-ui",
+        "glow-menu-component-template",
+        "glow-menu-component-starter",
+        "glow_menu_component",
+        "v0_glow_menu_component",
+        "glowMenuComponent",
+        "v0GlowMenuComponent",
+        "GlowMenuComponent",
+        "V0GlowMenuComponent"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "glow-menu-component",
+          "query": "\"glow-menu-component\" in:name",
+          "description": "Поиск репозитория с названием \"glow-menu-component\""
+        },
+        {
+          "name": "v0-glow-menu-component",
+          "query": "\"v0-glow-menu-component\" in:name",
+          "description": "Поиск репозитория с названием \"v0-glow-menu-component\""
+        },
+        {
+          "name": "nextjs-glow-menu-component",
+          "query": "\"nextjs-glow-menu-component\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-glow-menu-component\""
+        },
+        {
+          "name": "react-glow-menu-component",
+          "query": "\"react-glow-menu-component\" in:name",
+          "description": "Поиск репозитория с названием \"react-glow-menu-component\""
+        },
+        {
+          "name": "ui-glow-menu-component",
+          "query": "\"ui-glow-menu-component\" in:name",
+          "description": "Поиск репозитория с названием \"ui-glow-menu-component\""
+        },
+        {
+          "name": "component-glow-menu-component",
+          "query": "\"component-glow-menu-component\" in:name",
+          "description": "Поиск репозитория с названием \"component-glow-menu-component\""
+        },
+        {
+          "name": "glow-menu-component-component",
+          "query": "\"glow-menu-component-component\" in:name",
+          "description": "Поиск репозитория с названием \"glow-menu-component-component\""
+        },
+        {
+          "name": "glow-menu-component-ui",
+          "query": "\"glow-menu-component-ui\" in:name",
+          "description": "Поиск репозитория с названием \"glow-menu-component-ui\""
+        },
+        {
+          "name": "glow-menu-component-template",
+          "query": "\"glow-menu-component-template\" in:name",
+          "description": "Поиск репозитория с названием \"glow-menu-component-template\""
+        },
+        {
+          "name": "glow-menu-component-starter",
+          "query": "\"glow-menu-component-starter\" in:name",
+          "description": "Поиск репозитория с названием \"glow-menu-component-starter\""
+        },
+        {
+          "name": "glow_menu_component",
+          "query": "\"glow_menu_component\" in:name",
+          "description": "Поиск репозитория с названием \"glow_menu_component\""
+        },
+        {
+          "name": "v0_glow_menu_component",
+          "query": "\"v0_glow_menu_component\" in:name",
+          "description": "Поиск репозитория с названием \"v0_glow_menu_component\""
+        },
+        {
+          "name": "glowMenuComponent",
+          "query": "\"glowMenuComponent\" in:name",
+          "description": "Поиск репозитория с названием \"glowMenuComponent\""
+        },
+        {
+          "name": "v0GlowMenuComponent",
+          "query": "\"v0GlowMenuComponent\" in:name",
+          "description": "Поиск репозитория с названием \"v0GlowMenuComponent\""
+        },
+        {
+          "name": "GlowMenuComponent",
+          "query": "\"GlowMenuComponent\" in:name",
+          "description": "Поиск репозитория с названием \"GlowMenuComponent\""
+        },
+        {
+          "name": "V0GlowMenuComponent",
+          "query": "\"V0GlowMenuComponent\" in:name",
+          "description": "Поиск репозитория с названием \"V0GlowMenuComponent\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/community/fluid-dropdown-zWgCGYGZIcx",
+      "componentName": "fluid-dropdown",
+      "searchVariants": [
+        "fluid-dropdown",
+        "v0-fluid-dropdown",
+        "nextjs-fluid-dropdown",
+        "react-fluid-dropdown",
+        "ui-fluid-dropdown",
+        "component-fluid-dropdown",
+        "fluid-dropdown-component",
+        "fluid-dropdown-ui",
+        "fluid-dropdown-template",
+        "fluid-dropdown-starter",
+        "fluid_dropdown",
+        "v0_fluid_dropdown",
+        "fluidDropdown",
+        "v0FluidDropdown",
+        "FluidDropdown",
+        "V0FluidDropdown"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "fluid-dropdown",
+          "query": "\"fluid-dropdown\" in:name",
+          "description": "Поиск репозитория с названием \"fluid-dropdown\""
+        },
+        {
+          "name": "v0-fluid-dropdown",
+          "query": "\"v0-fluid-dropdown\" in:name",
+          "description": "Поиск репозитория с названием \"v0-fluid-dropdown\""
+        },
+        {
+          "name": "nextjs-fluid-dropdown",
+          "query": "\"nextjs-fluid-dropdown\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-fluid-dropdown\""
+        },
+        {
+          "name": "react-fluid-dropdown",
+          "query": "\"react-fluid-dropdown\" in:name",
+          "description": "Поиск репозитория с названием \"react-fluid-dropdown\""
+        },
+        {
+          "name": "ui-fluid-dropdown",
+          "query": "\"ui-fluid-dropdown\" in:name",
+          "description": "Поиск репозитория с названием \"ui-fluid-dropdown\""
+        },
+        {
+          "name": "component-fluid-dropdown",
+          "query": "\"component-fluid-dropdown\" in:name",
+          "description": "Поиск репозитория с названием \"component-fluid-dropdown\""
+        },
+        {
+          "name": "fluid-dropdown-component",
+          "query": "\"fluid-dropdown-component\" in:name",
+          "description": "Поиск репозитория с названием \"fluid-dropdown-component\""
+        },
+        {
+          "name": "fluid-dropdown-ui",
+          "query": "\"fluid-dropdown-ui\" in:name",
+          "description": "Поиск репозитория с названием \"fluid-dropdown-ui\""
+        },
+        {
+          "name": "fluid-dropdown-template",
+          "query": "\"fluid-dropdown-template\" in:name",
+          "description": "Поиск репозитория с названием \"fluid-dropdown-template\""
+        },
+        {
+          "name": "fluid-dropdown-starter",
+          "query": "\"fluid-dropdown-starter\" in:name",
+          "description": "Поиск репозитория с названием \"fluid-dropdown-starter\""
+        },
+        {
+          "name": "fluid_dropdown",
+          "query": "\"fluid_dropdown\" in:name",
+          "description": "Поиск репозитория с названием \"fluid_dropdown\""
+        },
+        {
+          "name": "v0_fluid_dropdown",
+          "query": "\"v0_fluid_dropdown\" in:name",
+          "description": "Поиск репозитория с названием \"v0_fluid_dropdown\""
+        },
+        {
+          "name": "fluidDropdown",
+          "query": "\"fluidDropdown\" in:name",
+          "description": "Поиск репозитория с названием \"fluidDropdown\""
+        },
+        {
+          "name": "v0FluidDropdown",
+          "query": "\"v0FluidDropdown\" in:name",
+          "description": "Поиск репозитория с названием \"v0FluidDropdown\""
+        },
+        {
+          "name": "FluidDropdown",
+          "query": "\"FluidDropdown\" in:name",
+          "description": "Поиск репозитория с названием \"FluidDropdown\""
+        },
+        {
+          "name": "V0FluidDropdown",
+          "query": "\"V0FluidDropdown\" in:name",
+          "description": "Поиск репозитория с названием \"V0FluidDropdown\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/community/toast-fLjYRXrijvp",
+      "componentName": "toast",
+      "searchVariants": [
+        "toast",
+        "v0-toast",
+        "nextjs-toast",
+        "react-toast",
+        "ui-toast",
+        "component-toast",
+        "toast-component",
+        "toast-ui",
+        "toast-template",
+        "toast-starter",
+        "v0_toast",
+        "v0Toast",
+        "Toast",
+        "V0Toast"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "toast",
+          "query": "\"toast\" in:name",
+          "description": "Поиск репозитория с названием \"toast\""
+        },
+        {
+          "name": "v0-toast",
+          "query": "\"v0-toast\" in:name",
+          "description": "Поиск репозитория с названием \"v0-toast\""
+        },
+        {
+          "name": "nextjs-toast",
+          "query": "\"nextjs-toast\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-toast\""
+        },
+        {
+          "name": "react-toast",
+          "query": "\"react-toast\" in:name",
+          "description": "Поиск репозитория с названием \"react-toast\""
+        },
+        {
+          "name": "ui-toast",
+          "query": "\"ui-toast\" in:name",
+          "description": "Поиск репозитория с названием \"ui-toast\""
+        },
+        {
+          "name": "component-toast",
+          "query": "\"component-toast\" in:name",
+          "description": "Поиск репозитория с названием \"component-toast\""
+        },
+        {
+          "name": "toast-component",
+          "query": "\"toast-component\" in:name",
+          "description": "Поиск репозитория с названием \"toast-component\""
+        },
+        {
+          "name": "toast-ui",
+          "query": "\"toast-ui\" in:name",
+          "description": "Поиск репозитория с названием \"toast-ui\""
+        },
+        {
+          "name": "toast-template",
+          "query": "\"toast-template\" in:name",
+          "description": "Поиск репозитория с названием \"toast-template\""
+        },
+        {
+          "name": "toast-starter",
+          "query": "\"toast-starter\" in:name",
+          "description": "Поиск репозитория с названием \"toast-starter\""
+        },
+        {
+          "name": "v0_toast",
+          "query": "\"v0_toast\" in:name",
+          "description": "Поиск репозитория с названием \"v0_toast\""
+        },
+        {
+          "name": "v0Toast",
+          "query": "\"v0Toast\" in:name",
+          "description": "Поиск репозитория с названием \"v0Toast\""
+        },
+        {
+          "name": "Toast",
+          "query": "\"Toast\" in:name",
+          "description": "Поиск репозитория с названием \"Toast\""
+        },
+        {
+          "name": "V0Toast",
+          "query": "\"V0Toast\" in:name",
+          "description": "Поиск репозитория с названием \"V0Toast\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/community/bento-grid-8QW53cSzCxp",
+      "componentName": "bento-grid",
+      "searchVariants": [
+        "bento-grid",
+        "v0-bento-grid",
+        "nextjs-bento-grid",
+        "react-bento-grid",
+        "ui-bento-grid",
+        "component-bento-grid",
+        "bento-grid-component",
+        "bento-grid-ui",
+        "bento-grid-template",
+        "bento-grid-starter",
+        "bento_grid",
+        "v0_bento_grid",
+        "bentoGrid",
+        "v0BentoGrid",
+        "BentoGrid",
+        "V0BentoGrid"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "bento-grid",
+          "query": "\"bento-grid\" in:name",
+          "description": "Поиск репозитория с названием \"bento-grid\""
+        },
+        {
+          "name": "v0-bento-grid",
+          "query": "\"v0-bento-grid\" in:name",
+          "description": "Поиск репозитория с названием \"v0-bento-grid\""
+        },
+        {
+          "name": "nextjs-bento-grid",
+          "query": "\"nextjs-bento-grid\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-bento-grid\""
+        },
+        {
+          "name": "react-bento-grid",
+          "query": "\"react-bento-grid\" in:name",
+          "description": "Поиск репозитория с названием \"react-bento-grid\""
+        },
+        {
+          "name": "ui-bento-grid",
+          "query": "\"ui-bento-grid\" in:name",
+          "description": "Поиск репозитория с названием \"ui-bento-grid\""
+        },
+        {
+          "name": "component-bento-grid",
+          "query": "\"component-bento-grid\" in:name",
+          "description": "Поиск репозитория с названием \"component-bento-grid\""
+        },
+        {
+          "name": "bento-grid-component",
+          "query": "\"bento-grid-component\" in:name",
+          "description": "Поиск репозитория с названием \"bento-grid-component\""
+        },
+        {
+          "name": "bento-grid-ui",
+          "query": "\"bento-grid-ui\" in:name",
+          "description": "Поиск репозитория с названием \"bento-grid-ui\""
+        },
+        {
+          "name": "bento-grid-template",
+          "query": "\"bento-grid-template\" in:name",
+          "description": "Поиск репозитория с названием \"bento-grid-template\""
+        },
+        {
+          "name": "bento-grid-starter",
+          "query": "\"bento-grid-starter\" in:name",
+          "description": "Поиск репозитория с названием \"bento-grid-starter\""
+        },
+        {
+          "name": "bento_grid",
+          "query": "\"bento_grid\" in:name",
+          "description": "Поиск репозитория с названием \"bento_grid\""
+        },
+        {
+          "name": "v0_bento_grid",
+          "query": "\"v0_bento_grid\" in:name",
+          "description": "Поиск репозитория с названием \"v0_bento_grid\""
+        },
+        {
+          "name": "bentoGrid",
+          "query": "\"bentoGrid\" in:name",
+          "description": "Поиск репозитория с названием \"bentoGrid\""
+        },
+        {
+          "name": "v0BentoGrid",
+          "query": "\"v0BentoGrid\" in:name",
+          "description": "Поиск репозитория с названием \"v0BentoGrid\""
+        },
+        {
+          "name": "BentoGrid",
+          "query": "\"BentoGrid\" in:name",
+          "description": "Поиск репозитория с названием \"BentoGrid\""
+        },
+        {
+          "name": "V0BentoGrid",
+          "query": "\"V0BentoGrid\" in:name",
+          "description": "Поиск репозитория с названием \"V0BentoGrid\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/community/chat-ui-with-vibration-Enjda8qtpct",
+      "componentName": "chat-ui-with-vibration",
+      "searchVariants": [
+        "chat-ui-with-vibration",
+        "v0-chat-ui-with-vibration",
+        "nextjs-chat-ui-with-vibration",
+        "react-chat-ui-with-vibration",
+        "ui-chat-ui-with-vibration",
+        "component-chat-ui-with-vibration",
+        "chat-ui-with-vibration-component",
+        "chat-ui-with-vibration-ui",
+        "chat-ui-with-vibration-template",
+        "chat-ui-with-vibration-starter",
+        "chat_ui_with_vibration",
+        "v0_chat_ui_with_vibration",
+        "chatUiWithVibration",
+        "v0ChatUiWithVibration",
+        "ChatUiWithVibration",
+        "V0ChatUiWithVibration"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "chat-ui-with-vibration",
+          "query": "\"chat-ui-with-vibration\" in:name",
+          "description": "Поиск репозитория с названием \"chat-ui-with-vibration\""
+        },
+        {
+          "name": "v0-chat-ui-with-vibration",
+          "query": "\"v0-chat-ui-with-vibration\" in:name",
+          "description": "Поиск репозитория с названием \"v0-chat-ui-with-vibration\""
+        },
+        {
+          "name": "nextjs-chat-ui-with-vibration",
+          "query": "\"nextjs-chat-ui-with-vibration\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-chat-ui-with-vibration\""
+        },
+        {
+          "name": "react-chat-ui-with-vibration",
+          "query": "\"react-chat-ui-with-vibration\" in:name",
+          "description": "Поиск репозитория с названием \"react-chat-ui-with-vibration\""
+        },
+        {
+          "name": "ui-chat-ui-with-vibration",
+          "query": "\"ui-chat-ui-with-vibration\" in:name",
+          "description": "Поиск репозитория с названием \"ui-chat-ui-with-vibration\""
+        },
+        {
+          "name": "component-chat-ui-with-vibration",
+          "query": "\"component-chat-ui-with-vibration\" in:name",
+          "description": "Поиск репозитория с названием \"component-chat-ui-with-vibration\""
+        },
+        {
+          "name": "chat-ui-with-vibration-component",
+          "query": "\"chat-ui-with-vibration-component\" in:name",
+          "description": "Поиск репозитория с названием \"chat-ui-with-vibration-component\""
+        },
+        {
+          "name": "chat-ui-with-vibration-ui",
+          "query": "\"chat-ui-with-vibration-ui\" in:name",
+          "description": "Поиск репозитория с названием \"chat-ui-with-vibration-ui\""
+        },
+        {
+          "name": "chat-ui-with-vibration-template",
+          "query": "\"chat-ui-with-vibration-template\" in:name",
+          "description": "Поиск репозитория с названием \"chat-ui-with-vibration-template\""
+        },
+        {
+          "name": "chat-ui-with-vibration-starter",
+          "query": "\"chat-ui-with-vibration-starter\" in:name",
+          "description": "Поиск репозитория с названием \"chat-ui-with-vibration-starter\""
+        },
+        {
+          "name": "chat_ui_with_vibration",
+          "query": "\"chat_ui_with_vibration\" in:name",
+          "description": "Поиск репозитория с названием \"chat_ui_with_vibration\""
+        },
+        {
+          "name": "v0_chat_ui_with_vibration",
+          "query": "\"v0_chat_ui_with_vibration\" in:name",
+          "description": "Поиск репозитория с названием \"v0_chat_ui_with_vibration\""
+        },
+        {
+          "name": "chatUiWithVibration",
+          "query": "\"chatUiWithVibration\" in:name",
+          "description": "Поиск репозитория с названием \"chatUiWithVibration\""
+        },
+        {
+          "name": "v0ChatUiWithVibration",
+          "query": "\"v0ChatUiWithVibration\" in:name",
+          "description": "Поиск репозитория с названием \"v0ChatUiWithVibration\""
+        },
+        {
+          "name": "ChatUiWithVibration",
+          "query": "\"ChatUiWithVibration\" in:name",
+          "description": "Поиск репозитория с названием \"ChatUiWithVibration\""
+        },
+        {
+          "name": "V0ChatUiWithVibration",
+          "query": "\"V0ChatUiWithVibration\" in:name",
+          "description": "Поиск репозитория с названием \"V0ChatUiWithVibration\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/community/modern-library-design-YzJGL4XM0VM",
+      "componentName": "modern-library-design",
+      "searchVariants": [
+        "modern-library-design",
+        "v0-modern-library-design",
+        "nextjs-modern-library-design",
+        "react-modern-library-design",
+        "ui-modern-library-design",
+        "component-modern-library-design",
+        "modern-library-design-component",
+        "modern-library-design-ui",
+        "modern-library-design-template",
+        "modern-library-design-starter",
+        "modern_library_design",
+        "v0_modern_library_design",
+        "modernLibraryDesign",
+        "v0ModernLibraryDesign",
+        "ModernLibraryDesign",
+        "V0ModernLibraryDesign"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "modern-library-design",
+          "query": "\"modern-library-design\" in:name",
+          "description": "Поиск репозитория с названием \"modern-library-design\""
+        },
+        {
+          "name": "v0-modern-library-design",
+          "query": "\"v0-modern-library-design\" in:name",
+          "description": "Поиск репозитория с названием \"v0-modern-library-design\""
+        },
+        {
+          "name": "nextjs-modern-library-design",
+          "query": "\"nextjs-modern-library-design\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-modern-library-design\""
+        },
+        {
+          "name": "react-modern-library-design",
+          "query": "\"react-modern-library-design\" in:name",
+          "description": "Поиск репозитория с названием \"react-modern-library-design\""
+        },
+        {
+          "name": "ui-modern-library-design",
+          "query": "\"ui-modern-library-design\" in:name",
+          "description": "Поиск репозитория с названием \"ui-modern-library-design\""
+        },
+        {
+          "name": "component-modern-library-design",
+          "query": "\"component-modern-library-design\" in:name",
+          "description": "Поиск репозитория с названием \"component-modern-library-design\""
+        },
+        {
+          "name": "modern-library-design-component",
+          "query": "\"modern-library-design-component\" in:name",
+          "description": "Поиск репозитория с названием \"modern-library-design-component\""
+        },
+        {
+          "name": "modern-library-design-ui",
+          "query": "\"modern-library-design-ui\" in:name",
+          "description": "Поиск репозитория с названием \"modern-library-design-ui\""
+        },
+        {
+          "name": "modern-library-design-template",
+          "query": "\"modern-library-design-template\" in:name",
+          "description": "Поиск репозитория с названием \"modern-library-design-template\""
+        },
+        {
+          "name": "modern-library-design-starter",
+          "query": "\"modern-library-design-starter\" in:name",
+          "description": "Поиск репозитория с названием \"modern-library-design-starter\""
+        },
+        {
+          "name": "modern_library_design",
+          "query": "\"modern_library_design\" in:name",
+          "description": "Поиск репозитория с названием \"modern_library_design\""
+        },
+        {
+          "name": "v0_modern_library_design",
+          "query": "\"v0_modern_library_design\" in:name",
+          "description": "Поиск репозитория с названием \"v0_modern_library_design\""
+        },
+        {
+          "name": "modernLibraryDesign",
+          "query": "\"modernLibraryDesign\" in:name",
+          "description": "Поиск репозитория с названием \"modernLibraryDesign\""
+        },
+        {
+          "name": "v0ModernLibraryDesign",
+          "query": "\"v0ModernLibraryDesign\" in:name",
+          "description": "Поиск репозитория с названием \"v0ModernLibraryDesign\""
+        },
+        {
+          "name": "ModernLibraryDesign",
+          "query": "\"ModernLibraryDesign\" in:name",
+          "description": "Поиск репозитория с названием \"ModernLibraryDesign\""
+        },
+        {
+          "name": "V0ModernLibraryDesign",
+          "query": "\"V0ModernLibraryDesign\" in:name",
+          "description": "Поиск репозитория с названием \"V0ModernLibraryDesign\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/chat/cuisine-selector-chips-b1LMjSX49FY",
+      "componentName": "cuisine-selector-chips",
+      "searchVariants": [
+        "cuisine-selector-chips",
+        "v0-cuisine-selector-chips",
+        "nextjs-cuisine-selector-chips",
+        "react-cuisine-selector-chips",
+        "ui-cuisine-selector-chips",
+        "component-cuisine-selector-chips",
+        "cuisine-selector-chips-component",
+        "cuisine-selector-chips-ui",
+        "cuisine-selector-chips-template",
+        "cuisine-selector-chips-starter",
+        "cuisine_selector_chips",
+        "v0_cuisine_selector_chips",
+        "cuisineSelectorChips",
+        "v0CuisineSelectorChips",
+        "CuisineSelectorChips",
+        "V0CuisineSelectorChips"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "cuisine-selector-chips",
+          "query": "\"cuisine-selector-chips\" in:name",
+          "description": "Поиск репозитория с названием \"cuisine-selector-chips\""
+        },
+        {
+          "name": "v0-cuisine-selector-chips",
+          "query": "\"v0-cuisine-selector-chips\" in:name",
+          "description": "Поиск репозитория с названием \"v0-cuisine-selector-chips\""
+        },
+        {
+          "name": "nextjs-cuisine-selector-chips",
+          "query": "\"nextjs-cuisine-selector-chips\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-cuisine-selector-chips\""
+        },
+        {
+          "name": "react-cuisine-selector-chips",
+          "query": "\"react-cuisine-selector-chips\" in:name",
+          "description": "Поиск репозитория с названием \"react-cuisine-selector-chips\""
+        },
+        {
+          "name": "ui-cuisine-selector-chips",
+          "query": "\"ui-cuisine-selector-chips\" in:name",
+          "description": "Поиск репозитория с названием \"ui-cuisine-selector-chips\""
+        },
+        {
+          "name": "component-cuisine-selector-chips",
+          "query": "\"component-cuisine-selector-chips\" in:name",
+          "description": "Поиск репозитория с названием \"component-cuisine-selector-chips\""
+        },
+        {
+          "name": "cuisine-selector-chips-component",
+          "query": "\"cuisine-selector-chips-component\" in:name",
+          "description": "Поиск репозитория с названием \"cuisine-selector-chips-component\""
+        },
+        {
+          "name": "cuisine-selector-chips-ui",
+          "query": "\"cuisine-selector-chips-ui\" in:name",
+          "description": "Поиск репозитория с названием \"cuisine-selector-chips-ui\""
+        },
+        {
+          "name": "cuisine-selector-chips-template",
+          "query": "\"cuisine-selector-chips-template\" in:name",
+          "description": "Поиск репозитория с названием \"cuisine-selector-chips-template\""
+        },
+        {
+          "name": "cuisine-selector-chips-starter",
+          "query": "\"cuisine-selector-chips-starter\" in:name",
+          "description": "Поиск репозитория с названием \"cuisine-selector-chips-starter\""
+        },
+        {
+          "name": "cuisine_selector_chips",
+          "query": "\"cuisine_selector_chips\" in:name",
+          "description": "Поиск репозитория с названием \"cuisine_selector_chips\""
+        },
+        {
+          "name": "v0_cuisine_selector_chips",
+          "query": "\"v0_cuisine_selector_chips\" in:name",
+          "description": "Поиск репозитория с названием \"v0_cuisine_selector_chips\""
+        },
+        {
+          "name": "cuisineSelectorChips",
+          "query": "\"cuisineSelectorChips\" in:name",
+          "description": "Поиск репозитория с названием \"cuisineSelectorChips\""
+        },
+        {
+          "name": "v0CuisineSelectorChips",
+          "query": "\"v0CuisineSelectorChips\" in:name",
+          "description": "Поиск репозитория с названием \"v0CuisineSelectorChips\""
+        },
+        {
+          "name": "CuisineSelectorChips",
+          "query": "\"CuisineSelectorChips\" in:name",
+          "description": "Поиск репозитория с названием \"CuisineSelectorChips\""
+        },
+        {
+          "name": "V0CuisineSelectorChips",
+          "query": "\"V0CuisineSelectorChips\" in:name",
+          "description": "Поиск репозитория с названием \"V0CuisineSelectorChips\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/chat/general-greeting-oaN8bYkHdWq",
+      "componentName": "general-greeting",
+      "searchVariants": [
+        "general-greeting",
+        "v0-general-greeting",
+        "nextjs-general-greeting",
+        "react-general-greeting",
+        "ui-general-greeting",
+        "component-general-greeting",
+        "general-greeting-component",
+        "general-greeting-ui",
+        "general-greeting-template",
+        "general-greeting-starter",
+        "general_greeting",
+        "v0_general_greeting",
+        "generalGreeting",
+        "v0GeneralGreeting",
+        "GeneralGreeting",
+        "V0GeneralGreeting"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "general-greeting",
+          "query": "\"general-greeting\" in:name",
+          "description": "Поиск репозитория с названием \"general-greeting\""
+        },
+        {
+          "name": "v0-general-greeting",
+          "query": "\"v0-general-greeting\" in:name",
+          "description": "Поиск репозитория с названием \"v0-general-greeting\""
+        },
+        {
+          "name": "nextjs-general-greeting",
+          "query": "\"nextjs-general-greeting\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-general-greeting\""
+        },
+        {
+          "name": "react-general-greeting",
+          "query": "\"react-general-greeting\" in:name",
+          "description": "Поиск репозитория с названием \"react-general-greeting\""
+        },
+        {
+          "name": "ui-general-greeting",
+          "query": "\"ui-general-greeting\" in:name",
+          "description": "Поиск репозитория с названием \"ui-general-greeting\""
+        },
+        {
+          "name": "component-general-greeting",
+          "query": "\"component-general-greeting\" in:name",
+          "description": "Поиск репозитория с названием \"component-general-greeting\""
+        },
+        {
+          "name": "general-greeting-component",
+          "query": "\"general-greeting-component\" in:name",
+          "description": "Поиск репозитория с названием \"general-greeting-component\""
+        },
+        {
+          "name": "general-greeting-ui",
+          "query": "\"general-greeting-ui\" in:name",
+          "description": "Поиск репозитория с названием \"general-greeting-ui\""
+        },
+        {
+          "name": "general-greeting-template",
+          "query": "\"general-greeting-template\" in:name",
+          "description": "Поиск репозитория с названием \"general-greeting-template\""
+        },
+        {
+          "name": "general-greeting-starter",
+          "query": "\"general-greeting-starter\" in:name",
+          "description": "Поиск репозитория с названием \"general-greeting-starter\""
+        },
+        {
+          "name": "general_greeting",
+          "query": "\"general_greeting\" in:name",
+          "description": "Поиск репозитория с названием \"general_greeting\""
+        },
+        {
+          "name": "v0_general_greeting",
+          "query": "\"v0_general_greeting\" in:name",
+          "description": "Поиск репозитория с названием \"v0_general_greeting\""
+        },
+        {
+          "name": "generalGreeting",
+          "query": "\"generalGreeting\" in:name",
+          "description": "Поиск репозитория с названием \"generalGreeting\""
+        },
+        {
+          "name": "v0GeneralGreeting",
+          "query": "\"v0GeneralGreeting\" in:name",
+          "description": "Поиск репозитория с названием \"v0GeneralGreeting\""
+        },
+        {
+          "name": "GeneralGreeting",
+          "query": "\"GeneralGreeting\" in:name",
+          "description": "Поиск репозитория с названием \"GeneralGreeting\""
+        },
+        {
+          "name": "V0GeneralGreeting",
+          "query": "\"V0GeneralGreeting\" in:name",
+          "description": "Поиск репозитория с названием \"V0GeneralGreeting\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/community/marketplace-b3DN1aOd6mQ",
+      "componentName": "marketplace",
+      "searchVariants": [
+        "marketplace",
+        "v0-marketplace",
+        "nextjs-marketplace",
+        "react-marketplace",
+        "ui-marketplace",
+        "component-marketplace",
+        "marketplace-component",
+        "marketplace-ui",
+        "marketplace-template",
+        "marketplace-starter",
+        "v0_marketplace",
+        "v0Marketplace",
+        "Marketplace",
+        "V0Marketplace"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "marketplace",
+          "query": "\"marketplace\" in:name",
+          "description": "Поиск репозитория с названием \"marketplace\""
+        },
+        {
+          "name": "v0-marketplace",
+          "query": "\"v0-marketplace\" in:name",
+          "description": "Поиск репозитория с названием \"v0-marketplace\""
+        },
+        {
+          "name": "nextjs-marketplace",
+          "query": "\"nextjs-marketplace\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-marketplace\""
+        },
+        {
+          "name": "react-marketplace",
+          "query": "\"react-marketplace\" in:name",
+          "description": "Поиск репозитория с названием \"react-marketplace\""
+        },
+        {
+          "name": "ui-marketplace",
+          "query": "\"ui-marketplace\" in:name",
+          "description": "Поиск репозитория с названием \"ui-marketplace\""
+        },
+        {
+          "name": "component-marketplace",
+          "query": "\"component-marketplace\" in:name",
+          "description": "Поиск репозитория с названием \"component-marketplace\""
+        },
+        {
+          "name": "marketplace-component",
+          "query": "\"marketplace-component\" in:name",
+          "description": "Поиск репозитория с названием \"marketplace-component\""
+        },
+        {
+          "name": "marketplace-ui",
+          "query": "\"marketplace-ui\" in:name",
+          "description": "Поиск репозитория с названием \"marketplace-ui\""
+        },
+        {
+          "name": "marketplace-template",
+          "query": "\"marketplace-template\" in:name",
+          "description": "Поиск репозитория с названием \"marketplace-template\""
+        },
+        {
+          "name": "marketplace-starter",
+          "query": "\"marketplace-starter\" in:name",
+          "description": "Поиск репозитория с названием \"marketplace-starter\""
+        },
+        {
+          "name": "v0_marketplace",
+          "query": "\"v0_marketplace\" in:name",
+          "description": "Поиск репозитория с названием \"v0_marketplace\""
+        },
+        {
+          "name": "v0Marketplace",
+          "query": "\"v0Marketplace\" in:name",
+          "description": "Поиск репозитория с названием \"v0Marketplace\""
+        },
+        {
+          "name": "Marketplace",
+          "query": "\"Marketplace\" in:name",
+          "description": "Поиск репозитория с названием \"Marketplace\""
+        },
+        {
+          "name": "V0Marketplace",
+          "query": "\"V0Marketplace\" in:name",
+          "description": "Поиск репозитория с названием \"V0Marketplace\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/community/background-paths-s2R42ut7CxT",
+      "componentName": "background-paths",
+      "searchVariants": [
+        "background-paths",
+        "v0-background-paths",
+        "nextjs-background-paths",
+        "react-background-paths",
+        "ui-background-paths",
+        "component-background-paths",
+        "background-paths-component",
+        "background-paths-ui",
+        "background-paths-template",
+        "background-paths-starter",
+        "background_paths",
+        "v0_background_paths",
+        "backgroundPaths",
+        "v0BackgroundPaths",
+        "BackgroundPaths",
+        "V0BackgroundPaths"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "background-paths",
+          "query": "\"background-paths\" in:name",
+          "description": "Поиск репозитория с названием \"background-paths\""
+        },
+        {
+          "name": "v0-background-paths",
+          "query": "\"v0-background-paths\" in:name",
+          "description": "Поиск репозитория с названием \"v0-background-paths\""
+        },
+        {
+          "name": "nextjs-background-paths",
+          "query": "\"nextjs-background-paths\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-background-paths\""
+        },
+        {
+          "name": "react-background-paths",
+          "query": "\"react-background-paths\" in:name",
+          "description": "Поиск репозитория с названием \"react-background-paths\""
+        },
+        {
+          "name": "ui-background-paths",
+          "query": "\"ui-background-paths\" in:name",
+          "description": "Поиск репозитория с названием \"ui-background-paths\""
+        },
+        {
+          "name": "component-background-paths",
+          "query": "\"component-background-paths\" in:name",
+          "description": "Поиск репозитория с названием \"component-background-paths\""
+        },
+        {
+          "name": "background-paths-component",
+          "query": "\"background-paths-component\" in:name",
+          "description": "Поиск репозитория с названием \"background-paths-component\""
+        },
+        {
+          "name": "background-paths-ui",
+          "query": "\"background-paths-ui\" in:name",
+          "description": "Поиск репозитория с названием \"background-paths-ui\""
+        },
+        {
+          "name": "background-paths-template",
+          "query": "\"background-paths-template\" in:name",
+          "description": "Поиск репозитория с названием \"background-paths-template\""
+        },
+        {
+          "name": "background-paths-starter",
+          "query": "\"background-paths-starter\" in:name",
+          "description": "Поиск репозитория с названием \"background-paths-starter\""
+        },
+        {
+          "name": "background_paths",
+          "query": "\"background_paths\" in:name",
+          "description": "Поиск репозитория с названием \"background_paths\""
+        },
+        {
+          "name": "v0_background_paths",
+          "query": "\"v0_background_paths\" in:name",
+          "description": "Поиск репозитория с названием \"v0_background_paths\""
+        },
+        {
+          "name": "backgroundPaths",
+          "query": "\"backgroundPaths\" in:name",
+          "description": "Поиск репозитория с названием \"backgroundPaths\""
+        },
+        {
+          "name": "v0BackgroundPaths",
+          "query": "\"v0BackgroundPaths\" in:name",
+          "description": "Поиск репозитория с названием \"v0BackgroundPaths\""
+        },
+        {
+          "name": "BackgroundPaths",
+          "query": "\"BackgroundPaths\" in:name",
+          "description": "Поиск репозитория с названием \"BackgroundPaths\""
+        },
+        {
+          "name": "V0BackgroundPaths",
+          "query": "\"V0BackgroundPaths\" in:name",
+          "description": "Поиск репозитория с названием \"V0BackgroundPaths\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/community/creative-xYqdqPAJD3j",
+      "componentName": "creative",
+      "searchVariants": [
+        "creative",
+        "v0-creative",
+        "nextjs-creative",
+        "react-creative",
+        "ui-creative",
+        "component-creative",
+        "creative-component",
+        "creative-ui",
+        "creative-template",
+        "creative-starter",
+        "v0_creative",
+        "v0Creative",
+        "Creative",
+        "V0Creative"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "creative",
+          "query": "\"creative\" in:name",
+          "description": "Поиск репозитория с названием \"creative\""
+        },
+        {
+          "name": "v0-creative",
+          "query": "\"v0-creative\" in:name",
+          "description": "Поиск репозитория с названием \"v0-creative\""
+        },
+        {
+          "name": "nextjs-creative",
+          "query": "\"nextjs-creative\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-creative\""
+        },
+        {
+          "name": "react-creative",
+          "query": "\"react-creative\" in:name",
+          "description": "Поиск репозитория с названием \"react-creative\""
+        },
+        {
+          "name": "ui-creative",
+          "query": "\"ui-creative\" in:name",
+          "description": "Поиск репозитория с названием \"ui-creative\""
+        },
+        {
+          "name": "component-creative",
+          "query": "\"component-creative\" in:name",
+          "description": "Поиск репозитория с названием \"component-creative\""
+        },
+        {
+          "name": "creative-component",
+          "query": "\"creative-component\" in:name",
+          "description": "Поиск репозитория с названием \"creative-component\""
+        },
+        {
+          "name": "creative-ui",
+          "query": "\"creative-ui\" in:name",
+          "description": "Поиск репозитория с названием \"creative-ui\""
+        },
+        {
+          "name": "creative-template",
+          "query": "\"creative-template\" in:name",
+          "description": "Поиск репозитория с названием \"creative-template\""
+        },
+        {
+          "name": "creative-starter",
+          "query": "\"creative-starter\" in:name",
+          "description": "Поиск репозитория с названием \"creative-starter\""
+        },
+        {
+          "name": "v0_creative",
+          "query": "\"v0_creative\" in:name",
+          "description": "Поиск репозитория с названием \"v0_creative\""
+        },
+        {
+          "name": "v0Creative",
+          "query": "\"v0Creative\" in:name",
+          "description": "Поиск репозитория с названием \"v0Creative\""
+        },
+        {
+          "name": "Creative",
+          "query": "\"Creative\" in:name",
+          "description": "Поиск репозитория с названием \"Creative\""
+        },
+        {
+          "name": "V0Creative",
+          "query": "\"V0Creative\" in:name",
+          "description": "Поиск репозитория с названием \"V0Creative\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/community/shopify-product-page-design-NxSj0IgX4vu",
+      "componentName": "shopify-product-page-design",
+      "searchVariants": [
+        "shopify-product-page-design",
+        "v0-shopify-product-page-design",
+        "nextjs-shopify-product-page-design",
+        "react-shopify-product-page-design",
+        "ui-shopify-product-page-design",
+        "component-shopify-product-page-design",
+        "shopify-product-page-design-component",
+        "shopify-product-page-design-ui",
+        "shopify-product-page-design-template",
+        "shopify-product-page-design-starter",
+        "shopify_product_page_design",
+        "v0_shopify_product_page_design",
+        "shopifyProductPageDesign",
+        "v0ShopifyProductPageDesign",
+        "ShopifyProductPageDesign",
+        "V0ShopifyProductPageDesign"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "shopify-product-page-design",
+          "query": "\"shopify-product-page-design\" in:name",
+          "description": "Поиск репозитория с названием \"shopify-product-page-design\""
+        },
+        {
+          "name": "v0-shopify-product-page-design",
+          "query": "\"v0-shopify-product-page-design\" in:name",
+          "description": "Поиск репозитория с названием \"v0-shopify-product-page-design\""
+        },
+        {
+          "name": "nextjs-shopify-product-page-design",
+          "query": "\"nextjs-shopify-product-page-design\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-shopify-product-page-design\""
+        },
+        {
+          "name": "react-shopify-product-page-design",
+          "query": "\"react-shopify-product-page-design\" in:name",
+          "description": "Поиск репозитория с названием \"react-shopify-product-page-design\""
+        },
+        {
+          "name": "ui-shopify-product-page-design",
+          "query": "\"ui-shopify-product-page-design\" in:name",
+          "description": "Поиск репозитория с названием \"ui-shopify-product-page-design\""
+        },
+        {
+          "name": "component-shopify-product-page-design",
+          "query": "\"component-shopify-product-page-design\" in:name",
+          "description": "Поиск репозитория с названием \"component-shopify-product-page-design\""
+        },
+        {
+          "name": "shopify-product-page-design-component",
+          "query": "\"shopify-product-page-design-component\" in:name",
+          "description": "Поиск репозитория с названием \"shopify-product-page-design-component\""
+        },
+        {
+          "name": "shopify-product-page-design-ui",
+          "query": "\"shopify-product-page-design-ui\" in:name",
+          "description": "Поиск репозитория с названием \"shopify-product-page-design-ui\""
+        },
+        {
+          "name": "shopify-product-page-design-template",
+          "query": "\"shopify-product-page-design-template\" in:name",
+          "description": "Поиск репозитория с названием \"shopify-product-page-design-template\""
+        },
+        {
+          "name": "shopify-product-page-design-starter",
+          "query": "\"shopify-product-page-design-starter\" in:name",
+          "description": "Поиск репозитория с названием \"shopify-product-page-design-starter\""
+        },
+        {
+          "name": "shopify_product_page_design",
+          "query": "\"shopify_product_page_design\" in:name",
+          "description": "Поиск репозитория с названием \"shopify_product_page_design\""
+        },
+        {
+          "name": "v0_shopify_product_page_design",
+          "query": "\"v0_shopify_product_page_design\" in:name",
+          "description": "Поиск репозитория с названием \"v0_shopify_product_page_design\""
+        },
+        {
+          "name": "shopifyProductPageDesign",
+          "query": "\"shopifyProductPageDesign\" in:name",
+          "description": "Поиск репозитория с названием \"shopifyProductPageDesign\""
+        },
+        {
+          "name": "v0ShopifyProductPageDesign",
+          "query": "\"v0ShopifyProductPageDesign\" in:name",
+          "description": "Поиск репозитория с названием \"v0ShopifyProductPageDesign\""
+        },
+        {
+          "name": "ShopifyProductPageDesign",
+          "query": "\"ShopifyProductPageDesign\" in:name",
+          "description": "Поиск репозитория с названием \"ShopifyProductPageDesign\""
+        },
+        {
+          "name": "V0ShopifyProductPageDesign",
+          "query": "\"V0ShopifyProductPageDesign\" in:name",
+          "description": "Поиск репозитория с названием \"V0ShopifyProductPageDesign\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/community/creative-agency-portfolio-hJnIgxCCUr5",
+      "componentName": "creative-agency-portfolio",
+      "searchVariants": [
+        "creative-agency-portfolio",
+        "v0-creative-agency-portfolio",
+        "nextjs-creative-agency-portfolio",
+        "react-creative-agency-portfolio",
+        "ui-creative-agency-portfolio",
+        "component-creative-agency-portfolio",
+        "creative-agency-portfolio-component",
+        "creative-agency-portfolio-ui",
+        "creative-agency-portfolio-template",
+        "creative-agency-portfolio-starter",
+        "creative_agency_portfolio",
+        "v0_creative_agency_portfolio",
+        "creativeAgencyPortfolio",
+        "v0CreativeAgencyPortfolio",
+        "CreativeAgencyPortfolio",
+        "V0CreativeAgencyPortfolio"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "creative-agency-portfolio",
+          "query": "\"creative-agency-portfolio\" in:name",
+          "description": "Поиск репозитория с названием \"creative-agency-portfolio\""
+        },
+        {
+          "name": "v0-creative-agency-portfolio",
+          "query": "\"v0-creative-agency-portfolio\" in:name",
+          "description": "Поиск репозитория с названием \"v0-creative-agency-portfolio\""
+        },
+        {
+          "name": "nextjs-creative-agency-portfolio",
+          "query": "\"nextjs-creative-agency-portfolio\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-creative-agency-portfolio\""
+        },
+        {
+          "name": "react-creative-agency-portfolio",
+          "query": "\"react-creative-agency-portfolio\" in:name",
+          "description": "Поиск репозитория с названием \"react-creative-agency-portfolio\""
+        },
+        {
+          "name": "ui-creative-agency-portfolio",
+          "query": "\"ui-creative-agency-portfolio\" in:name",
+          "description": "Поиск репозитория с названием \"ui-creative-agency-portfolio\""
+        },
+        {
+          "name": "component-creative-agency-portfolio",
+          "query": "\"component-creative-agency-portfolio\" in:name",
+          "description": "Поиск репозитория с названием \"component-creative-agency-portfolio\""
+        },
+        {
+          "name": "creative-agency-portfolio-component",
+          "query": "\"creative-agency-portfolio-component\" in:name",
+          "description": "Поиск репозитория с названием \"creative-agency-portfolio-component\""
+        },
+        {
+          "name": "creative-agency-portfolio-ui",
+          "query": "\"creative-agency-portfolio-ui\" in:name",
+          "description": "Поиск репозитория с названием \"creative-agency-portfolio-ui\""
+        },
+        {
+          "name": "creative-agency-portfolio-template",
+          "query": "\"creative-agency-portfolio-template\" in:name",
+          "description": "Поиск репозитория с названием \"creative-agency-portfolio-template\""
+        },
+        {
+          "name": "creative-agency-portfolio-starter",
+          "query": "\"creative-agency-portfolio-starter\" in:name",
+          "description": "Поиск репозитория с названием \"creative-agency-portfolio-starter\""
+        },
+        {
+          "name": "creative_agency_portfolio",
+          "query": "\"creative_agency_portfolio\" in:name",
+          "description": "Поиск репозитория с названием \"creative_agency_portfolio\""
+        },
+        {
+          "name": "v0_creative_agency_portfolio",
+          "query": "\"v0_creative_agency_portfolio\" in:name",
+          "description": "Поиск репозитория с названием \"v0_creative_agency_portfolio\""
+        },
+        {
+          "name": "creativeAgencyPortfolio",
+          "query": "\"creativeAgencyPortfolio\" in:name",
+          "description": "Поиск репозитория с названием \"creativeAgencyPortfolio\""
+        },
+        {
+          "name": "v0CreativeAgencyPortfolio",
+          "query": "\"v0CreativeAgencyPortfolio\" in:name",
+          "description": "Поиск репозитория с названием \"v0CreativeAgencyPortfolio\""
+        },
+        {
+          "name": "CreativeAgencyPortfolio",
+          "query": "\"CreativeAgencyPortfolio\" in:name",
+          "description": "Поиск репозитория с названием \"CreativeAgencyPortfolio\""
+        },
+        {
+          "name": "V0CreativeAgencyPortfolio",
+          "query": "\"V0CreativeAgencyPortfolio\" in:name",
+          "description": "Поиск репозитория с названием \"V0CreativeAgencyPortfolio\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/community/financial-dashboard-functional-jUBqSBJsNrz",
+      "componentName": "financial-dashboard-functional",
+      "searchVariants": [
+        "financial-dashboard-functional",
+        "v0-financial-dashboard-functional",
+        "nextjs-financial-dashboard-functional",
+        "react-financial-dashboard-functional",
+        "ui-financial-dashboard-functional",
+        "component-financial-dashboard-functional",
+        "financial-dashboard-functional-component",
+        "financial-dashboard-functional-ui",
+        "financial-dashboard-functional-template",
+        "financial-dashboard-functional-starter",
+        "financial_dashboard_functional",
+        "v0_financial_dashboard_functional",
+        "financialDashboardFunctional",
+        "v0FinancialDashboardFunctional",
+        "FinancialDashboardFunctional",
+        "V0FinancialDashboardFunctional"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "financial-dashboard-functional",
+          "query": "\"financial-dashboard-functional\" in:name",
+          "description": "Поиск репозитория с названием \"financial-dashboard-functional\""
+        },
+        {
+          "name": "v0-financial-dashboard-functional",
+          "query": "\"v0-financial-dashboard-functional\" in:name",
+          "description": "Поиск репозитория с названием \"v0-financial-dashboard-functional\""
+        },
+        {
+          "name": "nextjs-financial-dashboard-functional",
+          "query": "\"nextjs-financial-dashboard-functional\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-financial-dashboard-functional\""
+        },
+        {
+          "name": "react-financial-dashboard-functional",
+          "query": "\"react-financial-dashboard-functional\" in:name",
+          "description": "Поиск репозитория с названием \"react-financial-dashboard-functional\""
+        },
+        {
+          "name": "ui-financial-dashboard-functional",
+          "query": "\"ui-financial-dashboard-functional\" in:name",
+          "description": "Поиск репозитория с названием \"ui-financial-dashboard-functional\""
+        },
+        {
+          "name": "component-financial-dashboard-functional",
+          "query": "\"component-financial-dashboard-functional\" in:name",
+          "description": "Поиск репозитория с названием \"component-financial-dashboard-functional\""
+        },
+        {
+          "name": "financial-dashboard-functional-component",
+          "query": "\"financial-dashboard-functional-component\" in:name",
+          "description": "Поиск репозитория с названием \"financial-dashboard-functional-component\""
+        },
+        {
+          "name": "financial-dashboard-functional-ui",
+          "query": "\"financial-dashboard-functional-ui\" in:name",
+          "description": "Поиск репозитория с названием \"financial-dashboard-functional-ui\""
+        },
+        {
+          "name": "financial-dashboard-functional-template",
+          "query": "\"financial-dashboard-functional-template\" in:name",
+          "description": "Поиск репозитория с названием \"financial-dashboard-functional-template\""
+        },
+        {
+          "name": "financial-dashboard-functional-starter",
+          "query": "\"financial-dashboard-functional-starter\" in:name",
+          "description": "Поиск репозитория с названием \"financial-dashboard-functional-starter\""
+        },
+        {
+          "name": "financial_dashboard_functional",
+          "query": "\"financial_dashboard_functional\" in:name",
+          "description": "Поиск репозитория с названием \"financial_dashboard_functional\""
+        },
+        {
+          "name": "v0_financial_dashboard_functional",
+          "query": "\"v0_financial_dashboard_functional\" in:name",
+          "description": "Поиск репозитория с названием \"v0_financial_dashboard_functional\""
+        },
+        {
+          "name": "financialDashboardFunctional",
+          "query": "\"financialDashboardFunctional\" in:name",
+          "description": "Поиск репозитория с названием \"financialDashboardFunctional\""
+        },
+        {
+          "name": "v0FinancialDashboardFunctional",
+          "query": "\"v0FinancialDashboardFunctional\" in:name",
+          "description": "Поиск репозитория с названием \"v0FinancialDashboardFunctional\""
+        },
+        {
+          "name": "FinancialDashboardFunctional",
+          "query": "\"FinancialDashboardFunctional\" in:name",
+          "description": "Поиск репозитория с названием \"FinancialDashboardFunctional\""
+        },
+        {
+          "name": "V0FinancialDashboardFunctional",
+          "query": "\"V0FinancialDashboardFunctional\" in:name",
+          "description": "Поиск репозитория с названием \"V0FinancialDashboardFunctional\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/community/ai-elements-with-ai-sdk-5-ksSTzATPzMq",
+      "componentName": "ai-elements-with-ai-sdk-5",
+      "searchVariants": [
+        "ai-elements-with-ai-sdk-5",
+        "v0-ai-elements-with-ai-sdk-5",
+        "nextjs-ai-elements-with-ai-sdk-5",
+        "react-ai-elements-with-ai-sdk-5",
+        "ui-ai-elements-with-ai-sdk-5",
+        "component-ai-elements-with-ai-sdk-5",
+        "ai-elements-with-ai-sdk-5-component",
+        "ai-elements-with-ai-sdk-5-ui",
+        "ai-elements-with-ai-sdk-5-template",
+        "ai-elements-with-ai-sdk-5-starter",
+        "ai_elements_with_ai_sdk_5",
+        "v0_ai_elements_with_ai_sdk_5",
+        "aiElementsWithAiSdk5",
+        "v0AiElementsWithAiSdk5",
+        "AiElementsWithAiSdk5",
+        "V0AiElementsWithAiSdk5"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "ai-elements-with-ai-sdk-5",
+          "query": "\"ai-elements-with-ai-sdk-5\" in:name",
+          "description": "Поиск репозитория с названием \"ai-elements-with-ai-sdk-5\""
+        },
+        {
+          "name": "v0-ai-elements-with-ai-sdk-5",
+          "query": "\"v0-ai-elements-with-ai-sdk-5\" in:name",
+          "description": "Поиск репозитория с названием \"v0-ai-elements-with-ai-sdk-5\""
+        },
+        {
+          "name": "nextjs-ai-elements-with-ai-sdk-5",
+          "query": "\"nextjs-ai-elements-with-ai-sdk-5\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-ai-elements-with-ai-sdk-5\""
+        },
+        {
+          "name": "react-ai-elements-with-ai-sdk-5",
+          "query": "\"react-ai-elements-with-ai-sdk-5\" in:name",
+          "description": "Поиск репозитория с названием \"react-ai-elements-with-ai-sdk-5\""
+        },
+        {
+          "name": "ui-ai-elements-with-ai-sdk-5",
+          "query": "\"ui-ai-elements-with-ai-sdk-5\" in:name",
+          "description": "Поиск репозитория с названием \"ui-ai-elements-with-ai-sdk-5\""
+        },
+        {
+          "name": "component-ai-elements-with-ai-sdk-5",
+          "query": "\"component-ai-elements-with-ai-sdk-5\" in:name",
+          "description": "Поиск репозитория с названием \"component-ai-elements-with-ai-sdk-5\""
+        },
+        {
+          "name": "ai-elements-with-ai-sdk-5-component",
+          "query": "\"ai-elements-with-ai-sdk-5-component\" in:name",
+          "description": "Поиск репозитория с названием \"ai-elements-with-ai-sdk-5-component\""
+        },
+        {
+          "name": "ai-elements-with-ai-sdk-5-ui",
+          "query": "\"ai-elements-with-ai-sdk-5-ui\" in:name",
+          "description": "Поиск репозитория с названием \"ai-elements-with-ai-sdk-5-ui\""
+        },
+        {
+          "name": "ai-elements-with-ai-sdk-5-template",
+          "query": "\"ai-elements-with-ai-sdk-5-template\" in:name",
+          "description": "Поиск репозитория с названием \"ai-elements-with-ai-sdk-5-template\""
+        },
+        {
+          "name": "ai-elements-with-ai-sdk-5-starter",
+          "query": "\"ai-elements-with-ai-sdk-5-starter\" in:name",
+          "description": "Поиск репозитория с названием \"ai-elements-with-ai-sdk-5-starter\""
+        },
+        {
+          "name": "ai_elements_with_ai_sdk_5",
+          "query": "\"ai_elements_with_ai_sdk_5\" in:name",
+          "description": "Поиск репозитория с названием \"ai_elements_with_ai_sdk_5\""
+        },
+        {
+          "name": "v0_ai_elements_with_ai_sdk_5",
+          "query": "\"v0_ai_elements_with_ai_sdk_5\" in:name",
+          "description": "Поиск репозитория с названием \"v0_ai_elements_with_ai_sdk_5\""
+        },
+        {
+          "name": "aiElementsWithAiSdk5",
+          "query": "\"aiElementsWithAiSdk5\" in:name",
+          "description": "Поиск репозитория с названием \"aiElementsWithAiSdk5\""
+        },
+        {
+          "name": "v0AiElementsWithAiSdk5",
+          "query": "\"v0AiElementsWithAiSdk5\" in:name",
+          "description": "Поиск репозитория с названием \"v0AiElementsWithAiSdk5\""
+        },
+        {
+          "name": "AiElementsWithAiSdk5",
+          "query": "\"AiElementsWithAiSdk5\" in:name",
+          "description": "Поиск репозитория с названием \"AiElementsWithAiSdk5\""
+        },
+        {
+          "name": "V0AiElementsWithAiSdk5",
+          "query": "\"V0AiElementsWithAiSdk5\" in:name",
+          "description": "Поиск репозитория с названием \"V0AiElementsWithAiSdk5\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/community/modern-ai-chatbot-interface-template-GzHBHQAiS2F",
+      "componentName": "modern-ai-chatbot-interface-template",
+      "searchVariants": [
+        "modern-ai-chatbot-interface-template",
+        "v0-modern-ai-chatbot-interface-template",
+        "nextjs-modern-ai-chatbot-interface-template",
+        "react-modern-ai-chatbot-interface-template",
+        "ui-modern-ai-chatbot-interface-template",
+        "component-modern-ai-chatbot-interface-template",
+        "modern-ai-chatbot-interface-template-component",
+        "modern-ai-chatbot-interface-template-ui",
+        "modern-ai-chatbot-interface-template-template",
+        "modern-ai-chatbot-interface-template-starter",
+        "modern_ai_chatbot_interface_template",
+        "v0_modern_ai_chatbot_interface_template",
+        "modernAiChatbotInterfaceTemplate",
+        "v0ModernAiChatbotInterfaceTemplate",
+        "ModernAiChatbotInterfaceTemplate",
+        "V0ModernAiChatbotInterfaceTemplate"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "modern-ai-chatbot-interface-template",
+          "query": "\"modern-ai-chatbot-interface-template\" in:name",
+          "description": "Поиск репозитория с названием \"modern-ai-chatbot-interface-template\""
+        },
+        {
+          "name": "v0-modern-ai-chatbot-interface-template",
+          "query": "\"v0-modern-ai-chatbot-interface-template\" in:name",
+          "description": "Поиск репозитория с названием \"v0-modern-ai-chatbot-interface-template\""
+        },
+        {
+          "name": "nextjs-modern-ai-chatbot-interface-template",
+          "query": "\"nextjs-modern-ai-chatbot-interface-template\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-modern-ai-chatbot-interface-template\""
+        },
+        {
+          "name": "react-modern-ai-chatbot-interface-template",
+          "query": "\"react-modern-ai-chatbot-interface-template\" in:name",
+          "description": "Поиск репозитория с названием \"react-modern-ai-chatbot-interface-template\""
+        },
+        {
+          "name": "ui-modern-ai-chatbot-interface-template",
+          "query": "\"ui-modern-ai-chatbot-interface-template\" in:name",
+          "description": "Поиск репозитория с названием \"ui-modern-ai-chatbot-interface-template\""
+        },
+        {
+          "name": "component-modern-ai-chatbot-interface-template",
+          "query": "\"component-modern-ai-chatbot-interface-template\" in:name",
+          "description": "Поиск репозитория с названием \"component-modern-ai-chatbot-interface-template\""
+        },
+        {
+          "name": "modern-ai-chatbot-interface-template-component",
+          "query": "\"modern-ai-chatbot-interface-template-component\" in:name",
+          "description": "Поиск репозитория с названием \"modern-ai-chatbot-interface-template-component\""
+        },
+        {
+          "name": "modern-ai-chatbot-interface-template-ui",
+          "query": "\"modern-ai-chatbot-interface-template-ui\" in:name",
+          "description": "Поиск репозитория с названием \"modern-ai-chatbot-interface-template-ui\""
+        },
+        {
+          "name": "modern-ai-chatbot-interface-template-template",
+          "query": "\"modern-ai-chatbot-interface-template-template\" in:name",
+          "description": "Поиск репозитория с названием \"modern-ai-chatbot-interface-template-template\""
+        },
+        {
+          "name": "modern-ai-chatbot-interface-template-starter",
+          "query": "\"modern-ai-chatbot-interface-template-starter\" in:name",
+          "description": "Поиск репозитория с названием \"modern-ai-chatbot-interface-template-starter\""
+        },
+        {
+          "name": "modern_ai_chatbot_interface_template",
+          "query": "\"modern_ai_chatbot_interface_template\" in:name",
+          "description": "Поиск репозитория с названием \"modern_ai_chatbot_interface_template\""
+        },
+        {
+          "name": "v0_modern_ai_chatbot_interface_template",
+          "query": "\"v0_modern_ai_chatbot_interface_template\" in:name",
+          "description": "Поиск репозитория с названием \"v0_modern_ai_chatbot_interface_template\""
+        },
+        {
+          "name": "modernAiChatbotInterfaceTemplate",
+          "query": "\"modernAiChatbotInterfaceTemplate\" in:name",
+          "description": "Поиск репозитория с названием \"modernAiChatbotInterfaceTemplate\""
+        },
+        {
+          "name": "v0ModernAiChatbotInterfaceTemplate",
+          "query": "\"v0ModernAiChatbotInterfaceTemplate\" in:name",
+          "description": "Поиск репозитория с названием \"v0ModernAiChatbotInterfaceTemplate\""
+        },
+        {
+          "name": "ModernAiChatbotInterfaceTemplate",
+          "query": "\"ModernAiChatbotInterfaceTemplate\" in:name",
+          "description": "Поиск репозитория с названием \"ModernAiChatbotInterfaceTemplate\""
+        },
+        {
+          "name": "V0ModernAiChatbotInterfaceTemplate",
+          "query": "\"V0ModernAiChatbotInterfaceTemplate\" in:name",
+          "description": "Поиск репозитория с названием \"V0ModernAiChatbotInterfaceTemplate\""
+        }
+      ]
+    },
+    {
+      "originalUrl": "https://v0.app/community/origin-e-commerce-ui-w98dsZBVaaU",
+      "componentName": "origin-e-commerce-ui",
+      "searchVariants": [
+        "origin-e-commerce-ui",
+        "v0-origin-e-commerce-ui",
+        "nextjs-origin-e-commerce-ui",
+        "react-origin-e-commerce-ui",
+        "ui-origin-e-commerce-ui",
+        "component-origin-e-commerce-ui",
+        "origin-e-commerce-ui-component",
+        "origin-e-commerce-ui-ui",
+        "origin-e-commerce-ui-template",
+        "origin-e-commerce-ui-starter",
+        "origin_e_commerce_ui",
+        "v0_origin_e_commerce_ui",
+        "originECommerceUi",
+        "v0OriginECommerceUi",
+        "OriginECommerceUi",
+        "V0OriginECommerceUi"
+      ],
+      "githubSearchQueries": [
+        {
+          "name": "origin-e-commerce-ui",
+          "query": "\"origin-e-commerce-ui\" in:name",
+          "description": "Поиск репозитория с названием \"origin-e-commerce-ui\""
+        },
+        {
+          "name": "v0-origin-e-commerce-ui",
+          "query": "\"v0-origin-e-commerce-ui\" in:name",
+          "description": "Поиск репозитория с названием \"v0-origin-e-commerce-ui\""
+        },
+        {
+          "name": "nextjs-origin-e-commerce-ui",
+          "query": "\"nextjs-origin-e-commerce-ui\" in:name",
+          "description": "Поиск репозитория с названием \"nextjs-origin-e-commerce-ui\""
+        },
+        {
+          "name": "react-origin-e-commerce-ui",
+          "query": "\"react-origin-e-commerce-ui\" in:name",
+          "description": "Поиск репозитория с названием \"react-origin-e-commerce-ui\""
+        },
+        {
+          "name": "ui-origin-e-commerce-ui",
+          "query": "\"ui-origin-e-commerce-ui\" in:name",
+          "description": "Поиск репозитория с названием \"ui-origin-e-commerce-ui\""
+        },
+        {
+          "name": "component-origin-e-commerce-ui",
+          "query": "\"component-origin-e-commerce-ui\" in:name",
+          "description": "Поиск репозитория с названием \"component-origin-e-commerce-ui\""
+        },
+        {
+          "name": "origin-e-commerce-ui-component",
+          "query": "\"origin-e-commerce-ui-component\" in:name",
+          "description": "Поиск репозитория с названием \"origin-e-commerce-ui-component\""
+        },
+        {
+          "name": "origin-e-commerce-ui-ui",
+          "query": "\"origin-e-commerce-ui-ui\" in:name",
+          "description": "Поиск репозитория с названием \"origin-e-commerce-ui-ui\""
+        },
+        {
+          "name": "origin-e-commerce-ui-template",
+          "query": "\"origin-e-commerce-ui-template\" in:name",
+          "description": "Поиск репозитория с названием \"origin-e-commerce-ui-template\""
+        },
+        {
+          "name": "origin-e-commerce-ui-starter",
+          "query": "\"origin-e-commerce-ui-starter\" in:name",
+          "description": "Поиск репозитория с названием \"origin-e-commerce-ui-starter\""
+        },
+        {
+          "name": "origin_e_commerce_ui",
+          "query": "\"origin_e_commerce_ui\" in:name",
+          "description": "Поиск репозитория с названием \"origin_e_commerce_ui\""
+        },
+        {
+          "name": "v0_origin_e_commerce_ui",
+          "query": "\"v0_origin_e_commerce_ui\" in:name",
+          "description": "Поиск репозитория с названием \"v0_origin_e_commerce_ui\""
+        },
+        {
+          "name": "originECommerceUi",
+          "query": "\"originECommerceUi\" in:name",
+          "description": "Поиск репозитория с названием \"originECommerceUi\""
+        },
+        {
+          "name": "v0OriginECommerceUi",
+          "query": "\"v0OriginECommerceUi\" in:name",
+          "description": "Поиск репозитория с названием \"v0OriginECommerceUi\""
+        },
+        {
+          "name": "OriginECommerceUi",
+          "query": "\"OriginECommerceUi\" in:name",
+          "description": "Поиск репозитория с названием \"OriginECommerceUi\""
+        },
+        {
+          "name": "V0OriginECommerceUi",
+          "query": "\"V0OriginECommerceUi\" in:name",
+          "description": "Поиск репозитория с названием \"V0OriginECommerceUi\""
+        }
+      ]
+    }
+  ]
+}

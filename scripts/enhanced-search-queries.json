@@ -1,0 +1,5140 @@
+{
+  "metadata": {
+    "createdDate": "2025-09-06T16:50:23.129Z",
+    "totalComponents": 15,
+    "totalQueries": 1008,
+    "description": "Расширенные поисковые запросы для GitHub"
+  },
+  "components": [
+    {
+      "componentName": "file-manager",
+      "originalUrl": "https://v0.app/chat/file-manager-wukORjs2J9p",
+      "searchQueries": [
+        {
+          "type": "exact_name",
+          "query": "\"file-manager\" in:name",
+          "description": "Точное совпадение: \"file-manager\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"file manager\" in:name",
+          "description": "Точное совпадение: \"file manager\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"file_manager\" in:name",
+          "description": "Точное совпадение: \"file_manager\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0-file-manager\" in:name",
+          "description": "Точное совпадение: \"v0-file-manager\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0_file_manager\" in:name",
+          "description": "Точное совпадение: \"v0_file_manager\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0File-manager\" in:name",
+          "description": "Точное совпадение: \"v0File-manager\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjs-file-manager\" in:name",
+          "description": "Точное совпадение: \"nextjs-file-manager\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjs_file_manager\" in:name",
+          "description": "Точное совпадение: \"nextjs_file_manager\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjsFile-manager\" in:name",
+          "description": "Точное совпадение: \"nextjsFile-manager\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"react-file-manager\" in:name",
+          "description": "Точное совпадение: \"react-file-manager\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"react_file_manager\" in:name",
+          "description": "Точное совпадение: \"react_file_manager\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"reactFile-manager\" in:name",
+          "description": "Точное совпадение: \"reactFile-manager\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vue-file-manager\" in:name",
+          "description": "Точное совпадение: \"vue-file-manager\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vue_file_manager\" in:name",
+          "description": "Точное совпадение: \"vue_file_manager\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vueFile-manager\" in:name",
+          "description": "Точное совпадение: \"vueFile-manager\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angular-file-manager\" in:name",
+          "description": "Точное совпадение: \"angular-file-manager\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angular_file_manager\" in:name",
+          "description": "Точное совпадение: \"angular_file_manager\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angularFile-manager\" in:name",
+          "description": "Точное совпадение: \"angularFile-manager\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"svelte-file-manager\" in:name",
+          "description": "Точное совпадение: \"svelte-file-manager\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"svelte_file_manager\" in:name",
+          "description": "Точное совпадение: \"svelte_file_manager\""
+        },
+        {
+          "type": "description",
+          "query": "\"file-manager\" in:description",
+          "description": "В описании: \"file-manager\""
+        },
+        {
+          "type": "description",
+          "query": "\"file manager\" in:description",
+          "description": "В описании: \"file manager\""
+        },
+        {
+          "type": "description",
+          "query": "\"file_manager\" in:description",
+          "description": "В описании: \"file_manager\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0-file-manager\" in:description",
+          "description": "В описании: \"v0-file-manager\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0_file_manager\" in:description",
+          "description": "В описании: \"v0_file_manager\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0File-manager\" in:description",
+          "description": "В описании: \"v0File-manager\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjs-file-manager\" in:description",
+          "description": "В описании: \"nextjs-file-manager\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjs_file_manager\" in:description",
+          "description": "В описании: \"nextjs_file_manager\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjsFile-manager\" in:description",
+          "description": "В описании: \"nextjsFile-manager\""
+        },
+        {
+          "type": "description",
+          "query": "\"react-file-manager\" in:description",
+          "description": "В описании: \"react-file-manager\""
+        },
+        {
+          "type": "readme",
+          "query": "\"file-manager\" in:readme",
+          "description": "В README: \"file-manager\""
+        },
+        {
+          "type": "readme",
+          "query": "\"file manager\" in:readme",
+          "description": "В README: \"file manager\""
+        },
+        {
+          "type": "readme",
+          "query": "\"file_manager\" in:readme",
+          "description": "В README: \"file_manager\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0-file-manager\" in:readme",
+          "description": "В README: \"v0-file-manager\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0_file_manager\" in:readme",
+          "description": "В README: \"v0_file_manager\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0File-manager\" in:readme",
+          "description": "В README: \"v0File-manager\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjs-file-manager\" in:readme",
+          "description": "В README: \"nextjs-file-manager\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjs_file_manager\" in:readme",
+          "description": "В README: \"nextjs_file_manager\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjsFile-manager\" in:readme",
+          "description": "В README: \"nextjsFile-manager\""
+        },
+        {
+          "type": "readme",
+          "query": "\"react-file-manager\" in:readme",
+          "description": "В README: \"react-file-manager\""
+        },
+        {
+          "type": "topics",
+          "query": "\"file-manager\" in:topics",
+          "description": "В тегах: \"file-manager\""
+        },
+        {
+          "type": "topics",
+          "query": "\"file manager\" in:topics",
+          "description": "В тегах: \"file manager\""
+        },
+        {
+          "type": "topics",
+          "query": "\"file_manager\" in:topics",
+          "description": "В тегах: \"file_manager\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0-file-manager\" in:topics",
+          "description": "В тегах: \"v0-file-manager\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0_file_manager\" in:topics",
+          "description": "В тегах: \"v0_file_manager\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0File-manager\" in:topics",
+          "description": "В тегах: \"v0File-manager\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjs-file-manager\" in:topics",
+          "description": "В тегах: \"nextjs-file-manager\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjs_file_manager\" in:topics",
+          "description": "В тегах: \"nextjs_file_manager\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjsFile-manager\" in:topics",
+          "description": "В тегах: \"nextjsFile-manager\""
+        },
+        {
+          "type": "topics",
+          "query": "\"react-file-manager\" in:topics",
+          "description": "В тегах: \"react-file-manager\""
+        },
+        {
+          "type": "combined",
+          "query": "\"file-manager\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"file-manager\""
+        },
+        {
+          "type": "combined",
+          "query": "\"file-manager\" language:React language:Next.js",
+          "description": "React/Next.js: \"file-manager\""
+        },
+        {
+          "type": "combined",
+          "query": "\"file-manager\" stars:>10",
+          "description": "Популярные: \"file-manager\""
+        },
+        {
+          "type": "combined",
+          "query": "\"file manager\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"file manager\""
+        },
+        {
+          "type": "combined",
+          "query": "\"file manager\" language:React language:Next.js",
+          "description": "React/Next.js: \"file manager\""
+        },
+        {
+          "type": "combined",
+          "query": "\"file manager\" stars:>10",
+          "description": "Популярные: \"file manager\""
+        },
+        {
+          "type": "combined",
+          "query": "\"file_manager\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"file_manager\""
+        },
+        {
+          "type": "combined",
+          "query": "\"file_manager\" language:React language:Next.js",
+          "description": "React/Next.js: \"file_manager\""
+        },
+        {
+          "type": "combined",
+          "query": "\"file_manager\" stars:>10",
+          "description": "Популярные: \"file_manager\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-file-manager\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"v0-file-manager\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-file-manager\" language:React language:Next.js",
+          "description": "React/Next.js: \"v0-file-manager\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-file-manager\" stars:>10",
+          "description": "Популярные: \"v0-file-manager\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_file_manager\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"v0_file_manager\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_file_manager\" language:React language:Next.js",
+          "description": "React/Next.js: \"v0_file_manager\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_file_manager\" stars:>10",
+          "description": "Популярные: \"v0_file_manager\""
+        },
+        {
+          "type": "keyword",
+          "query": "\"file\" in:name language:JavaScript",
+          "description": "Ключевое слово: \"file\""
+        },
+        {
+          "type": "keyword",
+          "query": "\"manager\" in:name language:JavaScript",
+          "description": "Ключевое слово: \"manager\""
+        }
+      ]
+    },
+    {
+      "componentName": "file-manager",
+      "originalUrl": "https://v0.app/community/file-manager-hN0nNvAchzi",
+      "searchQueries": [
+        {
+          "type": "exact_name",
+          "query": "\"file-manager\" in:name",
+          "description": "Точное совпадение: \"file-manager\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"file manager\" in:name",
+          "description": "Точное совпадение: \"file manager\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"file_manager\" in:name",
+          "description": "Точное совпадение: \"file_manager\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0-file-manager\" in:name",
+          "description": "Точное совпадение: \"v0-file-manager\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0_file_manager\" in:name",
+          "description": "Точное совпадение: \"v0_file_manager\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0File-manager\" in:name",
+          "description": "Точное совпадение: \"v0File-manager\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjs-file-manager\" in:name",
+          "description": "Точное совпадение: \"nextjs-file-manager\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjs_file_manager\" in:name",
+          "description": "Точное совпадение: \"nextjs_file_manager\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjsFile-manager\" in:name",
+          "description": "Точное совпадение: \"nextjsFile-manager\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"react-file-manager\" in:name",
+          "description": "Точное совпадение: \"react-file-manager\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"react_file_manager\" in:name",
+          "description": "Точное совпадение: \"react_file_manager\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"reactFile-manager\" in:name",
+          "description": "Точное совпадение: \"reactFile-manager\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vue-file-manager\" in:name",
+          "description": "Точное совпадение: \"vue-file-manager\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vue_file_manager\" in:name",
+          "description": "Точное совпадение: \"vue_file_manager\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vueFile-manager\" in:name",
+          "description": "Точное совпадение: \"vueFile-manager\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angular-file-manager\" in:name",
+          "description": "Точное совпадение: \"angular-file-manager\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angular_file_manager\" in:name",
+          "description": "Точное совпадение: \"angular_file_manager\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angularFile-manager\" in:name",
+          "description": "Точное совпадение: \"angularFile-manager\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"svelte-file-manager\" in:name",
+          "description": "Точное совпадение: \"svelte-file-manager\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"svelte_file_manager\" in:name",
+          "description": "Точное совпадение: \"svelte_file_manager\""
+        },
+        {
+          "type": "description",
+          "query": "\"file-manager\" in:description",
+          "description": "В описании: \"file-manager\""
+        },
+        {
+          "type": "description",
+          "query": "\"file manager\" in:description",
+          "description": "В описании: \"file manager\""
+        },
+        {
+          "type": "description",
+          "query": "\"file_manager\" in:description",
+          "description": "В описании: \"file_manager\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0-file-manager\" in:description",
+          "description": "В описании: \"v0-file-manager\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0_file_manager\" in:description",
+          "description": "В описании: \"v0_file_manager\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0File-manager\" in:description",
+          "description": "В описании: \"v0File-manager\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjs-file-manager\" in:description",
+          "description": "В описании: \"nextjs-file-manager\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjs_file_manager\" in:description",
+          "description": "В описании: \"nextjs_file_manager\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjsFile-manager\" in:description",
+          "description": "В описании: \"nextjsFile-manager\""
+        },
+        {
+          "type": "description",
+          "query": "\"react-file-manager\" in:description",
+          "description": "В описании: \"react-file-manager\""
+        },
+        {
+          "type": "readme",
+          "query": "\"file-manager\" in:readme",
+          "description": "В README: \"file-manager\""
+        },
+        {
+          "type": "readme",
+          "query": "\"file manager\" in:readme",
+          "description": "В README: \"file manager\""
+        },
+        {
+          "type": "readme",
+          "query": "\"file_manager\" in:readme",
+          "description": "В README: \"file_manager\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0-file-manager\" in:readme",
+          "description": "В README: \"v0-file-manager\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0_file_manager\" in:readme",
+          "description": "В README: \"v0_file_manager\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0File-manager\" in:readme",
+          "description": "В README: \"v0File-manager\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjs-file-manager\" in:readme",
+          "description": "В README: \"nextjs-file-manager\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjs_file_manager\" in:readme",
+          "description": "В README: \"nextjs_file_manager\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjsFile-manager\" in:readme",
+          "description": "В README: \"nextjsFile-manager\""
+        },
+        {
+          "type": "readme",
+          "query": "\"react-file-manager\" in:readme",
+          "description": "В README: \"react-file-manager\""
+        },
+        {
+          "type": "topics",
+          "query": "\"file-manager\" in:topics",
+          "description": "В тегах: \"file-manager\""
+        },
+        {
+          "type": "topics",
+          "query": "\"file manager\" in:topics",
+          "description": "В тегах: \"file manager\""
+        },
+        {
+          "type": "topics",
+          "query": "\"file_manager\" in:topics",
+          "description": "В тегах: \"file_manager\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0-file-manager\" in:topics",
+          "description": "В тегах: \"v0-file-manager\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0_file_manager\" in:topics",
+          "description": "В тегах: \"v0_file_manager\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0File-manager\" in:topics",
+          "description": "В тегах: \"v0File-manager\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjs-file-manager\" in:topics",
+          "description": "В тегах: \"nextjs-file-manager\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjs_file_manager\" in:topics",
+          "description": "В тегах: \"nextjs_file_manager\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjsFile-manager\" in:topics",
+          "description": "В тегах: \"nextjsFile-manager\""
+        },
+        {
+          "type": "topics",
+          "query": "\"react-file-manager\" in:topics",
+          "description": "В тегах: \"react-file-manager\""
+        },
+        {
+          "type": "combined",
+          "query": "\"file-manager\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"file-manager\""
+        },
+        {
+          "type": "combined",
+          "query": "\"file-manager\" language:React language:Next.js",
+          "description": "React/Next.js: \"file-manager\""
+        },
+        {
+          "type": "combined",
+          "query": "\"file-manager\" stars:>10",
+          "description": "Популярные: \"file-manager\""
+        },
+        {
+          "type": "combined",
+          "query": "\"file manager\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"file manager\""
+        },
+        {
+          "type": "combined",
+          "query": "\"file manager\" language:React language:Next.js",
+          "description": "React/Next.js: \"file manager\""
+        },
+        {
+          "type": "combined",
+          "query": "\"file manager\" stars:>10",
+          "description": "Популярные: \"file manager\""
+        },
+        {
+          "type": "combined",
+          "query": "\"file_manager\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"file_manager\""
+        },
+        {
+          "type": "combined",
+          "query": "\"file_manager\" language:React language:Next.js",
+          "description": "React/Next.js: \"file_manager\""
+        },
+        {
+          "type": "combined",
+          "query": "\"file_manager\" stars:>10",
+          "description": "Популярные: \"file_manager\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-file-manager\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"v0-file-manager\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-file-manager\" language:React language:Next.js",
+          "description": "React/Next.js: \"v0-file-manager\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-file-manager\" stars:>10",
+          "description": "Популярные: \"v0-file-manager\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_file_manager\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"v0_file_manager\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_file_manager\" language:React language:Next.js",
+          "description": "React/Next.js: \"v0_file_manager\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_file_manager\" stars:>10",
+          "description": "Популярные: \"v0_file_manager\""
+        },
+        {
+          "type": "keyword",
+          "query": "\"file\" in:name language:JavaScript",
+          "description": "Ключевое слово: \"file\""
+        },
+        {
+          "type": "keyword",
+          "query": "\"manager\" in:name language:JavaScript",
+          "description": "Ключевое слово: \"manager\""
+        }
+      ]
+    },
+    {
+      "componentName": "ai-chat-interface",
+      "originalUrl": "https://v0.app/community/ai-chat-interface-6VLiqkGu5vw",
+      "searchQueries": [
+        {
+          "type": "exact_name",
+          "query": "\"ai-chat-interface\" in:name",
+          "description": "Точное совпадение: \"ai-chat-interface\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"ai chat interface\" in:name",
+          "description": "Точное совпадение: \"ai chat interface\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"ai_chat_interface\" in:name",
+          "description": "Точное совпадение: \"ai_chat_interface\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0-ai-chat-interface\" in:name",
+          "description": "Точное совпадение: \"v0-ai-chat-interface\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0_ai_chat_interface\" in:name",
+          "description": "Точное совпадение: \"v0_ai_chat_interface\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0Ai-chat-interface\" in:name",
+          "description": "Точное совпадение: \"v0Ai-chat-interface\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjs-ai-chat-interface\" in:name",
+          "description": "Точное совпадение: \"nextjs-ai-chat-interface\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjs_ai_chat_interface\" in:name",
+          "description": "Точное совпадение: \"nextjs_ai_chat_interface\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjsAi-chat-interface\" in:name",
+          "description": "Точное совпадение: \"nextjsAi-chat-interface\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"react-ai-chat-interface\" in:name",
+          "description": "Точное совпадение: \"react-ai-chat-interface\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"react_ai_chat_interface\" in:name",
+          "description": "Точное совпадение: \"react_ai_chat_interface\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"reactAi-chat-interface\" in:name",
+          "description": "Точное совпадение: \"reactAi-chat-interface\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vue-ai-chat-interface\" in:name",
+          "description": "Точное совпадение: \"vue-ai-chat-interface\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vue_ai_chat_interface\" in:name",
+          "description": "Точное совпадение: \"vue_ai_chat_interface\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vueAi-chat-interface\" in:name",
+          "description": "Точное совпадение: \"vueAi-chat-interface\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angular-ai-chat-interface\" in:name",
+          "description": "Точное совпадение: \"angular-ai-chat-interface\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angular_ai_chat_interface\" in:name",
+          "description": "Точное совпадение: \"angular_ai_chat_interface\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angularAi-chat-interface\" in:name",
+          "description": "Точное совпадение: \"angularAi-chat-interface\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"svelte-ai-chat-interface\" in:name",
+          "description": "Точное совпадение: \"svelte-ai-chat-interface\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"svelte_ai_chat_interface\" in:name",
+          "description": "Точное совпадение: \"svelte_ai_chat_interface\""
+        },
+        {
+          "type": "description",
+          "query": "\"ai-chat-interface\" in:description",
+          "description": "В описании: \"ai-chat-interface\""
+        },
+        {
+          "type": "description",
+          "query": "\"ai chat interface\" in:description",
+          "description": "В описании: \"ai chat interface\""
+        },
+        {
+          "type": "description",
+          "query": "\"ai_chat_interface\" in:description",
+          "description": "В описании: \"ai_chat_interface\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0-ai-chat-interface\" in:description",
+          "description": "В описании: \"v0-ai-chat-interface\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0_ai_chat_interface\" in:description",
+          "description": "В описании: \"v0_ai_chat_interface\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0Ai-chat-interface\" in:description",
+          "description": "В описании: \"v0Ai-chat-interface\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjs-ai-chat-interface\" in:description",
+          "description": "В описании: \"nextjs-ai-chat-interface\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjs_ai_chat_interface\" in:description",
+          "description": "В описании: \"nextjs_ai_chat_interface\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjsAi-chat-interface\" in:description",
+          "description": "В описании: \"nextjsAi-chat-interface\""
+        },
+        {
+          "type": "description",
+          "query": "\"react-ai-chat-interface\" in:description",
+          "description": "В описании: \"react-ai-chat-interface\""
+        },
+        {
+          "type": "readme",
+          "query": "\"ai-chat-interface\" in:readme",
+          "description": "В README: \"ai-chat-interface\""
+        },
+        {
+          "type": "readme",
+          "query": "\"ai chat interface\" in:readme",
+          "description": "В README: \"ai chat interface\""
+        },
+        {
+          "type": "readme",
+          "query": "\"ai_chat_interface\" in:readme",
+          "description": "В README: \"ai_chat_interface\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0-ai-chat-interface\" in:readme",
+          "description": "В README: \"v0-ai-chat-interface\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0_ai_chat_interface\" in:readme",
+          "description": "В README: \"v0_ai_chat_interface\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0Ai-chat-interface\" in:readme",
+          "description": "В README: \"v0Ai-chat-interface\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjs-ai-chat-interface\" in:readme",
+          "description": "В README: \"nextjs-ai-chat-interface\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjs_ai_chat_interface\" in:readme",
+          "description": "В README: \"nextjs_ai_chat_interface\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjsAi-chat-interface\" in:readme",
+          "description": "В README: \"nextjsAi-chat-interface\""
+        },
+        {
+          "type": "readme",
+          "query": "\"react-ai-chat-interface\" in:readme",
+          "description": "В README: \"react-ai-chat-interface\""
+        },
+        {
+          "type": "topics",
+          "query": "\"ai-chat-interface\" in:topics",
+          "description": "В тегах: \"ai-chat-interface\""
+        },
+        {
+          "type": "topics",
+          "query": "\"ai chat interface\" in:topics",
+          "description": "В тегах: \"ai chat interface\""
+        },
+        {
+          "type": "topics",
+          "query": "\"ai_chat_interface\" in:topics",
+          "description": "В тегах: \"ai_chat_interface\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0-ai-chat-interface\" in:topics",
+          "description": "В тегах: \"v0-ai-chat-interface\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0_ai_chat_interface\" in:topics",
+          "description": "В тегах: \"v0_ai_chat_interface\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0Ai-chat-interface\" in:topics",
+          "description": "В тегах: \"v0Ai-chat-interface\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjs-ai-chat-interface\" in:topics",
+          "description": "В тегах: \"nextjs-ai-chat-interface\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjs_ai_chat_interface\" in:topics",
+          "description": "В тегах: \"nextjs_ai_chat_interface\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjsAi-chat-interface\" in:topics",
+          "description": "В тегах: \"nextjsAi-chat-interface\""
+        },
+        {
+          "type": "topics",
+          "query": "\"react-ai-chat-interface\" in:topics",
+          "description": "В тегах: \"react-ai-chat-interface\""
+        },
+        {
+          "type": "combined",
+          "query": "\"ai-chat-interface\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"ai-chat-interface\""
+        },
+        {
+          "type": "combined",
+          "query": "\"ai-chat-interface\" language:React language:Next.js",
+          "description": "React/Next.js: \"ai-chat-interface\""
+        },
+        {
+          "type": "combined",
+          "query": "\"ai-chat-interface\" stars:>10",
+          "description": "Популярные: \"ai-chat-interface\""
+        },
+        {
+          "type": "combined",
+          "query": "\"ai chat interface\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"ai chat interface\""
+        },
+        {
+          "type": "combined",
+          "query": "\"ai chat interface\" language:React language:Next.js",
+          "description": "React/Next.js: \"ai chat interface\""
+        },
+        {
+          "type": "combined",
+          "query": "\"ai chat interface\" stars:>10",
+          "description": "Популярные: \"ai chat interface\""
+        },
+        {
+          "type": "combined",
+          "query": "\"ai_chat_interface\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"ai_chat_interface\""
+        },
+        {
+          "type": "combined",
+          "query": "\"ai_chat_interface\" language:React language:Next.js",
+          "description": "React/Next.js: \"ai_chat_interface\""
+        },
+        {
+          "type": "combined",
+          "query": "\"ai_chat_interface\" stars:>10",
+          "description": "Популярные: \"ai_chat_interface\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-ai-chat-interface\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"v0-ai-chat-interface\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-ai-chat-interface\" language:React language:Next.js",
+          "description": "React/Next.js: \"v0-ai-chat-interface\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-ai-chat-interface\" stars:>10",
+          "description": "Популярные: \"v0-ai-chat-interface\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_ai_chat_interface\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"v0_ai_chat_interface\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_ai_chat_interface\" language:React language:Next.js",
+          "description": "React/Next.js: \"v0_ai_chat_interface\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_ai_chat_interface\" stars:>10",
+          "description": "Популярные: \"v0_ai_chat_interface\""
+        },
+        {
+          "type": "keyword",
+          "query": "\"chat\" in:name language:JavaScript",
+          "description": "Ключевое слово: \"chat\""
+        },
+        {
+          "type": "keyword",
+          "query": "\"interface\" in:name language:JavaScript",
+          "description": "Ключевое слово: \"interface\""
+        }
+      ]
+    },
+    {
+      "componentName": "integrations-page",
+      "originalUrl": "https://v0.app/community/integrations-page-7HOUCTcoR5n",
+      "searchQueries": [
+        {
+          "type": "exact_name",
+          "query": "\"integrations-page\" in:name",
+          "description": "Точное совпадение: \"integrations-page\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"integrations page\" in:name",
+          "description": "Точное совпадение: \"integrations page\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"integrations_page\" in:name",
+          "description": "Точное совпадение: \"integrations_page\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0-integrations-page\" in:name",
+          "description": "Точное совпадение: \"v0-integrations-page\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0_integrations_page\" in:name",
+          "description": "Точное совпадение: \"v0_integrations_page\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0Integrations-page\" in:name",
+          "description": "Точное совпадение: \"v0Integrations-page\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjs-integrations-page\" in:name",
+          "description": "Точное совпадение: \"nextjs-integrations-page\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjs_integrations_page\" in:name",
+          "description": "Точное совпадение: \"nextjs_integrations_page\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjsIntegrations-page\" in:name",
+          "description": "Точное совпадение: \"nextjsIntegrations-page\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"react-integrations-page\" in:name",
+          "description": "Точное совпадение: \"react-integrations-page\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"react_integrations_page\" in:name",
+          "description": "Точное совпадение: \"react_integrations_page\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"reactIntegrations-page\" in:name",
+          "description": "Точное совпадение: \"reactIntegrations-page\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vue-integrations-page\" in:name",
+          "description": "Точное совпадение: \"vue-integrations-page\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vue_integrations_page\" in:name",
+          "description": "Точное совпадение: \"vue_integrations_page\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vueIntegrations-page\" in:name",
+          "description": "Точное совпадение: \"vueIntegrations-page\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angular-integrations-page\" in:name",
+          "description": "Точное совпадение: \"angular-integrations-page\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angular_integrations_page\" in:name",
+          "description": "Точное совпадение: \"angular_integrations_page\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angularIntegrations-page\" in:name",
+          "description": "Точное совпадение: \"angularIntegrations-page\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"svelte-integrations-page\" in:name",
+          "description": "Точное совпадение: \"svelte-integrations-page\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"svelte_integrations_page\" in:name",
+          "description": "Точное совпадение: \"svelte_integrations_page\""
+        },
+        {
+          "type": "description",
+          "query": "\"integrations-page\" in:description",
+          "description": "В описании: \"integrations-page\""
+        },
+        {
+          "type": "description",
+          "query": "\"integrations page\" in:description",
+          "description": "В описании: \"integrations page\""
+        },
+        {
+          "type": "description",
+          "query": "\"integrations_page\" in:description",
+          "description": "В описании: \"integrations_page\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0-integrations-page\" in:description",
+          "description": "В описании: \"v0-integrations-page\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0_integrations_page\" in:description",
+          "description": "В описании: \"v0_integrations_page\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0Integrations-page\" in:description",
+          "description": "В описании: \"v0Integrations-page\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjs-integrations-page\" in:description",
+          "description": "В описании: \"nextjs-integrations-page\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjs_integrations_page\" in:description",
+          "description": "В описании: \"nextjs_integrations_page\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjsIntegrations-page\" in:description",
+          "description": "В описании: \"nextjsIntegrations-page\""
+        },
+        {
+          "type": "description",
+          "query": "\"react-integrations-page\" in:description",
+          "description": "В описании: \"react-integrations-page\""
+        },
+        {
+          "type": "readme",
+          "query": "\"integrations-page\" in:readme",
+          "description": "В README: \"integrations-page\""
+        },
+        {
+          "type": "readme",
+          "query": "\"integrations page\" in:readme",
+          "description": "В README: \"integrations page\""
+        },
+        {
+          "type": "readme",
+          "query": "\"integrations_page\" in:readme",
+          "description": "В README: \"integrations_page\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0-integrations-page\" in:readme",
+          "description": "В README: \"v0-integrations-page\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0_integrations_page\" in:readme",
+          "description": "В README: \"v0_integrations_page\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0Integrations-page\" in:readme",
+          "description": "В README: \"v0Integrations-page\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjs-integrations-page\" in:readme",
+          "description": "В README: \"nextjs-integrations-page\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjs_integrations_page\" in:readme",
+          "description": "В README: \"nextjs_integrations_page\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjsIntegrations-page\" in:readme",
+          "description": "В README: \"nextjsIntegrations-page\""
+        },
+        {
+          "type": "readme",
+          "query": "\"react-integrations-page\" in:readme",
+          "description": "В README: \"react-integrations-page\""
+        },
+        {
+          "type": "topics",
+          "query": "\"integrations-page\" in:topics",
+          "description": "В тегах: \"integrations-page\""
+        },
+        {
+          "type": "topics",
+          "query": "\"integrations page\" in:topics",
+          "description": "В тегах: \"integrations page\""
+        },
+        {
+          "type": "topics",
+          "query": "\"integrations_page\" in:topics",
+          "description": "В тегах: \"integrations_page\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0-integrations-page\" in:topics",
+          "description": "В тегах: \"v0-integrations-page\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0_integrations_page\" in:topics",
+          "description": "В тегах: \"v0_integrations_page\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0Integrations-page\" in:topics",
+          "description": "В тегах: \"v0Integrations-page\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjs-integrations-page\" in:topics",
+          "description": "В тегах: \"nextjs-integrations-page\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjs_integrations_page\" in:topics",
+          "description": "В тегах: \"nextjs_integrations_page\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjsIntegrations-page\" in:topics",
+          "description": "В тегах: \"nextjsIntegrations-page\""
+        },
+        {
+          "type": "topics",
+          "query": "\"react-integrations-page\" in:topics",
+          "description": "В тегах: \"react-integrations-page\""
+        },
+        {
+          "type": "combined",
+          "query": "\"integrations-page\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"integrations-page\""
+        },
+        {
+          "type": "combined",
+          "query": "\"integrations-page\" language:React language:Next.js",
+          "description": "React/Next.js: \"integrations-page\""
+        },
+        {
+          "type": "combined",
+          "query": "\"integrations-page\" stars:>10",
+          "description": "Популярные: \"integrations-page\""
+        },
+        {
+          "type": "combined",
+          "query": "\"integrations page\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"integrations page\""
+        },
+        {
+          "type": "combined",
+          "query": "\"integrations page\" language:React language:Next.js",
+          "description": "React/Next.js: \"integrations page\""
+        },
+        {
+          "type": "combined",
+          "query": "\"integrations page\" stars:>10",
+          "description": "Популярные: \"integrations page\""
+        },
+        {
+          "type": "combined",
+          "query": "\"integrations_page\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"integrations_page\""
+        },
+        {
+          "type": "combined",
+          "query": "\"integrations_page\" language:React language:Next.js",
+          "description": "React/Next.js: \"integrations_page\""
+        },
+        {
+          "type": "combined",
+          "query": "\"integrations_page\" stars:>10",
+          "description": "Популярные: \"integrations_page\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-integrations-page\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"v0-integrations-page\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-integrations-page\" language:React language:Next.js",
+          "description": "React/Next.js: \"v0-integrations-page\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-integrations-page\" stars:>10",
+          "description": "Популярные: \"v0-integrations-page\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_integrations_page\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"v0_integrations_page\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_integrations_page\" language:React language:Next.js",
+          "description": "React/Next.js: \"v0_integrations_page\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_integrations_page\" stars:>10",
+          "description": "Популярные: \"v0_integrations_page\""
+        },
+        {
+          "type": "keyword",
+          "query": "\"integrations\" in:name language:JavaScript",
+          "description": "Ключевое слово: \"integrations\""
+        },
+        {
+          "type": "keyword",
+          "query": "\"page\" in:name language:JavaScript",
+          "description": "Ключевое слово: \"page\""
+        }
+      ]
+    },
+    {
+      "componentName": "sidebar-layout",
+      "originalUrl": "https://v0.app/community/sidebar-layout-ybLyeN1sesS",
+      "searchQueries": [
+        {
+          "type": "exact_name",
+          "query": "\"sidebar-layout\" in:name",
+          "description": "Точное совпадение: \"sidebar-layout\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"sidebar layout\" in:name",
+          "description": "Точное совпадение: \"sidebar layout\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"sidebar_layout\" in:name",
+          "description": "Точное совпадение: \"sidebar_layout\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0-sidebar-layout\" in:name",
+          "description": "Точное совпадение: \"v0-sidebar-layout\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0_sidebar_layout\" in:name",
+          "description": "Точное совпадение: \"v0_sidebar_layout\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0Sidebar-layout\" in:name",
+          "description": "Точное совпадение: \"v0Sidebar-layout\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjs-sidebar-layout\" in:name",
+          "description": "Точное совпадение: \"nextjs-sidebar-layout\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjs_sidebar_layout\" in:name",
+          "description": "Точное совпадение: \"nextjs_sidebar_layout\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjsSidebar-layout\" in:name",
+          "description": "Точное совпадение: \"nextjsSidebar-layout\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"react-sidebar-layout\" in:name",
+          "description": "Точное совпадение: \"react-sidebar-layout\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"react_sidebar_layout\" in:name",
+          "description": "Точное совпадение: \"react_sidebar_layout\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"reactSidebar-layout\" in:name",
+          "description": "Точное совпадение: \"reactSidebar-layout\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vue-sidebar-layout\" in:name",
+          "description": "Точное совпадение: \"vue-sidebar-layout\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vue_sidebar_layout\" in:name",
+          "description": "Точное совпадение: \"vue_sidebar_layout\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vueSidebar-layout\" in:name",
+          "description": "Точное совпадение: \"vueSidebar-layout\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angular-sidebar-layout\" in:name",
+          "description": "Точное совпадение: \"angular-sidebar-layout\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angular_sidebar_layout\" in:name",
+          "description": "Точное совпадение: \"angular_sidebar_layout\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angularSidebar-layout\" in:name",
+          "description": "Точное совпадение: \"angularSidebar-layout\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"svelte-sidebar-layout\" in:name",
+          "description": "Точное совпадение: \"svelte-sidebar-layout\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"svelte_sidebar_layout\" in:name",
+          "description": "Точное совпадение: \"svelte_sidebar_layout\""
+        },
+        {
+          "type": "description",
+          "query": "\"sidebar-layout\" in:description",
+          "description": "В описании: \"sidebar-layout\""
+        },
+        {
+          "type": "description",
+          "query": "\"sidebar layout\" in:description",
+          "description": "В описании: \"sidebar layout\""
+        },
+        {
+          "type": "description",
+          "query": "\"sidebar_layout\" in:description",
+          "description": "В описании: \"sidebar_layout\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0-sidebar-layout\" in:description",
+          "description": "В описании: \"v0-sidebar-layout\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0_sidebar_layout\" in:description",
+          "description": "В описании: \"v0_sidebar_layout\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0Sidebar-layout\" in:description",
+          "description": "В описании: \"v0Sidebar-layout\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjs-sidebar-layout\" in:description",
+          "description": "В описании: \"nextjs-sidebar-layout\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjs_sidebar_layout\" in:description",
+          "description": "В описании: \"nextjs_sidebar_layout\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjsSidebar-layout\" in:description",
+          "description": "В описании: \"nextjsSidebar-layout\""
+        },
+        {
+          "type": "description",
+          "query": "\"react-sidebar-layout\" in:description",
+          "description": "В описании: \"react-sidebar-layout\""
+        },
+        {
+          "type": "readme",
+          "query": "\"sidebar-layout\" in:readme",
+          "description": "В README: \"sidebar-layout\""
+        },
+        {
+          "type": "readme",
+          "query": "\"sidebar layout\" in:readme",
+          "description": "В README: \"sidebar layout\""
+        },
+        {
+          "type": "readme",
+          "query": "\"sidebar_layout\" in:readme",
+          "description": "В README: \"sidebar_layout\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0-sidebar-layout\" in:readme",
+          "description": "В README: \"v0-sidebar-layout\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0_sidebar_layout\" in:readme",
+          "description": "В README: \"v0_sidebar_layout\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0Sidebar-layout\" in:readme",
+          "description": "В README: \"v0Sidebar-layout\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjs-sidebar-layout\" in:readme",
+          "description": "В README: \"nextjs-sidebar-layout\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjs_sidebar_layout\" in:readme",
+          "description": "В README: \"nextjs_sidebar_layout\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjsSidebar-layout\" in:readme",
+          "description": "В README: \"nextjsSidebar-layout\""
+        },
+        {
+          "type": "readme",
+          "query": "\"react-sidebar-layout\" in:readme",
+          "description": "В README: \"react-sidebar-layout\""
+        },
+        {
+          "type": "topics",
+          "query": "\"sidebar-layout\" in:topics",
+          "description": "В тегах: \"sidebar-layout\""
+        },
+        {
+          "type": "topics",
+          "query": "\"sidebar layout\" in:topics",
+          "description": "В тегах: \"sidebar layout\""
+        },
+        {
+          "type": "topics",
+          "query": "\"sidebar_layout\" in:topics",
+          "description": "В тегах: \"sidebar_layout\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0-sidebar-layout\" in:topics",
+          "description": "В тегах: \"v0-sidebar-layout\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0_sidebar_layout\" in:topics",
+          "description": "В тегах: \"v0_sidebar_layout\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0Sidebar-layout\" in:topics",
+          "description": "В тегах: \"v0Sidebar-layout\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjs-sidebar-layout\" in:topics",
+          "description": "В тегах: \"nextjs-sidebar-layout\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjs_sidebar_layout\" in:topics",
+          "description": "В тегах: \"nextjs_sidebar_layout\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjsSidebar-layout\" in:topics",
+          "description": "В тегах: \"nextjsSidebar-layout\""
+        },
+        {
+          "type": "topics",
+          "query": "\"react-sidebar-layout\" in:topics",
+          "description": "В тегах: \"react-sidebar-layout\""
+        },
+        {
+          "type": "combined",
+          "query": "\"sidebar-layout\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"sidebar-layout\""
+        },
+        {
+          "type": "combined",
+          "query": "\"sidebar-layout\" language:React language:Next.js",
+          "description": "React/Next.js: \"sidebar-layout\""
+        },
+        {
+          "type": "combined",
+          "query": "\"sidebar-layout\" stars:>10",
+          "description": "Популярные: \"sidebar-layout\""
+        },
+        {
+          "type": "combined",
+          "query": "\"sidebar layout\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"sidebar layout\""
+        },
+        {
+          "type": "combined",
+          "query": "\"sidebar layout\" language:React language:Next.js",
+          "description": "React/Next.js: \"sidebar layout\""
+        },
+        {
+          "type": "combined",
+          "query": "\"sidebar layout\" stars:>10",
+          "description": "Популярные: \"sidebar layout\""
+        },
+        {
+          "type": "combined",
+          "query": "\"sidebar_layout\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"sidebar_layout\""
+        },
+        {
+          "type": "combined",
+          "query": "\"sidebar_layout\" language:React language:Next.js",
+          "description": "React/Next.js: \"sidebar_layout\""
+        },
+        {
+          "type": "combined",
+          "query": "\"sidebar_layout\" stars:>10",
+          "description": "Популярные: \"sidebar_layout\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-sidebar-layout\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"v0-sidebar-layout\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-sidebar-layout\" language:React language:Next.js",
+          "description": "React/Next.js: \"v0-sidebar-layout\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-sidebar-layout\" stars:>10",
+          "description": "Популярные: \"v0-sidebar-layout\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_sidebar_layout\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"v0_sidebar_layout\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_sidebar_layout\" language:React language:Next.js",
+          "description": "React/Next.js: \"v0_sidebar_layout\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_sidebar_layout\" stars:>10",
+          "description": "Популярные: \"v0_sidebar_layout\""
+        },
+        {
+          "type": "keyword",
+          "query": "\"sidebar\" in:name language:JavaScript",
+          "description": "Ключевое слово: \"sidebar\""
+        },
+        {
+          "type": "keyword",
+          "query": "\"layout\" in:name language:JavaScript",
+          "description": "Ключевое слово: \"layout\""
+        }
+      ]
+    },
+    {
+      "componentName": "action-search-bar",
+      "originalUrl": "https://v0.app/community/action-search-bar-S3nMPSmpQzk",
+      "searchQueries": [
+        {
+          "type": "exact_name",
+          "query": "\"action-search-bar\" in:name",
+          "description": "Точное совпадение: \"action-search-bar\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"action search bar\" in:name",
+          "description": "Точное совпадение: \"action search bar\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"action_search_bar\" in:name",
+          "description": "Точное совпадение: \"action_search_bar\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0-action-search-bar\" in:name",
+          "description": "Точное совпадение: \"v0-action-search-bar\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0_action_search_bar\" in:name",
+          "description": "Точное совпадение: \"v0_action_search_bar\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0Action-search-bar\" in:name",
+          "description": "Точное совпадение: \"v0Action-search-bar\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjs-action-search-bar\" in:name",
+          "description": "Точное совпадение: \"nextjs-action-search-bar\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjs_action_search_bar\" in:name",
+          "description": "Точное совпадение: \"nextjs_action_search_bar\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjsAction-search-bar\" in:name",
+          "description": "Точное совпадение: \"nextjsAction-search-bar\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"react-action-search-bar\" in:name",
+          "description": "Точное совпадение: \"react-action-search-bar\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"react_action_search_bar\" in:name",
+          "description": "Точное совпадение: \"react_action_search_bar\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"reactAction-search-bar\" in:name",
+          "description": "Точное совпадение: \"reactAction-search-bar\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vue-action-search-bar\" in:name",
+          "description": "Точное совпадение: \"vue-action-search-bar\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vue_action_search_bar\" in:name",
+          "description": "Точное совпадение: \"vue_action_search_bar\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vueAction-search-bar\" in:name",
+          "description": "Точное совпадение: \"vueAction-search-bar\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angular-action-search-bar\" in:name",
+          "description": "Точное совпадение: \"angular-action-search-bar\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angular_action_search_bar\" in:name",
+          "description": "Точное совпадение: \"angular_action_search_bar\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angularAction-search-bar\" in:name",
+          "description": "Точное совпадение: \"angularAction-search-bar\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"svelte-action-search-bar\" in:name",
+          "description": "Точное совпадение: \"svelte-action-search-bar\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"svelte_action_search_bar\" in:name",
+          "description": "Точное совпадение: \"svelte_action_search_bar\""
+        },
+        {
+          "type": "description",
+          "query": "\"action-search-bar\" in:description",
+          "description": "В описании: \"action-search-bar\""
+        },
+        {
+          "type": "description",
+          "query": "\"action search bar\" in:description",
+          "description": "В описании: \"action search bar\""
+        },
+        {
+          "type": "description",
+          "query": "\"action_search_bar\" in:description",
+          "description": "В описании: \"action_search_bar\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0-action-search-bar\" in:description",
+          "description": "В описании: \"v0-action-search-bar\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0_action_search_bar\" in:description",
+          "description": "В описании: \"v0_action_search_bar\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0Action-search-bar\" in:description",
+          "description": "В описании: \"v0Action-search-bar\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjs-action-search-bar\" in:description",
+          "description": "В описании: \"nextjs-action-search-bar\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjs_action_search_bar\" in:description",
+          "description": "В описании: \"nextjs_action_search_bar\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjsAction-search-bar\" in:description",
+          "description": "В описании: \"nextjsAction-search-bar\""
+        },
+        {
+          "type": "description",
+          "query": "\"react-action-search-bar\" in:description",
+          "description": "В описании: \"react-action-search-bar\""
+        },
+        {
+          "type": "readme",
+          "query": "\"action-search-bar\" in:readme",
+          "description": "В README: \"action-search-bar\""
+        },
+        {
+          "type": "readme",
+          "query": "\"action search bar\" in:readme",
+          "description": "В README: \"action search bar\""
+        },
+        {
+          "type": "readme",
+          "query": "\"action_search_bar\" in:readme",
+          "description": "В README: \"action_search_bar\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0-action-search-bar\" in:readme",
+          "description": "В README: \"v0-action-search-bar\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0_action_search_bar\" in:readme",
+          "description": "В README: \"v0_action_search_bar\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0Action-search-bar\" in:readme",
+          "description": "В README: \"v0Action-search-bar\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjs-action-search-bar\" in:readme",
+          "description": "В README: \"nextjs-action-search-bar\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjs_action_search_bar\" in:readme",
+          "description": "В README: \"nextjs_action_search_bar\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjsAction-search-bar\" in:readme",
+          "description": "В README: \"nextjsAction-search-bar\""
+        },
+        {
+          "type": "readme",
+          "query": "\"react-action-search-bar\" in:readme",
+          "description": "В README: \"react-action-search-bar\""
+        },
+        {
+          "type": "topics",
+          "query": "\"action-search-bar\" in:topics",
+          "description": "В тегах: \"action-search-bar\""
+        },
+        {
+          "type": "topics",
+          "query": "\"action search bar\" in:topics",
+          "description": "В тегах: \"action search bar\""
+        },
+        {
+          "type": "topics",
+          "query": "\"action_search_bar\" in:topics",
+          "description": "В тегах: \"action_search_bar\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0-action-search-bar\" in:topics",
+          "description": "В тегах: \"v0-action-search-bar\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0_action_search_bar\" in:topics",
+          "description": "В тегах: \"v0_action_search_bar\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0Action-search-bar\" in:topics",
+          "description": "В тегах: \"v0Action-search-bar\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjs-action-search-bar\" in:topics",
+          "description": "В тегах: \"nextjs-action-search-bar\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjs_action_search_bar\" in:topics",
+          "description": "В тегах: \"nextjs_action_search_bar\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjsAction-search-bar\" in:topics",
+          "description": "В тегах: \"nextjsAction-search-bar\""
+        },
+        {
+          "type": "topics",
+          "query": "\"react-action-search-bar\" in:topics",
+          "description": "В тегах: \"react-action-search-bar\""
+        },
+        {
+          "type": "combined",
+          "query": "\"action-search-bar\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"action-search-bar\""
+        },
+        {
+          "type": "combined",
+          "query": "\"action-search-bar\" language:React language:Next.js",
+          "description": "React/Next.js: \"action-search-bar\""
+        },
+        {
+          "type": "combined",
+          "query": "\"action-search-bar\" stars:>10",
+          "description": "Популярные: \"action-search-bar\""
+        },
+        {
+          "type": "combined",
+          "query": "\"action search bar\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"action search bar\""
+        },
+        {
+          "type": "combined",
+          "query": "\"action search bar\" language:React language:Next.js",
+          "description": "React/Next.js: \"action search bar\""
+        },
+        {
+          "type": "combined",
+          "query": "\"action search bar\" stars:>10",
+          "description": "Популярные: \"action search bar\""
+        },
+        {
+          "type": "combined",
+          "query": "\"action_search_bar\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"action_search_bar\""
+        },
+        {
+          "type": "combined",
+          "query": "\"action_search_bar\" language:React language:Next.js",
+          "description": "React/Next.js: \"action_search_bar\""
+        },
+        {
+          "type": "combined",
+          "query": "\"action_search_bar\" stars:>10",
+          "description": "Популярные: \"action_search_bar\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-action-search-bar\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"v0-action-search-bar\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-action-search-bar\" language:React language:Next.js",
+          "description": "React/Next.js: \"v0-action-search-bar\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-action-search-bar\" stars:>10",
+          "description": "Популярные: \"v0-action-search-bar\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_action_search_bar\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"v0_action_search_bar\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_action_search_bar\" language:React language:Next.js",
+          "description": "React/Next.js: \"v0_action_search_bar\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_action_search_bar\" stars:>10",
+          "description": "Популярные: \"v0_action_search_bar\""
+        },
+        {
+          "type": "keyword",
+          "query": "\"action\" in:name language:JavaScript",
+          "description": "Ключевое слово: \"action\""
+        },
+        {
+          "type": "keyword",
+          "query": "\"search\" in:name language:JavaScript",
+          "description": "Ключевое слово: \"search\""
+        },
+        {
+          "type": "keyword",
+          "query": "\"bar\" in:name language:JavaScript",
+          "description": "Ключевое слово: \"bar\""
+        }
+      ]
+    },
+    {
+      "componentName": "ai-card-generation",
+      "originalUrl": "https://v0.app/community/ai-card-generation-Tpxvlz16QiJ",
+      "searchQueries": [
+        {
+          "type": "exact_name",
+          "query": "\"ai-card-generation\" in:name",
+          "description": "Точное совпадение: \"ai-card-generation\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"ai card generation\" in:name",
+          "description": "Точное совпадение: \"ai card generation\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"ai_card_generation\" in:name",
+          "description": "Точное совпадение: \"ai_card_generation\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0-ai-card-generation\" in:name",
+          "description": "Точное совпадение: \"v0-ai-card-generation\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0_ai_card_generation\" in:name",
+          "description": "Точное совпадение: \"v0_ai_card_generation\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0Ai-card-generation\" in:name",
+          "description": "Точное совпадение: \"v0Ai-card-generation\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjs-ai-card-generation\" in:name",
+          "description": "Точное совпадение: \"nextjs-ai-card-generation\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjs_ai_card_generation\" in:name",
+          "description": "Точное совпадение: \"nextjs_ai_card_generation\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjsAi-card-generation\" in:name",
+          "description": "Точное совпадение: \"nextjsAi-card-generation\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"react-ai-card-generation\" in:name",
+          "description": "Точное совпадение: \"react-ai-card-generation\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"react_ai_card_generation\" in:name",
+          "description": "Точное совпадение: \"react_ai_card_generation\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"reactAi-card-generation\" in:name",
+          "description": "Точное совпадение: \"reactAi-card-generation\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vue-ai-card-generation\" in:name",
+          "description": "Точное совпадение: \"vue-ai-card-generation\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vue_ai_card_generation\" in:name",
+          "description": "Точное совпадение: \"vue_ai_card_generation\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vueAi-card-generation\" in:name",
+          "description": "Точное совпадение: \"vueAi-card-generation\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angular-ai-card-generation\" in:name",
+          "description": "Точное совпадение: \"angular-ai-card-generation\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angular_ai_card_generation\" in:name",
+          "description": "Точное совпадение: \"angular_ai_card_generation\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angularAi-card-generation\" in:name",
+          "description": "Точное совпадение: \"angularAi-card-generation\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"svelte-ai-card-generation\" in:name",
+          "description": "Точное совпадение: \"svelte-ai-card-generation\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"svelte_ai_card_generation\" in:name",
+          "description": "Точное совпадение: \"svelte_ai_card_generation\""
+        },
+        {
+          "type": "description",
+          "query": "\"ai-card-generation\" in:description",
+          "description": "В описании: \"ai-card-generation\""
+        },
+        {
+          "type": "description",
+          "query": "\"ai card generation\" in:description",
+          "description": "В описании: \"ai card generation\""
+        },
+        {
+          "type": "description",
+          "query": "\"ai_card_generation\" in:description",
+          "description": "В описании: \"ai_card_generation\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0-ai-card-generation\" in:description",
+          "description": "В описании: \"v0-ai-card-generation\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0_ai_card_generation\" in:description",
+          "description": "В описании: \"v0_ai_card_generation\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0Ai-card-generation\" in:description",
+          "description": "В описании: \"v0Ai-card-generation\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjs-ai-card-generation\" in:description",
+          "description": "В описании: \"nextjs-ai-card-generation\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjs_ai_card_generation\" in:description",
+          "description": "В описании: \"nextjs_ai_card_generation\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjsAi-card-generation\" in:description",
+          "description": "В описании: \"nextjsAi-card-generation\""
+        },
+        {
+          "type": "description",
+          "query": "\"react-ai-card-generation\" in:description",
+          "description": "В описании: \"react-ai-card-generation\""
+        },
+        {
+          "type": "readme",
+          "query": "\"ai-card-generation\" in:readme",
+          "description": "В README: \"ai-card-generation\""
+        },
+        {
+          "type": "readme",
+          "query": "\"ai card generation\" in:readme",
+          "description": "В README: \"ai card generation\""
+        },
+        {
+          "type": "readme",
+          "query": "\"ai_card_generation\" in:readme",
+          "description": "В README: \"ai_card_generation\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0-ai-card-generation\" in:readme",
+          "description": "В README: \"v0-ai-card-generation\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0_ai_card_generation\" in:readme",
+          "description": "В README: \"v0_ai_card_generation\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0Ai-card-generation\" in:readme",
+          "description": "В README: \"v0Ai-card-generation\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjs-ai-card-generation\" in:readme",
+          "description": "В README: \"nextjs-ai-card-generation\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjs_ai_card_generation\" in:readme",
+          "description": "В README: \"nextjs_ai_card_generation\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjsAi-card-generation\" in:readme",
+          "description": "В README: \"nextjsAi-card-generation\""
+        },
+        {
+          "type": "readme",
+          "query": "\"react-ai-card-generation\" in:readme",
+          "description": "В README: \"react-ai-card-generation\""
+        },
+        {
+          "type": "topics",
+          "query": "\"ai-card-generation\" in:topics",
+          "description": "В тегах: \"ai-card-generation\""
+        },
+        {
+          "type": "topics",
+          "query": "\"ai card generation\" in:topics",
+          "description": "В тегах: \"ai card generation\""
+        },
+        {
+          "type": "topics",
+          "query": "\"ai_card_generation\" in:topics",
+          "description": "В тегах: \"ai_card_generation\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0-ai-card-generation\" in:topics",
+          "description": "В тегах: \"v0-ai-card-generation\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0_ai_card_generation\" in:topics",
+          "description": "В тегах: \"v0_ai_card_generation\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0Ai-card-generation\" in:topics",
+          "description": "В тегах: \"v0Ai-card-generation\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjs-ai-card-generation\" in:topics",
+          "description": "В тегах: \"nextjs-ai-card-generation\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjs_ai_card_generation\" in:topics",
+          "description": "В тегах: \"nextjs_ai_card_generation\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjsAi-card-generation\" in:topics",
+          "description": "В тегах: \"nextjsAi-card-generation\""
+        },
+        {
+          "type": "topics",
+          "query": "\"react-ai-card-generation\" in:topics",
+          "description": "В тегах: \"react-ai-card-generation\""
+        },
+        {
+          "type": "combined",
+          "query": "\"ai-card-generation\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"ai-card-generation\""
+        },
+        {
+          "type": "combined",
+          "query": "\"ai-card-generation\" language:React language:Next.js",
+          "description": "React/Next.js: \"ai-card-generation\""
+        },
+        {
+          "type": "combined",
+          "query": "\"ai-card-generation\" stars:>10",
+          "description": "Популярные: \"ai-card-generation\""
+        },
+        {
+          "type": "combined",
+          "query": "\"ai card generation\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"ai card generation\""
+        },
+        {
+          "type": "combined",
+          "query": "\"ai card generation\" language:React language:Next.js",
+          "description": "React/Next.js: \"ai card generation\""
+        },
+        {
+          "type": "combined",
+          "query": "\"ai card generation\" stars:>10",
+          "description": "Популярные: \"ai card generation\""
+        },
+        {
+          "type": "combined",
+          "query": "\"ai_card_generation\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"ai_card_generation\""
+        },
+        {
+          "type": "combined",
+          "query": "\"ai_card_generation\" language:React language:Next.js",
+          "description": "React/Next.js: \"ai_card_generation\""
+        },
+        {
+          "type": "combined",
+          "query": "\"ai_card_generation\" stars:>10",
+          "description": "Популярные: \"ai_card_generation\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-ai-card-generation\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"v0-ai-card-generation\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-ai-card-generation\" language:React language:Next.js",
+          "description": "React/Next.js: \"v0-ai-card-generation\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-ai-card-generation\" stars:>10",
+          "description": "Популярные: \"v0-ai-card-generation\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_ai_card_generation\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"v0_ai_card_generation\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_ai_card_generation\" language:React language:Next.js",
+          "description": "React/Next.js: \"v0_ai_card_generation\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_ai_card_generation\" stars:>10",
+          "description": "Популярные: \"v0_ai_card_generation\""
+        },
+        {
+          "type": "keyword",
+          "query": "\"card\" in:name language:JavaScript",
+          "description": "Ключевое слово: \"card\""
+        },
+        {
+          "type": "keyword",
+          "query": "\"generation\" in:name language:JavaScript",
+          "description": "Ключевое слово: \"generation\""
+        }
+      ]
+    },
+    {
+      "componentName": "vercel-tabs",
+      "originalUrl": "https://v0.app/community/vercel-tabs-BT27p0aGPsa",
+      "searchQueries": [
+        {
+          "type": "exact_name",
+          "query": "\"vercel-tabs\" in:name",
+          "description": "Точное совпадение: \"vercel-tabs\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vercel tabs\" in:name",
+          "description": "Точное совпадение: \"vercel tabs\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vercel_tabs\" in:name",
+          "description": "Точное совпадение: \"vercel_tabs\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0-vercel-tabs\" in:name",
+          "description": "Точное совпадение: \"v0-vercel-tabs\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0_vercel_tabs\" in:name",
+          "description": "Точное совпадение: \"v0_vercel_tabs\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0Vercel-tabs\" in:name",
+          "description": "Точное совпадение: \"v0Vercel-tabs\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjs-vercel-tabs\" in:name",
+          "description": "Точное совпадение: \"nextjs-vercel-tabs\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjs_vercel_tabs\" in:name",
+          "description": "Точное совпадение: \"nextjs_vercel_tabs\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjsVercel-tabs\" in:name",
+          "description": "Точное совпадение: \"nextjsVercel-tabs\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"react-vercel-tabs\" in:name",
+          "description": "Точное совпадение: \"react-vercel-tabs\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"react_vercel_tabs\" in:name",
+          "description": "Точное совпадение: \"react_vercel_tabs\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"reactVercel-tabs\" in:name",
+          "description": "Точное совпадение: \"reactVercel-tabs\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vue-vercel-tabs\" in:name",
+          "description": "Точное совпадение: \"vue-vercel-tabs\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vue_vercel_tabs\" in:name",
+          "description": "Точное совпадение: \"vue_vercel_tabs\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vueVercel-tabs\" in:name",
+          "description": "Точное совпадение: \"vueVercel-tabs\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angular-vercel-tabs\" in:name",
+          "description": "Точное совпадение: \"angular-vercel-tabs\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angular_vercel_tabs\" in:name",
+          "description": "Точное совпадение: \"angular_vercel_tabs\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angularVercel-tabs\" in:name",
+          "description": "Точное совпадение: \"angularVercel-tabs\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"svelte-vercel-tabs\" in:name",
+          "description": "Точное совпадение: \"svelte-vercel-tabs\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"svelte_vercel_tabs\" in:name",
+          "description": "Точное совпадение: \"svelte_vercel_tabs\""
+        },
+        {
+          "type": "description",
+          "query": "\"vercel-tabs\" in:description",
+          "description": "В описании: \"vercel-tabs\""
+        },
+        {
+          "type": "description",
+          "query": "\"vercel tabs\" in:description",
+          "description": "В описании: \"vercel tabs\""
+        },
+        {
+          "type": "description",
+          "query": "\"vercel_tabs\" in:description",
+          "description": "В описании: \"vercel_tabs\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0-vercel-tabs\" in:description",
+          "description": "В описании: \"v0-vercel-tabs\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0_vercel_tabs\" in:description",
+          "description": "В описании: \"v0_vercel_tabs\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0Vercel-tabs\" in:description",
+          "description": "В описании: \"v0Vercel-tabs\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjs-vercel-tabs\" in:description",
+          "description": "В описании: \"nextjs-vercel-tabs\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjs_vercel_tabs\" in:description",
+          "description": "В описании: \"nextjs_vercel_tabs\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjsVercel-tabs\" in:description",
+          "description": "В описании: \"nextjsVercel-tabs\""
+        },
+        {
+          "type": "description",
+          "query": "\"react-vercel-tabs\" in:description",
+          "description": "В описании: \"react-vercel-tabs\""
+        },
+        {
+          "type": "readme",
+          "query": "\"vercel-tabs\" in:readme",
+          "description": "В README: \"vercel-tabs\""
+        },
+        {
+          "type": "readme",
+          "query": "\"vercel tabs\" in:readme",
+          "description": "В README: \"vercel tabs\""
+        },
+        {
+          "type": "readme",
+          "query": "\"vercel_tabs\" in:readme",
+          "description": "В README: \"vercel_tabs\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0-vercel-tabs\" in:readme",
+          "description": "В README: \"v0-vercel-tabs\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0_vercel_tabs\" in:readme",
+          "description": "В README: \"v0_vercel_tabs\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0Vercel-tabs\" in:readme",
+          "description": "В README: \"v0Vercel-tabs\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjs-vercel-tabs\" in:readme",
+          "description": "В README: \"nextjs-vercel-tabs\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjs_vercel_tabs\" in:readme",
+          "description": "В README: \"nextjs_vercel_tabs\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjsVercel-tabs\" in:readme",
+          "description": "В README: \"nextjsVercel-tabs\""
+        },
+        {
+          "type": "readme",
+          "query": "\"react-vercel-tabs\" in:readme",
+          "description": "В README: \"react-vercel-tabs\""
+        },
+        {
+          "type": "topics",
+          "query": "\"vercel-tabs\" in:topics",
+          "description": "В тегах: \"vercel-tabs\""
+        },
+        {
+          "type": "topics",
+          "query": "\"vercel tabs\" in:topics",
+          "description": "В тегах: \"vercel tabs\""
+        },
+        {
+          "type": "topics",
+          "query": "\"vercel_tabs\" in:topics",
+          "description": "В тегах: \"vercel_tabs\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0-vercel-tabs\" in:topics",
+          "description": "В тегах: \"v0-vercel-tabs\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0_vercel_tabs\" in:topics",
+          "description": "В тегах: \"v0_vercel_tabs\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0Vercel-tabs\" in:topics",
+          "description": "В тегах: \"v0Vercel-tabs\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjs-vercel-tabs\" in:topics",
+          "description": "В тегах: \"nextjs-vercel-tabs\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjs_vercel_tabs\" in:topics",
+          "description": "В тегах: \"nextjs_vercel_tabs\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjsVercel-tabs\" in:topics",
+          "description": "В тегах: \"nextjsVercel-tabs\""
+        },
+        {
+          "type": "topics",
+          "query": "\"react-vercel-tabs\" in:topics",
+          "description": "В тегах: \"react-vercel-tabs\""
+        },
+        {
+          "type": "combined",
+          "query": "\"vercel-tabs\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"vercel-tabs\""
+        },
+        {
+          "type": "combined",
+          "query": "\"vercel-tabs\" language:React language:Next.js",
+          "description": "React/Next.js: \"vercel-tabs\""
+        },
+        {
+          "type": "combined",
+          "query": "\"vercel-tabs\" stars:>10",
+          "description": "Популярные: \"vercel-tabs\""
+        },
+        {
+          "type": "combined",
+          "query": "\"vercel tabs\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"vercel tabs\""
+        },
+        {
+          "type": "combined",
+          "query": "\"vercel tabs\" language:React language:Next.js",
+          "description": "React/Next.js: \"vercel tabs\""
+        },
+        {
+          "type": "combined",
+          "query": "\"vercel tabs\" stars:>10",
+          "description": "Популярные: \"vercel tabs\""
+        },
+        {
+          "type": "combined",
+          "query": "\"vercel_tabs\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"vercel_tabs\""
+        },
+        {
+          "type": "combined",
+          "query": "\"vercel_tabs\" language:React language:Next.js",
+          "description": "React/Next.js: \"vercel_tabs\""
+        },
+        {
+          "type": "combined",
+          "query": "\"vercel_tabs\" stars:>10",
+          "description": "Популярные: \"vercel_tabs\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-vercel-tabs\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"v0-vercel-tabs\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-vercel-tabs\" language:React language:Next.js",
+          "description": "React/Next.js: \"v0-vercel-tabs\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-vercel-tabs\" stars:>10",
+          "description": "Популярные: \"v0-vercel-tabs\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_vercel_tabs\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"v0_vercel_tabs\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_vercel_tabs\" language:React language:Next.js",
+          "description": "React/Next.js: \"v0_vercel_tabs\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_vercel_tabs\" stars:>10",
+          "description": "Популярные: \"v0_vercel_tabs\""
+        },
+        {
+          "type": "keyword",
+          "query": "\"vercel\" in:name language:JavaScript",
+          "description": "Ключевое слово: \"vercel\""
+        },
+        {
+          "type": "keyword",
+          "query": "\"tabs\" in:name language:JavaScript",
+          "description": "Ключевое слово: \"tabs\""
+        }
+      ]
+    },
+    {
+      "componentName": "animated-beam",
+      "originalUrl": "https://v0.app/community/animated-beam-voQije6wyja",
+      "searchQueries": [
+        {
+          "type": "exact_name",
+          "query": "\"animated-beam\" in:name",
+          "description": "Точное совпадение: \"animated-beam\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"animated beam\" in:name",
+          "description": "Точное совпадение: \"animated beam\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"animated_beam\" in:name",
+          "description": "Точное совпадение: \"animated_beam\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0-animated-beam\" in:name",
+          "description": "Точное совпадение: \"v0-animated-beam\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0_animated_beam\" in:name",
+          "description": "Точное совпадение: \"v0_animated_beam\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0Animated-beam\" in:name",
+          "description": "Точное совпадение: \"v0Animated-beam\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjs-animated-beam\" in:name",
+          "description": "Точное совпадение: \"nextjs-animated-beam\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjs_animated_beam\" in:name",
+          "description": "Точное совпадение: \"nextjs_animated_beam\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjsAnimated-beam\" in:name",
+          "description": "Точное совпадение: \"nextjsAnimated-beam\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"react-animated-beam\" in:name",
+          "description": "Точное совпадение: \"react-animated-beam\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"react_animated_beam\" in:name",
+          "description": "Точное совпадение: \"react_animated_beam\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"reactAnimated-beam\" in:name",
+          "description": "Точное совпадение: \"reactAnimated-beam\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vue-animated-beam\" in:name",
+          "description": "Точное совпадение: \"vue-animated-beam\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vue_animated_beam\" in:name",
+          "description": "Точное совпадение: \"vue_animated_beam\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vueAnimated-beam\" in:name",
+          "description": "Точное совпадение: \"vueAnimated-beam\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angular-animated-beam\" in:name",
+          "description": "Точное совпадение: \"angular-animated-beam\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angular_animated_beam\" in:name",
+          "description": "Точное совпадение: \"angular_animated_beam\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angularAnimated-beam\" in:name",
+          "description": "Точное совпадение: \"angularAnimated-beam\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"svelte-animated-beam\" in:name",
+          "description": "Точное совпадение: \"svelte-animated-beam\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"svelte_animated_beam\" in:name",
+          "description": "Точное совпадение: \"svelte_animated_beam\""
+        },
+        {
+          "type": "description",
+          "query": "\"animated-beam\" in:description",
+          "description": "В описании: \"animated-beam\""
+        },
+        {
+          "type": "description",
+          "query": "\"animated beam\" in:description",
+          "description": "В описании: \"animated beam\""
+        },
+        {
+          "type": "description",
+          "query": "\"animated_beam\" in:description",
+          "description": "В описании: \"animated_beam\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0-animated-beam\" in:description",
+          "description": "В описании: \"v0-animated-beam\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0_animated_beam\" in:description",
+          "description": "В описании: \"v0_animated_beam\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0Animated-beam\" in:description",
+          "description": "В описании: \"v0Animated-beam\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjs-animated-beam\" in:description",
+          "description": "В описании: \"nextjs-animated-beam\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjs_animated_beam\" in:description",
+          "description": "В описании: \"nextjs_animated_beam\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjsAnimated-beam\" in:description",
+          "description": "В описании: \"nextjsAnimated-beam\""
+        },
+        {
+          "type": "description",
+          "query": "\"react-animated-beam\" in:description",
+          "description": "В описании: \"react-animated-beam\""
+        },
+        {
+          "type": "readme",
+          "query": "\"animated-beam\" in:readme",
+          "description": "В README: \"animated-beam\""
+        },
+        {
+          "type": "readme",
+          "query": "\"animated beam\" in:readme",
+          "description": "В README: \"animated beam\""
+        },
+        {
+          "type": "readme",
+          "query": "\"animated_beam\" in:readme",
+          "description": "В README: \"animated_beam\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0-animated-beam\" in:readme",
+          "description": "В README: \"v0-animated-beam\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0_animated_beam\" in:readme",
+          "description": "В README: \"v0_animated_beam\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0Animated-beam\" in:readme",
+          "description": "В README: \"v0Animated-beam\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjs-animated-beam\" in:readme",
+          "description": "В README: \"nextjs-animated-beam\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjs_animated_beam\" in:readme",
+          "description": "В README: \"nextjs_animated_beam\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjsAnimated-beam\" in:readme",
+          "description": "В README: \"nextjsAnimated-beam\""
+        },
+        {
+          "type": "readme",
+          "query": "\"react-animated-beam\" in:readme",
+          "description": "В README: \"react-animated-beam\""
+        },
+        {
+          "type": "topics",
+          "query": "\"animated-beam\" in:topics",
+          "description": "В тегах: \"animated-beam\""
+        },
+        {
+          "type": "topics",
+          "query": "\"animated beam\" in:topics",
+          "description": "В тегах: \"animated beam\""
+        },
+        {
+          "type": "topics",
+          "query": "\"animated_beam\" in:topics",
+          "description": "В тегах: \"animated_beam\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0-animated-beam\" in:topics",
+          "description": "В тегах: \"v0-animated-beam\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0_animated_beam\" in:topics",
+          "description": "В тегах: \"v0_animated_beam\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0Animated-beam\" in:topics",
+          "description": "В тегах: \"v0Animated-beam\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjs-animated-beam\" in:topics",
+          "description": "В тегах: \"nextjs-animated-beam\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjs_animated_beam\" in:topics",
+          "description": "В тегах: \"nextjs_animated_beam\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjsAnimated-beam\" in:topics",
+          "description": "В тегах: \"nextjsAnimated-beam\""
+        },
+        {
+          "type": "topics",
+          "query": "\"react-animated-beam\" in:topics",
+          "description": "В тегах: \"react-animated-beam\""
+        },
+        {
+          "type": "combined",
+          "query": "\"animated-beam\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"animated-beam\""
+        },
+        {
+          "type": "combined",
+          "query": "\"animated-beam\" language:React language:Next.js",
+          "description": "React/Next.js: \"animated-beam\""
+        },
+        {
+          "type": "combined",
+          "query": "\"animated-beam\" stars:>10",
+          "description": "Популярные: \"animated-beam\""
+        },
+        {
+          "type": "combined",
+          "query": "\"animated beam\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"animated beam\""
+        },
+        {
+          "type": "combined",
+          "query": "\"animated beam\" language:React language:Next.js",
+          "description": "React/Next.js: \"animated beam\""
+        },
+        {
+          "type": "combined",
+          "query": "\"animated beam\" stars:>10",
+          "description": "Популярные: \"animated beam\""
+        },
+        {
+          "type": "combined",
+          "query": "\"animated_beam\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"animated_beam\""
+        },
+        {
+          "type": "combined",
+          "query": "\"animated_beam\" language:React language:Next.js",
+          "description": "React/Next.js: \"animated_beam\""
+        },
+        {
+          "type": "combined",
+          "query": "\"animated_beam\" stars:>10",
+          "description": "Популярные: \"animated_beam\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-animated-beam\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"v0-animated-beam\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-animated-beam\" language:React language:Next.js",
+          "description": "React/Next.js: \"v0-animated-beam\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-animated-beam\" stars:>10",
+          "description": "Популярные: \"v0-animated-beam\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_animated_beam\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"v0_animated_beam\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_animated_beam\" language:React language:Next.js",
+          "description": "React/Next.js: \"v0_animated_beam\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_animated_beam\" stars:>10",
+          "description": "Популярные: \"v0_animated_beam\""
+        },
+        {
+          "type": "keyword",
+          "query": "\"animated\" in:name language:JavaScript",
+          "description": "Ключевое слово: \"animated\""
+        },
+        {
+          "type": "keyword",
+          "query": "\"beam\" in:name language:JavaScript",
+          "description": "Ключевое слово: \"beam\""
+        }
+      ]
+    },
+    {
+      "componentName": "image-to-ascii",
+      "originalUrl": "https://v0.app/community/image-to-ascii-0UE1nczWzbu",
+      "searchQueries": [
+        {
+          "type": "exact_name",
+          "query": "\"image-to-ascii\" in:name",
+          "description": "Точное совпадение: \"image-to-ascii\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"image to ascii\" in:name",
+          "description": "Точное совпадение: \"image to ascii\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"image_to_ascii\" in:name",
+          "description": "Точное совпадение: \"image_to_ascii\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0-image-to-ascii\" in:name",
+          "description": "Точное совпадение: \"v0-image-to-ascii\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0_image_to_ascii\" in:name",
+          "description": "Точное совпадение: \"v0_image_to_ascii\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0Image-to-ascii\" in:name",
+          "description": "Точное совпадение: \"v0Image-to-ascii\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjs-image-to-ascii\" in:name",
+          "description": "Точное совпадение: \"nextjs-image-to-ascii\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjs_image_to_ascii\" in:name",
+          "description": "Точное совпадение: \"nextjs_image_to_ascii\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjsImage-to-ascii\" in:name",
+          "description": "Точное совпадение: \"nextjsImage-to-ascii\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"react-image-to-ascii\" in:name",
+          "description": "Точное совпадение: \"react-image-to-ascii\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"react_image_to_ascii\" in:name",
+          "description": "Точное совпадение: \"react_image_to_ascii\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"reactImage-to-ascii\" in:name",
+          "description": "Точное совпадение: \"reactImage-to-ascii\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vue-image-to-ascii\" in:name",
+          "description": "Точное совпадение: \"vue-image-to-ascii\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vue_image_to_ascii\" in:name",
+          "description": "Точное совпадение: \"vue_image_to_ascii\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vueImage-to-ascii\" in:name",
+          "description": "Точное совпадение: \"vueImage-to-ascii\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angular-image-to-ascii\" in:name",
+          "description": "Точное совпадение: \"angular-image-to-ascii\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angular_image_to_ascii\" in:name",
+          "description": "Точное совпадение: \"angular_image_to_ascii\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angularImage-to-ascii\" in:name",
+          "description": "Точное совпадение: \"angularImage-to-ascii\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"svelte-image-to-ascii\" in:name",
+          "description": "Точное совпадение: \"svelte-image-to-ascii\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"svelte_image_to_ascii\" in:name",
+          "description": "Точное совпадение: \"svelte_image_to_ascii\""
+        },
+        {
+          "type": "description",
+          "query": "\"image-to-ascii\" in:description",
+          "description": "В описании: \"image-to-ascii\""
+        },
+        {
+          "type": "description",
+          "query": "\"image to ascii\" in:description",
+          "description": "В описании: \"image to ascii\""
+        },
+        {
+          "type": "description",
+          "query": "\"image_to_ascii\" in:description",
+          "description": "В описании: \"image_to_ascii\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0-image-to-ascii\" in:description",
+          "description": "В описании: \"v0-image-to-ascii\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0_image_to_ascii\" in:description",
+          "description": "В описании: \"v0_image_to_ascii\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0Image-to-ascii\" in:description",
+          "description": "В описании: \"v0Image-to-ascii\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjs-image-to-ascii\" in:description",
+          "description": "В описании: \"nextjs-image-to-ascii\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjs_image_to_ascii\" in:description",
+          "description": "В описании: \"nextjs_image_to_ascii\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjsImage-to-ascii\" in:description",
+          "description": "В описании: \"nextjsImage-to-ascii\""
+        },
+        {
+          "type": "description",
+          "query": "\"react-image-to-ascii\" in:description",
+          "description": "В описании: \"react-image-to-ascii\""
+        },
+        {
+          "type": "readme",
+          "query": "\"image-to-ascii\" in:readme",
+          "description": "В README: \"image-to-ascii\""
+        },
+        {
+          "type": "readme",
+          "query": "\"image to ascii\" in:readme",
+          "description": "В README: \"image to ascii\""
+        },
+        {
+          "type": "readme",
+          "query": "\"image_to_ascii\" in:readme",
+          "description": "В README: \"image_to_ascii\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0-image-to-ascii\" in:readme",
+          "description": "В README: \"v0-image-to-ascii\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0_image_to_ascii\" in:readme",
+          "description": "В README: \"v0_image_to_ascii\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0Image-to-ascii\" in:readme",
+          "description": "В README: \"v0Image-to-ascii\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjs-image-to-ascii\" in:readme",
+          "description": "В README: \"nextjs-image-to-ascii\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjs_image_to_ascii\" in:readme",
+          "description": "В README: \"nextjs_image_to_ascii\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjsImage-to-ascii\" in:readme",
+          "description": "В README: \"nextjsImage-to-ascii\""
+        },
+        {
+          "type": "readme",
+          "query": "\"react-image-to-ascii\" in:readme",
+          "description": "В README: \"react-image-to-ascii\""
+        },
+        {
+          "type": "topics",
+          "query": "\"image-to-ascii\" in:topics",
+          "description": "В тегах: \"image-to-ascii\""
+        },
+        {
+          "type": "topics",
+          "query": "\"image to ascii\" in:topics",
+          "description": "В тегах: \"image to ascii\""
+        },
+        {
+          "type": "topics",
+          "query": "\"image_to_ascii\" in:topics",
+          "description": "В тегах: \"image_to_ascii\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0-image-to-ascii\" in:topics",
+          "description": "В тегах: \"v0-image-to-ascii\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0_image_to_ascii\" in:topics",
+          "description": "В тегах: \"v0_image_to_ascii\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0Image-to-ascii\" in:topics",
+          "description": "В тегах: \"v0Image-to-ascii\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjs-image-to-ascii\" in:topics",
+          "description": "В тегах: \"nextjs-image-to-ascii\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjs_image_to_ascii\" in:topics",
+          "description": "В тегах: \"nextjs_image_to_ascii\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjsImage-to-ascii\" in:topics",
+          "description": "В тегах: \"nextjsImage-to-ascii\""
+        },
+        {
+          "type": "topics",
+          "query": "\"react-image-to-ascii\" in:topics",
+          "description": "В тегах: \"react-image-to-ascii\""
+        },
+        {
+          "type": "combined",
+          "query": "\"image-to-ascii\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"image-to-ascii\""
+        },
+        {
+          "type": "combined",
+          "query": "\"image-to-ascii\" language:React language:Next.js",
+          "description": "React/Next.js: \"image-to-ascii\""
+        },
+        {
+          "type": "combined",
+          "query": "\"image-to-ascii\" stars:>10",
+          "description": "Популярные: \"image-to-ascii\""
+        },
+        {
+          "type": "combined",
+          "query": "\"image to ascii\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"image to ascii\""
+        },
+        {
+          "type": "combined",
+          "query": "\"image to ascii\" language:React language:Next.js",
+          "description": "React/Next.js: \"image to ascii\""
+        },
+        {
+          "type": "combined",
+          "query": "\"image to ascii\" stars:>10",
+          "description": "Популярные: \"image to ascii\""
+        },
+        {
+          "type": "combined",
+          "query": "\"image_to_ascii\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"image_to_ascii\""
+        },
+        {
+          "type": "combined",
+          "query": "\"image_to_ascii\" language:React language:Next.js",
+          "description": "React/Next.js: \"image_to_ascii\""
+        },
+        {
+          "type": "combined",
+          "query": "\"image_to_ascii\" stars:>10",
+          "description": "Популярные: \"image_to_ascii\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-image-to-ascii\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"v0-image-to-ascii\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-image-to-ascii\" language:React language:Next.js",
+          "description": "React/Next.js: \"v0-image-to-ascii\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-image-to-ascii\" stars:>10",
+          "description": "Популярные: \"v0-image-to-ascii\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_image_to_ascii\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"v0_image_to_ascii\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_image_to_ascii\" language:React language:Next.js",
+          "description": "React/Next.js: \"v0_image_to_ascii\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_image_to_ascii\" stars:>10",
+          "description": "Популярные: \"v0_image_to_ascii\""
+        },
+        {
+          "type": "keyword",
+          "query": "\"image\" in:name language:JavaScript",
+          "description": "Ключевое слово: \"image\""
+        },
+        {
+          "type": "keyword",
+          "query": "\"ascii\" in:name language:JavaScript",
+          "description": "Ключевое слово: \"ascii\""
+        }
+      ]
+    },
+    {
+      "componentName": "documentation-starter",
+      "originalUrl": "https://v0.app/community/documentation-starter-ov3ApgfOdx5",
+      "searchQueries": [
+        {
+          "type": "exact_name",
+          "query": "\"documentation-starter\" in:name",
+          "description": "Точное совпадение: \"documentation-starter\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"documentation starter\" in:name",
+          "description": "Точное совпадение: \"documentation starter\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"documentation_starter\" in:name",
+          "description": "Точное совпадение: \"documentation_starter\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0-documentation-starter\" in:name",
+          "description": "Точное совпадение: \"v0-documentation-starter\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0_documentation_starter\" in:name",
+          "description": "Точное совпадение: \"v0_documentation_starter\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0Documentation-starter\" in:name",
+          "description": "Точное совпадение: \"v0Documentation-starter\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjs-documentation-starter\" in:name",
+          "description": "Точное совпадение: \"nextjs-documentation-starter\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjs_documentation_starter\" in:name",
+          "description": "Точное совпадение: \"nextjs_documentation_starter\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjsDocumentation-starter\" in:name",
+          "description": "Точное совпадение: \"nextjsDocumentation-starter\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"react-documentation-starter\" in:name",
+          "description": "Точное совпадение: \"react-documentation-starter\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"react_documentation_starter\" in:name",
+          "description": "Точное совпадение: \"react_documentation_starter\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"reactDocumentation-starter\" in:name",
+          "description": "Точное совпадение: \"reactDocumentation-starter\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vue-documentation-starter\" in:name",
+          "description": "Точное совпадение: \"vue-documentation-starter\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vue_documentation_starter\" in:name",
+          "description": "Точное совпадение: \"vue_documentation_starter\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vueDocumentation-starter\" in:name",
+          "description": "Точное совпадение: \"vueDocumentation-starter\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angular-documentation-starter\" in:name",
+          "description": "Точное совпадение: \"angular-documentation-starter\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angular_documentation_starter\" in:name",
+          "description": "Точное совпадение: \"angular_documentation_starter\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angularDocumentation-starter\" in:name",
+          "description": "Точное совпадение: \"angularDocumentation-starter\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"svelte-documentation-starter\" in:name",
+          "description": "Точное совпадение: \"svelte-documentation-starter\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"svelte_documentation_starter\" in:name",
+          "description": "Точное совпадение: \"svelte_documentation_starter\""
+        },
+        {
+          "type": "description",
+          "query": "\"documentation-starter\" in:description",
+          "description": "В описании: \"documentation-starter\""
+        },
+        {
+          "type": "description",
+          "query": "\"documentation starter\" in:description",
+          "description": "В описании: \"documentation starter\""
+        },
+        {
+          "type": "description",
+          "query": "\"documentation_starter\" in:description",
+          "description": "В описании: \"documentation_starter\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0-documentation-starter\" in:description",
+          "description": "В описании: \"v0-documentation-starter\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0_documentation_starter\" in:description",
+          "description": "В описании: \"v0_documentation_starter\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0Documentation-starter\" in:description",
+          "description": "В описании: \"v0Documentation-starter\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjs-documentation-starter\" in:description",
+          "description": "В описании: \"nextjs-documentation-starter\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjs_documentation_starter\" in:description",
+          "description": "В описании: \"nextjs_documentation_starter\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjsDocumentation-starter\" in:description",
+          "description": "В описании: \"nextjsDocumentation-starter\""
+        },
+        {
+          "type": "description",
+          "query": "\"react-documentation-starter\" in:description",
+          "description": "В описании: \"react-documentation-starter\""
+        },
+        {
+          "type": "readme",
+          "query": "\"documentation-starter\" in:readme",
+          "description": "В README: \"documentation-starter\""
+        },
+        {
+          "type": "readme",
+          "query": "\"documentation starter\" in:readme",
+          "description": "В README: \"documentation starter\""
+        },
+        {
+          "type": "readme",
+          "query": "\"documentation_starter\" in:readme",
+          "description": "В README: \"documentation_starter\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0-documentation-starter\" in:readme",
+          "description": "В README: \"v0-documentation-starter\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0_documentation_starter\" in:readme",
+          "description": "В README: \"v0_documentation_starter\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0Documentation-starter\" in:readme",
+          "description": "В README: \"v0Documentation-starter\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjs-documentation-starter\" in:readme",
+          "description": "В README: \"nextjs-documentation-starter\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjs_documentation_starter\" in:readme",
+          "description": "В README: \"nextjs_documentation_starter\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjsDocumentation-starter\" in:readme",
+          "description": "В README: \"nextjsDocumentation-starter\""
+        },
+        {
+          "type": "readme",
+          "query": "\"react-documentation-starter\" in:readme",
+          "description": "В README: \"react-documentation-starter\""
+        },
+        {
+          "type": "topics",
+          "query": "\"documentation-starter\" in:topics",
+          "description": "В тегах: \"documentation-starter\""
+        },
+        {
+          "type": "topics",
+          "query": "\"documentation starter\" in:topics",
+          "description": "В тегах: \"documentation starter\""
+        },
+        {
+          "type": "topics",
+          "query": "\"documentation_starter\" in:topics",
+          "description": "В тегах: \"documentation_starter\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0-documentation-starter\" in:topics",
+          "description": "В тегах: \"v0-documentation-starter\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0_documentation_starter\" in:topics",
+          "description": "В тегах: \"v0_documentation_starter\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0Documentation-starter\" in:topics",
+          "description": "В тегах: \"v0Documentation-starter\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjs-documentation-starter\" in:topics",
+          "description": "В тегах: \"nextjs-documentation-starter\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjs_documentation_starter\" in:topics",
+          "description": "В тегах: \"nextjs_documentation_starter\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjsDocumentation-starter\" in:topics",
+          "description": "В тегах: \"nextjsDocumentation-starter\""
+        },
+        {
+          "type": "topics",
+          "query": "\"react-documentation-starter\" in:topics",
+          "description": "В тегах: \"react-documentation-starter\""
+        },
+        {
+          "type": "combined",
+          "query": "\"documentation-starter\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"documentation-starter\""
+        },
+        {
+          "type": "combined",
+          "query": "\"documentation-starter\" language:React language:Next.js",
+          "description": "React/Next.js: \"documentation-starter\""
+        },
+        {
+          "type": "combined",
+          "query": "\"documentation-starter\" stars:>10",
+          "description": "Популярные: \"documentation-starter\""
+        },
+        {
+          "type": "combined",
+          "query": "\"documentation starter\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"documentation starter\""
+        },
+        {
+          "type": "combined",
+          "query": "\"documentation starter\" language:React language:Next.js",
+          "description": "React/Next.js: \"documentation starter\""
+        },
+        {
+          "type": "combined",
+          "query": "\"documentation starter\" stars:>10",
+          "description": "Популярные: \"documentation starter\""
+        },
+        {
+          "type": "combined",
+          "query": "\"documentation_starter\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"documentation_starter\""
+        },
+        {
+          "type": "combined",
+          "query": "\"documentation_starter\" language:React language:Next.js",
+          "description": "React/Next.js: \"documentation_starter\""
+        },
+        {
+          "type": "combined",
+          "query": "\"documentation_starter\" stars:>10",
+          "description": "Популярные: \"documentation_starter\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-documentation-starter\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"v0-documentation-starter\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-documentation-starter\" language:React language:Next.js",
+          "description": "React/Next.js: \"v0-documentation-starter\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-documentation-starter\" stars:>10",
+          "description": "Популярные: \"v0-documentation-starter\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_documentation_starter\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"v0_documentation_starter\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_documentation_starter\" language:React language:Next.js",
+          "description": "React/Next.js: \"v0_documentation_starter\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_documentation_starter\" stars:>10",
+          "description": "Популярные: \"v0_documentation_starter\""
+        },
+        {
+          "type": "keyword",
+          "query": "\"documentation\" in:name language:JavaScript",
+          "description": "Ключевое слово: \"documentation\""
+        },
+        {
+          "type": "keyword",
+          "query": "\"starter\" in:name language:JavaScript",
+          "description": "Ключевое слово: \"starter\""
+        }
+      ]
+    },
+    {
+      "componentName": "admin-dashboard",
+      "originalUrl": "https://v0.app/community/admin-dashboard-yBomF3O9Yu3",
+      "searchQueries": [
+        {
+          "type": "exact_name",
+          "query": "\"admin-dashboard\" in:name",
+          "description": "Точное совпадение: \"admin-dashboard\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"admin dashboard\" in:name",
+          "description": "Точное совпадение: \"admin dashboard\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"admin_dashboard\" in:name",
+          "description": "Точное совпадение: \"admin_dashboard\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0-admin-dashboard\" in:name",
+          "description": "Точное совпадение: \"v0-admin-dashboard\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0_admin_dashboard\" in:name",
+          "description": "Точное совпадение: \"v0_admin_dashboard\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0Admin-dashboard\" in:name",
+          "description": "Точное совпадение: \"v0Admin-dashboard\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjs-admin-dashboard\" in:name",
+          "description": "Точное совпадение: \"nextjs-admin-dashboard\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjs_admin_dashboard\" in:name",
+          "description": "Точное совпадение: \"nextjs_admin_dashboard\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjsAdmin-dashboard\" in:name",
+          "description": "Точное совпадение: \"nextjsAdmin-dashboard\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"react-admin-dashboard\" in:name",
+          "description": "Точное совпадение: \"react-admin-dashboard\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"react_admin_dashboard\" in:name",
+          "description": "Точное совпадение: \"react_admin_dashboard\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"reactAdmin-dashboard\" in:name",
+          "description": "Точное совпадение: \"reactAdmin-dashboard\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vue-admin-dashboard\" in:name",
+          "description": "Точное совпадение: \"vue-admin-dashboard\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vue_admin_dashboard\" in:name",
+          "description": "Точное совпадение: \"vue_admin_dashboard\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vueAdmin-dashboard\" in:name",
+          "description": "Точное совпадение: \"vueAdmin-dashboard\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angular-admin-dashboard\" in:name",
+          "description": "Точное совпадение: \"angular-admin-dashboard\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angular_admin_dashboard\" in:name",
+          "description": "Точное совпадение: \"angular_admin_dashboard\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angularAdmin-dashboard\" in:name",
+          "description": "Точное совпадение: \"angularAdmin-dashboard\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"svelte-admin-dashboard\" in:name",
+          "description": "Точное совпадение: \"svelte-admin-dashboard\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"svelte_admin_dashboard\" in:name",
+          "description": "Точное совпадение: \"svelte_admin_dashboard\""
+        },
+        {
+          "type": "description",
+          "query": "\"admin-dashboard\" in:description",
+          "description": "В описании: \"admin-dashboard\""
+        },
+        {
+          "type": "description",
+          "query": "\"admin dashboard\" in:description",
+          "description": "В описании: \"admin dashboard\""
+        },
+        {
+          "type": "description",
+          "query": "\"admin_dashboard\" in:description",
+          "description": "В описании: \"admin_dashboard\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0-admin-dashboard\" in:description",
+          "description": "В описании: \"v0-admin-dashboard\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0_admin_dashboard\" in:description",
+          "description": "В описании: \"v0_admin_dashboard\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0Admin-dashboard\" in:description",
+          "description": "В описании: \"v0Admin-dashboard\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjs-admin-dashboard\" in:description",
+          "description": "В описании: \"nextjs-admin-dashboard\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjs_admin_dashboard\" in:description",
+          "description": "В описании: \"nextjs_admin_dashboard\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjsAdmin-dashboard\" in:description",
+          "description": "В описании: \"nextjsAdmin-dashboard\""
+        },
+        {
+          "type": "description",
+          "query": "\"react-admin-dashboard\" in:description",
+          "description": "В описании: \"react-admin-dashboard\""
+        },
+        {
+          "type": "readme",
+          "query": "\"admin-dashboard\" in:readme",
+          "description": "В README: \"admin-dashboard\""
+        },
+        {
+          "type": "readme",
+          "query": "\"admin dashboard\" in:readme",
+          "description": "В README: \"admin dashboard\""
+        },
+        {
+          "type": "readme",
+          "query": "\"admin_dashboard\" in:readme",
+          "description": "В README: \"admin_dashboard\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0-admin-dashboard\" in:readme",
+          "description": "В README: \"v0-admin-dashboard\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0_admin_dashboard\" in:readme",
+          "description": "В README: \"v0_admin_dashboard\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0Admin-dashboard\" in:readme",
+          "description": "В README: \"v0Admin-dashboard\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjs-admin-dashboard\" in:readme",
+          "description": "В README: \"nextjs-admin-dashboard\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjs_admin_dashboard\" in:readme",
+          "description": "В README: \"nextjs_admin_dashboard\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjsAdmin-dashboard\" in:readme",
+          "description": "В README: \"nextjsAdmin-dashboard\""
+        },
+        {
+          "type": "readme",
+          "query": "\"react-admin-dashboard\" in:readme",
+          "description": "В README: \"react-admin-dashboard\""
+        },
+        {
+          "type": "topics",
+          "query": "\"admin-dashboard\" in:topics",
+          "description": "В тегах: \"admin-dashboard\""
+        },
+        {
+          "type": "topics",
+          "query": "\"admin dashboard\" in:topics",
+          "description": "В тегах: \"admin dashboard\""
+        },
+        {
+          "type": "topics",
+          "query": "\"admin_dashboard\" in:topics",
+          "description": "В тегах: \"admin_dashboard\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0-admin-dashboard\" in:topics",
+          "description": "В тегах: \"v0-admin-dashboard\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0_admin_dashboard\" in:topics",
+          "description": "В тегах: \"v0_admin_dashboard\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0Admin-dashboard\" in:topics",
+          "description": "В тегах: \"v0Admin-dashboard\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjs-admin-dashboard\" in:topics",
+          "description": "В тегах: \"nextjs-admin-dashboard\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjs_admin_dashboard\" in:topics",
+          "description": "В тегах: \"nextjs_admin_dashboard\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjsAdmin-dashboard\" in:topics",
+          "description": "В тегах: \"nextjsAdmin-dashboard\""
+        },
+        {
+          "type": "topics",
+          "query": "\"react-admin-dashboard\" in:topics",
+          "description": "В тегах: \"react-admin-dashboard\""
+        },
+        {
+          "type": "combined",
+          "query": "\"admin-dashboard\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"admin-dashboard\""
+        },
+        {
+          "type": "combined",
+          "query": "\"admin-dashboard\" language:React language:Next.js",
+          "description": "React/Next.js: \"admin-dashboard\""
+        },
+        {
+          "type": "combined",
+          "query": "\"admin-dashboard\" stars:>10",
+          "description": "Популярные: \"admin-dashboard\""
+        },
+        {
+          "type": "combined",
+          "query": "\"admin dashboard\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"admin dashboard\""
+        },
+        {
+          "type": "combined",
+          "query": "\"admin dashboard\" language:React language:Next.js",
+          "description": "React/Next.js: \"admin dashboard\""
+        },
+        {
+          "type": "combined",
+          "query": "\"admin dashboard\" stars:>10",
+          "description": "Популярные: \"admin dashboard\""
+        },
+        {
+          "type": "combined",
+          "query": "\"admin_dashboard\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"admin_dashboard\""
+        },
+        {
+          "type": "combined",
+          "query": "\"admin_dashboard\" language:React language:Next.js",
+          "description": "React/Next.js: \"admin_dashboard\""
+        },
+        {
+          "type": "combined",
+          "query": "\"admin_dashboard\" stars:>10",
+          "description": "Популярные: \"admin_dashboard\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-admin-dashboard\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"v0-admin-dashboard\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-admin-dashboard\" language:React language:Next.js",
+          "description": "React/Next.js: \"v0-admin-dashboard\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-admin-dashboard\" stars:>10",
+          "description": "Популярные: \"v0-admin-dashboard\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_admin_dashboard\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"v0_admin_dashboard\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_admin_dashboard\" language:React language:Next.js",
+          "description": "React/Next.js: \"v0_admin_dashboard\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_admin_dashboard\" stars:>10",
+          "description": "Популярные: \"v0_admin_dashboard\""
+        },
+        {
+          "type": "keyword",
+          "query": "\"admin\" in:name language:JavaScript",
+          "description": "Ключевое слово: \"admin\""
+        },
+        {
+          "type": "keyword",
+          "query": "\"dashboard\" in:name language:JavaScript",
+          "description": "Ключевое слово: \"dashboard\""
+        }
+      ]
+    },
+    {
+      "componentName": "chat-ui-with-vibration",
+      "originalUrl": "https://v0.app/community/chat-ui-with-vibration-xf3RmrkKlxc",
+      "searchQueries": [
+        {
+          "type": "exact_name",
+          "query": "\"chat-ui-with-vibration\" in:name",
+          "description": "Точное совпадение: \"chat-ui-with-vibration\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"chat ui with vibration\" in:name",
+          "description": "Точное совпадение: \"chat ui with vibration\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"chat_ui_with_vibration\" in:name",
+          "description": "Точное совпадение: \"chat_ui_with_vibration\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0-chat-ui-with-vibration\" in:name",
+          "description": "Точное совпадение: \"v0-chat-ui-with-vibration\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0_chat_ui_with_vibration\" in:name",
+          "description": "Точное совпадение: \"v0_chat_ui_with_vibration\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0Chat-ui-with-vibration\" in:name",
+          "description": "Точное совпадение: \"v0Chat-ui-with-vibration\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjs-chat-ui-with-vibration\" in:name",
+          "description": "Точное совпадение: \"nextjs-chat-ui-with-vibration\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjs_chat_ui_with_vibration\" in:name",
+          "description": "Точное совпадение: \"nextjs_chat_ui_with_vibration\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjsChat-ui-with-vibration\" in:name",
+          "description": "Точное совпадение: \"nextjsChat-ui-with-vibration\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"react-chat-ui-with-vibration\" in:name",
+          "description": "Точное совпадение: \"react-chat-ui-with-vibration\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"react_chat_ui_with_vibration\" in:name",
+          "description": "Точное совпадение: \"react_chat_ui_with_vibration\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"reactChat-ui-with-vibration\" in:name",
+          "description": "Точное совпадение: \"reactChat-ui-with-vibration\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vue-chat-ui-with-vibration\" in:name",
+          "description": "Точное совпадение: \"vue-chat-ui-with-vibration\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vue_chat_ui_with_vibration\" in:name",
+          "description": "Точное совпадение: \"vue_chat_ui_with_vibration\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vueChat-ui-with-vibration\" in:name",
+          "description": "Точное совпадение: \"vueChat-ui-with-vibration\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angular-chat-ui-with-vibration\" in:name",
+          "description": "Точное совпадение: \"angular-chat-ui-with-vibration\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angular_chat_ui_with_vibration\" in:name",
+          "description": "Точное совпадение: \"angular_chat_ui_with_vibration\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angularChat-ui-with-vibration\" in:name",
+          "description": "Точное совпадение: \"angularChat-ui-with-vibration\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"svelte-chat-ui-with-vibration\" in:name",
+          "description": "Точное совпадение: \"svelte-chat-ui-with-vibration\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"svelte_chat_ui_with_vibration\" in:name",
+          "description": "Точное совпадение: \"svelte_chat_ui_with_vibration\""
+        },
+        {
+          "type": "description",
+          "query": "\"chat-ui-with-vibration\" in:description",
+          "description": "В описании: \"chat-ui-with-vibration\""
+        },
+        {
+          "type": "description",
+          "query": "\"chat ui with vibration\" in:description",
+          "description": "В описании: \"chat ui with vibration\""
+        },
+        {
+          "type": "description",
+          "query": "\"chat_ui_with_vibration\" in:description",
+          "description": "В описании: \"chat_ui_with_vibration\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0-chat-ui-with-vibration\" in:description",
+          "description": "В описании: \"v0-chat-ui-with-vibration\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0_chat_ui_with_vibration\" in:description",
+          "description": "В описании: \"v0_chat_ui_with_vibration\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0Chat-ui-with-vibration\" in:description",
+          "description": "В описании: \"v0Chat-ui-with-vibration\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjs-chat-ui-with-vibration\" in:description",
+          "description": "В описании: \"nextjs-chat-ui-with-vibration\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjs_chat_ui_with_vibration\" in:description",
+          "description": "В описании: \"nextjs_chat_ui_with_vibration\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjsChat-ui-with-vibration\" in:description",
+          "description": "В описании: \"nextjsChat-ui-with-vibration\""
+        },
+        {
+          "type": "description",
+          "query": "\"react-chat-ui-with-vibration\" in:description",
+          "description": "В описании: \"react-chat-ui-with-vibration\""
+        },
+        {
+          "type": "readme",
+          "query": "\"chat-ui-with-vibration\" in:readme",
+          "description": "В README: \"chat-ui-with-vibration\""
+        },
+        {
+          "type": "readme",
+          "query": "\"chat ui with vibration\" in:readme",
+          "description": "В README: \"chat ui with vibration\""
+        },
+        {
+          "type": "readme",
+          "query": "\"chat_ui_with_vibration\" in:readme",
+          "description": "В README: \"chat_ui_with_vibration\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0-chat-ui-with-vibration\" in:readme",
+          "description": "В README: \"v0-chat-ui-with-vibration\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0_chat_ui_with_vibration\" in:readme",
+          "description": "В README: \"v0_chat_ui_with_vibration\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0Chat-ui-with-vibration\" in:readme",
+          "description": "В README: \"v0Chat-ui-with-vibration\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjs-chat-ui-with-vibration\" in:readme",
+          "description": "В README: \"nextjs-chat-ui-with-vibration\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjs_chat_ui_with_vibration\" in:readme",
+          "description": "В README: \"nextjs_chat_ui_with_vibration\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjsChat-ui-with-vibration\" in:readme",
+          "description": "В README: \"nextjsChat-ui-with-vibration\""
+        },
+        {
+          "type": "readme",
+          "query": "\"react-chat-ui-with-vibration\" in:readme",
+          "description": "В README: \"react-chat-ui-with-vibration\""
+        },
+        {
+          "type": "topics",
+          "query": "\"chat-ui-with-vibration\" in:topics",
+          "description": "В тегах: \"chat-ui-with-vibration\""
+        },
+        {
+          "type": "topics",
+          "query": "\"chat ui with vibration\" in:topics",
+          "description": "В тегах: \"chat ui with vibration\""
+        },
+        {
+          "type": "topics",
+          "query": "\"chat_ui_with_vibration\" in:topics",
+          "description": "В тегах: \"chat_ui_with_vibration\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0-chat-ui-with-vibration\" in:topics",
+          "description": "В тегах: \"v0-chat-ui-with-vibration\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0_chat_ui_with_vibration\" in:topics",
+          "description": "В тегах: \"v0_chat_ui_with_vibration\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0Chat-ui-with-vibration\" in:topics",
+          "description": "В тегах: \"v0Chat-ui-with-vibration\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjs-chat-ui-with-vibration\" in:topics",
+          "description": "В тегах: \"nextjs-chat-ui-with-vibration\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjs_chat_ui_with_vibration\" in:topics",
+          "description": "В тегах: \"nextjs_chat_ui_with_vibration\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjsChat-ui-with-vibration\" in:topics",
+          "description": "В тегах: \"nextjsChat-ui-with-vibration\""
+        },
+        {
+          "type": "topics",
+          "query": "\"react-chat-ui-with-vibration\" in:topics",
+          "description": "В тегах: \"react-chat-ui-with-vibration\""
+        },
+        {
+          "type": "combined",
+          "query": "\"chat-ui-with-vibration\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"chat-ui-with-vibration\""
+        },
+        {
+          "type": "combined",
+          "query": "\"chat-ui-with-vibration\" language:React language:Next.js",
+          "description": "React/Next.js: \"chat-ui-with-vibration\""
+        },
+        {
+          "type": "combined",
+          "query": "\"chat-ui-with-vibration\" stars:>10",
+          "description": "Популярные: \"chat-ui-with-vibration\""
+        },
+        {
+          "type": "combined",
+          "query": "\"chat ui with vibration\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"chat ui with vibration\""
+        },
+        {
+          "type": "combined",
+          "query": "\"chat ui with vibration\" language:React language:Next.js",
+          "description": "React/Next.js: \"chat ui with vibration\""
+        },
+        {
+          "type": "combined",
+          "query": "\"chat ui with vibration\" stars:>10",
+          "description": "Популярные: \"chat ui with vibration\""
+        },
+        {
+          "type": "combined",
+          "query": "\"chat_ui_with_vibration\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"chat_ui_with_vibration\""
+        },
+        {
+          "type": "combined",
+          "query": "\"chat_ui_with_vibration\" language:React language:Next.js",
+          "description": "React/Next.js: \"chat_ui_with_vibration\""
+        },
+        {
+          "type": "combined",
+          "query": "\"chat_ui_with_vibration\" stars:>10",
+          "description": "Популярные: \"chat_ui_with_vibration\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-chat-ui-with-vibration\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"v0-chat-ui-with-vibration\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-chat-ui-with-vibration\" language:React language:Next.js",
+          "description": "React/Next.js: \"v0-chat-ui-with-vibration\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-chat-ui-with-vibration\" stars:>10",
+          "description": "Популярные: \"v0-chat-ui-with-vibration\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_chat_ui_with_vibration\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"v0_chat_ui_with_vibration\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_chat_ui_with_vibration\" language:React language:Next.js",
+          "description": "React/Next.js: \"v0_chat_ui_with_vibration\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_chat_ui_with_vibration\" stars:>10",
+          "description": "Популярные: \"v0_chat_ui_with_vibration\""
+        },
+        {
+          "type": "keyword",
+          "query": "\"chat\" in:name language:JavaScript",
+          "description": "Ключевое слово: \"chat\""
+        },
+        {
+          "type": "keyword",
+          "query": "\"with\" in:name language:JavaScript",
+          "description": "Ключевое слово: \"with\""
+        },
+        {
+          "type": "keyword",
+          "query": "\"vibration\" in:name language:JavaScript",
+          "description": "Ключевое слово: \"vibration\""
+        }
+      ]
+    },
+    {
+      "componentName": "chat-ui",
+      "originalUrl": "https://v0.app/community/chat-ui-h4Ga3LeTpbl",
+      "searchQueries": [
+        {
+          "type": "exact_name",
+          "query": "\"chat-ui\" in:name",
+          "description": "Точное совпадение: \"chat-ui\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"chat ui\" in:name",
+          "description": "Точное совпадение: \"chat ui\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"chat_ui\" in:name",
+          "description": "Точное совпадение: \"chat_ui\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0-chat-ui\" in:name",
+          "description": "Точное совпадение: \"v0-chat-ui\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0_chat_ui\" in:name",
+          "description": "Точное совпадение: \"v0_chat_ui\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0Chat-ui\" in:name",
+          "description": "Точное совпадение: \"v0Chat-ui\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjs-chat-ui\" in:name",
+          "description": "Точное совпадение: \"nextjs-chat-ui\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjs_chat_ui\" in:name",
+          "description": "Точное совпадение: \"nextjs_chat_ui\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjsChat-ui\" in:name",
+          "description": "Точное совпадение: \"nextjsChat-ui\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"react-chat-ui\" in:name",
+          "description": "Точное совпадение: \"react-chat-ui\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"react_chat_ui\" in:name",
+          "description": "Точное совпадение: \"react_chat_ui\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"reactChat-ui\" in:name",
+          "description": "Точное совпадение: \"reactChat-ui\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vue-chat-ui\" in:name",
+          "description": "Точное совпадение: \"vue-chat-ui\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vue_chat_ui\" in:name",
+          "description": "Точное совпадение: \"vue_chat_ui\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vueChat-ui\" in:name",
+          "description": "Точное совпадение: \"vueChat-ui\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angular-chat-ui\" in:name",
+          "description": "Точное совпадение: \"angular-chat-ui\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angular_chat_ui\" in:name",
+          "description": "Точное совпадение: \"angular_chat_ui\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angularChat-ui\" in:name",
+          "description": "Точное совпадение: \"angularChat-ui\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"svelte-chat-ui\" in:name",
+          "description": "Точное совпадение: \"svelte-chat-ui\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"svelte_chat_ui\" in:name",
+          "description": "Точное совпадение: \"svelte_chat_ui\""
+        },
+        {
+          "type": "description",
+          "query": "\"chat-ui\" in:description",
+          "description": "В описании: \"chat-ui\""
+        },
+        {
+          "type": "description",
+          "query": "\"chat ui\" in:description",
+          "description": "В описании: \"chat ui\""
+        },
+        {
+          "type": "description",
+          "query": "\"chat_ui\" in:description",
+          "description": "В описании: \"chat_ui\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0-chat-ui\" in:description",
+          "description": "В описании: \"v0-chat-ui\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0_chat_ui\" in:description",
+          "description": "В описании: \"v0_chat_ui\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0Chat-ui\" in:description",
+          "description": "В описании: \"v0Chat-ui\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjs-chat-ui\" in:description",
+          "description": "В описании: \"nextjs-chat-ui\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjs_chat_ui\" in:description",
+          "description": "В описании: \"nextjs_chat_ui\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjsChat-ui\" in:description",
+          "description": "В описании: \"nextjsChat-ui\""
+        },
+        {
+          "type": "description",
+          "query": "\"react-chat-ui\" in:description",
+          "description": "В описании: \"react-chat-ui\""
+        },
+        {
+          "type": "readme",
+          "query": "\"chat-ui\" in:readme",
+          "description": "В README: \"chat-ui\""
+        },
+        {
+          "type": "readme",
+          "query": "\"chat ui\" in:readme",
+          "description": "В README: \"chat ui\""
+        },
+        {
+          "type": "readme",
+          "query": "\"chat_ui\" in:readme",
+          "description": "В README: \"chat_ui\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0-chat-ui\" in:readme",
+          "description": "В README: \"v0-chat-ui\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0_chat_ui\" in:readme",
+          "description": "В README: \"v0_chat_ui\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0Chat-ui\" in:readme",
+          "description": "В README: \"v0Chat-ui\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjs-chat-ui\" in:readme",
+          "description": "В README: \"nextjs-chat-ui\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjs_chat_ui\" in:readme",
+          "description": "В README: \"nextjs_chat_ui\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjsChat-ui\" in:readme",
+          "description": "В README: \"nextjsChat-ui\""
+        },
+        {
+          "type": "readme",
+          "query": "\"react-chat-ui\" in:readme",
+          "description": "В README: \"react-chat-ui\""
+        },
+        {
+          "type": "topics",
+          "query": "\"chat-ui\" in:topics",
+          "description": "В тегах: \"chat-ui\""
+        },
+        {
+          "type": "topics",
+          "query": "\"chat ui\" in:topics",
+          "description": "В тегах: \"chat ui\""
+        },
+        {
+          "type": "topics",
+          "query": "\"chat_ui\" in:topics",
+          "description": "В тегах: \"chat_ui\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0-chat-ui\" in:topics",
+          "description": "В тегах: \"v0-chat-ui\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0_chat_ui\" in:topics",
+          "description": "В тегах: \"v0_chat_ui\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0Chat-ui\" in:topics",
+          "description": "В тегах: \"v0Chat-ui\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjs-chat-ui\" in:topics",
+          "description": "В тегах: \"nextjs-chat-ui\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjs_chat_ui\" in:topics",
+          "description": "В тегах: \"nextjs_chat_ui\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjsChat-ui\" in:topics",
+          "description": "В тегах: \"nextjsChat-ui\""
+        },
+        {
+          "type": "topics",
+          "query": "\"react-chat-ui\" in:topics",
+          "description": "В тегах: \"react-chat-ui\""
+        },
+        {
+          "type": "combined",
+          "query": "\"chat-ui\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"chat-ui\""
+        },
+        {
+          "type": "combined",
+          "query": "\"chat-ui\" language:React language:Next.js",
+          "description": "React/Next.js: \"chat-ui\""
+        },
+        {
+          "type": "combined",
+          "query": "\"chat-ui\" stars:>10",
+          "description": "Популярные: \"chat-ui\""
+        },
+        {
+          "type": "combined",
+          "query": "\"chat ui\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"chat ui\""
+        },
+        {
+          "type": "combined",
+          "query": "\"chat ui\" language:React language:Next.js",
+          "description": "React/Next.js: \"chat ui\""
+        },
+        {
+          "type": "combined",
+          "query": "\"chat ui\" stars:>10",
+          "description": "Популярные: \"chat ui\""
+        },
+        {
+          "type": "combined",
+          "query": "\"chat_ui\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"chat_ui\""
+        },
+        {
+          "type": "combined",
+          "query": "\"chat_ui\" language:React language:Next.js",
+          "description": "React/Next.js: \"chat_ui\""
+        },
+        {
+          "type": "combined",
+          "query": "\"chat_ui\" stars:>10",
+          "description": "Популярные: \"chat_ui\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-chat-ui\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"v0-chat-ui\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-chat-ui\" language:React language:Next.js",
+          "description": "React/Next.js: \"v0-chat-ui\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-chat-ui\" stars:>10",
+          "description": "Популярные: \"v0-chat-ui\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_chat_ui\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"v0_chat_ui\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_chat_ui\" language:React language:Next.js",
+          "description": "React/Next.js: \"v0_chat_ui\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_chat_ui\" stars:>10",
+          "description": "Популярные: \"v0_chat_ui\""
+        },
+        {
+          "type": "keyword",
+          "query": "\"chat\" in:name language:JavaScript",
+          "description": "Ключевое слово: \"chat\""
+        }
+      ]
+    },
+    {
+      "componentName": "eleven-labs-conversational-ai-starter",
+      "originalUrl": "https://v0.app/community/eleven-labs-conversational-ai-starter-5TN93pl3bRS",
+      "searchQueries": [
+        {
+          "type": "exact_name",
+          "query": "\"eleven-labs-conversational-ai-starter\" in:name",
+          "description": "Точное совпадение: \"eleven-labs-conversational-ai-starter\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"eleven labs conversational ai starter\" in:name",
+          "description": "Точное совпадение: \"eleven labs conversational ai starter\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"eleven_labs_conversational_ai_starter\" in:name",
+          "description": "Точное совпадение: \"eleven_labs_conversational_ai_starter\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0-eleven-labs-conversational-ai-starter\" in:name",
+          "description": "Точное совпадение: \"v0-eleven-labs-conversational-ai-starter\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0_eleven_labs_conversational_ai_starter\" in:name",
+          "description": "Точное совпадение: \"v0_eleven_labs_conversational_ai_starter\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"v0Eleven-labs-conversational-ai-starter\" in:name",
+          "description": "Точное совпадение: \"v0Eleven-labs-conversational-ai-starter\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjs-eleven-labs-conversational-ai-starter\" in:name",
+          "description": "Точное совпадение: \"nextjs-eleven-labs-conversational-ai-starter\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjs_eleven_labs_conversational_ai_starter\" in:name",
+          "description": "Точное совпадение: \"nextjs_eleven_labs_conversational_ai_starter\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"nextjsEleven-labs-conversational-ai-starter\" in:name",
+          "description": "Точное совпадение: \"nextjsEleven-labs-conversational-ai-starter\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"react-eleven-labs-conversational-ai-starter\" in:name",
+          "description": "Точное совпадение: \"react-eleven-labs-conversational-ai-starter\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"react_eleven_labs_conversational_ai_starter\" in:name",
+          "description": "Точное совпадение: \"react_eleven_labs_conversational_ai_starter\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"reactEleven-labs-conversational-ai-starter\" in:name",
+          "description": "Точное совпадение: \"reactEleven-labs-conversational-ai-starter\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vue-eleven-labs-conversational-ai-starter\" in:name",
+          "description": "Точное совпадение: \"vue-eleven-labs-conversational-ai-starter\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vue_eleven_labs_conversational_ai_starter\" in:name",
+          "description": "Точное совпадение: \"vue_eleven_labs_conversational_ai_starter\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"vueEleven-labs-conversational-ai-starter\" in:name",
+          "description": "Точное совпадение: \"vueEleven-labs-conversational-ai-starter\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angular-eleven-labs-conversational-ai-starter\" in:name",
+          "description": "Точное совпадение: \"angular-eleven-labs-conversational-ai-starter\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angular_eleven_labs_conversational_ai_starter\" in:name",
+          "description": "Точное совпадение: \"angular_eleven_labs_conversational_ai_starter\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"angularEleven-labs-conversational-ai-starter\" in:name",
+          "description": "Точное совпадение: \"angularEleven-labs-conversational-ai-starter\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"svelte-eleven-labs-conversational-ai-starter\" in:name",
+          "description": "Точное совпадение: \"svelte-eleven-labs-conversational-ai-starter\""
+        },
+        {
+          "type": "exact_name",
+          "query": "\"svelte_eleven_labs_conversational_ai_starter\" in:name",
+          "description": "Точное совпадение: \"svelte_eleven_labs_conversational_ai_starter\""
+        },
+        {
+          "type": "description",
+          "query": "\"eleven-labs-conversational-ai-starter\" in:description",
+          "description": "В описании: \"eleven-labs-conversational-ai-starter\""
+        },
+        {
+          "type": "description",
+          "query": "\"eleven labs conversational ai starter\" in:description",
+          "description": "В описании: \"eleven labs conversational ai starter\""
+        },
+        {
+          "type": "description",
+          "query": "\"eleven_labs_conversational_ai_starter\" in:description",
+          "description": "В описании: \"eleven_labs_conversational_ai_starter\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0-eleven-labs-conversational-ai-starter\" in:description",
+          "description": "В описании: \"v0-eleven-labs-conversational-ai-starter\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0_eleven_labs_conversational_ai_starter\" in:description",
+          "description": "В описании: \"v0_eleven_labs_conversational_ai_starter\""
+        },
+        {
+          "type": "description",
+          "query": "\"v0Eleven-labs-conversational-ai-starter\" in:description",
+          "description": "В описании: \"v0Eleven-labs-conversational-ai-starter\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjs-eleven-labs-conversational-ai-starter\" in:description",
+          "description": "В описании: \"nextjs-eleven-labs-conversational-ai-starter\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjs_eleven_labs_conversational_ai_starter\" in:description",
+          "description": "В описании: \"nextjs_eleven_labs_conversational_ai_starter\""
+        },
+        {
+          "type": "description",
+          "query": "\"nextjsEleven-labs-conversational-ai-starter\" in:description",
+          "description": "В описании: \"nextjsEleven-labs-conversational-ai-starter\""
+        },
+        {
+          "type": "description",
+          "query": "\"react-eleven-labs-conversational-ai-starter\" in:description",
+          "description": "В описании: \"react-eleven-labs-conversational-ai-starter\""
+        },
+        {
+          "type": "readme",
+          "query": "\"eleven-labs-conversational-ai-starter\" in:readme",
+          "description": "В README: \"eleven-labs-conversational-ai-starter\""
+        },
+        {
+          "type": "readme",
+          "query": "\"eleven labs conversational ai starter\" in:readme",
+          "description": "В README: \"eleven labs conversational ai starter\""
+        },
+        {
+          "type": "readme",
+          "query": "\"eleven_labs_conversational_ai_starter\" in:readme",
+          "description": "В README: \"eleven_labs_conversational_ai_starter\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0-eleven-labs-conversational-ai-starter\" in:readme",
+          "description": "В README: \"v0-eleven-labs-conversational-ai-starter\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0_eleven_labs_conversational_ai_starter\" in:readme",
+          "description": "В README: \"v0_eleven_labs_conversational_ai_starter\""
+        },
+        {
+          "type": "readme",
+          "query": "\"v0Eleven-labs-conversational-ai-starter\" in:readme",
+          "description": "В README: \"v0Eleven-labs-conversational-ai-starter\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjs-eleven-labs-conversational-ai-starter\" in:readme",
+          "description": "В README: \"nextjs-eleven-labs-conversational-ai-starter\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjs_eleven_labs_conversational_ai_starter\" in:readme",
+          "description": "В README: \"nextjs_eleven_labs_conversational_ai_starter\""
+        },
+        {
+          "type": "readme",
+          "query": "\"nextjsEleven-labs-conversational-ai-starter\" in:readme",
+          "description": "В README: \"nextjsEleven-labs-conversational-ai-starter\""
+        },
+        {
+          "type": "readme",
+          "query": "\"react-eleven-labs-conversational-ai-starter\" in:readme",
+          "description": "В README: \"react-eleven-labs-conversational-ai-starter\""
+        },
+        {
+          "type": "topics",
+          "query": "\"eleven-labs-conversational-ai-starter\" in:topics",
+          "description": "В тегах: \"eleven-labs-conversational-ai-starter\""
+        },
+        {
+          "type": "topics",
+          "query": "\"eleven labs conversational ai starter\" in:topics",
+          "description": "В тегах: \"eleven labs conversational ai starter\""
+        },
+        {
+          "type": "topics",
+          "query": "\"eleven_labs_conversational_ai_starter\" in:topics",
+          "description": "В тегах: \"eleven_labs_conversational_ai_starter\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0-eleven-labs-conversational-ai-starter\" in:topics",
+          "description": "В тегах: \"v0-eleven-labs-conversational-ai-starter\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0_eleven_labs_conversational_ai_starter\" in:topics",
+          "description": "В тегах: \"v0_eleven_labs_conversational_ai_starter\""
+        },
+        {
+          "type": "topics",
+          "query": "\"v0Eleven-labs-conversational-ai-starter\" in:topics",
+          "description": "В тегах: \"v0Eleven-labs-conversational-ai-starter\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjs-eleven-labs-conversational-ai-starter\" in:topics",
+          "description": "В тегах: \"nextjs-eleven-labs-conversational-ai-starter\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjs_eleven_labs_conversational_ai_starter\" in:topics",
+          "description": "В тегах: \"nextjs_eleven_labs_conversational_ai_starter\""
+        },
+        {
+          "type": "topics",
+          "query": "\"nextjsEleven-labs-conversational-ai-starter\" in:topics",
+          "description": "В тегах: \"nextjsEleven-labs-conversational-ai-starter\""
+        },
+        {
+          "type": "topics",
+          "query": "\"react-eleven-labs-conversational-ai-starter\" in:topics",
+          "description": "В тегах: \"react-eleven-labs-conversational-ai-starter\""
+        },
+        {
+          "type": "combined",
+          "query": "\"eleven-labs-conversational-ai-starter\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"eleven-labs-conversational-ai-starter\""
+        },
+        {
+          "type": "combined",
+          "query": "\"eleven-labs-conversational-ai-starter\" language:React language:Next.js",
+          "description": "React/Next.js: \"eleven-labs-conversational-ai-starter\""
+        },
+        {
+          "type": "combined",
+          "query": "\"eleven-labs-conversational-ai-starter\" stars:>10",
+          "description": "Популярные: \"eleven-labs-conversational-ai-starter\""
+        },
+        {
+          "type": "combined",
+          "query": "\"eleven labs conversational ai starter\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"eleven labs conversational ai starter\""
+        },
+        {
+          "type": "combined",
+          "query": "\"eleven labs conversational ai starter\" language:React language:Next.js",
+          "description": "React/Next.js: \"eleven labs conversational ai starter\""
+        },
+        {
+          "type": "combined",
+          "query": "\"eleven labs conversational ai starter\" stars:>10",
+          "description": "Популярные: \"eleven labs conversational ai starter\""
+        },
+        {
+          "type": "combined",
+          "query": "\"eleven_labs_conversational_ai_starter\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"eleven_labs_conversational_ai_starter\""
+        },
+        {
+          "type": "combined",
+          "query": "\"eleven_labs_conversational_ai_starter\" language:React language:Next.js",
+          "description": "React/Next.js: \"eleven_labs_conversational_ai_starter\""
+        },
+        {
+          "type": "combined",
+          "query": "\"eleven_labs_conversational_ai_starter\" stars:>10",
+          "description": "Популярные: \"eleven_labs_conversational_ai_starter\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-eleven-labs-conversational-ai-starter\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"v0-eleven-labs-conversational-ai-starter\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-eleven-labs-conversational-ai-starter\" language:React language:Next.js",
+          "description": "React/Next.js: \"v0-eleven-labs-conversational-ai-starter\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0-eleven-labs-conversational-ai-starter\" stars:>10",
+          "description": "Популярные: \"v0-eleven-labs-conversational-ai-starter\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_eleven_labs_conversational_ai_starter\" language:JavaScript language:TypeScript",
+          "description": "JS/TS: \"v0_eleven_labs_conversational_ai_starter\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_eleven_labs_conversational_ai_starter\" language:React language:Next.js",
+          "description": "React/Next.js: \"v0_eleven_labs_conversational_ai_starter\""
+        },
+        {
+          "type": "combined",
+          "query": "\"v0_eleven_labs_conversational_ai_starter\" stars:>10",
+          "description": "Популярные: \"v0_eleven_labs_conversational_ai_starter\""
+        },
+        {
+          "type": "keyword",
+          "query": "\"eleven\" in:name language:JavaScript",
+          "description": "Ключевое слово: \"eleven\""
+        },
+        {
+          "type": "keyword",
+          "query": "\"labs\" in:name language:JavaScript",
+          "description": "Ключевое слово: \"labs\""
+        },
+        {
+          "type": "keyword",
+          "query": "\"conversational\" in:name language:JavaScript",
+          "description": "Ключевое слово: \"conversational\""
+        },
+        {
+          "type": "keyword",
+          "query": "\"starter\" in:name language:JavaScript",
+          "description": "Ключевое слово: \"starter\""
+        }
+      ]
+    }
+  ]
+}

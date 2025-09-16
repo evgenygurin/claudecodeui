@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "searchDate": "2025-09-06T16:47:27.913Z",
+    "totalComponents": 10,
+    "description": "Найденные репозитории на GitHub для компонентов v0.app"
+  },
+  "results": [
+    {
+      "componentName": "file-manager",
+      "originalUrl": "https://v0.app/chat/file-manager-wukORjs2J9p",
+      "foundRepositories": []
+    },
+    {
+      "componentName": "file-manager",
+      "originalUrl": "https://v0.app/community/file-manager-hN0nNvAchzi",
+      "foundRepositories": []
+    },
+    {
+      "componentName": "ai-chat-interface",
+      "originalUrl": "https://v0.app/community/ai-chat-interface-6VLiqkGu5vw",
+      "foundRepositories": []
+    },
+    {
+      "componentName": "integrations-page",
+      "originalUrl": "https://v0.app/community/integrations-page-7HOUCTcoR5n",
+      "foundRepositories": []
+    },
+    {
+      "componentName": "sidebar-layout",
+      "originalUrl": "https://v0.app/community/sidebar-layout-ybLyeN1sesS",
+      "foundRepositories": []
+    },
+    {
+      "componentName": "action-search-bar",
+      "originalUrl": "https://v0.app/community/action-search-bar-S3nMPSmpQzk",
+      "foundRepositories": []
+    },
+    {
+      "componentName": "ai-card-generation",
+      "originalUrl": "https://v0.app/community/ai-card-generation-Tpxvlz16QiJ",
+      "foundRepositories": []
+    },
+    {
+      "componentName": "vercel-tabs",
+      "originalUrl": "https://v0.app/community/vercel-tabs-BT27p0aGPsa",
+      "foundRepositories": []
+    },
+    {
+      "componentName": "animated-beam",
+      "originalUrl": "https://v0.app/community/animated-beam-voQije6wyja",
+      "foundRepositories": []
+    },
+    {
+      "componentName": "image-to-ascii",
+      "originalUrl": "https://v0.app/community/image-to-ascii-0UE1nczWzbu",
+      "foundRepositories": []
+    }
+  ]
+}

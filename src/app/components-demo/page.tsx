@@ -198,7 +198,7 @@ export default function ComponentsDemoPage() {
                     <Button size="sm" variant="outline" leftIcon={<Phone className="h-4 w-4" />}>
                       Call
                     </Button>
-                    <IconButton variant="ghost" size="sm">
+                    <IconButton variant="ghost">
                       <Heart className="h-4 w-4" />
                     </IconButton>
                   </div>
