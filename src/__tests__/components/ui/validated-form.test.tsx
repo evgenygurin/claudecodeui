@@ -125,7 +125,9 @@ describe('ValidatedInput', () => {
     fireEvent.blur(input);
 
     await waitFor(() => {
-      expect(screen.getByText('Invalid input: expected string, received undefined')).toBeInTheDocument();
+      expect(
+        screen.getByText('Invalid input: expected string, received undefined')
+      ).toBeInTheDocument();
     });
   });
 
@@ -225,7 +227,9 @@ describe('ValidatedSelect', () => {
     fireEvent.blur(select);
 
     await waitFor(() => {
-      expect(screen.getByText('Invalid input: expected string, received undefined')).toBeInTheDocument();
+      expect(
+        screen.getByText('Invalid input: expected string, received undefined')
+      ).toBeInTheDocument();
     });
   });
 

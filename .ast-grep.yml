@@ -4,7 +4,7 @@ rules:
   # Find console.log statements
   console-log:
     pattern: console.$METHOD($ARGS)
-    message: "Replace console.$METHOD with structured logging"
+    message: 'Replace console.$METHOD with structured logging'
     severity: warning
     languages: [typescript, javascript]
 
@@ -14,7 +14,7 @@ rules:
       function $NAME($PARAMS) {
         $BODY
       }
-    message: "Consider breaking down this long function"
+    message: 'Consider breaking down this long function'
     severity: info
     languages: [typescript, javascript]
     constraints:
@@ -24,7 +24,7 @@ rules:
   # Find unused imports (basic pattern)
   unused-import:
     pattern: import $IMPORT from $SOURCE;
-    message: "Check if this import is actually used"
+    message: 'Check if this import is actually used'
     severity: info
     languages: [typescript, javascript]
 
@@ -36,7 +36,7 @@ rules:
       } catch ($ERROR) {
         $HANDLER
       }
-    message: "Consider using structured error handling"
+    message: 'Consider using structured error handling'
     severity: info
     languages: [typescript, javascript]
 
@@ -48,24 +48,24 @@ rules:
         throw new Error($MESSAGE);
       }
       const result = await response.json();
-    message: "Consider extracting this fetch pattern into a utility function"
+    message: 'Consider extracting this fetch pattern into a utility function'
     severity: warning
     languages: [typescript, javascript]
 
   # Find magic numbers
   magic-number:
     pattern: $NUM
-    message: "Consider extracting magic number to a constant"
+    message: 'Consider extracting magic number to a constant'
     severity: info
     languages: [typescript, javascript]
     constraints:
       NUM:
-        regex: "^\d+$"
+        regex: "^\\d+$"
 
   # Find hardcoded strings
   hardcoded-string:
-    pattern: "$STRING"
-    message: "Consider extracting hardcoded string to a constant"
+    pattern: '$STRING'
+    message: 'Consider extracting hardcoded string to a constant'
     severity: info
     languages: [typescript, javascript]
     constraints:
@@ -75,7 +75,7 @@ rules:
   # Find arrow functions that could be regular functions
   arrow-function:
     pattern: const $NAME = ($PARAMS) => $BODY;
-    message: "Consider using regular function for better debugging"
+    message: 'Consider using regular function for better debugging'
     severity: info
     languages: [typescript, javascript]
     constraints:
@@ -88,10 +88,12 @@ rules:
       async function $NAME($PARAMS) {
         $BODY
       }
-    message: "Consider adding error handling to async function"
+    message: 'Consider adding error handling to async function'
     severity: warning
     languages: [typescript, javascript]
     constraints:
       BODY:
-        not: contains: "try"
-        not: contains: "catch"
+        not:
+          any:
+            - contains: 'try'
+            - contains: 'catch'

@@ -103,51 +103,57 @@ const TaskList = ({
           aVal = a.title.toLowerCase();
           bVal = b.title.toLowerCase();
           break;
-        case 'status': {
-          // Custom status ordering: pending, in-progress, done, blocked, deferred, cancelled
-          const statusOrder = {
-            pending: 1,
-            'in-progress': 2,
-            done: 3,
-            blocked: 4,
-            deferred: 5,
-            cancelled: 6,
-          };
-          aVal = statusOrder[a.status] || 99;
-          bVal = statusOrder[b.status] || 99;
-          } break;
-        case 'priority': {
-          // Custom priority ordering: high should be sorted first in descending
-          const priorityOrder = { high: 3, medium: 2, low: 1 };
-          aVal = priorityOrder[a.priority] || 0;
-          bVal = priorityOrder[b.priority] || 0;
-          } break;
+        case 'status':
+          {
+            // Custom status ordering: pending, in-progress, done, blocked, deferred, cancelled
+            const statusOrder = {
+              pending: 1,
+              'in-progress': 2,
+              done: 3,
+              blocked: 4,
+              deferred: 5,
+              cancelled: 6,
+            };
+            aVal = statusOrder[a.status] || 99;
+            bVal = statusOrder[b.status] || 99;
+          }
+          break;
+        case 'priority':
+          {
+            // Custom priority ordering: high should be sorted first in descending
+            const priorityOrder = { high: 3, medium: 2, low: 1 };
+            aVal = priorityOrder[a.priority] || 0;
+            bVal = priorityOrder[b.priority] || 0;
+          }
+          break;
         case 'updated':
           aVal = new Date(a.updatedAt || a.createdAt || 0);
           bVal = new Date(b.updatedAt || b.createdAt || 0);
           break;
         case 'id':
-        default: {
-          // Handle numeric and dotted IDs (1, 1.1, 1.2, 2, 2.1, etc.)
-          const parseId = id => {
-            const parts = id.toString().split('.');
-            return parts.map(part => parseInt(part, 10));
-          };
+        default:
+          {
+            // Handle numeric and dotted IDs (1, 1.1, 1.2, 2, 2.1, etc.)
+            const parseId = id => {
+              const parts = id.toString().split('.');
+              return parts.map(part => parseInt(part, 10));
+            };
 
-          const aIds = parseId(a.id);
-          const bIds = parseId(b.id);
+            const aIds = parseId(a.id);
+            const bIds = parseId(b.id);
 
-          // Compare each part
-          for (let i = 0; i < Math.max(aIds.length, bIds.length); i++) {
-            const aId = aIds[i] || 0;
-            const bId = bIds[i] || 0;
-            if (aId !== bId) {
-              aVal = aId;
-              bVal = bId;
-              break;
+            // Compare each part
+            for (let i = 0; i < Math.max(aIds.length, bIds.length); i++) {
+              const aId = aIds[i] || 0;
+              const bId = bIds[i] || 0;
+              if (aId !== bId) {
+                aVal = aId;
+                bVal = bId;
+                break;
+              }
             }
           }
-          } break;
+          break;
       }
 
       if (sortBy === 'updated') {

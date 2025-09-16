@@ -422,13 +422,11 @@ function Sidebar({
     setEditingName('');
   };
 
-
   const updateSessionSummary = async (projectName, sessionId, newSummary) => {
     // TODO: Implement session summary update
-    console.log("Updating session summary:", projectName, sessionId, newSummary);
+    console.log('Updating session summary:', projectName, sessionId, newSummary);
   };
   const saveProjectName = async projectName => {
-
     try {
       const response = await api.renameProject(projectName, editingName);
 

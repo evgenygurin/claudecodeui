@@ -896,12 +896,9 @@ app.post('/api/transcribe', authenticateToken, async (req, res) => {
 
       const apiKey = process.env.OPENAI_API_KEY;
       if (!apiKey) {
-        return res
-          .status(500)
-          .json({
-            error:
-              'OpenAI API key not configured. Please set OPENAI_API_KEY in server environment.',
-          });
+        return res.status(500).json({
+          error: 'OpenAI API key not configured. Please set OPENAI_API_KEY in server environment.',
+        });
       }
 
       try {

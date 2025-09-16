@@ -23,11 +23,11 @@
     "no-unused-vars": "off"
   },
   "ignorePatterns": [
-    "node_modules/", 
-    ".next/", 
-    "dist/", 
-    "build/", 
-    "cypress/", 
+    "node_modules/",
+    ".next/",
+    "dist/",
+    "build/",
+    "cypress/",
     "server/",
     "coverage/",
     "*.config.js",
