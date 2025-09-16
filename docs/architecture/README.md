@@ -50,7 +50,7 @@ The event system is implemented in `src/events/event-bus.ts` and `src/events/eve
 import { eventBus, eventFactories } from '@/events/events';
 
 // Listen to events
-eventBus.on('project.created', (event) => {
+eventBus.on('project.created', event => {
   console.log('Project created:', event.data.project);
 });
 
@@ -236,13 +236,13 @@ Services are registered in `src/di/register-services.ts`:
 export function registerServices(container: Container): void {
   // Infrastructure services
   container.registerInstance(TOKENS.EVENT_BUS, eventBus);
-  
+
   // Repositories
   container.registerSingleton<ProjectRepository>(
     TOKENS.PROJECT_REPOSITORY,
     () => new FileSystemProjectRepository()
   );
-  
+
   // Services
   container.registerInstance(TOKENS.AUTH_SERVICE, authService);
   container.registerInstance(TOKENS.PROJECT_SERVICE, projectService);

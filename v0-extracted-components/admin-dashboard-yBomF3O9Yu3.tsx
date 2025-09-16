@@ -9,13 +9,22 @@ interface admindashboardyBomF3O9Yu3Props {
   // TODO: Определить пропсы компонента
 }
 
-export const admindashboardyBomF3O9Yu3: React.FC<admindashboardyBomF3O9Yu3Props> = (props) => {
+export const admindashboardyBomF3O9Yu3: React.FC<admindashboardyBomF3O9Yu3Props> = props => {
   return (
     <div className="admin-dashboard-yBomF3O9Yu3">
       <h2>admin-dashboard-yBomF3O9Yu3</h2>
       <p>Компонент admin-dashboard-yBomF3O9Yu3 из v0.app</p>
       <p>Автор: unknown</p>
-      <p>URL: <a href="https://v0.app/community/admin-dashboard-yBomF3O9Yu3" target="_blank" rel="noopener noreferrer">https://v0.app/community/admin-dashboard-yBomF3O9Yu3</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/community/admin-dashboard-yBomF3O9Yu3"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/community/admin-dashboard-yBomF3O9Yu3
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );

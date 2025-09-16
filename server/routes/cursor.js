@@ -13,42 +13,42 @@ const router = express.Router();
 router.get('/config', async (req, res) => {
   try {
     const configPath = path.join(os.homedir(), '.cursor', 'cli-config.json');
-    
+
     try {
       const configContent = await fs.readFile(configPath, 'utf8');
       const config = JSON.parse(configContent);
-      
+
       res.json({
         success: true,
         config: config,
-        path: configPath
+        path: configPath,
       });
     } catch (error) {
       // Config doesn't exist or is invalid
       console.log('Cursor config not found or invalid:', error.message);
-      
+
       // Return default config
       res.json({
         success: true,
         config: {
           version: 1,
           model: {
-            modelId: "gpt-5",
-            displayName: "GPT-5"
+            modelId: 'gpt-5',
+            displayName: 'GPT-5',
           },
           permissions: {
             allow: [],
-            deny: []
-          }
+            deny: [],
+          },
         },
-        isDefault: true
+        isDefault: true,
       });
     }
   } catch (error) {
     console.error('Error reading Cursor config:', error);
-    res.status(500).json({ 
-      error: 'Failed to read Cursor configuration', 
-      details: error.message 
+    res.status(500).json({
+      error: 'Failed to read Cursor configuration',
+      details: error.message,
     });
   }
 });
@@ -58,21 +58,21 @@ router.post('/config', async (req, res) => {
   try {
     const { permissions, model } = req.body;
     const configPath = path.join(os.homedir(), '.cursor', 'cli-config.json');
-    
+
     // Read existing config or create default
     let config = {
       version: 1,
       editor: {
-        vimMode: false
+        vimMode: false,
       },
       hasChangedDefaultModel: false,
       privacyCache: {
         ghostMode: false,
         privacyMode: 3,
-        updatedAt: Date.now()
-      }
+        updatedAt: Date.now(),
+      },
     };
-    
+
     try {
       const existing = await fs.readFile(configPath, 'utf8');
       config = JSON.parse(existing);
@@ -80,38 +80,38 @@ router.post('/config', async (req, res) => {
       // Config doesn't exist, use defaults
       console.log('Creating new Cursor config');
     }
-    
+
     // Update permissions if provided
     if (permissions) {
       config.permissions = {
         allow: permissions.allow || [],
-        deny: permissions.deny || []
+        deny: permissions.deny || [],
       };
     }
-    
+
     // Update model if provided
     if (model) {
       config.model = model;
       config.hasChangedDefaultModel = true;
     }
-    
+
     // Ensure directory exists
     const configDir = path.dirname(configPath);
     await fs.mkdir(configDir, { recursive: true });
-    
+
     // Write updated config
     await fs.writeFile(configPath, JSON.stringify(config, null, 2));
-    
+
     res.json({
       success: true,
       config: config,
-      message: 'Cursor configuration updated successfully'
+      message: 'Cursor configuration updated successfully',
     });
   } catch (error) {
     console.error('Error updating Cursor config:', error);
-    res.status(500).json({ 
-      error: 'Failed to update Cursor configuration', 
-      details: error.message 
+    res.status(500).json({
+      error: 'Failed to update Cursor configuration',
+      details: error.message,
     });
   }
 });
@@ -120,11 +120,11 @@ router.post('/config', async (req, res) => {
 router.get('/mcp', async (req, res) => {
   try {
     const mcpPath = path.join(os.homedir(), '.cursor', 'mcp.json');
-    
+
     try {
       const mcpContent = await fs.readFile(mcpPath, 'utf8');
       const mcpConfig = JSON.parse(mcpContent);
-      
+
       // Convert to UI-friendly format
       const servers = [];
       if (mcpConfig.mcpServers && typeof mcpConfig.mcpServers === 'object') {
@@ -135,9 +135,9 @@ router.get('/mcp', async (req, res) => {
             type: 'stdio',
             scope: 'cursor',
             config: {},
-            raw: config
+            raw: config,
           };
-          
+
           // Determine transport type and extract config
           if (config.command) {
             server.type = 'stdio';
@@ -149,15 +149,15 @@ router.get('/mcp', async (req, res) => {
             server.config.url = config.url;
             server.config.headers = config.headers || {};
           }
-          
+
           servers.push(server);
         }
       }
-      
+
       res.json({
         success: true,
         servers: servers,
-        path: mcpPath
+        path: mcpPath,
       });
     } catch (error) {
       // MCP config doesn't exist
@@ -165,14 +165,14 @@ router.get('/mcp', async (req, res) => {
       res.json({
         success: true,
         servers: [],
-        isDefault: true
+        isDefault: true,
       });
     }
   } catch (error) {
     console.error('Error reading Cursor MCP config:', error);
-    res.status(500).json({ 
-      error: 'Failed to read Cursor MCP configuration', 
-      details: error.message 
+    res.status(500).json({
+      error: 'Failed to read Cursor MCP configuration',
+      details: error.message,
     });
   }
 });
@@ -182,12 +182,12 @@ router.post('/mcp/add', async (req, res) => {
   try {
     const { name, type = 'stdio', command, args = [], url, headers = {}, env = {} } = req.body;
     const mcpPath = path.join(os.homedir(), '.cursor', 'mcp.json');
-    
+
     console.log(`➕ Adding MCP server to Cursor config: ${name}`);
-    
+
     // Read existing config or create new
     let mcpConfig = { mcpServers: {} };
-    
+
     try {
       const existing = await fs.readFile(mcpPath, 'utf8');
       mcpConfig = JSON.parse(existing);
@@ -197,44 +197,44 @@ router.post('/mcp/add', async (req, res) => {
     } catch (error) {
       console.log('Creating new Cursor MCP config');
     }
-    
+
     // Build server config based on type
     let serverConfig = {};
-    
+
     if (type === 'stdio') {
       serverConfig = {
         command: command,
         args: args,
-        env: env
+        env: env,
       };
     } else if (type === 'http' || type === 'sse') {
       serverConfig = {
         url: url,
         transport: type,
-        headers: headers
+        headers: headers,
       };
     }
-    
+
     // Add server to config
     mcpConfig.mcpServers[name] = serverConfig;
-    
+
     // Ensure directory exists
     const mcpDir = path.dirname(mcpPath);
     await fs.mkdir(mcpDir, { recursive: true });
-    
+
     // Write updated config
     await fs.writeFile(mcpPath, JSON.stringify(mcpConfig, null, 2));
-    
+
     res.json({
       success: true,
       message: `MCP server "${name}" added to Cursor configuration`,
-      config: mcpConfig
+      config: mcpConfig,
     });
   } catch (error) {
     console.error('Error adding MCP server to Cursor:', error);
-    res.status(500).json({ 
-      error: 'Failed to add MCP server', 
-      details: error.message 
+    res.status(500).json({
+      error: 'Failed to add MCP server',
+      details: error.message,
     });
   }
 });
@@ -244,44 +244,44 @@ router.delete('/mcp/:name', async (req, res) => {
   try {
     const { name } = req.params;
     const mcpPath = path.join(os.homedir(), '.cursor', 'mcp.json');
-    
+
     console.log(`🗑️ Removing MCP server from Cursor config: ${name}`);
-    
+
     // Read existing config
     let mcpConfig = { mcpServers: {} };
-    
+
     try {
       const existing = await fs.readFile(mcpPath, 'utf8');
       mcpConfig = JSON.parse(existing);
     } catch (error) {
-      return res.status(404).json({ 
-        error: 'Cursor MCP configuration not found' 
+      return res.status(404).json({
+        error: 'Cursor MCP configuration not found',
       });
     }
-    
+
     // Check if server exists
     if (!mcpConfig.mcpServers || !mcpConfig.mcpServers[name]) {
-      return res.status(404).json({ 
-        error: `MCP server "${name}" not found in Cursor configuration` 
+      return res.status(404).json({
+        error: `MCP server "${name}" not found in Cursor configuration`,
       });
     }
-    
+
     // Remove server from config
     delete mcpConfig.mcpServers[name];
-    
+
     // Write updated config
     await fs.writeFile(mcpPath, JSON.stringify(mcpConfig, null, 2));
-    
+
     res.json({
       success: true,
       message: `MCP server "${name}" removed from Cursor configuration`,
-      config: mcpConfig
+      config: mcpConfig,
     });
   } catch (error) {
     console.error('Error removing MCP server from Cursor:', error);
-    res.status(500).json({ 
-      error: 'Failed to remove MCP server', 
-      details: error.message 
+    res.status(500).json({
+      error: 'Failed to remove MCP server',
+      details: error.message,
     });
   }
 });
@@ -291,23 +291,23 @@ router.post('/mcp/add-json', async (req, res) => {
   try {
     const { name, jsonConfig } = req.body;
     const mcpPath = path.join(os.homedir(), '.cursor', 'mcp.json');
-    
+
     console.log(`➕ Adding MCP server to Cursor config via JSON: ${name}`);
-    
+
     // Validate and parse JSON config
     let parsedConfig;
     try {
       parsedConfig = typeof jsonConfig === 'string' ? JSON.parse(jsonConfig) : jsonConfig;
     } catch (parseError) {
-      return res.status(400).json({ 
-        error: 'Invalid JSON configuration', 
-        details: parseError.message 
+      return res.status(400).json({
+        error: 'Invalid JSON configuration',
+        details: parseError.message,
       });
     }
-    
+
     // Read existing config or create new
     let mcpConfig = { mcpServers: {} };
-    
+
     try {
       const existing = await fs.readFile(mcpPath, 'utf8');
       mcpConfig = JSON.parse(existing);
@@ -317,27 +317,27 @@ router.post('/mcp/add-json', async (req, res) => {
     } catch (error) {
       console.log('Creating new Cursor MCP config');
     }
-    
+
     // Add server to config
     mcpConfig.mcpServers[name] = parsedConfig;
-    
+
     // Ensure directory exists
     const mcpDir = path.dirname(mcpPath);
     await fs.mkdir(mcpDir, { recursive: true });
-    
+
     // Write updated config
     await fs.writeFile(mcpPath, JSON.stringify(mcpConfig, null, 2));
-    
+
     res.json({
       success: true,
       message: `MCP server "${name}" added to Cursor configuration via JSON`,
-      config: mcpConfig
+      config: mcpConfig,
     });
   } catch (error) {
     console.error('Error adding MCP server to Cursor via JSON:', error);
-    res.status(500).json({ 
-      error: 'Failed to add MCP server', 
-      details: error.message 
+    res.status(500).json({
+      error: 'Failed to add MCP server',
+      details: error.message,
     });
   }
 });
@@ -346,38 +346,40 @@ router.post('/mcp/add-json', async (req, res) => {
 router.get('/sessions', async (req, res) => {
   try {
     const { projectPath } = req.query;
-    
+
     // Calculate cwdID hash for the project path (Cursor uses MD5 hash)
-    const cwdId = crypto.createHash('md5').update(projectPath || process.cwd()).digest('hex');
+    const cwdId = crypto
+      .createHash('md5')
+      .update(projectPath || process.cwd())
+      .digest('hex');
     const cursorChatsPath = path.join(os.homedir(), '.cursor', 'chats', cwdId);
-    
-    
+
     // Check if the directory exists
     try {
       await fs.access(cursorChatsPath);
     } catch (error) {
       // No sessions for this project
-      return res.json({ 
-        success: true, 
+      return res.json({
+        success: true,
         sessions: [],
         cwdId: cwdId,
-        path: cursorChatsPath
+        path: cursorChatsPath,
       });
     }
-    
+
     // List all session directories
     const sessionDirs = await fs.readdir(cursorChatsPath);
     const sessions = [];
-    
+
     for (const sessionId of sessionDirs) {
       const sessionPath = path.join(cursorChatsPath, sessionId);
       const storeDbPath = path.join(sessionPath, 'store.db');
       let dbStatMtimeMs = null;
-      
+
       try {
         // Check if store.db exists
         await fs.access(storeDbPath);
-        
+
         // Capture store.db mtime as a reliable fallback timestamp (last activity)
         try {
           const stat = await fs.stat(storeDbPath);
@@ -388,14 +390,14 @@ router.get('/sessions', async (req, res) => {
         const db = await open({
           filename: storeDbPath,
           driver: sqlite3.Database,
-          mode: sqlite3.OPEN_READONLY
+          mode: sqlite3.OPEN_READONLY,
         });
-        
+
         // Get metadata from meta table
         const metaRows = await db.all(`
           SELECT key, value FROM meta
         `);
-        
+
         let sessionData = {
           id: sessionId,
           name: 'Untitled Session',
@@ -403,9 +405,9 @@ router.get('/sessions', async (req, res) => {
           mode: null,
           projectPath: projectPath,
           lastMessage: null,
-          messageCount: 0
+          messageCount: 0,
         };
-        
+
         // Parse meta table entries
         for (const row of metaRows) {
           if (row.value) {
@@ -415,7 +417,7 @@ router.get('/sessions', async (req, res) => {
               if (hexMatch) {
                 const jsonStr = Buffer.from(row.value, 'hex').toString('utf8');
                 const data = JSON.parse(jsonStr);
-                
+
                 if (row.key === 'agent') {
                   sessionData.name = data.name || sessionData.name;
                   // Normalize createdAt to ISO string in milliseconds
@@ -453,7 +455,7 @@ router.get('/sessions', async (req, res) => {
             }
           }
         }
-        
+
         // Get message count from JSON blobs only (actual messages, not DAG structure)
         try {
           const blobCount = await db.get(`
@@ -462,7 +464,7 @@ router.get('/sessions', async (req, res) => {
             WHERE substr(data, 1, 1) = X'7B'
           `);
           sessionData.messageCount = blobCount.count;
-          
+
           // Get the most recent JSON blob for preview (actual message, not DAG structure)
           const lastBlob = await db.get(`
             SELECT data FROM blobs 
@@ -470,7 +472,7 @@ router.get('/sessions', async (req, res) => {
             ORDER BY rowid DESC 
             LIMIT 1
           `);
-          
+
           if (lastBlob && lastBlob.data) {
             try {
               // Try to extract readable preview from blob (may contain binary with embedded JSON)
@@ -481,7 +483,8 @@ router.get('/sessions', async (req, res) => {
                 const parsed = JSON.parse(raw);
                 if (parsed?.content) {
                   if (Array.isArray(parsed.content)) {
-                    const firstText = parsed.content.find(p => p?.type === 'text' && p.text)?.text || '';
+                    const firstText =
+                      parsed.content.find(p => p?.type === 'text' && p.text)?.text || '';
                     preview = firstText;
                   } else if (typeof parsed.content === 'string') {
                     preview = parsed.content;
@@ -500,7 +503,8 @@ router.get('/sessions', async (req, res) => {
                     const parsed = JSON.parse(jsonStr);
                     if (parsed?.content) {
                       if (Array.isArray(parsed.content)) {
-                        const firstText = parsed.content.find(p => p?.type === 'text' && p.text)?.text || '';
+                        const firstText =
+                          parsed.content.find(p => p?.type === 'text' && p.text)?.text || '';
                         preview = firstText;
                       } else if (typeof parsed.content === 'string') {
                         preview = parsed.content;
@@ -514,7 +518,8 @@ router.get('/sessions', async (req, res) => {
                 }
               }
               if (preview && preview.length > 0) {
-                sessionData.lastMessage = preview.substring(0, 100) + (preview.length > 100 ? '...' : '');
+                sessionData.lastMessage =
+                  preview.substring(0, 100) + (preview.length > 100 ? '...' : '');
               }
             } catch (e) {
               console.log('Could not parse blob data:', e.message);
@@ -523,7 +528,7 @@ router.get('/sessions', async (req, res) => {
         } catch (e) {
           console.log('Could not read blobs:', e.message);
         }
-        
+
         await db.close();
 
         // Finalize createdAt: use parsed meta value when valid, else fall back to store.db mtime
@@ -532,14 +537,13 @@ router.get('/sessions', async (req, res) => {
             sessionData.createdAt = new Date(dbStatMtimeMs).toISOString();
           }
         }
-        
+
         sessions.push(sessionData);
-        
       } catch (error) {
         console.log(`Could not read session ${sessionId}:`, error.message);
       }
     }
-    
+
     // Fallback: ensure createdAt is a valid ISO string (use session directory mtime as last resort)
     for (const s of sessions) {
       if (!s.createdAt) {
@@ -558,19 +562,18 @@ router.get('/sessions', async (req, res) => {
       if (!b.createdAt) return -1;
       return new Date(b.createdAt) - new Date(a.createdAt);
     });
-    
-    res.json({ 
-      success: true, 
+
+    res.json({
+      success: true,
       sessions: sessions,
       cwdId: cwdId,
-      path: cursorChatsPath
+      path: cursorChatsPath,
     });
-    
   } catch (error) {
     console.error('Error reading Cursor sessions:', error);
-    res.status(500).json({ 
-      error: 'Failed to read Cursor sessions', 
-      details: error.message 
+    res.status(500).json({
+      error: 'Failed to read Cursor sessions',
+      details: error.message,
     });
   }
 });
@@ -580,49 +583,53 @@ router.get('/sessions/:sessionId', async (req, res) => {
   try {
     const { sessionId } = req.params;
     const { projectPath } = req.query;
-    
+
     // Calculate cwdID hash for the project path
-    const cwdId = crypto.createHash('md5').update(projectPath || process.cwd()).digest('hex');
+    const cwdId = crypto
+      .createHash('md5')
+      .update(projectPath || process.cwd())
+      .digest('hex');
     const storeDbPath = path.join(os.homedir(), '.cursor', 'chats', cwdId, sessionId, 'store.db');
-    
-    
+
     // Open SQLite database
     const db = await open({
       filename: storeDbPath,
       driver: sqlite3.Database,
-      mode: sqlite3.OPEN_READONLY
+      mode: sqlite3.OPEN_READONLY,
     });
-    
+
     // Get all blobs to build the DAG structure
     const allBlobs = await db.all(`
       SELECT rowid, id, data FROM blobs
     `);
-    
+
     // Build the DAG structure from parent-child relationships
     const blobMap = new Map(); // id -> blob data
     const parentRefs = new Map(); // blob id -> [parent blob ids]
     const childRefs = new Map(); // blob id -> [child blob ids]
     const jsonBlobs = []; // Clean JSON messages
-    
+
     for (const blob of allBlobs) {
       blobMap.set(blob.id, blob);
-      
+
       // Check if this is a JSON blob (actual message) or protobuf (DAG structure)
-      if (blob.data && blob.data[0] === 0x7B) { // Starts with '{' - JSON blob
+      if (blob.data && blob.data[0] === 0x7b) {
+        // Starts with '{' - JSON blob
         try {
           const parsed = JSON.parse(blob.data.toString('utf8'));
           jsonBlobs.push({ ...blob, parsed });
         } catch (e) {
           console.log('Failed to parse JSON blob:', blob.rowid);
         }
-      } else if (blob.data) { // Protobuf blob - extract parent references
+      } else if (blob.data) {
+        // Protobuf blob - extract parent references
         const parents = [];
         let i = 0;
-        
+
         // Scan for parent references (0x0A 0x20 followed by 32-byte hash)
         while (i < blob.data.length - 33) {
-          if (blob.data[i] === 0x0A && blob.data[i+1] === 0x20) {
-            const parentHash = blob.data.slice(i+2, i+34).toString('hex');
+          if (blob.data[i] === 0x0a && blob.data[i + 1] === 0x20) {
+            const parentHash = blob.data.slice(i + 2, i + 34).toString('hex');
             if (blobMap.has(parentHash)) {
               parents.push(parentHash);
             }
@@ -631,7 +638,7 @@ router.get('/sessions/:sessionId', async (req, res) => {
             i++;
           }
         }
-        
+
         if (parents.length > 0) {
           parentRefs.set(blob.id, parents);
           // Update child references
@@ -644,48 +651,49 @@ router.get('/sessions/:sessionId', async (req, res) => {
         }
       }
     }
-    
+
     // Perform topological sort to get chronological order
     const visited = new Set();
     const sorted = [];
-    
+
     // DFS-based topological sort
     function visit(nodeId) {
       if (visited.has(nodeId)) return;
       visited.add(nodeId);
-      
+
       // Visit all parents first (dependencies)
       const parents = parentRefs.get(nodeId) || [];
       for (const parentId of parents) {
         visit(parentId);
       }
-      
+
       // Add this node after all its parents
       const blob = blobMap.get(nodeId);
       if (blob) {
         sorted.push(blob);
       }
     }
-    
+
     // Start with nodes that have no parents (roots)
     for (const blob of allBlobs) {
       if (!parentRefs.has(blob.id)) {
         visit(blob.id);
       }
     }
-    
+
     // Visit any remaining nodes (disconnected components)
     for (const blob of allBlobs) {
       visit(blob.id);
     }
-    
+
     // Now extract JSON messages in the order they appear in the sorted DAG
     const messageOrder = new Map(); // JSON blob id -> order index
     let orderIndex = 0;
-    
+
     for (const blob of sorted) {
       // Check if this blob references any JSON messages
-      if (blob.data && blob.data[0] !== 0x7B) { // Protobuf blob
+      if (blob.data && blob.data[0] !== 0x7b) {
+        // Protobuf blob
         // Look for JSON blob references
         for (const jsonBlob of jsonBlobs) {
           try {
@@ -701,7 +709,7 @@ router.get('/sessions/:sessionId', async (req, res) => {
         }
       }
     }
-    
+
     // Sort JSON blobs by their appearance order in the DAG
     const sortedJsonBlobs = jsonBlobs.sort((a, b) => {
       const orderA = messageOrder.get(a.id) ?? Number.MAX_SAFE_INTEGER;
@@ -710,19 +718,19 @@ router.get('/sessions/:sessionId', async (req, res) => {
       // Fallback to rowid if not in order map
       return a.rowid - b.rowid;
     });
-    
+
     // Use sorted JSON blobs
     const blobs = sortedJsonBlobs.map((blob, idx) => ({
       ...blob,
       sequence_num: idx + 1,
-      original_rowid: blob.rowid
+      original_rowid: blob.rowid,
     }));
-    
+
     // Get metadata from meta table
     const metaRows = await db.all(`
       SELECT key, value FROM meta
     `);
-    
+
     // Parse metadata
     let metadata = {};
     for (const row of metaRows) {
@@ -741,14 +749,14 @@ router.get('/sessions/:sessionId', async (req, res) => {
         }
       }
     }
-    
+
     // Extract messages from sorted JSON blobs
     const messages = [];
     for (const blob of blobs) {
       try {
         // We already parsed JSON blobs earlier
         const parsed = blob.parsed;
-        
+
         if (parsed) {
           // Filter out ONLY system messages at the server level
           // Check both direct role and nested message.role
@@ -756,11 +764,11 @@ router.get('/sessions/:sessionId', async (req, res) => {
           if (role === 'system') {
             continue; // Skip only system messages
           }
-          messages.push({ 
-            id: blob.id, 
+          messages.push({
+            id: blob.id,
             sequence: blob.sequence_num,
-            rowid: blob.original_rowid, 
-            content: parsed 
+            rowid: blob.original_rowid,
+            content: parsed,
           });
         }
       } catch (e) {
@@ -768,25 +776,24 @@ router.get('/sessions/:sessionId', async (req, res) => {
         console.log(`Skipping blob ${blob.id}: ${e.message}`);
       }
     }
-    
+
     await db.close();
-    
-    res.json({ 
-      success: true, 
+
+    res.json({
+      success: true,
       session: {
         id: sessionId,
         projectPath: projectPath,
         messages: messages,
         metadata: metadata,
-        cwdId: cwdId
-      }
+        cwdId: cwdId,
+      },
     });
-    
   } catch (error) {
     console.error('Error reading Cursor session:', error);
-    res.status(500).json({ 
-      error: 'Failed to read Cursor session', 
-      details: error.message 
+    res.status(500).json({
+      error: 'Failed to read Cursor session',
+      details: error.message,
     });
   }
 });

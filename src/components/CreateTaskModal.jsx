@@ -2,7 +2,6 @@ import React from 'react';
 import { X, Sparkles } from 'lucide-react';
 
 const CreateTaskModal = ({ currentProject, onClose, onTaskCreated }) => {
-
   return (
     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4">
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-xl w-full max-w-md border border-gray-200 dark:border-gray-700">
@@ -12,7 +11,9 @@ const CreateTaskModal = ({ currentProject, onClose, onTaskCreated }) => {
             <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900/50 rounded-lg flex items-center justify-center">
               <Sparkles className="w-4 h-4 text-blue-600 dark:text-blue-400" />
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Create AI-Generated Task</h3>
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+              Create AI-Generated Task
+            </h3>
           </div>
           <button
             onClick={onClose}
@@ -35,20 +36,26 @@ const CreateTaskModal = ({ currentProject, onClose, onTaskCreated }) => {
                   💡 Pro Tip: Ask Claude Code Directly!
                 </h4>
                 <p className="text-sm text-blue-800 dark:text-blue-200 mb-3">
-                  You can simply ask Claude Code in the chat to create tasks for you. 
-                  The AI assistant will automatically generate detailed tasks with research-backed insights.
+                  You can simply ask Claude Code in the chat to create tasks for you. The AI
+                  assistant will automatically generate detailed tasks with research-backed
+                  insights.
                 </p>
-                
+
                 <div className="bg-white dark:bg-gray-800 rounded border border-blue-200 dark:border-blue-700 p-3 mb-3">
-                  <p className="text-xs font-medium text-gray-600 dark:text-gray-400 mb-1">Example:</p>
+                  <p className="text-xs font-medium text-gray-600 dark:text-gray-400 mb-1">
+                    Example:
+                  </p>
                   <p className="text-sm text-gray-900 dark:text-white font-mono">
-                    "Please add a new task to implement user profile image uploads using Cloudinary, research the best approach."
+                    "Please add a new task to implement user profile image uploads using Cloudinary,
+                    research the best approach."
                   </p>
                 </div>
-                
+
                 <p className="text-xs text-blue-700 dark:text-blue-300">
-                  <strong>This runs:</strong> <code className="bg-blue-100 dark:bg-blue-900/50 px-1 rounded text-xs">
-                    task-master add-task --prompt="Implement user profile image uploads using Cloudinary" --research
+                  <strong>This runs:</strong>{' '}
+                  <code className="bg-blue-100 dark:bg-blue-900/50 px-1 rounded text-xs">
+                    task-master add-task --prompt="Implement user profile image uploads using
+                    Cloudinary" --research
                   </code>
                 </p>
               </div>

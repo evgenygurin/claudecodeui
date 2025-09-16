@@ -9,13 +9,22 @@ interface sidebarlayoutybLyeN1sesSProps {
   // TODO: Определить пропсы компонента
 }
 
-export const sidebarlayoutybLyeN1sesS: React.FC<sidebarlayoutybLyeN1sesSProps> = (props) => {
+export const sidebarlayoutybLyeN1sesS: React.FC<sidebarlayoutybLyeN1sesSProps> = props => {
   return (
     <div className="sidebar-layout-ybLyeN1sesS">
       <h2>sidebar-layout-ybLyeN1sesS</h2>
       <p>Компонент sidebar-layout-ybLyeN1sesS из v0.app</p>
       <p>Автор: unknown</p>
-      <p>URL: <a href="https://v0.app/community/sidebar-layout-ybLyeN1sesS" target="_blank" rel="noopener noreferrer">https://v0.app/community/sidebar-layout-ybLyeN1sesS</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/community/sidebar-layout-ybLyeN1sesS"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/community/sidebar-layout-ybLyeN1sesS
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );

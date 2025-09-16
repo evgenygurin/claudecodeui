@@ -62,9 +62,13 @@ ${this.components.map(c => `- ${c.name}: ${c.url}`).join('\n')}
 4. Сохраните как: src/components/integrated/ui/toast.tsx
 `;
 
-    const instructionsFile = path.join(this.baseDir, 'scripts', 'playwright-extraction-instructions.md');
+    const instructionsFile = path.join(
+      this.baseDir,
+      'scripts',
+      'playwright-extraction-instructions.md'
+    );
     fs.writeFileSync(instructionsFile, instructions);
-    
+
     console.log('📋 Инструкции для MCP Playwright созданы:', instructionsFile);
     return instructionsFile;
   }
@@ -137,7 +141,7 @@ export default {ComponentName};
 
     const templateFile = path.join(this.baseDir, 'scripts', 'manual-extraction-template.md');
     fs.writeFileSync(templateFile, template);
-    
+
     console.log('📋 Шаблон для ручного извлечения создан:', templateFile);
     return templateFile;
   }
@@ -157,8 +161,8 @@ export default {ComponentName};
           title: 'string',
           description: 'string',
           variant: '"default" | "destructive" | "success"',
-          duration: 'number'
-        }
+          duration: 'number',
+        },
       },
       {
         name: 'Button',
@@ -167,8 +171,8 @@ export default {ComponentName};
         props: {
           variant: '"default" | "destructive" | "outline" | "secondary" | "ghost" | "link"',
           size: '"default" | "sm" | "lg" | "icon"',
-          disabled: 'boolean'
-        }
+          disabled: 'boolean',
+        },
       },
       {
         name: 'Card',
@@ -176,9 +180,9 @@ export default {ComponentName};
         description: 'Карточки для контента',
         props: {
           variant: '"default" | "outlined" | "elevated"',
-          padding: '"none" | "sm" | "md" | "lg"'
-        }
-      }
+          padding: '"none" | "sm" | "md" | "lg"',
+        },
+      },
     ];
 
     basicComponents.forEach(component => {
@@ -193,7 +197,7 @@ export default {ComponentName};
    */
   createComponentFile(component) {
     const { name, category, description, props } = component;
-    
+
     const componentCode = `// ${name}.tsx
 // ${description}
 // Интегрированный компонент из v0.app
@@ -204,13 +208,17 @@ import { cn } from '@/lib/utils';
 interface ${name}Props {
   className?: string;
   children?: React.ReactNode;
-${Object.entries(props).map(([key, type]) => `  ${key}?: ${type};`).join('\n')}
+${Object.entries(props)
+  .map(([key, type]) => `  ${key}?: ${type};`)
+  .join('\n')}
 }
 
 export const ${name}: React.FC<${name}Props> = ({ 
   className,
   children,
-${Object.keys(props).map(key => `  ${key},`).join('\n')}
+${Object.keys(props)
+  .map(key => `  ${key},`)
+  .join('\n')}
   ...props 
 }) => {
   return (
@@ -236,7 +244,7 @@ export default ${name};
 
     const filePath = path.join(categoryDir, `${name}.tsx`);
     fs.writeFileSync(filePath, componentCode);
-    
+
     console.log(`✅ Создан компонент: ${category}/${name}.tsx`);
   }
 
@@ -247,35 +255,34 @@ export default ${name};
     console.log('\n📁 Создание индексных файлов...\n');
 
     const categories = ['ui', 'layout', 'features', 'advanced'];
-    
+
     categories.forEach(category => {
       const categoryDir = path.join(this.outputDir, category);
       if (fs.existsSync(categoryDir)) {
-        const files = fs.readdirSync(categoryDir)
+        const files = fs
+          .readdirSync(categoryDir)
           .filter(file => file.endsWith('.tsx'))
           .map(file => file.replace('.tsx', ''));
-        
+
         if (files.length > 0) {
-          const indexContent = files.map(file => 
-            `export { ${file} } from './${file}';`
-          ).join('\n') + '\n';
-          
+          const indexContent =
+            files.map(file => `export { ${file} } from './${file}';`).join('\n') + '\n';
+
           const indexFile = path.join(categoryDir, 'index.ts');
           fs.writeFileSync(indexFile, indexContent);
-          
+
           console.log(`✅ Создан индекс: ${category}/index.ts (${files.length} компонентов)`);
         }
       }
     });
 
     // Создаем главный индексный файл
-    const mainIndexContent = categories.map(category => 
-      `export * from './${category}';`
-    ).join('\n') + '\n';
-    
+    const mainIndexContent =
+      categories.map(category => `export * from './${category}';`).join('\n') + '\n';
+
     const mainIndexFile = path.join(this.outputDir, 'index.ts');
     fs.writeFileSync(mainIndexFile, mainIndexContent);
-    
+
     console.log('✅ Создан главный индекс: index.ts');
   }
 
@@ -372,7 +379,7 @@ export interface ElevenLabsProps extends BaseComponentProps {
 
     const typesFile = path.join(this.baseDir, 'src', 'types', 'integrated-components.ts');
     fs.writeFileSync(typesFile, typesContent);
-    
+
     console.log('✅ Созданы типы: src/types/integrated-components.ts');
   }
 
@@ -499,7 +506,7 @@ export function downloadFile(blob: Blob, filename: string): void {
 
     const utilsFile = path.join(this.baseDir, 'src', 'utils', 'component-utils.ts');
     fs.writeFileSync(utilsFile, utilsContent);
-    
+
     console.log('✅ Созданы утилиты: src/utils/component-utils.ts');
   }
 
@@ -508,7 +515,7 @@ export function downloadFile(blob: Blob, filename: string): void {
    */
   run() {
     console.log('🚀 Создание базовой инфраструктуры для интеграции компонентов...\n');
-    console.log('=' .repeat(60));
+    console.log('='.repeat(60));
 
     this.createPlaywrightInstructions();
     this.createManualExtractionTemplate();
@@ -518,14 +525,14 @@ export function downloadFile(blob: Blob, filename: string): void {
     this.createUtils();
 
     console.log('\n🎯 БАЗОВАЯ ИНФРАСТРУКТУРА СОЗДАНА!');
-    console.log('=' .repeat(60));
+    console.log('='.repeat(60));
     console.log('📁 Структура создана:');
     console.log('  - src/components/integrated/ (категории компонентов)');
     console.log('  - src/types/integrated-components.ts (типы)');
     console.log('  - src/utils/component-utils.ts (утилиты)');
     console.log('  - scripts/playwright-extraction-instructions.md (инструкции)');
     console.log('  - scripts/manual-extraction-template.md (шаблон)');
-    
+
     console.log('\n💡 Следующие шаги:');
     console.log('  1. Используйте MCP Playwright для извлечения реального кода');
     console.log('  2. Адаптируйте компоненты под архитектуру проекта');

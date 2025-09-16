@@ -9,7 +9,7 @@ const AuthContext = createContext({
   logout: () => {},
   isLoading: true,
   needsSetup: false,
-  error: null
+  error: null,
 });
 
 export const useAuth = () => {
@@ -36,22 +36,22 @@ export const AuthProvider = ({ children }) => {
     try {
       setIsLoading(true);
       setError(null);
-      
+
       // Check if system needs setup
       const statusResponse = await api.auth.status();
       const statusData = await statusResponse.json();
-      
+
       if (statusData.needsSetup) {
         setNeedsSetup(true);
         setIsLoading(false);
         return;
       }
-      
+
       // If we have a token, verify it
       if (token) {
         try {
           const userResponse = await api.auth.user();
-          
+
           if (userResponse.ok) {
             const userData = await userResponse.json();
             setUser(userData.user);
@@ -130,7 +130,7 @@ export const AuthProvider = ({ children }) => {
     setToken(null);
     setUser(null);
     localStorage.removeItem('auth-token');
-    
+
     // Optional: Call logout endpoint for logging
     if (token) {
       api.auth.logout().catch(error => {
@@ -147,12 +147,8 @@ export const AuthProvider = ({ children }) => {
     logout,
     isLoading,
     needsSetup,
-    error
+    error,
   };
 
-  return (
-    <AuthContext.Provider value={value}>
-      {children}
-    </AuthContext.Provider>
-  );
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };

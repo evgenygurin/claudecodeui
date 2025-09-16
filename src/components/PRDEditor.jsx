@@ -3,18 +3,28 @@ import CodeMirror from '@uiw/react-codemirror';
 import { markdown } from '@codemirror/lang-markdown';
 import { oneDark } from '@codemirror/theme-one-dark';
 import { EditorView } from '@codemirror/view';
-import { X, Save, Download, Maximize2, Minimize2, Eye, FileText, Sparkles, AlertTriangle } from 'lucide-react';
+import {
+  X,
+  Save,
+  Download,
+  Maximize2,
+  Minimize2,
+  Eye,
+  FileText,
+  Sparkles,
+  AlertTriangle,
+} from 'lucide-react';
 import { cn } from '../lib/utils';
 import { api, authenticatedFetch } from '../utils/api';
 
-const PRDEditor = ({ 
-  file, 
-  onClose, 
+const PRDEditor = ({
+  file,
+  onClose,
   projectPath,
   project, // Add project object
   initialContent = '',
   isNewFile = false,
-  onSave
+  onSave,
 }) => {
   const [content, setContent] = useState(initialContent);
   const [loading, setLoading] = useState(!isNewFile);
@@ -28,7 +38,7 @@ const PRDEditor = ({
   const [showGenerateModal, setShowGenerateModal] = useState(false);
   const [showOverwriteConfirm, setShowOverwriteConfirm] = useState(false);
   const [existingPRDs, setExistingPRDs] = useState([]);
-  
+
   const editorRef = useRef(null);
 
   const PRD_TEMPLATE = `# Product Requirements Document - Example Project
@@ -319,18 +329,20 @@ This document outlines the requirements for building an AI-powered task manageme
       // Fallback to loading from file path (legacy support)
       try {
         setLoading(true);
-        
+
         const response = await api.readFile(file.projectName, file.path);
-        
+
         if (!response.ok) {
           throw new Error(`Failed to load file: ${response.status} ${response.statusText}`);
         }
-        
+
         const data = await response.json();
         setContent(data.content || PRD_TEMPLATE);
       } catch (error) {
         console.error('Error loading PRD file:', error);
-        setContent(`# Error Loading PRD\n\nError: ${error.message}\n\nFile: ${file?.name || 'New PRD'}\nPath: ${file?.path || 'Not saved yet'}\n\n${PRD_TEMPLATE}`);
+        setContent(
+          `# Error Loading PRD\n\nError: ${error.message}\n\nFile: ${file?.name || 'New PRD'}\nPath: ${file?.path || 'Not saved yet'}\n\n${PRD_TEMPLATE}`
+        );
       } finally {
         setLoading(false);
       }
@@ -346,7 +358,7 @@ This document outlines the requirements for building an AI-powered task manageme
         console.log('No project name available:', project);
         return;
       }
-      
+
       try {
         console.log('Fetching PRDs for project:', project.name);
         const response = await api.get(`/taskmaster/prd/${encodeURIComponent(project.name)}`);
@@ -377,18 +389,19 @@ This document outlines the requirements for building an AI-powered task manageme
     }
 
     // Check if file already exists
-    const fullFileName = fileName.endsWith('.txt') || fileName.endsWith('.md') ? fileName : `${fileName}.txt`;
+    const fullFileName =
+      fileName.endsWith('.txt') || fileName.endsWith('.md') ? fileName : `${fileName}.txt`;
     const existingFile = existingPRDs.find(prd => prd.name === fullFileName);
-    
+
     console.log('Save check:', {
       fullFileName,
       existingPRDs,
       existingFile,
       isExisting: file?.isExisting,
       fileObject: file,
-      shouldShowModal: existingFile && !file?.isExisting
+      shouldShowModal: existingFile && !file?.isExisting,
     });
-    
+
     if (existingFile && !file?.isExisting) {
       console.log('Showing overwrite confirmation modal');
       // Show confirmation modal for overwrite
@@ -403,37 +416,40 @@ This document outlines the requirements for building an AI-powered task manageme
     setSaving(true);
     try {
       // Ensure filename has .txt extension
-      const fullFileName = fileName.endsWith('.txt') || fileName.endsWith('.md') ? fileName : `${fileName}.txt`;
-      
-      const response = await authenticatedFetch(`/api/taskmaster/prd/${encodeURIComponent(project?.name)}`, {
-        method: 'POST',
-        body: JSON.stringify({
-          fileName: fullFileName,
-          content
-        })
-      });
+      const fullFileName =
+        fileName.endsWith('.txt') || fileName.endsWith('.md') ? fileName : `${fileName}.txt`;
+
+      const response = await authenticatedFetch(
+        `/api/taskmaster/prd/${encodeURIComponent(project?.name)}`,
+        {
+          method: 'POST',
+          body: JSON.stringify({
+            fileName: fullFileName,
+            content,
+          }),
+        }
+      );
 
       if (!response.ok) {
         const errorData = await response.json();
         throw new Error(errorData.message || `Save failed: ${response.status}`);
       }
-      
+
       // Show success feedback
       setSaveSuccess(true);
       setTimeout(() => setSaveSuccess(false), 2000);
-      
+
       // Update existing PRDs list
       const response2 = await api.get(`/taskmaster/prd/${encodeURIComponent(project.name)}`);
       if (response2.ok) {
         const data = await response2.json();
         setExistingPRDs(data.prds || []);
       }
-      
+
       // Call the onSave callback if provided (for UI updates)
       if (onSave) {
         await onSave();
       }
-      
     } catch (error) {
       console.error('Error saving PRD:', error);
       alert(`Error saving PRD: ${error.message}`);
@@ -465,14 +481,13 @@ This document outlines the requirements for building an AI-powered task manageme
     setShowGenerateModal(true);
   };
 
-
   const toggleFullscreen = () => {
     setIsFullscreen(!isFullscreen);
   };
 
   // Handle keyboard shortcuts
   useEffect(() => {
-    const handleKeyDown = (e) => {
+    const handleKeyDown = e => {
       if (e.ctrlKey || e.metaKey) {
         if (e.key === 's') {
           e.preventDefault();
@@ -489,7 +504,7 @@ This document outlines the requirements for building an AI-powered task manageme
   }, [content]);
 
   // Simple markdown to HTML converter for preview
-  const renderMarkdown = (markdown) => {
+  const renderMarkdown = markdown => {
     return markdown
       .replace(/^### (.*$)/gim, '<h3>$1</h3>')
       .replace(/^## (.*$)/gim, '<h2>$1</h2>')
@@ -517,16 +532,18 @@ This document outlines the requirements for building an AI-powered task manageme
   }
 
   return (
-    <div className={`fixed inset-0 z-[200] ${
-      'md:bg-black/50 md:flex md:items-center md:justify-center md:p-4'
-    } ${isFullscreen ? 'md:p-0' : ''}`}>
-      <div className={cn(
-        'bg-white dark:bg-gray-900 shadow-2xl flex flex-col',
-        'w-full h-full md:rounded-lg md:shadow-2xl',
-        isFullscreen 
-          ? 'md:w-full md:h-full md:rounded-none' 
-          : 'md:w-full md:max-w-6xl md:h-[85vh] md:max-h-[85vh]'
-      )}>
+    <div
+      className={`fixed inset-0 z-[200] ${'md:bg-black/50 md:flex md:items-center md:justify-center md:p-4'} ${isFullscreen ? 'md:p-0' : ''}`}
+    >
+      <div
+        className={cn(
+          'bg-white dark:bg-gray-900 shadow-2xl flex flex-col',
+          'w-full h-full md:rounded-lg md:shadow-2xl',
+          isFullscreen
+            ? 'md:w-full md:h-full md:rounded-none'
+            : 'md:w-full md:max-w-6xl md:h-[85vh] md:max-h-[85vh]'
+        )}
+      >
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700 flex-shrink-0 min-w-0">
           <div className="flex items-center gap-3 min-w-0 flex-1">
@@ -542,7 +559,7 @@ This document outlines the requirements for building an AI-powered task manageme
                     <input
                       type="text"
                       value={fileName}
-                      onChange={(e) => {
+                      onChange={e => {
                         // Remove invalid filename characters
                         const sanitizedValue = e.target.value.replace(/[<>:"/\\|?*]/g, '');
                         setFileName(sanitizedValue);
@@ -551,19 +568,28 @@ This document outlines the requirements for building an AI-powered task manageme
                       placeholder="Enter PRD filename"
                       maxLength={100}
                     />
-                    <span className="text-sm sm:text-xs text-gray-500 dark:text-gray-400 whitespace-nowrap ml-1">.txt</span>
+                    <span className="text-sm sm:text-xs text-gray-500 dark:text-gray-400 whitespace-nowrap ml-1">
+                      .txt
+                    </span>
                   </div>
                   <button
-                    onClick={() => document.querySelector('input[placeholder="Enter PRD filename"]')?.focus()}
+                    onClick={() =>
+                      document.querySelector('input[placeholder="Enter PRD filename"]')?.focus()
+                    }
                     className="p-1 text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
                     title="Click to edit filename"
                   >
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
+                      />
                     </svg>
                   </button>
                 </div>
-                
+
                 {/* Tags row - moves to second line on mobile for more filename space */}
                 <div className="flex items-center gap-2 flex-shrink-0">
                   <span className="text-xs bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-300 px-2 py-1 rounded whitespace-nowrap">
@@ -576,43 +602,43 @@ This document outlines the requirements for building an AI-powered task manageme
                   )}
                 </div>
               </div>
-              
+
               {/* Description - smaller on mobile */}
               <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 truncate mt-1">
                 Product Requirements Document
               </p>
             </div>
           </div>
-          
+
           <div className="flex items-center gap-1 md:gap-2 flex-shrink-0">
             <button
               onClick={() => setPreviewMode(!previewMode)}
               className={cn(
                 'p-2 md:p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800',
                 'min-w-[44px] min-h-[44px] md:min-w-0 md:min-h-0 flex items-center justify-center',
-                previewMode 
-                  ? 'text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-purple-900' 
+                previewMode
+                  ? 'text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-purple-900'
                   : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
               )}
               title={previewMode ? 'Switch to edit mode' : 'Preview markdown'}
             >
               <Eye className="w-5 h-5 md:w-4 md:h-4" />
             </button>
-            
+
             <button
               onClick={() => setWordWrap(!wordWrap)}
               className={cn(
                 'p-2 md:p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800',
                 'min-w-[44px] min-h-[44px] md:min-w-0 md:min-h-0 flex items-center justify-center',
-                wordWrap 
-                  ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900' 
+                wordWrap
+                  ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900'
                   : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
               )}
               title={wordWrap ? 'Disable word wrap' : 'Enable word wrap'}
             >
               <span className="text-sm md:text-xs font-mono font-bold">↵</span>
             </button>
-            
+
             <button
               onClick={() => setIsDarkMode(!isDarkMode)}
               className="p-2 md:p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 min-w-[44px] min-h-[44px] md:min-w-0 md:min-h-0 flex items-center justify-center"
@@ -620,7 +646,7 @@ This document outlines the requirements for building an AI-powered task manageme
             >
               <span className="text-lg md:text-base">{isDarkMode ? '☀️' : '🌙'}</span>
             </button>
-            
+
             <button
               onClick={handleDownload}
               className="p-2 md:p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 min-w-[44px] min-h-[44px] md:min-w-0 md:min-h-0 flex items-center justify-center"
@@ -628,7 +654,7 @@ This document outlines the requirements for building an AI-powered task manageme
             >
               <Download className="w-5 h-5 md:w-4 md:h-4" />
             </button>
-            
+
             <button
               onClick={handleGenerateTasks}
               disabled={!content.trim()}
@@ -642,22 +668,32 @@ This document outlines the requirements for building an AI-powered task manageme
               <Sparkles className="w-4 h-4" />
               <span className="hidden md:inline">Generate Tasks</span>
             </button>
-            
+
             <button
               onClick={handleSave}
               disabled={saving}
               className={cn(
                 'px-3 py-2 text-white rounded-md disabled:opacity-50 flex items-center gap-2 transition-colors',
                 'min-h-[44px] md:min-h-0',
-                saveSuccess 
-                  ? 'bg-green-600 hover:bg-green-700' 
+                saveSuccess
+                  ? 'bg-green-600 hover:bg-green-700'
                   : 'bg-purple-600 hover:bg-purple-700'
               )}
             >
               {saveSuccess ? (
                 <>
-                  <svg className="w-5 h-5 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  <svg
+                    className="w-5 h-5 md:w-4 md:h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
                   </svg>
                   <span className="hidden sm:inline">Saved!</span>
                 </>
@@ -668,7 +704,7 @@ This document outlines the requirements for building an AI-powered task manageme
                 </>
               )}
             </button>
-            
+
             <button
               onClick={toggleFullscreen}
               className="hidden md:flex p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 items-center justify-center"
@@ -676,7 +712,7 @@ This document outlines the requirements for building an AI-powered task manageme
             >
               {isFullscreen ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />}
             </button>
-            
+
             <button
               onClick={onClose}
               className="p-2 md:p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 min-w-[44px] min-h-[44px] md:min-w-0 md:min-h-0 flex items-center justify-center"
@@ -691,7 +727,7 @@ This document outlines the requirements for building an AI-powered task manageme
         <div className="flex-1 overflow-hidden">
           {previewMode ? (
             <div className="h-full overflow-y-auto p-6 prose prose-gray dark:prose-invert max-w-none">
-              <div 
+              <div
                 className="markdown-preview"
                 dangerouslySetInnerHTML={{ __html: renderMarkdown(content) }}
               />
@@ -701,10 +737,7 @@ This document outlines the requirements for building an AI-powered task manageme
               ref={editorRef}
               value={content}
               onChange={setContent}
-              extensions={[
-                markdown(),
-                ...(wordWrap ? [EditorView.lineWrapping] : [])
-              ]}
+              extensions={[markdown(), ...(wordWrap ? [EditorView.lineWrapping] : [])]}
               theme={isDarkMode ? oneDark : undefined}
               height="100%"
               style={{
@@ -735,7 +768,7 @@ This document outlines the requirements for building an AI-powered task manageme
             <span>Words: {content.split(/\s+/).filter(word => word.length > 0).length}</span>
             <span>Format: Markdown</span>
           </div>
-          
+
           <div className="text-sm text-gray-500 dark:text-gray-400">
             Press Ctrl+S to save • Esc to close
           </div>
@@ -752,7 +785,9 @@ This document outlines the requirements for building an AI-powered task manageme
                 <div className="w-8 h-8 bg-purple-100 dark:bg-purple-900/50 rounded-lg flex items-center justify-center">
                   <Sparkles className="w-4 h-4 text-purple-600 dark:text-purple-400" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Generate Tasks from PRD</h3>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                  Generate Tasks from PRD
+                </h3>
               </div>
               <button
                 onClick={() => setShowGenerateModal(false)}
@@ -775,19 +810,28 @@ This document outlines the requirements for building an AI-powered task manageme
                       💡 Pro Tip: Ask Claude Code Directly!
                     </h4>
                     <p className="text-sm text-purple-800 dark:text-purple-200 mb-3">
-                      You can simply ask Claude Code in the chat to parse your PRD and generate tasks. 
-                      The AI assistant will automatically save your PRD and create detailed tasks with implementation details.
+                      You can simply ask Claude Code in the chat to parse your PRD and generate
+                      tasks. The AI assistant will automatically save your PRD and create detailed
+                      tasks with implementation details.
                     </p>
-                    
+
                     <div className="bg-white dark:bg-gray-800 rounded border border-purple-200 dark:border-purple-700 p-3 mb-3">
-                      <p className="text-xs font-medium text-gray-600 dark:text-gray-400 mb-1">💬 Example:</p>
+                      <p className="text-xs font-medium text-gray-600 dark:text-gray-400 mb-1">
+                        💬 Example:
+                      </p>
                       <p className="text-xs text-gray-900 dark:text-white font-mono">
-                        "I've just initialized a new project with Claude Task Master. I have a PRD at .taskmaster/docs/{fileName.endsWith('.txt') || fileName.endsWith('.md') ? fileName : `${fileName}.txt`}. Can you help me parse it and set up the initial tasks?"
+                        "I've just initialized a new project with Claude Task Master. I have a PRD
+                        at .taskmaster/docs/
+                        {fileName.endsWith('.txt') || fileName.endsWith('.md')
+                          ? fileName
+                          : `${fileName}.txt`}
+                        . Can you help me parse it and set up the initial tasks?"
                       </p>
                     </div>
-                    
+
                     <p className="text-xs text-purple-700 dark:text-purple-300">
-                      <strong>This will:</strong> Save your PRD, analyze its content, and generate structured tasks with subtasks, dependencies, and implementation details.
+                      <strong>This will:</strong> Save your PRD, analyze its content, and generate
+                      structured tasks with subtasks, dependencies, and implementation details.
                     </p>
                   </div>
                 </div>
@@ -825,7 +869,10 @@ This document outlines the requirements for building an AI-powered task manageme
       {/* Overwrite Confirmation Modal */}
       {showOverwriteConfirm && (
         <div className="fixed inset-0 z-[300] flex items-center justify-center p-4">
-          <div className="fixed inset-0 bg-black bg-opacity-50" onClick={() => setShowOverwriteConfirm(false)} />
+          <div
+            className="fixed inset-0 bg-black bg-opacity-50"
+            onClick={() => setShowOverwriteConfirm(false)}
+          />
           <div className="relative bg-white dark:bg-gray-800 rounded-lg shadow-xl max-w-md w-full border border-gray-200 dark:border-gray-700">
             <div className="p-6">
               <div className="flex items-center mb-4">
@@ -836,12 +883,15 @@ This document outlines the requirements for building an AI-powered task manageme
                   File Already Exists
                 </h3>
               </div>
-              
+
               <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
-                A PRD file named "{fileName.endsWith('.txt') || fileName.endsWith('.md') ? fileName : `${fileName}.txt`}" already exists. 
-                Do you want to overwrite it with the current content?
+                A PRD file named "
+                {fileName.endsWith('.txt') || fileName.endsWith('.md')
+                  ? fileName
+                  : `${fileName}.txt`}
+                " already exists. Do you want to overwrite it with the current content?
               </p>
-              
+
               <div className="flex justify-end space-x-3">
                 <button
                   onClick={() => setShowOverwriteConfirm(false)}

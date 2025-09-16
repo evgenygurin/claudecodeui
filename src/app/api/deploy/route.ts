@@ -35,7 +35,7 @@ const deployments = new Map<string, DeploymentStatus>();
 export async function POST(request: NextRequest) {
   try {
     const body: DeployRequest = await request.json();
-    const { 
+    const {
       projectName = 'claudecodeui-project',
       gitUrl,
       framework = 'nextjs',
@@ -43,7 +43,7 @@ export async function POST(request: NextRequest) {
       outputDirectory,
       installCommand,
       envVars = {},
-      projectPath = process.cwd()
+      projectPath = process.cwd(),
     } = body;
 
     logger.info('Starting deployment', { projectName, gitUrl, framework });
@@ -89,7 +89,6 @@ export async function POST(request: NextRequest) {
       message: 'Deployment started successfully',
       statusUrl: `/api/deploy/status/${deploymentId}`,
     });
-
   } catch (error) {
     logger.error('Deployment API error:', error);
     return NextResponse.json(
@@ -119,17 +118,15 @@ async function deployProject(deploymentId: string, config: DeployRequest): Promi
     try {
       await execAsync('vercel --version');
       logger.info('Vercel CLI found, proceeding with real deployment', { deploymentId });
-      
+
       // Real Vercel deployment
       await deployWithVercelCLI(deploymentId, config);
-      
     } catch (vercelError) {
       logger.warn('Vercel CLI not found, simulating deployment', { deploymentId });
-      
+
       // Simulate deployment process
       await simulateDeployment(deploymentId, config);
     }
-
   } catch (error) {
     throw error;
   }
@@ -165,17 +162,19 @@ async function deployWithVercelCLI(deploymentId: string, config: DeployRequest):
     logger.info('Executing Vercel deployment', { command: vercelCommand, deploymentId });
 
     // Execute Vercel deployment
-    const { stdout, stderr } = await execAsync(vercelCommand, { 
+    const { stdout, stderr } = await execAsync(vercelCommand, {
       timeout: 300000, // 5 minutes timeout
       env: {
         ...process.env,
         ...config.envVars,
-      }
+      },
     });
 
     // Parse deployment URL from output
     const urlMatch = stdout.match(/https:\/\/[^\s]+\.vercel\.app/);
-    const deploymentUrl = urlMatch ? urlMatch[0] : `https://${projectName}-${Math.random().toString(36).substr(2, 9)}.vercel.app`;
+    const deploymentUrl = urlMatch
+      ? urlMatch[0]
+      : `https://${projectName}-${Math.random().toString(36).substr(2, 9)}.vercel.app`;
 
     // Update deployment as successful
     deployment.status = 'ready';
@@ -185,7 +184,6 @@ async function deployWithVercelCLI(deploymentId: string, config: DeployRequest):
     deployments.set(deploymentId, deployment);
 
     logger.info('Vercel deployment completed', { deploymentId, url: deploymentUrl });
-
   } catch (error) {
     logger.error('Vercel deployment failed', { deploymentId, error: getErrorMessage(error) });
     throw error;
@@ -232,17 +230,17 @@ async function simulateDeployment(deploymentId: string, config: DeployRequest): 
 
 export async function GET(request: NextRequest) {
   const { pathname } = new URL(request.url);
-  
+
   // Handle status endpoint
   if (pathname.includes('/status/')) {
     const deploymentId = pathname.split('/status/')[1];
-    
+
     if (!deploymentId) {
       return NextResponse.json({ error: 'Deployment ID required' }, { status: 400 });
     }
 
     const deployment = deployments.get(deploymentId);
-    
+
     if (!deployment) {
       return NextResponse.json({ error: 'Deployment not found' }, { status: 404 });
     }
@@ -292,7 +290,7 @@ export async function DELETE(request: NextRequest) {
     }
 
     const deployment = deployments.get(deploymentId);
-    
+
     if (!deployment) {
       return NextResponse.json({ error: 'Deployment not found' }, { status: 404 });
     }
@@ -313,7 +311,6 @@ export async function DELETE(request: NextRequest) {
       success: true,
       message: 'Deployment canceled successfully',
     });
-
   } catch (error) {
     logger.error('Cancel deployment error:', error);
     return NextResponse.json(

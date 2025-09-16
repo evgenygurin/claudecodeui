@@ -42,11 +42,11 @@ export class AuthService {
     // Валидация пользователя
     // Управление сессиями
   }
-  
+
   async refreshToken(token: string): Promise<string> {
     // Обновление токена
   }
-  
+
   async logout(token: string): Promise<void> {
     // Инвалидация токена
   }
@@ -63,13 +63,13 @@ export class ProjectService {
     // Кэширование результатов
     // Возврат структурированных данных
   }
-  
+
   async createProject(data: CreateProjectDto): Promise<Project> {
     // Создание нового проекта
     // Валидация данных
     // Сохранение в базе данных
   }
-  
+
   async deleteProject(id: string): Promise<void> {
     // Удаление проекта
     // Очистка связанных данных
@@ -83,15 +83,15 @@ export class ProjectService {
 // services/chat.service.ts
 export class ChatService {
   async sendMessage(
-    sessionId: string, 
-    message: string, 
+    sessionId: string,
+    message: string,
     provider: AIProvider
   ): Promise<ChatResponse> {
     // Маршрутизация к соответствующему CLI
     // Обработка ответа
     // Сохранение в истории
   }
-  
+
   async getSessionHistory(sessionId: string): Promise<Message[]> {
     // Загрузка истории сообщений
     // Пагинация
@@ -120,11 +120,11 @@ export class FileSystemProjectRepository implements ProjectRepository {
     // Парсинг JSONL файлов
     // Возврат структурированных данных
   }
-  
+
   async findById(id: string): Promise<Project | null> {
     // Поиск проекта по ID
   }
-  
+
   // ... остальные методы
 }
 ```
@@ -147,7 +147,7 @@ export class ClaudeSessionRepository implements SessionRepository {
     // Парсинг сообщений
     // Возврат сессий
   }
-  
+
   // ... остальные методы
 }
 ```
@@ -159,15 +159,12 @@ export class ClaudeSessionRepository implements SessionRepository {
 ```typescript
 // providers/base.provider.ts
 export abstract class CLIProvider {
-  abstract spawn(
-    command: string, 
-    options: SpawnOptions
-  ): Promise<CLIProcess>;
-  
+  abstract spawn(command: string, options: SpawnOptions): Promise<CLIProcess>;
+
   abstract abort(sessionId: string): boolean;
-  
+
   abstract getStatus(): ProviderStatus;
-  
+
   abstract getSessions(projectPath: string): Promise<Session[]>;
 }
 
@@ -198,34 +195,34 @@ export class ClaudeProvider extends CLIProvider {
     const args = this.buildArgs(command, options);
     const process = spawn('claude', args, {
       cwd: options.projectPath,
-      env: { ...process.env, ...this.getEnvironment() }
+      env: { ...process.env, ...this.getEnvironment() },
     });
-    
+
     return new ClaudeProcess(process);
   }
-  
+
   private buildArgs(command: string, options: SpawnOptions): string[] {
     const args = [];
-    
+
     if (options.resume && options.sessionId) {
       args.push('--resume', options.sessionId);
     }
-    
+
     if (options.model) {
       args.push('--model', options.model);
     }
-    
+
     if (options.outputFormat) {
       args.push('--output-format', options.outputFormat);
     }
-    
+
     if (command) {
       args.push(command);
     }
-    
+
     return args;
   }
-  
+
   async getSessions(projectPath: string): Promise<Session[]> {
     // Сканирование ~/.claude/projects/
     // Парсинг JSONL файлов
@@ -244,7 +241,7 @@ export class CursorProvider extends CLIProvider {
     // Возврат ошибки о недоступности
     throw new Error('Cursor CLI chat interface is not available');
   }
-  
+
   async getSessions(projectPath: string): Promise<Session[]> {
     // Сканирование ~/.cursor/chats/
     // Чтение SQLite баз данных
@@ -261,19 +258,19 @@ export class CursorProvider extends CLIProvider {
 // events/event-bus.ts
 export class EventBus {
   private listeners = new Map<string, Function[]>();
-  
+
   on(event: string, callback: Function): void {
     if (!this.listeners.has(event)) {
       this.listeners.set(event, []);
     }
     this.listeners.get(event)!.push(callback);
   }
-  
+
   emit(event: string, data: any): void {
     const callbacks = this.listeners.get(event) || [];
     callbacks.forEach(callback => callback(data));
   }
-  
+
   off(event: string, callback: Function): void {
     const callbacks = this.listeners.get(event) || [];
     const index = callbacks.indexOf(callback);
@@ -324,11 +321,11 @@ export interface MessageReceivedEvent {
 // di/container.ts
 export class Container {
   private services = new Map<string, any>();
-  
+
   register<T>(token: string, factory: () => T): void {
     this.services.set(token, factory);
   }
-  
+
   resolve<T>(token: string): T {
     const factory = this.services.get(token);
     if (!factory) {
@@ -354,29 +351,23 @@ export const TOKENS = {
 // di/register-services.ts
 export function registerServices(container: Container): void {
   // Repositories
-  container.register(TOKENS.PROJECT_REPOSITORY, () => 
-    new FileSystemProjectRepository()
-  );
-  
-  container.register(TOKENS.SESSION_REPOSITORY, () => 
-    new ClaudeSessionRepository()
-  );
-  
+  container.register(TOKENS.PROJECT_REPOSITORY, () => new FileSystemProjectRepository());
+
+  container.register(TOKENS.SESSION_REPOSITORY, () => new ClaudeSessionRepository());
+
   // Providers
-  container.register(TOKENS.CLAUDE_PROVIDER, () => 
-    new ClaudeProvider()
-  );
-  
-  container.register(TOKENS.CURSOR_PROVIDER, () => 
-    new CursorProvider()
-  );
-  
+  container.register(TOKENS.CLAUDE_PROVIDER, () => new ClaudeProvider());
+
+  container.register(TOKENS.CURSOR_PROVIDER, () => new CursorProvider());
+
   // Services
-  container.register('ProjectService', () => 
-    new ProjectService(
-      container.resolve(TOKENS.PROJECT_REPOSITORY),
-      container.resolve(TOKENS.EVENT_BUS)
-    )
+  container.register(
+    'ProjectService',
+    () =>
+      new ProjectService(
+        container.resolve(TOKENS.PROJECT_REPOSITORY),
+        container.resolve(TOKENS.EVENT_BUS)
+      )
   );
 }
 ```

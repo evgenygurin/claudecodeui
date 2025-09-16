@@ -7,6 +7,7 @@ A comprehensive web-based UI for [Claude Code CLI](https://docs.anthropic.com/en
 This implementation includes **ALL** the features from the original Claude Code UI project:
 
 ### Core Features
+
 - **🖥️ Responsive Design** - Works seamlessly across desktop, tablet, and mobile devices
 - **💬 Interactive Chat Interface** - Built-in chat interface for seamless communication with Claude Code or Cursor
 - **🖥️ Integrated Shell Terminal** - Direct access to Claude Code or Cursor CLI through built-in shell functionality
@@ -16,6 +17,7 @@ This implementation includes **ALL** the features from the original Claude Code 
 - **🤖 Model Compatibility** - Works with Claude Sonnet 4, Opus 4.1, and GPT-5
 
 ### Advanced Features
+
 - **📋 TaskMaster AI Integration** - Advanced project management with AI-powered task planning, PRD parsing, and workflow automation
 - **🔒 Security & Tools Configuration** - Granular control over which Claude Code tools are enabled
 - **📱 Progressive Web App (PWA)** - Can be installed as a native app on mobile devices
@@ -24,6 +26,7 @@ This implementation includes **ALL** the features from the original Claude Code 
 - **📊 Version Update Notifications** - Automatic detection of new releases
 
 ### User Interface Components
+
 - **Sidebar Navigation** - Project browser with session management
 - **Mobile Navigation** - Touch-friendly bottom navigation bar for mobile
 - **Settings Panel** - Comprehensive configuration options
@@ -100,16 +103,18 @@ claudecodeui/
 1. **Dependencies are already installed!** The project is ready to run.
 
 2. **Configure environment:**
+
    ```bash
    cp .env.example .env
    # Edit .env if needed (default port is 3001)
    ```
 
 3. **Start the application:**
+
    ```bash
    # Development mode (with hot reload)
    npm run dev
-   
+
    # The application will start at:
    # - Frontend: http://localhost:5173
    # - Backend: http://localhost:3001
@@ -137,6 +142,7 @@ VITE_PORT=5173
 **🔒 Important Notice**: All Claude Code tools are **disabled by default** for security.
 
 To enable tools:
+
 1. Click the ⚙️ gear icon in the sidebar
 2. Enable only the tools you need
 3. Apply settings (saved locally)
@@ -152,11 +158,13 @@ For advanced project management features:
 ## 📱 Mobile & PWA Support
 
 ### Progressive Web App
+
 - Add to home screen on mobile devices
 - Works offline for basic functionality
 - Native app-like experience
 
 ### Responsive Design
+
 - Touch-friendly interface
 - Swipe gestures and navigation
 - Optimized for all screen sizes
@@ -165,18 +173,21 @@ For advanced project management features:
 ## 🎯 Key Components
 
 ### Session Management
+
 - **Session Protection System**: Prevents project updates during active conversations
 - **Real-time Synchronization**: WebSocket integration for live updates
 - **Cross-device Access**: Resume sessions from any device
 - **History Tracking**: Complete conversation history with timestamps
 
 ### File Operations
+
 - **Interactive File Tree**: Browse project structure with expand/collapse
 - **Live File Editing**: Direct file modification with syntax highlighting
 - **Git Integration**: Stage, commit, and manage changes
 - **File Upload/Download**: Drag-and-drop file operations
 
 ### AI Integration
+
 - **Multiple CLI Support**: Switch between Claude Code and Cursor
 - **Model Selection**: Support for latest AI models
 - **Tool Management**: Granular control over AI capabilities
@@ -185,6 +196,7 @@ For advanced project management features:
 ## 🏗️ Architecture
 
 ### Frontend (React + Vite)
+
 - **React 18** with hooks and modern patterns
 - **Tailwind CSS** for styling
 - **CodeMirror** for code editing
@@ -193,6 +205,7 @@ For advanced project management features:
 - **Context API** for state management
 
 ### Backend (Node.js + Express)
+
 - **Express Server** with REST API
 - **WebSocket Server** for real-time updates
 - **SQLite Database** for authentication and settings
@@ -201,6 +214,7 @@ For advanced project management features:
 - **File System API** for project management
 
 ### Communication Flow
+
 ```text
 ┌─────────────────┐    WebSocket    ┌─────────────────┐    Process     ┌─────────────────┐
 │   Frontend      │ ←→ & REST API ←→│   Backend       │ ←→ Management ←→│  Claude/Cursor  │
@@ -211,6 +225,7 @@ For advanced project management features:
 ## 🔧 Development
 
 ### Running the Application
+
 ```bash
 # Development with hot reload
 npm run dev
@@ -222,11 +237,12 @@ npm start
 # Just frontend
 npm run client
 
-# Just backend  
+# Just backend
 npm run server
 ```
 
 ### Code Structure Guidelines
+
 - **Components**: Reusable React components in `/src/components/`
 - **Contexts**: State management with React Context API
 - **Routes**: Express API endpoints in `/server/routes/`
@@ -235,6 +251,7 @@ npm run server
 ## ⚠️ Known Issues & Solutions
 
 ### Node-pty Build Issues
+
 If you encounter build errors with `node-pty`:
 
 1. **Current Status**: Installed with `--ignore-scripts` to bypass compilation
@@ -243,11 +260,13 @@ If you encounter build errors with `node-pty`:
 4. **Fix**: Use Node.js v18-20 or Docker for consistent compilation environment
 
 ### Claude Projects Not Found
+
 1. Ensure Claude CLI is installed: `claude --version`
 2. Run Claude in at least one project directory
 3. Verify `~/.claude/projects/` exists
 
 ### File Explorer Issues
+
 1. Check project directory permissions
 2. Verify project path accessibility
 3. Review server console for detailed errors
@@ -258,7 +277,7 @@ We welcome contributions! This implementation includes:
 
 - ✅ Complete feature parity with original project
 - ✅ All UI components and functionality
-- ✅ Backend API and WebSocket server  
+- ✅ Backend API and WebSocket server
 - ✅ Authentication and security
 - ✅ Mobile responsiveness
 - ✅ TaskMaster AI integration
@@ -266,6 +285,7 @@ We welcome contributions! This implementation includes:
 - ✅ Settings and configuration
 
 ### Development Process
+
 1. Fork the repository
 2. Create a feature branch
 3. Make your changes following existing patterns
@@ -279,11 +299,13 @@ MIT License - see LICENSE file for details.
 ## 🙏 Acknowledgments
 
 ### Original Project
+
 This implementation is based on the excellent [Claude Code UI](https://github.com/siteboon/claudecodeui) by the Claude Code community.
 
 ### Built With
+
 - **[Claude Code](https://docs.anthropic.com/en/docs/claude-code)** - Anthropic's official CLI
-- **[React](https://react.dev/)** - User interface library  
+- **[React](https://react.dev/)** - User interface library
 - **[Vite](https://vitejs.dev/)** - Fast build tool and dev server
 - **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework
 - **[CodeMirror](https://codemirror.net/)** - Advanced code editor

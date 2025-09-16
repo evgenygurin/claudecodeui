@@ -82,11 +82,7 @@
         "collectedAt": "2025-09-06T16:15:17.336Z",
         "status": "pending",
         "complexity": "medium",
-        "dependencies": [
-          "ui",
-          "security",
-          "validation"
-        ],
+        "dependencies": ["ui", "security", "validation"],
         "tags": [],
         "analyzedComplexity": "low"
       },
@@ -99,11 +95,7 @@
         "collectedAt": "2025-09-06T16:15:17.336Z",
         "status": "pending",
         "complexity": "medium",
-        "dependencies": [
-          "ui",
-          "security",
-          "validation"
-        ],
+        "dependencies": ["ui", "security", "validation"],
         "tags": [],
         "analyzedComplexity": "low"
       },
@@ -276,10 +268,7 @@
         "collectedAt": "2025-09-06T16:15:17.330Z",
         "status": "pending",
         "complexity": "medium",
-        "dependencies": [
-          "ui",
-          "file-system"
-        ],
+        "dependencies": ["ui", "file-system"],
         "tags": [],
         "analyzedComplexity": "high"
       },
@@ -292,10 +281,7 @@
         "collectedAt": "2025-09-06T16:15:17.334Z",
         "status": "pending",
         "complexity": "medium",
-        "dependencies": [
-          "ui",
-          "file-system"
-        ],
+        "dependencies": ["ui", "file-system"],
         "tags": [],
         "analyzedComplexity": "high"
       },
@@ -308,10 +294,7 @@
         "collectedAt": "2025-09-06T16:15:17.334Z",
         "status": "pending",
         "complexity": "medium",
-        "dependencies": [
-          "ui",
-          "api"
-        ],
+        "dependencies": ["ui", "api"],
         "tags": [],
         "analyzedComplexity": "high"
       },
@@ -324,10 +307,7 @@
         "collectedAt": "2025-09-06T16:15:17.335Z",
         "status": "pending",
         "complexity": "medium",
-        "dependencies": [
-          "ui",
-          "api"
-        ],
+        "dependencies": ["ui", "api"],
         "tags": [],
         "analyzedComplexity": "high"
       },
@@ -340,10 +320,7 @@
         "collectedAt": "2025-09-06T16:15:17.335Z",
         "status": "pending",
         "complexity": "medium",
-        "dependencies": [
-          "ui",
-          "api"
-        ],
+        "dependencies": ["ui", "api"],
         "tags": [],
         "analyzedComplexity": "high"
       },
@@ -356,10 +333,7 @@
         "collectedAt": "2025-09-06T16:15:17.335Z",
         "status": "pending",
         "complexity": "medium",
-        "dependencies": [
-          "ui",
-          "api"
-        ],
+        "dependencies": ["ui", "api"],
         "tags": [],
         "analyzedComplexity": "high"
       },
@@ -372,10 +346,7 @@
         "collectedAt": "2025-09-06T16:15:17.335Z",
         "status": "pending",
         "complexity": "medium",
-        "dependencies": [
-          "layout",
-          "navigation"
-        ],
+        "dependencies": ["layout", "navigation"],
         "tags": [],
         "analyzedComplexity": "high"
       },
@@ -388,10 +359,7 @@
         "collectedAt": "2025-09-06T16:15:17.335Z",
         "status": "pending",
         "complexity": "medium",
-        "dependencies": [
-          "layout",
-          "navigation"
-        ],
+        "dependencies": ["layout", "navigation"],
         "tags": [],
         "analyzedComplexity": "high"
       },
@@ -404,12 +372,7 @@
         "collectedAt": "2025-09-06T16:15:17.335Z",
         "status": "pending",
         "complexity": "medium",
-        "dependencies": [
-          "ui",
-          "file-system",
-          "layout",
-          "navigation"
-        ],
+        "dependencies": ["ui", "file-system", "layout", "navigation"],
         "tags": [],
         "analyzedComplexity": "high"
       },
@@ -474,10 +437,7 @@
         "collectedAt": "2025-09-06T16:15:17.337Z",
         "status": "pending",
         "complexity": "medium",
-        "dependencies": [
-          "ui",
-          "file-system"
-        ],
+        "dependencies": ["ui", "file-system"],
         "tags": [],
         "analyzedComplexity": "high"
       },
@@ -518,11 +478,7 @@
         "collectedAt": "2025-09-06T16:15:17.336Z",
         "status": "pending",
         "complexity": "medium",
-        "dependencies": [
-          "ui",
-          "data",
-          "charts"
-        ],
+        "dependencies": ["ui", "data", "charts"],
         "tags": [],
         "analyzedComplexity": "veryHigh"
       },
@@ -535,11 +491,7 @@
         "collectedAt": "2025-09-06T16:15:17.336Z",
         "status": "pending",
         "complexity": "medium",
-        "dependencies": [
-          "ui",
-          "data",
-          "charts"
-        ],
+        "dependencies": ["ui", "data", "charts"],
         "tags": [],
         "analyzedComplexity": "veryHigh"
       },
@@ -617,11 +569,7 @@
         "collectedAt": "2025-09-06T16:15:17.337Z",
         "status": "pending",
         "complexity": "medium",
-        "dependencies": [
-          "ui",
-          "data",
-          "charts"
-        ],
+        "dependencies": ["ui", "data", "charts"],
         "tags": [],
         "analyzedComplexity": "veryHigh"
       }
@@ -638,10 +586,7 @@
         "collectedAt": "2025-09-06T16:15:17.330Z",
         "status": "pending",
         "complexity": "medium",
-        "dependencies": [
-          "ui",
-          "file-system"
-        ],
+        "dependencies": ["ui", "file-system"],
         "tags": [],
         "analyzedComplexity": "high"
       },
@@ -654,10 +599,7 @@
         "collectedAt": "2025-09-06T16:15:17.334Z",
         "status": "pending",
         "complexity": "medium",
-        "dependencies": [
-          "ui",
-          "file-system"
-        ],
+        "dependencies": ["ui", "file-system"],
         "tags": [],
         "analyzedComplexity": "high"
       },
@@ -670,10 +612,7 @@
         "collectedAt": "2025-09-06T16:15:17.334Z",
         "status": "pending",
         "complexity": "medium",
-        "dependencies": [
-          "ui",
-          "api"
-        ],
+        "dependencies": ["ui", "api"],
         "tags": [],
         "analyzedComplexity": "high"
       },
@@ -686,10 +625,7 @@
         "collectedAt": "2025-09-06T16:15:17.335Z",
         "status": "pending",
         "complexity": "medium",
-        "dependencies": [
-          "ui",
-          "api"
-        ],
+        "dependencies": ["ui", "api"],
         "tags": [],
         "analyzedComplexity": "high"
       },
@@ -702,10 +638,7 @@
         "collectedAt": "2025-09-06T16:15:17.335Z",
         "status": "pending",
         "complexity": "medium",
-        "dependencies": [
-          "ui",
-          "api"
-        ],
+        "dependencies": ["ui", "api"],
         "tags": [],
         "analyzedComplexity": "high"
       },
@@ -718,10 +651,7 @@
         "collectedAt": "2025-09-06T16:15:17.335Z",
         "status": "pending",
         "complexity": "medium",
-        "dependencies": [
-          "ui",
-          "api"
-        ],
+        "dependencies": ["ui", "api"],
         "tags": [],
         "analyzedComplexity": "high"
       },
@@ -734,12 +664,7 @@
         "collectedAt": "2025-09-06T16:15:17.335Z",
         "status": "pending",
         "complexity": "medium",
-        "dependencies": [
-          "ui",
-          "file-system",
-          "layout",
-          "navigation"
-        ],
+        "dependencies": ["ui", "file-system", "layout", "navigation"],
         "tags": [],
         "analyzedComplexity": "high"
       },
@@ -752,11 +677,7 @@
         "collectedAt": "2025-09-06T16:15:17.336Z",
         "status": "pending",
         "complexity": "medium",
-        "dependencies": [
-          "ui",
-          "data",
-          "charts"
-        ],
+        "dependencies": ["ui", "data", "charts"],
         "tags": [],
         "analyzedComplexity": "veryHigh"
       },
@@ -769,11 +690,7 @@
         "collectedAt": "2025-09-06T16:15:17.336Z",
         "status": "pending",
         "complexity": "medium",
-        "dependencies": [
-          "ui",
-          "data",
-          "charts"
-        ],
+        "dependencies": ["ui", "data", "charts"],
         "tags": [],
         "analyzedComplexity": "veryHigh"
       },
@@ -786,11 +703,7 @@
         "collectedAt": "2025-09-06T16:15:17.336Z",
         "status": "pending",
         "complexity": "medium",
-        "dependencies": [
-          "ui",
-          "security",
-          "validation"
-        ],
+        "dependencies": ["ui", "security", "validation"],
         "tags": [],
         "analyzedComplexity": "low"
       },
@@ -803,11 +716,7 @@
         "collectedAt": "2025-09-06T16:15:17.336Z",
         "status": "pending",
         "complexity": "medium",
-        "dependencies": [
-          "ui",
-          "security",
-          "validation"
-        ],
+        "dependencies": ["ui", "security", "validation"],
         "tags": [],
         "analyzedComplexity": "low"
       },
@@ -820,11 +729,7 @@
         "collectedAt": "2025-09-06T16:15:17.337Z",
         "status": "pending",
         "complexity": "medium",
-        "dependencies": [
-          "ui",
-          "data",
-          "charts"
-        ],
+        "dependencies": ["ui", "data", "charts"],
         "tags": [],
         "analyzedComplexity": "veryHigh"
       },
@@ -837,10 +742,7 @@
         "collectedAt": "2025-09-06T16:15:17.337Z",
         "status": "pending",
         "complexity": "medium",
-        "dependencies": [
-          "ui",
-          "file-system"
-        ],
+        "dependencies": ["ui", "file-system"],
         "tags": [],
         "analyzedComplexity": "high"
       }
@@ -855,10 +757,7 @@
         "collectedAt": "2025-09-06T16:15:17.335Z",
         "status": "pending",
         "complexity": "medium",
-        "dependencies": [
-          "layout",
-          "navigation"
-        ],
+        "dependencies": ["layout", "navigation"],
         "tags": [],
         "analyzedComplexity": "high"
       },
@@ -871,10 +770,7 @@
         "collectedAt": "2025-09-06T16:15:17.335Z",
         "status": "pending",
         "complexity": "medium",
-        "dependencies": [
-          "layout",
-          "navigation"
-        ],
+        "dependencies": ["layout", "navigation"],
         "tags": [],
         "analyzedComplexity": "high"
       }
@@ -1328,11 +1224,7 @@
             "collectedAt": "2025-09-06T16:15:17.336Z",
             "status": "pending",
             "complexity": "medium",
-            "dependencies": [
-              "ui",
-              "security",
-              "validation"
-            ],
+            "dependencies": ["ui", "security", "validation"],
             "tags": [],
             "analyzedComplexity": "low"
           },
@@ -1345,11 +1237,7 @@
             "collectedAt": "2025-09-06T16:15:17.336Z",
             "status": "pending",
             "complexity": "medium",
-            "dependencies": [
-              "ui",
-              "security",
-              "validation"
-            ],
+            "dependencies": ["ui", "security", "validation"],
             "tags": [],
             "analyzedComplexity": "low"
           },
@@ -1436,10 +1324,7 @@
             "collectedAt": "2025-09-06T16:15:17.335Z",
             "status": "pending",
             "complexity": "medium",
-            "dependencies": [
-              "layout",
-              "navigation"
-            ],
+            "dependencies": ["layout", "navigation"],
             "tags": [],
             "analyzedComplexity": "high"
           },
@@ -1452,10 +1337,7 @@
             "collectedAt": "2025-09-06T16:15:17.335Z",
             "status": "pending",
             "complexity": "medium",
-            "dependencies": [
-              "layout",
-              "navigation"
-            ],
+            "dependencies": ["layout", "navigation"],
             "tags": [],
             "analyzedComplexity": "high"
           },
@@ -1468,12 +1350,7 @@
             "collectedAt": "2025-09-06T16:15:17.335Z",
             "status": "pending",
             "complexity": "medium",
-            "dependencies": [
-              "ui",
-              "file-system",
-              "layout",
-              "navigation"
-            ],
+            "dependencies": ["ui", "file-system", "layout", "navigation"],
             "tags": [],
             "analyzedComplexity": "high"
           }
@@ -1495,10 +1372,7 @@
             "collectedAt": "2025-09-06T16:15:17.330Z",
             "status": "pending",
             "complexity": "medium",
-            "dependencies": [
-              "ui",
-              "file-system"
-            ],
+            "dependencies": ["ui", "file-system"],
             "tags": [],
             "analyzedComplexity": "high"
           },
@@ -1511,10 +1385,7 @@
             "collectedAt": "2025-09-06T16:15:17.334Z",
             "status": "pending",
             "complexity": "medium",
-            "dependencies": [
-              "ui",
-              "file-system"
-            ],
+            "dependencies": ["ui", "file-system"],
             "tags": [],
             "analyzedComplexity": "high"
           },
@@ -1527,10 +1398,7 @@
             "collectedAt": "2025-09-06T16:15:17.334Z",
             "status": "pending",
             "complexity": "medium",
-            "dependencies": [
-              "ui",
-              "api"
-            ],
+            "dependencies": ["ui", "api"],
             "tags": [],
             "analyzedComplexity": "high"
           },
@@ -1543,10 +1411,7 @@
             "collectedAt": "2025-09-06T16:15:17.335Z",
             "status": "pending",
             "complexity": "medium",
-            "dependencies": [
-              "ui",
-              "api"
-            ],
+            "dependencies": ["ui", "api"],
             "tags": [],
             "analyzedComplexity": "high"
           },
@@ -1559,10 +1424,7 @@
             "collectedAt": "2025-09-06T16:15:17.335Z",
             "status": "pending",
             "complexity": "medium",
-            "dependencies": [
-              "ui",
-              "api"
-            ],
+            "dependencies": ["ui", "api"],
             "tags": [],
             "analyzedComplexity": "high"
           },
@@ -1575,10 +1437,7 @@
             "collectedAt": "2025-09-06T16:15:17.335Z",
             "status": "pending",
             "complexity": "medium",
-            "dependencies": [
-              "ui",
-              "api"
-            ],
+            "dependencies": ["ui", "api"],
             "tags": [],
             "analyzedComplexity": "high"
           },
@@ -1591,10 +1450,7 @@
             "collectedAt": "2025-09-06T16:15:17.337Z",
             "status": "pending",
             "complexity": "medium",
-            "dependencies": [
-              "ui",
-              "file-system"
-            ],
+            "dependencies": ["ui", "file-system"],
             "tags": [],
             "analyzedComplexity": "high"
           },
@@ -1642,10 +1498,7 @@
             "collectedAt": "2025-09-06T16:15:17.330Z",
             "status": "pending",
             "complexity": "medium",
-            "dependencies": [
-              "ui",
-              "file-system"
-            ],
+            "dependencies": ["ui", "file-system"],
             "tags": [],
             "analyzedComplexity": "high"
           },
@@ -1658,10 +1511,7 @@
             "collectedAt": "2025-09-06T16:15:17.334Z",
             "status": "pending",
             "complexity": "medium",
-            "dependencies": [
-              "ui",
-              "file-system"
-            ],
+            "dependencies": ["ui", "file-system"],
             "tags": [],
             "analyzedComplexity": "high"
           },
@@ -1674,10 +1524,7 @@
             "collectedAt": "2025-09-06T16:15:17.334Z",
             "status": "pending",
             "complexity": "medium",
-            "dependencies": [
-              "ui",
-              "api"
-            ],
+            "dependencies": ["ui", "api"],
             "tags": [],
             "analyzedComplexity": "high"
           },
@@ -1690,10 +1537,7 @@
             "collectedAt": "2025-09-06T16:15:17.335Z",
             "status": "pending",
             "complexity": "medium",
-            "dependencies": [
-              "ui",
-              "api"
-            ],
+            "dependencies": ["ui", "api"],
             "tags": [],
             "analyzedComplexity": "high"
           },
@@ -1706,10 +1550,7 @@
             "collectedAt": "2025-09-06T16:15:17.335Z",
             "status": "pending",
             "complexity": "medium",
-            "dependencies": [
-              "ui",
-              "api"
-            ],
+            "dependencies": ["ui", "api"],
             "tags": [],
             "analyzedComplexity": "high"
           },
@@ -1722,10 +1563,7 @@
             "collectedAt": "2025-09-06T16:15:17.335Z",
             "status": "pending",
             "complexity": "medium",
-            "dependencies": [
-              "ui",
-              "api"
-            ],
+            "dependencies": ["ui", "api"],
             "tags": [],
             "analyzedComplexity": "high"
           },
@@ -1738,10 +1576,7 @@
             "collectedAt": "2025-09-06T16:15:17.335Z",
             "status": "pending",
             "complexity": "medium",
-            "dependencies": [
-              "layout",
-              "navigation"
-            ],
+            "dependencies": ["layout", "navigation"],
             "tags": [],
             "analyzedComplexity": "high"
           },
@@ -1754,10 +1589,7 @@
             "collectedAt": "2025-09-06T16:15:17.335Z",
             "status": "pending",
             "complexity": "medium",
-            "dependencies": [
-              "layout",
-              "navigation"
-            ],
+            "dependencies": ["layout", "navigation"],
             "tags": [],
             "analyzedComplexity": "high"
           },
@@ -1770,12 +1602,7 @@
             "collectedAt": "2025-09-06T16:15:17.335Z",
             "status": "pending",
             "complexity": "medium",
-            "dependencies": [
-              "ui",
-              "file-system",
-              "layout",
-              "navigation"
-            ],
+            "dependencies": ["ui", "file-system", "layout", "navigation"],
             "tags": [],
             "analyzedComplexity": "high"
           },
@@ -1801,11 +1628,7 @@
             "collectedAt": "2025-09-06T16:15:17.336Z",
             "status": "pending",
             "complexity": "medium",
-            "dependencies": [
-              "ui",
-              "data",
-              "charts"
-            ],
+            "dependencies": ["ui", "data", "charts"],
             "tags": [],
             "analyzedComplexity": "veryHigh"
           },
@@ -1818,11 +1641,7 @@
             "collectedAt": "2025-09-06T16:15:17.336Z",
             "status": "pending",
             "complexity": "medium",
-            "dependencies": [
-              "ui",
-              "data",
-              "charts"
-            ],
+            "dependencies": ["ui", "data", "charts"],
             "tags": [],
             "analyzedComplexity": "veryHigh"
           },
@@ -1939,11 +1758,7 @@
             "collectedAt": "2025-09-06T16:15:17.337Z",
             "status": "pending",
             "complexity": "medium",
-            "dependencies": [
-              "ui",
-              "data",
-              "charts"
-            ],
+            "dependencies": ["ui", "data", "charts"],
             "tags": [],
             "analyzedComplexity": "veryHigh"
           },
@@ -1956,10 +1771,7 @@
             "collectedAt": "2025-09-06T16:15:17.337Z",
             "status": "pending",
             "complexity": "medium",
-            "dependencies": [
-              "ui",
-              "file-system"
-            ],
+            "dependencies": ["ui", "file-system"],
             "tags": [],
             "analyzedComplexity": "high"
           },

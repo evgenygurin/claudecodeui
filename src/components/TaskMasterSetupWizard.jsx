@@ -1,14 +1,26 @@
 import React, { useState, useEffect } from 'react';
-import { X, ChevronRight, ChevronLeft, CheckCircle, AlertCircle, Settings, Server, FileText, Sparkles, ExternalLink, Copy } from 'lucide-react';
+import {
+  X,
+  ChevronRight,
+  ChevronLeft,
+  CheckCircle,
+  AlertCircle,
+  Settings,
+  Server,
+  FileText,
+  Sparkles,
+  ExternalLink,
+  Copy,
+} from 'lucide-react';
 import { cn } from '../lib/utils';
 import { api } from '../utils/api';
 
-const TaskMasterSetupWizard = ({ 
-  isOpen = true, 
-  onClose, 
+const TaskMasterSetupWizard = ({
+  isOpen = true,
+  onClose,
   onComplete,
   currentProject,
-  className = ''
+  className = '',
 }) => {
   const [currentStep, setCurrentStep] = useState(1);
   const [loading, setLoading] = useState(false);
@@ -21,7 +33,7 @@ const TaskMasterSetupWizard = ({
     skipInstall: false,
     rules: ['claude'],
     mcpConfigured: false,
-    prdContent: ''
+    prdContent: '',
   });
 
   const totalSteps = 4;
@@ -30,7 +42,7 @@ const TaskMasterSetupWizard = ({
     if (currentProject) {
       setSetupData(prev => ({
         ...prev,
-        projectRoot: currentProject.path || ''
+        projectRoot: currentProject.path || '',
       }));
     }
   }, [currentProject]);
@@ -39,28 +51,28 @@ const TaskMasterSetupWizard = ({
     {
       id: 1,
       title: 'Project Configuration',
-      description: 'Configure basic TaskMaster settings for your project'
+      description: 'Configure basic TaskMaster settings for your project',
     },
     {
       id: 2,
       title: 'MCP Server Setup',
-      description: 'Ensure TaskMaster MCP server is properly configured'
+      description: 'Ensure TaskMaster MCP server is properly configured',
     },
     {
       id: 3,
       title: 'PRD Creation',
-      description: 'Create or import a Product Requirements Document'
+      description: 'Create or import a Product Requirements Document',
     },
     {
       id: 4,
       title: 'Complete Setup',
-      description: 'Initialize TaskMaster and generate initial tasks'
-    }
+      description: 'Initialize TaskMaster and generate initial tasks',
+    },
   ];
 
   const handleNext = async () => {
     setError(null);
-    
+
     try {
       if (currentStep === 1) {
         // Validate project configuration
@@ -76,11 +88,13 @@ const TaskMasterSetupWizard = ({
           const mcpStatus = await api.get('/mcp-utils/taskmaster-server');
           setSetupData(prev => ({
             ...prev,
-            mcpConfigured: mcpStatus.hasMCPServer && mcpStatus.isConfigured
+            mcpConfigured: mcpStatus.hasMCPServer && mcpStatus.isConfigured,
           }));
           setCurrentStep(3);
         } catch (err) {
-          setError('Failed to check MCP server status. You can continue but some features may not work.');
+          setError(
+            'Failed to check MCP server status. You can continue but some features may not work.'
+          );
           setCurrentStep(3);
         }
       } else if (currentStep === 3) {
@@ -119,7 +133,7 @@ const TaskMasterSetupWizard = ({
         addAliases: setupData.addAliases,
         skipInstall: setupData.skipInstall,
         rules: setupData.rules,
-        yes: true
+        yes: true,
       });
 
       if (!initResponse.ok) {
@@ -130,7 +144,7 @@ const TaskMasterSetupWizard = ({
       if (setupData.prdContent.trim()) {
         const prdResponse = await api.post('/taskmaster/save-prd', {
           projectRoot: setupData.projectRoot,
-          content: setupData.prdContent
+          content: setupData.prdContent,
         });
 
         if (!prdResponse.ok) {
@@ -145,7 +159,7 @@ const TaskMasterSetupWizard = ({
           input: '.taskmaster/docs/prd.txt',
           numTasks: '10',
           research: false,
-          force: false
+          force: false,
         });
 
         if (!parseResponse.ok) {
@@ -201,7 +215,7 @@ const TaskMasterSetupWizard = ({
                 <input
                   type="text"
                   value={setupData.projectRoot}
-                  onChange={(e) => setSetupData(prev => ({ ...prev, projectRoot: e.target.value }))}
+                  onChange={e => setSetupData(prev => ({ ...prev, projectRoot: e.target.value }))}
                   className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
                   placeholder="/path/to/your/project"
                 />
@@ -209,35 +223,45 @@ const TaskMasterSetupWizard = ({
 
               <div className="space-y-3">
                 <h4 className="font-medium text-gray-900 dark:text-white">Options</h4>
-                
+
                 <label className="flex items-center gap-3">
                   <input
                     type="checkbox"
                     checked={setupData.initGit}
-                    onChange={(e) => setSetupData(prev => ({ ...prev, initGit: e.target.checked }))}
+                    onChange={e => setSetupData(prev => ({ ...prev, initGit: e.target.checked }))}
                     className="w-4 h-4 text-blue-600 rounded focus:ring-2 focus:ring-blue-500"
                   />
-                  <span className="text-sm text-gray-700 dark:text-gray-300">Initialize Git repository</span>
+                  <span className="text-sm text-gray-700 dark:text-gray-300">
+                    Initialize Git repository
+                  </span>
                 </label>
 
                 <label className="flex items-center gap-3">
                   <input
                     type="checkbox"
                     checked={setupData.storeTasksInGit}
-                    onChange={(e) => setSetupData(prev => ({ ...prev, storeTasksInGit: e.target.checked }))}
+                    onChange={e =>
+                      setSetupData(prev => ({ ...prev, storeTasksInGit: e.target.checked }))
+                    }
                     className="w-4 h-4 text-blue-600 rounded focus:ring-2 focus:ring-blue-500"
                   />
-                  <span className="text-sm text-gray-700 dark:text-gray-300">Store tasks in Git</span>
+                  <span className="text-sm text-gray-700 dark:text-gray-300">
+                    Store tasks in Git
+                  </span>
                 </label>
 
                 <label className="flex items-center gap-3">
                   <input
                     type="checkbox"
                     checked={setupData.addAliases}
-                    onChange={(e) => setSetupData(prev => ({ ...prev, addAliases: e.target.checked }))}
+                    onChange={e =>
+                      setSetupData(prev => ({ ...prev, addAliases: e.target.checked }))
+                    }
                     className="w-4 h-4 text-blue-600 rounded focus:ring-2 focus:ring-blue-500"
                   />
-                  <span className="text-sm text-gray-700 dark:text-gray-300">Add shell aliases (tm, taskmaster)</span>
+                  <span className="text-sm text-gray-700 dark:text-gray-300">
+                    Add shell aliases (tm, taskmaster)
+                  </span>
                 </label>
               </div>
 
@@ -251,16 +275,21 @@ const TaskMasterSetupWizard = ({
                       <input
                         type="checkbox"
                         checked={setupData.rules.includes(rule)}
-                        onChange={(e) => {
+                        onChange={e => {
                           if (e.target.checked) {
                             setSetupData(prev => ({ ...prev, rules: [...prev.rules, rule] }));
                           } else {
-                            setSetupData(prev => ({ ...prev, rules: prev.rules.filter(r => r !== rule) }));
+                            setSetupData(prev => ({
+                              ...prev,
+                              rules: prev.rules.filter(r => r !== rule),
+                            }));
                           }
                         }}
                         className="w-4 h-4 text-blue-600 rounded focus:ring-2 focus:ring-blue-500"
                       />
-                      <span className="text-sm text-gray-700 dark:text-gray-300 capitalize">{rule}</span>
+                      <span className="text-sm text-gray-700 dark:text-gray-300 capitalize">
+                        {rule}
+                      </span>
                     </label>
                   ))}
                 </div>
@@ -290,12 +319,15 @@ const TaskMasterSetupWizard = ({
                     MCP Server Configuration
                   </h4>
                   <p className="text-sm text-blue-800 dark:text-blue-200 mb-3">
-                    To enable full TaskMaster integration, add the MCP server configuration to your Claude settings.
+                    To enable full TaskMaster integration, add the MCP server configuration to your
+                    Claude settings.
                   </p>
-                  
+
                   <div className="bg-white dark:bg-gray-800 rounded border p-3 mb-3">
                     <div className="flex items-center justify-between mb-2">
-                      <span className="text-sm font-mono text-gray-600 dark:text-gray-400">.mcp.json</span>
+                      <span className="text-sm font-mono text-gray-600 dark:text-gray-400">
+                        .mcp.json
+                      </span>
                       <button
                         onClick={copyMCPConfig}
                         className="flex items-center gap-1 px-2 py-1 text-xs bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
@@ -305,7 +337,7 @@ const TaskMasterSetupWizard = ({
                       </button>
                     </div>
                     <pre className="text-xs text-gray-800 dark:text-gray-200 whitespace-pre-wrap">
-{`{
+                      {`{
   "mcpServers": {
     "task-master-ai": {
       "command": "npx",
@@ -341,12 +373,16 @@ const TaskMasterSetupWizard = ({
                 {setupData.mcpConfigured ? (
                   <>
                     <CheckCircle className="w-4 h-4 text-green-500" />
-                    <span className="text-sm text-green-700 dark:text-green-300">MCP server is configured</span>
+                    <span className="text-sm text-green-700 dark:text-green-300">
+                      MCP server is configured
+                    </span>
                   </>
                 ) : (
                   <>
                     <AlertCircle className="w-4 h-4 text-amber-500" />
-                    <span className="text-sm text-amber-700 dark:text-amber-300">MCP server not detected (optional)</span>
+                    <span className="text-sm text-amber-700 dark:text-amber-300">
+                      MCP server not detected (optional)
+                    </span>
                   </>
                 )}
               </div>
@@ -374,7 +410,7 @@ const TaskMasterSetupWizard = ({
                 </label>
                 <textarea
                   value={setupData.prdContent}
-                  onChange={(e) => setSetupData(prev => ({ ...prev, prdContent: e.target.value }))}
+                  onChange={e => setSetupData(prev => ({ ...prev, prdContent: e.target.value }))}
                   rows={12}
                   className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-mono text-sm"
                   placeholder="# Product Requirements Document
@@ -407,7 +443,8 @@ Describe your project or feature...
                       AI Task Generation
                     </h4>
                     <p className="text-sm text-blue-800 dark:text-blue-200">
-                      TaskMaster will analyze your PRD and automatically generate a structured task list with dependencies, priorities, and implementation details.
+                      TaskMaster will analyze your PRD and automatically generate a structured task
+                      list with dependencies, priorities, and implementation details.
                     </p>
                   </div>
                 </div>
@@ -430,9 +467,7 @@ Describe your project or feature...
             </div>
 
             <div className="bg-green-50 dark:bg-green-950 border border-green-200 dark:border-green-800 rounded-lg p-4">
-              <h4 className="font-medium text-green-900 dark:text-green-100 mb-3">
-                Setup Summary
-              </h4>
+              <h4 className="font-medium text-green-900 dark:text-green-100 mb-3">Setup Summary</h4>
               <ul className="space-y-2 text-sm text-green-800 dark:text-green-200">
                 <li className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4" />
@@ -461,7 +496,9 @@ Describe your project or feature...
               </h4>
               <ol className="list-decimal list-inside space-y-1 text-sm text-blue-800 dark:text-blue-200">
                 <li>Initialize TaskMaster project structure</li>
-                <li>Save your PRD to <code>.taskmaster/docs/prd.txt</code></li>
+                <li>
+                  Save your PRD to <code>.taskmaster/docs/prd.txt</code>
+                </li>
                 <li>Generate initial tasks from your PRD</li>
                 <li>Set up project configuration and rules</li>
               </ol>
@@ -478,11 +515,13 @@ Describe your project or feature...
 
   return (
     <div className="modal-backdrop fixed inset-0 flex items-center justify-center z-[100] md:p-4 bg-black/50">
-      <div className={cn(
-        'bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 md:rounded-lg shadow-xl',
-        'w-full md:max-w-4xl h-full md:h-[90vh] flex flex-col',
-        className
-      )}>
+      <div
+        className={cn(
+          'bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 md:rounded-lg shadow-xl',
+          'w-full md:max-w-4xl h-full md:h-[90vh] flex flex-col',
+          className
+        )}
+      >
         {/* Header */}
         <div className="flex items-center justify-between p-4 md:p-6 border-b border-gray-200 dark:border-gray-700 flex-shrink-0">
           <div className="flex items-center gap-3">
@@ -496,7 +535,7 @@ Describe your project or feature...
               </p>
             </div>
           </div>
-          
+
           <button
             onClick={onClose}
             className="p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md transition-colors"
@@ -511,27 +550,25 @@ Describe your project or feature...
           <div className="flex items-center justify-between mb-2">
             {steps.map((step, index) => (
               <div key={step.id} className="flex items-center">
-                <div className={cn(
-                  'w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium transition-colors',
-                  currentStep > step.id 
-                    ? 'bg-green-500 text-white' 
-                    : currentStep === step.id
-                    ? 'bg-blue-500 text-white'
-                    : 'bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-400'
-                )}>
-                  {currentStep > step.id ? (
-                    <CheckCircle className="w-4 h-4" />
-                  ) : (
-                    step.id
+                <div
+                  className={cn(
+                    'w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium transition-colors',
+                    currentStep > step.id
+                      ? 'bg-green-500 text-white'
+                      : currentStep === step.id
+                        ? 'bg-blue-500 text-white'
+                        : 'bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-400'
                   )}
+                >
+                  {currentStep > step.id ? <CheckCircle className="w-4 h-4" /> : step.id}
                 </div>
                 {index < steps.length - 1 && (
-                  <div className={cn(
-                    'w-16 h-1 mx-2 rounded',
-                    currentStep > step.id 
-                      ? 'bg-green-500' 
-                      : 'bg-gray-200 dark:bg-gray-700'
-                  )} />
+                  <div
+                    className={cn(
+                      'w-16 h-1 mx-2 rounded',
+                      currentStep > step.id ? 'bg-green-500' : 'bg-gray-200 dark:bg-gray-700'
+                    )}
+                  />
                 )}
               </div>
             ))}
@@ -548,7 +585,7 @@ Describe your project or feature...
         {/* Content */}
         <div className="flex-1 overflow-y-auto p-4 md:p-6">
           {renderStepContent()}
-          
+
           {error && (
             <div className="mt-4 bg-red-50 dark:bg-red-950 border border-red-200 dark:border-red-800 rounded-lg p-4">
               <div className="flex items-start gap-3">
@@ -572,11 +609,11 @@ Describe your project or feature...
             <ChevronLeft className="w-4 h-4" />
             Previous
           </button>
-          
+
           <div className="text-sm text-gray-500 dark:text-gray-400">
             {currentStep} of {totalSteps}
           </div>
-          
+
           <button
             onClick={handleNext}
             disabled={loading}

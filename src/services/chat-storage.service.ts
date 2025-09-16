@@ -21,7 +21,7 @@ class ChatStorageService {
     try {
       const stored = localStorage.getItem(this.STORAGE_KEY);
       if (!stored) return [];
-      
+
       const chats = JSON.parse(stored);
       return chats.map((chat: any) => ({
         ...chat,
@@ -57,7 +57,7 @@ class ChatStorageService {
     const chats = this.getAllChats();
     chats.unshift(newChat);
     this.saveChats(chats);
-    
+
     return newChat;
   }
 
@@ -65,7 +65,7 @@ class ChatStorageService {
   addMessage(chatId: string, role: 'user' | 'assistant', content: string): ChatMessage {
     const chats = this.getAllChats();
     const chatIndex = chats.findIndex(chat => chat.id === chatId);
-    
+
     if (chatIndex === -1) {
       throw new Error('Chat not found');
     }
@@ -79,7 +79,7 @@ class ChatStorageService {
 
     chats[chatIndex].messages.push(message);
     chats[chatIndex].updatedAt = new Date();
-    
+
     // Update title if it's the first user message
     if (role === 'user' && chats[chatIndex].messages.length === 1) {
       chats[chatIndex].title = content.slice(0, 50) + (content.length > 50 ? '...' : '');
@@ -93,7 +93,7 @@ class ChatStorageService {
   updateChat(chatId: string, updates: Partial<ChatSession>): ChatSession | null {
     const chats = this.getAllChats();
     const chatIndex = chats.findIndex(chat => chat.id === chatId);
-    
+
     if (chatIndex === -1) {
       return null;
     }
@@ -112,7 +112,7 @@ class ChatStorageService {
   deleteChat(chatId: string): boolean {
     const chats = this.getAllChats();
     const filteredChats = chats.filter(chat => chat.id !== chatId);
-    
+
     if (filteredChats.length === chats.length) {
       return false; // Chat not found
     }

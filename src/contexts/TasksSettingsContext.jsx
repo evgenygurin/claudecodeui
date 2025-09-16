@@ -8,7 +8,7 @@ const TasksSettingsContext = createContext({
   isTaskMasterInstalled: null,
   isTaskMasterReady: null,
   installationStatus: null,
-  isCheckingInstallation: true
+  isCheckingInstallation: true,
 });
 
 export const useTasksSettings = () => {
@@ -25,7 +25,7 @@ export const TasksSettingsProvider = ({ children }) => {
     const saved = localStorage.getItem('tasks-enabled');
     return saved !== null ? JSON.parse(saved) : true; // Default to true
   });
-  
+
   const [isTaskMasterInstalled, setIsTaskMasterInstalled] = useState(null);
   const [isTaskMasterReady, setIsTaskMasterReady] = useState(null);
   const [installationStatus, setInstallationStatus] = useState(null);
@@ -46,7 +46,7 @@ export const TasksSettingsProvider = ({ children }) => {
           setInstallationStatus(data);
           setIsTaskMasterInstalled(data.installation?.isInstalled || false);
           setIsTaskMasterReady(data.isReady || false);
-          
+
           // If TaskMaster is not installed and user hasn't explicitly enabled tasks,
           // disable tasks automatically
           const userEnabledTasks = localStorage.getItem('tasks-enabled');
@@ -82,13 +82,11 @@ export const TasksSettingsProvider = ({ children }) => {
     isTaskMasterInstalled,
     isTaskMasterReady,
     installationStatus,
-    isCheckingInstallation
+    isCheckingInstallation,
   };
 
   return (
-    <TasksSettingsContext.Provider value={contextValue}>
-      {children}
-    </TasksSettingsContext.Provider>
+    <TasksSettingsContext.Provider value={contextValue}>{children}</TasksSettingsContext.Provider>
   );
 };
 

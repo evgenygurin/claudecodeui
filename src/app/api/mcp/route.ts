@@ -20,22 +20,22 @@ const tools = {
       properties: {
         command: { type: 'string', description: 'The command to execute' },
         projectPath: { type: 'string', description: 'Project path to execute command in' },
-        options: { type: 'object', description: 'Additional options for the command' }
+        options: { type: 'object', description: 'Additional options for the command' },
       },
-      required: ['command']
+      required: ['command'],
     },
     handler: async ({ command, projectPath, options }: any) => {
       try {
         logger.info('Executing Claude Code command', { command, projectPath });
-        
+
         // Start or use existing Claude CLI session
         const status = claudeCLIService.getStatus();
         if (!status.isRunning) {
           await claudeCLIService.startSession(projectPath);
         }
-        
+
         const response = await claudeCLIService.sendMessage(command);
-        
+
         return {
           content: [
             {
@@ -66,21 +66,25 @@ const tools = {
       properties: {
         operation: { type: 'string', enum: ['read', 'write', 'list', 'delete', 'create'] },
         path: { type: 'string', description: 'File or directory path' },
-        content: { type: 'string', description: 'Content for write operations' }
+        content: { type: 'string', description: 'Content for write operations' },
       },
-      required: ['operation', 'path']
+      required: ['operation', 'path'],
     },
     handler: async ({ operation, path: filePath, content }: any) => {
       try {
         logger.info('File operation', { operation, path: filePath });
-        
+
         const safePath = path.resolve(process.cwd(), filePath);
-        
+
         // Security check - ensure we're not accessing system files
-        if (safePath.includes('../') || safePath.startsWith('/etc') || safePath.startsWith('/usr')) {
+        if (
+          safePath.includes('../') ||
+          safePath.startsWith('/etc') ||
+          safePath.startsWith('/usr')
+        ) {
           throw createError('Access denied: Invalid file path');
         }
-        
+
         switch (operation) {
           case 'read':
             try {
@@ -96,7 +100,7 @@ const tools = {
             } catch (error) {
               throw createError(`Cannot read file: ${getErrorMessage(error)}`);
             }
-            
+
           case 'write':
             if (!content) {
               throw createError('Content is required for write operation');
@@ -110,15 +114,17 @@ const tools = {
                 },
               ],
             };
-            
+
           case 'list':
             try {
               const entries = await fs.readdir(safePath, { withFileTypes: true });
-              const listing = entries.map(entry => {
-                const type = entry.isDirectory() ? 'DIR' : 'FILE';
-                return `${type}: ${entry.name}`;
-              }).join('\n');
-              
+              const listing = entries
+                .map(entry => {
+                  const type = entry.isDirectory() ? 'DIR' : 'FILE';
+                  return `${type}: ${entry.name}`;
+                })
+                .join('\n');
+
               return {
                 content: [
                   {
@@ -130,7 +136,7 @@ const tools = {
             } catch (error) {
               throw createError(`Cannot list directory: ${getErrorMessage(error)}`);
             }
-            
+
           case 'delete':
             try {
               const stat = await fs.stat(safePath);
@@ -150,7 +156,7 @@ const tools = {
             } catch (error) {
               throw createError(`Cannot delete: ${getErrorMessage(error)}`);
             }
-            
+
           case 'create':
             try {
               await fs.mkdir(safePath, { recursive: true });
@@ -165,7 +171,7 @@ const tools = {
             } catch (error) {
               throw createError(`Cannot create directory: ${getErrorMessage(error)}`);
             }
-            
+
           default:
             throw createError(`Unknown operation: ${operation}`);
         }
@@ -191,50 +197,56 @@ const tools = {
       properties: {
         action: { type: 'string', enum: ['list', 'create', 'delete', 'switch', 'info', 'status'] },
         projectName: { type: 'string', description: 'Project name' },
-        projectPath: { type: 'string', description: 'Project path' }
+        projectPath: { type: 'string', description: 'Project path' },
       },
-      required: ['action']
+      required: ['action'],
     },
     handler: async ({ action, projectName, projectPath }: any) => {
       try {
         logger.info('Project management action', { action, projectName, projectPath });
-        
+
         switch (action) {
           case 'list':
             // Get sessions from Claude CLI service
             const sessions = await claudeCLIService.getSessions();
-            const sessionList = sessions.map(session => 
-              `Session: ${session.name} (ID: ${session.id}) - ${session.messages.length} messages`
-            ).join('\n');
-            
+            const sessionList = sessions
+              .map(
+                session =>
+                  `Session: ${session.name} (ID: ${session.id}) - ${session.messages.length} messages`
+              )
+              .join('\n');
+
             return {
               content: [
                 {
                   type: 'text',
-                  text: sessions.length > 0 ? 
-                    `Active Claude Code sessions:\n\n${sessionList}` :
-                    'No active Claude Code sessions',
+                  text:
+                    sessions.length > 0
+                      ? `Active Claude Code sessions:\n\n${sessionList}`
+                      : 'No active Claude Code sessions',
                 },
               ],
             };
-            
+
           case 'create':
             if (!projectName || !projectPath) {
               throw createError('Project name and path are required for create action');
             }
-            
+
             // Create directory if it doesn't exist
             const safePath = path.resolve(process.cwd(), projectPath);
             await fs.mkdir(safePath, { recursive: true });
-            
+
             // Initialize git if not already initialized
             try {
               await execAsync('git init', { cwd: safePath });
             } catch (error) {
               // Git init might fail if already initialized
-              logger.debug('Git init failed or already initialized', { error: getErrorMessage(error) });
+              logger.debug('Git init failed or already initialized', {
+                error: getErrorMessage(error),
+              });
             }
-            
+
             return {
               content: [
                 {
@@ -243,18 +255,18 @@ const tools = {
                 },
               ],
             };
-            
+
           case 'delete':
             if (!projectName) {
               throw createError('Project name is required for delete action');
             }
-            
+
             // Stop session if it's the current project
             const status = claudeCLIService.getStatus();
             if (status.isRunning) {
               await claudeCLIService.stopSession();
             }
-            
+
             return {
               content: [
                 {
@@ -263,20 +275,20 @@ const tools = {
                 },
               ],
             };
-            
+
           case 'switch':
             if (!projectName) {
               throw createError('Project name is required for switch action');
             }
-            
+
             // Stop current session and start new one
             const currentStatus = claudeCLIService.getStatus();
             if (currentStatus.isRunning) {
               await claudeCLIService.stopSession();
             }
-            
+
             const newSession = await claudeCLIService.startSession(projectPath);
-            
+
             return {
               content: [
                 {
@@ -285,7 +297,7 @@ const tools = {
                 },
               ],
             };
-            
+
           case 'info':
             if (!projectName) {
               const currentStatus = claudeCLIService.getStatus();
@@ -293,19 +305,19 @@ const tools = {
                 content: [
                   {
                     type: 'text',
-                    text: currentStatus.isRunning ? 
-                      `Current session: ${currentStatus.sessionId}` :
-                      'No active Claude Code session',
+                    text: currentStatus.isRunning
+                      ? `Current session: ${currentStatus.sessionId}`
+                      : 'No active Claude Code session',
                   },
                 ],
               };
             }
-            
+
             const session = await claudeCLIService.getSession(projectName);
             if (!session) {
               throw createError(`Session ${projectName} not found`);
             }
-            
+
             return {
               content: [
                 {
@@ -314,7 +326,7 @@ const tools = {
                 },
               ],
             };
-            
+
           case 'status':
             const statusInfo = claudeCLIService.getStatus();
             return {
@@ -325,7 +337,7 @@ const tools = {
                 },
               ],
             };
-            
+
           default:
             throw createError(`Unknown action: ${action}`);
         }
@@ -351,14 +363,14 @@ const tools = {
       properties: {
         action: { type: 'string', enum: ['start', 'stop', 'send', 'status', 'history'] },
         projectPath: { type: 'string', description: 'Project path for new sessions' },
-        message: { type: 'string', description: 'Message to send to Claude CLI' }
+        message: { type: 'string', description: 'Message to send to Claude CLI' },
       },
-      required: ['action']
+      required: ['action'],
     },
     handler: async ({ action, projectPath, message }: any) => {
       try {
         logger.info('Session management action', { action, projectPath });
-        
+
         switch (action) {
           case 'start':
             const session = await claudeCLIService.startSession(projectPath);
@@ -370,7 +382,7 @@ const tools = {
                 },
               ],
             };
-            
+
           case 'stop':
             await claudeCLIService.stopSession();
             return {
@@ -381,12 +393,12 @@ const tools = {
                 },
               ],
             };
-            
+
           case 'send':
             if (!message) {
               throw createError('Message is required for send action');
             }
-            
+
             const response = await claudeCLIService.sendMessage(message);
             return {
               content: [
@@ -396,7 +408,7 @@ const tools = {
                 },
               ],
             };
-            
+
           case 'status':
             const status = claudeCLIService.getStatus();
             return {
@@ -407,16 +419,21 @@ const tools = {
                 },
               ],
             };
-            
+
           case 'history':
             const sessions = await claudeCLIService.getSessions();
-            const history = sessions.map(s => {
-              const messageHistory = s.messages.map(m => 
-                `[${m.timestamp.toISOString()}] ${m.role}: ${m.content.substring(0, 100)}${m.content.length > 100 ? '...' : ''}`
-              ).join('\n');
-              return `Session: ${s.name}\n${messageHistory}`;
-            }).join('\n\n');
-            
+            const history = sessions
+              .map(s => {
+                const messageHistory = s.messages
+                  .map(
+                    m =>
+                      `[${m.timestamp.toISOString()}] ${m.role}: ${m.content.substring(0, 100)}${m.content.length > 100 ? '...' : ''}`
+                  )
+                  .join('\n');
+                return `Session: ${s.name}\n${messageHistory}`;
+              })
+              .join('\n\n');
+
             return {
               content: [
                 {
@@ -425,7 +442,7 @@ const tools = {
                 },
               ],
             };
-            
+
           default:
             throw createError(`Unknown action: ${action}`);
         }
@@ -489,7 +506,7 @@ export async function POST(request: NextRequest) {
 
         logger.info('Executing MCP tool', { toolName: name, args });
         const result = await tool.handler(args);
-        
+
         return NextResponse.json({
           content: result.content,
           isError: false,
@@ -517,9 +534,12 @@ export async function POST(request: NextRequest) {
     }
   } catch (error) {
     logger.error('MCP API Error:', error);
-    return NextResponse.json({ 
-      error: 'Internal server error',
-      details: getErrorMessage(error)
-    }, { status: 500 });
+    return NextResponse.json(
+      {
+        error: 'Internal server error',
+        details: getErrorMessage(error),
+      },
+      { status: 500 }
+    );
   }
 }

@@ -1,6 +1,7 @@
 # GitHub Repository Search Analysis
 
 ## Обзор
+
 - **Всего ссылок v0.app**: 45
 - **Дата анализа**: 06.09.2025, 19:46:28
 - **Описание**: Анализ ссылок v0.app для поиска соответствующих репозиториев на GitHub
@@ -8,10 +9,12 @@
 ## Компоненты для поиска
 
 ### 1. file-manager
+
 - **Оригинальная ссылка**: https://v0.app/chat/file-manager-wukORjs2J9p
 - **Варианты поиска**: 16
 
 #### GitHub Search Queries:
+
 1. **file-manager**
    - Query: `"file-manager" in:name`
    - Описание: Поиск репозитория с названием "file-manager"
@@ -49,39 +52,49 @@
    - Описание: Поиск репозитория с названием "file-manager-template"
 
 10. **file-manager-starter**
-   - Query: `"file-manager-starter" in:name`
-   - Описание: Поиск репозитория с названием "file-manager-starter"
+
+- Query: `"file-manager-starter" in:name`
+- Описание: Поиск репозитория с названием "file-manager-starter"
 
 11. **file_manager**
-   - Query: `"file_manager" in:name`
-   - Описание: Поиск репозитория с названием "file_manager"
+
+- Query: `"file_manager" in:name`
+- Описание: Поиск репозитория с названием "file_manager"
 
 12. **v0_file_manager**
-   - Query: `"v0_file_manager" in:name`
-   - Описание: Поиск репозитория с названием "v0_file_manager"
+
+- Query: `"v0_file_manager" in:name`
+- Описание: Поиск репозитория с названием "v0_file_manager"
 
 13. **fileManager**
-   - Query: `"fileManager" in:name`
-   - Описание: Поиск репозитория с названием "fileManager"
+
+- Query: `"fileManager" in:name`
+- Описание: Поиск репозитория с названием "fileManager"
 
 14. **v0FileManager**
-   - Query: `"v0FileManager" in:name`
-   - Описание: Поиск репозитория с названием "v0FileManager"
+
+- Query: `"v0FileManager" in:name`
+- Описание: Поиск репозитория с названием "v0FileManager"
 
 15. **FileManager**
-   - Query: `"FileManager" in:name`
-   - Описание: Поиск репозитория с названием "FileManager"
+
+- Query: `"FileManager" in:name`
+- Описание: Поиск репозитория с названием "FileManager"
 
 16. **V0FileManager**
-   - Query: `"V0FileManager" in:name`
-   - Описание: Поиск репозитория с названием "V0FileManager"
+
+- Query: `"V0FileManager" in:name`
+- Описание: Поиск репозитория с названием "V0FileManager"
 
 ---
+
 ### 2. file-manager
+
 - **Оригинальная ссылка**: https://v0.app/community/file-manager-hN0nNvAchzi
 - **Варианты поиска**: 16
 
 #### GitHub Search Queries:
+
 1. **file-manager**
    - Query: `"file-manager" in:name`
    - Описание: Поиск репозитория с названием "file-manager"
@@ -119,39 +132,49 @@
    - Описание: Поиск репозитория с названием "file-manager-template"
 
 10. **file-manager-starter**
-   - Query: `"file-manager-starter" in:name`
-   - Описание: Поиск репозитория с названием "file-manager-starter"
+
+- Query: `"file-manager-starter" in:name`
+- Описание: Поиск репозитория с названием "file-manager-starter"
 
 11. **file_manager**
-   - Query: `"file_manager" in:name`
-   - Описание: Поиск репозитория с названием "file_manager"
+
+- Query: `"file_manager" in:name`
+- Описание: Поиск репозитория с названием "file_manager"
 
 12. **v0_file_manager**
-   - Query: `"v0_file_manager" in:name`
-   - Описание: Поиск репозитория с названием "v0_file_manager"
+
+- Query: `"v0_file_manager" in:name`
+- Описание: Поиск репозитория с названием "v0_file_manager"
 
 13. **fileManager**
-   - Query: `"fileManager" in:name`
-   - Описание: Поиск репозитория с названием "fileManager"
+
+- Query: `"fileManager" in:name`
+- Описание: Поиск репозитория с названием "fileManager"
 
 14. **v0FileManager**
-   - Query: `"v0FileManager" in:name`
-   - Описание: Поиск репозитория с названием "v0FileManager"
+
+- Query: `"v0FileManager" in:name`
+- Описание: Поиск репозитория с названием "v0FileManager"
 
 15. **FileManager**
-   - Query: `"FileManager" in:name`
-   - Описание: Поиск репозитория с названием "FileManager"
+
+- Query: `"FileManager" in:name`
+- Описание: Поиск репозитория с названием "FileManager"
 
 16. **V0FileManager**
-   - Query: `"V0FileManager" in:name`
-   - Описание: Поиск репозитория с названием "V0FileManager"
+
+- Query: `"V0FileManager" in:name`
+- Описание: Поиск репозитория с названием "V0FileManager"
 
 ---
+
 ### 3. ai-chat-interface
+
 - **Оригинальная ссылка**: https://v0.app/community/ai-chat-interface-6VLiqkGu5vw
 - **Варианты поиска**: 16
 
 #### GitHub Search Queries:
+
 1. **ai-chat-interface**
    - Query: `"ai-chat-interface" in:name`
    - Описание: Поиск репозитория с названием "ai-chat-interface"
@@ -189,39 +212,49 @@
    - Описание: Поиск репозитория с названием "ai-chat-interface-template"
 
 10. **ai-chat-interface-starter**
-   - Query: `"ai-chat-interface-starter" in:name`
-   - Описание: Поиск репозитория с названием "ai-chat-interface-starter"
+
+- Query: `"ai-chat-interface-starter" in:name`
+- Описание: Поиск репозитория с названием "ai-chat-interface-starter"
 
 11. **ai_chat_interface**
-   - Query: `"ai_chat_interface" in:name`
-   - Описание: Поиск репозитория с названием "ai_chat_interface"
+
+- Query: `"ai_chat_interface" in:name`
+- Описание: Поиск репозитория с названием "ai_chat_interface"
 
 12. **v0_ai_chat_interface**
-   - Query: `"v0_ai_chat_interface" in:name`
-   - Описание: Поиск репозитория с названием "v0_ai_chat_interface"
+
+- Query: `"v0_ai_chat_interface" in:name`
+- Описание: Поиск репозитория с названием "v0_ai_chat_interface"
 
 13. **aiChatInterface**
-   - Query: `"aiChatInterface" in:name`
-   - Описание: Поиск репозитория с названием "aiChatInterface"
+
+- Query: `"aiChatInterface" in:name`
+- Описание: Поиск репозитория с названием "aiChatInterface"
 
 14. **v0AiChatInterface**
-   - Query: `"v0AiChatInterface" in:name`
-   - Описание: Поиск репозитория с названием "v0AiChatInterface"
+
+- Query: `"v0AiChatInterface" in:name`
+- Описание: Поиск репозитория с названием "v0AiChatInterface"
 
 15. **AiChatInterface**
-   - Query: `"AiChatInterface" in:name`
-   - Описание: Поиск репозитория с названием "AiChatInterface"
+
+- Query: `"AiChatInterface" in:name`
+- Описание: Поиск репозитория с названием "AiChatInterface"
 
 16. **V0AiChatInterface**
-   - Query: `"V0AiChatInterface" in:name`
-   - Описание: Поиск репозитория с названием "V0AiChatInterface"
+
+- Query: `"V0AiChatInterface" in:name`
+- Описание: Поиск репозитория с названием "V0AiChatInterface"
 
 ---
+
 ### 4. integrations-page
+
 - **Оригинальная ссылка**: https://v0.app/community/integrations-page-7HOUCTcoR5n
 - **Варианты поиска**: 16
 
 #### GitHub Search Queries:
+
 1. **integrations-page**
    - Query: `"integrations-page" in:name`
    - Описание: Поиск репозитория с названием "integrations-page"
@@ -259,39 +292,49 @@
    - Описание: Поиск репозитория с названием "integrations-page-template"
 
 10. **integrations-page-starter**
-   - Query: `"integrations-page-starter" in:name`
-   - Описание: Поиск репозитория с названием "integrations-page-starter"
+
+- Query: `"integrations-page-starter" in:name`
+- Описание: Поиск репозитория с названием "integrations-page-starter"
 
 11. **integrations_page**
-   - Query: `"integrations_page" in:name`
-   - Описание: Поиск репозитория с названием "integrations_page"
+
+- Query: `"integrations_page" in:name`
+- Описание: Поиск репозитория с названием "integrations_page"
 
 12. **v0_integrations_page**
-   - Query: `"v0_integrations_page" in:name`
-   - Описание: Поиск репозитория с названием "v0_integrations_page"
+
+- Query: `"v0_integrations_page" in:name`
+- Описание: Поиск репозитория с названием "v0_integrations_page"
 
 13. **integrationsPage**
-   - Query: `"integrationsPage" in:name`
-   - Описание: Поиск репозитория с названием "integrationsPage"
+
+- Query: `"integrationsPage" in:name`
+- Описание: Поиск репозитория с названием "integrationsPage"
 
 14. **v0IntegrationsPage**
-   - Query: `"v0IntegrationsPage" in:name`
-   - Описание: Поиск репозитория с названием "v0IntegrationsPage"
+
+- Query: `"v0IntegrationsPage" in:name`
+- Описание: Поиск репозитория с названием "v0IntegrationsPage"
 
 15. **IntegrationsPage**
-   - Query: `"IntegrationsPage" in:name`
-   - Описание: Поиск репозитория с названием "IntegrationsPage"
+
+- Query: `"IntegrationsPage" in:name`
+- Описание: Поиск репозитория с названием "IntegrationsPage"
 
 16. **V0IntegrationsPage**
-   - Query: `"V0IntegrationsPage" in:name`
-   - Описание: Поиск репозитория с названием "V0IntegrationsPage"
+
+- Query: `"V0IntegrationsPage" in:name`
+- Описание: Поиск репозитория с названием "V0IntegrationsPage"
 
 ---
+
 ### 5. sidebar-layout
+
 - **Оригинальная ссылка**: https://v0.app/community/sidebar-layout-ybLyeN1sesS
 - **Варианты поиска**: 16
 
 #### GitHub Search Queries:
+
 1. **sidebar-layout**
    - Query: `"sidebar-layout" in:name`
    - Описание: Поиск репозитория с названием "sidebar-layout"
@@ -329,39 +372,49 @@
    - Описание: Поиск репозитория с названием "sidebar-layout-template"
 
 10. **sidebar-layout-starter**
-   - Query: `"sidebar-layout-starter" in:name`
-   - Описание: Поиск репозитория с названием "sidebar-layout-starter"
+
+- Query: `"sidebar-layout-starter" in:name`
+- Описание: Поиск репозитория с названием "sidebar-layout-starter"
 
 11. **sidebar_layout**
-   - Query: `"sidebar_layout" in:name`
-   - Описание: Поиск репозитория с названием "sidebar_layout"
+
+- Query: `"sidebar_layout" in:name`
+- Описание: Поиск репозитория с названием "sidebar_layout"
 
 12. **v0_sidebar_layout**
-   - Query: `"v0_sidebar_layout" in:name`
-   - Описание: Поиск репозитория с названием "v0_sidebar_layout"
+
+- Query: `"v0_sidebar_layout" in:name`
+- Описание: Поиск репозитория с названием "v0_sidebar_layout"
 
 13. **sidebarLayout**
-   - Query: `"sidebarLayout" in:name`
-   - Описание: Поиск репозитория с названием "sidebarLayout"
+
+- Query: `"sidebarLayout" in:name`
+- Описание: Поиск репозитория с названием "sidebarLayout"
 
 14. **v0SidebarLayout**
-   - Query: `"v0SidebarLayout" in:name`
-   - Описание: Поиск репозитория с названием "v0SidebarLayout"
+
+- Query: `"v0SidebarLayout" in:name`
+- Описание: Поиск репозитория с названием "v0SidebarLayout"
 
 15. **SidebarLayout**
-   - Query: `"SidebarLayout" in:name`
-   - Описание: Поиск репозитория с названием "SidebarLayout"
+
+- Query: `"SidebarLayout" in:name`
+- Описание: Поиск репозитория с названием "SidebarLayout"
 
 16. **V0SidebarLayout**
-   - Query: `"V0SidebarLayout" in:name`
-   - Описание: Поиск репозитория с названием "V0SidebarLayout"
+
+- Query: `"V0SidebarLayout" in:name`
+- Описание: Поиск репозитория с названием "V0SidebarLayout"
 
 ---
+
 ### 6. action-search-bar
+
 - **Оригинальная ссылка**: https://v0.app/community/action-search-bar-S3nMPSmpQzk
 - **Варианты поиска**: 16
 
 #### GitHub Search Queries:
+
 1. **action-search-bar**
    - Query: `"action-search-bar" in:name`
    - Описание: Поиск репозитория с названием "action-search-bar"
@@ -399,39 +452,49 @@
    - Описание: Поиск репозитория с названием "action-search-bar-template"
 
 10. **action-search-bar-starter**
-   - Query: `"action-search-bar-starter" in:name`
-   - Описание: Поиск репозитория с названием "action-search-bar-starter"
+
+- Query: `"action-search-bar-starter" in:name`
+- Описание: Поиск репозитория с названием "action-search-bar-starter"
 
 11. **action_search_bar**
-   - Query: `"action_search_bar" in:name`
-   - Описание: Поиск репозитория с названием "action_search_bar"
+
+- Query: `"action_search_bar" in:name`
+- Описание: Поиск репозитория с названием "action_search_bar"
 
 12. **v0_action_search_bar**
-   - Query: `"v0_action_search_bar" in:name`
-   - Описание: Поиск репозитория с названием "v0_action_search_bar"
+
+- Query: `"v0_action_search_bar" in:name`
+- Описание: Поиск репозитория с названием "v0_action_search_bar"
 
 13. **actionSearchBar**
-   - Query: `"actionSearchBar" in:name`
-   - Описание: Поиск репозитория с названием "actionSearchBar"
+
+- Query: `"actionSearchBar" in:name`
+- Описание: Поиск репозитория с названием "actionSearchBar"
 
 14. **v0ActionSearchBar**
-   - Query: `"v0ActionSearchBar" in:name`
-   - Описание: Поиск репозитория с названием "v0ActionSearchBar"
+
+- Query: `"v0ActionSearchBar" in:name`
+- Описание: Поиск репозитория с названием "v0ActionSearchBar"
 
 15. **ActionSearchBar**
-   - Query: `"ActionSearchBar" in:name`
-   - Описание: Поиск репозитория с названием "ActionSearchBar"
+
+- Query: `"ActionSearchBar" in:name`
+- Описание: Поиск репозитория с названием "ActionSearchBar"
 
 16. **V0ActionSearchBar**
-   - Query: `"V0ActionSearchBar" in:name`
-   - Описание: Поиск репозитория с названием "V0ActionSearchBar"
+
+- Query: `"V0ActionSearchBar" in:name`
+- Описание: Поиск репозитория с названием "V0ActionSearchBar"
 
 ---
+
 ### 7. ai-card-generation
+
 - **Оригинальная ссылка**: https://v0.app/community/ai-card-generation-Tpxvlz16QiJ
 - **Варианты поиска**: 16
 
 #### GitHub Search Queries:
+
 1. **ai-card-generation**
    - Query: `"ai-card-generation" in:name`
    - Описание: Поиск репозитория с названием "ai-card-generation"
@@ -469,39 +532,49 @@
    - Описание: Поиск репозитория с названием "ai-card-generation-template"
 
 10. **ai-card-generation-starter**
-   - Query: `"ai-card-generation-starter" in:name`
-   - Описание: Поиск репозитория с названием "ai-card-generation-starter"
+
+- Query: `"ai-card-generation-starter" in:name`
+- Описание: Поиск репозитория с названием "ai-card-generation-starter"
 
 11. **ai_card_generation**
-   - Query: `"ai_card_generation" in:name`
-   - Описание: Поиск репозитория с названием "ai_card_generation"
+
+- Query: `"ai_card_generation" in:name`
+- Описание: Поиск репозитория с названием "ai_card_generation"
 
 12. **v0_ai_card_generation**
-   - Query: `"v0_ai_card_generation" in:name`
-   - Описание: Поиск репозитория с названием "v0_ai_card_generation"
+
+- Query: `"v0_ai_card_generation" in:name`
+- Описание: Поиск репозитория с названием "v0_ai_card_generation"
 
 13. **aiCardGeneration**
-   - Query: `"aiCardGeneration" in:name`
-   - Описание: Поиск репозитория с названием "aiCardGeneration"
+
+- Query: `"aiCardGeneration" in:name`
+- Описание: Поиск репозитория с названием "aiCardGeneration"
 
 14. **v0AiCardGeneration**
-   - Query: `"v0AiCardGeneration" in:name`
-   - Описание: Поиск репозитория с названием "v0AiCardGeneration"
+
+- Query: `"v0AiCardGeneration" in:name`
+- Описание: Поиск репозитория с названием "v0AiCardGeneration"
 
 15. **AiCardGeneration**
-   - Query: `"AiCardGeneration" in:name`
-   - Описание: Поиск репозитория с названием "AiCardGeneration"
+
+- Query: `"AiCardGeneration" in:name`
+- Описание: Поиск репозитория с названием "AiCardGeneration"
 
 16. **V0AiCardGeneration**
-   - Query: `"V0AiCardGeneration" in:name`
-   - Описание: Поиск репозитория с названием "V0AiCardGeneration"
+
+- Query: `"V0AiCardGeneration" in:name`
+- Описание: Поиск репозитория с названием "V0AiCardGeneration"
 
 ---
+
 ### 8. vercel-tabs
+
 - **Оригинальная ссылка**: https://v0.app/community/vercel-tabs-BT27p0aGPsa
 - **Варианты поиска**: 16
 
 #### GitHub Search Queries:
+
 1. **vercel-tabs**
    - Query: `"vercel-tabs" in:name`
    - Описание: Поиск репозитория с названием "vercel-tabs"
@@ -539,39 +612,49 @@
    - Описание: Поиск репозитория с названием "vercel-tabs-template"
 
 10. **vercel-tabs-starter**
-   - Query: `"vercel-tabs-starter" in:name`
-   - Описание: Поиск репозитория с названием "vercel-tabs-starter"
+
+- Query: `"vercel-tabs-starter" in:name`
+- Описание: Поиск репозитория с названием "vercel-tabs-starter"
 
 11. **vercel_tabs**
-   - Query: `"vercel_tabs" in:name`
-   - Описание: Поиск репозитория с названием "vercel_tabs"
+
+- Query: `"vercel_tabs" in:name`
+- Описание: Поиск репозитория с названием "vercel_tabs"
 
 12. **v0_vercel_tabs**
-   - Query: `"v0_vercel_tabs" in:name`
-   - Описание: Поиск репозитория с названием "v0_vercel_tabs"
+
+- Query: `"v0_vercel_tabs" in:name`
+- Описание: Поиск репозитория с названием "v0_vercel_tabs"
 
 13. **vercelTabs**
-   - Query: `"vercelTabs" in:name`
-   - Описание: Поиск репозитория с названием "vercelTabs"
+
+- Query: `"vercelTabs" in:name`
+- Описание: Поиск репозитория с названием "vercelTabs"
 
 14. **v0VercelTabs**
-   - Query: `"v0VercelTabs" in:name`
-   - Описание: Поиск репозитория с названием "v0VercelTabs"
+
+- Query: `"v0VercelTabs" in:name`
+- Описание: Поиск репозитория с названием "v0VercelTabs"
 
 15. **VercelTabs**
-   - Query: `"VercelTabs" in:name`
-   - Описание: Поиск репозитория с названием "VercelTabs"
+
+- Query: `"VercelTabs" in:name`
+- Описание: Поиск репозитория с названием "VercelTabs"
 
 16. **V0VercelTabs**
-   - Query: `"V0VercelTabs" in:name`
-   - Описание: Поиск репозитория с названием "V0VercelTabs"
+
+- Query: `"V0VercelTabs" in:name`
+- Описание: Поиск репозитория с названием "V0VercelTabs"
 
 ---
+
 ### 9. animated-beam
+
 - **Оригинальная ссылка**: https://v0.app/community/animated-beam-voQije6wyja
 - **Варианты поиска**: 16
 
 #### GitHub Search Queries:
+
 1. **animated-beam**
    - Query: `"animated-beam" in:name`
    - Описание: Поиск репозитория с названием "animated-beam"
@@ -609,39 +692,49 @@
    - Описание: Поиск репозитория с названием "animated-beam-template"
 
 10. **animated-beam-starter**
-   - Query: `"animated-beam-starter" in:name`
-   - Описание: Поиск репозитория с названием "animated-beam-starter"
+
+- Query: `"animated-beam-starter" in:name`
+- Описание: Поиск репозитория с названием "animated-beam-starter"
 
 11. **animated_beam**
-   - Query: `"animated_beam" in:name`
-   - Описание: Поиск репозитория с названием "animated_beam"
+
+- Query: `"animated_beam" in:name`
+- Описание: Поиск репозитория с названием "animated_beam"
 
 12. **v0_animated_beam**
-   - Query: `"v0_animated_beam" in:name`
-   - Описание: Поиск репозитория с названием "v0_animated_beam"
+
+- Query: `"v0_animated_beam" in:name`
+- Описание: Поиск репозитория с названием "v0_animated_beam"
 
 13. **animatedBeam**
-   - Query: `"animatedBeam" in:name`
-   - Описание: Поиск репозитория с названием "animatedBeam"
+
+- Query: `"animatedBeam" in:name`
+- Описание: Поиск репозитория с названием "animatedBeam"
 
 14. **v0AnimatedBeam**
-   - Query: `"v0AnimatedBeam" in:name`
-   - Описание: Поиск репозитория с названием "v0AnimatedBeam"
+
+- Query: `"v0AnimatedBeam" in:name`
+- Описание: Поиск репозитория с названием "v0AnimatedBeam"
 
 15. **AnimatedBeam**
-   - Query: `"AnimatedBeam" in:name`
-   - Описание: Поиск репозитория с названием "AnimatedBeam"
+
+- Query: `"AnimatedBeam" in:name`
+- Описание: Поиск репозитория с названием "AnimatedBeam"
 
 16. **V0AnimatedBeam**
-   - Query: `"V0AnimatedBeam" in:name`
-   - Описание: Поиск репозитория с названием "V0AnimatedBeam"
+
+- Query: `"V0AnimatedBeam" in:name`
+- Описание: Поиск репозитория с названием "V0AnimatedBeam"
 
 ---
+
 ### 10. image-to-ascii
+
 - **Оригинальная ссылка**: https://v0.app/community/image-to-ascii-0UE1nczWzbu
 - **Варианты поиска**: 16
 
 #### GitHub Search Queries:
+
 1. **image-to-ascii**
    - Query: `"image-to-ascii" in:name`
    - Описание: Поиск репозитория с названием "image-to-ascii"
@@ -679,39 +772,49 @@
    - Описание: Поиск репозитория с названием "image-to-ascii-template"
 
 10. **image-to-ascii-starter**
-   - Query: `"image-to-ascii-starter" in:name`
-   - Описание: Поиск репозитория с названием "image-to-ascii-starter"
+
+- Query: `"image-to-ascii-starter" in:name`
+- Описание: Поиск репозитория с названием "image-to-ascii-starter"
 
 11. **image_to_ascii**
-   - Query: `"image_to_ascii" in:name`
-   - Описание: Поиск репозитория с названием "image_to_ascii"
+
+- Query: `"image_to_ascii" in:name`
+- Описание: Поиск репозитория с названием "image_to_ascii"
 
 12. **v0_image_to_ascii**
-   - Query: `"v0_image_to_ascii" in:name`
-   - Описание: Поиск репозитория с названием "v0_image_to_ascii"
+
+- Query: `"v0_image_to_ascii" in:name`
+- Описание: Поиск репозитория с названием "v0_image_to_ascii"
 
 13. **imageToAscii**
-   - Query: `"imageToAscii" in:name`
-   - Описание: Поиск репозитория с названием "imageToAscii"
+
+- Query: `"imageToAscii" in:name`
+- Описание: Поиск репозитория с названием "imageToAscii"
 
 14. **v0ImageToAscii**
-   - Query: `"v0ImageToAscii" in:name`
-   - Описание: Поиск репозитория с названием "v0ImageToAscii"
+
+- Query: `"v0ImageToAscii" in:name`
+- Описание: Поиск репозитория с названием "v0ImageToAscii"
 
 15. **ImageToAscii**
-   - Query: `"ImageToAscii" in:name`
-   - Описание: Поиск репозитория с названием "ImageToAscii"
+
+- Query: `"ImageToAscii" in:name`
+- Описание: Поиск репозитория с названием "ImageToAscii"
 
 16. **V0ImageToAscii**
-   - Query: `"V0ImageToAscii" in:name`
-   - Описание: Поиск репозитория с названием "V0ImageToAscii"
+
+- Query: `"V0ImageToAscii" in:name`
+- Описание: Поиск репозитория с названием "V0ImageToAscii"
 
 ---
+
 ### 11. documentation-starter
+
 - **Оригинальная ссылка**: https://v0.app/community/documentation-starter-ov3ApgfOdx5
 - **Варианты поиска**: 16
 
 #### GitHub Search Queries:
+
 1. **documentation-starter**
    - Query: `"documentation-starter" in:name`
    - Описание: Поиск репозитория с названием "documentation-starter"
@@ -749,39 +852,49 @@
    - Описание: Поиск репозитория с названием "documentation-starter-template"
 
 10. **documentation-starter-starter**
-   - Query: `"documentation-starter-starter" in:name`
-   - Описание: Поиск репозитория с названием "documentation-starter-starter"
+
+- Query: `"documentation-starter-starter" in:name`
+- Описание: Поиск репозитория с названием "documentation-starter-starter"
 
 11. **documentation_starter**
-   - Query: `"documentation_starter" in:name`
-   - Описание: Поиск репозитория с названием "documentation_starter"
+
+- Query: `"documentation_starter" in:name`
+- Описание: Поиск репозитория с названием "documentation_starter"
 
 12. **v0_documentation_starter**
-   - Query: `"v0_documentation_starter" in:name`
-   - Описание: Поиск репозитория с названием "v0_documentation_starter"
+
+- Query: `"v0_documentation_starter" in:name`
+- Описание: Поиск репозитория с названием "v0_documentation_starter"
 
 13. **documentationStarter**
-   - Query: `"documentationStarter" in:name`
-   - Описание: Поиск репозитория с названием "documentationStarter"
+
+- Query: `"documentationStarter" in:name`
+- Описание: Поиск репозитория с названием "documentationStarter"
 
 14. **v0DocumentationStarter**
-   - Query: `"v0DocumentationStarter" in:name`
-   - Описание: Поиск репозитория с названием "v0DocumentationStarter"
+
+- Query: `"v0DocumentationStarter" in:name`
+- Описание: Поиск репозитория с названием "v0DocumentationStarter"
 
 15. **DocumentationStarter**
-   - Query: `"DocumentationStarter" in:name`
-   - Описание: Поиск репозитория с названием "DocumentationStarter"
+
+- Query: `"DocumentationStarter" in:name`
+- Описание: Поиск репозитория с названием "DocumentationStarter"
 
 16. **V0DocumentationStarter**
-   - Query: `"V0DocumentationStarter" in:name`
-   - Описание: Поиск репозитория с названием "V0DocumentationStarter"
+
+- Query: `"V0DocumentationStarter" in:name`
+- Описание: Поиск репозитория с названием "V0DocumentationStarter"
 
 ---
+
 ### 12. admin-dashboard
+
 - **Оригинальная ссылка**: https://v0.app/community/admin-dashboard-yBomF3O9Yu3
 - **Варианты поиска**: 16
 
 #### GitHub Search Queries:
+
 1. **admin-dashboard**
    - Query: `"admin-dashboard" in:name`
    - Описание: Поиск репозитория с названием "admin-dashboard"
@@ -819,39 +932,49 @@
    - Описание: Поиск репозитория с названием "admin-dashboard-template"
 
 10. **admin-dashboard-starter**
-   - Query: `"admin-dashboard-starter" in:name`
-   - Описание: Поиск репозитория с названием "admin-dashboard-starter"
+
+- Query: `"admin-dashboard-starter" in:name`
+- Описание: Поиск репозитория с названием "admin-dashboard-starter"
 
 11. **admin_dashboard**
-   - Query: `"admin_dashboard" in:name`
-   - Описание: Поиск репозитория с названием "admin_dashboard"
+
+- Query: `"admin_dashboard" in:name`
+- Описание: Поиск репозитория с названием "admin_dashboard"
 
 12. **v0_admin_dashboard**
-   - Query: `"v0_admin_dashboard" in:name`
-   - Описание: Поиск репозитория с названием "v0_admin_dashboard"
+
+- Query: `"v0_admin_dashboard" in:name`
+- Описание: Поиск репозитория с названием "v0_admin_dashboard"
 
 13. **adminDashboard**
-   - Query: `"adminDashboard" in:name`
-   - Описание: Поиск репозитория с названием "adminDashboard"
+
+- Query: `"adminDashboard" in:name`
+- Описание: Поиск репозитория с названием "adminDashboard"
 
 14. **v0AdminDashboard**
-   - Query: `"v0AdminDashboard" in:name`
-   - Описание: Поиск репозитория с названием "v0AdminDashboard"
+
+- Query: `"v0AdminDashboard" in:name`
+- Описание: Поиск репозитория с названием "v0AdminDashboard"
 
 15. **AdminDashboard**
-   - Query: `"AdminDashboard" in:name`
-   - Описание: Поиск репозитория с названием "AdminDashboard"
+
+- Query: `"AdminDashboard" in:name`
+- Описание: Поиск репозитория с названием "AdminDashboard"
 
 16. **V0AdminDashboard**
-   - Query: `"V0AdminDashboard" in:name`
-   - Описание: Поиск репозитория с названием "V0AdminDashboard"
+
+- Query: `"V0AdminDashboard" in:name`
+- Описание: Поиск репозитория с названием "V0AdminDashboard"
 
 ---
+
 ### 13. chat-ui-with-vibration
+
 - **Оригинальная ссылка**: https://v0.app/community/chat-ui-with-vibration-xf3RmrkKlxc
 - **Варианты поиска**: 16
 
 #### GitHub Search Queries:
+
 1. **chat-ui-with-vibration**
    - Query: `"chat-ui-with-vibration" in:name`
    - Описание: Поиск репозитория с названием "chat-ui-with-vibration"
@@ -889,39 +1012,49 @@
    - Описание: Поиск репозитория с названием "chat-ui-with-vibration-template"
 
 10. **chat-ui-with-vibration-starter**
-   - Query: `"chat-ui-with-vibration-starter" in:name`
-   - Описание: Поиск репозитория с названием "chat-ui-with-vibration-starter"
+
+- Query: `"chat-ui-with-vibration-starter" in:name`
+- Описание: Поиск репозитория с названием "chat-ui-with-vibration-starter"
 
 11. **chat_ui_with_vibration**
-   - Query: `"chat_ui_with_vibration" in:name`
-   - Описание: Поиск репозитория с названием "chat_ui_with_vibration"
+
+- Query: `"chat_ui_with_vibration" in:name`
+- Описание: Поиск репозитория с названием "chat_ui_with_vibration"
 
 12. **v0_chat_ui_with_vibration**
-   - Query: `"v0_chat_ui_with_vibration" in:name`
-   - Описание: Поиск репозитория с названием "v0_chat_ui_with_vibration"
+
+- Query: `"v0_chat_ui_with_vibration" in:name`
+- Описание: Поиск репозитория с названием "v0_chat_ui_with_vibration"
 
 13. **chatUiWithVibration**
-   - Query: `"chatUiWithVibration" in:name`
-   - Описание: Поиск репозитория с названием "chatUiWithVibration"
+
+- Query: `"chatUiWithVibration" in:name`
+- Описание: Поиск репозитория с названием "chatUiWithVibration"
 
 14. **v0ChatUiWithVibration**
-   - Query: `"v0ChatUiWithVibration" in:name`
-   - Описание: Поиск репозитория с названием "v0ChatUiWithVibration"
+
+- Query: `"v0ChatUiWithVibration" in:name`
+- Описание: Поиск репозитория с названием "v0ChatUiWithVibration"
 
 15. **ChatUiWithVibration**
-   - Query: `"ChatUiWithVibration" in:name`
-   - Описание: Поиск репозитория с названием "ChatUiWithVibration"
+
+- Query: `"ChatUiWithVibration" in:name`
+- Описание: Поиск репозитория с названием "ChatUiWithVibration"
 
 16. **V0ChatUiWithVibration**
-   - Query: `"V0ChatUiWithVibration" in:name`
-   - Описание: Поиск репозитория с названием "V0ChatUiWithVibration"
+
+- Query: `"V0ChatUiWithVibration" in:name`
+- Описание: Поиск репозитория с названием "V0ChatUiWithVibration"
 
 ---
+
 ### 14. chat-ui
+
 - **Оригинальная ссылка**: https://v0.app/community/chat-ui-h4Ga3LeTpbl
 - **Варианты поиска**: 16
 
 #### GitHub Search Queries:
+
 1. **chat-ui**
    - Query: `"chat-ui" in:name`
    - Описание: Поиск репозитория с названием "chat-ui"
@@ -959,39 +1092,49 @@
    - Описание: Поиск репозитория с названием "chat-ui-template"
 
 10. **chat-ui-starter**
-   - Query: `"chat-ui-starter" in:name`
-   - Описание: Поиск репозитория с названием "chat-ui-starter"
+
+- Query: `"chat-ui-starter" in:name`
+- Описание: Поиск репозитория с названием "chat-ui-starter"
 
 11. **chat_ui**
-   - Query: `"chat_ui" in:name`
-   - Описание: Поиск репозитория с названием "chat_ui"
+
+- Query: `"chat_ui" in:name`
+- Описание: Поиск репозитория с названием "chat_ui"
 
 12. **v0_chat_ui**
-   - Query: `"v0_chat_ui" in:name`
-   - Описание: Поиск репозитория с названием "v0_chat_ui"
+
+- Query: `"v0_chat_ui" in:name`
+- Описание: Поиск репозитория с названием "v0_chat_ui"
 
 13. **chatUi**
-   - Query: `"chatUi" in:name`
-   - Описание: Поиск репозитория с названием "chatUi"
+
+- Query: `"chatUi" in:name`
+- Описание: Поиск репозитория с названием "chatUi"
 
 14. **v0ChatUi**
-   - Query: `"v0ChatUi" in:name`
-   - Описание: Поиск репозитория с названием "v0ChatUi"
+
+- Query: `"v0ChatUi" in:name`
+- Описание: Поиск репозитория с названием "v0ChatUi"
 
 15. **ChatUi**
-   - Query: `"ChatUi" in:name`
-   - Описание: Поиск репозитория с названием "ChatUi"
+
+- Query: `"ChatUi" in:name`
+- Описание: Поиск репозитория с названием "ChatUi"
 
 16. **V0ChatUi**
-   - Query: `"V0ChatUi" in:name`
-   - Описание: Поиск репозитория с названием "V0ChatUi"
+
+- Query: `"V0ChatUi" in:name`
+- Описание: Поиск репозитория с названием "V0ChatUi"
 
 ---
+
 ### 15. eleven-labs-conversational-ai-starter
+
 - **Оригинальная ссылка**: https://v0.app/community/eleven-labs-conversational-ai-starter-5TN93pl3bRS
 - **Варианты поиска**: 16
 
 #### GitHub Search Queries:
+
 1. **eleven-labs-conversational-ai-starter**
    - Query: `"eleven-labs-conversational-ai-starter" in:name`
    - Описание: Поиск репозитория с названием "eleven-labs-conversational-ai-starter"
@@ -1029,39 +1172,49 @@
    - Описание: Поиск репозитория с названием "eleven-labs-conversational-ai-starter-template"
 
 10. **eleven-labs-conversational-ai-starter-starter**
-   - Query: `"eleven-labs-conversational-ai-starter-starter" in:name`
-   - Описание: Поиск репозитория с названием "eleven-labs-conversational-ai-starter-starter"
+
+- Query: `"eleven-labs-conversational-ai-starter-starter" in:name`
+- Описание: Поиск репозитория с названием "eleven-labs-conversational-ai-starter-starter"
 
 11. **eleven_labs_conversational_ai_starter**
-   - Query: `"eleven_labs_conversational_ai_starter" in:name`
-   - Описание: Поиск репозитория с названием "eleven_labs_conversational_ai_starter"
+
+- Query: `"eleven_labs_conversational_ai_starter" in:name`
+- Описание: Поиск репозитория с названием "eleven_labs_conversational_ai_starter"
 
 12. **v0_eleven_labs_conversational_ai_starter**
-   - Query: `"v0_eleven_labs_conversational_ai_starter" in:name`
-   - Описание: Поиск репозитория с названием "v0_eleven_labs_conversational_ai_starter"
+
+- Query: `"v0_eleven_labs_conversational_ai_starter" in:name`
+- Описание: Поиск репозитория с названием "v0_eleven_labs_conversational_ai_starter"
 
 13. **elevenLabsConversationalAiStarter**
-   - Query: `"elevenLabsConversationalAiStarter" in:name`
-   - Описание: Поиск репозитория с названием "elevenLabsConversationalAiStarter"
+
+- Query: `"elevenLabsConversationalAiStarter" in:name`
+- Описание: Поиск репозитория с названием "elevenLabsConversationalAiStarter"
 
 14. **v0ElevenLabsConversationalAiStarter**
-   - Query: `"v0ElevenLabsConversationalAiStarter" in:name`
-   - Описание: Поиск репозитория с названием "v0ElevenLabsConversationalAiStarter"
+
+- Query: `"v0ElevenLabsConversationalAiStarter" in:name`
+- Описание: Поиск репозитория с названием "v0ElevenLabsConversationalAiStarter"
 
 15. **ElevenLabsConversationalAiStarter**
-   - Query: `"ElevenLabsConversationalAiStarter" in:name`
-   - Описание: Поиск репозитория с названием "ElevenLabsConversationalAiStarter"
+
+- Query: `"ElevenLabsConversationalAiStarter" in:name`
+- Описание: Поиск репозитория с названием "ElevenLabsConversationalAiStarter"
 
 16. **V0ElevenLabsConversationalAiStarter**
-   - Query: `"V0ElevenLabsConversationalAiStarter" in:name`
-   - Описание: Поиск репозитория с названием "V0ElevenLabsConversationalAiStarter"
+
+- Query: `"V0ElevenLabsConversationalAiStarter" in:name`
+- Описание: Поиск репозитория с названием "V0ElevenLabsConversationalAiStarter"
 
 ---
+
 ### 16. light-dark-image-transition
+
 - **Оригинальная ссылка**: https://v0.app/community/light-dark-image-transition-0WSCfiIps92
 - **Варианты поиска**: 16
 
 #### GitHub Search Queries:
+
 1. **light-dark-image-transition**
    - Query: `"light-dark-image-transition" in:name`
    - Описание: Поиск репозитория с названием "light-dark-image-transition"
@@ -1099,39 +1252,49 @@
    - Описание: Поиск репозитория с названием "light-dark-image-transition-template"
 
 10. **light-dark-image-transition-starter**
-   - Query: `"light-dark-image-transition-starter" in:name`
-   - Описание: Поиск репозитория с названием "light-dark-image-transition-starter"
+
+- Query: `"light-dark-image-transition-starter" in:name`
+- Описание: Поиск репозитория с названием "light-dark-image-transition-starter"
 
 11. **light_dark_image_transition**
-   - Query: `"light_dark_image_transition" in:name`
-   - Описание: Поиск репозитория с названием "light_dark_image_transition"
+
+- Query: `"light_dark_image_transition" in:name`
+- Описание: Поиск репозитория с названием "light_dark_image_transition"
 
 12. **v0_light_dark_image_transition**
-   - Query: `"v0_light_dark_image_transition" in:name`
-   - Описание: Поиск репозитория с названием "v0_light_dark_image_transition"
+
+- Query: `"v0_light_dark_image_transition" in:name`
+- Описание: Поиск репозитория с названием "v0_light_dark_image_transition"
 
 13. **lightDarkImageTransition**
-   - Query: `"lightDarkImageTransition" in:name`
-   - Описание: Поиск репозитория с названием "lightDarkImageTransition"
+
+- Query: `"lightDarkImageTransition" in:name`
+- Описание: Поиск репозитория с названием "lightDarkImageTransition"
 
 14. **v0LightDarkImageTransition**
-   - Query: `"v0LightDarkImageTransition" in:name`
-   - Описание: Поиск репозитория с названием "v0LightDarkImageTransition"
+
+- Query: `"v0LightDarkImageTransition" in:name`
+- Описание: Поиск репозитория с названием "v0LightDarkImageTransition"
 
 15. **LightDarkImageTransition**
-   - Query: `"LightDarkImageTransition" in:name`
-   - Описание: Поиск репозитория с названием "LightDarkImageTransition"
+
+- Query: `"LightDarkImageTransition" in:name`
+- Описание: Поиск репозитория с названием "LightDarkImageTransition"
 
 16. **V0LightDarkImageTransition**
-   - Query: `"V0LightDarkImageTransition" in:name`
-   - Описание: Поиск репозитория с названием "V0LightDarkImageTransition"
+
+- Query: `"V0LightDarkImageTransition" in:name`
+- Описание: Поиск репозитория с названием "V0LightDarkImageTransition"
 
 ---
+
 ### 17. dynamic-table
+
 - **Оригинальная ссылка**: https://v0.app/community/dynamic-table-hJCDzsfPzdV
 - **Варианты поиска**: 16
 
 #### GitHub Search Queries:
+
 1. **dynamic-table**
    - Query: `"dynamic-table" in:name`
    - Описание: Поиск репозитория с названием "dynamic-table"
@@ -1169,39 +1332,49 @@
    - Описание: Поиск репозитория с названием "dynamic-table-template"
 
 10. **dynamic-table-starter**
-   - Query: `"dynamic-table-starter" in:name`
-   - Описание: Поиск репозитория с названием "dynamic-table-starter"
+
+- Query: `"dynamic-table-starter" in:name`
+- Описание: Поиск репозитория с названием "dynamic-table-starter"
 
 11. **dynamic_table**
-   - Query: `"dynamic_table" in:name`
-   - Описание: Поиск репозитория с названием "dynamic_table"
+
+- Query: `"dynamic_table" in:name`
+- Описание: Поиск репозитория с названием "dynamic_table"
 
 12. **v0_dynamic_table**
-   - Query: `"v0_dynamic_table" in:name`
-   - Описание: Поиск репозитория с названием "v0_dynamic_table"
+
+- Query: `"v0_dynamic_table" in:name`
+- Описание: Поиск репозитория с названием "v0_dynamic_table"
 
 13. **dynamicTable**
-   - Query: `"dynamicTable" in:name`
-   - Описание: Поиск репозитория с названием "dynamicTable"
+
+- Query: `"dynamicTable" in:name`
+- Описание: Поиск репозитория с названием "dynamicTable"
 
 14. **v0DynamicTable**
-   - Query: `"v0DynamicTable" in:name`
-   - Описание: Поиск репозитория с названием "v0DynamicTable"
+
+- Query: `"v0DynamicTable" in:name`
+- Описание: Поиск репозитория с названием "v0DynamicTable"
 
 15. **DynamicTable**
-   - Query: `"DynamicTable" in:name`
-   - Описание: Поиск репозитория с названием "DynamicTable"
+
+- Query: `"DynamicTable" in:name`
+- Описание: Поиск репозитория с названием "DynamicTable"
 
 16. **V0DynamicTable**
-   - Query: `"V0DynamicTable" in:name`
-   - Описание: Поиск репозитория с названием "V0DynamicTable"
+
+- Query: `"V0DynamicTable" in:name`
+- Описание: Поиск репозитория с названием "V0DynamicTable"
 
 ---
+
 ### 18. drageasy-drag-and-drop-dashboard
+
 - **Оригинальная ссылка**: https://v0.app/community/drageasy-drag-and-drop-dashboard-mLIx6xWQwmP
 - **Варианты поиска**: 16
 
 #### GitHub Search Queries:
+
 1. **drageasy-drag-and-drop-dashboard**
    - Query: `"drageasy-drag-and-drop-dashboard" in:name`
    - Описание: Поиск репозитория с названием "drageasy-drag-and-drop-dashboard"
@@ -1239,39 +1412,49 @@
    - Описание: Поиск репозитория с названием "drageasy-drag-and-drop-dashboard-template"
 
 10. **drageasy-drag-and-drop-dashboard-starter**
-   - Query: `"drageasy-drag-and-drop-dashboard-starter" in:name`
-   - Описание: Поиск репозитория с названием "drageasy-drag-and-drop-dashboard-starter"
+
+- Query: `"drageasy-drag-and-drop-dashboard-starter" in:name`
+- Описание: Поиск репозитория с названием "drageasy-drag-and-drop-dashboard-starter"
 
 11. **drageasy_drag_and_drop_dashboard**
-   - Query: `"drageasy_drag_and_drop_dashboard" in:name`
-   - Описание: Поиск репозитория с названием "drageasy_drag_and_drop_dashboard"
+
+- Query: `"drageasy_drag_and_drop_dashboard" in:name`
+- Описание: Поиск репозитория с названием "drageasy_drag_and_drop_dashboard"
 
 12. **v0_drageasy_drag_and_drop_dashboard**
-   - Query: `"v0_drageasy_drag_and_drop_dashboard" in:name`
-   - Описание: Поиск репозитория с названием "v0_drageasy_drag_and_drop_dashboard"
+
+- Query: `"v0_drageasy_drag_and_drop_dashboard" in:name`
+- Описание: Поиск репозитория с названием "v0_drageasy_drag_and_drop_dashboard"
 
 13. **drageasyDragAndDropDashboard**
-   - Query: `"drageasyDragAndDropDashboard" in:name`
-   - Описание: Поиск репозитория с названием "drageasyDragAndDropDashboard"
+
+- Query: `"drageasyDragAndDropDashboard" in:name`
+- Описание: Поиск репозитория с названием "drageasyDragAndDropDashboard"
 
 14. **v0DrageasyDragAndDropDashboard**
-   - Query: `"v0DrageasyDragAndDropDashboard" in:name`
-   - Описание: Поиск репозитория с названием "v0DrageasyDragAndDropDashboard"
+
+- Query: `"v0DrageasyDragAndDropDashboard" in:name`
+- Описание: Поиск репозитория с названием "v0DrageasyDragAndDropDashboard"
 
 15. **DrageasyDragAndDropDashboard**
-   - Query: `"DrageasyDragAndDropDashboard" in:name`
-   - Описание: Поиск репозитория с названием "DrageasyDragAndDropDashboard"
+
+- Query: `"DrageasyDragAndDropDashboard" in:name`
+- Описание: Поиск репозитория с названием "DrageasyDragAndDropDashboard"
 
 16. **V0DrageasyDragAndDropDashboard**
-   - Query: `"V0DrageasyDragAndDropDashboard" in:name`
-   - Описание: Поиск репозитория с названием "V0DrageasyDragAndDropDashboard"
+
+- Query: `"V0DrageasyDragAndDropDashboard" in:name`
+- Описание: Поиск репозитория с названием "V0DrageasyDragAndDropDashboard"
 
 ---
+
 ### 19. login-03
+
 - **Оригинальная ссылка**: https://v0.app/community/login-03-LtQ7cIPj9o5
 - **Варианты поиска**: 16
 
 #### GitHub Search Queries:
+
 1. **login-03**
    - Query: `"login-03" in:name`
    - Описание: Поиск репозитория с названием "login-03"
@@ -1309,39 +1492,49 @@
    - Описание: Поиск репозитория с названием "login-03-template"
 
 10. **login-03-starter**
-   - Query: `"login-03-starter" in:name`
-   - Описание: Поиск репозитория с названием "login-03-starter"
+
+- Query: `"login-03-starter" in:name`
+- Описание: Поиск репозитория с названием "login-03-starter"
 
 11. **login_03**
-   - Query: `"login_03" in:name`
-   - Описание: Поиск репозитория с названием "login_03"
+
+- Query: `"login_03" in:name`
+- Описание: Поиск репозитория с названием "login_03"
 
 12. **v0_login_03**
-   - Query: `"v0_login_03" in:name`
-   - Описание: Поиск репозитория с названием "v0_login_03"
+
+- Query: `"v0_login_03" in:name`
+- Описание: Поиск репозитория с названием "v0_login_03"
 
 13. **login03**
-   - Query: `"login03" in:name`
-   - Описание: Поиск репозитория с названием "login03"
+
+- Query: `"login03" in:name`
+- Описание: Поиск репозитория с названием "login03"
 
 14. **v0Login03**
-   - Query: `"v0Login03" in:name`
-   - Описание: Поиск репозитория с названием "v0Login03"
+
+- Query: `"v0Login03" in:name`
+- Описание: Поиск репозитория с названием "v0Login03"
 
 15. **Login03**
-   - Query: `"Login03" in:name`
-   - Описание: Поиск репозитория с названием "Login03"
+
+- Query: `"Login03" in:name`
+- Описание: Поиск репозитория с названием "Login03"
 
 16. **V0Login03**
-   - Query: `"V0Login03" in:name`
-   - Описание: Поиск репозитория с названием "V0Login03"
+
+- Query: `"V0Login03" in:name`
+- Описание: Поиск репозитория с названием "V0Login03"
 
 ---
+
 ### 20. sidebar-in-dialog
+
 - **Оригинальная ссылка**: https://v0.app/community/sidebar-in-dialog-WzUz8z8OdKf
 - **Варианты поиска**: 16
 
 #### GitHub Search Queries:
+
 1. **sidebar-in-dialog**
    - Query: `"sidebar-in-dialog" in:name`
    - Описание: Поиск репозитория с названием "sidebar-in-dialog"
@@ -1379,39 +1572,49 @@
    - Описание: Поиск репозитория с названием "sidebar-in-dialog-template"
 
 10. **sidebar-in-dialog-starter**
-   - Query: `"sidebar-in-dialog-starter" in:name`
-   - Описание: Поиск репозитория с названием "sidebar-in-dialog-starter"
+
+- Query: `"sidebar-in-dialog-starter" in:name`
+- Описание: Поиск репозитория с названием "sidebar-in-dialog-starter"
 
 11. **sidebar_in_dialog**
-   - Query: `"sidebar_in_dialog" in:name`
-   - Описание: Поиск репозитория с названием "sidebar_in_dialog"
+
+- Query: `"sidebar_in_dialog" in:name`
+- Описание: Поиск репозитория с названием "sidebar_in_dialog"
 
 12. **v0_sidebar_in_dialog**
-   - Query: `"v0_sidebar_in_dialog" in:name`
-   - Описание: Поиск репозитория с названием "v0_sidebar_in_dialog"
+
+- Query: `"v0_sidebar_in_dialog" in:name`
+- Описание: Поиск репозитория с названием "v0_sidebar_in_dialog"
 
 13. **sidebarInDialog**
-   - Query: `"sidebarInDialog" in:name`
-   - Описание: Поиск репозитория с названием "sidebarInDialog"
+
+- Query: `"sidebarInDialog" in:name`
+- Описание: Поиск репозитория с названием "sidebarInDialog"
 
 14. **v0SidebarInDialog**
-   - Query: `"v0SidebarInDialog" in:name`
-   - Описание: Поиск репозитория с названием "v0SidebarInDialog"
+
+- Query: `"v0SidebarInDialog" in:name`
+- Описание: Поиск репозитория с названием "v0SidebarInDialog"
 
 15. **SidebarInDialog**
-   - Query: `"SidebarInDialog" in:name`
-   - Описание: Поиск репозитория с названием "SidebarInDialog"
+
+- Query: `"SidebarInDialog" in:name`
+- Описание: Поиск репозитория с названием "SidebarInDialog"
 
 16. **V0SidebarInDialog**
-   - Query: `"V0SidebarInDialog" in:name`
-   - Описание: Поиск репозитория с названием "V0SidebarInDialog"
+
+- Query: `"V0SidebarInDialog" in:name`
+- Описание: Поиск репозитория с названием "V0SidebarInDialog"
 
 ---
+
 ### 21. login-02
+
 - **Оригинальная ссылка**: https://v0.app/community/login-02-lgh5A223SiR
 - **Варианты поиска**: 16
 
 #### GitHub Search Queries:
+
 1. **login-02**
    - Query: `"login-02" in:name`
    - Описание: Поиск репозитория с названием "login-02"
@@ -1449,39 +1652,49 @@
    - Описание: Поиск репозитория с названием "login-02-template"
 
 10. **login-02-starter**
-   - Query: `"login-02-starter" in:name`
-   - Описание: Поиск репозитория с названием "login-02-starter"
+
+- Query: `"login-02-starter" in:name`
+- Описание: Поиск репозитория с названием "login-02-starter"
 
 11. **login_02**
-   - Query: `"login_02" in:name`
-   - Описание: Поиск репозитория с названием "login_02"
+
+- Query: `"login_02" in:name`
+- Описание: Поиск репозитория с названием "login_02"
 
 12. **v0_login_02**
-   - Query: `"v0_login_02" in:name`
-   - Описание: Поиск репозитория с названием "v0_login_02"
+
+- Query: `"v0_login_02" in:name`
+- Описание: Поиск репозитория с названием "v0_login_02"
 
 13. **login02**
-   - Query: `"login02" in:name`
-   - Описание: Поиск репозитория с названием "login02"
+
+- Query: `"login02" in:name`
+- Описание: Поиск репозитория с названием "login02"
 
 14. **v0Login02**
-   - Query: `"v0Login02" in:name`
-   - Описание: Поиск репозитория с названием "v0Login02"
+
+- Query: `"v0Login02" in:name`
+- Описание: Поиск репозитория с названием "v0Login02"
 
 15. **Login02**
-   - Query: `"Login02" in:name`
-   - Описание: Поиск репозитория с названием "Login02"
+
+- Query: `"Login02" in:name`
+- Описание: Поиск репозитория с названием "Login02"
 
 16. **V0Login02**
-   - Query: `"V0Login02" in:name`
-   - Описание: Поиск репозитория с названием "V0Login02"
+
+- Query: `"V0Login02" in:name`
+- Описание: Поиск репозитория с названием "V0Login02"
 
 ---
+
 ### 22. file-tree-sidebar
+
 - **Оригинальная ссылка**: https://v0.app/community/file-tree-sidebar-NBfcFIKai4T
 - **Варианты поиска**: 16
 
 #### GitHub Search Queries:
+
 1. **file-tree-sidebar**
    - Query: `"file-tree-sidebar" in:name`
    - Описание: Поиск репозитория с названием "file-tree-sidebar"
@@ -1519,39 +1732,49 @@
    - Описание: Поиск репозитория с названием "file-tree-sidebar-template"
 
 10. **file-tree-sidebar-starter**
-   - Query: `"file-tree-sidebar-starter" in:name`
-   - Описание: Поиск репозитория с названием "file-tree-sidebar-starter"
+
+- Query: `"file-tree-sidebar-starter" in:name`
+- Описание: Поиск репозитория с названием "file-tree-sidebar-starter"
 
 11. **file_tree_sidebar**
-   - Query: `"file_tree_sidebar" in:name`
-   - Описание: Поиск репозитория с названием "file_tree_sidebar"
+
+- Query: `"file_tree_sidebar" in:name`
+- Описание: Поиск репозитория с названием "file_tree_sidebar"
 
 12. **v0_file_tree_sidebar**
-   - Query: `"v0_file_tree_sidebar" in:name`
-   - Описание: Поиск репозитория с названием "v0_file_tree_sidebar"
+
+- Query: `"v0_file_tree_sidebar" in:name`
+- Описание: Поиск репозитория с названием "v0_file_tree_sidebar"
 
 13. **fileTreeSidebar**
-   - Query: `"fileTreeSidebar" in:name`
-   - Описание: Поиск репозитория с названием "fileTreeSidebar"
+
+- Query: `"fileTreeSidebar" in:name`
+- Описание: Поиск репозитория с названием "fileTreeSidebar"
 
 14. **v0FileTreeSidebar**
-   - Query: `"v0FileTreeSidebar" in:name`
-   - Описание: Поиск репозитория с названием "v0FileTreeSidebar"
+
+- Query: `"v0FileTreeSidebar" in:name`
+- Описание: Поиск репозитория с названием "v0FileTreeSidebar"
 
 15. **FileTreeSidebar**
-   - Query: `"FileTreeSidebar" in:name`
-   - Описание: Поиск репозитория с названием "FileTreeSidebar"
+
+- Query: `"FileTreeSidebar" in:name`
+- Описание: Поиск репозитория с названием "FileTreeSidebar"
 
 16. **V0FileTreeSidebar**
-   - Query: `"V0FileTreeSidebar" in:name`
-   - Описание: Поиск репозитория с названием "V0FileTreeSidebar"
+
+- Query: `"V0FileTreeSidebar" in:name`
+- Описание: Поиск репозитория с названием "V0FileTreeSidebar"
 
 ---
+
 ### 23. team-member-invites
+
 - **Оригинальная ссылка**: https://v0.app/community/team-member-invites-BtbvdBJqRve
 - **Варианты поиска**: 16
 
 #### GitHub Search Queries:
+
 1. **team-member-invites**
    - Query: `"team-member-invites" in:name`
    - Описание: Поиск репозитория с названием "team-member-invites"
@@ -1589,39 +1812,49 @@
    - Описание: Поиск репозитория с названием "team-member-invites-template"
 
 10. **team-member-invites-starter**
-   - Query: `"team-member-invites-starter" in:name`
-   - Описание: Поиск репозитория с названием "team-member-invites-starter"
+
+- Query: `"team-member-invites-starter" in:name`
+- Описание: Поиск репозитория с названием "team-member-invites-starter"
 
 11. **team_member_invites**
-   - Query: `"team_member_invites" in:name`
-   - Описание: Поиск репозитория с названием "team_member_invites"
+
+- Query: `"team_member_invites" in:name`
+- Описание: Поиск репозитория с названием "team_member_invites"
 
 12. **v0_team_member_invites**
-   - Query: `"v0_team_member_invites" in:name`
-   - Описание: Поиск репозитория с названием "v0_team_member_invites"
+
+- Query: `"v0_team_member_invites" in:name`
+- Описание: Поиск репозитория с названием "v0_team_member_invites"
 
 13. **teamMemberInvites**
-   - Query: `"teamMemberInvites" in:name`
-   - Описание: Поиск репозитория с названием "teamMemberInvites"
+
+- Query: `"teamMemberInvites" in:name`
+- Описание: Поиск репозитория с названием "teamMemberInvites"
 
 14. **v0TeamMemberInvites**
-   - Query: `"v0TeamMemberInvites" in:name`
-   - Описание: Поиск репозитория с названием "v0TeamMemberInvites"
+
+- Query: `"v0TeamMemberInvites" in:name`
+- Описание: Поиск репозитория с названием "v0TeamMemberInvites"
 
 15. **TeamMemberInvites**
-   - Query: `"TeamMemberInvites" in:name`
-   - Описание: Поиск репозитория с названием "TeamMemberInvites"
+
+- Query: `"TeamMemberInvites" in:name`
+- Описание: Поиск репозитория с названием "TeamMemberInvites"
 
 16. **V0TeamMemberInvites**
-   - Query: `"V0TeamMemberInvites" in:name`
-   - Описание: Поиск репозитория с названием "V0TeamMemberInvites"
+
+- Query: `"V0TeamMemberInvites" in:name`
+- Описание: Поиск репозитория с названием "V0TeamMemberInvites"
 
 ---
+
 ### 24. eleven-labs-music-starter
+
 - **Оригинальная ссылка**: https://v0.app/community/eleven-labs-music-starter-xuCjYtmbQri
 - **Варианты поиска**: 16
 
 #### GitHub Search Queries:
+
 1. **eleven-labs-music-starter**
    - Query: `"eleven-labs-music-starter" in:name`
    - Описание: Поиск репозитория с названием "eleven-labs-music-starter"
@@ -1659,39 +1892,49 @@
    - Описание: Поиск репозитория с названием "eleven-labs-music-starter-template"
 
 10. **eleven-labs-music-starter-starter**
-   - Query: `"eleven-labs-music-starter-starter" in:name`
-   - Описание: Поиск репозитория с названием "eleven-labs-music-starter-starter"
+
+- Query: `"eleven-labs-music-starter-starter" in:name`
+- Описание: Поиск репозитория с названием "eleven-labs-music-starter-starter"
 
 11. **eleven_labs_music_starter**
-   - Query: `"eleven_labs_music_starter" in:name`
-   - Описание: Поиск репозитория с названием "eleven_labs_music_starter"
+
+- Query: `"eleven_labs_music_starter" in:name`
+- Описание: Поиск репозитория с названием "eleven_labs_music_starter"
 
 12. **v0_eleven_labs_music_starter**
-   - Query: `"v0_eleven_labs_music_starter" in:name`
-   - Описание: Поиск репозитория с названием "v0_eleven_labs_music_starter"
+
+- Query: `"v0_eleven_labs_music_starter" in:name`
+- Описание: Поиск репозитория с названием "v0_eleven_labs_music_starter"
 
 13. **elevenLabsMusicStarter**
-   - Query: `"elevenLabsMusicStarter" in:name`
-   - Описание: Поиск репозитория с названием "elevenLabsMusicStarter"
+
+- Query: `"elevenLabsMusicStarter" in:name`
+- Описание: Поиск репозитория с названием "elevenLabsMusicStarter"
 
 14. **v0ElevenLabsMusicStarter**
-   - Query: `"v0ElevenLabsMusicStarter" in:name`
-   - Описание: Поиск репозитория с названием "v0ElevenLabsMusicStarter"
+
+- Query: `"v0ElevenLabsMusicStarter" in:name`
+- Описание: Поиск репозитория с названием "v0ElevenLabsMusicStarter"
 
 15. **ElevenLabsMusicStarter**
-   - Query: `"ElevenLabsMusicStarter" in:name`
-   - Описание: Поиск репозитория с названием "ElevenLabsMusicStarter"
+
+- Query: `"ElevenLabsMusicStarter" in:name`
+- Описание: Поиск репозитория с названием "ElevenLabsMusicStarter"
 
 16. **V0ElevenLabsMusicStarter**
-   - Query: `"V0ElevenLabsMusicStarter" in:name`
-   - Описание: Поиск репозитория с названием "V0ElevenLabsMusicStarter"
+
+- Query: `"V0ElevenLabsMusicStarter" in:name`
+- Описание: Поиск репозитория с названием "V0ElevenLabsMusicStarter"
 
 ---
+
 ### 25. eleven-labs-agents-starter
+
 - **Оригинальная ссылка**: https://v0.app/community/eleven-labs-agents-starter-5TN93pl3bRS
 - **Варианты поиска**: 16
 
 #### GitHub Search Queries:
+
 1. **eleven-labs-agents-starter**
    - Query: `"eleven-labs-agents-starter" in:name`
    - Описание: Поиск репозитория с названием "eleven-labs-agents-starter"
@@ -1729,39 +1972,49 @@
    - Описание: Поиск репозитория с названием "eleven-labs-agents-starter-template"
 
 10. **eleven-labs-agents-starter-starter**
-   - Query: `"eleven-labs-agents-starter-starter" in:name`
-   - Описание: Поиск репозитория с названием "eleven-labs-agents-starter-starter"
+
+- Query: `"eleven-labs-agents-starter-starter" in:name`
+- Описание: Поиск репозитория с названием "eleven-labs-agents-starter-starter"
 
 11. **eleven_labs_agents_starter**
-   - Query: `"eleven_labs_agents_starter" in:name`
-   - Описание: Поиск репозитория с названием "eleven_labs_agents_starter"
+
+- Query: `"eleven_labs_agents_starter" in:name`
+- Описание: Поиск репозитория с названием "eleven_labs_agents_starter"
 
 12. **v0_eleven_labs_agents_starter**
-   - Query: `"v0_eleven_labs_agents_starter" in:name`
-   - Описание: Поиск репозитория с названием "v0_eleven_labs_agents_starter"
+
+- Query: `"v0_eleven_labs_agents_starter" in:name`
+- Описание: Поиск репозитория с названием "v0_eleven_labs_agents_starter"
 
 13. **elevenLabsAgentsStarter**
-   - Query: `"elevenLabsAgentsStarter" in:name`
-   - Описание: Поиск репозитория с названием "elevenLabsAgentsStarter"
+
+- Query: `"elevenLabsAgentsStarter" in:name`
+- Описание: Поиск репозитория с названием "elevenLabsAgentsStarter"
 
 14. **v0ElevenLabsAgentsStarter**
-   - Query: `"v0ElevenLabsAgentsStarter" in:name`
-   - Описание: Поиск репозитория с названием "v0ElevenLabsAgentsStarter"
+
+- Query: `"v0ElevenLabsAgentsStarter" in:name`
+- Описание: Поиск репозитория с названием "v0ElevenLabsAgentsStarter"
 
 15. **ElevenLabsAgentsStarter**
-   - Query: `"ElevenLabsAgentsStarter" in:name`
-   - Описание: Поиск репозитория с названием "ElevenLabsAgentsStarter"
+
+- Query: `"ElevenLabsAgentsStarter" in:name`
+- Описание: Поиск репозитория с названием "ElevenLabsAgentsStarter"
 
 16. **V0ElevenLabsAgentsStarter**
-   - Query: `"V0ElevenLabsAgentsStarter" in:name`
-   - Описание: Поиск репозитория с названием "V0ElevenLabsAgentsStarter"
+
+- Query: `"V0ElevenLabsAgentsStarter" in:name`
+- Описание: Поиск репозитория с названием "V0ElevenLabsAgentsStarter"
 
 ---
+
 ### 26. eleven-labs-v3-podcast-generator
+
 - **Оригинальная ссылка**: https://v0.app/community/eleven-labs-v3-podcast-generator-9zvVUBtxy6i
 - **Варианты поиска**: 16
 
 #### GitHub Search Queries:
+
 1. **eleven-labs-v3-podcast-generator**
    - Query: `"eleven-labs-v3-podcast-generator" in:name`
    - Описание: Поиск репозитория с названием "eleven-labs-v3-podcast-generator"
@@ -1799,39 +2052,49 @@
    - Описание: Поиск репозитория с названием "eleven-labs-v3-podcast-generator-template"
 
 10. **eleven-labs-v3-podcast-generator-starter**
-   - Query: `"eleven-labs-v3-podcast-generator-starter" in:name`
-   - Описание: Поиск репозитория с названием "eleven-labs-v3-podcast-generator-starter"
+
+- Query: `"eleven-labs-v3-podcast-generator-starter" in:name`
+- Описание: Поиск репозитория с названием "eleven-labs-v3-podcast-generator-starter"
 
 11. **eleven_labs_v3_podcast_generator**
-   - Query: `"eleven_labs_v3_podcast_generator" in:name`
-   - Описание: Поиск репозитория с названием "eleven_labs_v3_podcast_generator"
+
+- Query: `"eleven_labs_v3_podcast_generator" in:name`
+- Описание: Поиск репозитория с названием "eleven_labs_v3_podcast_generator"
 
 12. **v0_eleven_labs_v3_podcast_generator**
-   - Query: `"v0_eleven_labs_v3_podcast_generator" in:name`
-   - Описание: Поиск репозитория с названием "v0_eleven_labs_v3_podcast_generator"
+
+- Query: `"v0_eleven_labs_v3_podcast_generator" in:name`
+- Описание: Поиск репозитория с названием "v0_eleven_labs_v3_podcast_generator"
 
 13. **elevenLabsV3PodcastGenerator**
-   - Query: `"elevenLabsV3PodcastGenerator" in:name`
-   - Описание: Поиск репозитория с названием "elevenLabsV3PodcastGenerator"
+
+- Query: `"elevenLabsV3PodcastGenerator" in:name`
+- Описание: Поиск репозитория с названием "elevenLabsV3PodcastGenerator"
 
 14. **v0ElevenLabsV3PodcastGenerator**
-   - Query: `"v0ElevenLabsV3PodcastGenerator" in:name`
-   - Описание: Поиск репозитория с названием "v0ElevenLabsV3PodcastGenerator"
+
+- Query: `"v0ElevenLabsV3PodcastGenerator" in:name`
+- Описание: Поиск репозитория с названием "v0ElevenLabsV3PodcastGenerator"
 
 15. **ElevenLabsV3PodcastGenerator**
-   - Query: `"ElevenLabsV3PodcastGenerator" in:name`
-   - Описание: Поиск репозитория с названием "ElevenLabsV3PodcastGenerator"
+
+- Query: `"ElevenLabsV3PodcastGenerator" in:name`
+- Описание: Поиск репозитория с названием "ElevenLabsV3PodcastGenerator"
 
 16. **V0ElevenLabsV3PodcastGenerator**
-   - Query: `"V0ElevenLabsV3PodcastGenerator" in:name`
-   - Описание: Поиск репозитория с названием "V0ElevenLabsV3PodcastGenerator"
+
+- Query: `"V0ElevenLabsV3PodcastGenerator" in:name`
+- Описание: Поиск репозитория с названием "V0ElevenLabsV3PodcastGenerator"
 
 ---
+
 ### 27. next-js-doc-like-file-tree
+
 - **Оригинальная ссылка**: https://v0.app/chat/next-js-doc-like-file-tree-BNbIj6SOUTQ
 - **Варианты поиска**: 16
 
 #### GitHub Search Queries:
+
 1. **next-js-doc-like-file-tree**
    - Query: `"next-js-doc-like-file-tree" in:name`
    - Описание: Поиск репозитория с названием "next-js-doc-like-file-tree"
@@ -1869,39 +2132,49 @@
    - Описание: Поиск репозитория с названием "next-js-doc-like-file-tree-template"
 
 10. **next-js-doc-like-file-tree-starter**
-   - Query: `"next-js-doc-like-file-tree-starter" in:name`
-   - Описание: Поиск репозитория с названием "next-js-doc-like-file-tree-starter"
+
+- Query: `"next-js-doc-like-file-tree-starter" in:name`
+- Описание: Поиск репозитория с названием "next-js-doc-like-file-tree-starter"
 
 11. **next_js_doc_like_file_tree**
-   - Query: `"next_js_doc_like_file_tree" in:name`
-   - Описание: Поиск репозитория с названием "next_js_doc_like_file_tree"
+
+- Query: `"next_js_doc_like_file_tree" in:name`
+- Описание: Поиск репозитория с названием "next_js_doc_like_file_tree"
 
 12. **v0_next_js_doc_like_file_tree**
-   - Query: `"v0_next_js_doc_like_file_tree" in:name`
-   - Описание: Поиск репозитория с названием "v0_next_js_doc_like_file_tree"
+
+- Query: `"v0_next_js_doc_like_file_tree" in:name`
+- Описание: Поиск репозитория с названием "v0_next_js_doc_like_file_tree"
 
 13. **nextJsDocLikeFileTree**
-   - Query: `"nextJsDocLikeFileTree" in:name`
-   - Описание: Поиск репозитория с названием "nextJsDocLikeFileTree"
+
+- Query: `"nextJsDocLikeFileTree" in:name`
+- Описание: Поиск репозитория с названием "nextJsDocLikeFileTree"
 
 14. **v0NextJsDocLikeFileTree**
-   - Query: `"v0NextJsDocLikeFileTree" in:name`
-   - Описание: Поиск репозитория с названием "v0NextJsDocLikeFileTree"
+
+- Query: `"v0NextJsDocLikeFileTree" in:name`
+- Описание: Поиск репозитория с названием "v0NextJsDocLikeFileTree"
 
 15. **NextJsDocLikeFileTree**
-   - Query: `"NextJsDocLikeFileTree" in:name`
-   - Описание: Поиск репозитория с названием "NextJsDocLikeFileTree"
+
+- Query: `"NextJsDocLikeFileTree" in:name`
+- Описание: Поиск репозитория с названием "NextJsDocLikeFileTree"
 
 16. **V0NextJsDocLikeFileTree**
-   - Query: `"V0NextJsDocLikeFileTree" in:name`
-   - Описание: Поиск репозитория с названием "V0NextJsDocLikeFileTree"
+
+- Query: `"V0NextJsDocLikeFileTree" in:name`
+- Описание: Поиск репозитория с названием "V0NextJsDocLikeFileTree"
 
 ---
+
 ### 28. vercel-tabs
+
 - **Оригинальная ссылка**: https://v0.app/community/vercel-tabs-BT27p0aGPsa
 - **Варианты поиска**: 16
 
 #### GitHub Search Queries:
+
 1. **vercel-tabs**
    - Query: `"vercel-tabs" in:name`
    - Описание: Поиск репозитория с названием "vercel-tabs"
@@ -1939,39 +2212,49 @@
    - Описание: Поиск репозитория с названием "vercel-tabs-template"
 
 10. **vercel-tabs-starter**
-   - Query: `"vercel-tabs-starter" in:name`
-   - Описание: Поиск репозитория с названием "vercel-tabs-starter"
+
+- Query: `"vercel-tabs-starter" in:name`
+- Описание: Поиск репозитория с названием "vercel-tabs-starter"
 
 11. **vercel_tabs**
-   - Query: `"vercel_tabs" in:name`
-   - Описание: Поиск репозитория с названием "vercel_tabs"
+
+- Query: `"vercel_tabs" in:name`
+- Описание: Поиск репозитория с названием "vercel_tabs"
 
 12. **v0_vercel_tabs**
-   - Query: `"v0_vercel_tabs" in:name`
-   - Описание: Поиск репозитория с названием "v0_vercel_tabs"
+
+- Query: `"v0_vercel_tabs" in:name`
+- Описание: Поиск репозитория с названием "v0_vercel_tabs"
 
 13. **vercelTabs**
-   - Query: `"vercelTabs" in:name`
-   - Описание: Поиск репозитория с названием "vercelTabs"
+
+- Query: `"vercelTabs" in:name`
+- Описание: Поиск репозитория с названием "vercelTabs"
 
 14. **v0VercelTabs**
-   - Query: `"v0VercelTabs" in:name`
-   - Описание: Поиск репозитория с названием "v0VercelTabs"
+
+- Query: `"v0VercelTabs" in:name`
+- Описание: Поиск репозитория с названием "v0VercelTabs"
 
 15. **VercelTabs**
-   - Query: `"VercelTabs" in:name`
-   - Описание: Поиск репозитория с названием "VercelTabs"
+
+- Query: `"VercelTabs" in:name`
+- Описание: Поиск репозитория с названием "VercelTabs"
 
 16. **V0VercelTabs**
-   - Query: `"V0VercelTabs" in:name`
-   - Описание: Поиск репозитория с названием "V0VercelTabs"
+
+- Query: `"V0VercelTabs" in:name`
+- Описание: Поиск репозитория с названием "V0VercelTabs"
 
 ---
+
 ### 29. glow-menu-component
+
 - **Оригинальная ссылка**: https://v0.app/community/glow-menu-component-XqrIezRilBR
 - **Варианты поиска**: 16
 
 #### GitHub Search Queries:
+
 1. **glow-menu-component**
    - Query: `"glow-menu-component" in:name`
    - Описание: Поиск репозитория с названием "glow-menu-component"
@@ -2009,39 +2292,49 @@
    - Описание: Поиск репозитория с названием "glow-menu-component-template"
 
 10. **glow-menu-component-starter**
-   - Query: `"glow-menu-component-starter" in:name`
-   - Описание: Поиск репозитория с названием "glow-menu-component-starter"
+
+- Query: `"glow-menu-component-starter" in:name`
+- Описание: Поиск репозитория с названием "glow-menu-component-starter"
 
 11. **glow_menu_component**
-   - Query: `"glow_menu_component" in:name`
-   - Описание: Поиск репозитория с названием "glow_menu_component"
+
+- Query: `"glow_menu_component" in:name`
+- Описание: Поиск репозитория с названием "glow_menu_component"
 
 12. **v0_glow_menu_component**
-   - Query: `"v0_glow_menu_component" in:name`
-   - Описание: Поиск репозитория с названием "v0_glow_menu_component"
+
+- Query: `"v0_glow_menu_component" in:name`
+- Описание: Поиск репозитория с названием "v0_glow_menu_component"
 
 13. **glowMenuComponent**
-   - Query: `"glowMenuComponent" in:name`
-   - Описание: Поиск репозитория с названием "glowMenuComponent"
+
+- Query: `"glowMenuComponent" in:name`
+- Описание: Поиск репозитория с названием "glowMenuComponent"
 
 14. **v0GlowMenuComponent**
-   - Query: `"v0GlowMenuComponent" in:name`
-   - Описание: Поиск репозитория с названием "v0GlowMenuComponent"
+
+- Query: `"v0GlowMenuComponent" in:name`
+- Описание: Поиск репозитория с названием "v0GlowMenuComponent"
 
 15. **GlowMenuComponent**
-   - Query: `"GlowMenuComponent" in:name`
-   - Описание: Поиск репозитория с названием "GlowMenuComponent"
+
+- Query: `"GlowMenuComponent" in:name`
+- Описание: Поиск репозитория с названием "GlowMenuComponent"
 
 16. **V0GlowMenuComponent**
-   - Query: `"V0GlowMenuComponent" in:name`
-   - Описание: Поиск репозитория с названием "V0GlowMenuComponent"
+
+- Query: `"V0GlowMenuComponent" in:name`
+- Описание: Поиск репозитория с названием "V0GlowMenuComponent"
 
 ---
+
 ### 30. fluid-dropdown
+
 - **Оригинальная ссылка**: https://v0.app/community/fluid-dropdown-zWgCGYGZIcx
 - **Варианты поиска**: 16
 
 #### GitHub Search Queries:
+
 1. **fluid-dropdown**
    - Query: `"fluid-dropdown" in:name`
    - Описание: Поиск репозитория с названием "fluid-dropdown"
@@ -2079,39 +2372,49 @@
    - Описание: Поиск репозитория с названием "fluid-dropdown-template"
 
 10. **fluid-dropdown-starter**
-   - Query: `"fluid-dropdown-starter" in:name`
-   - Описание: Поиск репозитория с названием "fluid-dropdown-starter"
+
+- Query: `"fluid-dropdown-starter" in:name`
+- Описание: Поиск репозитория с названием "fluid-dropdown-starter"
 
 11. **fluid_dropdown**
-   - Query: `"fluid_dropdown" in:name`
-   - Описание: Поиск репозитория с названием "fluid_dropdown"
+
+- Query: `"fluid_dropdown" in:name`
+- Описание: Поиск репозитория с названием "fluid_dropdown"
 
 12. **v0_fluid_dropdown**
-   - Query: `"v0_fluid_dropdown" in:name`
-   - Описание: Поиск репозитория с названием "v0_fluid_dropdown"
+
+- Query: `"v0_fluid_dropdown" in:name`
+- Описание: Поиск репозитория с названием "v0_fluid_dropdown"
 
 13. **fluidDropdown**
-   - Query: `"fluidDropdown" in:name`
-   - Описание: Поиск репозитория с названием "fluidDropdown"
+
+- Query: `"fluidDropdown" in:name`
+- Описание: Поиск репозитория с названием "fluidDropdown"
 
 14. **v0FluidDropdown**
-   - Query: `"v0FluidDropdown" in:name`
-   - Описание: Поиск репозитория с названием "v0FluidDropdown"
+
+- Query: `"v0FluidDropdown" in:name`
+- Описание: Поиск репозитория с названием "v0FluidDropdown"
 
 15. **FluidDropdown**
-   - Query: `"FluidDropdown" in:name`
-   - Описание: Поиск репозитория с названием "FluidDropdown"
+
+- Query: `"FluidDropdown" in:name`
+- Описание: Поиск репозитория с названием "FluidDropdown"
 
 16. **V0FluidDropdown**
-   - Query: `"V0FluidDropdown" in:name`
-   - Описание: Поиск репозитория с названием "V0FluidDropdown"
+
+- Query: `"V0FluidDropdown" in:name`
+- Описание: Поиск репозитория с названием "V0FluidDropdown"
 
 ---
+
 ### 31. toast
+
 - **Оригинальная ссылка**: https://v0.app/community/toast-fLjYRXrijvp
 - **Варианты поиска**: 14
 
 #### GitHub Search Queries:
+
 1. **toast**
    - Query: `"toast" in:name`
    - Описание: Поиск репозитория с названием "toast"
@@ -2149,31 +2452,39 @@
    - Описание: Поиск репозитория с названием "toast-template"
 
 10. **toast-starter**
-   - Query: `"toast-starter" in:name`
-   - Описание: Поиск репозитория с названием "toast-starter"
+
+- Query: `"toast-starter" in:name`
+- Описание: Поиск репозитория с названием "toast-starter"
 
 11. **v0_toast**
-   - Query: `"v0_toast" in:name`
-   - Описание: Поиск репозитория с названием "v0_toast"
+
+- Query: `"v0_toast" in:name`
+- Описание: Поиск репозитория с названием "v0_toast"
 
 12. **v0Toast**
-   - Query: `"v0Toast" in:name`
-   - Описание: Поиск репозитория с названием "v0Toast"
+
+- Query: `"v0Toast" in:name`
+- Описание: Поиск репозитория с названием "v0Toast"
 
 13. **Toast**
-   - Query: `"Toast" in:name`
-   - Описание: Поиск репозитория с названием "Toast"
+
+- Query: `"Toast" in:name`
+- Описание: Поиск репозитория с названием "Toast"
 
 14. **V0Toast**
-   - Query: `"V0Toast" in:name`
-   - Описание: Поиск репозитория с названием "V0Toast"
+
+- Query: `"V0Toast" in:name`
+- Описание: Поиск репозитория с названием "V0Toast"
 
 ---
+
 ### 32. bento-grid
+
 - **Оригинальная ссылка**: https://v0.app/community/bento-grid-8QW53cSzCxp
 - **Варианты поиска**: 16
 
 #### GitHub Search Queries:
+
 1. **bento-grid**
    - Query: `"bento-grid" in:name`
    - Описание: Поиск репозитория с названием "bento-grid"
@@ -2211,39 +2522,49 @@
    - Описание: Поиск репозитория с названием "bento-grid-template"
 
 10. **bento-grid-starter**
-   - Query: `"bento-grid-starter" in:name`
-   - Описание: Поиск репозитория с названием "bento-grid-starter"
+
+- Query: `"bento-grid-starter" in:name`
+- Описание: Поиск репозитория с названием "bento-grid-starter"
 
 11. **bento_grid**
-   - Query: `"bento_grid" in:name`
-   - Описание: Поиск репозитория с названием "bento_grid"
+
+- Query: `"bento_grid" in:name`
+- Описание: Поиск репозитория с названием "bento_grid"
 
 12. **v0_bento_grid**
-   - Query: `"v0_bento_grid" in:name`
-   - Описание: Поиск репозитория с названием "v0_bento_grid"
+
+- Query: `"v0_bento_grid" in:name`
+- Описание: Поиск репозитория с названием "v0_bento_grid"
 
 13. **bentoGrid**
-   - Query: `"bentoGrid" in:name`
-   - Описание: Поиск репозитория с названием "bentoGrid"
+
+- Query: `"bentoGrid" in:name`
+- Описание: Поиск репозитория с названием "bentoGrid"
 
 14. **v0BentoGrid**
-   - Query: `"v0BentoGrid" in:name`
-   - Описание: Поиск репозитория с названием "v0BentoGrid"
+
+- Query: `"v0BentoGrid" in:name`
+- Описание: Поиск репозитория с названием "v0BentoGrid"
 
 15. **BentoGrid**
-   - Query: `"BentoGrid" in:name`
-   - Описание: Поиск репозитория с названием "BentoGrid"
+
+- Query: `"BentoGrid" in:name`
+- Описание: Поиск репозитория с названием "BentoGrid"
 
 16. **V0BentoGrid**
-   - Query: `"V0BentoGrid" in:name`
-   - Описание: Поиск репозитория с названием "V0BentoGrid"
+
+- Query: `"V0BentoGrid" in:name`
+- Описание: Поиск репозитория с названием "V0BentoGrid"
 
 ---
+
 ### 33. chat-ui-with-vibration
+
 - **Оригинальная ссылка**: https://v0.app/community/chat-ui-with-vibration-Enjda8qtpct
 - **Варианты поиска**: 16
 
 #### GitHub Search Queries:
+
 1. **chat-ui-with-vibration**
    - Query: `"chat-ui-with-vibration" in:name`
    - Описание: Поиск репозитория с названием "chat-ui-with-vibration"
@@ -2281,39 +2602,49 @@
    - Описание: Поиск репозитория с названием "chat-ui-with-vibration-template"
 
 10. **chat-ui-with-vibration-starter**
-   - Query: `"chat-ui-with-vibration-starter" in:name`
-   - Описание: Поиск репозитория с названием "chat-ui-with-vibration-starter"
+
+- Query: `"chat-ui-with-vibration-starter" in:name`
+- Описание: Поиск репозитория с названием "chat-ui-with-vibration-starter"
 
 11. **chat_ui_with_vibration**
-   - Query: `"chat_ui_with_vibration" in:name`
-   - Описание: Поиск репозитория с названием "chat_ui_with_vibration"
+
+- Query: `"chat_ui_with_vibration" in:name`
+- Описание: Поиск репозитория с названием "chat_ui_with_vibration"
 
 12. **v0_chat_ui_with_vibration**
-   - Query: `"v0_chat_ui_with_vibration" in:name`
-   - Описание: Поиск репозитория с названием "v0_chat_ui_with_vibration"
+
+- Query: `"v0_chat_ui_with_vibration" in:name`
+- Описание: Поиск репозитория с названием "v0_chat_ui_with_vibration"
 
 13. **chatUiWithVibration**
-   - Query: `"chatUiWithVibration" in:name`
-   - Описание: Поиск репозитория с названием "chatUiWithVibration"
+
+- Query: `"chatUiWithVibration" in:name`
+- Описание: Поиск репозитория с названием "chatUiWithVibration"
 
 14. **v0ChatUiWithVibration**
-   - Query: `"v0ChatUiWithVibration" in:name`
-   - Описание: Поиск репозитория с названием "v0ChatUiWithVibration"
+
+- Query: `"v0ChatUiWithVibration" in:name`
+- Описание: Поиск репозитория с названием "v0ChatUiWithVibration"
 
 15. **ChatUiWithVibration**
-   - Query: `"ChatUiWithVibration" in:name`
-   - Описание: Поиск репозитория с названием "ChatUiWithVibration"
+
+- Query: `"ChatUiWithVibration" in:name`
+- Описание: Поиск репозитория с названием "ChatUiWithVibration"
 
 16. **V0ChatUiWithVibration**
-   - Query: `"V0ChatUiWithVibration" in:name`
-   - Описание: Поиск репозитория с названием "V0ChatUiWithVibration"
+
+- Query: `"V0ChatUiWithVibration" in:name`
+- Описание: Поиск репозитория с названием "V0ChatUiWithVibration"
 
 ---
+
 ### 34. modern-library-design
+
 - **Оригинальная ссылка**: https://v0.app/community/modern-library-design-YzJGL4XM0VM
 - **Варианты поиска**: 16
 
 #### GitHub Search Queries:
+
 1. **modern-library-design**
    - Query: `"modern-library-design" in:name`
    - Описание: Поиск репозитория с названием "modern-library-design"
@@ -2351,39 +2682,49 @@
    - Описание: Поиск репозитория с названием "modern-library-design-template"
 
 10. **modern-library-design-starter**
-   - Query: `"modern-library-design-starter" in:name`
-   - Описание: Поиск репозитория с названием "modern-library-design-starter"
+
+- Query: `"modern-library-design-starter" in:name`
+- Описание: Поиск репозитория с названием "modern-library-design-starter"
 
 11. **modern_library_design**
-   - Query: `"modern_library_design" in:name`
-   - Описание: Поиск репозитория с названием "modern_library_design"
+
+- Query: `"modern_library_design" in:name`
+- Описание: Поиск репозитория с названием "modern_library_design"
 
 12. **v0_modern_library_design**
-   - Query: `"v0_modern_library_design" in:name`
-   - Описание: Поиск репозитория с названием "v0_modern_library_design"
+
+- Query: `"v0_modern_library_design" in:name`
+- Описание: Поиск репозитория с названием "v0_modern_library_design"
 
 13. **modernLibraryDesign**
-   - Query: `"modernLibraryDesign" in:name`
-   - Описание: Поиск репозитория с названием "modernLibraryDesign"
+
+- Query: `"modernLibraryDesign" in:name`
+- Описание: Поиск репозитория с названием "modernLibraryDesign"
 
 14. **v0ModernLibraryDesign**
-   - Query: `"v0ModernLibraryDesign" in:name`
-   - Описание: Поиск репозитория с названием "v0ModernLibraryDesign"
+
+- Query: `"v0ModernLibraryDesign" in:name`
+- Описание: Поиск репозитория с названием "v0ModernLibraryDesign"
 
 15. **ModernLibraryDesign**
-   - Query: `"ModernLibraryDesign" in:name`
-   - Описание: Поиск репозитория с названием "ModernLibraryDesign"
+
+- Query: `"ModernLibraryDesign" in:name`
+- Описание: Поиск репозитория с названием "ModernLibraryDesign"
 
 16. **V0ModernLibraryDesign**
-   - Query: `"V0ModernLibraryDesign" in:name`
-   - Описание: Поиск репозитория с названием "V0ModernLibraryDesign"
+
+- Query: `"V0ModernLibraryDesign" in:name`
+- Описание: Поиск репозитория с названием "V0ModernLibraryDesign"
 
 ---
+
 ### 35. cuisine-selector-chips
+
 - **Оригинальная ссылка**: https://v0.app/chat/cuisine-selector-chips-b1LMjSX49FY
 - **Варианты поиска**: 16
 
 #### GitHub Search Queries:
+
 1. **cuisine-selector-chips**
    - Query: `"cuisine-selector-chips" in:name`
    - Описание: Поиск репозитория с названием "cuisine-selector-chips"
@@ -2421,39 +2762,49 @@
    - Описание: Поиск репозитория с названием "cuisine-selector-chips-template"
 
 10. **cuisine-selector-chips-starter**
-   - Query: `"cuisine-selector-chips-starter" in:name`
-   - Описание: Поиск репозитория с названием "cuisine-selector-chips-starter"
+
+- Query: `"cuisine-selector-chips-starter" in:name`
+- Описание: Поиск репозитория с названием "cuisine-selector-chips-starter"
 
 11. **cuisine_selector_chips**
-   - Query: `"cuisine_selector_chips" in:name`
-   - Описание: Поиск репозитория с названием "cuisine_selector_chips"
+
+- Query: `"cuisine_selector_chips" in:name`
+- Описание: Поиск репозитория с названием "cuisine_selector_chips"
 
 12. **v0_cuisine_selector_chips**
-   - Query: `"v0_cuisine_selector_chips" in:name`
-   - Описание: Поиск репозитория с названием "v0_cuisine_selector_chips"
+
+- Query: `"v0_cuisine_selector_chips" in:name`
+- Описание: Поиск репозитория с названием "v0_cuisine_selector_chips"
 
 13. **cuisineSelectorChips**
-   - Query: `"cuisineSelectorChips" in:name`
-   - Описание: Поиск репозитория с названием "cuisineSelectorChips"
+
+- Query: `"cuisineSelectorChips" in:name`
+- Описание: Поиск репозитория с названием "cuisineSelectorChips"
 
 14. **v0CuisineSelectorChips**
-   - Query: `"v0CuisineSelectorChips" in:name`
-   - Описание: Поиск репозитория с названием "v0CuisineSelectorChips"
+
+- Query: `"v0CuisineSelectorChips" in:name`
+- Описание: Поиск репозитория с названием "v0CuisineSelectorChips"
 
 15. **CuisineSelectorChips**
-   - Query: `"CuisineSelectorChips" in:name`
-   - Описание: Поиск репозитория с названием "CuisineSelectorChips"
+
+- Query: `"CuisineSelectorChips" in:name`
+- Описание: Поиск репозитория с названием "CuisineSelectorChips"
 
 16. **V0CuisineSelectorChips**
-   - Query: `"V0CuisineSelectorChips" in:name`
-   - Описание: Поиск репозитория с названием "V0CuisineSelectorChips"
+
+- Query: `"V0CuisineSelectorChips" in:name`
+- Описание: Поиск репозитория с названием "V0CuisineSelectorChips"
 
 ---
+
 ### 36. general-greeting
+
 - **Оригинальная ссылка**: https://v0.app/chat/general-greeting-oaN8bYkHdWq
 - **Варианты поиска**: 16
 
 #### GitHub Search Queries:
+
 1. **general-greeting**
    - Query: `"general-greeting" in:name`
    - Описание: Поиск репозитория с названием "general-greeting"
@@ -2491,39 +2842,49 @@
    - Описание: Поиск репозитория с названием "general-greeting-template"
 
 10. **general-greeting-starter**
-   - Query: `"general-greeting-starter" in:name`
-   - Описание: Поиск репозитория с названием "general-greeting-starter"
+
+- Query: `"general-greeting-starter" in:name`
+- Описание: Поиск репозитория с названием "general-greeting-starter"
 
 11. **general_greeting**
-   - Query: `"general_greeting" in:name`
-   - Описание: Поиск репозитория с названием "general_greeting"
+
+- Query: `"general_greeting" in:name`
+- Описание: Поиск репозитория с названием "general_greeting"
 
 12. **v0_general_greeting**
-   - Query: `"v0_general_greeting" in:name`
-   - Описание: Поиск репозитория с названием "v0_general_greeting"
+
+- Query: `"v0_general_greeting" in:name`
+- Описание: Поиск репозитория с названием "v0_general_greeting"
 
 13. **generalGreeting**
-   - Query: `"generalGreeting" in:name`
-   - Описание: Поиск репозитория с названием "generalGreeting"
+
+- Query: `"generalGreeting" in:name`
+- Описание: Поиск репозитория с названием "generalGreeting"
 
 14. **v0GeneralGreeting**
-   - Query: `"v0GeneralGreeting" in:name`
-   - Описание: Поиск репозитория с названием "v0GeneralGreeting"
+
+- Query: `"v0GeneralGreeting" in:name`
+- Описание: Поиск репозитория с названием "v0GeneralGreeting"
 
 15. **GeneralGreeting**
-   - Query: `"GeneralGreeting" in:name`
-   - Описание: Поиск репозитория с названием "GeneralGreeting"
+
+- Query: `"GeneralGreeting" in:name`
+- Описание: Поиск репозитория с названием "GeneralGreeting"
 
 16. **V0GeneralGreeting**
-   - Query: `"V0GeneralGreeting" in:name`
-   - Описание: Поиск репозитория с названием "V0GeneralGreeting"
+
+- Query: `"V0GeneralGreeting" in:name`
+- Описание: Поиск репозитория с названием "V0GeneralGreeting"
 
 ---
+
 ### 37. marketplace
+
 - **Оригинальная ссылка**: https://v0.app/community/marketplace-b3DN1aOd6mQ
 - **Варианты поиска**: 14
 
 #### GitHub Search Queries:
+
 1. **marketplace**
    - Query: `"marketplace" in:name`
    - Описание: Поиск репозитория с названием "marketplace"
@@ -2561,31 +2922,39 @@
    - Описание: Поиск репозитория с названием "marketplace-template"
 
 10. **marketplace-starter**
-   - Query: `"marketplace-starter" in:name`
-   - Описание: Поиск репозитория с названием "marketplace-starter"
+
+- Query: `"marketplace-starter" in:name`
+- Описание: Поиск репозитория с названием "marketplace-starter"
 
 11. **v0_marketplace**
-   - Query: `"v0_marketplace" in:name`
-   - Описание: Поиск репозитория с названием "v0_marketplace"
+
+- Query: `"v0_marketplace" in:name`
+- Описание: Поиск репозитория с названием "v0_marketplace"
 
 12. **v0Marketplace**
-   - Query: `"v0Marketplace" in:name`
-   - Описание: Поиск репозитория с названием "v0Marketplace"
+
+- Query: `"v0Marketplace" in:name`
+- Описание: Поиск репозитория с названием "v0Marketplace"
 
 13. **Marketplace**
-   - Query: `"Marketplace" in:name`
-   - Описание: Поиск репозитория с названием "Marketplace"
+
+- Query: `"Marketplace" in:name`
+- Описание: Поиск репозитория с названием "Marketplace"
 
 14. **V0Marketplace**
-   - Query: `"V0Marketplace" in:name`
-   - Описание: Поиск репозитория с названием "V0Marketplace"
+
+- Query: `"V0Marketplace" in:name`
+- Описание: Поиск репозитория с названием "V0Marketplace"
 
 ---
+
 ### 38. background-paths
+
 - **Оригинальная ссылка**: https://v0.app/community/background-paths-s2R42ut7CxT
 - **Варианты поиска**: 16
 
 #### GitHub Search Queries:
+
 1. **background-paths**
    - Query: `"background-paths" in:name`
    - Описание: Поиск репозитория с названием "background-paths"
@@ -2623,39 +2992,49 @@
    - Описание: Поиск репозитория с названием "background-paths-template"
 
 10. **background-paths-starter**
-   - Query: `"background-paths-starter" in:name`
-   - Описание: Поиск репозитория с названием "background-paths-starter"
+
+- Query: `"background-paths-starter" in:name`
+- Описание: Поиск репозитория с названием "background-paths-starter"
 
 11. **background_paths**
-   - Query: `"background_paths" in:name`
-   - Описание: Поиск репозитория с названием "background_paths"
+
+- Query: `"background_paths" in:name`
+- Описание: Поиск репозитория с названием "background_paths"
 
 12. **v0_background_paths**
-   - Query: `"v0_background_paths" in:name`
-   - Описание: Поиск репозитория с названием "v0_background_paths"
+
+- Query: `"v0_background_paths" in:name`
+- Описание: Поиск репозитория с названием "v0_background_paths"
 
 13. **backgroundPaths**
-   - Query: `"backgroundPaths" in:name`
-   - Описание: Поиск репозитория с названием "backgroundPaths"
+
+- Query: `"backgroundPaths" in:name`
+- Описание: Поиск репозитория с названием "backgroundPaths"
 
 14. **v0BackgroundPaths**
-   - Query: `"v0BackgroundPaths" in:name`
-   - Описание: Поиск репозитория с названием "v0BackgroundPaths"
+
+- Query: `"v0BackgroundPaths" in:name`
+- Описание: Поиск репозитория с названием "v0BackgroundPaths"
 
 15. **BackgroundPaths**
-   - Query: `"BackgroundPaths" in:name`
-   - Описание: Поиск репозитория с названием "BackgroundPaths"
+
+- Query: `"BackgroundPaths" in:name`
+- Описание: Поиск репозитория с названием "BackgroundPaths"
 
 16. **V0BackgroundPaths**
-   - Query: `"V0BackgroundPaths" in:name`
-   - Описание: Поиск репозитория с названием "V0BackgroundPaths"
+
+- Query: `"V0BackgroundPaths" in:name`
+- Описание: Поиск репозитория с названием "V0BackgroundPaths"
 
 ---
+
 ### 39. creative
+
 - **Оригинальная ссылка**: https://v0.app/community/creative-xYqdqPAJD3j
 - **Варианты поиска**: 14
 
 #### GitHub Search Queries:
+
 1. **creative**
    - Query: `"creative" in:name`
    - Описание: Поиск репозитория с названием "creative"
@@ -2693,31 +3072,39 @@
    - Описание: Поиск репозитория с названием "creative-template"
 
 10. **creative-starter**
-   - Query: `"creative-starter" in:name`
-   - Описание: Поиск репозитория с названием "creative-starter"
+
+- Query: `"creative-starter" in:name`
+- Описание: Поиск репозитория с названием "creative-starter"
 
 11. **v0_creative**
-   - Query: `"v0_creative" in:name`
-   - Описание: Поиск репозитория с названием "v0_creative"
+
+- Query: `"v0_creative" in:name`
+- Описание: Поиск репозитория с названием "v0_creative"
 
 12. **v0Creative**
-   - Query: `"v0Creative" in:name`
-   - Описание: Поиск репозитория с названием "v0Creative"
+
+- Query: `"v0Creative" in:name`
+- Описание: Поиск репозитория с названием "v0Creative"
 
 13. **Creative**
-   - Query: `"Creative" in:name`
-   - Описание: Поиск репозитория с названием "Creative"
+
+- Query: `"Creative" in:name`
+- Описание: Поиск репозитория с названием "Creative"
 
 14. **V0Creative**
-   - Query: `"V0Creative" in:name`
-   - Описание: Поиск репозитория с названием "V0Creative"
+
+- Query: `"V0Creative" in:name`
+- Описание: Поиск репозитория с названием "V0Creative"
 
 ---
+
 ### 40. shopify-product-page-design
+
 - **Оригинальная ссылка**: https://v0.app/community/shopify-product-page-design-NxSj0IgX4vu
 - **Варианты поиска**: 16
 
 #### GitHub Search Queries:
+
 1. **shopify-product-page-design**
    - Query: `"shopify-product-page-design" in:name`
    - Описание: Поиск репозитория с названием "shopify-product-page-design"
@@ -2755,39 +3142,49 @@
    - Описание: Поиск репозитория с названием "shopify-product-page-design-template"
 
 10. **shopify-product-page-design-starter**
-   - Query: `"shopify-product-page-design-starter" in:name`
-   - Описание: Поиск репозитория с названием "shopify-product-page-design-starter"
+
+- Query: `"shopify-product-page-design-starter" in:name`
+- Описание: Поиск репозитория с названием "shopify-product-page-design-starter"
 
 11. **shopify_product_page_design**
-   - Query: `"shopify_product_page_design" in:name`
-   - Описание: Поиск репозитория с названием "shopify_product_page_design"
+
+- Query: `"shopify_product_page_design" in:name`
+- Описание: Поиск репозитория с названием "shopify_product_page_design"
 
 12. **v0_shopify_product_page_design**
-   - Query: `"v0_shopify_product_page_design" in:name`
-   - Описание: Поиск репозитория с названием "v0_shopify_product_page_design"
+
+- Query: `"v0_shopify_product_page_design" in:name`
+- Описание: Поиск репозитория с названием "v0_shopify_product_page_design"
 
 13. **shopifyProductPageDesign**
-   - Query: `"shopifyProductPageDesign" in:name`
-   - Описание: Поиск репозитория с названием "shopifyProductPageDesign"
+
+- Query: `"shopifyProductPageDesign" in:name`
+- Описание: Поиск репозитория с названием "shopifyProductPageDesign"
 
 14. **v0ShopifyProductPageDesign**
-   - Query: `"v0ShopifyProductPageDesign" in:name`
-   - Описание: Поиск репозитория с названием "v0ShopifyProductPageDesign"
+
+- Query: `"v0ShopifyProductPageDesign" in:name`
+- Описание: Поиск репозитория с названием "v0ShopifyProductPageDesign"
 
 15. **ShopifyProductPageDesign**
-   - Query: `"ShopifyProductPageDesign" in:name`
-   - Описание: Поиск репозитория с названием "ShopifyProductPageDesign"
+
+- Query: `"ShopifyProductPageDesign" in:name`
+- Описание: Поиск репозитория с названием "ShopifyProductPageDesign"
 
 16. **V0ShopifyProductPageDesign**
-   - Query: `"V0ShopifyProductPageDesign" in:name`
-   - Описание: Поиск репозитория с названием "V0ShopifyProductPageDesign"
+
+- Query: `"V0ShopifyProductPageDesign" in:name`
+- Описание: Поиск репозитория с названием "V0ShopifyProductPageDesign"
 
 ---
+
 ### 41. creative-agency-portfolio
+
 - **Оригинальная ссылка**: https://v0.app/community/creative-agency-portfolio-hJnIgxCCUr5
 - **Варианты поиска**: 16
 
 #### GitHub Search Queries:
+
 1. **creative-agency-portfolio**
    - Query: `"creative-agency-portfolio" in:name`
    - Описание: Поиск репозитория с названием "creative-agency-portfolio"
@@ -2825,39 +3222,49 @@
    - Описание: Поиск репозитория с названием "creative-agency-portfolio-template"
 
 10. **creative-agency-portfolio-starter**
-   - Query: `"creative-agency-portfolio-starter" in:name`
-   - Описание: Поиск репозитория с названием "creative-agency-portfolio-starter"
+
+- Query: `"creative-agency-portfolio-starter" in:name`
+- Описание: Поиск репозитория с названием "creative-agency-portfolio-starter"
 
 11. **creative_agency_portfolio**
-   - Query: `"creative_agency_portfolio" in:name`
-   - Описание: Поиск репозитория с названием "creative_agency_portfolio"
+
+- Query: `"creative_agency_portfolio" in:name`
+- Описание: Поиск репозитория с названием "creative_agency_portfolio"
 
 12. **v0_creative_agency_portfolio**
-   - Query: `"v0_creative_agency_portfolio" in:name`
-   - Описание: Поиск репозитория с названием "v0_creative_agency_portfolio"
+
+- Query: `"v0_creative_agency_portfolio" in:name`
+- Описание: Поиск репозитория с названием "v0_creative_agency_portfolio"
 
 13. **creativeAgencyPortfolio**
-   - Query: `"creativeAgencyPortfolio" in:name`
-   - Описание: Поиск репозитория с названием "creativeAgencyPortfolio"
+
+- Query: `"creativeAgencyPortfolio" in:name`
+- Описание: Поиск репозитория с названием "creativeAgencyPortfolio"
 
 14. **v0CreativeAgencyPortfolio**
-   - Query: `"v0CreativeAgencyPortfolio" in:name`
-   - Описание: Поиск репозитория с названием "v0CreativeAgencyPortfolio"
+
+- Query: `"v0CreativeAgencyPortfolio" in:name`
+- Описание: Поиск репозитория с названием "v0CreativeAgencyPortfolio"
 
 15. **CreativeAgencyPortfolio**
-   - Query: `"CreativeAgencyPortfolio" in:name`
-   - Описание: Поиск репозитория с названием "CreativeAgencyPortfolio"
+
+- Query: `"CreativeAgencyPortfolio" in:name`
+- Описание: Поиск репозитория с названием "CreativeAgencyPortfolio"
 
 16. **V0CreativeAgencyPortfolio**
-   - Query: `"V0CreativeAgencyPortfolio" in:name`
-   - Описание: Поиск репозитория с названием "V0CreativeAgencyPortfolio"
+
+- Query: `"V0CreativeAgencyPortfolio" in:name`
+- Описание: Поиск репозитория с названием "V0CreativeAgencyPortfolio"
 
 ---
+
 ### 42. financial-dashboard-functional
+
 - **Оригинальная ссылка**: https://v0.app/community/financial-dashboard-functional-jUBqSBJsNrz
 - **Варианты поиска**: 16
 
 #### GitHub Search Queries:
+
 1. **financial-dashboard-functional**
    - Query: `"financial-dashboard-functional" in:name`
    - Описание: Поиск репозитория с названием "financial-dashboard-functional"
@@ -2895,39 +3302,49 @@
    - Описание: Поиск репозитория с названием "financial-dashboard-functional-template"
 
 10. **financial-dashboard-functional-starter**
-   - Query: `"financial-dashboard-functional-starter" in:name`
-   - Описание: Поиск репозитория с названием "financial-dashboard-functional-starter"
+
+- Query: `"financial-dashboard-functional-starter" in:name`
+- Описание: Поиск репозитория с названием "financial-dashboard-functional-starter"
 
 11. **financial_dashboard_functional**
-   - Query: `"financial_dashboard_functional" in:name`
-   - Описание: Поиск репозитория с названием "financial_dashboard_functional"
+
+- Query: `"financial_dashboard_functional" in:name`
+- Описание: Поиск репозитория с названием "financial_dashboard_functional"
 
 12. **v0_financial_dashboard_functional**
-   - Query: `"v0_financial_dashboard_functional" in:name`
-   - Описание: Поиск репозитория с названием "v0_financial_dashboard_functional"
+
+- Query: `"v0_financial_dashboard_functional" in:name`
+- Описание: Поиск репозитория с названием "v0_financial_dashboard_functional"
 
 13. **financialDashboardFunctional**
-   - Query: `"financialDashboardFunctional" in:name`
-   - Описание: Поиск репозитория с названием "financialDashboardFunctional"
+
+- Query: `"financialDashboardFunctional" in:name`
+- Описание: Поиск репозитория с названием "financialDashboardFunctional"
 
 14. **v0FinancialDashboardFunctional**
-   - Query: `"v0FinancialDashboardFunctional" in:name`
-   - Описание: Поиск репозитория с названием "v0FinancialDashboardFunctional"
+
+- Query: `"v0FinancialDashboardFunctional" in:name`
+- Описание: Поиск репозитория с названием "v0FinancialDashboardFunctional"
 
 15. **FinancialDashboardFunctional**
-   - Query: `"FinancialDashboardFunctional" in:name`
-   - Описание: Поиск репозитория с названием "FinancialDashboardFunctional"
+
+- Query: `"FinancialDashboardFunctional" in:name`
+- Описание: Поиск репозитория с названием "FinancialDashboardFunctional"
 
 16. **V0FinancialDashboardFunctional**
-   - Query: `"V0FinancialDashboardFunctional" in:name`
-   - Описание: Поиск репозитория с названием "V0FinancialDashboardFunctional"
+
+- Query: `"V0FinancialDashboardFunctional" in:name`
+- Описание: Поиск репозитория с названием "V0FinancialDashboardFunctional"
 
 ---
+
 ### 43. ai-elements-with-ai-sdk-5
+
 - **Оригинальная ссылка**: https://v0.app/community/ai-elements-with-ai-sdk-5-ksSTzATPzMq
 - **Варианты поиска**: 16
 
 #### GitHub Search Queries:
+
 1. **ai-elements-with-ai-sdk-5**
    - Query: `"ai-elements-with-ai-sdk-5" in:name`
    - Описание: Поиск репозитория с названием "ai-elements-with-ai-sdk-5"
@@ -2965,39 +3382,49 @@
    - Описание: Поиск репозитория с названием "ai-elements-with-ai-sdk-5-template"
 
 10. **ai-elements-with-ai-sdk-5-starter**
-   - Query: `"ai-elements-with-ai-sdk-5-starter" in:name`
-   - Описание: Поиск репозитория с названием "ai-elements-with-ai-sdk-5-starter"
+
+- Query: `"ai-elements-with-ai-sdk-5-starter" in:name`
+- Описание: Поиск репозитория с названием "ai-elements-with-ai-sdk-5-starter"
 
 11. **ai_elements_with_ai_sdk_5**
-   - Query: `"ai_elements_with_ai_sdk_5" in:name`
-   - Описание: Поиск репозитория с названием "ai_elements_with_ai_sdk_5"
+
+- Query: `"ai_elements_with_ai_sdk_5" in:name`
+- Описание: Поиск репозитория с названием "ai_elements_with_ai_sdk_5"
 
 12. **v0_ai_elements_with_ai_sdk_5**
-   - Query: `"v0_ai_elements_with_ai_sdk_5" in:name`
-   - Описание: Поиск репозитория с названием "v0_ai_elements_with_ai_sdk_5"
+
+- Query: `"v0_ai_elements_with_ai_sdk_5" in:name`
+- Описание: Поиск репозитория с названием "v0_ai_elements_with_ai_sdk_5"
 
 13. **aiElementsWithAiSdk5**
-   - Query: `"aiElementsWithAiSdk5" in:name`
-   - Описание: Поиск репозитория с названием "aiElementsWithAiSdk5"
+
+- Query: `"aiElementsWithAiSdk5" in:name`
+- Описание: Поиск репозитория с названием "aiElementsWithAiSdk5"
 
 14. **v0AiElementsWithAiSdk5**
-   - Query: `"v0AiElementsWithAiSdk5" in:name`
-   - Описание: Поиск репозитория с названием "v0AiElementsWithAiSdk5"
+
+- Query: `"v0AiElementsWithAiSdk5" in:name`
+- Описание: Поиск репозитория с названием "v0AiElementsWithAiSdk5"
 
 15. **AiElementsWithAiSdk5**
-   - Query: `"AiElementsWithAiSdk5" in:name`
-   - Описание: Поиск репозитория с названием "AiElementsWithAiSdk5"
+
+- Query: `"AiElementsWithAiSdk5" in:name`
+- Описание: Поиск репозитория с названием "AiElementsWithAiSdk5"
 
 16. **V0AiElementsWithAiSdk5**
-   - Query: `"V0AiElementsWithAiSdk5" in:name`
-   - Описание: Поиск репозитория с названием "V0AiElementsWithAiSdk5"
+
+- Query: `"V0AiElementsWithAiSdk5" in:name`
+- Описание: Поиск репозитория с названием "V0AiElementsWithAiSdk5"
 
 ---
+
 ### 44. modern-ai-chatbot-interface-template
+
 - **Оригинальная ссылка**: https://v0.app/community/modern-ai-chatbot-interface-template-GzHBHQAiS2F
 - **Варианты поиска**: 16
 
 #### GitHub Search Queries:
+
 1. **modern-ai-chatbot-interface-template**
    - Query: `"modern-ai-chatbot-interface-template" in:name`
    - Описание: Поиск репозитория с названием "modern-ai-chatbot-interface-template"
@@ -3035,39 +3462,49 @@
    - Описание: Поиск репозитория с названием "modern-ai-chatbot-interface-template-template"
 
 10. **modern-ai-chatbot-interface-template-starter**
-   - Query: `"modern-ai-chatbot-interface-template-starter" in:name`
-   - Описание: Поиск репозитория с названием "modern-ai-chatbot-interface-template-starter"
+
+- Query: `"modern-ai-chatbot-interface-template-starter" in:name`
+- Описание: Поиск репозитория с названием "modern-ai-chatbot-interface-template-starter"
 
 11. **modern_ai_chatbot_interface_template**
-   - Query: `"modern_ai_chatbot_interface_template" in:name`
-   - Описание: Поиск репозитория с названием "modern_ai_chatbot_interface_template"
+
+- Query: `"modern_ai_chatbot_interface_template" in:name`
+- Описание: Поиск репозитория с названием "modern_ai_chatbot_interface_template"
 
 12. **v0_modern_ai_chatbot_interface_template**
-   - Query: `"v0_modern_ai_chatbot_interface_template" in:name`
-   - Описание: Поиск репозитория с названием "v0_modern_ai_chatbot_interface_template"
+
+- Query: `"v0_modern_ai_chatbot_interface_template" in:name`
+- Описание: Поиск репозитория с названием "v0_modern_ai_chatbot_interface_template"
 
 13. **modernAiChatbotInterfaceTemplate**
-   - Query: `"modernAiChatbotInterfaceTemplate" in:name`
-   - Описание: Поиск репозитория с названием "modernAiChatbotInterfaceTemplate"
+
+- Query: `"modernAiChatbotInterfaceTemplate" in:name`
+- Описание: Поиск репозитория с названием "modernAiChatbotInterfaceTemplate"
 
 14. **v0ModernAiChatbotInterfaceTemplate**
-   - Query: `"v0ModernAiChatbotInterfaceTemplate" in:name`
-   - Описание: Поиск репозитория с названием "v0ModernAiChatbotInterfaceTemplate"
+
+- Query: `"v0ModernAiChatbotInterfaceTemplate" in:name`
+- Описание: Поиск репозитория с названием "v0ModernAiChatbotInterfaceTemplate"
 
 15. **ModernAiChatbotInterfaceTemplate**
-   - Query: `"ModernAiChatbotInterfaceTemplate" in:name`
-   - Описание: Поиск репозитория с названием "ModernAiChatbotInterfaceTemplate"
+
+- Query: `"ModernAiChatbotInterfaceTemplate" in:name`
+- Описание: Поиск репозитория с названием "ModernAiChatbotInterfaceTemplate"
 
 16. **V0ModernAiChatbotInterfaceTemplate**
-   - Query: `"V0ModernAiChatbotInterfaceTemplate" in:name`
-   - Описание: Поиск репозитория с названием "V0ModernAiChatbotInterfaceTemplate"
+
+- Query: `"V0ModernAiChatbotInterfaceTemplate" in:name`
+- Описание: Поиск репозитория с названием "V0ModernAiChatbotInterfaceTemplate"
 
 ---
+
 ### 45. origin-e-commerce-ui
+
 - **Оригинальная ссылка**: https://v0.app/community/origin-e-commerce-ui-w98dsZBVaaU
 - **Варианты поиска**: 16
 
 #### GitHub Search Queries:
+
 1. **origin-e-commerce-ui**
    - Query: `"origin-e-commerce-ui" in:name`
    - Описание: Поиск репозитория с названием "origin-e-commerce-ui"
@@ -3105,56 +3542,66 @@
    - Описание: Поиск репозитория с названием "origin-e-commerce-ui-template"
 
 10. **origin-e-commerce-ui-starter**
-   - Query: `"origin-e-commerce-ui-starter" in:name`
-   - Описание: Поиск репозитория с названием "origin-e-commerce-ui-starter"
+
+- Query: `"origin-e-commerce-ui-starter" in:name`
+- Описание: Поиск репозитория с названием "origin-e-commerce-ui-starter"
 
 11. **origin_e_commerce_ui**
-   - Query: `"origin_e_commerce_ui" in:name`
-   - Описание: Поиск репозитория с названием "origin_e_commerce_ui"
+
+- Query: `"origin_e_commerce_ui" in:name`
+- Описание: Поиск репозитория с названием "origin_e_commerce_ui"
 
 12. **v0_origin_e_commerce_ui**
-   - Query: `"v0_origin_e_commerce_ui" in:name`
-   - Описание: Поиск репозитория с названием "v0_origin_e_commerce_ui"
+
+- Query: `"v0_origin_e_commerce_ui" in:name`
+- Описание: Поиск репозитория с названием "v0_origin_e_commerce_ui"
 
 13. **originECommerceUi**
-   - Query: `"originECommerceUi" in:name`
-   - Описание: Поиск репозитория с названием "originECommerceUi"
+
+- Query: `"originECommerceUi" in:name`
+- Описание: Поиск репозитория с названием "originECommerceUi"
 
 14. **v0OriginECommerceUi**
-   - Query: `"v0OriginECommerceUi" in:name`
-   - Описание: Поиск репозитория с названием "v0OriginECommerceUi"
+
+- Query: `"v0OriginECommerceUi" in:name`
+- Описание: Поиск репозитория с названием "v0OriginECommerceUi"
 
 15. **OriginECommerceUi**
-   - Query: `"OriginECommerceUi" in:name`
-   - Описание: Поиск репозитория с названием "OriginECommerceUi"
+
+- Query: `"OriginECommerceUi" in:name`
+- Описание: Поиск репозитория с названием "OriginECommerceUi"
 
 16. **V0OriginECommerceUi**
-   - Query: `"V0OriginECommerceUi" in:name`
-   - Описание: Поиск репозитория с названием "V0OriginECommerceUi"
+
+- Query: `"V0OriginECommerceUi" in:name`
+- Описание: Поиск репозитория с названием "V0OriginECommerceUi"
 
 ---
 
 ## Инструкции по использованию
 
 ### 1. Использование MCP GitHub сервера
+
 Для каждого компонента выполните поиск с помощью MCP GitHub инструментов:
 
 ```javascript
 // Пример поиска репозитория
 const searchResults = await mcp_github_search_repositories({
-  query: "v0-file-manager in:name",
-  sort: "stars",
-  order: "desc"
+  query: 'v0-file-manager in:name',
+  sort: 'stars',
+  order: 'desc',
 });
 ```
 
 ### 2. Рекомендуемые поисковые запросы
+
 1. **Точное совпадение**: `"component-name" in:name`
 2. **Поиск по описанию**: `"component-name" in:description`
 3. **Поиск по README**: `"component-name" in:readme`
 4. **Поиск по тегам**: `"component-name" in:topics`
 
 ### 3. Критерии отбора репозиториев
+
 - ⭐ Количество звезд > 10
 - 📅 Последнее обновление < 6 месяцев
 - 📝 Наличие README
@@ -3162,7 +3609,9 @@ const searchResults = await mcp_github_search_repositories({
 - 📦 Наличие package.json
 
 ### 4. Сохранение результатов
+
 Сохраните найденные репозитории в формате:
+
 ```json
 {
   "componentName": "file-manager",

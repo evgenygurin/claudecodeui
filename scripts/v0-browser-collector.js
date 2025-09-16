@@ -334,19 +334,19 @@ module.exports = ComponentProcessor;
 // Создаем все необходимые файлы
 function createCollectionFiles() {
   const outputDir = path.join(__dirname, '..', 'scripts');
-  
+
   // Создаем инструкции
   const instructions = createPlaywrightInstructions();
   fs.writeFileSync(path.join(outputDir, 'playwright-instructions.md'), instructions);
-  
+
   // Создаем шаблон для ручного сбора
   const template = createManualCollectionTemplate();
   fs.writeFileSync(path.join(outputDir, 'manual-collection-template.md'), template);
-  
+
   // Создаем процессор компонентов
   const processor = createComponentProcessor();
   fs.writeFileSync(path.join(outputDir, 'component-processor.js'), processor);
-  
+
   console.log('📁 Созданы файлы для сбора компонентов:');
   console.log('  - playwright-instructions.md');
   console.log('  - manual-collection-template.md');
@@ -363,5 +363,5 @@ module.exports = {
   createPlaywrightScript,
   createPlaywrightInstructions,
   createManualCollectionTemplate,
-  createComponentProcessor
+  createComponentProcessor,
 };

@@ -48,30 +48,30 @@ const passwordPolicy = {
 // Валидация пароля
 const validatePassword = (password: string): ValidationResult => {
   const errors: string[] = [];
-  
+
   if (password.length < passwordPolicy.minLength) {
     errors.push(`Password must be at least ${passwordPolicy.minLength} characters long`);
   }
-  
+
   if (!/[A-Z]/.test(password)) {
     errors.push('Password must contain at least one uppercase letter');
   }
-  
+
   if (!/[a-z]/.test(password)) {
     errors.push('Password must contain at least one lowercase letter');
   }
-  
+
   if (!/\d/.test(password)) {
     errors.push('Password must contain at least one number');
   }
-  
+
   if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
     errors.push('Password must contain at least one special character');
   }
-  
+
   return {
     isValid: errors.length === 0,
-    errors
+    errors,
   };
 };
 
@@ -109,34 +109,26 @@ const generateKeyPair = (): { publicKey: string; privateKey: string } => {
     publicKeyEncoding: { type: 'spki', format: 'pem' },
     privateKeyEncoding: { type: 'pkcs8', format: 'pem' },
   });
-  
+
   return { publicKey, privateKey };
 };
 
 // Безопасная генерация токенов
 const generateTokens = (userId: string): { accessToken: string; refreshToken: string } => {
-  const accessToken = jwt.sign(
-    { userId, type: 'access' },
-    privateKey,
-    {
-      expiresIn: jwtConfig.accessTokenExpiry,
-      algorithm: jwtConfig.algorithm,
-      issuer: jwtConfig.issuer,
-      audience: jwtConfig.audience,
-    }
-  );
-  
-  const refreshToken = jwt.sign(
-    { userId, type: 'refresh' },
-    privateKey,
-    {
-      expiresIn: jwtConfig.refreshTokenExpiry,
-      algorithm: jwtConfig.algorithm,
-      issuer: jwtConfig.issuer,
-      audience: jwtConfig.audience,
-    }
-  );
-  
+  const accessToken = jwt.sign({ userId, type: 'access' }, privateKey, {
+    expiresIn: jwtConfig.accessTokenExpiry,
+    algorithm: jwtConfig.algorithm,
+    issuer: jwtConfig.issuer,
+    audience: jwtConfig.audience,
+  });
+
+  const refreshToken = jwt.sign({ userId, type: 'refresh' }, privateKey, {
+    expiresIn: jwtConfig.refreshTokenExpiry,
+    algorithm: jwtConfig.algorithm,
+    issuer: jwtConfig.issuer,
+    audience: jwtConfig.audience,
+  });
+
   return { accessToken, refreshToken };
 };
 
@@ -211,13 +203,15 @@ import { z } from 'zod';
 
 // Схемы валидации
 const ProjectSchema = z.object({
-  name: z.string()
+  name: z
+    .string()
     .min(1, 'Project name is required')
     .max(100, 'Project name too long')
     .regex(/^[a-zA-Z0-9_-]+$/, 'Invalid project name format'),
-  path: z.string()
+  path: z
+    .string()
     .min(1, 'Project path is required')
-    .refine((path) => {
+    .refine(path => {
       // Проверка на path traversal
       return !path.includes('..') && !path.includes('~');
     }, 'Invalid project path'),
@@ -288,21 +282,17 @@ const sanitizePath = (path: string): string => {
 // Санитизация команд
 const sanitizeCommand = (command: string): string => {
   // Разрешенные команды
-  const allowedCommands = [
-    'git', 'npm', 'yarn', 'node', 'python', 'ls', 'cat', 'echo'
-  ];
-  
+  const allowedCommands = ['git', 'npm', 'yarn', 'node', 'python', 'ls', 'cat', 'echo'];
+
   const [cmd, ...args] = command.split(' ');
-  
+
   if (!allowedCommands.includes(cmd)) {
     throw new Error('Command not allowed');
   }
-  
+
   // Санитизация аргументов
-  const sanitizedArgs = args.map(arg => 
-    arg.replace(/[;&|`$(){}[\]\\]/g, '')
-  );
-  
+  const sanitizedArgs = args.map(arg => arg.replace(/[;&|`$(){}[\]\\]/g, ''));
+
   return [cmd, ...sanitizedArgs].join(' ');
 };
 ```
@@ -350,7 +340,7 @@ import helmet from 'helmet';
 const corsOptions = {
   origin: (origin: string | undefined, callback: Function) => {
     const allowedOrigins = process.env.ALLOWED_ORIGINS?.split(',') || [];
-    
+
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
@@ -366,29 +356,31 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // Content Security Policy
-app.use(helmet({
-  contentSecurityPolicy: {
-    directives: {
-      defaultSrc: ["'self'"],
-      scriptSrc: ["'self'", "'unsafe-inline'"],
-      styleSrc: ["'self'", "'unsafe-inline'"],
-      imgSrc: ["'self'", "data:", "https:"],
-      connectSrc: ["'self'", "wss:", "https:"],
-      fontSrc: ["'self'"],
-      objectSrc: ["'none'"],
-      mediaSrc: ["'self'"],
-      frameSrc: ["'none'"],
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: ["'self'"],
+        scriptSrc: ["'self'", "'unsafe-inline'"],
+        styleSrc: ["'self'", "'unsafe-inline'"],
+        imgSrc: ["'self'", 'data:', 'https:'],
+        connectSrc: ["'self'", 'wss:', 'https:'],
+        fontSrc: ["'self'"],
+        objectSrc: ["'none'"],
+        mediaSrc: ["'self'"],
+        frameSrc: ["'none'"],
+      },
     },
-  },
-  hsts: {
-    maxAge: 31536000,
-    includeSubDomains: true,
-    preload: true,
-  },
-  noSniff: true,
-  xssFilter: true,
-  referrerPolicy: { policy: 'same-origin' },
-}));
+    hsts: {
+      maxAge: 31536000,
+      includeSubDomains: true,
+      preload: true,
+    },
+    noSniff: true,
+    xssFilter: true,
+    referrerPolicy: { policy: 'same-origin' },
+  })
+);
 ```
 
 #### 3.3 Безопасные WebSocket соединения
@@ -400,13 +392,13 @@ import { verify } from 'jsonwebtoken';
 // Безопасная аутентификация WebSocket
 const wss = new WebSocketServer({
   server,
-  verifyClient: (info) => {
+  verifyClient: info => {
     const token = info.req.url?.split('token=')[1];
-    
+
     if (!token) {
       return false;
     }
-    
+
     try {
       const decoded = verify(token, publicKey);
       info.req.user = decoded;
@@ -423,12 +415,13 @@ const wsRateLimit = new Map<string, { count: number; resetTime: number }>();
 wss.on('connection', (ws, req) => {
   const clientId = req.socket.remoteAddress;
   const now = Date.now();
-  
+
   // Проверка rate limit
   const clientLimit = wsRateLimit.get(clientId);
   if (clientLimit) {
     if (now < clientLimit.resetTime) {
-      if (clientLimit.count >= 100) { // 100 сообщений в минуту
+      if (clientLimit.count >= 100) {
+        // 100 сообщений в минуту
         ws.close(1008, 'Rate limit exceeded');
         return;
       }
@@ -439,18 +432,19 @@ wss.on('connection', (ws, req) => {
   } else {
     wsRateLimit.set(clientId, { count: 1, resetTime: now + 60000 });
   }
-  
+
   // Обработка сообщений
-  ws.on('message', (message) => {
+  ws.on('message', message => {
     try {
       const data = JSON.parse(message.toString());
-      
+
       // Валидация размера сообщения
-      if (message.length > 1024 * 1024) { // 1MB
+      if (message.length > 1024 * 1024) {
+        // 1MB
         ws.close(1009, 'Message too large');
         return;
       }
-      
+
       // Обработка сообщения
       handleWebSocketMessage(ws, data);
     } catch (error) {
@@ -493,10 +487,10 @@ const fileFilter = (req: any, file: Express.Multer.File, cb: Function) => {
     'text/plain',
     'application/json',
   ];
-  
+
   const allowedExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.txt', '.json'];
   const ext = path.extname(file.originalname).toLowerCase();
-  
+
   if (allowedMimes.includes(file.mimetype) && allowedExtensions.includes(ext)) {
     cb(null, true);
   } else {
@@ -529,7 +523,15 @@ import { promisify } from 'util';
 
 // Whitelist разрешенных команд
 const allowedCommands = new Set([
-  'git', 'npm', 'yarn', 'node', 'python', 'ls', 'cat', 'echo', 'pwd'
+  'git',
+  'npm',
+  'yarn',
+  'node',
+  'python',
+  'ls',
+  'cat',
+  'echo',
+  'pwd',
 ]);
 
 // Безопасное выполнение команд
@@ -542,48 +544,46 @@ const executeCommand = async (
   if (!allowedCommands.has(command)) {
     throw new Error(`Command ${command} is not allowed`);
   }
-  
+
   // Валидация аргументов
-  const sanitizedArgs = args.map(arg => 
-    arg.replace(/[;&|`$(){}[\]\\]/g, '')
-  );
-  
+  const sanitizedArgs = args.map(arg => arg.replace(/[;&|`$(){}[\]\\]/g, ''));
+
   // Проверка рабочей директории
   const cwd = path.resolve(options.cwd);
   if (!cwd.startsWith(process.env.PROJECTS_ROOT)) {
     throw new Error('Invalid working directory');
   }
-  
+
   return new Promise((resolve, reject) => {
     const child = spawn(command, sanitizedArgs, {
       cwd,
       env: { ...process.env, PATH: process.env.PATH },
       stdio: ['pipe', 'pipe', 'pipe'],
     });
-    
+
     let stdout = '';
     let stderr = '';
-    
-    child.stdout.on('data', (data) => {
+
+    child.stdout.on('data', data => {
       stdout += data.toString();
     });
-    
-    child.stderr.on('data', (data) => {
+
+    child.stderr.on('data', data => {
       stderr += data.toString();
     });
-    
+
     // Таймаут
     const timeout = setTimeout(() => {
       child.kill('SIGTERM');
       reject(new Error('Command timeout'));
     }, options.timeout);
-    
-    child.on('close', (code) => {
+
+    child.on('close', code => {
       clearTimeout(timeout);
       resolve({ stdout, stderr, code: code || 0 });
     });
-    
-    child.on('error', (error) => {
+
+    child.on('error', error => {
       clearTimeout(timeout);
       reject(error);
     });
@@ -615,10 +615,10 @@ const logger = winston.createLogger({
 // Middleware для логирования
 const securityLogger = (req: Request, res: Response, next: NextFunction) => {
   const start = Date.now();
-  
+
   res.on('finish', () => {
     const duration = Date.now() - start;
-    
+
     // Логирование подозрительной активности
     if (res.statusCode >= 400) {
       logger.warn('Security event', {
@@ -632,7 +632,7 @@ const securityLogger = (req: Request, res: Response, next: NextFunction) => {
       });
     }
   });
-  
+
   next();
 };
 
@@ -659,13 +659,11 @@ const detectAttack = (req: Request): boolean => {
     /union.*select/i, // SQL injection
     /eval\(/i, // Code injection
   ];
-  
+
   const url = req.url;
   const body = JSON.stringify(req.body);
-  
-  return suspiciousPatterns.some(pattern => 
-    pattern.test(url) || pattern.test(body)
-  );
+
+  return suspiciousPatterns.some(pattern => pattern.test(url) || pattern.test(body));
 };
 
 // Middleware для детекции атак
@@ -677,11 +675,11 @@ const attackDetection = (req: Request, res: Response, next: NextFunction) => {
       userAgent: req.get('User-Agent'),
       timestamp: new Date().toISOString(),
     });
-    
+
     res.status(403).json({ error: 'Forbidden' });
     return;
   }
-  
+
   next();
 };
 ```

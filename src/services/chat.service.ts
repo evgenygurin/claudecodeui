@@ -206,16 +206,16 @@ export class ChatService {
     try {
       // Validate input
       const validatedData = sendMessageDtoSchema.parse(messageData);
-      
+
       // Use real Claude CLI service instead of mock API
       if (validatedData.provider === 'claude') {
         const claudeResponse = await claudeCLIService.sendMessage(validatedData.content);
         const session = await this.getSessionById(validatedData.sessionId);
-        
+
         if (!session) {
           throw createError('Session not found');
         }
-        
+
         const message: Message = {
           id: this.generateMessageId(),
           content: claudeResponse.content,
@@ -284,7 +284,10 @@ export class ChatService {
       const result = await response.json();
       return result.data;
     } catch (error) {
-      logger.error('Error fetching session history', { context: 'ChatService.fetchSessionHistory', error });
+      logger.error('Error fetching session history', {
+        context: 'ChatService.fetchSessionHistory',
+        error,
+      });
       throw createError(ERROR_PREFIXES.FETCH_HISTORY_FAILED, error);
     }
   }
@@ -349,7 +352,10 @@ export class ChatService {
                 return;
               }
             } catch (parseError) {
-              logger.error('Error parsing stream data', { context: 'ChatService.streamMessage', error: parseError });
+              logger.error('Error parsing stream data', {
+                context: 'ChatService.streamMessage',
+                error: parseError,
+              });
             }
           }
         }
@@ -396,7 +402,10 @@ export class ChatService {
       const result = await response.json();
       return result.data;
     } catch (error) {
-      logger.error('Error fetching provider status', { context: 'ChatService.fetchProviderStatus', error });
+      logger.error('Error fetching provider status', {
+        context: 'ChatService.fetchProviderStatus',
+        error,
+      });
       throw createError(ERROR_PREFIXES.FETCH_PROVIDER_STATUS_FAILED, error);
     }
   }

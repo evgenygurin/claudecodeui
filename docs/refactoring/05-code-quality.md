@@ -62,15 +62,8 @@
       "@/utils/*": ["src/utils/*"]
     }
   },
-  "include": [
-    "src/**/*",
-    "server/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "build"
-  ]
+  "include": ["src/**/*", "server/**/*"],
+  "exclude": ["node_modules", "dist", "build"]
 }
 ```
 
@@ -245,17 +238,17 @@ export const useWebSocket = (url: string) => {
   const connect = useCallback(() => {
     try {
       ws.current = new WebSocket(url);
-      
+
       ws.current.onopen = () => {
         setIsConnected(true);
         setError(null);
       };
-      
+
       ws.current.onclose = () => {
         setIsConnected(false);
       };
-      
-      ws.current.onerror = (event) => {
+
+      ws.current.onerror = event => {
         setError('WebSocket connection error');
         setIsConnected(false);
       };
@@ -365,7 +358,7 @@ describe('Button', () => {
   it('calls onClick when clicked', () => {
     const handleClick = jest.fn();
     render(<Button onClick={handleClick}>Click me</Button>);
-    
+
     fireEvent.click(screen.getByText('Click me'));
     expect(handleClick).toHaveBeenCalledTimes(1);
   });
@@ -421,7 +414,7 @@ const mockProjects: Project[] = [
 describe('ProjectList', () => {
   it('renders list of projects', () => {
     render(<ProjectList projects={mockProjects} />);
-    
+
     expect(screen.getByText('test-project')).toBeInTheDocument();
     expect(screen.getByText('another-project')).toBeInTheDocument();
   });
@@ -434,7 +427,7 @@ describe('ProjectList', () => {
   it('calls onProjectSelect when project is clicked', () => {
     const handleSelect = jest.fn();
     render(<ProjectList projects={mockProjects} onProjectSelect={handleSelect} />);
-    
+
     fireEvent.click(screen.getByText('test-project'));
     expect(handleSelect).toHaveBeenCalledWith(mockProjects[0]);
   });
@@ -458,15 +451,25 @@ describe('useProjects', () => {
 
   it('fetches projects on mount', async () => {
     const mockProjects = [
-      { id: '1', name: 'test', path: '/test', fullPath: '/test', sessions: [], cursorSessions: [], sessionMeta: { total: 0, claude: 0, cursor: 0, codegen: 0 }, createdAt: '2023-01-01T00:00:00Z', updatedAt: '2023-01-01T00:00:00Z' }
+      {
+        id: '1',
+        name: 'test',
+        path: '/test',
+        fullPath: '/test',
+        sessions: [],
+        cursorSessions: [],
+        sessionMeta: { total: 0, claude: 0, cursor: 0, codegen: 0 },
+        createdAt: '2023-01-01T00:00:00Z',
+        updatedAt: '2023-01-01T00:00:00Z',
+      },
     ];
-    
+
     (projectService.getAll as jest.Mock).mockResolvedValue(mockProjects);
 
     const { result } = renderHook(() => useProjects());
 
     expect(result.current.loading).toBe(true);
-    
+
     await act(async () => {
       await new Promise(resolve => setTimeout(resolve, 0));
     });
@@ -493,8 +496,17 @@ describe('useProjects', () => {
 
   it('creates new project', async () => {
     const newProject = { name: 'new-project', path: '/new' };
-    const createdProject = { id: '1', ...newProject, fullPath: '/new', sessions: [], cursorSessions: [], sessionMeta: { total: 0, claude: 0, cursor: 0, codegen: 0 }, createdAt: '2023-01-01T00:00:00Z', updatedAt: '2023-01-01T00:00:00Z' };
-    
+    const createdProject = {
+      id: '1',
+      ...newProject,
+      fullPath: '/new',
+      sessions: [],
+      cursorSessions: [],
+      sessionMeta: { total: 0, claude: 0, cursor: 0, codegen: 0 },
+      createdAt: '2023-01-01T00:00:00Z',
+      updatedAt: '2023-01-01T00:00:00Z',
+    };
+
     (projectService.getAll as jest.Mock).mockResolvedValue([]);
     (projectService.create as jest.Mock).mockResolvedValue(createdProject);
 
@@ -535,7 +547,7 @@ const server = setupServer(
       }
     ]));
   }),
-  
+
   rest.post('/api/projects', (req, res, ctx) => {
     return res(ctx.json({
       id: '2',
@@ -601,15 +613,17 @@ describe('Project Management', () => {
     cy.get('[data-testid="project-name-input"]').type('Test Project');
     cy.get('[data-testid="project-path-input"]').type('/test/path');
     cy.get('[data-testid="create-project-btn"]').click();
-    
+
     cy.get('[data-testid="project-list"]').should('contain', 'Test Project');
   });
 
   it('should delete a project', () => {
-    cy.get('[data-testid="project-item"]').first().within(() => {
-      cy.get('[data-testid="delete-project-btn"]').click();
-    });
-    
+    cy.get('[data-testid="project-item"]')
+      .first()
+      .within(() => {
+        cy.get('[data-testid="delete-project-btn"]').click();
+      });
+
     cy.get('[data-testid="confirm-delete-btn"]').click();
     cy.get('[data-testid="project-list"]').should('not.contain', 'Test Project');
   });
@@ -619,7 +633,7 @@ describe('Project Management', () => {
     cy.get('[data-testid="new-session-btn"]').click();
     cy.get('[data-testid="chat-input"]').type('Hello, Claude!');
     cy.get('[data-testid="send-message-btn"]').click();
-    
+
     cy.get('[data-testid="chat-messages"]').should('contain', 'Hello, Claude!');
   });
 });
@@ -651,23 +665,20 @@ describe('Project Management', () => {
     },
     "project": "./tsconfig.json"
   },
-  "plugins": [
-    "@typescript-eslint",
-    "react",
-    "react-hooks",
-    "jsx-a11y",
-    "import"
-  ],
+  "plugins": ["@typescript-eslint", "react", "react-hooks", "jsx-a11y", "import"],
   "rules": {
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
     "@typescript-eslint/explicit-function-return-type": "warn",
     "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/no-explicit-any": "warn",
-    "import/order": ["error", {
-      "groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
-      "newlines-between": "always"
-    }],
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal", "parent", "sibling", "index"],
+        "newlines-between": "always"
+      }
+    ],
     "jsx-a11y/anchor-is-valid": "off"
   },
   "settings": {
@@ -724,13 +735,8 @@ describe('Project Management', () => {
     }
   },
   "lint-staged": {
-    "*.{ts,tsx}": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "*.{json,css,md}": [
-      "prettier --write"
-    ]
+    "*.{ts,tsx}": ["eslint --fix", "prettier --write"],
+    "*.{json,css,md}": ["prettier --write"]
   }
 }
 ```
@@ -739,7 +745,7 @@ describe('Project Management', () => {
 
 #### 4.1 JSDoc комментарии
 
-```typescript
+````typescript
 /**
  * Represents a project in the Claude Code UI system
  * @interface Project
@@ -747,31 +753,31 @@ describe('Project Management', () => {
 export interface Project {
   /** Unique identifier for the project */
   id: string;
-  
+
   /** Display name of the project */
   name: string;
-  
+
   /** File system path to the project */
   path: string;
-  
+
   /** Optional custom display name */
   displayName?: string;
-  
+
   /** Full absolute path to the project */
   fullPath: string;
-  
+
   /** List of Claude sessions in this project */
   sessions: Session[];
-  
+
   /** List of Cursor sessions in this project */
   cursorSessions: CursorSession[];
-  
+
   /** Metadata about sessions */
   sessionMeta: SessionMeta;
-  
+
   /** ISO timestamp when project was created */
   createdAt: string;
-  
+
   /** ISO timestamp when project was last updated */
   updatedAt: string;
 }
@@ -782,9 +788,9 @@ export interface Project {
  * @example
  * ```tsx
  * const { projects, loading, createProject } = useProjects();
- * 
+ *
  * if (loading) return <LoadingSpinner />;
- * 
+ *
  * return (
  *   <div>
  *     {projects.map(project => (
@@ -797,7 +803,7 @@ export interface Project {
 export const useProjects = () => {
   // Implementation
 };
-```
+````
 
 #### 4.2 Storybook
 
@@ -882,48 +888,48 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    
+
     steps:
       - uses: actions/checkout@v3
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'
           cache: 'npm'
-      
+
       - name: Install dependencies
         run: npm ci
-      
+
       - name: Type check
         run: npm run type-check
-      
+
       - name: Lint
         run: npm run lint
-      
+
       - name: Format check
         run: npm run format:check
-      
+
       - name: Unit tests
         run: npm run test:coverage
-      
+
       - name: Upload coverage
         uses: codecov/codecov-action@v3
         with:
           file: ./coverage/lcov.info
-      
+
       - name: E2E tests
         run: npm run test:e2e
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-      
+
       - name: Build
         run: npm run build
-      
+
       - name: Deploy to staging
         if: github.ref == 'refs/heads/develop'
         run: npm run deploy:staging
-      
+
       - name: Deploy to production
         if: github.ref == 'refs/heads/main'
         run: npm run deploy:production

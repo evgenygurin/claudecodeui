@@ -5,7 +5,7 @@ const WebSocketContext = createContext({
   ws: null,
   sendMessage: () => {},
   messages: [],
-  isConnected: false
+  isConnected: false,
 });
 
 export const useWebSocketContext = () => {
@@ -18,12 +18,8 @@ export const useWebSocketContext = () => {
 
 export const WebSocketProvider = ({ children }) => {
   const webSocketData = useWebSocket();
-  
-  return (
-    <WebSocketContext.Provider value={webSocketData}>
-      {children}
-    </WebSocketContext.Provider>
-  );
+
+  return <WebSocketContext.Provider value={webSocketData}>{children}</WebSocketContext.Provider>;
 };
 
 export default WebSocketContext;

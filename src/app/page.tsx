@@ -57,8 +57,8 @@ export default function HomePage() {
   return (
     <div className="flex h-screen bg-background">
       {/* Sidebar */}
-      <Sidebar 
-        isCollapsed={sidebarCollapsed} 
+      <Sidebar
+        isCollapsed={sidebarCollapsed}
         onToggle={toggleSidebar}
         onTabChange={setActiveTab}
         activeTab={activeTab}
@@ -74,9 +74,9 @@ export default function HomePage() {
               <p className="text-muted-foreground">Modern interface for AI-powered development</p>
             </div>
             <div className="flex items-center gap-2">
-              <ActionSearchBar 
-                className="w-64" 
-                onActionSelect={(action) => {
+              <ActionSearchBar
+                className="w-64"
+                onActionSelect={action => {
                   if (action.id === 'new-chat') setActiveTab('chat');
                   else if (action.id === 'open-files') setActiveTab('files');
                   else if (action.id === 'deploy-project') setActiveTab('deploy');

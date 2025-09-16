@@ -9,13 +9,22 @@ interface filetreesidebarNBfcFIKai4TProps {
   // TODO: Определить пропсы компонента
 }
 
-export const filetreesidebarNBfcFIKai4T: React.FC<filetreesidebarNBfcFIKai4TProps> = (props) => {
+export const filetreesidebarNBfcFIKai4T: React.FC<filetreesidebarNBfcFIKai4TProps> = props => {
   return (
     <div className="file-tree-sidebar-NBfcFIKai4T">
       <h2>file-tree-sidebar-NBfcFIKai4T</h2>
       <p>Компонент file-tree-sidebar-NBfcFIKai4T из v0.app</p>
       <p>Автор: unknown</p>
-      <p>URL: <a href="https://v0.app/community/file-tree-sidebar-NBfcFIKai4T" target="_blank" rel="noopener noreferrer">https://v0.app/community/file-tree-sidebar-NBfcFIKai4T</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/community/file-tree-sidebar-NBfcFIKai4T"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/community/file-tree-sidebar-NBfcFIKai4T
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
