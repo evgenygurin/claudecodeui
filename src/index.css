@@ -540,7 +540,7 @@
   @media (max-width: 768px) {
     * {
       touch-action: manipulation;
-      -webkit-tap-highlight-color: transparent;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     }
 
     /* Allow vertical scrolling in scroll containers */
@@ -561,7 +561,7 @@
     .clickable,
     a,
     .cursor-pointer {
-      -webkit-tap-highlight-color: transparent;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
       user-select: none;
       -webkit-user-select: none;
       touch-action: manipulation;
@@ -639,7 +639,7 @@
 
     /* Completely disable hover states on touch devices */
     * {
-      -webkit-tap-highlight-color: transparent !important;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
     }
 
     /* Preserve checkbox visibility on touch devices */
