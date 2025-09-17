@@ -14,8 +14,9 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - node-modules-v2-{{ checksum "package.json" }}
-            - node-modules-v2-
+            - node-modules-v3-{{ checksum "package-lock.json" }}
+            - node-modules-v3-{{ checksum "package.json" }}
+            - node-modules-v3-
       - run:
           name: Clean install dependencies
           command: |
@@ -29,9 +30,10 @@ jobs:
             - node_modules
             - package-lock.json
       - save_cache:
-          key: node-modules-v2-{{ checksum "package.json" }}
+          key: node-modules-v3-{{ checksum "package-lock.json" }}
           paths:
             - node_modules
+            - ~/.npm
 
   # Run linting and type checking
   lint-and-typecheck:
@@ -116,8 +118,8 @@ jobs:
       - persist_to_workspace:
           root: ~/project
           paths:
-            - .next
-            - public
+            - dist
+            - package.json
 
   # Deploy to Vercel (if configured)
   deploy:
