@@ -17,54 +17,85 @@ const analysis = JSON.parse(fs.readFileSync(analysisPath, 'utf8'));
  */
 function generateEnhancedSearchVariants(componentName) {
   const variants = [];
-  
+
   // Базовые варианты
   variants.push(componentName);
   variants.push(componentName.replace(/-/g, ' '));
   variants.push(componentName.replace(/-/g, '_'));
-  
+
   // С префиксами
   const prefixes = [
-    'v0', 'nextjs', 'react', 'vue', 'angular', 'svelte',
-    'ui', 'component', 'web', 'app', 'frontend', 'client',
-    'modern', 'advanced', 'simple', 'basic', 'mini', 'lite',
-    'pro', 'premium', 'enterprise', 'starter', 'template', 'boilerplate'
+    'v0',
+    'nextjs',
+    'react',
+    'vue',
+    'angular',
+    'svelte',
+    'ui',
+    'component',
+    'web',
+    'app',
+    'frontend',
+    'client',
+    'modern',
+    'advanced',
+    'simple',
+    'basic',
+    'mini',
+    'lite',
+    'pro',
+    'premium',
+    'enterprise',
+    'starter',
+    'template',
+    'boilerplate',
   ];
-  
+
   prefixes.forEach(prefix => {
     variants.push(`${prefix}-${componentName}`);
     variants.push(`${prefix}_${componentName.replace(/-/g, '_')}`);
     variants.push(`${prefix}${componentName.charAt(0).toUpperCase() + componentName.slice(1)}`);
   });
-  
+
   // С суффиксами
   const suffixes = [
-    'component', 'ui', 'template', 'starter', 'boilerplate',
-    'app', 'web', 'frontend', 'client', 'widget', 'plugin',
-    'library', 'package', 'module', 'tool', 'utility'
+    'component',
+    'ui',
+    'template',
+    'starter',
+    'boilerplate',
+    'app',
+    'web',
+    'frontend',
+    'client',
+    'widget',
+    'plugin',
+    'library',
+    'package',
+    'module',
+    'tool',
+    'utility',
   ];
-  
+
   suffixes.forEach(suffix => {
     variants.push(`${componentName}-${suffix}`);
     variants.push(`${componentName}_${suffix}`);
     variants.push(`${componentName}${suffix.charAt(0).toUpperCase() + suffix.slice(1)}`);
   });
-  
+
   // CamelCase и PascalCase
   const camelCase = componentName
     .split('-')
-    .map((word, index) => 
-      index === 0 ? word : word.charAt(0).toUpperCase() + word.slice(1)
-    )
+    .map((word, index) => (index === 0 ? word : word.charAt(0).toUpperCase() + word.slice(1)))
     .join('');
   variants.push(camelCase);
-  
+
   const pascalCase = componentName
     .split('-')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
     .join('');
   variants.push(pascalCase);
-  
+
   // Комбинированные варианты
   prefixes.forEach(prefix => {
     suffixes.forEach(suffix => {
@@ -72,34 +103,50 @@ function generateEnhancedSearchVariants(componentName) {
       variants.push(`${prefix}_${componentName.replace(/-/g, '_')}_${suffix}`);
     });
   });
-  
+
   // Варианты с числами и версиями
   ['2', '3', 'v2', 'v3', 'v1', 'v4', 'v5'].forEach(version => {
     variants.push(`${componentName}-${version}`);
     variants.push(`${componentName}${version}`);
     variants.push(`v0-${componentName}-${version}`);
   });
-  
+
   // Варианты с технологиями
   const techs = ['js', 'ts', 'tsx', 'jsx', 'css', 'scss', 'sass', 'less'];
   techs.forEach(tech => {
     variants.push(`${componentName}-${tech}`);
     variants.push(`${componentName}.${tech}`);
   });
-  
+
   // Варианты с описательными словами
   const descriptive = [
-    'modern', 'advanced', 'simple', 'basic', 'mini', 'lite', 'pro',
-    'premium', 'enterprise', 'demo', 'example', 'sample', 'test',
-    'dev', 'development', 'production', 'beta', 'alpha', 'rc'
+    'modern',
+    'advanced',
+    'simple',
+    'basic',
+    'mini',
+    'lite',
+    'pro',
+    'premium',
+    'enterprise',
+    'demo',
+    'example',
+    'sample',
+    'test',
+    'dev',
+    'development',
+    'production',
+    'beta',
+    'alpha',
+    'rc',
   ];
-  
+
   descriptive.forEach(desc => {
     variants.push(`${desc}-${componentName}`);
     variants.push(`${componentName}-${desc}`);
     variants.push(`${desc}_${componentName.replace(/-/g, '_')}`);
   });
-  
+
   // Убираем дубликаты и возвращаем
   return [...new Set(variants)].filter(v => v.length > 0);
 }
@@ -110,65 +157,65 @@ function generateEnhancedSearchVariants(componentName) {
 function createEnhancedSearchQueries(componentName) {
   const variants = generateEnhancedSearchVariants(componentName);
   const queries = [];
-  
+
   // Точные совпадения в названии
   variants.slice(0, 20).forEach(variant => {
     queries.push({
       type: 'exact_name',
       query: `"${variant}" in:name`,
-      description: `Точное совпадение: "${variant}"`
+      description: `Точное совпадение: "${variant}"`,
     });
   });
-  
+
   // Поиск в описании
   variants.slice(0, 10).forEach(variant => {
     queries.push({
       type: 'description',
       query: `"${variant}" in:description`,
-      description: `В описании: "${variant}"`
+      description: `В описании: "${variant}"`,
     });
   });
-  
+
   // Поиск в README
   variants.slice(0, 10).forEach(variant => {
     queries.push({
       type: 'readme',
       query: `"${variant}" in:readme`,
-      description: `В README: "${variant}"`
+      description: `В README: "${variant}"`,
     });
   });
-  
+
   // Поиск по тегам
   variants.slice(0, 10).forEach(variant => {
     queries.push({
       type: 'topics',
       query: `"${variant}" in:topics`,
-      description: `В тегах: "${variant}"`
+      description: `В тегах: "${variant}"`,
     });
   });
-  
+
   // Комбинированные поиски
   const mainVariants = variants.slice(0, 5);
   mainVariants.forEach(variant => {
     queries.push({
       type: 'combined',
       query: `"${variant}" language:JavaScript language:TypeScript`,
-      description: `JS/TS: "${variant}"`
+      description: `JS/TS: "${variant}"`,
     });
-    
+
     queries.push({
       type: 'combined',
       query: `"${variant}" language:React language:Next.js`,
-      description: `React/Next.js: "${variant}"`
+      description: `React/Next.js: "${variant}"`,
     });
-    
+
     queries.push({
       type: 'combined',
       query: `"${variant}" stars:>10`,
-      description: `Популярные: "${variant}"`
+      description: `Популярные: "${variant}"`,
     });
   });
-  
+
   // Поиск по ключевым словам
   const keywords = componentName.split('-');
   keywords.forEach(keyword => {
@@ -176,11 +223,11 @@ function createEnhancedSearchQueries(componentName) {
       queries.push({
         type: 'keyword',
         query: `"${keyword}" in:name language:JavaScript`,
-        description: `Ключевое слово: "${keyword}"`
+        description: `Ключевое слово: "${keyword}"`,
       });
     }
   });
-  
+
   return queries;
 }
 
@@ -189,7 +236,7 @@ function createEnhancedSearchQueries(componentName) {
  */
 function createEnhancedSearchHTML() {
   const componentsToSearch = analysis.components.slice(0, 15); // Берем первые 15 компонентов
-  
+
   let html = `<!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -376,7 +423,7 @@ function createEnhancedSearchHTML() {
   componentsToSearch.forEach((component, index) => {
     const searchQueries = createEnhancedSearchQueries(component.componentName);
     const queriesByType = {};
-    
+
     // Группируем запросы по типам
     searchQueries.forEach(query => {
       if (!queriesByType[query.type]) {
@@ -384,7 +431,7 @@ function createEnhancedSearchHTML() {
       }
       queriesByType[query.type].push(query);
     });
-    
+
     html += `
     <div class="component">
         <div class="component-header">
@@ -400,20 +447,21 @@ function createEnhancedSearchHTML() {
     // Добавляем запросы по категориям
     Object.entries(queriesByType).forEach(([type, queries]) => {
       const typeNames = {
-        'exact_name': 'Точные совпадения в названии',
-        'description': 'Поиск в описании',
-        'readme': 'Поиск в README',
-        'topics': 'Поиск по тегам',
-        'combined': 'Комбинированные поиски',
-        'keyword': 'Поиск по ключевым словам'
+        exact_name: 'Точные совпадения в названии',
+        description: 'Поиск в описании',
+        readme: 'Поиск в README',
+        topics: 'Поиск по тегам',
+        combined: 'Комбинированные поиски',
+        keyword: 'Поиск по ключевым словам',
       };
-      
+
       html += `
             <div class="search-category">
                 <div class="category-title">${typeNames[type] || type}</div>
 `;
 
-      queries.slice(0, 8).forEach((query, queryIndex) => { // Ограничиваем до 8 запросов на категорию
+      queries.slice(0, 8).forEach((query, queryIndex) => {
+        // Ограничиваем до 8 запросов на категорию
         html += `
                 <div class="search-query">
                     <div class="query-info">
@@ -521,35 +569,42 @@ function createEnhancedSearchHTML() {
  */
 function main() {
   console.log('🚀 Создаем расширенный поиск...');
-  
+
   const html = createEnhancedSearchHTML();
-  
+
   // Сохраняем HTML страницу
   const htmlPath = path.join(__dirname, 'enhanced-github-search.html');
   fs.writeFileSync(htmlPath, html);
-  
+
   // Создаем также JSON с расширенными запросами
   const enhancedQueries = analysis.components.slice(0, 15).map(component => ({
     componentName: component.componentName,
     originalUrl: component.originalUrl,
-    searchQueries: createEnhancedSearchQueries(component.componentName)
+    searchQueries: createEnhancedSearchQueries(component.componentName),
   }));
-  
+
   const jsonPath = path.join(__dirname, 'enhanced-search-queries.json');
-  fs.writeFileSync(jsonPath, JSON.stringify({
-    metadata: {
-      createdDate: new Date().toISOString(),
-      totalComponents: enhancedQueries.length,
-      totalQueries: enhancedQueries.reduce((sum, comp) => sum + comp.searchQueries.length, 0),
-      description: "Расширенные поисковые запросы для GitHub"
-    },
-    components: enhancedQueries
-  }, null, 2));
-  
+  fs.writeFileSync(
+    jsonPath,
+    JSON.stringify(
+      {
+        metadata: {
+          createdDate: new Date().toISOString(),
+          totalComponents: enhancedQueries.length,
+          totalQueries: enhancedQueries.reduce((sum, comp) => sum + comp.searchQueries.length, 0),
+          description: 'Расширенные поисковые запросы для GitHub',
+        },
+        components: enhancedQueries,
+      },
+      null,
+      2
+    )
+  );
+
   console.log('✅ Файлы созданы:');
   console.log(`  - ${htmlPath} - HTML страница с расширенным поиском`);
   console.log(`  - ${jsonPath} - JSON с расширенными запросами`);
-  
+
   console.log('\n🔍 Особенности расширенного поиска:');
   console.log('  - Множественные варианты названий (префиксы, суффиксы, версии)');
   console.log('  - Поиск в разных полях (название, описание, README, теги)');
@@ -565,7 +620,5 @@ if (require.main === module) {
 module.exports = {
   generateEnhancedSearchVariants,
   createEnhancedSearchQueries,
-  createEnhancedSearchHTML
+  createEnhancedSearchHTML,
 };
-
-

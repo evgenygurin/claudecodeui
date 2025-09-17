@@ -209,12 +209,15 @@ class WebSocketManager {
 
   private handleReconnect(url: string): void {
     const attempts = this.reconnectAttempts.get(url) || 0;
-    
+
     if (attempts < this.maxReconnectAttempts) {
-      setTimeout(() => {
-        this.reconnectAttempts.set(url, attempts + 1);
-        this.connect(url);
-      }, Math.pow(2, attempts) * 1000); // Exponential backoff
+      setTimeout(
+        () => {
+          this.reconnectAttempts.set(url, attempts + 1);
+          this.connect(url);
+        },
+        Math.pow(2, attempts) * 1000
+      ); // Exponential backoff
     }
   }
 }
@@ -222,11 +225,12 @@ class WebSocketManager {
 // Debounced WebSocket messages
 const useDebouncedWebSocket = (ws: WebSocket, delay: number = 300) => {
   const debouncedSend = useMemo(
-    () => debounce((message: any) => {
-      if (ws.readyState === WebSocket.OPEN) {
-        ws.send(JSON.stringify(message));
-      }
-    }, delay),
+    () =>
+      debounce((message: any) => {
+        if (ws.readyState === WebSocket.OPEN) {
+          ws.send(JSON.stringify(message));
+        }
+      }, delay),
     [ws, delay]
   );
 
@@ -267,14 +271,14 @@ const projectCache = new CacheService();
 
 app.get('/api/projects', async (req, res) => {
   const cacheKey = 'projects:all';
-  
+
   let projects = await projectCache.get<Project[]>(cacheKey);
-  
+
   if (!projects) {
     projects = await getProjects();
     await projectCache.set(cacheKey, projects, 300); // 5 минут
   }
-  
+
   res.json(projects);
 });
 ```
@@ -290,12 +294,12 @@ if (isMainThread) {
   const processFileTree = (projectPath: string): Promise<FileTreeItem[]> => {
     return new Promise((resolve, reject) => {
       const worker = new Worker(__filename, {
-        workerData: { projectPath }
+        workerData: { projectPath },
       });
-      
+
       worker.on('message', resolve);
       worker.on('error', reject);
-      worker.on('exit', (code) => {
+      worker.on('exit', code => {
         if (code !== 0) {
           reject(new Error(`Worker stopped with exit code ${code}`));
         }
@@ -305,7 +309,7 @@ if (isMainThread) {
 } else {
   // Worker thread
   const { projectPath } = workerData;
-  
+
   try {
     const fileTree = await getFileTree(projectPath);
     parentPort?.postMessage(fileTree);
@@ -329,25 +333,22 @@ const pool = new Pool({
 });
 
 // Prepared statements
-const getProjectById = pool.query(
-  'SELECT * FROM projects WHERE id = $1',
-  [projectId]
-);
+const getProjectById = pool.query('SELECT * FROM projects WHERE id = $1', [projectId]);
 
 // Batch operations
 const insertSessions = async (sessions: Session[]) => {
   const client = await pool.connect();
-  
+
   try {
     await client.query('BEGIN');
-    
+
     for (const session of sessions) {
       await client.query(
         'INSERT INTO sessions (id, project_id, title, created_at) VALUES ($1, $2, $3, $4)',
         [session.id, session.projectId, session.title, session.createdAt]
       );
     }
-    
+
     await client.query('COMMIT');
   } catch (error) {
     await client.query('ROLLBACK');
@@ -371,10 +372,10 @@ app.get('/api/projects/:projectName/file', async (req, res) => {
 
   try {
     const fileStream = createReadStream(filePath);
-    
+
     res.setHeader('Content-Type', 'application/octet-stream');
     res.setHeader('Content-Disposition', `attachment; filename="${path.basename(filePath)}"`);
-    
+
     await pipeline(fileStream, res);
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -384,13 +385,9 @@ app.get('/api/projects/:projectName/file', async (req, res) => {
 // Параллельная обработка файлов
 const processFilesInParallel = async (filePaths: string[]) => {
   const chunks = chunkArray(filePaths, 10); // Обрабатываем по 10 файлов
-  
-  const results = await Promise.all(
-    chunks.map(chunk => 
-      Promise.all(chunk.map(processFile))
-    )
-  );
-  
+
+  const results = await Promise.all(chunks.map(chunk => Promise.all(chunk.map(processFile))));
+
   return results.flat();
 };
 ```
@@ -429,12 +426,12 @@ const measurePerformance = (name: string, fn: () => void) => {
 // Response time middleware
 app.use((req, res, next) => {
   const start = Date.now();
-  
+
   res.on('finish', () => {
     const duration = Date.now() - start;
     console.log(`${req.method} ${req.path} - ${res.statusCode} - ${duration}ms`);
   });
-  
+
   next();
 });
 

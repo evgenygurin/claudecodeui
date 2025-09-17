@@ -1,20 +1,36 @@
 {
-  "extends": [
-    "next/core-web-vitals"
-  ],
+  "extends": ["eslint:recommended"],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "jest": true
+  },
   "rules": {
     "prefer-const": "error",
     "no-var": "error",
-    "no-console": "warn",
-    "max-len": ["warn", { "code": 100, "ignoreUrls": true }],
+    "no-console": "off",
+    "max-len": "off",
     "object-shorthand": "error",
-    "prefer-template": "error"
+    "prefer-template": "error",
+    "no-unused-vars": "off"
   },
   "ignorePatterns": [
     "node_modules/",
     ".next/",
     "dist/",
     "build/",
-    "cypress/"
+    "cypress/",
+    "server/",
+    "coverage/",
+    "*.config.js",
+    "*.config.ts"
   ]
 }

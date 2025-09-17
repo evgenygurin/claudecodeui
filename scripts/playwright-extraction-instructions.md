@@ -1,10 +1,11 @@
-
 # Инструкции для извлечения компонентов с v0.app
 
 ## Шаг 1: Открыть браузер
+
 Используйте MCP Playwright для открытия браузера.
 
 ## Шаг 2: Извлечь компоненты
+
 Для каждого URL выполните следующие действия:
 
 1. Перейдите на страницу компонента
@@ -13,6 +14,7 @@
 4. Сохраните в соответствующий файл
 
 ## Список URL для обработки:
+
 - File Manager WukORjs2J9p: https://v0.app/chat/file-manager-wukORjs2J9p
 - File Manager HN0nNvAchzi: https://v0.app/community/file-manager-hN0nNvAchzi
 - Ai Chat Interface 6VLiqkGu5vw: https://v0.app/community/ai-chat-interface-6VLiqkGu5vw
@@ -58,12 +60,14 @@
 - General Greeting OaN8bYkHdWq: https://v0.app/chat/general-greeting-oaN8bYkHdWq
 
 ## Структура сохранения:
+
 - UI компоненты: src/components/integrated/ui/
 - Layout компоненты: src/components/integrated/layout/
 - Feature компоненты: src/components/integrated/features/
 - Advanced компоненты: src/components/integrated/advanced/
 
 ## Пример извлечения:
+
 1. Откройте: https://v0.app/community/toast-fLjYRXrijvp
 2. Найдите кнопку "Open in"
 3. Скопируйте код

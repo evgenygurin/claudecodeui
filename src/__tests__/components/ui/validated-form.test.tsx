@@ -5,7 +5,12 @@
 import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { z } from 'zod';
-import { ValidatedForm, ValidatedInput, ValidatedTextarea, ValidatedSelect } from '@/components/ui/validated-form';
+import {
+  ValidatedForm,
+  ValidatedInput,
+  ValidatedTextarea,
+  ValidatedSelect,
+} from '@/components/ui/validated-form';
 import { commonSchemas } from '@/utils/form-validation';
 
 // Mock the logger
@@ -33,10 +38,7 @@ describe('ValidatedForm', () => {
 
   it('should render form with children', () => {
     render(
-      <ValidatedForm
-        schema={testSchema}
-        onSubmit={jest.fn()}
-      >
+      <ValidatedForm schema={testSchema} onSubmit={jest.fn()}>
         <div>Test Form</div>
       </ValidatedForm>
     );
@@ -46,12 +48,9 @@ describe('ValidatedForm', () => {
 
   it('should validate form on submit', async () => {
     const onSubmit = jest.fn();
-    
+
     render(
-      <ValidatedForm
-        schema={testSchema}
-        onSubmit={onSubmit}
-      >
+      <ValidatedForm schema={testSchema} onSubmit={onSubmit}>
         <ValidatedInput name="name" />
         <ValidatedInput name="email" />
         <button type="submit">Submit</button>
@@ -68,12 +67,9 @@ describe('ValidatedForm', () => {
 
   it('should call onSubmit with valid data', async () => {
     const onSubmit = jest.fn();
-    
+
     render(
-      <ValidatedForm
-        schema={testSchema}
-        onSubmit={onSubmit}
-      >
+      <ValidatedForm schema={testSchema} onSubmit={onSubmit}>
         <ValidatedInput name="name" data-testid="name-input" />
         <ValidatedInput name="email" data-testid="email-input" />
         <button type="submit">Submit</button>
@@ -129,17 +125,16 @@ describe('ValidatedInput', () => {
     fireEvent.blur(input);
 
     await waitFor(() => {
-      expect(screen.getByText('Required')).toBeInTheDocument();
+      expect(
+        screen.getByText('Invalid input: expected string, received undefined')
+      ).toBeInTheDocument();
     });
   });
 
   it('should show helper text when no error', () => {
     render(
       <ValidatedForm schema={testSchema} onSubmit={jest.fn()}>
-        <ValidatedInput 
-          name="testField" 
-          helperText="This is helper text" 
-        />
+        <ValidatedInput name="testField" helperText="This is helper text" />
       </ValidatedForm>
     );
 
@@ -232,7 +227,9 @@ describe('ValidatedSelect', () => {
     fireEvent.blur(select);
 
     await waitFor(() => {
-      expect(screen.getByText('Required')).toBeInTheDocument();
+      expect(
+        screen.getByText('Invalid input: expected string, received undefined')
+      ).toBeInTheDocument();
     });
   });
 

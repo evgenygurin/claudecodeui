@@ -1,11 +1,19 @@
 // components-demo/page.tsx
 // Демонстрационная страница для тестирования интегрированных компонентов
 
-"use client";
+'use client';
 
 import React, { useState } from 'react';
 import { Button, IconButton, LoadingButton } from '@/components/integrated/ui/Button';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter, QuickCard } from '@/components/integrated/ui/Card';
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+  QuickCard,
+} from '@/components/integrated/ui/Card';
 import { Toast, ToastProvider, useToast } from '@/components/integrated/ui/Toast';
 import { Play, Download, Heart, Star, Settings, User, Mail, Phone } from 'lucide-react';
 
@@ -20,7 +28,8 @@ export default function ComponentsDemoPage() {
               Integrated Components Demo
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Демонстрация современных компонентов, интегрированных из v0.app с улучшенной функциональностью
+              Демонстрация современных компонентов, интегрированных из v0.app с улучшенной
+              функциональностью
             </p>
           </div>
 
@@ -108,7 +117,9 @@ export default function ComponentsDemoPage() {
                   </p>
                 </CardContent>
                 <CardFooter>
-                  <Button variant="outline" size="sm">Learn More</Button>
+                  <Button variant="outline" size="sm">
+                    Learn More
+                  </Button>
                 </CardFooter>
               </Card>
 
@@ -123,7 +134,9 @@ export default function ComponentsDemoPage() {
                   </p>
                 </CardContent>
                 <CardFooter>
-                  <Button variant="gradient" size="sm">Explore</Button>
+                  <Button variant="gradient" size="sm">
+                    Explore
+                  </Button>
                 </CardFooter>
               </Card>
 
@@ -133,7 +146,8 @@ export default function ComponentsDemoPage() {
                 footer={<Button size="sm">Quick Action</Button>}
               >
                 <p className="text-sm text-muted-foreground">
-                  Компонент QuickCard позволяет быстро создавать карточки с заголовком, описанием и футером.
+                  Компонент QuickCard позволяет быстро создавать карточки с заголовком, описанием и
+                  футером.
                 </p>
               </QuickCard>
 
@@ -179,7 +193,9 @@ export default function ComponentsDemoPage() {
                     <User className="h-5 w-5" />
                     User Profile
                   </CardTitle>
-                  <CardDescription>Пример использования компонентов в реальном интерфейсе</CardDescription>
+                  <CardDescription>
+                    Пример использования компонентов в реальном интерфейсе
+                  </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="flex items-center gap-4">
@@ -217,15 +233,21 @@ export default function ComponentsDemoPage() {
                   <div className="space-y-3">
                     <div className="flex items-center justify-between">
                       <span className="text-sm">Notifications</span>
-                      <Button size="sm" variant="outline">Toggle</Button>
+                      <Button size="sm" variant="outline">
+                        Toggle
+                      </Button>
                     </div>
                     <div className="flex items-center justify-between">
                       <span className="text-sm">Dark Mode</span>
-                      <Button size="sm" variant="outline">Toggle</Button>
+                      <Button size="sm" variant="outline">
+                        Toggle
+                      </Button>
                     </div>
                     <div className="flex items-center justify-between">
                       <span className="text-sm">Auto-save</span>
-                      <Button size="sm" variant="outline">Toggle</Button>
+                      <Button size="sm" variant="outline">
+                        Toggle
+                      </Button>
                     </div>
                   </div>
                   <div className="pt-4 border-t">
@@ -260,39 +282,41 @@ function ToastDemo() {
   const { addToast } = useToast();
   const [loading, setLoading] = useState(false);
 
-  const showToast = (variant: "default" | "success" | "destructive" | "warning" | "info" | "loading") => {
+  const showToast = (
+    variant: 'default' | 'success' | 'destructive' | 'warning' | 'info' | 'loading'
+  ) => {
     const toastConfig = {
       default: {
-        title: "Default Toast",
-        description: "Это стандартное уведомление",
-        variant: "default" as const
+        title: 'Default Toast',
+        description: 'Это стандартное уведомление',
+        variant: 'default' as const,
       },
       success: {
-        title: "Success!",
-        description: "Операция выполнена успешно",
-        variant: "success" as const
+        title: 'Success!',
+        description: 'Операция выполнена успешно',
+        variant: 'success' as const,
       },
       destructive: {
-        title: "Error",
-        description: "Произошла ошибка при выполнении операции",
-        variant: "destructive" as const
+        title: 'Error',
+        description: 'Произошла ошибка при выполнении операции',
+        variant: 'destructive' as const,
       },
       warning: {
-        title: "Warning",
-        description: "Внимание! Проверьте введенные данные",
-        variant: "warning" as const
+        title: 'Warning',
+        description: 'Внимание! Проверьте введенные данные',
+        variant: 'warning' as const,
       },
       info: {
-        title: "Information",
-        description: "Полезная информация для пользователя",
-        variant: "info" as const
+        title: 'Information',
+        description: 'Полезная информация для пользователя',
+        variant: 'info' as const,
       },
       loading: {
-        title: "Loading",
-        description: "Загрузка данных...",
-        variant: "loading" as const,
-        duration: 0 // Не исчезает автоматически
-      }
+        title: 'Loading',
+        description: 'Загрузка данных...',
+        variant: 'loading' as const,
+        duration: 0, // Не исчезает автоматически
+      },
     };
 
     addToast(toastConfig[variant]);
@@ -300,12 +324,12 @@ function ToastDemo() {
 
   const showLoadingToast = () => {
     setLoading(true);
-    showToast("loading");
-    
+    showToast('loading');
+
     // Симулируем загрузку
     setTimeout(() => {
       setLoading(false);
-      showToast("success");
+      showToast('success');
     }, 3000);
   };
 
@@ -317,26 +341,22 @@ function ToastDemo() {
       </CardHeader>
       <CardContent>
         <div className="flex flex-wrap gap-2">
-          <Button onClick={() => showToast("default")} variant="outline">
+          <Button onClick={() => showToast('default')} variant="outline">
             Default Toast
           </Button>
-          <Button onClick={() => showToast("success")} variant="outline">
+          <Button onClick={() => showToast('success')} variant="outline">
             Success Toast
           </Button>
-          <Button onClick={() => showToast("destructive")} variant="outline">
+          <Button onClick={() => showToast('destructive')} variant="outline">
             Error Toast
           </Button>
-          <Button onClick={() => showToast("warning")} variant="outline">
+          <Button onClick={() => showToast('warning')} variant="outline">
             Warning Toast
           </Button>
-          <Button onClick={() => showToast("info")} variant="outline">
+          <Button onClick={() => showToast('info')} variant="outline">
             Info Toast
           </Button>
-          <LoadingButton 
-            onClick={showLoadingToast} 
-            loading={loading}
-            variant="gradient"
-          >
+          <LoadingButton onClick={showLoadingToast} loading={loading} variant="gradient">
             Loading Toast
           </LoadingButton>
         </div>

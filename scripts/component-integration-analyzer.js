@@ -15,7 +15,7 @@ class ComponentIntegrationAnalyzer {
     this.metadataFile = path.join(this.componentsDir, 'components-metadata.json');
     this.extractedDir = path.join(this.baseDir, 'v0-extracted-components');
     this.outputDir = path.join(this.baseDir, 'src', 'components', 'integrated');
-    
+
     this.loadMetadata();
   }
 
@@ -41,7 +41,7 @@ class ComponentIntegrationAnalyzer {
       low: [],
       medium: [],
       high: [],
-      veryHigh: []
+      veryHigh: [],
     };
 
     this.components.forEach(component => {
@@ -64,44 +64,72 @@ class ComponentIntegrationAnalyzer {
    */
   determineComplexity(component) {
     const { name, category, url } = component;
-    
+
     // Критерии для определения сложности
     const highComplexityKeywords = [
-      'dashboard', 'admin', 'financial', 'e-commerce', 'marketplace',
-      'eleven-labs', 'ai-sdk', 'drag-and-drop', 'dynamic-table'
+      'dashboard',
+      'admin',
+      'financial',
+      'e-commerce',
+      'marketplace',
+      'eleven-labs',
+      'ai-sdk',
+      'drag-and-drop',
+      'dynamic-table',
     ];
-    
+
     const mediumComplexityKeywords = [
-      'chat', 'file-manager', 'sidebar', 'layout', 'authentication',
-      'team', 'documentation', 'creative', 'portfolio'
+      'chat',
+      'file-manager',
+      'sidebar',
+      'layout',
+      'authentication',
+      'team',
+      'documentation',
+      'creative',
+      'portfolio',
     ];
 
     const lowComplexityKeywords = [
-      'button', 'input', 'toast', 'tabs', 'beam', 'grid',
-      'dropdown', 'menu', 'badge', 'card'
+      'button',
+      'input',
+      'toast',
+      'tabs',
+      'beam',
+      'grid',
+      'dropdown',
+      'menu',
+      'badge',
+      'card',
     ];
 
     const nameLower = name.toLowerCase();
     const categoryLower = category.toLowerCase();
 
     // Проверяем на очень высокую сложность
-    if (highComplexityKeywords.some(keyword => 
-      nameLower.includes(keyword) || categoryLower.includes(keyword)
-    )) {
+    if (
+      highComplexityKeywords.some(
+        keyword => nameLower.includes(keyword) || categoryLower.includes(keyword)
+      )
+    ) {
       return 'veryHigh';
     }
 
     // Проверяем на высокую сложность
-    if (mediumComplexityKeywords.some(keyword => 
-      nameLower.includes(keyword) || categoryLower.includes(keyword)
-    )) {
+    if (
+      mediumComplexityKeywords.some(
+        keyword => nameLower.includes(keyword) || categoryLower.includes(keyword)
+      )
+    ) {
       return 'high';
     }
 
     // Проверяем на среднюю сложность
-    if (lowComplexityKeywords.some(keyword => 
-      nameLower.includes(keyword) || categoryLower.includes(keyword)
-    )) {
+    if (
+      lowComplexityKeywords.some(
+        keyword => nameLower.includes(keyword) || categoryLower.includes(keyword)
+      )
+    ) {
       return 'medium';
     }
 
@@ -118,13 +146,13 @@ class ComponentIntegrationAnalyzer {
       'ui-components': [],
       'layout-components': [],
       'feature-components': [],
-      'integration-components': []
+      'integration-components': [],
     };
 
     this.components.forEach(component => {
       const deps = this.findDependencies(component);
       component.dependencies = deps;
-      
+
       // Категоризируем по типу зависимостей
       if (deps.includes('ui') || deps.includes('button') || deps.includes('input')) {
         dependencies['ui-components'].push(component);
@@ -189,51 +217,51 @@ class ComponentIntegrationAnalyzer {
           description: 'Создание базовых UI компонентов',
           components: this.components.filter(c => c.analyzedComplexity === 'low'),
           estimatedHours: 8,
-          priority: 'critical'
+          priority: 'critical',
         },
         {
           phase: 2,
           name: 'Layout и Navigation',
           description: 'Интеграция компонентов макета',
-          components: this.components.filter(c => 
-            c.category === 'layout' || c.name.toLowerCase().includes('sidebar')
+          components: this.components.filter(
+            c => c.category === 'layout' || c.name.toLowerCase().includes('sidebar')
           ),
           estimatedHours: 12,
-          priority: 'high'
+          priority: 'high',
         },
         {
           phase: 3,
           name: 'Feature Components',
           description: 'Интеграция функциональных компонентов',
-          components: this.components.filter(c => 
-            c.category === 'chat' || c.category === 'file-manager'
+          components: this.components.filter(
+            c => c.category === 'chat' || c.category === 'file-manager'
           ),
           estimatedHours: 16,
-          priority: 'high'
+          priority: 'high',
         },
         {
           phase: 4,
           name: 'Advanced Components',
           description: 'Интеграция сложных компонентов',
-          components: this.components.filter(c => 
-            c.analyzedComplexity === 'high' || c.analyzedComplexity === 'veryHigh'
+          components: this.components.filter(
+            c => c.analyzedComplexity === 'high' || c.analyzedComplexity === 'veryHigh'
           ),
           estimatedHours: 20,
-          priority: 'medium'
+          priority: 'medium',
         },
         {
           phase: 5,
           name: 'Integration Components',
           description: 'Интеграция внешних сервисов',
-          components: this.components.filter(c => 
-            c.category === 'eleven-labs' || c.name.toLowerCase().includes('api')
+          components: this.components.filter(
+            c => c.category === 'eleven-labs' || c.name.toLowerCase().includes('api')
           ),
           estimatedHours: 12,
-          priority: 'low'
-        }
+          priority: 'low',
+        },
       ],
       totalEstimatedHours: 0,
-      totalComponents: this.components.length
+      totalComponents: this.components.length,
     };
 
     // Подсчитываем общее время
@@ -264,26 +292,26 @@ class ComponentIntegrationAnalyzer {
         name: 'Прогресс интеграции',
         formula: '(integrated_components / total_components) * 100',
         target: 100,
-        current: 0
+        current: 0,
       },
       'phase-completion': {
         name: 'Завершение фаз',
         formula: '(completed_phases / total_phases) * 100',
         target: 100,
-        current: 0
+        current: 0,
       },
       'code-quality': {
         name: 'Качество кода',
         formula: '(components_without_issues / total_components) * 100',
         target: 95,
-        current: 0
+        current: 0,
       },
       'test-coverage': {
         name: 'Покрытие тестами',
         formula: '(tested_components / total_components) * 100',
         target: 80,
-        current: 0
-      }
+        current: 0,
+      },
     };
 
     console.log('📈 Метрики созданы:');
@@ -302,18 +330,18 @@ class ComponentIntegrationAnalyzer {
 
     const structure = {
       'src/components/integrated': {
-        'ui': 'Базовые UI компоненты',
-        'layout': 'Компоненты макета',
-        'features': 'Функциональные компоненты',
-        'integrations': 'Интеграции с внешними сервисами',
-        'advanced': 'Сложные компоненты'
+        ui: 'Базовые UI компоненты',
+        layout: 'Компоненты макета',
+        features: 'Функциональные компоненты',
+        integrations: 'Интеграции с внешними сервисами',
+        advanced: 'Сложные компоненты',
       },
       'src/types': {
-        'integrated-components.ts': 'Типы для интегрированных компонентов'
+        'integrated-components.ts': 'Типы для интегрированных компонентов',
       },
       'src/utils': {
-        'component-utils.ts': 'Утилиты для работы с компонентами'
-      }
+        'component-utils.ts': 'Утилиты для работы с компонентами',
+      },
     };
 
     // Создаем директории
@@ -346,7 +374,7 @@ class ComponentIntegrationAnalyzer {
         totalComponents: this.components.length,
         totalEstimatedHours: integrationPlan.totalEstimatedHours,
         phases: integrationPlan.phases.length,
-        categories: Object.keys(dependencies).length
+        categories: Object.keys(dependencies).length,
       },
       complexityAnalysis,
       dependencies,
@@ -358,8 +386,8 @@ class ComponentIntegrationAnalyzer {
         'Используйте TypeScript для типизации всех компонентов',
         'Создавайте тесты для каждого интегрированного компонента',
         'Документируйте процесс интеграции',
-        'Регулярно обновляйте метрики прогресса'
-      ]
+        'Регулярно обновляйте метрики прогресса',
+      ],
     };
 
     const reportFile = path.join(this.baseDir, 'component-integration-analysis.json');
@@ -374,12 +402,12 @@ class ComponentIntegrationAnalyzer {
    */
   run() {
     console.log('🚀 Запуск анализа интеграции компонентов...\n');
-    console.log('=' .repeat(60));
+    console.log('='.repeat(60));
 
     const report = this.generateAnalysisReport();
 
     console.log('\n🎯 АНАЛИЗ ЗАВЕРШЕН!');
-    console.log('=' .repeat(60));
+    console.log('='.repeat(60));
     console.log(`📦 Всего компонентов: ${report.summary.totalComponents}`);
     console.log(`⏱️ Общее время: ${report.summary.totalEstimatedHours} часов`);
     console.log(`📋 Фаз интеграции: ${report.summary.phases}`);

@@ -28,7 +28,7 @@ A modern, responsive web interface for Claude Code CLI, Cursor CLI, and Codegen 
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - npm or yarn
 - Vercel account
 - Claude Code CLI (optional)
@@ -36,23 +36,27 @@ A modern, responsive web interface for Claude Code CLI, Cursor CLI, and Codegen 
 ### Local Development
 
 1. **Clone the repository**
+
    ```bash
    git clone https://github.com/your-username/claudecodeui-modern.git
    cd claudecodeui-modern
    ```
 
 2. **Install dependencies**
+
    ```bash
    npm install
    ```
 
 3. **Set up environment variables**
+
    ```bash
    cp env.example .env.local
    # Edit .env.local with your configuration
    ```
 
 4. **Start development server**
+
    ```bash
    npm run dev
    ```
@@ -71,16 +75,19 @@ A modern, responsive web interface for Claude Code CLI, Cursor CLI, and Codegen 
 ### Option 2: Vercel CLI (Recommended)
 
 1. **Install Vercel CLI**
+
    ```bash
    npm i -g vercel
    ```
 
 2. **Login to Vercel**
+
    ```bash
    vercel login
    ```
 
 3. **Deploy to Vercel**
+
    ```bash
    vercel
    ```
@@ -148,22 +155,26 @@ The application includes a built-in MCP server at `/api/mcp` with the following 
 ## 📱 Usage
 
 ### Dashboard
+
 - View project statistics and recent activity
 - Quick access to common actions
 - Real-time project status
 
 ### Chat Interface
+
 - Communicate with Claude, Cursor, or Codegen
 - Support for code generation and debugging
 - Message history and session management
 
 ### File Manager
+
 - Browse project files and directories
 - Drag-and-drop file operations
 - Syntax highlighting for code files
 - Search and filter capabilities
 
 ### Project Management
+
 - Create and manage multiple projects
 - Switch between different coding environments
 - Project-specific settings and configurations
@@ -171,12 +182,15 @@ The application includes a built-in MCP server at `/api/mcp` with the following 
 ## 🎨 Customization
 
 ### Themes
+
 The application supports both light and dark themes with automatic system preference detection.
 
 ### Components
+
 All UI components are built with Radix UI and can be easily customized using Tailwind CSS classes.
 
 ### MCP Tools
+
 Add custom MCP tools by extending the server configuration in `src/app/api/mcp/route.ts`.
 
 ## 🔒 Security

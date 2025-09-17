@@ -8,36 +8,36 @@ const SetupForm = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
-  
+
   const { register } = useAuth();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async e => {
     e.preventDefault();
     setError('');
-    
+
     if (password !== confirmPassword) {
       setError('Passwords do not match');
       return;
     }
-    
+
     if (username.length < 3) {
       setError('Username must be at least 3 characters long');
       return;
     }
-    
+
     if (password.length < 6) {
       setError('Password must be at least 6 characters long');
       return;
     }
-    
+
     setIsLoading(true);
-    
+
     const result = await register(username, password);
-    
+
     if (!result.success) {
       setError(result.error);
     }
-    
+
     setIsLoading(false);
   };
 
@@ -51,9 +51,7 @@ const SetupForm = () => {
               <ClaudeLogo size={64} />
             </div>
             <h1 className="text-2xl font-bold text-foreground">Welcome to Claude Code UI</h1>
-            <p className="text-muted-foreground mt-2">
-              Set up your account to get started
-            </p>
+            <p className="text-muted-foreground mt-2">Set up your account to get started</p>
           </div>
 
           {/* Setup Form */}
@@ -66,7 +64,7 @@ const SetupForm = () => {
                 type="text"
                 id="username"
                 value={username}
-                onChange={(e) => setUsername(e.target.value)}
+                onChange={e => setUsername(e.target.value)}
                 className="w-full px-3 py-2 border border-border rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="Enter your username"
                 required
@@ -82,7 +80,7 @@ const SetupForm = () => {
                 type="password"
                 id="password"
                 value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={e => setPassword(e.target.value)}
                 className="w-full px-3 py-2 border border-border rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="Enter your password"
                 required
@@ -91,14 +89,17 @@ const SetupForm = () => {
             </div>
 
             <div>
-              <label htmlFor="confirmPassword" className="block text-sm font-medium text-foreground mb-1">
+              <label
+                htmlFor="confirmPassword"
+                className="block text-sm font-medium text-foreground mb-1"
+              >
                 Confirm Password
               </label>
               <input
                 type="password"
                 id="confirmPassword"
                 value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
+                onChange={e => setConfirmPassword(e.target.value)}
                 className="w-full px-3 py-2 border border-border rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="Confirm your password"
                 required

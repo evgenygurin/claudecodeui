@@ -24,9 +24,9 @@ class ComplexTaskSystem {
       this.tasks = JSON.parse(fs.readFileSync(this.tasksFile, 'utf8'));
     } else {
       this.tasks = {
-        version: "1.0.0",
+        version: '1.0.0',
         tags: {},
-        state: { currentTag: "master", lastSwitched: new Date().toISOString() }
+        state: { currentTag: 'master', lastSwitched: new Date().toISOString() },
       };
     }
   }
@@ -62,8 +62,8 @@ class ComplexTaskSystem {
               'Создание структуры папок',
               'Настройка TypeScript конфигурации',
               'Настройка ESLint и Prettier',
-              'Создание базовых типов'
-            ]
+              'Создание базовых типов',
+            ],
           },
           {
             id: 'infra-2',
@@ -76,10 +76,10 @@ class ComplexTaskSystem {
               'Настройка Vite конфигурации',
               'Оптимизация bundle size',
               'Настройка code splitting',
-              'Конфигурация environment variables'
-            ]
-          }
-        ]
+              'Конфигурация environment variables',
+            ],
+          },
+        ],
       },
       {
         name: 'component-system',
@@ -98,8 +98,8 @@ class ComplexTaskSystem {
               'Input компонент с валидацией',
               'Card компонент',
               'Modal/Dialog компонент',
-              'Loading компонент'
-            ]
+              'Loading компонент',
+            ],
           },
           {
             id: 'comp-2',
@@ -113,10 +113,10 @@ class ComplexTaskSystem {
               'Адаптация под архитектуру проекта',
               'Создание единой системы стилей',
               'Добавление TypeScript типизации',
-              'Тестирование интеграции'
-            ]
-          }
-        ]
+              'Тестирование интеграции',
+            ],
+          },
+        ],
       },
       {
         name: 'feature-development',
@@ -134,8 +134,8 @@ class ComplexTaskSystem {
               'Создание файлового дерева',
               'Реализация drag & drop',
               'Добавление контекстного меню',
-              'Интеграция с файловой системой'
-            ]
+              'Интеграция с файловой системой',
+            ],
           },
           {
             id: 'feat-2',
@@ -148,10 +148,10 @@ class ComplexTaskSystem {
               'Создание чат компонента',
               'Интеграция с AI API',
               'Реализация истории сообщений',
-              'Добавление markdown поддержки'
-            ]
-          }
-        ]
+              'Добавление markdown поддержки',
+            ],
+          },
+        ],
       },
       {
         name: 'optimization',
@@ -169,11 +169,11 @@ class ComplexTaskSystem {
               'Анализ Core Web Vitals',
               'Оптимизация изображений',
               'Lazy loading компонентов',
-              'Мемоизация вычислений'
-            ]
-          }
-        ]
-      }
+              'Мемоизация вычислений',
+            ],
+          },
+        ],
+      },
     ];
 
     // Создаем теги для каждой ветки
@@ -192,7 +192,7 @@ class ComplexTaskSystem {
    */
   createBranchTag(branch) {
     const tagName = branch.name;
-    
+
     if (!this.tasks.tags[tagName]) {
       this.tasks.tags[tagName] = {
         metadata: {
@@ -200,7 +200,7 @@ class ComplexTaskSystem {
           description: branch.description,
           priority: branch.priority,
           created: new Date().toISOString(),
-          lastModified: new Date().toISOString()
+          lastModified: new Date().toISOString(),
         },
         tasks: branch.tasks.map(task => ({
           ...task,
@@ -208,8 +208,8 @@ class ComplexTaskSystem {
           progress: 0,
           assignedTo: null,
           createdAt: new Date().toISOString(),
-          updatedAt: new Date().toISOString()
-        }))
+          updatedAt: new Date().toISOString(),
+        })),
       };
     }
   }
@@ -226,20 +226,20 @@ class ComplexTaskSystem {
         from: 'component-system',
         to: 'feature-development',
         type: 'blocking',
-        description: 'Компоненты должны быть готовы перед разработкой функций'
+        description: 'Компоненты должны быть готовы перед разработкой функций',
       },
       {
         from: 'core-infrastructure',
         to: 'component-system',
         type: 'blocking',
-        description: 'Инфраструктура должна быть готова перед компонентами'
+        description: 'Инфраструктура должна быть готова перед компонентами',
       },
       {
         from: 'feature-development',
         to: 'optimization',
         type: 'sequential',
-        description: 'Оптимизация после завершения основных функций'
-      }
+        description: 'Оптимизация после завершения основных функций',
+      },
     ];
 
     // Добавляем метаданные зависимостей
@@ -253,7 +253,7 @@ class ComplexTaskSystem {
   buildDependencyGraph() {
     const graph = {
       nodes: [],
-      edges: []
+      edges: [],
     };
 
     // Добавляем узлы (теги)
@@ -262,7 +262,7 @@ class ComplexTaskSystem {
         id: tagName,
         label: tagName,
         type: 'tag',
-        priority: this.tasks.tags[tagName].metadata.priority
+        priority: this.tasks.tags[tagName].metadata.priority,
       });
     });
 
@@ -273,7 +273,7 @@ class ComplexTaskSystem {
           from: dep.from,
           to: dep.to,
           type: dep.type,
-          description: dep.description
+          description: dep.description,
         });
       });
     }
@@ -294,10 +294,10 @@ class ComplexTaskSystem {
           'Определение корневой причины',
           'Анализ влияния на систему',
           'Оценка сложности решения',
-          'Планирование подхода'
+          'Планирование подхода',
         ],
         tools: ['fd', 'rg', 'ast-grep'],
-        output: 'problem-analysis-report.json'
+        output: 'problem-analysis-report.json',
       },
       'solution-design': {
         name: 'Проектирование решения',
@@ -305,33 +305,33 @@ class ComplexTaskSystem {
           'Создание архитектурного плана',
           'Определение компонентов',
           'Планирование интеграций',
-          'Оценка рисков'
+          'Оценка рисков',
         ],
         tools: ['jq', 'yq', 'ast-grep'],
-        output: 'solution-design.json'
+        output: 'solution-design.json',
       },
-      'implementation': {
+      implementation: {
         name: 'Реализация',
         steps: [
           'Создание базовой структуры',
           'Поэтапная реализация',
           'Тестирование на каждом этапе',
-          'Рефакторинг и оптимизация'
+          'Рефакторинг и оптимизация',
         ],
         tools: ['fd', 'rg', 'ast-grep'],
-        output: 'implementation-log.json'
+        output: 'implementation-log.json',
       },
-      'validation': {
+      validation: {
         name: 'Валидация',
         steps: [
           'Функциональное тестирование',
           'Performance тестирование',
           'Code review',
-          'Документирование'
+          'Документирование',
         ],
         tools: ['jq', 'rg'],
-        output: 'validation-report.json'
-      }
+        output: 'validation-report.json',
+      },
     };
 
     this.tasks.thinkingPatterns = thinkingPatterns;
@@ -351,30 +351,30 @@ class ComplexTaskSystem {
             thinkingPattern: 'problem-analysis',
             tasks: ['comp-2'],
             tools: ['fd', 'rg', 'ast-grep'],
-            expectedDuration: '2-3 часа'
+            expectedDuration: '2-3 часа',
           },
           {
             phase: 'design',
             thinkingPattern: 'solution-design',
             tasks: ['comp-2'],
             tools: ['jq', 'yq'],
-            expectedDuration: '1-2 часа'
+            expectedDuration: '1-2 часа',
           },
           {
             phase: 'implementation',
             thinkingPattern: 'implementation',
             tasks: ['comp-2'],
             tools: ['fd', 'rg', 'ast-grep'],
-            expectedDuration: '8-12 часов'
+            expectedDuration: '8-12 часов',
           },
           {
             phase: 'validation',
             thinkingPattern: 'validation',
             tasks: ['comp-2'],
             tools: ['jq', 'rg'],
-            expectedDuration: '2-3 часа'
-          }
-        ]
+            expectedDuration: '2-3 часа',
+          },
+        ],
       },
       'feature-development': {
         name: 'Разработка функций',
@@ -384,31 +384,31 @@ class ComplexTaskSystem {
             thinkingPattern: 'problem-analysis',
             tasks: ['feat-1', 'feat-2'],
             tools: ['fd', 'rg'],
-            expectedDuration: '1-2 часа'
+            expectedDuration: '1-2 часа',
           },
           {
             phase: 'design',
             thinkingPattern: 'solution-design',
             tasks: ['feat-1', 'feat-2'],
             tools: ['jq', 'yq', 'ast-grep'],
-            expectedDuration: '2-3 часа'
+            expectedDuration: '2-3 часа',
           },
           {
             phase: 'implementation',
             thinkingPattern: 'implementation',
             tasks: ['feat-1', 'feat-2'],
             tools: ['fd', 'rg', 'ast-grep'],
-            expectedDuration: '12-16 часов'
+            expectedDuration: '12-16 часов',
           },
           {
             phase: 'validation',
             thinkingPattern: 'validation',
             tasks: ['feat-1', 'feat-2'],
             tools: ['jq', 'rg'],
-            expectedDuration: '3-4 часа'
-          }
-        ]
-      }
+            expectedDuration: '3-4 часа',
+          },
+        ],
+      },
     };
   }
 
@@ -423,26 +423,26 @@ class ComplexTaskSystem {
         name: 'Завершение задач',
         formula: '(completed_tasks / total_tasks) * 100',
         target: 90,
-        current: 0
+        current: 0,
       },
       'code-quality': {
         name: 'Качество кода',
         formula: '(lines_without_issues / total_lines) * 100',
         target: 95,
-        current: 0
+        current: 0,
       },
-      'performance': {
+      performance: {
         name: 'Производительность',
         formula: 'core_web_vitals_score',
         target: 90,
-        current: 0
+        current: 0,
       },
       'test-coverage': {
         name: 'Покрытие тестами',
         formula: '(covered_lines / total_lines) * 100',
         target: 80,
-        current: 0
-      }
+        current: 0,
+      },
     };
 
     this.tasks.metrics = metrics;
@@ -456,13 +456,8 @@ class ComplexTaskSystem {
     return {
       'project-overview': {
         name: 'Обзор проекта',
-        widgets: [
-          'task-completion',
-          'code-quality',
-          'performance',
-          'test-coverage'
-        ],
-        refreshInterval: '5 minutes'
+        widgets: ['task-completion', 'code-quality', 'performance', 'test-coverage'],
+        refreshInterval: '5 minutes',
       },
       'development-progress': {
         name: 'Прогресс разработки',
@@ -470,10 +465,10 @@ class ComplexTaskSystem {
           'branch-progress',
           'component-integration-status',
           'feature-completion',
-          'bug-tracking'
+          'bug-tracking',
         ],
-        refreshInterval: '1 minute'
-      }
+        refreshInterval: '1 minute',
+      },
     };
   }
 
@@ -490,20 +485,20 @@ class ComplexTaskSystem {
         totalTasks: Object.values(this.tasks.tags).reduce((sum, tag) => sum + tag.tasks.length, 0),
         totalDependencies: this.tasks.crossDependencies ? this.tasks.crossDependencies.length : 0,
         thinkingPatterns: Object.keys(this.tasks.thinkingPatterns || {}).length,
-        workflows: Object.keys(this.tasks.sequentialWorkflows || {}).length
+        workflows: Object.keys(this.tasks.sequentialWorkflows || {}).length,
       },
       branches: Object.keys(this.tasks.tags).map(tagName => ({
         name: tagName,
         taskCount: this.tasks.tags[tagName].tasks.length,
         priority: this.tasks.tags[tagName].metadata.priority,
-        status: this.getBranchStatus(tagName)
+        status: this.getBranchStatus(tagName),
       })),
-      recommendations: this.generateRecommendations()
+      recommendations: this.generateRecommendations(),
     };
 
     const reportFile = path.join(this.baseDir, 'complex-system-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    
+
     console.log('✅ Отчет сохранен в:', reportFile);
     return report;
   }
@@ -515,7 +510,7 @@ class ComplexTaskSystem {
     const tasks = this.tasks.tags[tagName].tasks;
     const completed = tasks.filter(task => task.status === 'done').length;
     const total = tasks.length;
-    
+
     if (completed === 0) return 'not-started';
     if (completed === total) return 'completed';
     if (completed > total * 0.5) return 'in-progress';
@@ -531,7 +526,7 @@ class ComplexTaskSystem {
       'Используйте систему последовательного мышления для сложных задач',
       'Регулярно обновляйте метрики для отслеживания прогресса',
       'Применяйте инструменты fd, rg, ast-grep для анализа кода',
-      'Создавайте промежуточные коммиты для каждой фазы workflow'
+      'Создавайте промежуточные коммиты для каждой фазы workflow',
     ];
   }
 
@@ -540,22 +535,22 @@ class ComplexTaskSystem {
    */
   run() {
     console.log('🚀 Создание сложной системы управления задачами...\n');
-    
+
     this.createComplexBranchingSystem();
     this.createSequentialThinkingSystem();
     this.createMetricsSystem();
     this.saveTasks();
-    
+
     const report = this.generateSystemReport();
-    
+
     console.log('\n🎯 СИСТЕМА СОЗДАНА!');
-    console.log('=' .repeat(50));
+    console.log('='.repeat(50));
     console.log(`📊 Всего веток: ${report.system.totalBranches}`);
     console.log(`📋 Всего задач: ${report.system.totalTasks}`);
     console.log(`🔗 Зависимостей: ${report.system.totalDependencies}`);
     console.log(`🧠 Паттернов мышления: ${report.system.thinkingPatterns}`);
     console.log(`🔄 Workflow: ${report.system.workflows}`);
-    
+
     console.log('\n💡 Рекомендации:');
     report.recommendations.forEach((rec, index) => {
       console.log(`  ${index + 1}. ${rec}`);

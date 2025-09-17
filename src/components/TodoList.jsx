@@ -7,7 +7,7 @@ const TodoList = ({ todos, isResult = false }) => {
     return null;
   }
 
-  const getStatusIcon = (status) => {
+  const getStatusIcon = status => {
     switch (status) {
       case 'completed':
         return <CheckCircle2 className="w-4 h-4 text-green-500 dark:text-green-400" />;
@@ -19,7 +19,7 @@ const TodoList = ({ todos, isResult = false }) => {
     }
   };
 
-  const getStatusColor = (status) => {
+  const getStatusColor = status => {
     switch (status) {
       case 'completed':
         return 'bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 border-green-200 dark:border-green-800';
@@ -31,7 +31,7 @@ const TodoList = ({ todos, isResult = false }) => {
     }
   };
 
-  const getPriorityColor = (priority) => {
+  const getPriorityColor = priority => {
     switch (priority) {
       case 'high':
         return 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 border-red-200 dark:border-red-800';
@@ -50,22 +50,22 @@ const TodoList = ({ todos, isResult = false }) => {
           Todo List ({todos.length} {todos.length === 1 ? 'item' : 'items'})
         </div>
       )}
-      
+
       {todos.map((todo, index) => (
         <div
           key={todo.id || `todo-${index}`}
           className="flex items-start gap-3 p-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm hover:shadow-md dark:shadow-gray-900/50 transition-shadow"
         >
-          <div className="flex-shrink-0 mt-0.5">
-            {getStatusIcon(todo.status)}
-          </div>
-          
+          <div className="flex-shrink-0 mt-0.5">{getStatusIcon(todo.status)}</div>
+
           <div className="flex-1 min-w-0">
             <div className="flex items-start justify-between gap-2 mb-2">
-              <p className={`text-sm font-medium ${todo.status === 'completed' ? 'line-through text-gray-500 dark:text-gray-400' : 'text-gray-900 dark:text-gray-100'}`}>
+              <p
+                className={`text-sm font-medium ${todo.status === 'completed' ? 'line-through text-gray-500 dark:text-gray-400' : 'text-gray-900 dark:text-gray-100'}`}
+              >
                 {todo.content}
               </p>
-              
+
               <div className="flex gap-1 flex-shrink-0">
                 <Badge
                   variant="outline"

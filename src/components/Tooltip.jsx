@@ -1,13 +1,7 @@
 import React, { useState } from 'react';
 import { cn } from '../lib/utils';
 
-const Tooltip = ({ 
-  children, 
-  content, 
-  position = 'top',
-  className = '',
-  delay = 500
-}) => {
+const Tooltip = ({ children, content, position = 'top', className = '', delay = 500 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [timeoutId, setTimeoutId] = useState(null);
 
@@ -61,27 +55,26 @@ const Tooltip = ({
   }
 
   return (
-    <div 
+    <div
       className="relative inline-block"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
       {children}
-      
+
       {isVisible && (
-        <div className={cn(
-          'absolute z-50 px-2 py-1 text-xs font-medium text-white bg-gray-900 dark:bg-gray-100 dark:text-gray-900 rounded shadow-lg whitespace-nowrap pointer-events-none',
-          'animate-in fade-in-0 zoom-in-95 duration-200',
-          getPositionClasses(),
-          className
-        )}>
+        <div
+          className={cn(
+            'absolute z-50 px-2 py-1 text-xs font-medium text-white bg-gray-900 dark:bg-gray-100 dark:text-gray-900 rounded shadow-lg whitespace-nowrap pointer-events-none',
+            'animate-in fade-in-0 zoom-in-95 duration-200',
+            getPositionClasses(),
+            className
+          )}
+        >
           {content}
-          
+
           {/* Arrow */}
-          <div className={cn(
-            'absolute w-0 h-0 border-4 border-transparent',
-            getArrowClasses()
-          )} />
+          <div className={cn('absolute w-0 h-0 border-4 border-transparent', getArrowClasses())} />
         </div>
       )}
     </div>

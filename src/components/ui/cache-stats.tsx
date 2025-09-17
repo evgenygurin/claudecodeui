@@ -5,15 +5,15 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
-import { 
-  BarChart3, 
-  RefreshCw, 
-  Trash2, 
-  Database, 
-  Clock, 
+import {
+  BarChart3,
+  RefreshCw,
+  Trash2,
+  Database,
+  Clock,
   TrendingUp,
   TrendingDown,
-  Activity
+  Activity,
 } from 'lucide-react';
 import { CacheService, CacheStats } from '@/services/cache.service';
 import { cn } from '@/lib/utils';
@@ -95,19 +95,10 @@ export function CacheStatsComponent({
         </CardTitle>
         {showActions && (
           <div className="flex items-center gap-2">
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={handleRefresh}
-              disabled={isRefreshing}
-            >
+            <Button variant="outline" size="sm" onClick={handleRefresh} disabled={isRefreshing}>
               <RefreshCw className={cn('h-4 w-4', isRefreshing && 'animate-spin')} />
             </Button>
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={handleClear}
-            >
+            <Button variant="outline" size="sm" onClick={handleClear}>
               <Trash2 className="h-4 w-4" />
             </Button>
           </div>
@@ -123,27 +114,19 @@ export function CacheStatsComponent({
                 {formatPercentage(stats.hitRate)}
               </Badge>
             </div>
-            <Progress 
-              value={stats.hitRate * 100} 
-              className="h-2"
-            />
+            <Progress value={stats.hitRate * 100} className="h-2" />
             <div className="flex items-center gap-1 text-xs text-muted-foreground">
               <TrendingUp className="h-3 w-3" />
               {formatNumber(stats.hits)} hits
             </div>
           </div>
-          
+
           <div className="space-y-2">
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium">Miss Rate</span>
-              <Badge variant="secondary">
-                {formatPercentage(stats.missRate)}
-              </Badge>
+              <Badge variant="secondary">{formatPercentage(stats.missRate)}</Badge>
             </div>
-            <Progress 
-              value={stats.missRate * 100} 
-              className="h-2"
-            />
+            <Progress value={stats.missRate * 100} className="h-2" />
             <div className="flex items-center gap-1 text-xs text-muted-foreground">
               <TrendingDown className="h-3 w-3" />
               {formatNumber(stats.misses)} misses
@@ -163,7 +146,7 @@ export function CacheStatsComponent({
               {formatNumber(stats.entryCount)} entries
             </p>
           </div>
-          
+
           <div className="space-y-1">
             <div className="flex items-center gap-2">
               <Activity className="h-4 w-4 text-muted-foreground" />
@@ -182,9 +165,7 @@ export function CacheStatsComponent({
             <Clock className="h-4 w-4 text-muted-foreground" />
             <span className="text-sm font-medium">Average Access Time</span>
           </div>
-          <p className="text-lg font-semibold">
-            {stats.averageAccessTime.toFixed(2)}ms
-          </p>
+          <p className="text-lg font-semibold">{stats.averageAccessTime.toFixed(2)}ms</p>
         </div>
 
         {/* Cache Health Indicator */}
@@ -192,17 +173,18 @@ export function CacheStatsComponent({
           <div className="flex items-center justify-between">
             <span className="text-sm font-medium">Cache Health</span>
             <div className="flex items-center gap-2">
-              <div className={cn(
-                'w-2 h-2 rounded-full',
-                stats.hitRate >= 0.8 ? 'bg-green-500' :
-                stats.hitRate >= 0.6 ? 'bg-yellow-500' : 'bg-red-500'
-              )} />
-              <span className={cn(
-                'text-xs font-medium',
-                getHitRateColor(stats.hitRate)
-              )}>
-                {stats.hitRate >= 0.8 ? 'Excellent' :
-                 stats.hitRate >= 0.6 ? 'Good' : 'Poor'}
+              <div
+                className={cn(
+                  'w-2 h-2 rounded-full',
+                  stats.hitRate >= 0.8
+                    ? 'bg-green-500'
+                    : stats.hitRate >= 0.6
+                      ? 'bg-yellow-500'
+                      : 'bg-red-500'
+                )}
+              />
+              <span className={cn('text-xs font-medium', getHitRateColor(stats.hitRate))}>
+                {stats.hitRate >= 0.8 ? 'Excellent' : stats.hitRate >= 0.6 ? 'Good' : 'Poor'}
               </span>
             </div>
           </div>

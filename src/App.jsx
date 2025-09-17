@@ -1,20 +1,20 @@
 /*
  * App.jsx - Main Application Component with Session Protection System
- * 
+ *
  * SESSION PROTECTION SYSTEM OVERVIEW:
  * ===================================
- * 
+ *
  * Problem: Automatic project updates from WebSocket would refresh the sidebar and clear chat messages
  * during active conversations, creating a poor user experience.
- * 
+ *
  * Solution: Track "active sessions" and pause project updates during conversations.
- * 
+ *
  * How it works:
- * 1. When user sends message → session marked as "active" 
+ * 1. When user sends message → session marked as "active"
  * 2. Project updates are skipped while session is active
  * 3. When conversation completes/aborts → session marked as "inactive"
  * 4. Project updates resume normally
- * 
+ *
  * Handles both existing sessions (with real IDs) and new sessions (with temporary IDs).
  */
 
@@ -35,15 +35,17 @@ import ProtectedRoute from './components/ProtectedRoute';
 import { useVersionCheck } from './hooks/useVersionCheck';
 import { api, authenticatedFetch } from './utils/api';
 
-
 // Main App component with routing
 function AppContent() {
   const navigate = useNavigate();
   const { sessionId } = useParams();
-  
-  const { updateAvailable, latestVersion, currentVersion } = useVersionCheck('siteboon', 'claudecodeui');
+
+  const { updateAvailable, latestVersion, currentVersion } = useVersionCheck(
+    'siteboon',
+    'claudecodeui'
+  );
   const [showVersionModal, setShowVersionModal] = useState(false);
-  
+
   const [projects, setProjects] = useState([]);
   const [selectedProject, setSelectedProject] = useState(null);
   const [selectedSession, setSelectedSession] = useState(null);
@@ -75,20 +77,21 @@ function AppContent() {
   // a message, the session is marked as "active" and project updates are paused
   // until the conversation completes or is aborted.
   const [activeSessions, setActiveSessions] = useState(new Set()); // Track sessions with active conversations
-  
+
   const { ws, sendMessage, messages } = useWebSocketContext();
-  
+
   // Detect if running as PWA
   const [isPWA, setIsPWA] = useState(false);
-  
+
   useEffect(() => {
     // Check if running in standalone mode (PWA)
     const checkPWA = () => {
-      const isStandalone = window.matchMedia('(display-mode: standalone)').matches ||
-                          window.navigator.standalone ||
-                          document.referrer.includes('android-app://');
+      const isStandalone =
+        window.matchMedia('(display-mode: standalone)').matches ||
+        window.navigator.standalone ||
+        document.referrer.includes('android-app://');
       setIsPWA(isStandalone);
-      
+
       // Add class to html and body for CSS targeting
       if (isStandalone) {
         document.documentElement.classList.add('pwa-mode');
@@ -98,12 +101,12 @@ function AppContent() {
         document.body.classList.remove('pwa-mode');
       }
     };
-    
+
     checkPWA();
-    
+
     // Listen for changes
     window.matchMedia('(display-mode: standalone)').addEventListener('change', checkPWA);
-    
+
     return () => {
       window.matchMedia('(display-mode: standalone)').removeEventListener('change', checkPWA);
     };
@@ -113,10 +116,10 @@ function AppContent() {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
-    
+
     checkMobile();
     window.addEventListener('resize', checkMobile);
-    
+
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
@@ -143,8 +146,12 @@ function AppContent() {
     }
 
     // Find the selected session in both current and updated project data
-    const currentSelectedSession = currentSelectedProject.sessions?.find(s => s.id === selectedSession.id);
-    const updatedSelectedSession = updatedSelectedProject.sessions?.find(s => s.id === selectedSession.id);
+    const currentSelectedSession = currentSelectedProject.sessions?.find(
+      s => s.id === selectedSession.id
+    );
+    const updatedSelectedSession = updatedSelectedProject.sessions?.find(
+      s => s.id === selectedSession.id
+    );
 
     if (!currentSelectedSession || !updatedSelectedSession) {
       // Selected session was deleted or significantly changed, not purely additive
@@ -153,7 +160,7 @@ function AppContent() {
 
     // Check if the selected session's content has changed (modification vs addition)
     // Compare key fields that would affect the loaded chat interface
-    const sessionUnchanged = 
+    const sessionUnchanged =
       currentSelectedSession.id === updatedSelectedSession.id &&
       currentSelectedSession.title === updatedSelectedSession.title &&
       currentSelectedSession.created_at === updatedSelectedSession.created_at &&
@@ -168,45 +175,53 @@ function AppContent() {
   useEffect(() => {
     if (messages.length > 0) {
       const latestMessage = messages[messages.length - 1];
-      
+
       if (latestMessage.type === 'projects_updated') {
-        
         // Session Protection Logic: Allow additions but prevent changes during active conversations
         // This allows new sessions/projects to appear in sidebar while protecting active chat messages
         // We check for two types of active sessions:
         // 1. Existing sessions: selectedSession.id exists in activeSessions
         // 2. New sessions: temporary "new-session-*" identifiers in activeSessions (before real session ID is received)
-        const hasActiveSession = (selectedSession && activeSessions.has(selectedSession.id)) ||
-                                 (activeSessions.size > 0 && Array.from(activeSessions).some(id => id.startsWith('new-session-')));
-        
+        const hasActiveSession =
+          (selectedSession && activeSessions.has(selectedSession.id)) ||
+          (activeSessions.size > 0 &&
+            Array.from(activeSessions).some(id => id.startsWith('new-session-')));
+
         if (hasActiveSession) {
           // Allow updates but be selective: permit additions, prevent changes to existing items
           const updatedProjects = latestMessage.projects;
           const currentProjects = projects;
-          
+
           // Check if this is purely additive (new sessions/projects) vs modification of existing ones
-          const isAdditiveUpdate = isUpdateAdditive(currentProjects, updatedProjects, selectedProject, selectedSession);
-          
+          const isAdditiveUpdate = isUpdateAdditive(
+            currentProjects,
+            updatedProjects,
+            selectedProject,
+            selectedSession
+          );
+
           if (!isAdditiveUpdate) {
             // Skip updates that would modify existing selected session/project
             return;
           }
           // Continue with additive updates below
         }
-        
+
         // Update projects state with the new data from WebSocket
         const updatedProjects = latestMessage.projects;
         setProjects(updatedProjects);
-        
+
         // Update selected project if it exists in the updated projects
         if (selectedProject) {
           const updatedSelectedProject = updatedProjects.find(p => p.name === selectedProject.name);
           if (updatedSelectedProject) {
             setSelectedProject(updatedSelectedProject);
-            
+
             // Update selected session only if it was deleted - avoid unnecessary reloads
             if (selectedSession) {
-              const updatedSelectedSession = updatedSelectedProject.sessions?.find(s => s.id === selectedSession.id);
+              const updatedSelectedSession = updatedSelectedProject.sessions?.find(
+                s => s.id === selectedSession.id
+              );
               if (!updatedSelectedSession) {
                 // Session was deleted
                 setSelectedSession(null);
@@ -224,9 +239,9 @@ function AppContent() {
       setIsLoadingProjects(true);
       const response = await api.projects();
       const data = await response.json();
-      
+
       // Always fetch Cursor sessions for each project so we can combine views
-      for (let project of data) {
+      for (const project of data) {
         try {
           const url = `/api/cursor/sessions?projectPath=${encodeURIComponent(project.fullPath || project.path)}`;
           const cursorResponse = await authenticatedFetch(url);
@@ -245,34 +260,36 @@ function AppContent() {
           project.cursorSessions = [];
         }
       }
-      
+
       // Optimize to preserve object references when data hasn't changed
       setProjects(prevProjects => {
         // If no previous projects, just set the new data
         if (prevProjects.length === 0) {
           return data;
         }
-        
+
         // Check if the projects data has actually changed
-        const hasChanges = data.some((newProject, index) => {
-          const prevProject = prevProjects[index];
-          if (!prevProject) return true;
-          
-          // Compare key properties that would affect UI
-          return (
-            newProject.name !== prevProject.name ||
-            newProject.displayName !== prevProject.displayName ||
-            newProject.fullPath !== prevProject.fullPath ||
-            JSON.stringify(newProject.sessionMeta) !== JSON.stringify(prevProject.sessionMeta) ||
-            JSON.stringify(newProject.sessions) !== JSON.stringify(prevProject.sessions) ||
-            JSON.stringify(newProject.cursorSessions) !== JSON.stringify(prevProject.cursorSessions)
-          );
-        }) || data.length !== prevProjects.length;
-        
+        const hasChanges =
+          data.some((newProject, index) => {
+            const prevProject = prevProjects[index];
+            if (!prevProject) return true;
+
+            // Compare key properties that would affect UI
+            return (
+              newProject.name !== prevProject.name ||
+              newProject.displayName !== prevProject.displayName ||
+              newProject.fullPath !== prevProject.fullPath ||
+              JSON.stringify(newProject.sessionMeta) !== JSON.stringify(prevProject.sessionMeta) ||
+              JSON.stringify(newProject.sessions) !== JSON.stringify(prevProject.sessions) ||
+              JSON.stringify(newProject.cursorSessions) !==
+                JSON.stringify(prevProject.cursorSessions)
+            );
+          }) || data.length !== prevProjects.length;
+
         // Only update if there are actual changes
         return hasChanges ? data : prevProjects;
       });
-      
+
       // Don't auto-select any project - user should choose manually
     } catch (error) {
       console.error('Error fetching projects:', error);
@@ -291,7 +308,7 @@ function AppContent() {
       const shouldSwitchTab = !selectedSession || selectedSession.id !== sessionId;
       // Find the session across all projects
       for (const project of projects) {
-        let session = project.sessions?.find(s => s.id === sessionId);
+        const session = project.sessions?.find(s => s.id === sessionId);
         if (session) {
           setSelectedProject(project);
           setSelectedSession({ ...session, __provider: 'claude' });
@@ -312,14 +329,14 @@ function AppContent() {
           return;
         }
       }
-      
+
       // If session not found, it might be a newly created session
       // Just navigate to it and it will be found when the sidebar refreshes
       // Don't redirect to home, let the session load naturally
     }
   }, [sessionId, projects, navigate]);
 
-  const handleProjectSelect = (project) => {
+  const handleProjectSelect = project => {
     setSelectedProject(project);
     setSelectedSession(null);
     navigate('/');
@@ -328,14 +345,14 @@ function AppContent() {
     }
   };
 
-  const handleSessionSelect = (session) => {
+  const handleSessionSelect = session => {
     setSelectedSession(session);
     // Only switch to chat tab when user explicitly selects a session
     // This prevents tab switching during automatic updates
     if (activeTab !== 'git' && activeTab !== 'preview') {
       setActiveTab('chat');
     }
-    
+
     // For Cursor sessions, we need to set the session ID differently
     // since they're persistent and not created by Claude
     const provider = localStorage.getItem('selected-provider') || 'claude';
@@ -343,14 +360,14 @@ function AppContent() {
       // Cursor sessions have persistent IDs
       sessionStorage.setItem('cursorSessionId', session.id);
     }
-    
+
     if (isMobile) {
       setSidebarOpen(false);
     }
     navigate(`/session/${session.id}`);
   };
 
-  const handleNewSession = (project) => {
+  const handleNewSession = project => {
     setSelectedProject(project);
     setSelectedSession(null);
     setActiveTab('chat');
@@ -360,53 +377,52 @@ function AppContent() {
     }
   };
 
-  const handleSessionDelete = (sessionId) => {
+  const handleSessionDelete = sessionId => {
     // If the deleted session was currently selected, clear it
     if (selectedSession?.id === sessionId) {
       setSelectedSession(null);
       navigate('/');
     }
-    
+
     // Update projects state locally instead of full refresh
-    setProjects(prevProjects => 
+    setProjects(prevProjects =>
       prevProjects.map(project => ({
         ...project,
         sessions: project.sessions?.filter(session => session.id !== sessionId) || [],
         sessionMeta: {
           ...project.sessionMeta,
-          total: Math.max(0, (project.sessionMeta?.total || 0) - 1)
-        }
+          total: Math.max(0, (project.sessionMeta?.total || 0) - 1),
+        },
       }))
     );
   };
-
-
 
   const handleSidebarRefresh = async () => {
     // Refresh only the sessions for all projects, don't change selected state
     try {
       const response = await api.projects();
       const freshProjects = await response.json();
-      
+
       // Optimize to preserve object references and minimize re-renders
       setProjects(prevProjects => {
         // Check if projects data has actually changed
-        const hasChanges = freshProjects.some((newProject, index) => {
-          const prevProject = prevProjects[index];
-          if (!prevProject) return true;
-          
-          return (
-            newProject.name !== prevProject.name ||
-            newProject.displayName !== prevProject.displayName ||
-            newProject.fullPath !== prevProject.fullPath ||
-            JSON.stringify(newProject.sessionMeta) !== JSON.stringify(prevProject.sessionMeta) ||
-            JSON.stringify(newProject.sessions) !== JSON.stringify(prevProject.sessions)
-          );
-        }) || freshProjects.length !== prevProjects.length;
-        
+        const hasChanges =
+          freshProjects.some((newProject, index) => {
+            const prevProject = prevProjects[index];
+            if (!prevProject) return true;
+
+            return (
+              newProject.name !== prevProject.name ||
+              newProject.displayName !== prevProject.displayName ||
+              newProject.fullPath !== prevProject.fullPath ||
+              JSON.stringify(newProject.sessionMeta) !== JSON.stringify(prevProject.sessionMeta) ||
+              JSON.stringify(newProject.sessions) !== JSON.stringify(prevProject.sessions)
+            );
+          }) || freshProjects.length !== prevProjects.length;
+
         return hasChanges ? freshProjects : prevProjects;
       });
-      
+
       // If we have a selected project, make sure it's still selected after refresh
       if (selectedProject) {
         const refreshedProject = freshProjects.find(p => p.name === selectedProject.name);
@@ -415,11 +431,16 @@ function AppContent() {
           if (JSON.stringify(refreshedProject) !== JSON.stringify(selectedProject)) {
             setSelectedProject(refreshedProject);
           }
-          
+
           // If we have a selected session, try to find it in the refreshed project
           if (selectedSession) {
-            const refreshedSession = refreshedProject.sessions?.find(s => s.id === selectedSession.id);
-            if (refreshedSession && JSON.stringify(refreshedSession) !== JSON.stringify(selectedSession)) {
+            const refreshedSession = refreshedProject.sessions?.find(
+              s => s.id === selectedSession.id
+            );
+            if (
+              refreshedSession &&
+              JSON.stringify(refreshedSession) !== JSON.stringify(selectedSession)
+            ) {
               setSelectedSession(refreshedSession);
             }
           }
@@ -430,32 +451,30 @@ function AppContent() {
     }
   };
 
-  const handleProjectDelete = (projectName) => {
+  const handleProjectDelete = projectName => {
     // If the deleted project was currently selected, clear it
     if (selectedProject?.name === projectName) {
       setSelectedProject(null);
       setSelectedSession(null);
       navigate('/');
     }
-    
+
     // Update projects state locally instead of full refresh
-    setProjects(prevProjects => 
-      prevProjects.filter(project => project.name !== projectName)
-    );
+    setProjects(prevProjects => prevProjects.filter(project => project.name !== projectName));
   };
 
   // Session Protection Functions: Manage the lifecycle of active sessions
-  
+
   // markSessionAsActive: Called when user sends a message to mark session as protected
   // This includes both real session IDs and temporary "new-session-*" identifiers
-  const markSessionAsActive = (sessionId) => {
+  const markSessionAsActive = sessionId => {
     if (sessionId) {
       setActiveSessions(prev => new Set([...prev, sessionId]));
     }
   };
 
   // markSessionAsInactive: Called when conversation completes/aborts to re-enable project updates
-  const markSessionAsInactive = (sessionId) => {
+  const markSessionAsInactive = sessionId => {
     if (sessionId) {
       setActiveSessions(prev => {
         const newSet = new Set(prev);
@@ -468,7 +487,7 @@ function AppContent() {
   // replaceTemporarySession: Called when WebSocket provides real session ID for new sessions
   // Removes temporary "new-session-*" identifiers and adds the real session ID
   // This maintains protection continuity during the transition from temporary to real session
-  const replaceTemporarySession = (realSessionId) => {
+  const replaceTemporarySession = realSessionId => {
     if (realSessionId) {
       setActiveSessions(prev => {
         const newSet = new Set();
@@ -491,23 +510,35 @@ function AppContent() {
     return (
       <div className="fixed inset-0 z-50 flex items-center justify-center">
         {/* Backdrop */}
-        <div 
+        <div
           className="fixed inset-0 bg-black/50 backdrop-blur-sm"
           onClick={() => setShowVersionModal(false)}
         />
-        
+
         {/* Modal */}
         <div className="relative bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 w-full max-w-md mx-4 p-6 space-y-4">
           {/* Header */}
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center">
-                <svg className="w-5 h-5 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" />
+                <svg
+                  className="w-5 h-5 text-blue-600 dark:text-blue-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"
+                  />
                 </svg>
               </div>
               <div>
-                <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Update Available</h2>
+                <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
+                  Update Available
+                </h2>
                 <p className="text-sm text-gray-500 dark:text-gray-400">A new version is ready</p>
               </div>
             </div>
@@ -516,7 +547,12 @@ function AppContent() {
               className="p-2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             </button>
           </div>
@@ -524,12 +560,20 @@ function AppContent() {
           {/* Version Info */}
           <div className="space-y-3">
             <div className="flex justify-between items-center p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
-              <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Current Version</span>
-              <span className="text-sm text-gray-900 dark:text-white font-mono">{currentVersion}</span>
+              <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                Current Version
+              </span>
+              <span className="text-sm text-gray-900 dark:text-white font-mono">
+                {currentVersion}
+              </span>
             </div>
             <div className="flex justify-between items-center p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-700">
-              <span className="text-sm font-medium text-blue-700 dark:text-blue-300">Latest Version</span>
-              <span className="text-sm text-blue-900 dark:text-blue-100 font-mono">{latestVersion}</span>
+              <span className="text-sm font-medium text-blue-700 dark:text-blue-300">
+                Latest Version
+              </span>
+              <span className="text-sm text-blue-900 dark:text-blue-100 font-mono">
+                {latestVersion}
+              </span>
             </div>
           </div>
 
@@ -601,28 +645,30 @@ function AppContent() {
 
       {/* Mobile Sidebar Overlay */}
       {isMobile && (
-        <div className={`fixed inset-0 z-50 flex transition-all duration-150 ease-out ${
-          sidebarOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
-        }`}>
-          <div 
+        <div
+          className={`fixed inset-0 z-50 flex transition-all duration-150 ease-out ${
+            sidebarOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+          }`}
+        >
+          <div
             className="fixed inset-0 bg-background/80 backdrop-blur-sm transition-opacity duration-150 ease-out"
-            onClick={(e) => {
+            onClick={e => {
               e.stopPropagation();
               setSidebarOpen(false);
             }}
-            onTouchStart={(e) => {
+            onTouchStart={e => {
               e.preventDefault();
               e.stopPropagation();
               setSidebarOpen(false);
             }}
           />
-          <div 
+          <div
             className={`relative w-[85vw] max-w-sm sm:w-80 bg-card border-r border-border transform transition-transform duration-150 ease-out ${
               sidebarOpen ? 'translate-x-0' : '-translate-x-full'
             }`}
             style={{ height: 'calc(100vh - 80px)' }}
-            onClick={(e) => e.stopPropagation()}
-            onTouchStart={(e) => e.stopPropagation()}
+            onClick={e => e.stopPropagation()}
+            onTouchStart={e => e.stopPropagation()}
           >
             <Sidebar
               projects={projects}
@@ -665,7 +711,7 @@ function AppContent() {
           onSessionActive={markSessionAsActive}
           onSessionInactive={markSessionAsInactive}
           onReplaceTemporarySession={replaceTemporarySession}
-          onNavigateToSession={(sessionId) => navigate(`/session/${sessionId}`)}
+          onNavigateToSession={sessionId => navigate(`/session/${sessionId}`)}
           onShowSettings={() => setShowSettings(true)}
           autoExpandTools={autoExpandTools}
           showRawParameters={showRawParameters}
@@ -688,22 +734,22 @@ function AppContent() {
           isOpen={showQuickSettings}
           onToggle={setShowQuickSettings}
           autoExpandTools={autoExpandTools}
-          onAutoExpandChange={(value) => {
+          onAutoExpandChange={value => {
             setAutoExpandTools(value);
             localStorage.setItem('autoExpandTools', JSON.stringify(value));
           }}
           showRawParameters={showRawParameters}
-          onShowRawParametersChange={(value) => {
+          onShowRawParametersChange={value => {
             setShowRawParameters(value);
             localStorage.setItem('showRawParameters', JSON.stringify(value));
           }}
           autoScrollToBottom={autoScrollToBottom}
-          onAutoScrollChange={(value) => {
+          onAutoScrollChange={value => {
             setAutoScrollToBottom(value);
             localStorage.setItem('autoScrollToBottom', JSON.stringify(value));
           }}
           sendByCtrlEnter={sendByCtrlEnter}
-          onSendByCtrlEnterChange={(value) => {
+          onSendByCtrlEnterChange={value => {
             setSendByCtrlEnter(value);
             localStorage.setItem('sendByCtrlEnter', JSON.stringify(value));
           }}
@@ -712,11 +758,7 @@ function AppContent() {
       )}
 
       {/* Settings Modal */}
-      <Settings
-        isOpen={showSettings}
-        onClose={() => setShowSettings(false)}
-        projects={projects}
-      />
+      <Settings isOpen={showSettings} onClose={() => setShowSettings(false)} projects={projects} />
 
       {/* Version Upgrade Modal */}
       <VersionUpgradeModal />

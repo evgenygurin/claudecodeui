@@ -50,9 +50,11 @@ const userDb = {
   },
 
   // Get user by username
-  getUserByUsername: (username) => {
+  getUserByUsername: username => {
     try {
-      const row = db.prepare('SELECT * FROM users WHERE username = ? AND is_active = 1').get(username);
+      const row = db
+        .prepare('SELECT * FROM users WHERE username = ? AND is_active = 1')
+        .get(username);
       return row;
     } catch (err) {
       throw err;
@@ -60,7 +62,7 @@ const userDb = {
   },
 
   // Update last login time
-  updateLastLogin: (userId) => {
+  updateLastLogin: userId => {
     try {
       db.prepare('UPDATE users SET last_login = CURRENT_TIMESTAMP WHERE id = ?').run(userId);
     } catch (err) {
@@ -69,18 +71,18 @@ const userDb = {
   },
 
   // Get user by ID
-  getUserById: (userId) => {
+  getUserById: userId => {
     try {
-      const row = db.prepare('SELECT id, username, created_at, last_login FROM users WHERE id = ? AND is_active = 1').get(userId);
+      const row = db
+        .prepare(
+          'SELECT id, username, created_at, last_login FROM users WHERE id = ? AND is_active = 1'
+        )
+        .get(userId);
       return row;
     } catch (err) {
       throw err;
     }
-  }
+  },
 };
 
-export {
-  db,
-  initializeDatabase,
-  userDb
-};
+export { db, initializeDatabase, userDb };

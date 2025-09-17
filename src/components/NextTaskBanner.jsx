@@ -1,5 +1,25 @@
-import React, { useState } from 'react';
-import { ArrowRight, List, Clock, Flag, CheckCircle, Circle, AlertCircle, Pause, ChevronDown, ChevronUp, Plus, FileText, Settings, X, Terminal, Eye, Play, Zap, Target } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import {
+  ArrowRight,
+  List,
+  Clock,
+  Flag,
+  CheckCircle,
+  Circle,
+  AlertCircle,
+  Pause,
+  ChevronDown,
+  ChevronUp,
+  Plus,
+  FileText,
+  Settings,
+  X,
+  Terminal,
+  Eye,
+  Play,
+  Zap,
+  Target,
+} from 'lucide-react';
 import { cn } from '../lib/utils';
 import { useTaskMaster } from '../contexts/TaskMasterContext';
 import { api } from '../utils/api';
@@ -7,7 +27,15 @@ import Shell from './Shell';
 import TaskDetail from './TaskDetail';
 
 const NextTaskBanner = ({ onShowAllTasks, onStartTask, className = '' }) => {
-  const { nextTask, tasks, currentProject, isLoadingTasks, projectTaskMaster, refreshTasks, refreshProjects } = useTaskMaster();
+  const {
+    nextTask,
+    tasks,
+    currentProject,
+    isLoadingTasks,
+    projectTaskMaster,
+    refreshTasks,
+    refreshProjects,
+  } = useTaskMaster();
   const [showDetails, setShowDetails] = useState(false);
   const [showTaskOptions, setShowTaskOptions] = useState(false);
   const [showCreateTaskModal, setShowCreateTaskModal] = useState(false);
@@ -19,7 +47,7 @@ const NextTaskBanner = ({ onShowAllTasks, onStartTask, className = '' }) => {
   // Handler functions
   const handleInitializeTaskMaster = async () => {
     if (!currentProject) return;
-    
+
     setIsLoading(true);
     try {
       const response = await api.taskmaster.init(currentProject.name);
@@ -59,10 +87,12 @@ const NextTaskBanner = ({ onShowAllTasks, onStartTask, className = '' }) => {
   // Show setup message only if no tasks exist AND TaskMaster is not configured
   if ((!tasks || tasks.length === 0) && !projectTaskMaster?.hasTaskmaster) {
     bannerContent = (
-      <div className={cn(
-        'bg-blue-50 dark:bg-blue-950 border border-blue-200 dark:border-blue-800 rounded-lg p-3 mb-4',
-        className
-      )}>
+      <div
+        className={cn(
+          'bg-blue-50 dark:bg-blue-950 border border-blue-200 dark:border-blue-800 rounded-lg p-3 mb-4',
+          className
+        )}
+      >
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <List className="w-4 h-4 text-blue-600 dark:text-blue-400" />
@@ -70,8 +100,7 @@ const NextTaskBanner = ({ onShowAllTasks, onStartTask, className = '' }) => {
               <div className="text-sm font-medium text-gray-900 dark:text-white">
                 TaskMaster AI is not configured
               </div>
-              <div className="text-xs text-gray-600 dark:text-gray-400 mt-0.5">
-              </div>
+              <div className="text-xs text-gray-600 dark:text-gray-400 mt-0.5"></div>
             </div>
           </div>
           <div className="flex items-center gap-1">
@@ -84,7 +113,7 @@ const NextTaskBanner = ({ onShowAllTasks, onStartTask, className = '' }) => {
             </button>
           </div>
         </div>
-        
+
         {showTaskOptions && (
           <div className="mt-3 pt-3 border-t border-blue-200 dark:border-blue-800">
             {!projectTaskMaster?.hasTaskmaster && (
@@ -93,11 +122,26 @@ const NextTaskBanner = ({ onShowAllTasks, onStartTask, className = '' }) => {
                   🎯 What is TaskMaster?
                 </h4>
                 <div className="text-xs text-blue-800 dark:text-blue-200 space-y-1">
-                  <p>• <strong>AI-Powered Task Management:</strong> Break complex projects into manageable subtasks</p>
-                  <p>• <strong>PRD Templates:</strong> Generate tasks from Product Requirements Documents</p>
-                  <p>• <strong>Dependency Tracking:</strong> Understand task relationships and execution order</p>
-                  <p>• <strong>Progress Visualization:</strong> Kanban boards and detailed task analytics</p>
-                  <p>• <strong>CLI Integration:</strong> Use taskmaster commands for advanced workflows</p>
+                  <p>
+                    • <strong>AI-Powered Task Management:</strong> Break complex projects into
+                    manageable subtasks
+                  </p>
+                  <p>
+                    • <strong>PRD Templates:</strong> Generate tasks from Product Requirements
+                    Documents
+                  </p>
+                  <p>
+                    • <strong>Dependency Tracking:</strong> Understand task relationships and
+                    execution order
+                  </p>
+                  <p>
+                    • <strong>Progress Visualization:</strong> Kanban boards and detailed task
+                    analytics
+                  </p>
+                  <p>
+                    • <strong>CLI Integration:</strong> Use taskmaster commands for advanced
+                    workflows
+                  </p>
                 </div>
               </div>
             )}
@@ -113,7 +157,8 @@ const NextTaskBanner = ({ onShowAllTasks, onStartTask, className = '' }) => {
               ) : (
                 <>
                   <div className="mb-2 p-2 bg-green-50 dark:bg-green-900/30 rounded text-xs text-green-800 dark:text-green-200">
-                    <strong>Add more tasks:</strong> Create additional tasks manually or generate them from a PRD template
+                    <strong>Add more tasks:</strong> Create additional tasks manually or generate
+                    them from a PRD template
                   </div>
                   <button
                     className="text-xs px-3 py-2 bg-green-100 dark:bg-green-900 hover:bg-green-200 dark:hover:bg-green-800 text-green-800 dark:text-green-200 rounded transition-colors text-left flex items-center gap-2 disabled:opacity-50"
@@ -141,29 +186,42 @@ const NextTaskBanner = ({ onShowAllTasks, onStartTask, className = '' }) => {
   } else if (nextTask) {
     // Show next task if available
     bannerContent = (
-      <div className={cn(
-        'bg-slate-50 dark:bg-slate-900/30 border border-slate-200 dark:border-slate-700 rounded-lg p-3 mb-4',
-        className
-      )}>
+      <div
+        className={cn(
+          'bg-slate-50 dark:bg-slate-900/30 border border-slate-200 dark:border-slate-700 rounded-lg p-3 mb-4',
+          className
+        )}
+      >
         <div className="flex items-center justify-between gap-3">
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2 mb-1">
               <div className="w-5 h-5 bg-blue-100 dark:bg-blue-900/50 rounded-full flex items-center justify-center flex-shrink-0">
                 <Target className="w-3 h-3 text-blue-600 dark:text-blue-400" />
               </div>
-              <span className="text-xs text-slate-600 dark:text-slate-400 font-medium">Task {nextTask.id}</span>
+              <span className="text-xs text-slate-600 dark:text-slate-400 font-medium">
+                Task {nextTask.id}
+              </span>
               {nextTask.priority === 'high' && (
-                <div className="w-4 h-4 rounded bg-red-100 dark:bg-red-900/50 flex items-center justify-center" title="High Priority">
+                <div
+                  className="w-4 h-4 rounded bg-red-100 dark:bg-red-900/50 flex items-center justify-center"
+                  title="High Priority"
+                >
                   <Zap className="w-2.5 h-2.5 text-red-600 dark:text-red-400" />
                 </div>
               )}
               {nextTask.priority === 'medium' && (
-                <div className="w-4 h-4 rounded bg-amber-100 dark:bg-amber-900/50 flex items-center justify-center" title="Medium Priority">
+                <div
+                  className="w-4 h-4 rounded bg-amber-100 dark:bg-amber-900/50 flex items-center justify-center"
+                  title="Medium Priority"
+                >
                   <Flag className="w-2.5 h-2.5 text-amber-600 dark:text-amber-400" />
                 </div>
               )}
               {nextTask.priority === 'low' && (
-                <div className="w-4 h-4 rounded bg-gray-100 dark:bg-gray-800 flex items-center justify-center" title="Low Priority">
+                <div
+                  className="w-4 h-4 rounded bg-gray-100 dark:bg-gray-800 flex items-center justify-center"
+                  title="Low Priority"
+                >
                   <Circle className="w-2.5 h-2.5 text-gray-400 dark:text-gray-500" />
                 </div>
               )}
@@ -172,7 +230,7 @@ const NextTaskBanner = ({ onShowAllTasks, onStartTask, className = '' }) => {
               {nextTask.title}
             </p>
           </div>
-          
+
           <div className="flex items-center gap-1 flex-shrink-0">
             <button
               onClick={() => onStartTask?.()}
@@ -199,39 +257,40 @@ const NextTaskBanner = ({ onShowAllTasks, onStartTask, className = '' }) => {
             )}
           </div>
         </div>
-        
       </div>
     );
   } else if (tasks && tasks.length > 0) {
     // Show completion message only if there are tasks and all are done
     const completedTasks = tasks.filter(task => task.status === 'done').length;
     const totalTasks = tasks.length;
-    
+
     bannerContent = (
-    <div className={cn(
-      'bg-purple-50 dark:bg-purple-950 border border-purple-200 dark:border-purple-800 rounded-lg p-3 mb-4',
-      className
-    )}>
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <CheckCircle className="w-4 h-4 text-purple-600 dark:text-purple-400" />
-          <span className="text-sm font-medium text-gray-900 dark:text-white">
-            {completedTasks === totalTasks ? "All done! 🎉" : "No pending tasks"}
-          </span>
-        </div>
-        <div className="flex items-center gap-2">
-          <span className="text-xs text-gray-600 dark:text-gray-400">
-            {completedTasks}/{totalTasks}
-          </span>
-          <button
-            onClick={onShowAllTasks}
-            className="text-xs px-2 py-1 bg-purple-600 hover:bg-purple-700 text-white rounded transition-colors"
-          >
-            Review
-          </button>
+      <div
+        className={cn(
+          'bg-purple-50 dark:bg-purple-950 border border-purple-200 dark:border-purple-800 rounded-lg p-3 mb-4',
+          className
+        )}
+      >
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <CheckCircle className="w-4 h-4 text-purple-600 dark:text-purple-400" />
+            <span className="text-sm font-medium text-gray-900 dark:text-white">
+              {completedTasks === totalTasks ? 'All done! 🎉' : 'No pending tasks'}
+            </span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="text-xs text-gray-600 dark:text-gray-400">
+              {completedTasks}/{totalTasks}
+            </span>
+            <button
+              onClick={onShowAllTasks}
+              className="text-xs px-2 py-1 bg-purple-600 hover:bg-purple-700 text-white rounded transition-colors"
+            >
+              Review
+            </button>
+          </div>
         </div>
       </div>
-    </div>
     );
   } else {
     // TaskMaster is configured but no tasks exist - don't show anything in chat
@@ -241,7 +300,7 @@ const NextTaskBanner = ({ onShowAllTasks, onStartTask, className = '' }) => {
   return (
     <>
       {bannerContent}
-      
+
       {/* Create Task Modal */}
       {showCreateTaskModal && (
         <CreateTaskModal
@@ -253,7 +312,7 @@ const NextTaskBanner = ({ onShowAllTasks, onStartTask, className = '' }) => {
           }}
         />
       )}
-      
+
       {/* Template Selector Modal */}
       {showTemplateSelector && (
         <TemplateSelector
@@ -265,7 +324,7 @@ const NextTaskBanner = ({ onShowAllTasks, onStartTask, className = '' }) => {
           }}
         />
       )}
-      
+
       {/* TaskMaster CLI Setup Modal */}
       {showCLI && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
@@ -277,8 +336,12 @@ const NextTaskBanner = ({ onShowAllTasks, onStartTask, className = '' }) => {
                   <Terminal className="w-4 h-4 text-blue-600 dark:text-blue-400" />
                 </div>
                 <div>
-                  <h2 className="text-lg font-semibold text-gray-900 dark:text-white">TaskMaster Setup</h2>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">Interactive CLI for {currentProject?.displayName}</p>
+                  <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
+                    TaskMaster Setup
+                  </h2>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                    Interactive CLI for {currentProject?.displayName}
+                  </p>
                 </div>
               </div>
               <button
@@ -288,11 +351,11 @@ const NextTaskBanner = ({ onShowAllTasks, onStartTask, className = '' }) => {
                 <X className="w-5 h-5" />
               </button>
             </div>
-            
+
             {/* Terminal Container */}
             <div className="flex-1 p-4">
               <div className="h-full bg-black rounded-lg overflow-hidden">
-                <Shell 
+                <Shell
                   selectedProject={currentProject}
                   selectedSession={null}
                   isActive={true}
@@ -301,7 +364,7 @@ const NextTaskBanner = ({ onShowAllTasks, onStartTask, className = '' }) => {
                 />
               </div>
             </div>
-            
+
             {/* Modal Footer */}
             <div className="p-4 border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
               <div className="flex items-center justify-between">
@@ -341,22 +404,22 @@ const CreateTaskModal = ({ currentProject, onClose, onTaskCreated }) => {
     description: '',
     priority: 'medium',
     useAI: false,
-    prompt: ''
+    prompt: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async e => {
     e.preventDefault();
     if (!currentProject) return;
 
     setIsSubmitting(true);
     try {
-      const taskData = formData.useAI 
+      const taskData = formData.useAI
         ? { prompt: formData.prompt, priority: formData.priority }
         : { title: formData.title, description: formData.description, priority: formData.priority };
 
       const response = await api.taskmaster.addTask(currentProject.name, taskData);
-      
+
       if (response.ok) {
         onTaskCreated();
       } else {
@@ -391,7 +454,7 @@ const CreateTaskModal = ({ currentProject, onClose, onTaskCreated }) => {
               <input
                 type="checkbox"
                 checked={formData.useAI}
-                onChange={(e) => setFormData(prev => ({ ...prev, useAI: e.target.checked }))}
+                onChange={e => setFormData(prev => ({ ...prev, useAI: e.target.checked }))}
               />
               Use AI to generate task details
             </label>
@@ -404,7 +467,7 @@ const CreateTaskModal = ({ currentProject, onClose, onTaskCreated }) => {
               </label>
               <textarea
                 value={formData.prompt}
-                onChange={(e) => setFormData(prev => ({ ...prev, prompt: e.target.value }))}
+                onChange={e => setFormData(prev => ({ ...prev, prompt: e.target.value }))}
                 className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
                 rows="3"
                 placeholder="Describe what you want to accomplish..."
@@ -420,7 +483,7 @@ const CreateTaskModal = ({ currentProject, onClose, onTaskCreated }) => {
                 <input
                   type="text"
                   value={formData.title}
-                  onChange={(e) => setFormData(prev => ({ ...prev, title: e.target.value }))}
+                  onChange={e => setFormData(prev => ({ ...prev, title: e.target.value }))}
                   className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
                   placeholder="Enter task title..."
                   required
@@ -433,7 +496,7 @@ const CreateTaskModal = ({ currentProject, onClose, onTaskCreated }) => {
                 </label>
                 <textarea
                   value={formData.description}
-                  onChange={(e) => setFormData(prev => ({ ...prev, description: e.target.value }))}
+                  onChange={e => setFormData(prev => ({ ...prev, description: e.target.value }))}
                   className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
                   rows="3"
                   placeholder="Describe the task..."
@@ -449,7 +512,7 @@ const CreateTaskModal = ({ currentProject, onClose, onTaskCreated }) => {
             </label>
             <select
               value={formData.priority}
-              onChange={(e) => setFormData(prev => ({ ...prev, priority: e.target.value }))}
+              onChange={e => setFormData(prev => ({ ...prev, priority: e.target.value }))}
               className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
             >
               <option value="low">Low</option>
@@ -470,7 +533,11 @@ const CreateTaskModal = ({ currentProject, onClose, onTaskCreated }) => {
             <button
               type="submit"
               className="flex-1 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded disabled:opacity-50"
-              disabled={isSubmitting || (formData.useAI && !formData.prompt.trim()) || (!formData.useAI && (!formData.title.trim() || !formData.description.trim()))}
+              disabled={
+                isSubmitting ||
+                (formData.useAI && !formData.prompt.trim()) ||
+                (!formData.useAI && (!formData.title.trim() || !formData.description.trim()))
+              }
             >
               {isSubmitting ? 'Creating...' : 'Create Task'}
             </button>
@@ -505,21 +572,21 @@ const TemplateSelector = ({ currentProject, onClose, onTemplateApplied }) => {
         setIsLoading(false);
       }
     };
-    
+
     loadTemplates();
   }, []);
 
-  const handleSelectTemplate = (template) => {
+  const handleSelectTemplate = template => {
     setSelectedTemplate(template);
     // Find placeholders in template content
     const placeholders = template.content.match(/\[([^\]]+)\]/g) || [];
     const uniquePlaceholders = [...new Set(placeholders.map(p => p.slice(1, -1)))];
-    
+
     const initialCustomizations = {};
     uniquePlaceholders.forEach(placeholder => {
       initialCustomizations[placeholder] = '';
     });
-    
+
     setCustomizations(initialCustomizations);
     setStep('customize');
   };
@@ -533,7 +600,7 @@ const TemplateSelector = ({ currentProject, onClose, onTemplateApplied }) => {
       const applyResponse = await api.taskmaster.applyTemplate(currentProject.name, {
         templateId: selectedTemplate.id,
         fileName,
-        customizations
+        customizations,
       });
 
       if (!applyResponse.ok) {
@@ -544,7 +611,7 @@ const TemplateSelector = ({ currentProject, onClose, onTemplateApplied }) => {
       // Parse PRD to generate tasks
       const parseResponse = await api.taskmaster.parsePRD(currentProject.name, {
         fileName,
-        numTasks: 10
+        numTasks: 10,
       });
 
       if (!parseResponse.ok) {
@@ -556,7 +623,6 @@ const TemplateSelector = ({ currentProject, onClose, onTemplateApplied }) => {
       setTimeout(() => {
         onTemplateApplied();
       }, 2000);
-
     } catch (error) {
       console.error('Error applying template:', error);
       alert(`Error: ${error.message}`);
@@ -582,9 +648,11 @@ const TemplateSelector = ({ currentProject, onClose, onTemplateApplied }) => {
       <div className="bg-white dark:bg-gray-800 rounded-lg p-6 w-full max-w-2xl max-h-[80vh] overflow-y-auto">
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-            {step === 'select' ? 'Select PRD Template' : 
-             step === 'customize' ? 'Customize Template' : 
-             'Generating Tasks'}
+            {step === 'select'
+              ? 'Select PRD Template'
+              : step === 'customize'
+                ? 'Customize Template'
+                : 'Generating Tasks'}
           </h3>
           <button
             onClick={onClose}
@@ -596,7 +664,7 @@ const TemplateSelector = ({ currentProject, onClose, onTemplateApplied }) => {
 
         {step === 'select' && (
           <div className="space-y-3">
-            {templates.map((template) => (
+            {templates.map(template => (
               <div
                 key={template.id}
                 className="p-4 border border-gray-200 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer transition-colors"
@@ -605,7 +673,9 @@ const TemplateSelector = ({ currentProject, onClose, onTemplateApplied }) => {
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
                     <h4 className="font-medium text-gray-900 dark:text-white">{template.name}</h4>
-                    <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">{template.description}</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                      {template.description}
+                    </p>
                     <span className="inline-block text-xs bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-2 py-1 rounded mt-2">
                       {template.category}
                     </span>
@@ -626,7 +696,7 @@ const TemplateSelector = ({ currentProject, onClose, onTemplateApplied }) => {
               <input
                 type="text"
                 value={fileName}
-                onChange={(e) => setFileName(e.target.value)}
+                onChange={e => setFileName(e.target.value)}
                 className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
                 placeholder="prd.txt"
               />
@@ -646,7 +716,9 @@ const TemplateSelector = ({ currentProject, onClose, onTemplateApplied }) => {
                       <input
                         type="text"
                         value={value}
-                        onChange={(e) => setCustomizations(prev => ({ ...prev, [key]: e.target.value }))}
+                        onChange={e =>
+                          setCustomizations(prev => ({ ...prev, [key]: e.target.value }))
+                        }
                         className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:text-white"
                         placeholder={`Enter ${key.toLowerCase()}`}
                       />

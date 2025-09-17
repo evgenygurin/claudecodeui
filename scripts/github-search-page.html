@@ -1,454 +1,605 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GitHub Repository Search</title>
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background: #f6f8fa;
-        }
-        .header {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        }
-        .component {
-            background: white;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        }
-        .component-header {
-            background: #24292e;
-            color: white;
-            padding: 15px 20px;
-            font-weight: 600;
-        }
-        .component-content {
-            padding: 20px;
-        }
-        .search-query {
-            margin-bottom: 15px;
-            padding: 15px;
-            background: #f6f8fa;
-            border-radius: 6px;
-            border-left: 4px solid #0366d6;
-        }
-        .search-query h4 {
-            margin: 0 0 10px 0;
-            color: #24292e;
-        }
-        .search-query p {
-            margin: 0 0 10px 0;
-            color: #586069;
-            font-size: 14px;
-        }
-        .search-link {
-            display: inline-block;
-            background: #0366d6;
-            color: white;
-            padding: 8px 16px;
-            text-decoration: none;
-            border-radius: 6px;
-            font-size: 14px;
-            font-weight: 500;
-        }
-        .search-link:hover {
-            background: #0256cc;
-        }
-        .original-link {
-            color: #586069;
-            font-size: 12px;
-            margin-top: 10px;
-        }
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-        .stat-card {
-            background: white;
-            padding: 15px;
-            border-radius: 6px;
-            text-align: center;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        }
-        .stat-number {
-            font-size: 24px;
-            font-weight: 600;
-            color: #0366d6;
-        }
-        .stat-label {
-            font-size: 14px;
-            color: #586069;
-            margin-top: 5px;
-        }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        background: #f6f8fa;
+      }
+      .header {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+      .component {
+        background: white;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+      .component-header {
+        background: #24292e;
+        color: white;
+        padding: 15px 20px;
+        font-weight: 600;
+      }
+      .component-content {
+        padding: 20px;
+      }
+      .search-query {
+        margin-bottom: 15px;
+        padding: 15px;
+        background: #f6f8fa;
+        border-radius: 6px;
+        border-left: 4px solid #0366d6;
+      }
+      .search-query h4 {
+        margin: 0 0 10px 0;
+        color: #24292e;
+      }
+      .search-query p {
+        margin: 0 0 10px 0;
+        color: #586069;
+        font-size: 14px;
+      }
+      .search-link {
+        display: inline-block;
+        background: #0366d6;
+        color: white;
+        padding: 8px 16px;
+        text-decoration: none;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: 500;
+      }
+      .search-link:hover {
+        background: #0256cc;
+      }
+      .original-link {
+        color: #586069;
+        font-size: 12px;
+        margin-top: 10px;
+      }
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        margin-bottom: 20px;
+      }
+      .stat-card {
+        background: white;
+        padding: 15px;
+        border-radius: 6px;
+        text-align: center;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+      .stat-number {
+        font-size: 24px;
+        font-weight: 600;
+        color: #0366d6;
+      }
+      .stat-label {
+        font-size: 14px;
+        color: #586069;
+        margin-top: 5px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="header">
-        <h1>🔍 GitHub Repository Search</h1>
-        <p>Поиск репозиториев для компонентов v0.app</p>
+      <h1>🔍 GitHub Repository Search</h1>
+      <p>Поиск репозиториев для компонентов v0.app</p>
     </div>
 
     <div class="stats">
-        <div class="stat-card">
-            <div class="stat-number">10</div>
-            <div class="stat-label">Компонентов</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-number">30</div>
-            <div class="stat-label">Поисковых запросов</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-number">45</div>
-            <div class="stat-label">Всего ссылок v0.app</div>
-        </div>
+      <div class="stat-card">
+        <div class="stat-number">10</div>
+        <div class="stat-label">Компонентов</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">30</div>
+        <div class="stat-label">Поисковых запросов</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">45</div>
+        <div class="stat-label">Всего ссылок v0.app</div>
+      </div>
     </div>
 
     <div class="component">
-        <div class="component-header">
-            1. file-manager
+      <div class="component-header">1. file-manager</div>
+      <div class="component-content">
+        <div class="original-link">
+          📎 Оригинальная ссылка:
+          <a href="https://v0.app/chat/file-manager-wukORjs2J9p" target="_blank"
+            >https://v0.app/chat/file-manager-wukORjs2J9p</a
+          >
         </div>
-        <div class="component-content">
-            <div class="original-link">
-                📎 Оригинальная ссылка: <a href="https://v0.app/chat/file-manager-wukORjs2J9p" target="_blank">https://v0.app/chat/file-manager-wukORjs2J9p</a>
-            </div>
 
-            <div class="search-query">
-                <h4>1. file-manager</h4>
-                <p>Поиск репозитория с названием "file-manager"</p>
-                <a href="https://github.com/search?q=%22file-manager%22%20in%3Aname&type=repositories&s=stars" target="_blank" class="search-link">🔍 Поиск на GitHub</a>
-            </div>
-
-            <div class="search-query">
-                <h4>2. v0-file-manager</h4>
-                <p>Поиск репозитория с названием "v0-file-manager"</p>
-                <a href="https://github.com/search?q=%22v0-file-manager%22%20in%3Aname&type=repositories&s=stars" target="_blank" class="search-link">🔍 Поиск на GitHub</a>
-            </div>
-
-            <div class="search-query">
-                <h4>3. nextjs-file-manager</h4>
-                <p>Поиск репозитория с названием "nextjs-file-manager"</p>
-                <a href="https://github.com/search?q=%22nextjs-file-manager%22%20in%3Aname&type=repositories&s=stars" target="_blank" class="search-link">🔍 Поиск на GitHub</a>
-            </div>
-
+        <div class="search-query">
+          <h4>1. file-manager</h4>
+          <p>Поиск репозитория с названием "file-manager"</p>
+          <a
+            href="https://github.com/search?q=%22file-manager%22%20in%3Aname&type=repositories&s=stars"
+            target="_blank"
+            class="search-link"
+            >🔍 Поиск на GitHub</a
+          >
         </div>
+
+        <div class="search-query">
+          <h4>2. v0-file-manager</h4>
+          <p>Поиск репозитория с названием "v0-file-manager"</p>
+          <a
+            href="https://github.com/search?q=%22v0-file-manager%22%20in%3Aname&type=repositories&s=stars"
+            target="_blank"
+            class="search-link"
+            >🔍 Поиск на GitHub</a
+          >
+        </div>
+
+        <div class="search-query">
+          <h4>3. nextjs-file-manager</h4>
+          <p>Поиск репозитория с названием "nextjs-file-manager"</p>
+          <a
+            href="https://github.com/search?q=%22nextjs-file-manager%22%20in%3Aname&type=repositories&s=stars"
+            target="_blank"
+            class="search-link"
+            >🔍 Поиск на GitHub</a
+          >
+        </div>
+      </div>
     </div>
 
     <div class="component">
-        <div class="component-header">
-            2. file-manager
+      <div class="component-header">2. file-manager</div>
+      <div class="component-content">
+        <div class="original-link">
+          📎 Оригинальная ссылка:
+          <a href="https://v0.app/community/file-manager-hN0nNvAchzi" target="_blank"
+            >https://v0.app/community/file-manager-hN0nNvAchzi</a
+          >
         </div>
-        <div class="component-content">
-            <div class="original-link">
-                📎 Оригинальная ссылка: <a href="https://v0.app/community/file-manager-hN0nNvAchzi" target="_blank">https://v0.app/community/file-manager-hN0nNvAchzi</a>
-            </div>
 
-            <div class="search-query">
-                <h4>1. file-manager</h4>
-                <p>Поиск репозитория с названием "file-manager"</p>
-                <a href="https://github.com/search?q=%22file-manager%22%20in%3Aname&type=repositories&s=stars" target="_blank" class="search-link">🔍 Поиск на GitHub</a>
-            </div>
-
-            <div class="search-query">
-                <h4>2. v0-file-manager</h4>
-                <p>Поиск репозитория с названием "v0-file-manager"</p>
-                <a href="https://github.com/search?q=%22v0-file-manager%22%20in%3Aname&type=repositories&s=stars" target="_blank" class="search-link">🔍 Поиск на GitHub</a>
-            </div>
-
-            <div class="search-query">
-                <h4>3. nextjs-file-manager</h4>
-                <p>Поиск репозитория с названием "nextjs-file-manager"</p>
-                <a href="https://github.com/search?q=%22nextjs-file-manager%22%20in%3Aname&type=repositories&s=stars" target="_blank" class="search-link">🔍 Поиск на GitHub</a>
-            </div>
-
+        <div class="search-query">
+          <h4>1. file-manager</h4>
+          <p>Поиск репозитория с названием "file-manager"</p>
+          <a
+            href="https://github.com/search?q=%22file-manager%22%20in%3Aname&type=repositories&s=stars"
+            target="_blank"
+            class="search-link"
+            >🔍 Поиск на GitHub</a
+          >
         </div>
+
+        <div class="search-query">
+          <h4>2. v0-file-manager</h4>
+          <p>Поиск репозитория с названием "v0-file-manager"</p>
+          <a
+            href="https://github.com/search?q=%22v0-file-manager%22%20in%3Aname&type=repositories&s=stars"
+            target="_blank"
+            class="search-link"
+            >🔍 Поиск на GitHub</a
+          >
+        </div>
+
+        <div class="search-query">
+          <h4>3. nextjs-file-manager</h4>
+          <p>Поиск репозитория с названием "nextjs-file-manager"</p>
+          <a
+            href="https://github.com/search?q=%22nextjs-file-manager%22%20in%3Aname&type=repositories&s=stars"
+            target="_blank"
+            class="search-link"
+            >🔍 Поиск на GitHub</a
+          >
+        </div>
+      </div>
     </div>
 
     <div class="component">
-        <div class="component-header">
-            3. ai-chat-interface
+      <div class="component-header">3. ai-chat-interface</div>
+      <div class="component-content">
+        <div class="original-link">
+          📎 Оригинальная ссылка:
+          <a href="https://v0.app/community/ai-chat-interface-6VLiqkGu5vw" target="_blank"
+            >https://v0.app/community/ai-chat-interface-6VLiqkGu5vw</a
+          >
         </div>
-        <div class="component-content">
-            <div class="original-link">
-                📎 Оригинальная ссылка: <a href="https://v0.app/community/ai-chat-interface-6VLiqkGu5vw" target="_blank">https://v0.app/community/ai-chat-interface-6VLiqkGu5vw</a>
-            </div>
 
-            <div class="search-query">
-                <h4>1. ai-chat-interface</h4>
-                <p>Поиск репозитория с названием "ai-chat-interface"</p>
-                <a href="https://github.com/search?q=%22ai-chat-interface%22%20in%3Aname&type=repositories&s=stars" target="_blank" class="search-link">🔍 Поиск на GitHub</a>
-            </div>
-
-            <div class="search-query">
-                <h4>2. v0-ai-chat-interface</h4>
-                <p>Поиск репозитория с названием "v0-ai-chat-interface"</p>
-                <a href="https://github.com/search?q=%22v0-ai-chat-interface%22%20in%3Aname&type=repositories&s=stars" target="_blank" class="search-link">🔍 Поиск на GitHub</a>
-            </div>
-
-            <div class="search-query">
-                <h4>3. nextjs-ai-chat-interface</h4>
-                <p>Поиск репозитория с названием "nextjs-ai-chat-interface"</p>
-                <a href="https://github.com/search?q=%22nextjs-ai-chat-interface%22%20in%3Aname&type=repositories&s=stars" target="_blank" class="search-link">🔍 Поиск на GitHub</a>
-            </div>
-
+        <div class="search-query">
+          <h4>1. ai-chat-interface</h4>
+          <p>Поиск репозитория с названием "ai-chat-interface"</p>
+          <a
+            href="https://github.com/search?q=%22ai-chat-interface%22%20in%3Aname&type=repositories&s=stars"
+            target="_blank"
+            class="search-link"
+            >🔍 Поиск на GitHub</a
+          >
         </div>
+
+        <div class="search-query">
+          <h4>2. v0-ai-chat-interface</h4>
+          <p>Поиск репозитория с названием "v0-ai-chat-interface"</p>
+          <a
+            href="https://github.com/search?q=%22v0-ai-chat-interface%22%20in%3Aname&type=repositories&s=stars"
+            target="_blank"
+            class="search-link"
+            >🔍 Поиск на GitHub</a
+          >
+        </div>
+
+        <div class="search-query">
+          <h4>3. nextjs-ai-chat-interface</h4>
+          <p>Поиск репозитория с названием "nextjs-ai-chat-interface"</p>
+          <a
+            href="https://github.com/search?q=%22nextjs-ai-chat-interface%22%20in%3Aname&type=repositories&s=stars"
+            target="_blank"
+            class="search-link"
+            >🔍 Поиск на GitHub</a
+          >
+        </div>
+      </div>
     </div>
 
     <div class="component">
-        <div class="component-header">
-            4. integrations-page
+      <div class="component-header">4. integrations-page</div>
+      <div class="component-content">
+        <div class="original-link">
+          📎 Оригинальная ссылка:
+          <a href="https://v0.app/community/integrations-page-7HOUCTcoR5n" target="_blank"
+            >https://v0.app/community/integrations-page-7HOUCTcoR5n</a
+          >
         </div>
-        <div class="component-content">
-            <div class="original-link">
-                📎 Оригинальная ссылка: <a href="https://v0.app/community/integrations-page-7HOUCTcoR5n" target="_blank">https://v0.app/community/integrations-page-7HOUCTcoR5n</a>
-            </div>
 
-            <div class="search-query">
-                <h4>1. integrations-page</h4>
-                <p>Поиск репозитория с названием "integrations-page"</p>
-                <a href="https://github.com/search?q=%22integrations-page%22%20in%3Aname&type=repositories&s=stars" target="_blank" class="search-link">🔍 Поиск на GitHub</a>
-            </div>
-
-            <div class="search-query">
-                <h4>2. v0-integrations-page</h4>
-                <p>Поиск репозитория с названием "v0-integrations-page"</p>
-                <a href="https://github.com/search?q=%22v0-integrations-page%22%20in%3Aname&type=repositories&s=stars" target="_blank" class="search-link">🔍 Поиск на GitHub</a>
-            </div>
-
-            <div class="search-query">
-                <h4>3. nextjs-integrations-page</h4>
-                <p>Поиск репозитория с названием "nextjs-integrations-page"</p>
-                <a href="https://github.com/search?q=%22nextjs-integrations-page%22%20in%3Aname&type=repositories&s=stars" target="_blank" class="search-link">🔍 Поиск на GitHub</a>
-            </div>
-
+        <div class="search-query">
+          <h4>1. integrations-page</h4>
+          <p>Поиск репозитория с названием "integrations-page"</p>
+          <a
+            href="https://github.com/search?q=%22integrations-page%22%20in%3Aname&type=repositories&s=stars"
+            target="_blank"
+            class="search-link"
+            >🔍 Поиск на GitHub</a
+          >
         </div>
+
+        <div class="search-query">
+          <h4>2. v0-integrations-page</h4>
+          <p>Поиск репозитория с названием "v0-integrations-page"</p>
+          <a
+            href="https://github.com/search?q=%22v0-integrations-page%22%20in%3Aname&type=repositories&s=stars"
+            target="_blank"
+            class="search-link"
+            >🔍 Поиск на GitHub</a
+          >
+        </div>
+
+        <div class="search-query">
+          <h4>3. nextjs-integrations-page</h4>
+          <p>Поиск репозитория с названием "nextjs-integrations-page"</p>
+          <a
+            href="https://github.com/search?q=%22nextjs-integrations-page%22%20in%3Aname&type=repositories&s=stars"
+            target="_blank"
+            class="search-link"
+            >🔍 Поиск на GitHub</a
+          >
+        </div>
+      </div>
     </div>
 
     <div class="component">
-        <div class="component-header">
-            5. sidebar-layout
+      <div class="component-header">5. sidebar-layout</div>
+      <div class="component-content">
+        <div class="original-link">
+          📎 Оригинальная ссылка:
+          <a href="https://v0.app/community/sidebar-layout-ybLyeN1sesS" target="_blank"
+            >https://v0.app/community/sidebar-layout-ybLyeN1sesS</a
+          >
         </div>
-        <div class="component-content">
-            <div class="original-link">
-                📎 Оригинальная ссылка: <a href="https://v0.app/community/sidebar-layout-ybLyeN1sesS" target="_blank">https://v0.app/community/sidebar-layout-ybLyeN1sesS</a>
-            </div>
 
-            <div class="search-query">
-                <h4>1. sidebar-layout</h4>
-                <p>Поиск репозитория с названием "sidebar-layout"</p>
-                <a href="https://github.com/search?q=%22sidebar-layout%22%20in%3Aname&type=repositories&s=stars" target="_blank" class="search-link">🔍 Поиск на GitHub</a>
-            </div>
-
-            <div class="search-query">
-                <h4>2. v0-sidebar-layout</h4>
-                <p>Поиск репозитория с названием "v0-sidebar-layout"</p>
-                <a href="https://github.com/search?q=%22v0-sidebar-layout%22%20in%3Aname&type=repositories&s=stars" target="_blank" class="search-link">🔍 Поиск на GitHub</a>
-            </div>
-
-            <div class="search-query">
-                <h4>3. nextjs-sidebar-layout</h4>
-                <p>Поиск репозитория с названием "nextjs-sidebar-layout"</p>
-                <a href="https://github.com/search?q=%22nextjs-sidebar-layout%22%20in%3Aname&type=repositories&s=stars" target="_blank" class="search-link">🔍 Поиск на GitHub</a>
-            </div>
-
+        <div class="search-query">
+          <h4>1. sidebar-layout</h4>
+          <p>Поиск репозитория с названием "sidebar-layout"</p>
+          <a
+            href="https://github.com/search?q=%22sidebar-layout%22%20in%3Aname&type=repositories&s=stars"
+            target="_blank"
+            class="search-link"
+            >🔍 Поиск на GitHub</a
+          >
         </div>
+
+        <div class="search-query">
+          <h4>2. v0-sidebar-layout</h4>
+          <p>Поиск репозитория с названием "v0-sidebar-layout"</p>
+          <a
+            href="https://github.com/search?q=%22v0-sidebar-layout%22%20in%3Aname&type=repositories&s=stars"
+            target="_blank"
+            class="search-link"
+            >🔍 Поиск на GitHub</a
+          >
+        </div>
+
+        <div class="search-query">
+          <h4>3. nextjs-sidebar-layout</h4>
+          <p>Поиск репозитория с названием "nextjs-sidebar-layout"</p>
+          <a
+            href="https://github.com/search?q=%22nextjs-sidebar-layout%22%20in%3Aname&type=repositories&s=stars"
+            target="_blank"
+            class="search-link"
+            >🔍 Поиск на GitHub</a
+          >
+        </div>
+      </div>
     </div>
 
     <div class="component">
-        <div class="component-header">
-            6. action-search-bar
+      <div class="component-header">6. action-search-bar</div>
+      <div class="component-content">
+        <div class="original-link">
+          📎 Оригинальная ссылка:
+          <a href="https://v0.app/community/action-search-bar-S3nMPSmpQzk" target="_blank"
+            >https://v0.app/community/action-search-bar-S3nMPSmpQzk</a
+          >
         </div>
-        <div class="component-content">
-            <div class="original-link">
-                📎 Оригинальная ссылка: <a href="https://v0.app/community/action-search-bar-S3nMPSmpQzk" target="_blank">https://v0.app/community/action-search-bar-S3nMPSmpQzk</a>
-            </div>
 
-            <div class="search-query">
-                <h4>1. action-search-bar</h4>
-                <p>Поиск репозитория с названием "action-search-bar"</p>
-                <a href="https://github.com/search?q=%22action-search-bar%22%20in%3Aname&type=repositories&s=stars" target="_blank" class="search-link">🔍 Поиск на GitHub</a>
-            </div>
-
-            <div class="search-query">
-                <h4>2. v0-action-search-bar</h4>
-                <p>Поиск репозитория с названием "v0-action-search-bar"</p>
-                <a href="https://github.com/search?q=%22v0-action-search-bar%22%20in%3Aname&type=repositories&s=stars" target="_blank" class="search-link">🔍 Поиск на GitHub</a>
-            </div>
-
-            <div class="search-query">
-                <h4>3. nextjs-action-search-bar</h4>
-                <p>Поиск репозитория с названием "nextjs-action-search-bar"</p>
-                <a href="https://github.com/search?q=%22nextjs-action-search-bar%22%20in%3Aname&type=repositories&s=stars" target="_blank" class="search-link">🔍 Поиск на GitHub</a>
-            </div>
-
+        <div class="search-query">
+          <h4>1. action-search-bar</h4>
+          <p>Поиск репозитория с названием "action-search-bar"</p>
+          <a
+            href="https://github.com/search?q=%22action-search-bar%22%20in%3Aname&type=repositories&s=stars"
+            target="_blank"
+            class="search-link"
+            >🔍 Поиск на GitHub</a
+          >
         </div>
+
+        <div class="search-query">
+          <h4>2. v0-action-search-bar</h4>
+          <p>Поиск репозитория с названием "v0-action-search-bar"</p>
+          <a
+            href="https://github.com/search?q=%22v0-action-search-bar%22%20in%3Aname&type=repositories&s=stars"
+            target="_blank"
+            class="search-link"
+            >🔍 Поиск на GitHub</a
+          >
+        </div>
+
+        <div class="search-query">
+          <h4>3. nextjs-action-search-bar</h4>
+          <p>Поиск репозитория с названием "nextjs-action-search-bar"</p>
+          <a
+            href="https://github.com/search?q=%22nextjs-action-search-bar%22%20in%3Aname&type=repositories&s=stars"
+            target="_blank"
+            class="search-link"
+            >🔍 Поиск на GitHub</a
+          >
+        </div>
+      </div>
     </div>
 
     <div class="component">
-        <div class="component-header">
-            7. ai-card-generation
+      <div class="component-header">7. ai-card-generation</div>
+      <div class="component-content">
+        <div class="original-link">
+          📎 Оригинальная ссылка:
+          <a href="https://v0.app/community/ai-card-generation-Tpxvlz16QiJ" target="_blank"
+            >https://v0.app/community/ai-card-generation-Tpxvlz16QiJ</a
+          >
         </div>
-        <div class="component-content">
-            <div class="original-link">
-                📎 Оригинальная ссылка: <a href="https://v0.app/community/ai-card-generation-Tpxvlz16QiJ" target="_blank">https://v0.app/community/ai-card-generation-Tpxvlz16QiJ</a>
-            </div>
 
-            <div class="search-query">
-                <h4>1. ai-card-generation</h4>
-                <p>Поиск репозитория с названием "ai-card-generation"</p>
-                <a href="https://github.com/search?q=%22ai-card-generation%22%20in%3Aname&type=repositories&s=stars" target="_blank" class="search-link">🔍 Поиск на GitHub</a>
-            </div>
-
-            <div class="search-query">
-                <h4>2. v0-ai-card-generation</h4>
-                <p>Поиск репозитория с названием "v0-ai-card-generation"</p>
-                <a href="https://github.com/search?q=%22v0-ai-card-generation%22%20in%3Aname&type=repositories&s=stars" target="_blank" class="search-link">🔍 Поиск на GitHub</a>
-            </div>
-
-            <div class="search-query">
-                <h4>3. nextjs-ai-card-generation</h4>
-                <p>Поиск репозитория с названием "nextjs-ai-card-generation"</p>
-                <a href="https://github.com/search?q=%22nextjs-ai-card-generation%22%20in%3Aname&type=repositories&s=stars" target="_blank" class="search-link">🔍 Поиск на GitHub</a>
-            </div>
-
+        <div class="search-query">
+          <h4>1. ai-card-generation</h4>
+          <p>Поиск репозитория с названием "ai-card-generation"</p>
+          <a
+            href="https://github.com/search?q=%22ai-card-generation%22%20in%3Aname&type=repositories&s=stars"
+            target="_blank"
+            class="search-link"
+            >🔍 Поиск на GitHub</a
+          >
         </div>
+
+        <div class="search-query">
+          <h4>2. v0-ai-card-generation</h4>
+          <p>Поиск репозитория с названием "v0-ai-card-generation"</p>
+          <a
+            href="https://github.com/search?q=%22v0-ai-card-generation%22%20in%3Aname&type=repositories&s=stars"
+            target="_blank"
+            class="search-link"
+            >🔍 Поиск на GitHub</a
+          >
+        </div>
+
+        <div class="search-query">
+          <h4>3. nextjs-ai-card-generation</h4>
+          <p>Поиск репозитория с названием "nextjs-ai-card-generation"</p>
+          <a
+            href="https://github.com/search?q=%22nextjs-ai-card-generation%22%20in%3Aname&type=repositories&s=stars"
+            target="_blank"
+            class="search-link"
+            >🔍 Поиск на GitHub</a
+          >
+        </div>
+      </div>
     </div>
 
     <div class="component">
-        <div class="component-header">
-            8. vercel-tabs
+      <div class="component-header">8. vercel-tabs</div>
+      <div class="component-content">
+        <div class="original-link">
+          📎 Оригинальная ссылка:
+          <a href="https://v0.app/community/vercel-tabs-BT27p0aGPsa" target="_blank"
+            >https://v0.app/community/vercel-tabs-BT27p0aGPsa</a
+          >
         </div>
-        <div class="component-content">
-            <div class="original-link">
-                📎 Оригинальная ссылка: <a href="https://v0.app/community/vercel-tabs-BT27p0aGPsa" target="_blank">https://v0.app/community/vercel-tabs-BT27p0aGPsa</a>
-            </div>
 
-            <div class="search-query">
-                <h4>1. vercel-tabs</h4>
-                <p>Поиск репозитория с названием "vercel-tabs"</p>
-                <a href="https://github.com/search?q=%22vercel-tabs%22%20in%3Aname&type=repositories&s=stars" target="_blank" class="search-link">🔍 Поиск на GitHub</a>
-            </div>
-
-            <div class="search-query">
-                <h4>2. v0-vercel-tabs</h4>
-                <p>Поиск репозитория с названием "v0-vercel-tabs"</p>
-                <a href="https://github.com/search?q=%22v0-vercel-tabs%22%20in%3Aname&type=repositories&s=stars" target="_blank" class="search-link">🔍 Поиск на GitHub</a>
-            </div>
-
-            <div class="search-query">
-                <h4>3. nextjs-vercel-tabs</h4>
-                <p>Поиск репозитория с названием "nextjs-vercel-tabs"</p>
-                <a href="https://github.com/search?q=%22nextjs-vercel-tabs%22%20in%3Aname&type=repositories&s=stars" target="_blank" class="search-link">🔍 Поиск на GitHub</a>
-            </div>
-
+        <div class="search-query">
+          <h4>1. vercel-tabs</h4>
+          <p>Поиск репозитория с названием "vercel-tabs"</p>
+          <a
+            href="https://github.com/search?q=%22vercel-tabs%22%20in%3Aname&type=repositories&s=stars"
+            target="_blank"
+            class="search-link"
+            >🔍 Поиск на GitHub</a
+          >
         </div>
+
+        <div class="search-query">
+          <h4>2. v0-vercel-tabs</h4>
+          <p>Поиск репозитория с названием "v0-vercel-tabs"</p>
+          <a
+            href="https://github.com/search?q=%22v0-vercel-tabs%22%20in%3Aname&type=repositories&s=stars"
+            target="_blank"
+            class="search-link"
+            >🔍 Поиск на GitHub</a
+          >
+        </div>
+
+        <div class="search-query">
+          <h4>3. nextjs-vercel-tabs</h4>
+          <p>Поиск репозитория с названием "nextjs-vercel-tabs"</p>
+          <a
+            href="https://github.com/search?q=%22nextjs-vercel-tabs%22%20in%3Aname&type=repositories&s=stars"
+            target="_blank"
+            class="search-link"
+            >🔍 Поиск на GitHub</a
+          >
+        </div>
+      </div>
     </div>
 
     <div class="component">
-        <div class="component-header">
-            9. animated-beam
+      <div class="component-header">9. animated-beam</div>
+      <div class="component-content">
+        <div class="original-link">
+          📎 Оригинальная ссылка:
+          <a href="https://v0.app/community/animated-beam-voQije6wyja" target="_blank"
+            >https://v0.app/community/animated-beam-voQije6wyja</a
+          >
         </div>
-        <div class="component-content">
-            <div class="original-link">
-                📎 Оригинальная ссылка: <a href="https://v0.app/community/animated-beam-voQije6wyja" target="_blank">https://v0.app/community/animated-beam-voQije6wyja</a>
-            </div>
 
-            <div class="search-query">
-                <h4>1. animated-beam</h4>
-                <p>Поиск репозитория с названием "animated-beam"</p>
-                <a href="https://github.com/search?q=%22animated-beam%22%20in%3Aname&type=repositories&s=stars" target="_blank" class="search-link">🔍 Поиск на GitHub</a>
-            </div>
-
-            <div class="search-query">
-                <h4>2. v0-animated-beam</h4>
-                <p>Поиск репозитория с названием "v0-animated-beam"</p>
-                <a href="https://github.com/search?q=%22v0-animated-beam%22%20in%3Aname&type=repositories&s=stars" target="_blank" class="search-link">🔍 Поиск на GitHub</a>
-            </div>
-
-            <div class="search-query">
-                <h4>3. nextjs-animated-beam</h4>
-                <p>Поиск репозитория с названием "nextjs-animated-beam"</p>
-                <a href="https://github.com/search?q=%22nextjs-animated-beam%22%20in%3Aname&type=repositories&s=stars" target="_blank" class="search-link">🔍 Поиск на GitHub</a>
-            </div>
-
+        <div class="search-query">
+          <h4>1. animated-beam</h4>
+          <p>Поиск репозитория с названием "animated-beam"</p>
+          <a
+            href="https://github.com/search?q=%22animated-beam%22%20in%3Aname&type=repositories&s=stars"
+            target="_blank"
+            class="search-link"
+            >🔍 Поиск на GitHub</a
+          >
         </div>
+
+        <div class="search-query">
+          <h4>2. v0-animated-beam</h4>
+          <p>Поиск репозитория с названием "v0-animated-beam"</p>
+          <a
+            href="https://github.com/search?q=%22v0-animated-beam%22%20in%3Aname&type=repositories&s=stars"
+            target="_blank"
+            class="search-link"
+            >🔍 Поиск на GitHub</a
+          >
+        </div>
+
+        <div class="search-query">
+          <h4>3. nextjs-animated-beam</h4>
+          <p>Поиск репозитория с названием "nextjs-animated-beam"</p>
+          <a
+            href="https://github.com/search?q=%22nextjs-animated-beam%22%20in%3Aname&type=repositories&s=stars"
+            target="_blank"
+            class="search-link"
+            >🔍 Поиск на GitHub</a
+          >
+        </div>
+      </div>
     </div>
 
     <div class="component">
-        <div class="component-header">
-            10. image-to-ascii
+      <div class="component-header">10. image-to-ascii</div>
+      <div class="component-content">
+        <div class="original-link">
+          📎 Оригинальная ссылка:
+          <a href="https://v0.app/community/image-to-ascii-0UE1nczWzbu" target="_blank"
+            >https://v0.app/community/image-to-ascii-0UE1nczWzbu</a
+          >
         </div>
-        <div class="component-content">
-            <div class="original-link">
-                📎 Оригинальная ссылка: <a href="https://v0.app/community/image-to-ascii-0UE1nczWzbu" target="_blank">https://v0.app/community/image-to-ascii-0UE1nczWzbu</a>
-            </div>
 
-            <div class="search-query">
-                <h4>1. image-to-ascii</h4>
-                <p>Поиск репозитория с названием "image-to-ascii"</p>
-                <a href="https://github.com/search?q=%22image-to-ascii%22%20in%3Aname&type=repositories&s=stars" target="_blank" class="search-link">🔍 Поиск на GitHub</a>
-            </div>
-
-            <div class="search-query">
-                <h4>2. v0-image-to-ascii</h4>
-                <p>Поиск репозитория с названием "v0-image-to-ascii"</p>
-                <a href="https://github.com/search?q=%22v0-image-to-ascii%22%20in%3Aname&type=repositories&s=stars" target="_blank" class="search-link">🔍 Поиск на GitHub</a>
-            </div>
-
-            <div class="search-query">
-                <h4>3. nextjs-image-to-ascii</h4>
-                <p>Поиск репозитория с названием "nextjs-image-to-ascii"</p>
-                <a href="https://github.com/search?q=%22nextjs-image-to-ascii%22%20in%3Aname&type=repositories&s=stars" target="_blank" class="search-link">🔍 Поиск на GitHub</a>
-            </div>
-
+        <div class="search-query">
+          <h4>1. image-to-ascii</h4>
+          <p>Поиск репозитория с названием "image-to-ascii"</p>
+          <a
+            href="https://github.com/search?q=%22image-to-ascii%22%20in%3Aname&type=repositories&s=stars"
+            target="_blank"
+            class="search-link"
+            >🔍 Поиск на GitHub</a
+          >
         </div>
+
+        <div class="search-query">
+          <h4>2. v0-image-to-ascii</h4>
+          <p>Поиск репозитория с названием "v0-image-to-ascii"</p>
+          <a
+            href="https://github.com/search?q=%22v0-image-to-ascii%22%20in%3Aname&type=repositories&s=stars"
+            target="_blank"
+            class="search-link"
+            >🔍 Поиск на GitHub</a
+          >
+        </div>
+
+        <div class="search-query">
+          <h4>3. nextjs-image-to-ascii</h4>
+          <p>Поиск репозитория с названием "nextjs-image-to-ascii"</p>
+          <a
+            href="https://github.com/search?q=%22nextjs-image-to-ascii%22%20in%3Aname&type=repositories&s=stars"
+            target="_blank"
+            class="search-link"
+            >🔍 Поиск на GitHub</a
+          >
+        </div>
+      </div>
     </div>
 
     <div class="header">
-        <h2>📋 Инструкции по использованию</h2>
-        <ol>
-            <li>Нажмите на кнопку "🔍 Поиск на GitHub" для каждого запроса</li>
-            <li>На странице GitHub изучите найденные репозитории</li>
-            <li>Обратите внимание на:
-                <ul>
-                    <li>⭐ Количество звезд (рекомендуется > 10)</li>
-                    <li>📅 Дата последнего обновления (рекомендуется < 6 месяцев)</li>
-                    <li>📝 Наличие README файла</li>
-                    <li>🏷️ Релевантные теги (react, nextjs, ui, component)</li>
-                    <li>📦 Наличие package.json</li>
-                </ul>
-            </li>
-            <li>Скопируйте ссылки на подходящие репозитории</li>
-            <li>Сохраните результаты в файл github-found-repositories.json</li>
-        </ol>
+      <h2>📋 Инструкции по использованию</h2>
+      <ol>
+        <li>Нажмите на кнопку "🔍 Поиск на GitHub" для каждого запроса</li>
+        <li>На странице GitHub изучите найденные репозитории</li>
+        <li>
+          Обратите внимание на:
+          <ul>
+            <li>⭐ Количество звезд (рекомендуется > 10)</li>
+            <li>📅 Дата последнего обновления (рекомендуется < 6 месяцев)</li>
+            <li>📝 Наличие README файла</li>
+            <li>🏷️ Релевантные теги (react, nextjs, ui, component)</li>
+            <li>📦 Наличие package.json</li>
+          </ul>
+        </li>
+        <li>Скопируйте ссылки на подходящие репозитории</li>
+        <li>Сохраните результаты в файл github-found-repositories.json</li>
+      </ol>
     </div>
 
     <script>
-        // Автоматическое открытие ссылок (опционально)
-        function openAllSearches() {
-            const links = document.querySelectorAll('.search-link');
-            links.forEach((link, index) => {
-                setTimeout(() => {
-                    window.open(link.href, '_blank');
-                }, index * 2000); // Задержка 2 секунды между открытием
-            });
-        }
-        
-        // Добавляем кнопку для автоматического открытия всех ссылок
-        const autoOpenBtn = document.createElement('button');
-        autoOpenBtn.textContent = '🚀 Открыть все поиски автоматически';
-        autoOpenBtn.style.cssText = `
+      // Автоматическое открытие ссылок (опционально)
+      function openAllSearches() {
+        const links = document.querySelectorAll('.search-link');
+        links.forEach((link, index) => {
+          setTimeout(() => {
+            window.open(link.href, '_blank');
+          }, index * 2000); // Задержка 2 секунды между открытием
+        });
+      }
+
+      // Добавляем кнопку для автоматического открытия всех ссылок
+      const autoOpenBtn = document.createElement('button');
+      autoOpenBtn.textContent = '🚀 Открыть все поиски автоматически';
+      autoOpenBtn.style.cssText = `
             position: fixed;
             top: 20px;
             right: 20px;
@@ -461,8 +612,8 @@
             font-weight: 500;
             z-index: 1000;
         `;
-        autoOpenBtn.onclick = openAllSearches;
-        document.body.appendChild(autoOpenBtn);
+      autoOpenBtn.onclick = openAllSearches;
+      document.body.appendChild(autoOpenBtn);
     </script>
-</body>
+  </body>
 </html>

@@ -49,26 +49,26 @@ const colors = {
     800: '#1e40af',
     900: '#1e3a8a',
   },
-  
+
   // Семантические цвета
   success: {
     50: '#f0fdf4',
     500: '#22c55e',
     600: '#16a34a',
   },
-  
+
   warning: {
     50: '#fffbeb',
     500: '#f59e0b',
     600: '#d97706',
   },
-  
+
   error: {
     50: '#fef2f2',
     500: '#ef4444',
     600: '#dc2626',
   },
-  
+
   // Нейтральные цвета
   gray: {
     50: '#f9fafb',
@@ -98,13 +98,13 @@ const darkColors = {
     800: '#dbeafe',
     900: '#eff6ff',
   },
-  
+
   background: {
     primary: '#0f172a',
     secondary: '#1e293b',
     tertiary: '#334155',
   },
-  
+
   text: {
     primary: '#f8fafc',
     secondary: '#cbd5e1',
@@ -122,25 +122,25 @@ const typography = {
     sans: ['Inter', 'system-ui', 'sans-serif'],
     mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
   },
-  
+
   fontSize: {
-    xs: '0.75rem',    // 12px
-    sm: '0.875rem',   // 14px
-    base: '1rem',     // 16px
-    lg: '1.125rem',   // 18px
-    xl: '1.25rem',    // 20px
-    '2xl': '1.5rem',  // 24px
+    xs: '0.75rem', // 12px
+    sm: '0.875rem', // 14px
+    base: '1rem', // 16px
+    lg: '1.125rem', // 18px
+    xl: '1.25rem', // 20px
+    '2xl': '1.5rem', // 24px
     '3xl': '1.875rem', // 30px
     '4xl': '2.25rem', // 36px
   },
-  
+
   fontWeight: {
     normal: 400,
     medium: 500,
     semibold: 600,
     bold: 700,
   },
-  
+
   lineHeight: {
     tight: 1.25,
     normal: 1.5,
@@ -186,13 +186,13 @@ const Text = {
 ```typescript
 // Система отступов
 const spacing = {
-  xs: '0.25rem',   // 4px
-  sm: '0.5rem',    // 8px
-  md: '1rem',      // 16px
-  lg: '1.5rem',    // 24px
-  xl: '2rem',      // 32px
-  '2xl': '3rem',   // 48px
-  '3xl': '4rem',   // 64px
+  xs: '0.25rem', // 4px
+  sm: '0.5rem', // 8px
+  md: '1rem', // 16px
+  lg: '1.5rem', // 24px
+  xl: '2rem', // 32px
+  '2xl': '3rem', // 48px
+  '3xl': '4rem', // 64px
 };
 
 // Breakpoints
@@ -211,7 +211,7 @@ const grid = {
     padding: '0 1rem',
     margin: '0 auto',
   },
-  
+
   columns: 12,
   gutter: '1rem',
 };
@@ -241,22 +241,22 @@ const Button: React.FC<ButtonProps> = ({
   onClick,
 }) => {
   const baseClasses = 'inline-flex items-center justify-center font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
-  
+
   const variantClasses = {
     primary: 'bg-primary-500 text-white hover:bg-primary-600 focus:ring-primary-500',
     secondary: 'bg-gray-100 text-gray-900 hover:bg-gray-200 focus:ring-gray-500',
     outline: 'border border-gray-300 text-gray-700 hover:bg-gray-50 focus:ring-gray-500',
     ghost: 'text-gray-700 hover:bg-gray-100 focus:ring-gray-500',
   };
-  
+
   const sizeClasses = {
     sm: 'px-3 py-1.5 text-sm',
     md: 'px-4 py-2 text-base',
     lg: 'px-6 py-3 text-lg',
   };
-  
+
   const disabledClasses = disabled || loading ? 'opacity-50 cursor-not-allowed' : '';
-  
+
   return (
     <button
       className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses}`}
@@ -378,7 +378,7 @@ const Modal: React.FC<ModalProps> = ({
     <div className="fixed inset-0 z-50 overflow-y-auto">
       <div className="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
         <div className="fixed inset-0 transition-opacity bg-gray-500 bg-opacity-75" onClick={onClose} />
-        
+
         <div className={`inline-block w-full ${sizeClasses[size]} p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-lg`}>
           {title && (
             <div className="flex items-center justify-between mb-4">
@@ -407,7 +407,7 @@ const Modal: React.FC<ModalProps> = ({
 // Главное меню
 const MainNavigation: React.FC = () => {
   const [activeTab, setActiveTab] = useState('chat');
-  
+
   const navigationItems = [
     { id: 'chat', label: 'Chat', icon: MessageSquare, href: '/chat' },
     { id: 'files', label: 'Files', icon: Folder, href: '/files' },
@@ -437,7 +437,7 @@ const MainNavigation: React.FC = () => {
               ))}
             </div>
           </div>
-          
+
           <div className="flex items-center space-x-4">
             <SearchBar />
             <UserMenu />
@@ -478,7 +478,7 @@ const Breadcrumbs: React.FC<{ items: BreadcrumbItem[] }> = ({ items }) => {
 // Боковая панель
 const Sidebar: React.FC = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
-  
+
   return (
     <div className={`bg-gray-50 border-r border-gray-200 transition-all duration-300 ${
       isCollapsed ? 'w-16' : 'w-64'
@@ -494,19 +494,19 @@ const Sidebar: React.FC = () => {
             <ChevronLeft className={`w-5 h-5 transition-transform ${isCollapsed ? 'rotate-180' : ''}`} />
           </button>
         </div>
-        
+
         {/* Search */}
         {!isCollapsed && (
           <div className="p-4 border-b border-gray-200">
             <SearchInput placeholder="Search projects..." />
           </div>
         )}
-        
+
         {/* Projects List */}
         <div className="flex-1 overflow-y-auto">
           <ProjectList isCollapsed={isCollapsed} />
         </div>
-        
+
         {/* Footer */}
         <div className="p-4 border-t border-gray-200">
           <Button variant="primary" size="sm" className="w-full">
@@ -659,7 +659,7 @@ const ResponsiveGrid: React.FC<{ children: React.ReactNode }> = ({ children }) =
 // Мобильное меню
 const MobileMenu: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  
+
   return (
     <>
       <button
@@ -668,7 +668,7 @@ const MobileMenu: React.FC = () => {
       >
         <Menu className="w-6 h-6" />
       </button>
-      
+
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -678,7 +678,7 @@ const MobileMenu: React.FC = () => {
             className="fixed inset-0 z-50 md:hidden"
           >
             <div className="fixed inset-0 bg-gray-600 bg-opacity-75" onClick={() => setIsOpen(false)} />
-            
+
             <motion.div
               initial={{ x: -300 }}
               animate={{ x: 0 }}
@@ -693,7 +693,7 @@ const MobileMenu: React.FC = () => {
                   <X className="h-6 w-6 text-white" />
                 </button>
               </div>
-              
+
               <div className="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
                 <div className="flex-shrink-0 flex items-center px-4">
                   <Logo className="h-8 w-auto" />
@@ -730,29 +730,29 @@ const TouchButton: React.FC<ButtonProps> = (props) => {
 const useSwipe = (onSwipeLeft?: () => void, onSwipeRight?: () => void) => {
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
-  
+
   const minSwipeDistance = 50;
-  
+
   const onTouchStart = (e: React.TouchEvent) => {
     setTouchEnd(null);
     setTouchStart(e.targetTouches[0].clientX);
   };
-  
+
   const onTouchMove = (e: React.TouchEvent) => {
     setTouchEnd(e.targetTouches[0].clientX);
   };
-  
+
   const onTouchEnd = () => {
     if (!touchStart || !touchEnd) return;
-    
+
     const distance = touchStart - touchEnd;
     const isLeftSwipe = distance > minSwipeDistance;
     const isRightSwipe = distance < -minSwipeDistance;
-    
+
     if (isLeftSwipe && onSwipeLeft) onSwipeLeft();
     if (isRightSwipe && onSwipeRight) onSwipeRight();
   };
-  
+
   return {
     onTouchStart,
     onTouchMove,
@@ -770,19 +770,19 @@ const useSwipe = (onSwipeLeft?: () => void, onSwipeRight?: () => void) => {
 const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [theme, setTheme] = useState<'light' | 'dark' | 'system'>('system');
   const [accentColor, setAccentColor] = useState('#3b82f6');
-  
+
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | 'system';
     const savedAccentColor = localStorage.getItem('accentColor');
-    
+
     if (savedTheme) setTheme(savedTheme);
     if (savedAccentColor) setAccentColor(savedAccentColor);
   }, []);
-  
+
   useEffect(() => {
     localStorage.setItem('theme', theme);
     localStorage.setItem('accentColor', accentColor);
-    
+
     // Применение темы
     if (theme === 'system') {
       const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
@@ -790,11 +790,11 @@ const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) =>
     } else {
       document.documentElement.setAttribute('data-theme', theme);
     }
-    
+
     // Применение акцентного цвета
     document.documentElement.style.setProperty('--color-primary', accentColor);
   }, [theme, accentColor]);
-  
+
   return (
     <ThemeContext.Provider value={{ theme, setTheme, accentColor, setAccentColor }}>
       {children}
@@ -805,7 +805,7 @@ const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) =>
 // Theme selector
 const ThemeSelector: React.FC = () => {
   const { theme, setTheme, accentColor, setAccentColor } = useTheme();
-  
+
   const accentColors = [
     '#3b82f6', // Blue
     '#10b981', // Green
@@ -814,7 +814,7 @@ const ThemeSelector: React.FC = () => {
     '#8b5cf6', // Purple
     '#06b6d4', // Cyan
   ];
-  
+
   return (
     <div className="space-y-4">
       <div>
@@ -835,7 +835,7 @@ const ThemeSelector: React.FC = () => {
           ))}
         </div>
       </div>
-      
+
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-2">Accent Color</label>
         <div className="flex space-x-2">
@@ -886,19 +886,22 @@ const useUserPreferences = () => {
       git: true,
     },
   });
-  
-  const updatePreferences = useCallback((updates: Partial<UserPreferences>) => {
-    setPreferences(prev => ({ ...prev, ...updates }));
-    localStorage.setItem('userPreferences', JSON.stringify({ ...preferences, ...updates }));
-  }, [preferences]);
-  
+
+  const updatePreferences = useCallback(
+    (updates: Partial<UserPreferences>) => {
+      setPreferences(prev => ({ ...prev, ...updates }));
+      localStorage.setItem('userPreferences', JSON.stringify({ ...preferences, ...updates }));
+    },
+    [preferences]
+  );
+
   useEffect(() => {
     const saved = localStorage.getItem('userPreferences');
     if (saved) {
       setPreferences(JSON.parse(saved));
     }
   }, []);
-  
+
   return { preferences, updatePreferences };
 };
 ```

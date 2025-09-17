@@ -16,7 +16,6 @@
 
 ## 📦 Компоненты
 
-
 ### file-manager-wukORjs2J9p
 
 - **Автор**: eagurin
@@ -38,22 +37,29 @@ interface filemanagerwukORjs2J9pProps {
   // TODO: Определить пропсы компонента
 }
 
-export const filemanagerwukORjs2J9p: React.FC<filemanagerwukORjs2J9pProps> = (props) => {
+export const filemanagerwukORjs2J9p: React.FC<filemanagerwukORjs2J9pProps> = props => {
   return (
     <div className="file-manager-wukORjs2J9p">
       <h2>file-manager-wukORjs2J9p</h2>
       <p>Компонент file-manager-wukORjs2J9p из v0.app</p>
       <p>Автор: eagurin</p>
-      <p>URL: <a href="https://v0.app/chat/file-manager-wukORjs2J9p" target="_blank" rel="noopener noreferrer">https://v0.app/chat/file-manager-wukORjs2J9p</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/chat/file-manager-wukORjs2J9p"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/chat/file-manager-wukORjs2J9p
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default filemanagerwukORjs2J9p;
-
 ```
-
 
 ### file-manager-hN0nNvAchzi
 
@@ -76,22 +82,29 @@ interface filemanagerhN0nNvAchziProps {
   // TODO: Определить пропсы компонента
 }
 
-export const filemanagerhN0nNvAchzi: React.FC<filemanagerhN0nNvAchziProps> = (props) => {
+export const filemanagerhN0nNvAchzi: React.FC<filemanagerhN0nNvAchziProps> = props => {
   return (
     <div className="file-manager-hN0nNvAchzi">
       <h2>file-manager-hN0nNvAchzi</h2>
       <p>Компонент file-manager-hN0nNvAchzi из v0.app</p>
       <p>Автор: michaelvanrantwijk-4113</p>
-      <p>URL: <a href="https://v0.app/community/file-manager-hN0nNvAchzi" target="_blank" rel="noopener noreferrer">https://v0.app/community/file-manager-hN0nNvAchzi</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/community/file-manager-hN0nNvAchzi"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/community/file-manager-hN0nNvAchzi
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default filemanagerhN0nNvAchzi;
-
 ```
-
 
 ### ai-chat-interface-6VLiqkGu5vw
 
@@ -114,22 +127,29 @@ interface aichatinterface6VLiqkGu5vwProps {
   // TODO: Определить пропсы компонента
 }
 
-export const aichatinterface6VLiqkGu5vw: React.FC<aichatinterface6VLiqkGu5vwProps> = (props) => {
+export const aichatinterface6VLiqkGu5vw: React.FC<aichatinterface6VLiqkGu5vwProps> = props => {
   return (
     <div className="ai-chat-interface-6VLiqkGu5vw">
       <h2>ai-chat-interface-6VLiqkGu5vw</h2>
       <p>Компонент ai-chat-interface-6VLiqkGu5vw из v0.app</p>
       <p>Автор: ahmedsenousy01</p>
-      <p>URL: <a href="https://v0.app/community/ai-chat-interface-6VLiqkGu5vw" target="_blank" rel="noopener noreferrer">https://v0.app/community/ai-chat-interface-6VLiqkGu5vw</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/community/ai-chat-interface-6VLiqkGu5vw"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/community/ai-chat-interface-6VLiqkGu5vw
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default aichatinterface6VLiqkGu5vw;
-
 ```
-
 
 ### integrations-page-7HOUCTcoR5n
 
@@ -152,22 +172,29 @@ interface integrationspage7HOUCTcoR5nProps {
   // TODO: Определить пропсы компонента
 }
 
-export const integrationspage7HOUCTcoR5n: React.FC<integrationspage7HOUCTcoR5nProps> = (props) => {
+export const integrationspage7HOUCTcoR5n: React.FC<integrationspage7HOUCTcoR5nProps> = props => {
   return (
     <div className="integrations-page-7HOUCTcoR5n">
       <h2>integrations-page-7HOUCTcoR5n</h2>
       <p>Компонент integrations-page-7HOUCTcoR5n из v0.app</p>
       <p>Автор: babureddys003-5877</p>
-      <p>URL: <a href="https://v0.app/community/integrations-page-7HOUCTcoR5n" target="_blank" rel="noopener noreferrer">https://v0.app/community/integrations-page-7HOUCTcoR5n</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/community/integrations-page-7HOUCTcoR5n"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/community/integrations-page-7HOUCTcoR5n
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default integrationspage7HOUCTcoR5n;
-
 ```
-
 
 ### sidebar-layout-ybLyeN1sesS
 
@@ -190,22 +217,29 @@ interface sidebarlayoutybLyeN1sesSProps {
   // TODO: Определить пропсы компонента
 }
 
-export const sidebarlayoutybLyeN1sesS: React.FC<sidebarlayoutybLyeN1sesSProps> = (props) => {
+export const sidebarlayoutybLyeN1sesS: React.FC<sidebarlayoutybLyeN1sesSProps> = props => {
   return (
     <div className="sidebar-layout-ybLyeN1sesS">
       <h2>sidebar-layout-ybLyeN1sesS</h2>
       <p>Компонент sidebar-layout-ybLyeN1sesS из v0.app</p>
       <p>Автор: unknown</p>
-      <p>URL: <a href="https://v0.app/community/sidebar-layout-ybLyeN1sesS" target="_blank" rel="noopener noreferrer">https://v0.app/community/sidebar-layout-ybLyeN1sesS</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/community/sidebar-layout-ybLyeN1sesS"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/community/sidebar-layout-ybLyeN1sesS
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default sidebarlayoutybLyeN1sesS;
-
 ```
-
 
 ### action-search-bar-S3nMPSmpQzk
 
@@ -228,22 +262,29 @@ interface actionsearchbarS3nMPSmpQzkProps {
   // TODO: Определить пропсы компонента
 }
 
-export const actionsearchbarS3nMPSmpQzk: React.FC<actionsearchbarS3nMPSmpQzkProps> = (props) => {
+export const actionsearchbarS3nMPSmpQzk: React.FC<actionsearchbarS3nMPSmpQzkProps> = props => {
   return (
     <div className="action-search-bar-S3nMPSmpQzk">
       <h2>action-search-bar-S3nMPSmpQzk</h2>
       <p>Компонент action-search-bar-S3nMPSmpQzk из v0.app</p>
       <p>Автор: unknown</p>
-      <p>URL: <a href="https://v0.app/community/action-search-bar-S3nMPSmpQzk" target="_blank" rel="noopener noreferrer">https://v0.app/community/action-search-bar-S3nMPSmpQzk</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/community/action-search-bar-S3nMPSmpQzk"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/community/action-search-bar-S3nMPSmpQzk
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default actionsearchbarS3nMPSmpQzk;
-
 ```
-
 
 ### ai-card-generation-Tpxvlz16QiJ
 
@@ -266,22 +307,29 @@ interface aicardgenerationTpxvlz16QiJProps {
   // TODO: Определить пропсы компонента
 }
 
-export const aicardgenerationTpxvlz16QiJ: React.FC<aicardgenerationTpxvlz16QiJProps> = (props) => {
+export const aicardgenerationTpxvlz16QiJ: React.FC<aicardgenerationTpxvlz16QiJProps> = props => {
   return (
     <div className="ai-card-generation-Tpxvlz16QiJ">
       <h2>ai-card-generation-Tpxvlz16QiJ</h2>
       <p>Компонент ai-card-generation-Tpxvlz16QiJ из v0.app</p>
       <p>Автор: unknown</p>
-      <p>URL: <a href="https://v0.app/community/ai-card-generation-Tpxvlz16QiJ" target="_blank" rel="noopener noreferrer">https://v0.app/community/ai-card-generation-Tpxvlz16QiJ</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/community/ai-card-generation-Tpxvlz16QiJ"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/community/ai-card-generation-Tpxvlz16QiJ
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default aicardgenerationTpxvlz16QiJ;
-
 ```
-
 
 ### vercel-tabs-BT27p0aGPsa
 
@@ -304,22 +352,29 @@ interface verceltabsBT27p0aGPsaProps {
   // TODO: Определить пропсы компонента
 }
 
-export const verceltabsBT27p0aGPsa: React.FC<verceltabsBT27p0aGPsaProps> = (props) => {
+export const verceltabsBT27p0aGPsa: React.FC<verceltabsBT27p0aGPsaProps> = props => {
   return (
     <div className="vercel-tabs-BT27p0aGPsa">
       <h2>vercel-tabs-BT27p0aGPsa</h2>
       <p>Компонент vercel-tabs-BT27p0aGPsa из v0.app</p>
       <p>Автор: unknown</p>
-      <p>URL: <a href="https://v0.app/community/vercel-tabs-BT27p0aGPsa" target="_blank" rel="noopener noreferrer">https://v0.app/community/vercel-tabs-BT27p0aGPsa</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/community/vercel-tabs-BT27p0aGPsa"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/community/vercel-tabs-BT27p0aGPsa
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default verceltabsBT27p0aGPsa;
-
 ```
-
 
 ### animated-beam-voQije6wyja
 
@@ -342,22 +397,29 @@ interface animatedbeamvoQije6wyjaProps {
   // TODO: Определить пропсы компонента
 }
 
-export const animatedbeamvoQije6wyja: React.FC<animatedbeamvoQije6wyjaProps> = (props) => {
+export const animatedbeamvoQije6wyja: React.FC<animatedbeamvoQije6wyjaProps> = props => {
   return (
     <div className="animated-beam-voQije6wyja">
       <h2>animated-beam-voQije6wyja</h2>
       <p>Компонент animated-beam-voQije6wyja из v0.app</p>
       <p>Автор: unknown</p>
-      <p>URL: <a href="https://v0.app/community/animated-beam-voQije6wyja" target="_blank" rel="noopener noreferrer">https://v0.app/community/animated-beam-voQije6wyja</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/community/animated-beam-voQije6wyja"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/community/animated-beam-voQije6wyja
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default animatedbeamvoQije6wyja;
-
 ```
-
 
 ### image-to-ascii-0UE1nczWzbu
 
@@ -380,22 +442,29 @@ interface imagetoascii0UE1nczWzbuProps {
   // TODO: Определить пропсы компонента
 }
 
-export const imagetoascii0UE1nczWzbu: React.FC<imagetoascii0UE1nczWzbuProps> = (props) => {
+export const imagetoascii0UE1nczWzbu: React.FC<imagetoascii0UE1nczWzbuProps> = props => {
   return (
     <div className="image-to-ascii-0UE1nczWzbu">
       <h2>image-to-ascii-0UE1nczWzbu</h2>
       <p>Компонент image-to-ascii-0UE1nczWzbu из v0.app</p>
       <p>Автор: unknown</p>
-      <p>URL: <a href="https://v0.app/community/image-to-ascii-0UE1nczWzbu" target="_blank" rel="noopener noreferrer">https://v0.app/community/image-to-ascii-0UE1nczWzbu</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/community/image-to-ascii-0UE1nczWzbu"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/community/image-to-ascii-0UE1nczWzbu
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default imagetoascii0UE1nczWzbu;
-
 ```
-
 
 ### documentation-starter-ov3ApgfOdx5
 
@@ -418,22 +487,31 @@ interface documentationstarterov3ApgfOdx5Props {
   // TODO: Определить пропсы компонента
 }
 
-export const documentationstarterov3ApgfOdx5: React.FC<documentationstarterov3ApgfOdx5Props> = (props) => {
+export const documentationstarterov3ApgfOdx5: React.FC<
+  documentationstarterov3ApgfOdx5Props
+> = props => {
   return (
     <div className="documentation-starter-ov3ApgfOdx5">
       <h2>documentation-starter-ov3ApgfOdx5</h2>
       <p>Компонент documentation-starter-ov3ApgfOdx5 из v0.app</p>
       <p>Автор: unknown</p>
-      <p>URL: <a href="https://v0.app/community/documentation-starter-ov3ApgfOdx5" target="_blank" rel="noopener noreferrer">https://v0.app/community/documentation-starter-ov3ApgfOdx5</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/community/documentation-starter-ov3ApgfOdx5"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/community/documentation-starter-ov3ApgfOdx5
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default documentationstarterov3ApgfOdx5;
-
 ```
-
 
 ### admin-dashboard-yBomF3O9Yu3
 
@@ -456,22 +534,29 @@ interface admindashboardyBomF3O9Yu3Props {
   // TODO: Определить пропсы компонента
 }
 
-export const admindashboardyBomF3O9Yu3: React.FC<admindashboardyBomF3O9Yu3Props> = (props) => {
+export const admindashboardyBomF3O9Yu3: React.FC<admindashboardyBomF3O9Yu3Props> = props => {
   return (
     <div className="admin-dashboard-yBomF3O9Yu3">
       <h2>admin-dashboard-yBomF3O9Yu3</h2>
       <p>Компонент admin-dashboard-yBomF3O9Yu3 из v0.app</p>
       <p>Автор: unknown</p>
-      <p>URL: <a href="https://v0.app/community/admin-dashboard-yBomF3O9Yu3" target="_blank" rel="noopener noreferrer">https://v0.app/community/admin-dashboard-yBomF3O9Yu3</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/community/admin-dashboard-yBomF3O9Yu3"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/community/admin-dashboard-yBomF3O9Yu3
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default admindashboardyBomF3O9Yu3;
-
 ```
-
 
 ### chat-ui-with-vibration-xf3RmrkKlxc
 
@@ -494,22 +579,31 @@ interface chatuiwithvibrationxf3RmrkKlxcProps {
   // TODO: Определить пропсы компонента
 }
 
-export const chatuiwithvibrationxf3RmrkKlxc: React.FC<chatuiwithvibrationxf3RmrkKlxcProps> = (props) => {
+export const chatuiwithvibrationxf3RmrkKlxc: React.FC<
+  chatuiwithvibrationxf3RmrkKlxcProps
+> = props => {
   return (
     <div className="chat-ui-with-vibration-xf3RmrkKlxc">
       <h2>chat-ui-with-vibration-xf3RmrkKlxc</h2>
       <p>Компонент chat-ui-with-vibration-xf3RmrkKlxc из v0.app</p>
       <p>Автор: unknown</p>
-      <p>URL: <a href="https://v0.app/community/chat-ui-with-vibration-xf3RmrkKlxc" target="_blank" rel="noopener noreferrer">https://v0.app/community/chat-ui-with-vibration-xf3RmrkKlxc</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/community/chat-ui-with-vibration-xf3RmrkKlxc"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/community/chat-ui-with-vibration-xf3RmrkKlxc
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default chatuiwithvibrationxf3RmrkKlxc;
-
 ```
-
 
 ### chat-ui-h4Ga3LeTpbl
 
@@ -532,22 +626,29 @@ interface chatuih4Ga3LeTpblProps {
   // TODO: Определить пропсы компонента
 }
 
-export const chatuih4Ga3LeTpbl: React.FC<chatuih4Ga3LeTpblProps> = (props) => {
+export const chatuih4Ga3LeTpbl: React.FC<chatuih4Ga3LeTpblProps> = props => {
   return (
     <div className="chat-ui-h4Ga3LeTpbl">
       <h2>chat-ui-h4Ga3LeTpbl</h2>
       <p>Компонент chat-ui-h4Ga3LeTpbl из v0.app</p>
       <p>Автор: unknown</p>
-      <p>URL: <a href="https://v0.app/community/chat-ui-h4Ga3LeTpbl" target="_blank" rel="noopener noreferrer">https://v0.app/community/chat-ui-h4Ga3LeTpbl</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/community/chat-ui-h4Ga3LeTpbl"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/community/chat-ui-h4Ga3LeTpbl
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default chatuih4Ga3LeTpbl;
-
 ```
-
 
 ### eleven-labs-conversational-ai-starter-5TN93pl3bRS
 
@@ -570,22 +671,31 @@ interface elevenlabsconversationalaistarter5TN93pl3bRSProps {
   // TODO: Определить пропсы компонента
 }
 
-export const elevenlabsconversationalaistarter5TN93pl3bRS: React.FC<elevenlabsconversationalaistarter5TN93pl3bRSProps> = (props) => {
+export const elevenlabsconversationalaistarter5TN93pl3bRS: React.FC<
+  elevenlabsconversationalaistarter5TN93pl3bRSProps
+> = props => {
   return (
     <div className="eleven-labs-conversational-ai-starter-5TN93pl3bRS">
       <h2>eleven-labs-conversational-ai-starter-5TN93pl3bRS</h2>
       <p>Компонент eleven-labs-conversational-ai-starter-5TN93pl3bRS из v0.app</p>
       <p>Автор: unknown</p>
-      <p>URL: <a href="https://v0.app/community/eleven-labs-conversational-ai-starter-5TN93pl3bRS" target="_blank" rel="noopener noreferrer">https://v0.app/community/eleven-labs-conversational-ai-starter-5TN93pl3bRS</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/community/eleven-labs-conversational-ai-starter-5TN93pl3bRS"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/community/eleven-labs-conversational-ai-starter-5TN93pl3bRS
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default elevenlabsconversationalaistarter5TN93pl3bRS;
-
 ```
-
 
 ### light-dark-image-transition-0WSCfiIps92
 
@@ -608,22 +718,31 @@ interface lightdarkimagetransition0WSCfiIps92Props {
   // TODO: Определить пропсы компонента
 }
 
-export const lightdarkimagetransition0WSCfiIps92: React.FC<lightdarkimagetransition0WSCfiIps92Props> = (props) => {
+export const lightdarkimagetransition0WSCfiIps92: React.FC<
+  lightdarkimagetransition0WSCfiIps92Props
+> = props => {
   return (
     <div className="light-dark-image-transition-0WSCfiIps92">
       <h2>light-dark-image-transition-0WSCfiIps92</h2>
       <p>Компонент light-dark-image-transition-0WSCfiIps92 из v0.app</p>
       <p>Автор: unknown</p>
-      <p>URL: <a href="https://v0.app/community/light-dark-image-transition-0WSCfiIps92" target="_blank" rel="noopener noreferrer">https://v0.app/community/light-dark-image-transition-0WSCfiIps92</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/community/light-dark-image-transition-0WSCfiIps92"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/community/light-dark-image-transition-0WSCfiIps92
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default lightdarkimagetransition0WSCfiIps92;
-
 ```
-
 
 ### dynamic-table-hJCDzsfPzdV
 
@@ -646,22 +765,29 @@ interface dynamictablehJCDzsfPzdVProps {
   // TODO: Определить пропсы компонента
 }
 
-export const dynamictablehJCDzsfPzdV: React.FC<dynamictablehJCDzsfPzdVProps> = (props) => {
+export const dynamictablehJCDzsfPzdV: React.FC<dynamictablehJCDzsfPzdVProps> = props => {
   return (
     <div className="dynamic-table-hJCDzsfPzdV">
       <h2>dynamic-table-hJCDzsfPzdV</h2>
       <p>Компонент dynamic-table-hJCDzsfPzdV из v0.app</p>
       <p>Автор: unknown</p>
-      <p>URL: <a href="https://v0.app/community/dynamic-table-hJCDzsfPzdV" target="_blank" rel="noopener noreferrer">https://v0.app/community/dynamic-table-hJCDzsfPzdV</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/community/dynamic-table-hJCDzsfPzdV"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/community/dynamic-table-hJCDzsfPzdV
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default dynamictablehJCDzsfPzdV;
-
 ```
-
 
 ### drageasy-drag-and-drop-dashboard-mLIx6xWQwmP
 
@@ -684,22 +810,31 @@ interface drageasydraganddropdashboardmLIx6xWQwmPProps {
   // TODO: Определить пропсы компонента
 }
 
-export const drageasydraganddropdashboardmLIx6xWQwmP: React.FC<drageasydraganddropdashboardmLIx6xWQwmPProps> = (props) => {
+export const drageasydraganddropdashboardmLIx6xWQwmP: React.FC<
+  drageasydraganddropdashboardmLIx6xWQwmPProps
+> = props => {
   return (
     <div className="drageasy-drag-and-drop-dashboard-mLIx6xWQwmP">
       <h2>drageasy-drag-and-drop-dashboard-mLIx6xWQwmP</h2>
       <p>Компонент drageasy-drag-and-drop-dashboard-mLIx6xWQwmP из v0.app</p>
       <p>Автор: unknown</p>
-      <p>URL: <a href="https://v0.app/community/drageasy-drag-and-drop-dashboard-mLIx6xWQwmP" target="_blank" rel="noopener noreferrer">https://v0.app/community/drageasy-drag-and-drop-dashboard-mLIx6xWQwmP</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/community/drageasy-drag-and-drop-dashboard-mLIx6xWQwmP"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/community/drageasy-drag-and-drop-dashboard-mLIx6xWQwmP
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default drageasydraganddropdashboardmLIx6xWQwmP;
-
 ```
-
 
 ### login-03-LtQ7cIPj9o5
 
@@ -722,22 +857,29 @@ interface login03LtQ7cIPj9o5Props {
   // TODO: Определить пропсы компонента
 }
 
-export const login03LtQ7cIPj9o5: React.FC<login03LtQ7cIPj9o5Props> = (props) => {
+export const login03LtQ7cIPj9o5: React.FC<login03LtQ7cIPj9o5Props> = props => {
   return (
     <div className="login-03-LtQ7cIPj9o5">
       <h2>login-03-LtQ7cIPj9o5</h2>
       <p>Компонент login-03-LtQ7cIPj9o5 из v0.app</p>
       <p>Автор: unknown</p>
-      <p>URL: <a href="https://v0.app/community/login-03-LtQ7cIPj9o5" target="_blank" rel="noopener noreferrer">https://v0.app/community/login-03-LtQ7cIPj9o5</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/community/login-03-LtQ7cIPj9o5"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/community/login-03-LtQ7cIPj9o5
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default login03LtQ7cIPj9o5;
-
 ```
-
 
 ### sidebar-in-dialog-WzUz8z8OdKf
 
@@ -760,22 +902,29 @@ interface sidebarindialogWzUz8z8OdKfProps {
   // TODO: Определить пропсы компонента
 }
 
-export const sidebarindialogWzUz8z8OdKf: React.FC<sidebarindialogWzUz8z8OdKfProps> = (props) => {
+export const sidebarindialogWzUz8z8OdKf: React.FC<sidebarindialogWzUz8z8OdKfProps> = props => {
   return (
     <div className="sidebar-in-dialog-WzUz8z8OdKf">
       <h2>sidebar-in-dialog-WzUz8z8OdKf</h2>
       <p>Компонент sidebar-in-dialog-WzUz8z8OdKf из v0.app</p>
       <p>Автор: unknown</p>
-      <p>URL: <a href="https://v0.app/community/sidebar-in-dialog-WzUz8z8OdKf" target="_blank" rel="noopener noreferrer">https://v0.app/community/sidebar-in-dialog-WzUz8z8OdKf</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/community/sidebar-in-dialog-WzUz8z8OdKf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/community/sidebar-in-dialog-WzUz8z8OdKf
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default sidebarindialogWzUz8z8OdKf;
-
 ```
-
 
 ### login-02-lgh5A223SiR
 
@@ -798,22 +947,29 @@ interface login02lgh5A223SiRProps {
   // TODO: Определить пропсы компонента
 }
 
-export const login02lgh5A223SiR: React.FC<login02lgh5A223SiRProps> = (props) => {
+export const login02lgh5A223SiR: React.FC<login02lgh5A223SiRProps> = props => {
   return (
     <div className="login-02-lgh5A223SiR">
       <h2>login-02-lgh5A223SiR</h2>
       <p>Компонент login-02-lgh5A223SiR из v0.app</p>
       <p>Автор: unknown</p>
-      <p>URL: <a href="https://v0.app/community/login-02-lgh5A223SiR" target="_blank" rel="noopener noreferrer">https://v0.app/community/login-02-lgh5A223SiR</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/community/login-02-lgh5A223SiR"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/community/login-02-lgh5A223SiR
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default login02lgh5A223SiR;
-
 ```
-
 
 ### file-tree-sidebar-NBfcFIKai4T
 
@@ -836,22 +992,29 @@ interface filetreesidebarNBfcFIKai4TProps {
   // TODO: Определить пропсы компонента
 }
 
-export const filetreesidebarNBfcFIKai4T: React.FC<filetreesidebarNBfcFIKai4TProps> = (props) => {
+export const filetreesidebarNBfcFIKai4T: React.FC<filetreesidebarNBfcFIKai4TProps> = props => {
   return (
     <div className="file-tree-sidebar-NBfcFIKai4T">
       <h2>file-tree-sidebar-NBfcFIKai4T</h2>
       <p>Компонент file-tree-sidebar-NBfcFIKai4T из v0.app</p>
       <p>Автор: unknown</p>
-      <p>URL: <a href="https://v0.app/community/file-tree-sidebar-NBfcFIKai4T" target="_blank" rel="noopener noreferrer">https://v0.app/community/file-tree-sidebar-NBfcFIKai4T</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/community/file-tree-sidebar-NBfcFIKai4T"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/community/file-tree-sidebar-NBfcFIKai4T
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default filetreesidebarNBfcFIKai4T;
-
 ```
-
 
 ### team-member-invites-BtbvdBJqRve
 
@@ -874,22 +1037,29 @@ interface teammemberinvitesBtbvdBJqRveProps {
   // TODO: Определить пропсы компонента
 }
 
-export const teammemberinvitesBtbvdBJqRve: React.FC<teammemberinvitesBtbvdBJqRveProps> = (props) => {
+export const teammemberinvitesBtbvdBJqRve: React.FC<teammemberinvitesBtbvdBJqRveProps> = props => {
   return (
     <div className="team-member-invites-BtbvdBJqRve">
       <h2>team-member-invites-BtbvdBJqRve</h2>
       <p>Компонент team-member-invites-BtbvdBJqRve из v0.app</p>
       <p>Автор: unknown</p>
-      <p>URL: <a href="https://v0.app/community/team-member-invites-BtbvdBJqRve" target="_blank" rel="noopener noreferrer">https://v0.app/community/team-member-invites-BtbvdBJqRve</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/community/team-member-invites-BtbvdBJqRve"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/community/team-member-invites-BtbvdBJqRve
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default teammemberinvitesBtbvdBJqRve;
-
 ```
-
 
 ### eleven-labs-music-starter-xuCjYtmbQri
 
@@ -912,22 +1082,31 @@ interface elevenlabsmusicstarterxuCjYtmbQriProps {
   // TODO: Определить пропсы компонента
 }
 
-export const elevenlabsmusicstarterxuCjYtmbQri: React.FC<elevenlabsmusicstarterxuCjYtmbQriProps> = (props) => {
+export const elevenlabsmusicstarterxuCjYtmbQri: React.FC<
+  elevenlabsmusicstarterxuCjYtmbQriProps
+> = props => {
   return (
     <div className="eleven-labs-music-starter-xuCjYtmbQri">
       <h2>eleven-labs-music-starter-xuCjYtmbQri</h2>
       <p>Компонент eleven-labs-music-starter-xuCjYtmbQri из v0.app</p>
       <p>Автор: unknown</p>
-      <p>URL: <a href="https://v0.app/community/eleven-labs-music-starter-xuCjYtmbQri" target="_blank" rel="noopener noreferrer">https://v0.app/community/eleven-labs-music-starter-xuCjYtmbQri</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/community/eleven-labs-music-starter-xuCjYtmbQri"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/community/eleven-labs-music-starter-xuCjYtmbQri
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default elevenlabsmusicstarterxuCjYtmbQri;
-
 ```
-
 
 ### eleven-labs-agents-starter-5TN93pl3bRS
 
@@ -950,22 +1129,31 @@ interface elevenlabsagentsstarter5TN93pl3bRSProps {
   // TODO: Определить пропсы компонента
 }
 
-export const elevenlabsagentsstarter5TN93pl3bRS: React.FC<elevenlabsagentsstarter5TN93pl3bRSProps> = (props) => {
+export const elevenlabsagentsstarter5TN93pl3bRS: React.FC<
+  elevenlabsagentsstarter5TN93pl3bRSProps
+> = props => {
   return (
     <div className="eleven-labs-agents-starter-5TN93pl3bRS">
       <h2>eleven-labs-agents-starter-5TN93pl3bRS</h2>
       <p>Компонент eleven-labs-agents-starter-5TN93pl3bRS из v0.app</p>
       <p>Автор: unknown</p>
-      <p>URL: <a href="https://v0.app/community/eleven-labs-agents-starter-5TN93pl3bRS" target="_blank" rel="noopener noreferrer">https://v0.app/community/eleven-labs-agents-starter-5TN93pl3bRS</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/community/eleven-labs-agents-starter-5TN93pl3bRS"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/community/eleven-labs-agents-starter-5TN93pl3bRS
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default elevenlabsagentsstarter5TN93pl3bRS;
-
 ```
-
 
 ### eleven-labs-v3-podcast-generator-9zvVUBtxy6i
 
@@ -988,22 +1176,31 @@ interface elevenlabsv3podcastgenerator9zvVUBtxy6iProps {
   // TODO: Определить пропсы компонента
 }
 
-export const elevenlabsv3podcastgenerator9zvVUBtxy6i: React.FC<elevenlabsv3podcastgenerator9zvVUBtxy6iProps> = (props) => {
+export const elevenlabsv3podcastgenerator9zvVUBtxy6i: React.FC<
+  elevenlabsv3podcastgenerator9zvVUBtxy6iProps
+> = props => {
   return (
     <div className="eleven-labs-v3-podcast-generator-9zvVUBtxy6i">
       <h2>eleven-labs-v3-podcast-generator-9zvVUBtxy6i</h2>
       <p>Компонент eleven-labs-v3-podcast-generator-9zvVUBtxy6i из v0.app</p>
       <p>Автор: unknown</p>
-      <p>URL: <a href="https://v0.app/community/eleven-labs-v3-podcast-generator-9zvVUBtxy6i" target="_blank" rel="noopener noreferrer">https://v0.app/community/eleven-labs-v3-podcast-generator-9zvVUBtxy6i</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/community/eleven-labs-v3-podcast-generator-9zvVUBtxy6i"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/community/eleven-labs-v3-podcast-generator-9zvVUBtxy6i
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default elevenlabsv3podcastgenerator9zvVUBtxy6i;
-
 ```
-
 
 ### next-js-doc-like-file-tree-BNbIj6SOUTQ
 
@@ -1026,22 +1223,31 @@ interface nextjsdoclikefiletreeBNbIj6SOUTQProps {
   // TODO: Определить пропсы компонента
 }
 
-export const nextjsdoclikefiletreeBNbIj6SOUTQ: React.FC<nextjsdoclikefiletreeBNbIj6SOUTQProps> = (props) => {
+export const nextjsdoclikefiletreeBNbIj6SOUTQ: React.FC<
+  nextjsdoclikefiletreeBNbIj6SOUTQProps
+> = props => {
   return (
     <div className="next-js-doc-like-file-tree-BNbIj6SOUTQ">
       <h2>next-js-doc-like-file-tree-BNbIj6SOUTQ</h2>
       <p>Компонент next-js-doc-like-file-tree-BNbIj6SOUTQ из v0.app</p>
       <p>Автор: unknown</p>
-      <p>URL: <a href="https://v0.app/chat/next-js-doc-like-file-tree-BNbIj6SOUTQ" target="_blank" rel="noopener noreferrer">https://v0.app/chat/next-js-doc-like-file-tree-BNbIj6SOUTQ</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/chat/next-js-doc-like-file-tree-BNbIj6SOUTQ"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/chat/next-js-doc-like-file-tree-BNbIj6SOUTQ
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default nextjsdoclikefiletreeBNbIj6SOUTQ;
-
 ```
-
 
 ### glow-menu-component-XqrIezRilBR
 
@@ -1064,22 +1270,29 @@ interface glowmenucomponentXqrIezRilBRProps {
   // TODO: Определить пропсы компонента
 }
 
-export const glowmenucomponentXqrIezRilBR: React.FC<glowmenucomponentXqrIezRilBRProps> = (props) => {
+export const glowmenucomponentXqrIezRilBR: React.FC<glowmenucomponentXqrIezRilBRProps> = props => {
   return (
     <div className="glow-menu-component-XqrIezRilBR">
       <h2>glow-menu-component-XqrIezRilBR</h2>
       <p>Компонент glow-menu-component-XqrIezRilBR из v0.app</p>
       <p>Автор: unknown</p>
-      <p>URL: <a href="https://v0.app/community/glow-menu-component-XqrIezRilBR" target="_blank" rel="noopener noreferrer">https://v0.app/community/glow-menu-component-XqrIezRilBR</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/community/glow-menu-component-XqrIezRilBR"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/community/glow-menu-component-XqrIezRilBR
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default glowmenucomponentXqrIezRilBR;
-
 ```
-
 
 ### fluid-dropdown-zWgCGYGZIcx
 
@@ -1102,22 +1315,29 @@ interface fluiddropdownzWgCGYGZIcxProps {
   // TODO: Определить пропсы компонента
 }
 
-export const fluiddropdownzWgCGYGZIcx: React.FC<fluiddropdownzWgCGYGZIcxProps> = (props) => {
+export const fluiddropdownzWgCGYGZIcx: React.FC<fluiddropdownzWgCGYGZIcxProps> = props => {
   return (
     <div className="fluid-dropdown-zWgCGYGZIcx">
       <h2>fluid-dropdown-zWgCGYGZIcx</h2>
       <p>Компонент fluid-dropdown-zWgCGYGZIcx из v0.app</p>
       <p>Автор: unknown</p>
-      <p>URL: <a href="https://v0.app/community/fluid-dropdown-zWgCGYGZIcx" target="_blank" rel="noopener noreferrer">https://v0.app/community/fluid-dropdown-zWgCGYGZIcx</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/community/fluid-dropdown-zWgCGYGZIcx"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/community/fluid-dropdown-zWgCGYGZIcx
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default fluiddropdownzWgCGYGZIcx;
-
 ```
-
 
 ### toast-fLjYRXrijvp
 
@@ -1140,22 +1360,29 @@ interface toastfLjYRXrijvpProps {
   // TODO: Определить пропсы компонента
 }
 
-export const toastfLjYRXrijvp: React.FC<toastfLjYRXrijvpProps> = (props) => {
+export const toastfLjYRXrijvp: React.FC<toastfLjYRXrijvpProps> = props => {
   return (
     <div className="toast-fLjYRXrijvp">
       <h2>toast-fLjYRXrijvp</h2>
       <p>Компонент toast-fLjYRXrijvp из v0.app</p>
       <p>Автор: unknown</p>
-      <p>URL: <a href="https://v0.app/community/toast-fLjYRXrijvp" target="_blank" rel="noopener noreferrer">https://v0.app/community/toast-fLjYRXrijvp</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/community/toast-fLjYRXrijvp"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/community/toast-fLjYRXrijvp
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default toastfLjYRXrijvp;
-
 ```
-
 
 ### bento-grid-8QW53cSzCxp
 
@@ -1178,22 +1405,29 @@ interface bentogrid8QW53cSzCxpProps {
   // TODO: Определить пропсы компонента
 }
 
-export const bentogrid8QW53cSzCxp: React.FC<bentogrid8QW53cSzCxpProps> = (props) => {
+export const bentogrid8QW53cSzCxp: React.FC<bentogrid8QW53cSzCxpProps> = props => {
   return (
     <div className="bento-grid-8QW53cSzCxp">
       <h2>bento-grid-8QW53cSzCxp</h2>
       <p>Компонент bento-grid-8QW53cSzCxp из v0.app</p>
       <p>Автор: unknown</p>
-      <p>URL: <a href="https://v0.app/community/bento-grid-8QW53cSzCxp" target="_blank" rel="noopener noreferrer">https://v0.app/community/bento-grid-8QW53cSzCxp</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/community/bento-grid-8QW53cSzCxp"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/community/bento-grid-8QW53cSzCxp
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default bentogrid8QW53cSzCxp;
-
 ```
-
 
 ### chat-ui-with-vibration-Enjda8qtpct
 
@@ -1216,22 +1450,31 @@ interface chatuiwithvibrationEnjda8qtpctProps {
   // TODO: Определить пропсы компонента
 }
 
-export const chatuiwithvibrationEnjda8qtpct: React.FC<chatuiwithvibrationEnjda8qtpctProps> = (props) => {
+export const chatuiwithvibrationEnjda8qtpct: React.FC<
+  chatuiwithvibrationEnjda8qtpctProps
+> = props => {
   return (
     <div className="chat-ui-with-vibration-Enjda8qtpct">
       <h2>chat-ui-with-vibration-Enjda8qtpct</h2>
       <p>Компонент chat-ui-with-vibration-Enjda8qtpct из v0.app</p>
       <p>Автор: unknown</p>
-      <p>URL: <a href="https://v0.app/community/chat-ui-with-vibration-Enjda8qtpct" target="_blank" rel="noopener noreferrer">https://v0.app/community/chat-ui-with-vibration-Enjda8qtpct</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/community/chat-ui-with-vibration-Enjda8qtpct"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/community/chat-ui-with-vibration-Enjda8qtpct
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default chatuiwithvibrationEnjda8qtpct;
-
 ```
-
 
 ### modern-library-design-YzJGL4XM0VM
 
@@ -1254,22 +1497,31 @@ interface modernlibrarydesignYzJGL4XM0VMProps {
   // TODO: Определить пропсы компонента
 }
 
-export const modernlibrarydesignYzJGL4XM0VM: React.FC<modernlibrarydesignYzJGL4XM0VMProps> = (props) => {
+export const modernlibrarydesignYzJGL4XM0VM: React.FC<
+  modernlibrarydesignYzJGL4XM0VMProps
+> = props => {
   return (
     <div className="modern-library-design-YzJGL4XM0VM">
       <h2>modern-library-design-YzJGL4XM0VM</h2>
       <p>Компонент modern-library-design-YzJGL4XM0VM из v0.app</p>
       <p>Автор: unknown</p>
-      <p>URL: <a href="https://v0.app/community/modern-library-design-YzJGL4XM0VM" target="_blank" rel="noopener noreferrer">https://v0.app/community/modern-library-design-YzJGL4XM0VM</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/community/modern-library-design-YzJGL4XM0VM"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/community/modern-library-design-YzJGL4XM0VM
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default modernlibrarydesignYzJGL4XM0VM;
-
 ```
-
 
 ### cuisine-selector-chips-b1LMjSX49FY
 
@@ -1292,22 +1544,31 @@ interface cuisineselectorchipsb1LMjSX49FYProps {
   // TODO: Определить пропсы компонента
 }
 
-export const cuisineselectorchipsb1LMjSX49FY: React.FC<cuisineselectorchipsb1LMjSX49FYProps> = (props) => {
+export const cuisineselectorchipsb1LMjSX49FY: React.FC<
+  cuisineselectorchipsb1LMjSX49FYProps
+> = props => {
   return (
     <div className="cuisine-selector-chips-b1LMjSX49FY">
       <h2>cuisine-selector-chips-b1LMjSX49FY</h2>
       <p>Компонент cuisine-selector-chips-b1LMjSX49FY из v0.app</p>
       <p>Автор: unknown</p>
-      <p>URL: <a href="https://v0.app/chat/cuisine-selector-chips-b1LMjSX49FY" target="_blank" rel="noopener noreferrer">https://v0.app/chat/cuisine-selector-chips-b1LMjSX49FY</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/chat/cuisine-selector-chips-b1LMjSX49FY"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/chat/cuisine-selector-chips-b1LMjSX49FY
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default cuisineselectorchipsb1LMjSX49FY;
-
 ```
-
 
 ### general-greeting-oaN8bYkHdWq
 
@@ -1330,22 +1591,29 @@ interface generalgreetingoaN8bYkHdWqProps {
   // TODO: Определить пропсы компонента
 }
 
-export const generalgreetingoaN8bYkHdWq: React.FC<generalgreetingoaN8bYkHdWqProps> = (props) => {
+export const generalgreetingoaN8bYkHdWq: React.FC<generalgreetingoaN8bYkHdWqProps> = props => {
   return (
     <div className="general-greeting-oaN8bYkHdWq">
       <h2>general-greeting-oaN8bYkHdWq</h2>
       <p>Компонент general-greeting-oaN8bYkHdWq из v0.app</p>
       <p>Автор: unknown</p>
-      <p>URL: <a href="https://v0.app/chat/general-greeting-oaN8bYkHdWq" target="_blank" rel="noopener noreferrer">https://v0.app/chat/general-greeting-oaN8bYkHdWq</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/chat/general-greeting-oaN8bYkHdWq"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/chat/general-greeting-oaN8bYkHdWq
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default generalgreetingoaN8bYkHdWq;
-
 ```
-
 
 ### marketplace-b3DN1aOd6mQ
 
@@ -1368,22 +1636,29 @@ interface marketplaceb3DN1aOd6mQProps {
   // TODO: Определить пропсы компонента
 }
 
-export const marketplaceb3DN1aOd6mQ: React.FC<marketplaceb3DN1aOd6mQProps> = (props) => {
+export const marketplaceb3DN1aOd6mQ: React.FC<marketplaceb3DN1aOd6mQProps> = props => {
   return (
     <div className="marketplace-b3DN1aOd6mQ">
       <h2>marketplace-b3DN1aOd6mQ</h2>
       <p>Компонент marketplace-b3DN1aOd6mQ из v0.app</p>
       <p>Автор: unknown</p>
-      <p>URL: <a href="https://v0.app/community/marketplace-b3DN1aOd6mQ" target="_blank" rel="noopener noreferrer">https://v0.app/community/marketplace-b3DN1aOd6mQ</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/community/marketplace-b3DN1aOd6mQ"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/community/marketplace-b3DN1aOd6mQ
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default marketplaceb3DN1aOd6mQ;
-
 ```
-
 
 ### background-paths-s2R42ut7CxT
 
@@ -1406,22 +1681,29 @@ interface backgroundpathss2R42ut7CxTProps {
   // TODO: Определить пропсы компонента
 }
 
-export const backgroundpathss2R42ut7CxT: React.FC<backgroundpathss2R42ut7CxTProps> = (props) => {
+export const backgroundpathss2R42ut7CxT: React.FC<backgroundpathss2R42ut7CxTProps> = props => {
   return (
     <div className="background-paths-s2R42ut7CxT">
       <h2>background-paths-s2R42ut7CxT</h2>
       <p>Компонент background-paths-s2R42ut7CxT из v0.app</p>
       <p>Автор: unknown</p>
-      <p>URL: <a href="https://v0.app/community/background-paths-s2R42ut7CxT" target="_blank" rel="noopener noreferrer">https://v0.app/community/background-paths-s2R42ut7CxT</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/community/background-paths-s2R42ut7CxT"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/community/background-paths-s2R42ut7CxT
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default backgroundpathss2R42ut7CxT;
-
 ```
-
 
 ### creative-xYqdqPAJD3j
 
@@ -1444,22 +1726,29 @@ interface creativexYqdqPAJD3jProps {
   // TODO: Определить пропсы компонента
 }
 
-export const creativexYqdqPAJD3j: React.FC<creativexYqdqPAJD3jProps> = (props) => {
+export const creativexYqdqPAJD3j: React.FC<creativexYqdqPAJD3jProps> = props => {
   return (
     <div className="creative-xYqdqPAJD3j">
       <h2>creative-xYqdqPAJD3j</h2>
       <p>Компонент creative-xYqdqPAJD3j из v0.app</p>
       <p>Автор: unknown</p>
-      <p>URL: <a href="https://v0.app/community/creative-xYqdqPAJD3j" target="_blank" rel="noopener noreferrer">https://v0.app/community/creative-xYqdqPAJD3j</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/community/creative-xYqdqPAJD3j"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/community/creative-xYqdqPAJD3j
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default creativexYqdqPAJD3j;
-
 ```
-
 
 ### shopify-product-page-design-NxSj0IgX4vu
 
@@ -1482,22 +1771,31 @@ interface shopifyproductpagedesignNxSj0IgX4vuProps {
   // TODO: Определить пропсы компонента
 }
 
-export const shopifyproductpagedesignNxSj0IgX4vu: React.FC<shopifyproductpagedesignNxSj0IgX4vuProps> = (props) => {
+export const shopifyproductpagedesignNxSj0IgX4vu: React.FC<
+  shopifyproductpagedesignNxSj0IgX4vuProps
+> = props => {
   return (
     <div className="shopify-product-page-design-NxSj0IgX4vu">
       <h2>shopify-product-page-design-NxSj0IgX4vu</h2>
       <p>Компонент shopify-product-page-design-NxSj0IgX4vu из v0.app</p>
       <p>Автор: unknown</p>
-      <p>URL: <a href="https://v0.app/community/shopify-product-page-design-NxSj0IgX4vu" target="_blank" rel="noopener noreferrer">https://v0.app/community/shopify-product-page-design-NxSj0IgX4vu</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/community/shopify-product-page-design-NxSj0IgX4vu"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/community/shopify-product-page-design-NxSj0IgX4vu
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default shopifyproductpagedesignNxSj0IgX4vu;
-
 ```
-
 
 ### creative-agency-portfolio-hJnIgxCCUr5
 
@@ -1520,22 +1818,31 @@ interface creativeagencyportfoliohJnIgxCCUr5Props {
   // TODO: Определить пропсы компонента
 }
 
-export const creativeagencyportfoliohJnIgxCCUr5: React.FC<creativeagencyportfoliohJnIgxCCUr5Props> = (props) => {
+export const creativeagencyportfoliohJnIgxCCUr5: React.FC<
+  creativeagencyportfoliohJnIgxCCUr5Props
+> = props => {
   return (
     <div className="creative-agency-portfolio-hJnIgxCCUr5">
       <h2>creative-agency-portfolio-hJnIgxCCUr5</h2>
       <p>Компонент creative-agency-portfolio-hJnIgxCCUr5 из v0.app</p>
       <p>Автор: unknown</p>
-      <p>URL: <a href="https://v0.app/community/creative-agency-portfolio-hJnIgxCCUr5" target="_blank" rel="noopener noreferrer">https://v0.app/community/creative-agency-portfolio-hJnIgxCCUr5</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/community/creative-agency-portfolio-hJnIgxCCUr5"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/community/creative-agency-portfolio-hJnIgxCCUr5
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default creativeagencyportfoliohJnIgxCCUr5;
-
 ```
-
 
 ### financial-dashboard-functional-jUBqSBJsNrz
 
@@ -1558,22 +1865,31 @@ interface financialdashboardfunctionaljUBqSBJsNrzProps {
   // TODO: Определить пропсы компонента
 }
 
-export const financialdashboardfunctionaljUBqSBJsNrz: React.FC<financialdashboardfunctionaljUBqSBJsNrzProps> = (props) => {
+export const financialdashboardfunctionaljUBqSBJsNrz: React.FC<
+  financialdashboardfunctionaljUBqSBJsNrzProps
+> = props => {
   return (
     <div className="financial-dashboard-functional-jUBqSBJsNrz">
       <h2>financial-dashboard-functional-jUBqSBJsNrz</h2>
       <p>Компонент financial-dashboard-functional-jUBqSBJsNrz из v0.app</p>
       <p>Автор: unknown</p>
-      <p>URL: <a href="https://v0.app/community/financial-dashboard-functional-jUBqSBJsNrz" target="_blank" rel="noopener noreferrer">https://v0.app/community/financial-dashboard-functional-jUBqSBJsNrz</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/community/financial-dashboard-functional-jUBqSBJsNrz"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/community/financial-dashboard-functional-jUBqSBJsNrz
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default financialdashboardfunctionaljUBqSBJsNrz;
-
 ```
-
 
 ### ai-elements-with-ai-sdk-5-ksSTzATPzMq
 
@@ -1596,22 +1912,31 @@ interface aielementswithaisdk5ksSTzATPzMqProps {
   // TODO: Определить пропсы компонента
 }
 
-export const aielementswithaisdk5ksSTzATPzMq: React.FC<aielementswithaisdk5ksSTzATPzMqProps> = (props) => {
+export const aielementswithaisdk5ksSTzATPzMq: React.FC<
+  aielementswithaisdk5ksSTzATPzMqProps
+> = props => {
   return (
     <div className="ai-elements-with-ai-sdk-5-ksSTzATPzMq">
       <h2>ai-elements-with-ai-sdk-5-ksSTzATPzMq</h2>
       <p>Компонент ai-elements-with-ai-sdk-5-ksSTzATPzMq из v0.app</p>
       <p>Автор: unknown</p>
-      <p>URL: <a href="https://v0.app/community/ai-elements-with-ai-sdk-5-ksSTzATPzMq" target="_blank" rel="noopener noreferrer">https://v0.app/community/ai-elements-with-ai-sdk-5-ksSTzATPzMq</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/community/ai-elements-with-ai-sdk-5-ksSTzATPzMq"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/community/ai-elements-with-ai-sdk-5-ksSTzATPzMq
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default aielementswithaisdk5ksSTzATPzMq;
-
 ```
-
 
 ### modern-ai-chatbot-interface-template-GzHBHQAiS2F
 
@@ -1634,22 +1959,31 @@ interface modernaichatbotinterfacetemplateGzHBHQAiS2FProps {
   // TODO: Определить пропсы компонента
 }
 
-export const modernaichatbotinterfacetemplateGzHBHQAiS2F: React.FC<modernaichatbotinterfacetemplateGzHBHQAiS2FProps> = (props) => {
+export const modernaichatbotinterfacetemplateGzHBHQAiS2F: React.FC<
+  modernaichatbotinterfacetemplateGzHBHQAiS2FProps
+> = props => {
   return (
     <div className="modern-ai-chatbot-interface-template-GzHBHQAiS2F">
       <h2>modern-ai-chatbot-interface-template-GzHBHQAiS2F</h2>
       <p>Компонент modern-ai-chatbot-interface-template-GzHBHQAiS2F из v0.app</p>
       <p>Автор: unknown</p>
-      <p>URL: <a href="https://v0.app/community/modern-ai-chatbot-interface-template-GzHBHQAiS2F" target="_blank" rel="noopener noreferrer">https://v0.app/community/modern-ai-chatbot-interface-template-GzHBHQAiS2F</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/community/modern-ai-chatbot-interface-template-GzHBHQAiS2F"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/community/modern-ai-chatbot-interface-template-GzHBHQAiS2F
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default modernaichatbotinterfacetemplateGzHBHQAiS2F;
-
 ```
-
 
 ### origin-e-commerce-ui-w98dsZBVaaU
 
@@ -1672,22 +2006,29 @@ interface originecommerceuiw98dsZBVaaUProps {
   // TODO: Определить пропсы компонента
 }
 
-export const originecommerceuiw98dsZBVaaU: React.FC<originecommerceuiw98dsZBVaaUProps> = (props) => {
+export const originecommerceuiw98dsZBVaaU: React.FC<originecommerceuiw98dsZBVaaUProps> = props => {
   return (
     <div className="origin-e-commerce-ui-w98dsZBVaaU">
       <h2>origin-e-commerce-ui-w98dsZBVaaU</h2>
       <p>Компонент origin-e-commerce-ui-w98dsZBVaaU из v0.app</p>
       <p>Автор: unknown</p>
-      <p>URL: <a href="https://v0.app/community/origin-e-commerce-ui-w98dsZBVaaU" target="_blank" rel="noopener noreferrer">https://v0.app/community/origin-e-commerce-ui-w98dsZBVaaU</a></p>
+      <p>
+        URL:{' '}
+        <a
+          href="https://v0.app/community/origin-e-commerce-ui-w98dsZBVaaU"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://v0.app/community/origin-e-commerce-ui-w98dsZBVaaU
+        </a>
+      </p>
       {/* TODO: Реализовать функциональность компонента */}
     </div>
   );
 };
 
 export default originecommerceuiw98dsZBVaaU;
-
 ```
-
 
 ## 🚀 Следующие шаги
 
@@ -1697,4 +2038,5 @@ export default originecommerceuiw98dsZBVaaU;
 4. **Ручная доработка** заглушек компонентов
 
 ---
-*Отчет сгенерирован: 2025-09-06T15:54:42.336Z*
+
+_Отчет сгенерирован: 2025-09-06T15:54:42.336Z_

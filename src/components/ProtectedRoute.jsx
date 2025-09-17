@@ -15,8 +15,14 @@ const LoadingScreen = () => (
       <h1 className="text-2xl font-bold text-foreground mb-2">Claude Code UI</h1>
       <div className="flex items-center justify-center space-x-2">
         <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce"></div>
-        <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-        <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+        <div
+          className="w-2 h-2 bg-blue-500 rounded-full animate-bounce"
+          style={{ animationDelay: '0.1s' }}
+        ></div>
+        <div
+          className="w-2 h-2 bg-blue-500 rounded-full animate-bounce"
+          style={{ animationDelay: '0.2s' }}
+        ></div>
       </div>
       <p className="text-muted-foreground mt-2">Loading...</p>
     </div>

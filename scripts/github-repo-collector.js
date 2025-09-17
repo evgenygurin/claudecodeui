@@ -20,7 +20,7 @@ function createRepositoryCollection() {
     metadata: {
       collectionDate: new Date().toISOString(),
       totalComponents: analysis.components.length,
-      description: "Коллекция найденных репозиториев на GitHub для компонентов v0.app"
+      description: 'Коллекция найденных репозиториев на GitHub для компонентов v0.app',
     },
     repositories: {
       // Категории репозиториев
@@ -31,14 +31,14 @@ function createRepositoryCollection() {
       vanilla: [],
       mobile: [],
       desktop: [],
-      other: []
+      other: [],
     },
     components: analysis.components.map(component => ({
       componentName: component.componentName,
       originalUrl: component.originalUrl,
       foundRepositories: [],
-      searchStatus: 'pending'
-    }))
+      searchStatus: 'pending',
+    })),
   };
 
   return collection;
@@ -471,25 +471,25 @@ function createCollectionHTML(collection) {
 function createRepositoryJSON(collection) {
   // Добавляем несколько примеров найденных репозиториев
   collection.repositories.react.push({
-    name: "react-file-manager",
-    fullName: "example/react-file-manager",
-    url: "https://github.com/example/react-file-manager",
+    name: 'react-file-manager',
+    fullName: 'example/react-file-manager',
+    url: 'https://github.com/example/react-file-manager',
     stars: 150,
-    description: "Modern file manager component built with React",
-    lastUpdated: "2024-01-15T10:30:00Z",
-    topics: ["react", "file-manager", "component", "ui"],
-    language: "TypeScript"
+    description: 'Modern file manager component built with React',
+    lastUpdated: '2024-01-15T10:30:00Z',
+    topics: ['react', 'file-manager', 'component', 'ui'],
+    language: 'TypeScript',
   });
 
   collection.repositories.nextjs.push({
-    name: "nextjs-file-manager",
-    fullName: "example/nextjs-file-manager",
-    url: "https://github.com/example/nextjs-file-manager",
+    name: 'nextjs-file-manager',
+    fullName: 'example/nextjs-file-manager',
+    url: 'https://github.com/example/nextjs-file-manager',
     stars: 89,
-    description: "File manager built with Next.js and TypeScript",
-    lastUpdated: "2024-01-10T15:45:00Z",
-    topics: ["nextjs", "typescript", "file-manager", "react"],
-    language: "TypeScript"
+    description: 'File manager built with Next.js and TypeScript',
+    lastUpdated: '2024-01-10T15:45:00Z',
+    topics: ['nextjs', 'typescript', 'file-manager', 'react'],
+    language: 'TypeScript',
   });
 
   return collection;
@@ -500,23 +500,23 @@ function createRepositoryJSON(collection) {
  */
 function main() {
   console.log('🚀 Создаем коллекцию репозиториев...');
-  
+
   const collection = createRepositoryCollection();
   const collectionWithExamples = createRepositoryJSON(collection);
   const html = createCollectionHTML(collectionWithExamples);
-  
+
   // Сохраняем JSON файл
   const jsonPath = path.join(__dirname, 'github-repository-collection.json');
   fs.writeFileSync(jsonPath, JSON.stringify(collectionWithExamples, null, 2));
-  
+
   // Сохраняем HTML страницу
   const htmlPath = path.join(__dirname, 'github-repository-collection.html');
   fs.writeFileSync(htmlPath, html);
-  
+
   console.log('✅ Файлы созданы:');
   console.log(`  - ${jsonPath} - JSON коллекция репозиториев`);
   console.log(`  - ${htmlPath} - HTML интерфейс для управления коллекцией`);
-  
+
   console.log('\n📋 Инструкции:');
   console.log('  1. Откройте github-repository-collection.html в браузере');
   console.log('  2. Используйте форму для добавления найденных репозиториев');
@@ -531,7 +531,5 @@ if (require.main === module) {
 module.exports = {
   createRepositoryCollection,
   createCollectionHTML,
-  createRepositoryJSON
+  createRepositoryJSON,
 };
-
-

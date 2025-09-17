@@ -2,10 +2,10 @@
 
 /**
  * v0.app Component Collector
- * 
+ *
  * Этот скрипт автоматически собирает компоненты v0.app в единый проект
  * Использует MCP Vercel для поиска GitHub ссылок и браузер для извлечения кода
- * 
+ *
  * Использование: node v0-component-collector.js
  */
 
@@ -13,44 +13,46 @@ const fs = require('fs');
 const path = require('path');
 
 // Загружаем информацию о компонентах
-const componentsInfo = JSON.parse(fs.readFileSync('v0-unified-project/components-info.json', 'utf8'));
+const componentsInfo = JSON.parse(
+  fs.readFileSync('v0-unified-project/components-info.json', 'utf8')
+);
 
 // Создаем план сбора компонентов
 function createCollectionPlan() {
   const plan = {
     phases: [
       {
-        name: "Phase 1: GitHub Integration",
-        description: "Поиск GitHub репозиториев через MCP Vercel",
+        name: 'Phase 1: GitHub Integration',
+        description: 'Поиск GitHub репозиториев через MCP Vercel',
         components: componentsInfo.components.filter(c => c.author !== 'unknown'),
-        status: 'pending'
+        status: 'pending',
       },
       {
-        name: "Phase 2: Browser Extraction",
-        description: "Извлечение кода компонентов через браузер",
+        name: 'Phase 2: Browser Extraction',
+        description: 'Извлечение кода компонентов через браузер',
         components: componentsInfo.components,
-        status: 'pending'
+        status: 'pending',
       },
       {
-        name: "Phase 3: Code Integration",
-        description: "Интеграция собранного кода в единый проект",
+        name: 'Phase 3: Code Integration',
+        description: 'Интеграция собранного кода в единый проект',
         components: componentsInfo.components,
-        status: 'pending'
+        status: 'pending',
       },
       {
-        name: "Phase 4: Build System",
-        description: "Настройка системы сборки и тестирования",
+        name: 'Phase 4: Build System',
+        description: 'Настройка системы сборки и тестирования',
         components: [],
-        status: 'pending'
-      }
+        status: 'pending',
+      },
     ],
     statistics: {
       totalComponents: componentsInfo.total,
       withGitHub: 0,
       extracted: 0,
       integrated: 0,
-      ready: 0
-    }
+      ready: 0,
+    },
   };
 
   return plan;
@@ -59,7 +61,7 @@ function createCollectionPlan() {
 // Создаем структуру для каждого компонента
 function createComponentStructure(component) {
   const componentDir = path.join('v0-unified-project/components', component.name);
-  
+
   const structure = {
     [`${component.name}.tsx`]: `// ${component.name}
 // Автор: ${component.author}
@@ -127,7 +129,7 @@ describe('${component.name.replace(/-/g, '')}', () => {
 });`,
     'index.ts': `// Экспорт компонента ${component.name}
 export { ${component.name.replace(/-/g, '')} } from './${component.name}';
-export { default } from './${component.name}';`
+export { default } from './${component.name}';`,
   };
 
   return { componentDir, structure };
@@ -229,7 +231,7 @@ function main() {
   console.log('🚀 Создание плана сбора компонентов v0.app...\n');
 
   const plan = createCollectionPlan();
-  
+
   // Сохраняем план
   const planPath = path.join('v0-unified-project', 'collection-plan.json');
   fs.writeFileSync(planPath, JSON.stringify(plan, null, 2));
@@ -238,7 +240,7 @@ function main() {
   // Создаем структуру для каждого компонента
   componentsInfo.components.forEach(component => {
     const { componentDir, structure } = createComponentStructure(component);
-    
+
     // Создаем директорию компонента
     if (!fs.existsSync(componentDir)) {
       fs.mkdirSync(componentDir, { recursive: true });
@@ -249,7 +251,7 @@ function main() {
       const filePath = path.join(componentDir, filename);
       fs.writeFileSync(filePath, content);
     });
-    
+
     console.log(`✅ Создана структура для: ${component.name}`);
   });
 
@@ -336,6 +338,3 @@ if (require.main === module) {
 }
 
 module.exports = { createCollectionPlan, createComponentStructure, createMainPage };
-
-
-

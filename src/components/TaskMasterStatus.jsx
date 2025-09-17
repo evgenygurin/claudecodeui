@@ -3,14 +3,8 @@ import { useTaskMaster } from '../contexts/TaskMasterContext';
 import TaskIndicator from './TaskIndicator';
 
 const TaskMasterStatus = () => {
-  const { 
-    currentProject, 
-    projectTaskMaster, 
-    mcpServerStatus,
-    isLoading,
-    isLoadingMCP,
-    error 
-  } = useTaskMaster();
+  const { currentProject, projectTaskMaster, mcpServerStatus, isLoading, isLoadingMCP, error } =
+    useTaskMaster();
 
   if (isLoading || isLoadingMCP) {
     return (
@@ -32,7 +26,7 @@ const TaskMasterStatus = () => {
 
   // Show MCP server status
   const mcpConfigured = mcpServerStatus?.hasMCPServer && mcpServerStatus?.isConfigured;
-  
+
   // Show project TaskMaster status
   const projectConfigured = currentProject?.taskmaster?.hasTaskmaster;
   const taskCount = currentProject?.taskmaster?.metadata?.taskCount || 0;
@@ -60,11 +54,7 @@ const TaskMasterStatus = () => {
   return (
     <div className="flex items-center gap-3">
       {/* TaskMaster Status Indicator */}
-      <TaskIndicator 
-        status={overallStatus} 
-        size="md"
-        showLabel={true}
-      />
+      <TaskIndicator status={overallStatus} size="md" showLabel={true} />
 
       {/* Task Progress Info */}
       {projectConfigured && (

@@ -7,26 +7,26 @@ const LoginForm = () => {
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
-  
+
   const { login } = useAuth();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async e => {
     e.preventDefault();
     setError('');
-    
+
     if (!username || !password) {
       setError('Please enter both username and password');
       return;
     }
-    
+
     setIsLoading(true);
-    
+
     const result = await login(username, password);
-    
+
     if (!result.success) {
       setError(result.error);
     }
-    
+
     setIsLoading(false);
   };
 
@@ -42,9 +42,7 @@ const LoginForm = () => {
               </div>
             </div>
             <h1 className="text-2xl font-bold text-foreground">Welcome Back</h1>
-            <p className="text-muted-foreground mt-2">
-              Sign in to your Claude Code UI account
-            </p>
+            <p className="text-muted-foreground mt-2">Sign in to your Claude Code UI account</p>
           </div>
 
           {/* Login Form */}
@@ -57,7 +55,7 @@ const LoginForm = () => {
                 type="text"
                 id="username"
                 value={username}
-                onChange={(e) => setUsername(e.target.value)}
+                onChange={e => setUsername(e.target.value)}
                 className="w-full px-3 py-2 border border-border rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="Enter your username"
                 required
@@ -73,7 +71,7 @@ const LoginForm = () => {
                 type="password"
                 id="password"
                 value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={e => setPassword(e.target.value)}
                 className="w-full px-3 py-2 border border-border rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="Enter your password"
                 required

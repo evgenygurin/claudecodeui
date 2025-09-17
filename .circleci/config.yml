@@ -207,7 +207,6 @@ workflows:
               ignore:
                 - main
                 - develop
-
 # Environment variables (set these in CircleCI project settings)
 # VERCEL_TOKEN: Your Vercel deployment token
 # CYPRESS_RECORD_KEY: Your Cypress record key (optional, for parallel test runs)

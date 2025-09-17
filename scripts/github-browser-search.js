@@ -17,24 +17,24 @@ const analysis = JSON.parse(fs.readFileSync(analysisPath, 'utf8'));
  */
 function createBrowserSearchInstructions() {
   const instructions = [];
-  
+
   // Берем первые 10 компонентов для демонстрации
   const componentsToSearch = analysis.components.slice(0, 10);
-  
+
   for (const component of componentsToSearch) {
     const searchQueries = component.githubSearchQueries.slice(0, 3); // Берем первые 3 запроса
-    
+
     instructions.push({
       componentName: component.componentName,
       originalUrl: component.originalUrl,
       searchQueries: searchQueries.map(query => ({
         name: query.name,
         url: `https://github.com/search?q=${encodeURIComponent(query.query)}&type=repositories&s=stars`,
-        description: query.description
-      }))
+        description: query.description,
+      })),
     });
   }
-  
+
   return instructions;
 }
 
@@ -252,13 +252,13 @@ function createResultsTemplate(instructions) {
     metadata: {
       searchDate: new Date().toISOString(),
       totalComponents: instructions.length,
-      description: "Найденные репозитории на GitHub для компонентов v0.app"
+      description: 'Найденные репозитории на GitHub для компонентов v0.app',
     },
     results: instructions.map(instruction => ({
       componentName: instruction.componentName,
       originalUrl: instruction.originalUrl,
-      foundRepositories: []
-    }))
+      foundRepositories: [],
+    })),
   };
 
   return template;
@@ -269,23 +269,23 @@ function createResultsTemplate(instructions) {
  */
 function main() {
   console.log('🚀 Создаем инструкции для поиска в браузере...');
-  
+
   const instructions = createBrowserSearchInstructions();
   const html = createSearchHTML(instructions);
   const resultsTemplate = createResultsTemplate(instructions);
-  
+
   // Сохраняем HTML страницу
   const htmlPath = path.join(__dirname, 'github-search-page.html');
   fs.writeFileSync(htmlPath, html);
-  
+
   // Сохраняем шаблон для результатов
   const templatePath = path.join(__dirname, 'github-found-repositories.json');
   fs.writeFileSync(templatePath, JSON.stringify(resultsTemplate, null, 2));
-  
+
   console.log('✅ Файлы созданы:');
   console.log(`  - ${htmlPath} - HTML страница для поиска`);
   console.log(`  - ${templatePath} - Шаблон для сохранения результатов`);
-  
+
   console.log('\n🔍 Инструкции:');
   console.log('  1. Откройте github-search-page.html в браузере');
   console.log('  2. Используйте кнопки поиска для каждого компонента');
@@ -300,7 +300,5 @@ if (require.main === module) {
 module.exports = {
   createBrowserSearchInstructions,
   createSearchHTML,
-  createResultsTemplate
+  createResultsTemplate,
 };
-
-

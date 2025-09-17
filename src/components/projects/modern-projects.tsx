@@ -140,12 +140,11 @@ export function ModernProjects({ className }: ModernProjectsProps) {
   });
 
   const filteredProjects = React.useMemo(() => {
-    return projects.filter(project =>
-      project.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      project.technologies.some(tech => 
-        tech.toLowerCase().includes(searchTerm.toLowerCase())
-      )
+    return projects.filter(
+      project =>
+        project.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        project.technologies.some(tech => tech.toLowerCase().includes(searchTerm.toLowerCase()))
     );
   }, [projects, searchTerm]);
 
@@ -171,16 +170,14 @@ export function ModernProjects({ className }: ModernProjectsProps) {
     setProjects(prev => [project, ...prev]);
     setNewProject({ name: '', description: '', technologies: '' });
     setIsCreateDialogOpen(false);
-    
+
     logger.info('Project created', { name: project.name });
   }, [newProject]);
 
   const handleToggleStar = useCallback((projectId: string) => {
     setProjects(prev =>
       prev.map(project =>
-        project.id === projectId
-          ? { ...project, isStarred: !project.isStarred }
-          : project
+        project.id === projectId ? { ...project, isStarred: !project.isStarred } : project
       )
     );
   }, []);
@@ -210,7 +207,7 @@ export function ModernProjects({ className }: ModernProjectsProps) {
             Manage your development projects and track progress
           </p>
         </div>
-        
+
         <Dialog open={isCreateDialogOpen} onOpenChange={setIsCreateDialogOpen}>
           <DialogTrigger asChild>
             <Button>
@@ -221,9 +218,7 @@ export function ModernProjects({ className }: ModernProjectsProps) {
           <DialogContent>
             <DialogHeader>
               <DialogTitle>Create New Project</DialogTitle>
-              <DialogDescription>
-                Add a new project to your workspace
-              </DialogDescription>
+              <DialogDescription>Add a new project to your workspace</DialogDescription>
             </DialogHeader>
             <div className="space-y-4">
               <div>
@@ -231,9 +226,7 @@ export function ModernProjects({ className }: ModernProjectsProps) {
                 <Input
                   placeholder="Enter project name"
                   value={newProject.name}
-                  onChange={(e) =>
-                    setNewProject(prev => ({ ...prev, name: e.target.value }))
-                  }
+                  onChange={e => setNewProject(prev => ({ ...prev, name: e.target.value }))}
                 />
               </div>
               <div>
@@ -241,9 +234,7 @@ export function ModernProjects({ className }: ModernProjectsProps) {
                 <Textarea
                   placeholder="Enter project description"
                   value={newProject.description}
-                  onChange={(e) =>
-                    setNewProject(prev => ({ ...prev, description: e.target.value }))
-                  }
+                  onChange={e => setNewProject(prev => ({ ...prev, description: e.target.value }))}
                 />
               </div>
               <div>
@@ -251,9 +242,7 @@ export function ModernProjects({ className }: ModernProjectsProps) {
                 <Input
                   placeholder="React, TypeScript, Next.js (comma separated)"
                   value={newProject.technologies}
-                  onChange={(e) =>
-                    setNewProject(prev => ({ ...prev, technologies: e.target.value }))
-                  }
+                  onChange={e => setNewProject(prev => ({ ...prev, technologies: e.target.value }))}
                 />
               </div>
             </div>
@@ -261,9 +250,7 @@ export function ModernProjects({ className }: ModernProjectsProps) {
               <Button variant="outline" onClick={() => setIsCreateDialogOpen(false)}>
                 Cancel
               </Button>
-              <Button onClick={handleCreateProject}>
-                Create Project
-              </Button>
+              <Button onClick={handleCreateProject}>Create Project</Button>
             </DialogFooter>
           </DialogContent>
         </Dialog>
@@ -275,7 +262,7 @@ export function ModernProjects({ className }: ModernProjectsProps) {
         <Input
           placeholder="Search projects..."
           value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
+          onChange={e => setSearchTerm(e.target.value)}
           className="pl-10"
         />
       </div>
@@ -293,7 +280,7 @@ export function ModernProjects({ className }: ModernProjectsProps) {
             </div>
           </CardContent>
         </Card>
-        
+
         <Card>
           <CardContent className="p-4">
             <div className="flex items-center justify-between">
@@ -307,7 +294,7 @@ export function ModernProjects({ className }: ModernProjectsProps) {
             </div>
           </CardContent>
         </Card>
-        
+
         <Card>
           <CardContent className="p-4">
             <div className="flex items-center justify-between">
@@ -321,15 +308,13 @@ export function ModernProjects({ className }: ModernProjectsProps) {
             </div>
           </CardContent>
         </Card>
-        
+
         <Card>
           <CardContent className="p-4">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm text-muted-foreground">Starred</p>
-                <p className="text-2xl font-bold">
-                  {projects.filter(p => p.isStarred).length}
-                </p>
+                <p className="text-2xl font-bold">{projects.filter(p => p.isStarred).length}</p>
               </div>
               <Star className="h-8 w-8 text-yellow-500" />
             </div>
@@ -339,18 +324,16 @@ export function ModernProjects({ className }: ModernProjectsProps) {
 
       {/* Projects Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredProjects.map((project) => (
+        {filteredProjects.map(project => (
           <Card key={project.id} className="hover:shadow-lg transition-shadow">
             <CardHeader className="pb-3">
               <div className="flex items-start justify-between">
                 <div className="flex items-center gap-2">
                   <div className={cn('w-3 h-3 rounded-full', getStatusColor(project.status))} />
                   <CardTitle className="text-lg">{project.name}</CardTitle>
-                  {project.isStarred && (
-                    <Star className="h-4 w-4 text-yellow-500 fill-current" />
-                  )}
+                  {project.isStarred && <Star className="h-4 w-4 text-yellow-500 fill-current" />}
                 </div>
-                
+
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <Button variant="ghost" size="sm">
@@ -374,7 +357,7 @@ export function ModernProjects({ className }: ModernProjectsProps) {
                         </a>
                       </DropdownMenuItem>
                     )}
-                    <DropdownMenuItem 
+                    <DropdownMenuItem
                       onClick={() => handleDeleteProject(project.id)}
                       className="text-red-600"
                     >
@@ -384,12 +367,10 @@ export function ModernProjects({ className }: ModernProjectsProps) {
                   </DropdownMenuContent>
                 </DropdownMenu>
               </div>
-              
-              <p className="text-sm text-muted-foreground line-clamp-2">
-                {project.description}
-              </p>
+
+              <p className="text-sm text-muted-foreground line-clamp-2">{project.description}</p>
             </CardHeader>
-            
+
             <CardContent className="space-y-4">
               {/* Progress */}
               <div>
@@ -399,10 +380,10 @@ export function ModernProjects({ className }: ModernProjectsProps) {
                 </div>
                 <Progress value={project.progress} className="h-2" />
               </div>
-              
+
               {/* Technologies */}
               <div className="flex flex-wrap gap-1">
-                {project.technologies.slice(0, 3).map((tech) => (
+                {project.technologies.slice(0, 3).map(tech => (
                   <Badge key={tech} variant="secondary" className="text-xs">
                     {tech}
                   </Badge>
@@ -413,7 +394,7 @@ export function ModernProjects({ className }: ModernProjectsProps) {
                   </Badge>
                 )}
               </div>
-              
+
               {/* Meta Info */}
               <div className="flex items-center justify-between text-xs text-muted-foreground">
                 <div className="flex items-center gap-4">
@@ -440,7 +421,9 @@ export function ModernProjects({ className }: ModernProjectsProps) {
           <FolderOpen className="h-12 w-12 mx-auto mb-4 text-muted-foreground opacity-50" />
           <h3 className="text-lg font-medium mb-2">No projects found</h3>
           <p className="text-muted-foreground mb-4">
-            {searchTerm ? 'Try adjusting your search terms' : 'Create your first project to get started'}
+            {searchTerm
+              ? 'Try adjusting your search terms'
+              : 'Create your first project to get started'}
           </p>
           {!searchTerm && (
             <Button onClick={() => setIsCreateDialogOpen(true)}>

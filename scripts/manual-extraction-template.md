@@ -1,4 +1,3 @@
-
 # Шаблон для ручного извлечения компонентов
 
 ## Структура файла компонента
@@ -18,10 +17,10 @@ interface {ComponentName}Props {
   children?: React.ReactNode;
 }
 
-export const {ComponentName}: React.FC<{ComponentName}Props> = ({ 
+export const {ComponentName}: React.FC<{ComponentName}Props> = ({
   className,
   children,
-  ...props 
+  ...props
 }) => {
   return (
     <div className={cn("component-base-styles", className)} {...props}>
@@ -44,17 +43,21 @@ export default {ComponentName};
 ## Категории компонентов
 
 ### UI Components (src/components/integrated/ui/)
+
 - Button, Input, Card, Badge, Toast, Tabs
 - Простые, переиспользуемые компоненты
 
 ### Layout Components (src/components/integrated/layout/)
+
 - Sidebar, Navigation, Header, Footer
 - Компоненты макета страницы
 
 ### Feature Components (src/components/integrated/features/)
+
 - Chat, FileManager, Dashboard
 - Функциональные компоненты
 
 ### Advanced Components (src/components/integrated/advanced/)
+
 - Complex UI, Animations, Integrations
 - Сложные компоненты с множественными зависимостями

@@ -80,10 +80,10 @@ export class CacheService<T = any> {
    */
   get(key: string): T | null {
     const startTime = performance.now();
-    
+
     try {
       const entry = this.cache.get(key);
-      
+
       if (!entry) {
         this.recordMiss();
         return null;
@@ -99,10 +99,10 @@ export class CacheService<T = any> {
       // Update access tracking
       this.updateAccess(key, entry);
       this.recordHit();
-      
+
       const accessTime = performance.now() - startTime;
       this.updateAverageAccessTime(accessTime);
-      
+
       logger.debug('Cache hit', { key, accessTime });
       return entry.value;
     } catch (error) {
@@ -183,7 +183,7 @@ export class CacheService<T = any> {
       this.accessOrder = [];
       this.stats.totalSize = 0;
       this.stats.entryCount = 0;
-      
+
       logger.info('Cache cleared');
     } catch (error) {
       logger.error('Cache clear error', { error: getErrorMessage(error) });
@@ -251,7 +251,7 @@ export class CacheService<T = any> {
       for (const entry of entries) {
         this.set(entry.key, entry.value, entry.ttl);
       }
-      
+
       logger.info('Cache warmed up', { entryCount: entries.length });
     } catch (error) {
       logger.error('Cache warm up error', { error: getErrorMessage(error) });
@@ -277,7 +277,7 @@ export class CacheService<T = any> {
       if (typeof window !== 'undefined' && window.localStorage) {
         localStorage.setItem(this.options.persistenceKey, JSON.stringify(data));
       }
-      
+
       logger.debug('Cache persisted', { entryCount: this.cache.size });
     } catch (error) {
       logger.error('Cache persist error', { error: getErrorMessage(error) });
@@ -333,7 +333,7 @@ export class CacheService<T = any> {
   private updateAccess(key: string, entry: CacheEntry<T>): void {
     entry.accessCount++;
     entry.lastAccessed = Date.now();
-    
+
     // Move to end of access order (most recently used)
     this.removeFromAccessOrder(key);
     this.accessOrder.push(key);
@@ -348,8 +348,8 @@ export class CacheService<T = any> {
 
   private ensureSpace(requiredSize: number): void {
     while (
-      (this.stats.totalSize + requiredSize > this.options.maxSize || 
-       this.stats.entryCount >= this.options.maxEntries) &&
+      (this.stats.totalSize + requiredSize > this.options.maxSize ||
+        this.stats.entryCount >= this.options.maxEntries) &&
       this.cache.size > 0
     ) {
       this.evictLRU();
@@ -364,7 +364,7 @@ export class CacheService<T = any> {
     const lruKey = this.accessOrder[0];
     this.delete(lruKey);
     this.stats.evictions++;
-    
+
     logger.debug('Cache evicted LRU entry', { key: lruKey });
   }
 

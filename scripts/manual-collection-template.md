@@ -1,7 +1,7 @@
-
 # Шаблон для ручного сбора компонентов
 
 ## Структура файла компонента
+
 ```tsx
 // {component-name}.tsx
 // Источник: {component-url}
@@ -16,11 +16,11 @@ interface {ComponentName}Props {
   // Определите пропсы компонента
 }
 
-export const {ComponentName}: React.FC<{ComponentName}Props> = ({ 
+export const {ComponentName}: React.FC<{ComponentName}Props> = ({
   // Деструктурируйте пропсы
 }) => {
   // Реализация компонента
-  
+
   return (
     <div>
       {/* JSX компонента */}
@@ -32,6 +32,7 @@ export default {ComponentName};
 ```
 
 ## Метаданные компонента
+
 ```json
 {
   "id": "{component-id}",

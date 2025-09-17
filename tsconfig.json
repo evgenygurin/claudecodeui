@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "lib": [
-      "DOM",
-      "DOM.Iterable",
-      "ES2022"
-    ],
+    "lib": ["DOM", "DOM.Iterable", "ES2022"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -28,39 +24,17 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@/components/*": [
-        "./src/components/*"
-      ],
-      "@/hooks/*": [
-        "./src/hooks/*"
-      ],
-      "@/services/*": [
-        "./src/services/*"
-      ],
-      "@/types/*": [
-        "./src/types/*"
-      ],
-      "@/utils/*": [
-        "./src/utils/*"
-      ],
-      "@/lib/*": [
-        "./src/lib/*"
-      ],
-      "@/repositories/*": [
-        "./src/repositories/*"
-      ],
-      "@/providers/*": [
-        "./src/providers/*"
-      ],
-      "@/events/*": [
-        "./src/events/*"
-      ],
-      "@/di/*": [
-        "./src/di/*"
-      ]
+      "@/*": ["./src/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/services/*": ["./src/services/*"],
+      "@/types/*": ["./src/types/*"],
+      "@/utils/*": ["./src/utils/*"],
+      "@/lib/*": ["./src/lib/*"],
+      "@/repositories/*": ["./src/repositories/*"],
+      "@/providers/*": ["./src/providers/*"],
+      "@/events/*": ["./src/events/*"],
+      "@/di/*": ["./src/di/*"]
     }
   },
   "include": [

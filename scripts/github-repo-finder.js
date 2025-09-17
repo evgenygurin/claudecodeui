@@ -54,7 +54,7 @@ const v0Links = [
   'https://v0.app/community/financial-dashboard-functional-jUBqSBJsNrz',
   'https://v0.app/community/ai-elements-with-ai-sdk-5-ksSTzATPzMq',
   'https://v0.app/community/modern-ai-chatbot-interface-template-GzHBHQAiS2F',
-  'https://v0.app/community/origin-e-commerce-ui-w98dsZBVaaU'
+  'https://v0.app/community/origin-e-commerce-ui-w98dsZBVaaU',
 ];
 
 /**
@@ -63,14 +63,14 @@ const v0Links = [
 function extractComponentName(url) {
   const urlParts = url.split('/');
   const lastPart = urlParts[urlParts.length - 1];
-  
+
   // Убираем ID в конце (последние символы после последнего дефиса)
   const nameParts = lastPart.split('-');
   if (nameParts.length > 1) {
     // Убираем последнюю часть (ID)
     nameParts.pop();
   }
-  
+
   return nameParts.join('-');
 }
 
@@ -79,37 +79,35 @@ function extractComponentName(url) {
  */
 function generateRepoNameVariants(componentName) {
   const variants = [];
-  
+
   // Оригинальное название
   variants.push(componentName);
-  
+
   // С префиксами
   variants.push(`v0-${componentName}`);
   variants.push(`nextjs-${componentName}`);
   variants.push(`react-${componentName}`);
   variants.push(`ui-${componentName}`);
   variants.push(`component-${componentName}`);
-  
+
   // С суффиксами
   variants.push(`${componentName}-component`);
   variants.push(`${componentName}-ui`);
   variants.push(`${componentName}-template`);
   variants.push(`${componentName}-starter`);
-  
+
   // С заменой дефисов на подчеркивания
   variants.push(componentName.replace(/-/g, '_'));
   variants.push(`v0_${componentName.replace(/-/g, '_')}`);
-  
+
   // CamelCase варианты
   const camelCase = componentName
     .split('-')
-    .map((word, index) => 
-      index === 0 ? word : word.charAt(0).toUpperCase() + word.slice(1)
-    )
+    .map((word, index) => (index === 0 ? word : word.charAt(0).toUpperCase() + word.slice(1)))
     .join('');
   variants.push(camelCase);
   variants.push(`v0${camelCase.charAt(0).toUpperCase() + camelCase.slice(1)}`);
-  
+
   // PascalCase варианты
   const pascalCase = componentName
     .split('-')
@@ -117,7 +115,7 @@ function generateRepoNameVariants(componentName) {
     .join('');
   variants.push(pascalCase);
   variants.push(`V0${pascalCase}`);
-  
+
   return [...new Set(variants)]; // Убираем дубликаты
 }
 
@@ -126,11 +124,11 @@ function generateRepoNameVariants(componentName) {
  */
 function createGitHubSearchInstructions() {
   const instructions = [];
-  
+
   for (const link of v0Links) {
     const componentName = extractComponentName(link);
     const repoVariants = generateRepoNameVariants(componentName);
-    
+
     instructions.push({
       originalUrl: link,
       componentName,
@@ -138,11 +136,11 @@ function createGitHubSearchInstructions() {
       githubSearchQueries: repoVariants.map(variant => ({
         name: variant,
         query: `"${variant}" in:name`,
-        description: `Поиск репозитория с названием "${variant}"`
-      }))
+        description: `Поиск репозитория с названием "${variant}"`,
+      })),
     });
   }
-  
+
   return instructions;
 }
 
@@ -154,14 +152,14 @@ function createAnalysisFile() {
     metadata: {
       totalLinks: v0Links.length,
       analysisDate: new Date().toISOString(),
-      description: "Анализ ссылок v0.app для поиска соответствующих репозиториев на GitHub"
+      description: 'Анализ ссылок v0.app для поиска соответствующих репозиториев на GitHub',
     },
-    components: createGitHubSearchInstructions()
+    components: createGitHubSearchInstructions(),
   };
-  
+
   const outputPath = path.join(__dirname, 'github-repo-analysis.json');
   fs.writeFileSync(outputPath, JSON.stringify(analysis, null, 2));
-  
+
   console.log(`✅ Анализ сохранен в: ${outputPath}`);
   return analysis;
 }
@@ -251,7 +249,7 @@ const searchResults = await mcp_github_search_repositories({
 
   const outputPath = path.join(__dirname, 'github-search-instructions.md');
   fs.writeFileSync(outputPath, markdown);
-  
+
   console.log(`✅ Инструкции сохранены в: ${outputPath}`);
 }
 
@@ -428,10 +426,10 @@ module.exports = { performSearch, searchRepository };
 
   const outputPath = path.join(__dirname, 'github-search-automation.js');
   fs.writeFileSync(outputPath, script);
-  
+
   // Делаем файл исполняемым
   fs.chmodSync(outputPath, '755');
-  
+
   console.log(`✅ Скрипт автоматизации создан: ${outputPath}`);
 }
 
@@ -440,17 +438,17 @@ module.exports = { performSearch, searchRepository };
  */
 function main() {
   console.log('🚀 Начинаем анализ ссылок v0.app...');
-  
+
   const analysis = createAnalysisFile();
   createMarkdownReport(analysis);
   createSearchScript();
-  
+
   console.log('\n✅ Анализ завершен!');
   console.log('\n📋 Созданные файлы:');
   console.log('  - github-repo-analysis.json - Детальный анализ компонентов');
   console.log('  - github-search-instructions.md - Инструкции по поиску');
   console.log('  - github-search-automation.js - Скрипт автоматизации');
-  
+
   console.log('\n🔍 Следующие шаги:');
   console.log('  1. Используйте MCP GitHub сервер для поиска репозиториев');
   console.log('  2. Запустите github-search-automation.js для автоматического поиска');
@@ -467,7 +465,5 @@ module.exports = {
   createGitHubSearchInstructions,
   createAnalysisFile,
   createMarkdownReport,
-  createSearchScript
+  createSearchScript,
 };
-
-
