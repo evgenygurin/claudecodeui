@@ -29,14 +29,37 @@ export default defineConfig(({ command, mode }) => {
           manualChunks: {
             // Vendor chunks
             'react-vendor': ['react', 'react-dom'],
-            'router': ['react-router-dom'],
+            router: ['react-router-dom'],
             'ui-vendor': ['lucide-react', 'class-variance-authority', 'clsx', 'tailwind-merge'],
-            'codemirror': ['@uiw/react-codemirror', '@codemirror/lang-javascript', '@codemirror/lang-css', '@codemirror/lang-html', '@codemirror/lang-json', '@codemirror/lang-markdown', '@codemirror/lang-python', '@codemirror/theme-one-dark'],
-            'terminal': ['@xterm/xterm', '@xterm/addon-fit', '@xterm/addon-clipboard', '@xterm/addon-webgl'],
-            'radix-ui': ['@radix-ui/react-avatar', '@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-progress', '@radix-ui/react-scroll-area', '@radix-ui/react-separator', '@radix-ui/react-slot', '@radix-ui/react-tabs']
-          }
-        }
-      }
+            codemirror: [
+              '@uiw/react-codemirror',
+              '@codemirror/lang-javascript',
+              '@codemirror/lang-css',
+              '@codemirror/lang-html',
+              '@codemirror/lang-json',
+              '@codemirror/lang-markdown',
+              '@codemirror/lang-python',
+              '@codemirror/theme-one-dark',
+            ],
+            terminal: [
+              '@xterm/xterm',
+              '@xterm/addon-fit',
+              '@xterm/addon-clipboard',
+              '@xterm/addon-webgl',
+            ],
+            'radix-ui': [
+              '@radix-ui/react-avatar',
+              '@radix-ui/react-dialog',
+              '@radix-ui/react-dropdown-menu',
+              '@radix-ui/react-progress',
+              '@radix-ui/react-scroll-area',
+              '@radix-ui/react-separator',
+              '@radix-ui/react-slot',
+              '@radix-ui/react-tabs',
+            ],
+          },
+        },
+      },
     },
   };
 });
