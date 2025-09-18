@@ -17,17 +17,14 @@ jobs:
             - node-modules-v2-{{ checksum "package.json" }}
             - node-modules-v2-
       - run:
-          name: Clean install dependencies
+          name: Install dependencies
           command: |
-            # Remove existing node_modules and package-lock.json to ensure clean install
-            rm -rf node_modules package-lock.json
-            # Install dependencies fresh
-            npm install
+            # Use npm ci for faster, reliable, reproducible builds
+            npm ci
       - persist_to_workspace:
           root: ~/project
           paths:
             - node_modules
-            - package-lock.json
       - save_cache:
           key: node-modules-v2-{{ checksum "package.json" }}
           paths:
