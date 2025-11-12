@@ -1,2 +1,5 @@
 [phases.setup]
 aptPkgs = ["python3", "make", "gcc", "g++"]
+
+[phases.install]
+cmds = ["npm ci --legacy-peer-deps"]
