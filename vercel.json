@@ -37,8 +37,8 @@
   ],
   "functions": {
     "server/index.js": {
-      "memory": 3009,
-      "maxDuration": 300
+      "memory": 1024,
+      "maxDuration": 60
     }
   },
   "env": {
