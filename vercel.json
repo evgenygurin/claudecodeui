@@ -35,12 +35,6 @@
       ]
     }
   ],
-  "functions": {
-    "server/index.js": {
-      "memory": 1024,
-      "maxDuration": 60
-    }
-  },
   "env": {
     "NODE_ENV": "production"
   },
