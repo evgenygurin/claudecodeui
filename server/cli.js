@@ -170,10 +170,10 @@ Configuration:
   see the installation directory path.
 
 Documentation:
-  ${packageJson.homepage || 'https://github.com/siteboon/claudecodeui'}
+  ${packageJson.homepage || 'https://github.com/evgenygurin/claudecodeui'}
 
 Report Issues:
-  ${packageJson.bugs?.url || 'https://github.com/siteboon/claudecodeui/issues'}
+  ${packageJson.bugs?.url || 'https://github.com/evgenygurin/claudecodeui/issues'}
 `);
 }
 

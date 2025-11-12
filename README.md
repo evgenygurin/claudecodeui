@@ -3,7 +3,6 @@
   <h1>Claude Code UI</h1>
 </div>
 
-
 A desktop and mobile UI for [Claude Code](https://docs.anthropic.com/en/docs/claude-code), and [Cursor CLI](https://docs.cursor.com/en/cli/overview). You can use it locally or remotely to view your active projects and sessions in Claude Code or Cursor and make changes to them from everywhere (mobile or desktop). This gives you a proper interface that works everywhere. Supports models including **Claude Sonnet 4**, **Opus 4.1**, and **GPT-5**
 
 ## Screenshots
@@ -35,8 +34,6 @@ A desktop and mobile UI for [Claude Code](https://docs.anthropic.com/en/docs/cla
 </tr>
 </table>
 
-
-
 </div>
 
 ## Features
@@ -50,8 +47,17 @@ A desktop and mobile UI for [Claude Code](https://docs.anthropic.com/en/docs/cla
 - **TaskMaster AI Integration** *(Optional)* - Advanced project management with AI-powered task planning, PRD parsing, and workflow automation
 - **Model Compatibility** - Works with Claude Sonnet 4, Opus 4.1, and GPT-5
 
-
 ## Quick Start
+
+### Deployment Options
+
+**☁️ Deploy to Vercel (Recommended for Production)**
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/evgenygurin/claudecodeui)
+
+For detailed Vercel deployment instructions with Postgres database setup, see **[VERCEL_DEPLOYMENT.md](VERCEL_DEPLOYMENT.md)**.
+
+**💻 Local Development**
 
 ### Prerequisites
 
@@ -84,7 +90,6 @@ Then start with a simple command:
 claude-code-ui
 ```
 
-
 **To restart**: Stop with Ctrl+C and run `claude-code-ui` again.
 
 ### CLI Commands
@@ -113,7 +118,7 @@ cloudcli version
 - Claude projects folder location
 - Configuration file location
 
-```
+```bash
 
 ### Run as Background Service (Recommended for Production)
 
@@ -135,7 +140,6 @@ pm2 start claude-code-ui --name "claude-code-ui"
 pm2 start cloudcli --name "claude-code-ui"
 ```
 
-
 #### Auto-Start on System Boot
 
 To make Claude Code UI start automatically when your system boots:
@@ -148,12 +152,11 @@ pm2 startup
 pm2 save
 ```
 
-
 ### Local Development Installation
 
 1. **Clone the repository:**
 ```bash
-git clone https://github.com/siteboon/claudecodeui.git
+git clone https://github.com/evgenygurin/claudecodeui.git
 cd claudecodeui
 ```
 
@@ -212,7 +215,6 @@ It provides
 **Setup & Documentation**: Visit the [TaskMaster AI GitHub repository](https://github.com/eyaltoledano/claude-task-master) for installation instructions, configuration guides, and usage examples.
 After installing it you should be able to enable it from the Settings
 
-
 ## Usage Guide
 
 ### Core Features
@@ -239,7 +241,6 @@ The UI automatically discovers Claude Code projects from `~/.claude/projects/` a
 
 #### Git Explorer
 
-
 #### TaskMaster AI Integration *(Optional)*
 - **Visual Task Board** - Kanban-style interface for managing development tasks
 - **PRD Parser** - Create Product Requirements Documents and parse them into structured tasks
@@ -262,7 +263,7 @@ The UI automatically discovers Claude Code projects from `~/.claude/projects/` a
 
 ### System Overview
 
-```
+```text
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
 │   Frontend      │    │   Backend       │    │  Claude CLI     │
 │   (React/Vite)  │◄──►│ (Express/WS)    │◄──►│  Integration    │
@@ -279,10 +280,6 @@ The UI automatically discovers Claude Code projects from `~/.claude/projects/` a
 ### Frontend (React + Vite)
 - **React 18** - Modern component architecture with hooks
 - **CodeMirror** - Advanced code editor with syntax highlighting
-
-
-
-
 
 ### Contributing
 
@@ -316,7 +313,6 @@ We welcome contributions! Please follow these guidelines:
 
 ### Common Issues & Solutions
 
-
 #### "No Claude projects found"
 **Problem**: The UI shows no projects or empty project list
 **Solutions**:
@@ -331,7 +327,6 @@ We welcome contributions! Please follow these guidelines:
 - Verify the project path exists and is accessible
 - Review server console logs for detailed error messages
 - Ensure you're not trying to access system directories outside project scope
-
 
 ## License
 

@@ -13,13 +13,13 @@
     "dist/",
     "README.md"
   ],
-  "homepage": "https://claudecodeui.siteboon.ai",
+  "homepage": "https://github.com/evgenygurin/claudecodeui",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/siteboon/claudecodeui.git"
+    "url": "git+https://github.com/evgenygurin/claudecodeui.git"
   },
   "bugs": {
-    "url": "https://github.com/siteboon/claudecodeui/issues"
+    "url": "https://github.com/evgenygurin/claudecodeui/issues"
   },
   "scripts": {
     "dev": "concurrently --kill-others \"npm run server\" \"npm run client\"",
@@ -57,6 +57,7 @@
     "@xterm/addon-fit": "^0.10.0",
     "@xterm/addon-webgl": "^0.18.0",
     "@xterm/xterm": "^5.5.0",
+    "@vercel/postgres": "^0.10.0",
     "bcrypt": "^6.0.0",
     "better-sqlite3": "^12.2.0",
     "chokidar": "^4.0.3",
